@@ -68,3 +68,20 @@ const FooterCTA: React.FC = () => {
       <div 
         className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-lg transition-all duration-500 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'
+        }`}
+      >
+        <button 
+          onClick={openCalendly}
+          className="w-full bg-brand-dark/95 backdrop-blur-md text-white px-8 py-4 rounded-full shadow-2xl flex items-center justify-between group border border-white/10 hover:bg-black transition-all"
+        >
+          <span className="font-bold text-lg">Agendar Demo 1:1</span>
+          <span className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
+            <ArrowRight className="w-5 h-5" />
+          </span>
+        </button>
+      </div>
+    </>
+  );
+};
+
+export default FooterCTA;
