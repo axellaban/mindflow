@@ -1,0 +1,49 @@
+---
+voice: luz
+target: 12:00
+bells: start,end
+---
+Bienvenida al último día de Aprender a meditar.
+En esta semana recorrimos la respiración, el cuerpo, los pensamientos, las emociones, los sentidos y la bondad.
+Hoy vamos a reunir todo, y además vas a tener un tiempo de práctica en silencio, a tu manera. Es tu primer paso hacia una práctica propia.
+
+Acomódate. Encuentra esa postura que ya conoces: estable, digna, relajada.
+Cierra los ojos.
+[4]
+Tres respiraciones profundas. Inhala…
+[2.5]
+y suelta.
+[3]
+Inhala…
+[2.5]
+y suelta.
+[3]
+Una más. Inhala…
+[2.5]
+y suelta todo.
+[4]
+Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesitas sostener. La frente. Los hombros. Las manos. El abdomen.
+[*1]
+Ahora elige tu ancla. Puede ser la respiración, las sensaciones del cuerpo o los sonidos. La que hoy te resulte más natural.
+[*1]
+En un momento vas a escuchar una campana suave. Después, habrá unos minutos de silencio.
+Durante ese tiempo, quédate con tu ancla. Cuando la mente se vaya, y se irá, nota a dónde fue, y vuelve con amabilidad.
+No hay forma de hacerlo mal. Cada regreso cuenta.
+[3]
+[bell]
+[*6]
+Si todavía estás aquí, vuelve a tu ancla una vez más. Solo esta respiración.
+[*6]
+[bell]
+Muy bien. Suelta el ancla, y descansa un momento sin hacer nada.
+[*1]
+Ahora, antes de terminar, piensa en cómo te gustaría llevar esta práctica a tu vida.
+Quizás cinco minutos por la mañana, con el café. Quizás diez antes de dormir. Lo importante no es la duración, sino la constancia. Pocos minutos cada día valen más que una hora de vez en cuando.
+[*1]
+Vuelve a sentir el cuerpo completo. Los sonidos. El espacio a tu alrededor.
+[4]
+Y cuando sea el momento, abre los ojos.
+[2]
+Completaste Aprender a meditar. Tómate un momento para reconocerlo: dedicaste siete días a cuidar tu mente.
+A partir de ahora puedes seguir con la pausa del día, explorar otras meditaciones, o usar el temporizador para practicar en silencio.
+Gracias por practicar conmigo. Nos vemos en el camino.

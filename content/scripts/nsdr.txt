@@ -1,0 +1,82 @@
+---
+voice: luz
+target: 20:00
+bells: start,end
+pace: 1.18
+---
+Hola. Bienvenida a esta práctica de descanso profundo.
+Está inspirada en el yoga nidra, y en lo que hoy se conoce como descanso profundo sin sueño. Durante veinte minutos, vas a llevar el cuerpo a un estado de reposo muy profundo, mientras la mente permanece ligeramente consciente.
+Es ideal para recuperar energía a media tarde, después de una mala noche, o cuando necesitas recargar sin dormir una siesta larga.
+
+Acuéstate boca arriba, sobre una cama, un sofá o una colchoneta. Deja los brazos a los lados, con las palmas hacia arriba. Separa un poco las piernas.
+Si hace fresco, cúbrete con una manta. La temperatura del cuerpo baja durante el descanso profundo.
+[5]
+Cierra los ojos.
+[3]
+Haz una inhalación larga por la nariz… y una exhalación todavía más larga por la boca.
+[5]
+Otra vez. Inhala…
+[3]
+y exhala despacio, vaciando por completo.
+[5]
+Una última vez.
+[6]
+Ahora deja la respiración libre. Durante esta práctica, tu única tarea es escuchar mi voz y llevar la atención adonde te indique. Si te distraes, simplemente vuelve.
+[*1]
+Vamos a recorrer el cuerpo con rapidez, como una luz que salta de un punto a otro. No hace falta relajar nada. Solo toca cada punto con la atención, y sigue.
+[3]
+El pulgar de la mano derecha.{1.2} El índice.{1.2} El dedo medio.{1.2} El anular.{1.2} El meñique.
+La palma de la mano.{1.2} El dorso.{1.2} La muñeca.{1.2} El antebrazo.{1.2} El codo.{1.2} El brazo.{1.2} El hombro derecho.
+La axila.{1.2} El costado derecho.{1.2} La cadera.{1.2} El muslo.{1.2} La rodilla.{1.2} La pantorrilla.{1.2} El tobillo.
+El talón.{1.2} La planta del pie.{1.2} El dedo gordo del pie derecho.{1.2} El segundo dedo.{1.2} El tercero.{1.2} El cuarto.{1.2} El quinto.
+[3]
+Ahora el lado izquierdo. El pulgar de la mano izquierda.{1.2} El índice.{1.2} El dedo medio.{1.2} El anular.{1.2} El meñique.
+La palma.{1.2} El dorso.{1.2} La muñeca.{1.2} El antebrazo.{1.2} El codo.{1.2} El brazo.{1.2} El hombro izquierdo.
+La axila.{1.2} El costado izquierdo.{1.2} La cadera.{1.2} El muslo.{1.2} La rodilla.{1.2} La pantorrilla.{1.2} El tobillo.
+El talón.{1.2} La planta del pie.{1.2} El dedo gordo del pie izquierdo.{1.2} El segundo dedo.{1.2} El tercero.{1.2} El cuarto.{1.2} El quinto.
+[3]
+La espalda.{1.2} Los omóplatos.{1.2} La columna, de abajo hacia arriba.{1.5} La nuca.{1.2} La parte de atrás de la cabeza.
+La coronilla.{1.2} La frente.{1.2} La ceja derecha.{1.2} La ceja izquierda.{1.2} El espacio entre las cejas.
+El ojo derecho.{1.2} El ojo izquierdo.{1.2} La nariz.{1.2} La mejilla derecha.{1.2} La mejilla izquierda.{1.2} El labio superior.{1.2} El labio inferior.{1.2} La barbilla.
+La garganta.{1.2} El pecho.{1.2} El abdomen.{1.2} El ombligo.{1.2} La pelvis.
+[3]
+Todo el lado derecho del cuerpo.{2} Todo el lado izquierdo.{2} Todo el cuerpo, a la vez.
+[*2]
+Siente el cuerpo entero, quieto, pesado, respirando solo.
+[*1]
+Ahora lleva la atención a la respiración, justo en el abdomen. No la controles. Solo obsérvala.
+Vamos a contar hacia atrás, desde veintisiete hasta uno, una cuenta por cada respiración completa. Al inhalar piensa el número, al exhalar lo sueltas.
+Si pierdes la cuenta, vuelve a empezar desde veintisiete. No importa cuántas veces.
+[*6]
+Suelta la cuenta, estés donde estés.
+[*1]
+Ahora vamos a explorar sensaciones opuestas. Siente el cuerpo pesado. Muy pesado. Como si fuera de plomo, hundiéndose en el suelo.
+[*1]
+Y ahora, siente el cuerpo ligero. Muy ligero. Como una pluma, casi flotando.
+[*1]
+Pesado.{3} Y ligero.{3} Pesado y ligero al mismo tiempo.
+[*2]
+Ahora siente calor. Imagina que estás bajo un sol de verano, tibio, agradable, sobre toda la piel.
+[*1]
+Y ahora frescura. Una brisa suave, fresca, como al lado del mar por la noche.
+[*1]
+Calor.{3} Frescura.{3} Las dos sensaciones a la vez.
+[*2]
+Descansa ahora en la pura sensación de estar. Sin nombre, sin tarea, sin historia.
+Solo presencia. Solo respiración. Solo descanso.
+[*8]
+Poco a poco, empieza a regresar.
+[3]
+Nota la respiración, que se vuelve un poco más profunda.
+[3]
+Siente el suelo bajo el cuerpo. Los sonidos de la habitación.
+[3]
+Mueve suavemente los dedos de las manos y de los pies.
+[3]
+Estírate como lo harías al despertar por la mañana.
+[4]
+Cuando estés en condiciones, gira hacia un costado, y quédate ahí unos segundos antes de incorporarte.
+[5]
+Y cuando sea el momento, abre los ojos.
+[2]
+Regalarse un descanso profundo no es perder el tiempo. Es la forma en que el cuerpo y la mente recuperan su energía. Que el resto de tu día sea más ligero.

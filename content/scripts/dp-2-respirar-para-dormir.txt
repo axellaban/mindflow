@@ -1,0 +1,53 @@
+---
+voice: luz
+target: 10:00
+bells: none
+pace: 1.2
+---
+Hola. Esta es la segunda noche de Dormir profundo.
+Hoy vamos a usar la respiración como un interruptor. Cuando alargamos la exhalación, el cuerpo recibe una señal muy clara: estás a salvo, puedes descansar.
+
+Acuéstate en tu postura favorita para dormir. Deja que la cabeza pese sobre la almohada.
+[5]
+Vamos a practicar una respiración conocida como cuatro, siete, ocho.
+Inhalas por la nariz contando hasta cuatro. Retienes el aire contando hasta siete. Y exhalas por la boca, muy despacio, contando hasta ocho.
+No te preocupes si al principio no llegas a esos números. Adapta el ritmo a tu cuerpo. Lo importante es que la exhalación sea más larga que la inhalación.
+[3]
+Comenzamos. Vacía primero los pulmones.
+[4]
+Inhala por la nariz{0.6} dos{0.6} tres{0.6} cuatro.
+Retén{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete.
+Exhala por la boca{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete{0.6} ocho.
+[3]
+Otra vez. Inhala{0.6} dos{0.6} tres{0.6} cuatro.
+Retén{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete.
+Exhala{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete{0.6} ocho.
+[3]
+Una vez más. Inhala{0.6} dos{0.6} tres{0.6} cuatro.
+Retén{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete.
+Y exhala, largo{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete{0.6} ocho.
+[3]
+La última. Inhala{0.6} dos{0.6} tres{0.6} cuatro.
+Retén{0.6} dos{0.6} tres{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete.
+Exhala, soltando todo{0.6} cuatro{0.6} cinco{0.6} seis{0.6} siete{0.6} ocho.
+[6]
+Ahora deja de contar. Deja que la respiración encuentre su propio ritmo, lento y profundo.
+Quizás notes que el cuerpo ya está más pesado. Que los hombros bajaron. Que la mandíbula se aflojó.
+[*2]
+Vamos a contar las respiraciones hacia atrás, desde diez hasta uno. Una cuenta por cada exhalación. Si pierdes la cuenta, no importa. Vuelve a empezar desde diez, o simplemente déjalo ir.
+[3]
+Diez…
+[*1]
+Nueve…
+[*1]
+Ocho…
+[*1]
+Siete…
+[*1]
+Seis…
+[*1]
+Continúa por tu cuenta, cada vez más despacio, cada vez más hondo.
+[*4]
+No hace falta llegar a ningún lado. Cada respiración es un pequeño escalón que baja hacia el sueño.
+[*4]
+Descansa. Buenas noches.

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# TTS tooling (voices + caches are downloaded/generated locally)
+tools/tts/.venv
+tools/tts/models
+tools/tts/.cache
+__pycache__/

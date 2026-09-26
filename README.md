@@ -1,20 +1,111 @@
-<div align="center">
-<img width="1200" height="475" alt="MindFlow AI Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Mindfulness by Eli — meditación para mujeres
 
-# MindFlow AI
+Web app (PWA instalable) de [@mindfulnessbyeli](https://www.instagram.com/mindfulnessbyeli): meditaciones guiadas, programas, historias para dormir, respiración, temporizador, paisajes sonoros y diario de ánimo, pensada 100 % para mujeres. Todo en español, sin registro y funcionando también sin conexión: 61 sesiones narradas (unas 10 horas de audio).
 
-MindFlow AI is a powerful tool designed to optimize your workflows using advanced AI integration. This repository contains the source code for running the application locally.
+Además de acompañar la práctica diaria, la app es la puerta de entrada a las **sesiones 1:1 con Eli** y a sus **workshops**, con invitaciones que aparecen en los momentos justos y sin presionar.
 
-View your app in AI Studio: [MindFlow AI Studio](https://ai.studio/apps/drive/1kpF59LwYr0DyGHhFfyXahvXMsT2iZLts)
+## Qué incluye
 
-## Getting Started
+| Área | Detalle |
+| --- | --- |
+| **Programas** | *Bajar un cambio* (5 días: piloto automático, mente acelerada, autoexigencia, culpa y descanso, los temas que Eli trabaja en sus sesiones), *Aprender a meditar* (7 días), *Calmar la ansiedad* (5 días) y *Dormir profundo* (5 noches). |
+| **Meditaciones** | 22 sesiones sueltas, entre ellas *Hacer las paces con tu cuerpo*, *Poner límites con amor*, *Cuando todo está en tu cabeza* (carga mental), *Días de período*, *Un respiro para mamás*, SOS ansiedad, pausa de 3 minutos, NSDR, café consciente… |
+| **La pausa del día** | 12 meditaciones temáticas de 10 minutos que rotan cada día, con una frase para llevar. |
+| **Historias para dormir** | 5 historias originales (tren patagónico, la guardiana del faro, biblioteca bajo la lluvia, cielo de Atacama, cabaña en la nieve) con un fondo sonoro que sigue sonando y se apaga solo. |
+| **Reproductor** | Escena animada, subtítulos sincronizados, sonido de fondo con volumen propio, temporizador de sueño, controles en la pantalla bloqueada con la portada de cada sesión, descarga para escuchar sin conexión y pantalla de sesión completada con registro de ánimo. |
+| **Respirar, temporizador, sonidos** | 6 patrones de respiración guiada; meditación en silencio con campanas; mezclador de 17 sonidos y 9 pistas de música generativa. |
+| **Diario y progreso** | Check-in de ánimo con emociones (y una práctica recomendada según cómo estás), preguntas de reflexión, gráfico de ánimo, racha, calendario, 15 logros y favoritos. |
+| **Personalización** | Onboarding con la presentación de Eli y la pregunta de su formulario (*¿Qué es lo que más te cuesta hoy?*): estrés, mente acelerada, autoexigencia, descanso, culpa… Con eso se arman el plan y las recomendaciones. |
+| **Eli** | Página propia (`/eli`, se puede compartir desde Instagram), invitaciones a sesiones 1:1 y al workshop, y WhatsApp directo con un primer mensaje ya escrito. |
+| **PWA** | Instalable en iOS, Android y escritorio; funciona offline; recordatorio diario vía calendario (.ics); exportar/importar datos. |
 
-**Prerequisites:**  Node.js
+La interfaz habla con voseo, como Eli. Las narraciones usan una voz neuronal de acento neutro (*Luz*), en femenino hacia quien escucha.
 
+## Invitaciones a las sesiones con Eli
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Todo lo editable está en **`src/content/eli.ts`**: links, número de WhatsApp, credenciales, pasos de reserva, testimonios y el próximo workshop.
+
+- **Agendar sesión** → formulario de Tally (`bookingForm`). Cada link lleva `utm_source=app` y `utm_content=<lugar>` (`home`, `completion`, `program`, `checkin`, `profile`, `settings`, `eli-page`) para saber qué invitación funciona mejor. Para verlo en Tally, agregá campos ocultos `utm_content` y `utm_campaign` al formulario.
+- **WhatsApp** → `wa.me` directo al número que Eli publica en su formulario, con un primer mensaje ya escrito según el contexto (por ejemplo: *"¡Hola Eli! Soy Sofía, vengo de la app Mindfulness by Eli 🌸 Me gustaría saber más sobre las sesiones 1:1. Me está costando la autoexigencia."*). La usuaria puede editarlo antes de enviarlo.
+- **Workshop** → `EVENTS`: se muestra en el inicio y en `/eli` hasta la fecha de inicio y después desaparece solo. Para una nueva edición, agregá otro evento.
+- **Dónde aparecen**:
+  - En la pantalla de sesión completada, después de marcar el ánimo. Nunca en la primera sesión y como máximo cada 3 días. El texto cambia según el ánimo y el tema; si el día fue difícil, la invitación es a escribirle.
+  - Al terminar un programa y en cada página de programa.
+  - En el check-in, cuando aparecen emociones difíciles (como mucho cada 3 días).
+  - Como tarjeta en el inicio y en el perfil.
+  - En el avatar del encabezado, en la barra lateral de escritorio y en Ajustes.
+- "Ahora no" pospone cada invitación (7 a 30 días según el lugar). Si la usuaria ya tocó un link de Eli, las invitaciones automáticas descansan unos días.
+- **Fotos**: `public/eli/eli.jpg` (retrato 4:5) y `public/eli/eli-avatar.jpg` (cuadrada). Hoy son recortes de las fotos de su sitio; reemplazalas por originales en alta resolución con el mismo nombre.
+
+## Stack
+
+- **React 19 + TypeScript + Vite 8**, **Tailwind CSS 4**, **Motion** (animaciones), **Zustand** (estado persistente), **React Router**.
+- **Web Audio API**: paisajes sonoros, música generativa, campanas y tono de respiración sintetizados en tiempo real (`src/audio`).
+- **Narraciones** pre-generadas con [Piper](https://github.com/OHF-Voice/piper1-gpl), voz *Luz* (`es_MX-claude-high`, Apache‑2.0). MP3 en `public/audio`, subtítulos en `public/captions`.
+- **Ilustraciones procedurales**: portadas y escenas se dibujan en SVG/canvas a partir de una paleta, un motivo y una semilla (`src/art`).
+- **vite-plugin-pwa** (Workbox) para el service worker y el manifiesto.
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # typecheck + build de producción en dist/
+npm run preview    # sirve dist/ (con service worker)
+```
+
+## Despliegue
+
+Es un sitio estático (`dist/`). Incluye configuración para **Vercel** (`vercel.json`) y **Netlify** (`netlify.toml`): ambos resuelven las rutas de la SPA hacia `index.html`. En cualquier otro hosting, configurá el fallback de rutas a `index.html`.
+
+## Contenido y narraciones
+
+Los guiones están en `content/scripts/*.txt` (pautas de escritura en `content/scripts/README.md`):
+
+```
+---
+voice: luz          # voz de Piper
+target: 10:00       # duración total; las pausas [*n] se estiran para llegar exacto
+bells: start,end    # start,end | end | none
+pace: 1.2           # opcional, velocidad de la voz (más alto = más lento)
+gaps: 1.4           # opcional, multiplica las pausas naturales entre frases
+---
+Texto de la narración. Cada oración es un subtítulo.
+[5]        pausa fija en segundos
+[*2]       pausa flexible (peso relativo)
+[bell]     campana suave
+Inhala{0.6} dos{0.6} tres.   pausas exactas dentro de una línea
+```
+
+Para regenerar el audio:
+
+```bash
+tools/tts/setup.sh                                   # entorno Python + voces (una vez)
+tools/tts/.venv/bin/python tools/tts/render.py       # solo renderiza lo que cambió
+tools/tts/.venv/bin/python tools/tts/render.py pausa-soltar --force
+```
+
+El renderizador genera el MP3, los subtítulos y `src/content/generated/audio-manifest.json`. Los metadatos de cada sesión (título, categorías, arte, fondo) viven en `src/content/catalog.ts`.
+
+## Herramientas internas
+
+- `tools/audio-lab/`: con `npm run dev`, abrí `/tools/audio-lab/` para escuchar cada generador y medir su sonoridad.
+- `tools/brand/`: genera los íconos PWA y la imagen para redes (`node tools/brand/render.mjs` con el servidor de desarrollo activo y Playwright).
+
+## Estructura
+
+```
+src/
+  audio/        motor Web Audio, generadores, campanas, narración
+  art/          paletas, paisajes SVG, escenas animadas, portadas para la pantalla bloqueada
+  content/      catálogo, programas, Eli (eli.ts), objetivos, sonidos, respiración, frases, logros, recomendaciones
+  features/     eli (invitaciones), reproductor, respirar, temporizador, mezclador, onboarding, check-in
+  pages/        inicio, meditar, dormir, sonidos, perfil, programa, tema, buscar, diario, ajustes, Eli
+  store/        estado persistente (progreso, ajustes, diario, invitaciones) y reproductor
+content/scripts/ guiones de las narraciones
+tools/          renderizado de voz, laboratorio de audio, recursos de marca
+```
+
+## Aviso
+
+Esta app acompaña, pero no reemplaza la atención profesional de salud mental. En Ajustes → Acerca de hay líneas de ayuda de Argentina.
