@@ -14,7 +14,9 @@ export type PaletteId =
   | 'mist'
   | 'gold'
   | 'teal'
-  | 'plum';
+  | 'plum'
+  | 'rose'
+  | 'sage';
 
 export type Motif =
   | 'mountains'
@@ -53,9 +55,19 @@ export type CategoryId =
   | 'autocompasion'
   | 'emociones'
   | 'mananas'
-  | 'cuerpo';
+  | 'cuerpo'
+  | 'autoexigencia';
 
-export type GoalId = 'dormir' | 'estres' | 'ansiedad' | 'enfoque' | 'aprender' | 'autocuidado' | 'felicidad';
+export type GoalId =
+  | 'estres'
+  | 'mente'
+  | 'autoexigencia'
+  | 'descanso'
+  | 'culpa'
+  | 'ansiedad'
+  | 'dormir'
+  | 'autocuidado'
+  | 'aprender';
 
 export type SoundId =
   | 'lluvia'
@@ -110,7 +122,7 @@ export type BedId =
   | 'desierto'
   | 'viento';
 
-export type Narrator = 'luz' | 'mateo';
+export type Narrator = 'luz';
 
 export type SessionKind = 'meditation' | 'story';
 
@@ -129,13 +141,13 @@ export interface Session {
   sleep?: boolean;
   daily?: { theme: string; phrase: string };
   program?: { id: ProgramId; day: number };
-  /** Shown in the "Para ti" rails when the goal matches. */
+  /** Shown in the "Para vos" rails when the goal matches. */
   goals?: GoalId[];
   /** Filled from the generated audio manifest. */
   duration: number;
 }
 
-export type ProgramId = 'aprende-a-meditar' | 'duerme-profundo' | 'calma-la-ansiedad';
+export type ProgramId = 'bajar-un-cambio' | 'aprende-a-meditar' | 'duerme-profundo' | 'calma-la-ansiedad';
 
 export interface Program {
   id: ProgramId;

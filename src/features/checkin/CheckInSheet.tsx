@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/Button';
 import { Sheet } from '@/components/ui/Sheet';
 import { FEELINGS, JOURNAL_PROMPTS, MOODS, type MoodLevel } from '@/content/journal';
 import { forMood } from '@/content/recommend';
+import { EliInvite } from '@/features/eli/EliInvite';
+import { useEliInvite } from '@/features/eli/useEliInvite';
 import { haptic } from '@/lib/device';
 import { dayNumber, formatDuration } from '@/lib/time';
 import { cn } from '@/lib/utils';
@@ -22,7 +24,7 @@ export function MoodOrb({ level, size = 44, selected }: { level: MoodLevel; size
         width: size,
         height: size,
         background: `radial-gradient(circle at 35% 30%, #ffffff, ${m.color} 58%, ${m.color}cc)`,
-        boxShadow: selected ? `0 0 0 2px #0e1433, 0 0 0 4px ${m.color}, 0 10px 30px -6px ${m.color}` : `0 8px 24px -10px ${m.color}`,
+        boxShadow: selected ? `0 0 0 2px #221528, 0 0 0 4px ${m.color}, 0 10px 30px -6px ${m.color}` : `0 8px 24px -10px ${m.color}`,
       }}
     />
   );
@@ -67,8 +69,8 @@ export function CheckInSheet() {
         <AnimatePresence mode="wait" initial={false}>
           {step === 0 && (
             <motion.div key="s0" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
-              <h2 className="font-display text-[26px] leading-tight">¿Cómo te sientes ahora?</h2>
-              <p className="mt-1 text-[14px] text-2">No hay respuestas correctas. Solo nota lo que hay.</p>
+              <h2 className="font-display text-[26px] leading-tight">¿Cómo te sentís ahora?</h2>
+              <p className="mt-1 text-[14px] text-2">No hay respuestas correctas. Solo notá lo que hay.</p>
               <div className="mt-7 flex justify-between px-1">
                 {MOODS.map((m) => (
                   <button
@@ -94,7 +96,7 @@ export function CheckInSheet() {
                 <MoodOrb level={level} size={34} />
                 <h2 className="font-display text-[24px] leading-tight">¿Qué lo describe mejor?</h2>
               </div>
-              <p className="mt-1 text-[14px] text-2">Elige todas las que quieras.</p>
+              <p className="mt-1 text-[14px] text-2">Elegí todas las que quieras.</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {FEELINGS.map((f) => {
                   const on = feelings.includes(f.id);
@@ -128,15 +130,15 @@ export function CheckInSheet() {
           )}
           {step === 2 && level && (
             <motion.div key="s2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
-              <h2 className="font-display text-[24px] leading-tight">¿Quieres escribir algo?</h2>
+              <h2 className="font-display text-[24px] leading-tight">¿Querés escribir algo?</h2>
               <p className="mt-1 text-[14px] text-2">{prompt}</p>
               <textarea
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 rows={5}
                 maxLength={2000}
-                placeholder="Escribe con libertad. Solo tú puedes verlo."
-                className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-white/5 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-lilac-300/50"
+                placeholder="Escribí con libertad. Solo vos podés verlo."
+                className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-white/5 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-blush-300/50"
               />
               <div className="mt-5 flex gap-2.5">
                 <Button variant="secondary" onClick={() => setStep(1)}>
@@ -179,6 +181,13 @@ export function CheckInSheet() {
                   </button>
                 </div>
               )}
+              <CheckInEli level={level} feelings={feelings} />
+              {level === 1 && (
+                <p className="mt-4 rounded-2xl bg-white/5 px-4 py-3 text-left text-[13px] leading-relaxed text-2">
+                  Si sentís que no podés más o pensás en hacerte daño, pedí ayuda ahora: en Argentina, <strong className="text-mist-50">135</strong> (CABA y GBA) o{' '}
+                  <strong className="text-mist-50">(011) 5275-1135</strong>; ante una emergencia, <strong className="text-mist-50">911</strong>.
+                </p>
+              )}
               <Button full variant="secondary" size="lg" className="mt-4" onClick={close}>
                 Cerrar
               </Button>
@@ -187,5 +196,31 @@ export function CheckInSheet() {
         </AnimatePresence>
       </div>
     </Sheet>
+  );
+}
+
+const HARD_FEELINGS = ['ansiedad', 'abrumado', 'tristeza', 'soledad', 'culpa', 'estres'];
+
+/** When the check-in shows a hard moment, Eli offers to talk: a message, not a sales pitch. */
+function CheckInEli({ level, feelings }: { level: MoodLevel; feelings: string[] }) {
+  const hard = level <= 2 || feelings.some((f) => HARD_FEELINGS.includes(f));
+  const eli = useEliInvite('checkin', hard, 3);
+  return (
+    <AnimatePresence>
+      {eli.show && (
+        <EliInvite
+          placement="checkin"
+          eyebrow="Si lo necesitás"
+          title="¿Querés hablarlo con alguien?"
+          body="Soy Eli. Si estos días se te hacen cuesta arriba, escribime y lo charlamos. Si preferís, también podemos agendar una sesión."
+          lead="whatsapp"
+          topic="support"
+          whatsappLabel="Escribirle a Eli"
+          onDismiss={() => eli.dismiss(7)}
+          delay={0.5}
+          className="mt-4 text-left"
+        />
+      )}
+    </AnimatePresence>
   );
 }

@@ -11,6 +11,8 @@ import { IconButton } from '@/components/ui/Button';
 import { Sheet } from '@/components/ui/Sheet';
 import { SectionTitle } from '@/components/ui/controls';
 import { MoodOrb } from '@/features/checkin/CheckInSheet';
+import { EliAvatar } from '@/features/eli/EliAvatar';
+import { EliHomeCard } from '@/features/eli/EliHomeCard';
 import { FEELINGS, MOODS } from '@/content/journal';
 import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
@@ -86,12 +88,24 @@ export function Home() {
       {/* Hero scene */}
       <section className="relative h-[64svh] min-h-[440px] overflow-hidden lg:h-[62vh] lg:min-h-[520px]">
         <Scene scene={scene} paused={Boolean(playerItem && usePlayer.getState().expanded)} />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/50 via-transparent to-ink-900" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/35 via-transparent to-ink-900" />
         <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
-          <Link to="/" className="flex items-center gap-2 lg:invisible" aria-label="MindFlow">
+          <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="Mindfulness by Eli">
             <LogoMark className="size-8" />
+            <span className="font-display text-[17px] leading-none tracking-[-0.01em] text-mist-50/95 max-[379px]:hidden">
+              Mindfulness <span className="text-blush-300 italic">by Eli</span>
+            </span>
           </Link>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
+            <Link
+              to="/eli"
+              aria-label="Sesiones con Eli"
+              title="Sesiones con Eli"
+              className="rounded-full transition-transform duration-300 hover:scale-105 active:scale-95"
+              onClick={() => haptic(6)}
+            >
+              <EliAvatar size={40} />
+            </Link>
             <IconButton label={sceneSound ? 'Silenciar escena' : 'Escuchar la escena'} onClick={toggleSceneSound}>
               {sceneSound ? <Volume2 className="size-[18px]" /> : <VolumeX className="size-[18px]" />}
             </IconButton>
@@ -118,7 +132,7 @@ export function Home() {
                 Racha de {stats.streak} {stats.streak === 1 ? 'día' : 'días'} · {Math.round(stats.minutes)} min en total
               </>
             ) : (
-              'Regálate unos minutos de calma hoy.'
+              'Regalate unos minutos de calma hoy.'
             )}
           </p>
         </motion.div>
@@ -155,12 +169,16 @@ export function Home() {
         </motion.section>
 
         <motion.section variants={rise}>
-          <SectionTitle title="Para ti" action={<SeeAll to="/meditar" />} />
+          <SectionTitle title="Para vos" action={<SeeAll to="/meditar" />} />
           <Rail>
             {forYou.map((s) => (
               <SessionCard key={s.id} session={s} />
             ))}
           </Rail>
+        </motion.section>
+
+        <motion.section variants={rise} className="px-5 md:px-0 lg:max-w-2xl">
+          <EliHomeCard />
         </motion.section>
 
         <motion.section variants={rise}>
@@ -262,7 +280,7 @@ function CheckInCard({ todayMood }: { todayMood?: MoodEntry }) {
       <div className="glass flex items-center gap-4 rounded-[28px] p-4">
         <MoodOrb level={todayMood.level} size={44} />
         <div className="min-w-0 flex-1">
-          <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Hoy te sientes</p>
+          <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Hoy te sentís</p>
           <p className="truncate text-[16px] font-semibold">
             {m.label}
             {labels ? ` · ${labels}` : ''}
@@ -276,8 +294,8 @@ function CheckInCard({ todayMood }: { todayMood?: MoodEntry }) {
   }
   return (
     <div className="glass rounded-[28px] p-5">
-      <p className="font-display text-[21px] leading-tight">¿Cómo te sientes hoy?</p>
-      <p className="mt-1 text-[13.5px] text-3">Un registro de diez segundos. Tu diario te lo agradecerá.</p>
+      <p className="font-display text-[21px] leading-tight">¿Cómo te sentís hoy?</p>
+      <p className="mt-1 text-[13.5px] text-3">Un registro de diez segundos. Tu diario te lo va a agradecer.</p>
       <div className="mt-4 flex justify-between">
         {MOODS.map((m) => (
           <button
@@ -304,7 +322,7 @@ function CheckInCard({ todayMood }: { todayMood?: MoodEntry }) {
 function StartProgram({ progress }: { progress: ReturnType<typeof programProgress> }) {
   return (
     <div>
-      <p className="mb-3 font-display text-[22px] md:text-[26px]">{progress.done.length ? 'Continúa tu programa' : 'Empieza aquí'}</p>
+      <p className="mb-3 font-display text-[22px] md:text-[26px]">{progress.done.length ? 'Seguí con tu programa' : 'Empezá por acá'}</p>
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
         <ProgramCard progress={progress} className="md:shrink-0" />
         <p className="max-w-sm text-[15px] leading-relaxed text-2">{progress.program.outcome} {progress.program.description.split('.')[0]}.</p>
@@ -316,11 +334,11 @@ function StartProgram({ progress }: { progress: ReturnType<typeof programProgres
 function QuoteCard({ text, author }: { text: string; author?: string }) {
   return (
     <figure className="relative overflow-hidden rounded-[30px] border border-white/8 bg-gradient-to-br from-ink-700/60 to-ink-800/40 px-6 py-8 md:px-10 md:py-10">
-      <div className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full bg-lilac-400/15 blur-3xl" />
+      <div className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full bg-blush-400/15 blur-3xl" />
       <p className="text-[12px] font-bold tracking-[0.16em] text-3 uppercase">Frase del día</p>
       <blockquote className="mt-3 font-display text-[25px] leading-snug italic md:text-[30px]">“{text}”</blockquote>
       <figcaption className="mt-4 flex items-center justify-between">
-        <span className="text-[14px] text-2">{author ?? 'MindFlow'}</span>
+        <span className="text-[14px] text-2">{author ?? 'Mindfulness by Eli'}</span>
         <IconButton
           label="Compartir frase"
           size="sm"

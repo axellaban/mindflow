@@ -3,7 +3,7 @@ voice: luz
 target: 12:00
 bells: start,end
 ---
-Te doy la bienvenida al último día de Aprende a meditar.
+Bienvenida al último día de Aprender a meditar.
 En esta semana recorrimos la respiración, el cuerpo, los pensamientos, las emociones, los sentidos y la bondad.
 Hoy vamos a reunir todo, y además vas a tener un tiempo de práctica en silencio, a tu manera. Es tu primer paso hacia una práctica propia.
 
@@ -44,6 +44,6 @@ Vuelve a sentir el cuerpo completo. Los sonidos. El espacio a tu alrededor.
 [4]
 Y cuando sea el momento, abre los ojos.
 [2]
-Completaste Aprende a meditar. Tómate un momento para reconocerlo: dedicaste siete días a cuidar tu mente.
+Completaste Aprender a meditar. Tómate un momento para reconocerlo: dedicaste siete días a cuidar tu mente.
 A partir de ahora puedes seguir con la pausa del día, explorar otras meditaciones, o usar el temporizador para practicar en silencio.
 Gracias por practicar conmigo. Nos vemos en el camino.

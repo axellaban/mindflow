@@ -69,7 +69,7 @@ export function MoodChart({ moods, days = 14 }: { moods: MoodEntry[]; days?: num
           ) : null,
         )}
       </svg>
-      {!hasData && <p className="-mt-16 mb-10 text-center text-[13px] text-3">Registra cómo te sientes para ver tu evolución.</p>}
+      {!hasData && <p className="-mt-16 mb-10 text-center text-[13px] text-3">Registrá cómo te sentís para ver tu evolución.</p>}
     </div>
   );
 }

@@ -23,6 +23,7 @@ const CategoryPage = lazy(() => import('@/pages/CategoryPage').then((m) => ({ de
 const SearchPage = lazy(() => import('@/pages/SearchPage').then((m) => ({ default: m.SearchPage })));
 const JournalPage = lazy(() => import('@/pages/JournalPage').then((m) => ({ default: m.JournalPage })));
 const SettingsPage = lazy(() => import('@/pages/SettingsPage').then((m) => ({ default: m.SettingsPage })));
+const EliPage = lazy(() => import('@/pages/EliPage').then((m) => ({ default: m.EliPage })));
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 
@@ -93,6 +94,10 @@ export default function App() {
           <Route path="/respirar" element={<BreatheScreen />} />
           <Route path="/temporizador" element={<TimerScreen />} />
           <Route path="/sesion/:id" element={<SessionLink />} />
+          {/* Eli's page is public so it can be shared from her Instagram. */}
+          <Route element={<Shell />}>
+            <Route path="/eli" element={<Contained><EliPage /></Contained>} />
+          </Route>
           <Route
             element={
               <RequireOnboarding>

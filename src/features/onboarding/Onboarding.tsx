@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarPlus, Heart, Moon, Sprout, Sun, Target, Waves, Wind } from 'lucide-react';
+import { ArrowRight, Bed, Brain, CalendarPlus, Feather, Heart, Moon, Mountain, Sprout, Waves, Wind } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
@@ -9,29 +9,35 @@ import { LogoMark } from '@/components/Logo';
 import { Button } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/controls';
 import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
+import { ELI } from '@/content/eli';
+import { GOALS as GOAL_DEFS } from '@/content/goals';
 import { suggestedProgram } from '@/content/recommend';
 import { SCENE_BY_ID } from '@/content/scenes';
 import type { GoalId } from '@/content/types';
 import { downloadFile, haptic, reminderICS } from '@/lib/device';
+import { EliAvatar } from '@/features/eli/EliAvatar';
 import { formatDuration } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { type Profile, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
 
-const GOALS: Array<{ id: GoalId; label: string; icon: ReactNode }> = [
-  { id: 'dormir', label: 'Dormir mejor', icon: <Moon className="size-5" /> },
-  { id: 'estres', label: 'Reducir el estrés', icon: <Wind className="size-5" /> },
-  { id: 'ansiedad', label: 'Calmar la ansiedad', icon: <Waves className="size-5" /> },
-  { id: 'enfoque', label: 'Mejorar el enfoque', icon: <Target className="size-5" /> },
-  { id: 'aprender', label: 'Aprender a meditar', icon: <Sprout className="size-5" /> },
-  { id: 'autocuidado', label: 'Cuidarme más', icon: <Heart className="size-5" /> },
-  { id: 'felicidad', label: 'Sentirme mejor', icon: <Sun className="size-5" /> },
-];
+const GOAL_ICONS: Record<GoalId, ReactNode> = {
+  estres: <Wind className="size-5" />,
+  mente: <Brain className="size-5" />,
+  autoexigencia: <Mountain className="size-5" />,
+  descanso: <Bed className="size-5" />,
+  culpa: <Feather className="size-5" />,
+  ansiedad: <Waves className="size-5" />,
+  dormir: <Moon className="size-5" />,
+  autocuidado: <Heart className="size-5" />,
+  aprender: <Sprout className="size-5" />,
+};
+const GOALS = GOAL_DEFS.map((g) => ({ ...g, icon: GOAL_ICONS[g.id] }));
 
 const EXPERIENCE: Array<{ id: NonNullable<Profile['experience']>; label: string; hint: string }> = [
   { id: 'nuevo', label: 'Nunca', hint: 'Es mi primera vez' },
-  { id: 'algo', label: 'Un poco', hint: 'Lo he probado algunas veces' },
+  { id: 'algo', label: 'Un poco', hint: 'Lo probé algunas veces' },
   { id: 'regular', label: 'Con regularidad', hint: 'Ya tengo una práctica' },
 ];
 
@@ -76,7 +82,7 @@ export function Onboarding() {
   const begin = () => {
     engine.unlock(true);
     engine.setLayersVolume(0.45, 0.5);
-    engine.setMix(SCENE_BY_ID.lago.sound, 4);
+    engine.setMix(SCENE_BY_ID.jardin.sound, 4);
     next();
   };
 
@@ -95,12 +101,12 @@ export function Onboarding() {
 
   return (
     <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <Scene scene={SCENE_BY_ID.lago} />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/30 via-ink-950/10 to-ink-950/85" />
+      <Scene scene={SCENE_BY_ID.jardin} />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/15 via-ink-950/5 to-ink-950/85" />
       {step > 0 && (
         <div className="absolute inset-x-0 top-0 flex justify-center gap-1.5 pt-safe">
           <div className="flex gap-1.5 pt-4">
-            {[1, 2, 3, 4].map((i) => (
+            {[1, 2, 3, 4, 5].map((i) => (
               <span key={i} className={cn('h-1 rounded-full transition-all duration-500', i <= step ? 'w-6 bg-mist-50' : 'w-3 bg-white/25')} />
             ))}
           </div>
@@ -111,10 +117,12 @@ export function Onboarding() {
         <AnimatePresence mode="wait">
           {step === 0 && <Welcome key="w" onBegin={begin} />}
 
-          {step === 1 && (
+          {step === 1 && <MeetEli key="eli" onNext={next} />}
+
+          {step === 2 && (
             <motion.div key="goals" {...panel} className="pb-4">
-              <h1 className="font-display text-[34px] leading-tight">¿Qué te trae por aquí?</h1>
-              <p className="mt-2 text-[15px] text-2">Elige todo lo que quieras. Así personalizamos tus recomendaciones.</p>
+              <h1 className="font-display text-[32px] leading-tight">¿Qué es lo que más te cuesta hoy?</h1>
+              <p className="mt-2 text-[15px] text-2">Elegí todo lo que resuene. Con esto armamos tu práctica.</p>
               <div className="mt-6 grid grid-cols-2 gap-2.5">
                 {GOALS.map((g) => {
                   const on = goals.includes(g.id);
@@ -130,7 +138,7 @@ export function Onboarding() {
                       className={cn(
                         'flex items-center gap-3 rounded-3xl border px-4 py-3.5 text-left text-[14.5px] font-semibold backdrop-blur-xl transition-all duration-300',
                         on ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 text-mist-50 hover:bg-ink-900/50',
-                        g.id === 'felicidad' && 'col-span-2 justify-center',
+                        g.id === 'aprender' && 'col-span-2 justify-center',
                       )}
                       aria-pressed={on}
                     >
@@ -151,9 +159,9 @@ export function Onboarding() {
             </motion.div>
           )}
 
-          {step === 2 && (
+          {step === 3 && (
             <motion.div key="exp" {...panel} className="pb-4">
-              <h1 className="font-display text-[34px] leading-tight">¿Has meditado antes?</h1>
+              <h1 className="font-display text-[34px] leading-tight">¿Meditaste alguna vez?</h1>
               <p className="mt-2 text-[15px] text-2">No hay respuesta correcta. Nos ayuda a elegir por dónde empezar.</p>
               <div className="mt-6 space-y-2.5">
                 {EXPERIENCE.map((e) => (
@@ -181,10 +189,10 @@ export function Onboarding() {
             </motion.div>
           )}
 
-          {step === 3 && (
+          {step === 4 && (
             <motion.div key="name" {...panel} className="pb-4">
-              <h1 className="font-display text-[34px] leading-tight">¿Cómo te llamamos?</h1>
-              <p className="mt-2 text-[15px] text-2">Para saludarte por tu nombre. Se queda solo en tu dispositivo.</p>
+              <h1 className="font-display text-[34px] leading-tight">¿Cómo te llamás?</h1>
+              <p className="mt-2 text-[15px] text-2">Para saludarte por tu nombre. Queda solo en tu dispositivo.</p>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -211,11 +219,11 @@ export function Onboarding() {
             </motion.div>
           )}
 
-          {step === 4 && (
+          {step === 5 && (
             <motion.div key="plan" {...panel} className="no-scrollbar max-h-full overflow-y-auto pt-16 pb-4">
               <p className="text-[12px] font-bold tracking-[0.16em] text-2 uppercase">Tu plan</p>
               <h1 className="mt-1 font-display text-[32px] leading-tight">Todo listo{name.trim() ? `, ${name.trim().split(' ')[0]}` : ''}</h1>
-              <p className="mt-2 text-[15px] text-2">Te recomendamos empezar así:</p>
+              <p className="mt-2 text-[15px] text-2">Te propongo empezar así:</p>
 
               <div className="mt-5 space-y-2.5">
                 <PlanItem art={<CoverArt spec={first.art} rounded="rounded-2xl" className="size-14" grain={false} />} eyebrow="Hoy" title={first.title} meta={`${formatDuration(first.duration)} · ${first.subtitle}`} />
@@ -228,7 +236,7 @@ export function Onboarding() {
               </div>
 
               <div className="mt-6">
-                <p className="text-[15px] font-semibold">¿Cuándo quieres tu momento de calma?</p>
+                <p className="text-[15px] font-semibold">¿Cuándo querés tu momento de calma?</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {TIMES.map((t) => (
                     <Chip key={t.time} active={time === t.time} onClick={() => setTime(time === t.time ? null : t.time)} className="backdrop-blur-xl">
@@ -244,12 +252,12 @@ export function Onboarding() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       onClick={() => {
-                        downloadFile('mindflow-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
-                        useUI.getState().toast('Abre el archivo para añadirlo a tu calendario');
+                        downloadFile('mindfulness-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
+                        useUI.getState().toast('Abrí el archivo para agregarlo a tu calendario');
                       }}
-                      className="mt-3 flex items-center gap-2 text-[14px] font-semibold text-lilac-300"
+                      className="mt-3 flex items-center gap-2 text-[14px] font-semibold text-blush-300"
                     >
-                      <CalendarPlus className="size-4" /> Añadir recordatorio diario a mi calendario ({time})
+                      <CalendarPlus className="size-4" /> Agregar un recordatorio diario a mi calendario ({time})
                     </motion.button>
                   )}
                 </AnimatePresence>
@@ -287,6 +295,8 @@ function PlanItem({ art, eyebrow, title, meta }: { art: ReactNode; eyebrow: stri
 function Welcome({ onBegin }: { onBegin: () => void }) {
   const [phase, setPhase] = useState<'logo' | 'in' | 'out' | 'ready'>('logo');
   useEffect(() => {
+    // warm up Eli's photo for the next step
+    new Image().src = ELI.photo;
     const t1 = setTimeout(() => setPhase('in'), 1400);
     const t2 = setTimeout(() => setPhase('out'), 1400 + 4200);
     const t3 = setTimeout(() => setPhase('ready'), 1400 + 4200 + 5200);
@@ -311,23 +321,23 @@ function Welcome({ onBegin }: { onBegin: () => void }) {
           <AnimatePresence mode="wait">
             {phase === 'logo' && (
               <motion.h1 key="t0" {...panel} className="font-display text-[40px] leading-tight">
-                Respira hondo
+                Respirá hondo
               </motion.h1>
             )}
             {phase === 'in' && (
               <motion.p key="t1" {...panel} className="font-display text-[34px] leading-tight text-mist-50/90">
-                Inhala…
+                Inhalá…
               </motion.p>
             )}
             {phase === 'out' && (
               <motion.p key="t2" {...panel} className="font-display text-[34px] leading-tight text-mist-50/90">
-                y suelta despacio
+                y soltá despacio
               </motion.p>
             )}
             {phase === 'ready' && (
               <motion.div key="t3" {...panel}>
-                <h1 className="font-display text-[36px] leading-tight">Te damos la bienvenida</h1>
-                <p className="mt-2 text-[15px] text-2">Tu espacio para meditar, dormir mejor y vivir con más calma.</p>
+                <h1 className="font-display text-[38px] leading-tight">Bienvenida</h1>
+                <p className="mt-2 text-[15px] text-2">Tu espacio para bajar un cambio, descansar de verdad y tratarte con más amabilidad.</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -344,6 +354,50 @@ function Welcome({ onBegin }: { onBegin: () => void }) {
         </Button>
         <p className="mt-3 text-[12px] text-3">Sin registro. Todo se guarda en tu dispositivo.</p>
       </motion.div>
+    </motion.div>
+  );
+}
+
+/** Eli introduces herself: the person behind the app, before any question. */
+function MeetEli({ onNext }: { onNext: () => void }) {
+  return (
+    <motion.div {...panel} className="no-scrollbar flex max-h-full flex-col overflow-y-auto pt-16 pb-4">
+      <div className="relative mx-auto w-44 shrink-0 sm:w-52">
+        <motion.div
+          aria-hidden="true"
+          className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(247_203_214/0.45),transparent)] blur-xl"
+          animate={{ opacity: [0.6, 1, 0.6], scale: [0.97, 1.04, 0.97] }}
+          transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+        />
+        <motion.img
+          src={ELI.photo}
+          alt={ELI.fullName}
+          className="relative aspect-[4/5] w-full rounded-[32px] border border-white/15 object-cover shadow-[0_30px_60px_-24px_rgb(0_0_0/0.7)]"
+          initial={{ opacity: 0, scale: 0.94, rotate: -2 }}
+          animate={{ opacity: 1, scale: 1, rotate: -2 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <div className="absolute -right-4 -bottom-3 rotate-[4deg] rounded-full bg-mist-50 px-3.5 py-1.5 font-display text-[17px] text-ink-900 italic shadow-lg">
+          Hola, soy Eli
+        </div>
+      </div>
+      <h1 className="mt-9 font-display text-[30px] leading-tight">Este espacio es para vos</h1>
+      <p className="mt-3 text-[15.5px] leading-relaxed text-2">
+        Soy profesora de mindfulness, instructora de yoga y coach ontológica. Acompaño a mujeres que están todo el día resolviendo, y a las que
+        incluso descansar les cuesta.
+      </p>
+      <p className="mt-3 text-[15.5px] leading-relaxed text-2">
+        Acá vas a encontrar prácticas cortas para bajar un cambio, dormir mejor y tratarte con más amabilidad, todos los días.
+      </p>
+      <p className="mt-3 font-display text-[20px] text-blush-300 italic">Eli</p>
+      <div className="mt-6 flex items-center gap-3">
+        <Button full size="lg" onClick={onNext} icon={<ArrowRight className="order-last size-5" />}>
+          Empecemos
+        </Button>
+      </div>
+      <div className="mt-3 flex items-center justify-center gap-2 text-[12px] text-3">
+        <EliAvatar size={18} halo={false} /> Primero, contame un poco de vos
+      </div>
     </motion.div>
   );
 }

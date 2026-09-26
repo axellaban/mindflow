@@ -4,7 +4,7 @@ target: 12:00
 bells: none
 pace: 1.2
 ---
-Hola. Te doy la bienvenida a la primera noche de Duerme profundo.
+Hola. Bienvenida a la primera noche de Dormir profundo.
 Esta práctica está pensada para escucharla ya en la cama, con las luces apagadas. No tienes que hacer nada más que escuchar. Si te duermes antes de que termine, perfecto: ese es el objetivo.
 
 Acomódate en la posición en la que sueles dormir.

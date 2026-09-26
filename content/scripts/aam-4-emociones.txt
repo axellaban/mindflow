@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Este es el cuarto día de Aprende a meditar.
+Hola. Este es el cuarto día de Aprender a meditar.
 Hoy vamos a explorar las emociones. No para controlarlas ni hacerlas desaparecer, sino para conocerlas mejor.
 Las emociones son como el clima interior. A veces soleado, a veces nublado, a veces tormenta. Y como el clima, siempre están cambiando.
 

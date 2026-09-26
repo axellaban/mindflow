@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola, te doy la bienvenida al primer día de Aprende a meditar.
+Hola, bienvenida al primer día de Aprender a meditar.
 Durante esta semana vamos a construir, paso a paso, una práctica sencilla que puedas llevar contigo a cualquier parte.
 Hoy empezamos por lo más básico, y también lo más poderoso: la respiración.
 

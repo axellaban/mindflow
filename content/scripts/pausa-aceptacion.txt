@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de la aceptación.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de la aceptación.
 Imagina que sales de casa y empieza a llover. Puedes enojarte con la lluvia, quejarte, pensar que no debería estar lloviendo. Y vas a mojarte igual.
 O puedes reconocer que llueve, abrir el paraguas, y seguir caminando.
 La lluvia es la misma. Lo que cambia es cuánto sufrimos por ella.

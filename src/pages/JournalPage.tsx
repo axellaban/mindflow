@@ -53,7 +53,7 @@ export function JournalPage() {
     <div className="pb-12">
       <PageHeader
         title="Diario"
-        subtitle="Tu espacio para registrar cómo estás. Solo tú puedes verlo."
+        subtitle="Tu espacio para registrar cómo estás. Solo vos podés verlo."
         back
         action={
           <Button size="sm" variant="secondary" icon={<Plus className="size-4" />} onClick={() => openCheckIn(true)}>
@@ -105,8 +105,8 @@ export function JournalPage() {
             onChange={(e) => setText(e.target.value)}
             rows={4}
             maxLength={4000}
-            placeholder="Escribe lo que surja…"
-            className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-ink-900/40 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-lilac-300/50"
+            placeholder="Escribí lo que surja…"
+            className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-ink-900/40 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-blush-300/50"
           />
           <div className="mt-3 flex justify-end">
             <Button size="sm" onClick={save} disabled={!text.trim()}>
@@ -118,7 +118,7 @@ export function JournalPage() {
 
       <section className="mt-10 px-5 md:px-0">
         {entries.length === 0 ? (
-          <p className="text-center text-[15px] text-3">Todavía no hay registros. Empieza con un check-in de ánimo o respondiendo la pregunta de hoy.</p>
+          <p className="text-center text-[15px] text-3">Todavía no hay registros. Empezá con un check-in de ánimo o respondiendo la pregunta de hoy.</p>
         ) : (
           <div className="space-y-8">
             {entries.map(([day, list]) => (

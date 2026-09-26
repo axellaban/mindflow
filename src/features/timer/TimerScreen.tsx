@@ -47,7 +47,7 @@ export function TimerScreen() {
 
   return (
     <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#1f2860_0%,#0a0f28_60%,#04061a_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#3d2548_0%,#1b1020_60%,#0e0811_100%)]" />
       <div className="grain absolute inset-0" />
       <AnimatePresence mode="wait">
         {stage === 'setup' && (
@@ -60,7 +60,7 @@ export function TimerScreen() {
             <div className="no-scrollbar flex-1 overflow-y-auto px-5">
               <div className="pt-3 text-center">
                 <p className="text-[12px] font-bold tracking-[0.16em] text-2 uppercase">Temporizador</p>
-                <h1 className="mt-2 font-display text-[34px] leading-tight md:text-[42px]">Medita en silencio</h1>
+                <h1 className="mt-2 font-display text-[34px] leading-tight md:text-[42px]">Meditá en silencio</h1>
               </div>
               <div className="mt-8 flex items-center justify-center gap-6">
                 <IconButton label="Menos tiempo" size="lg" onClick={() => setMinutes((m) => Math.max(1, m <= 10 ? m - 1 : m - 5))}>
@@ -265,7 +265,7 @@ function Running({
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="relative">
           <motion.div
-            className="absolute inset-[-40px] rounded-full bg-lilac-400/10 blur-2xl"
+            className="absolute inset-[-40px] rounded-full bg-blush-400/10 blur-2xl"
             animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.9, 0.5] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />

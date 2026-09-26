@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Te doy la bienvenida al tercer día.
+Bienvenida al tercer día.
 Hasta ahora practicamos volver a la respiración y al cuerpo. Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente: los pensamientos.
 
 Una idea muy común es que meditar consiste en dejar de pensar. No es así.

@@ -4,7 +4,7 @@ target: 10:00
 bells: none
 pace: 1.2
 ---
-Hola. Esta es la segunda noche de Duerme profundo.
+Hola. Esta es la segunda noche de Dormir profundo.
 Hoy vamos a usar la respiración como un interruptor. Cuando alargamos la exhalación, el cuerpo recibe una señal muy clara: estás a salvo, puedes descansar.
 
 Acuéstate en tu postura favorita para dormir. Deja que la cabeza pese sobre la almohada.

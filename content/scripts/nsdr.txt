@@ -4,7 +4,7 @@ target: 20:00
 bells: start,end
 pace: 1.18
 ---
-Hola. Te doy la bienvenida a esta práctica de descanso profundo.
+Hola. Bienvenida a esta práctica de descanso profundo.
 Está inspirada en el yoga nidra, y en lo que hoy se conoce como descanso profundo sin sueño. Durante veinte minutos, vas a llevar el cuerpo a un estado de reposo muy profundo, mientras la mente permanece ligeramente consciente.
 Es ideal para recuperar energía a media tarde, después de una mala noche, o cuando necesitas recargar sin dormir una siesta larga.
 

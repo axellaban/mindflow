@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola de nuevo. Este es el segundo día de Aprende a meditar.
+Hola de nuevo. Este es el segundo día de Aprender a meditar.
 Ayer usamos la respiración como ancla. Hoy vamos a ampliar esa ancla a todo el cuerpo.
 Muchas veces vivimos como si fuéramos solo una cabeza que piensa. Pero el cuerpo siempre está aquí, en el presente, enviándonos información. Solo hace falta escucharlo.
 

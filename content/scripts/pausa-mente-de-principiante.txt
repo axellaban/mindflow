@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a practicar la mente de principiante.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a practicar la mente de principiante.
 Un maestro zen decía que en la mente del principiante hay muchas posibilidades, y en la del experto, muy pocas.
 Cuando creemos que ya sabemos cómo es algo, dejamos de mirarlo. Tu calle, tu casa, las personas con las que vives, incluso tu propia respiración. Las conocemos tan bien que ya no las vemos.
 

@@ -70,7 +70,7 @@ export function SessionRow({ session, index, right }: { session: Session; index?
       <div className="relative size-16 shrink-0">
         <CoverArt spec={session.art} rounded="rounded-2xl" className="size-16" grain={false} />
         {completed && (
-          <div className="absolute -right-1 -bottom-1 flex size-6 items-center justify-center rounded-full border-2 border-ink-800 bg-mint-400 text-ink-900">
+          <div className="absolute -right-1 -bottom-1 flex size-6 items-center justify-center rounded-full border-2 border-ink-800 bg-sage-400 text-ink-900">
             <Check className="size-3" strokeWidth={3} />
           </div>
         )}
@@ -169,7 +169,7 @@ export function ContinueCard({ progress }: { progress: ProgramProgress }) {
         <CoverArt spec={program.art} rounded="rounded-[20px]" className="size-[72px]" grain={false} />
       </Link>
       <Link to={`/programa/${program.id}`} className="min-w-0 flex-1" onClick={() => haptic(5)}>
-        <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Continúa</p>
+        <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Continuar</p>
         <p className="truncate text-[16px] font-semibold">{program.title}</p>
         <div className="mt-2 flex items-center gap-2">
           <div className="flex gap-1">

@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a explorar la confianza.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a explorar la confianza.
 Piensa en todo lo que tu cuerpo hace sin que se lo pidas. El corazón late unas cien mil veces al día. Los pulmones respiran unas veinte mil. Tu cuerpo cicatriza heridas, digiere, regula su temperatura, y todo eso, sin que tengas que pensar en ello.
 Hay una inteligencia profunda trabajando para ti en este mismo momento.
 

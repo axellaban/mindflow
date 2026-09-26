@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Te doy la bienvenida al quinto día.
+Bienvenida al quinto día.
 Hoy vamos a descubrir que cualquier experiencia puede ser una puerta al presente. No solo la respiración. También los sonidos, el tacto, la luz.
 Los sentidos siempre están ocurriendo ahora. Por eso son maestros excelentes.
 

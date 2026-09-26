@@ -6,6 +6,7 @@ import { PALETTES } from '@/art/palettes';
 import { Button, IconButton } from '@/components/ui/Button';
 import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import type { ProgramId } from '@/content/types';
+import { EliInvite } from '@/features/eli/EliInvite';
 import { haptic } from '@/lib/device';
 import { programProgress } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
@@ -98,7 +99,7 @@ export function ProgramPage() {
                   <span
                     className={cn(
                       'flex size-11 shrink-0 items-center justify-center rounded-full text-[15px] font-semibold tabular-nums',
-                      isDone ? 'bg-mint-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/70',
+                      isDone ? 'bg-sage-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/70',
                     )}
                   >
                     {isDone ? <Check className="size-5" strokeWidth={2.6} /> : i + 1}
@@ -119,6 +120,22 @@ export function ProgramPage() {
           })}
         </ol>
         <p className="mt-8 text-center text-[13px] text-3">{program.outcome}</p>
+        {program.unit !== 'Noche' && (
+          <EliInvite
+            placement="program"
+            eyebrow="Sesiones 1:1 con Eli"
+            title={program.id === 'bajar-un-cambio' ? 'Estos son los temas que trabajo con mujeres' : '¿Querés ir más profundo?'}
+            body={
+              program.id === 'bajar-un-cambio'
+                ? 'El estrés, la autoexigencia, la culpa y el descanso son el centro de mis sesiones 1:1. Si querés, los trabajamos juntas a tu medida.'
+                : 'Si querés acompañamiento para lo que estás viviendo, en una sesión 1:1 armamos juntas una práctica a tu medida.'
+            }
+            topic={progress.complete ? 'program' : 'program-doing'}
+            program={program.title}
+            more
+            className="mt-8"
+          />
+        )}
       </div>
     </div>
   );

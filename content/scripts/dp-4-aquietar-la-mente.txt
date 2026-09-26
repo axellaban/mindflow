@@ -4,7 +4,7 @@ target: 12:00
 bells: none
 pace: 1.2
 ---
-Hola. Te doy la bienvenida a la cuarta noche.
+Hola. Bienvenida a la cuarta noche.
 Muchas veces el cuerpo está agotado, pero la mente sigue encendida. Repasa conversaciones, planifica mañana, se preocupa por cosas que ahora no puede resolver.
 Esta noche vamos a aprender dos herramientas para aquietar esa mente inquieta. La primera es guardar las preocupaciones. La segunda es un juego de imaginación que ayuda al cerebro a entrar en modo sueño.
 

@@ -1,10 +1,12 @@
 import { ArrowRight, Flame } from 'lucide-react';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import { MOODS, type MoodLevel } from '@/content/journal';
 import type { Session } from '@/content/types';
+import { EliInvite, type EliInviteProps } from '@/features/eli/EliInvite';
+import { useEliInvite } from '@/features/eli/useEliInvite';
 import { haptic } from '@/lib/device';
 import { programProgress, useStats } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
@@ -24,6 +26,11 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
   const program = session.program ? PROGRAM_BY_ID[session.program.id] : null;
   const progress = program ? programProgress(program, programs[program.id] ?? []) : null;
   const next = progress?.nextSessionId ? SESSION_BY_ID[progress.nextSessionId] : null;
+  const completedCount = useAppStore((s) => s.history.filter((h) => h.kind === 'session' && h.completed).length);
+  const [programEnd] = useState(() => Boolean(progress?.complete && session.program?.day === program?.sessions.length));
+  // An invitation from Eli after the mood check: never on the first session, never too often.
+  const eli = useEliInvite(programEnd ? 'program' : 'completion', programEnd || (mood !== null && completedCount >= 2), programEnd ? 30 : 3, programEnd ? 2 : 5);
+  const invite = eliCopy(session, mood, programEnd ? program?.title : undefined);
 
   const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } } };
   const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } } };
@@ -41,7 +48,7 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
           <motion.path
             d="M14 27 L23 36 L39 18"
             fill="none"
-            stroke="#f6f4ff"
+            stroke="#fdf3f5"
             strokeWidth="3.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -88,7 +95,7 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
       )}
 
       <motion.div variants={item} className="mt-6 w-full">
-        <p className="mb-3 text-[15px] font-semibold">¿Cómo te sientes ahora?</p>
+        <p className="mb-3 text-[15px] font-semibold">¿Cómo te sentís ahora?</p>
         <div className="flex justify-center gap-2.5">
           {MOODS.map((m) => (
             <button
@@ -114,6 +121,19 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
         {mood !== null && <p className="mt-3 text-[13px] text-2">Registrado en tu diario. Gracias por escucharte.</p>}
       </motion.div>
 
+      <AnimatePresence>
+        {eli.show && (
+          <EliInvite
+            key="eli"
+            {...invite}
+            placement={programEnd ? 'program' : 'completion'}
+            onDismiss={() => eli.dismiss(programEnd ? 30 : 10)}
+            delay={programEnd ? 0.9 : 0.35}
+            className="mt-6 w-full text-left"
+          />
+        )}
+      </AnimatePresence>
+
       <motion.div variants={item} className="mt-8 flex w-full flex-col gap-2.5">
         {next && (
           <Button
@@ -132,4 +152,48 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
       </motion.div>
     </motion.div>
   );
+}
+
+type InviteCopy = Pick<EliInviteProps, 'eyebrow' | 'title' | 'body' | 'lead' | 'topic' | 'program' | 'whatsappLabel'>;
+
+/** What Eli would say right after this practice, given how she feels now. */
+function eliCopy(session: Session, mood: MoodLevel | null, finishedProgram?: string): InviteCopy {
+  if (finishedProgram) {
+    return {
+      eyebrow: 'Un mensaje de Eli',
+      title: `Terminaste ${finishedProgram}`,
+      body: 'Qué lindo acompañarte en este camino. Si querés seguir profundizando, podemos trabajar juntas lo que más te está costando en una sesión 1:1 online.',
+      topic: 'program',
+      program: finishedProgram,
+    };
+  }
+  if (mood !== null && mood <= 2) {
+    return {
+      eyebrow: 'Un mensaje de Eli',
+      title: 'Gracias por darte este momento',
+      body: 'Si hoy está siendo un día difícil y tenés ganas de hablarlo, estoy a un mensaje.',
+      lead: 'whatsapp',
+      topic: 'support',
+      whatsappLabel: 'Escribirle a Eli',
+    };
+  }
+  if (session.categories.includes('autoexigencia')) {
+    return {
+      eyebrow: 'Sesiones 1:1 con Eli',
+      title: 'Esto es lo que trabajamos juntas',
+      body: 'El estrés, la autoexigencia y la culpa son justamente lo que más trabajo con mujeres en mis sesiones. ¿Te gustaría que lo veamos a tu medida?',
+    };
+  }
+  if (mood !== null && mood >= 4) {
+    return {
+      eyebrow: 'Sesiones 1:1 con Eli',
+      title: 'Esta calma se puede entrenar',
+      body: 'En una sesión 1:1 te acompaño a llevarla a tu día a día, con prácticas pensadas para tu vida real.',
+    };
+  }
+  return {
+    eyebrow: 'Sesiones 1:1 con Eli',
+    title: '¿Querés ir un paso más allá?',
+    body: 'En una sesión 1:1 armamos juntas una práctica a tu medida, para lo que estás viviendo hoy.',
+  };
 }

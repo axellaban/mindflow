@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MindFlow narration renderer.
+Mindfulness by Eli narration renderer.
 
 Turns the plain-text scripts in content/scripts/*.txt into finished audio:
 
@@ -513,7 +513,7 @@ def encode_mp3(audio: np.ndarray, out: Path, ffmpeg: str) -> None:
         cmd = [
             ffmpeg, "-y", "-loglevel", "error", "-i", tmp.name,
             "-c:a", "libmp3lame", "-q:a", "7", "-ar", str(SR), "-ac", "1",
-            "-id3v2_version", "3", "-metadata", "artist=MindFlow",
+            "-id3v2_version", "3", "-metadata", "artist=Mindfulness by Eli",
             str(out),
         ]
         subprocess.run(cmd, check=True)

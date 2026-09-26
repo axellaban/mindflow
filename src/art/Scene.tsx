@@ -183,11 +183,13 @@ function useParticles(
     let snow: Mover[] = [];
     let embers: Mover[] = [];
     let flies: Mover[] = [];
+    let petals: Mover[] = [];
     let shimmer: Star[] = [];
     let shooting: { x: number; y: number; vx: number; vy: number; life: number } | null = null;
     let nextShoot = 5 + Math.random() * 8;
     const emberSprite = glowSprite(p.accent[1]);
     const flySprite = glowSprite('#fff1a8');
+    const petalColors = ['#ffd6df', '#ffc2d1', '#fbe4ea', '#f7b6c6', '#ffe3d6'];
 
     const size = (c: HTMLCanvasElement, g: CanvasRenderingContext2D, scale: number) => {
       c.width = Math.max(1, Math.round(w * scale));
@@ -249,6 +251,20 @@ function useParticles(
             a: 0,
             life: Math.random() * 10,
             max: 3 + Math.random() * 5,
+            ph: Math.random() * 6.28,
+          }))
+        : [];
+      // life = rotation, max = spin speed
+      petals = kinds.has('petals')
+        ? Array.from({ length: Math.min(36, Math.round(12 + area * 0.14)) }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: 6 + Math.random() * 14,
+            vy: 16 + Math.random() * 22,
+            r: 2.6 + Math.pow(Math.random(), 1.6) * 4.4,
+            a: 0.4 + Math.random() * 0.45,
+            life: Math.random() * 6.28,
+            max: (Math.random() < 0.5 ? -1 : 1) * (0.4 + Math.random() * 1.1),
             ph: Math.random() * 6.28,
           }))
         : [];
@@ -405,6 +421,31 @@ function useParticles(
           return true;
         });
         fctx.globalCompositeOperation = 'source-over';
+        fctx.globalAlpha = 1;
+      }
+      if (petals.length) {
+        for (const f of petals) {
+          if (!reduced) {
+            f.life += f.max * dt;
+            f.y += f.vy * dt;
+            f.x += (f.vx + Math.sin(t * 0.7 + f.ph) * 16) * dt;
+            if (f.y > h + 10 || f.x > w + 10) {
+              f.y = -10;
+              f.x = Math.random() * w * 1.1 - w * 0.1;
+            }
+          }
+          fctx.save();
+          fctx.translate(f.x, f.y);
+          fctx.rotate(f.life);
+          // petals flip as they fall
+          fctx.scale(1, 0.35 + 0.65 * Math.abs(Math.sin(t * 0.9 + f.ph)));
+          fctx.globalAlpha = f.a;
+          fctx.fillStyle = petalColors[Math.floor(f.ph) % petalColors.length]!;
+          fctx.beginPath();
+          fctx.ellipse(0, 0, f.r, f.r * 0.62, 0, 0, 6.283);
+          fctx.fill();
+          fctx.restore();
+        }
         fctx.globalAlpha = 1;
       }
       if (flies.length) {

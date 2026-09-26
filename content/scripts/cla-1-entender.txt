@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida al primer día de Calma la ansiedad.
+Hola. Bienvenida al primer día de Calmar la ansiedad.
 Si llegaste hasta aquí, quizás la ansiedad forme parte de tu vida en este momento. Quiero empezar diciéndote algo importante: no hay nada roto en ti.
 
 La ansiedad es el sistema de alarma del cuerpo. Una función muy antigua, diseñada para protegernos del peligro.

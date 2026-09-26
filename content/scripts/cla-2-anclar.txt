@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Este es el segundo día de Calma la ansiedad.
+Hola. Este es el segundo día de Calmar la ansiedad.
 Cuando la ansiedad sube, la mente suele viajar al futuro: ¿y si pasa esto?, ¿y si sale mal? Hoy vamos a practicar cómo volver, una y otra vez, al único lugar donde podemos actuar: el presente. Y la puerta más directa al presente es el cuerpo.
 
 Siéntate con los pies bien apoyados en el suelo. Si puedes, descálzate.

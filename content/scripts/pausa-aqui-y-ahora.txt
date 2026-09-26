@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a volver a casa: al aquí y al ahora.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a volver a casa: al aquí y al ahora.
 ¿Te pasó alguna vez llegar a un lugar sin recordar el camino? ¿O terminar un plato de comida sin haberlo saboreado? Es lo que llamamos piloto automático. El cuerpo está en un lugar, y la mente en otro.
 Pasamos gran parte del día así: repasando el pasado o ensayando el futuro. Y mientras tanto, el presente, que es donde de verdad ocurre la vida, pasa de largo.
 

@@ -1,7 +1,7 @@
 ---
-voice: mateo
+voice: luz
 bells: none
-pace: 1.28
+pace: 1.25
 gaps: 1.45
 ---
 Hola. Esta noche vamos a subir a un tren. Un tren nocturno que atraviesa despacio la Patagonia, bajo un cielo enorme.

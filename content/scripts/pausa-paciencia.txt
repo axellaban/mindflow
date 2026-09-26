@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de la paciencia.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de la paciencia.
 Vivimos rodeados de cosas instantáneas. Mensajes que llegan en un segundo, comida que llega en minutos, respuestas a un clic de distancia. Y sin darnos cuenta, empezamos a esperar lo mismo de la vida: resultados inmediatos.
 Pero las cosas que más valen crecen despacio. Un árbol no se apura. Una amistad no se construye en una tarde. Tampoco la calma.
 

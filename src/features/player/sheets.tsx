@@ -158,7 +158,7 @@ export function OptionsSheet({
       useUI.getState().toast('Disponible sin conexión', 'success');
     } catch {
       setOffline('no');
-      useUI.getState().toast('No se pudo descargar. Inténtalo de nuevo.');
+      useUI.getState().toast('No se pudo descargar. Intentalo de nuevo.');
     }
   };
 
@@ -168,7 +168,7 @@ export function OptionsSheet({
       <div className="divide-y divide-white/6 pb-4">
         <Row
           icon={<Heart className={cn('size-5', isFav && 'fill-rose-300 text-rose-300')} />}
-          label={isFav ? 'En tus favoritos' : 'Añadir a favoritos'}
+          label={isFav ? 'En tus favoritos' : 'Agregar a favoritos'}
           onClick={() => {
             const on = toggleFavorite(info.key);
             useUI.getState().toast(on ? 'Guardado en favoritos' : 'Quitado de favoritos');
@@ -179,7 +179,7 @@ export function OptionsSheet({
           label="Compartir"
           onClick={async () => {
             const url = sessionId ? `${location.origin}/sesion/${sessionId}` : location.origin;
-            const r = await shareOrCopy({ title: info.title, text: `${info.title} — una pausa para ti en MindFlow`, url });
+            const r = await shareOrCopy({ title: info.title, text: `${info.title} — una pausa para vos en Mindfulness by Eli`, url });
             if (r === 'copied') useUI.getState().toast('Enlace copiado');
           }}
         />
@@ -200,7 +200,7 @@ export function OptionsSheet({
         />
         {info.session && 'caches' in window && (
           <Row
-            icon={offline === 'yes' ? <Check className="size-5 text-mint-300" /> : <Download className="size-5" />}
+            icon={offline === 'yes' ? <Check className="size-5 text-sage-300" /> : <Download className="size-5" />}
             label={offline === 'yes' ? 'Disponible sin conexión' : offline === 'saving' ? 'Descargando…' : 'Descargar para escuchar sin conexión'}
             onClick={offline === 'no' ? () => void saveOffline() : undefined}
           />

@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 import type { AchievementId } from '@/content/achievements';
+import type { EliPlacement } from '@/content/eli';
 import { PROGRAMS, SESSION_BY_ID } from '@/content/catalog';
 import type { MoodLevel } from '@/content/journal';
 import type { SceneId } from '@/content/scenes';
@@ -70,6 +71,14 @@ export interface Profile {
   onboarded: boolean;
 }
 
+/** How often Eli's invitations were shown, snoozed or tapped, so they never feel pushy. */
+export interface EliState {
+  seen: Partial<Record<EliPlacement, number>>;
+  snoozed: Partial<Record<EliPlacement, number>>;
+  clicks: Partial<Record<string, number>>;
+  lastClickAt: number;
+}
+
 interface Data {
   profile: Profile;
   settings: Settings;
@@ -80,6 +89,7 @@ interface Data {
   journal: JournalEntry[];
   mixes: SavedMix[];
   achievements: Partial<Record<AchievementId, number>>;
+  eli: EliState;
 }
 
 interface Actions {
@@ -97,9 +107,23 @@ interface Actions {
   exportData: () => string;
   importData: (json: string) => boolean;
   resetAll: () => void;
+  markEliSeen: (placement: EliPlacement) => void;
+  snoozeEli: (placement: EliPlacement, days: number) => void;
+  trackEliClick: (key: string) => void;
 }
 
 export type AppState = Data & Actions;
+
+const APP_ID = 'mindfulness-by-eli';
+const STORAGE_KEY = 'mindfulness-by-eli';
+
+// Keep data saved under the app's previous name.
+try {
+  const legacy = localStorage.getItem('mindflow');
+  if (legacy && !localStorage.getItem(STORAGE_KEY)) localStorage.setItem(STORAGE_KEY, legacy);
+} catch {
+  /* storage unavailable */
+}
 
 const DEFAULTS: Data = {
   profile: { name: '', goals: [], experience: null, createdAt: Date.now(), onboarded: false },
@@ -108,7 +132,7 @@ const DEFAULTS: Data = {
     captions: false,
     haptics: true,
     keepAwake: true,
-    sceneId: 'lago',
+    sceneId: 'jardin',
     sceneSound: false,
     reminderTime: null,
     sleepFadeMinutes: 20,
@@ -122,6 +146,7 @@ const DEFAULTS: Data = {
   journal: [],
   mixes: [],
   achievements: {},
+  eli: { seen: {}, snoozed: {}, clicks: {}, lastClickAt: 0 },
 };
 
 function evaluateAchievements(s: Data): AchievementId[] {
@@ -241,7 +266,7 @@ export const useAppStore = create<AppState>()(
           const { profile, settings, history, favorites, programs, moods, journal, mixes, achievements } = get();
           return JSON.stringify(
             {
-              app: 'mindflow',
+              app: APP_ID,
               version: 1,
               exportedAt: new Date().toISOString(),
               data: { profile, settings, history, favorites, programs, moods, journal, mixes, achievements },
@@ -254,7 +279,7 @@ export const useAppStore = create<AppState>()(
         importData: (json) => {
           try {
             const parsed = JSON.parse(json) as { app?: string; data?: Partial<Data> };
-            if (parsed.app !== 'mindflow' || !parsed.data) return false;
+            if ((parsed.app !== APP_ID && parsed.app !== 'mindflow') || !parsed.data) return false;
             const d = parsed.data;
             set((st) => ({
               profile: { ...st.profile, ...d.profile },
@@ -274,10 +299,18 @@ export const useAppStore = create<AppState>()(
         },
 
         resetAll: () => set({ ...DEFAULTS, profile: { ...DEFAULTS.profile, createdAt: Date.now() } }),
+
+        markEliSeen: (placement) => set((st) => ({ eli: { ...st.eli, seen: { ...st.eli.seen, [placement]: Date.now() } } })),
+
+        snoozeEli: (placement, days) =>
+          set((st) => ({ eli: { ...st.eli, snoozed: { ...st.eli.snoozed, [placement]: Date.now() + days * 86_400_000 } } })),
+
+        trackEliClick: (key) =>
+          set((st) => ({ eli: { ...st.eli, clicks: { ...st.eli.clicks, [key]: (st.eli.clicks[key] ?? 0) + 1 }, lastClickAt: Date.now() } })),
       };
     },
     {
-      name: 'mindflow',
+      name: STORAGE_KEY,
       version: 1,
       storage: createJSONStorage(() => localStorage),
       partialize: (s) => ({
@@ -290,6 +323,7 @@ export const useAppStore = create<AppState>()(
         journal: s.journal,
         mixes: s.mixes,
         achievements: s.achievements,
+        eli: s.eli,
       }),
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Partial<Data>;
@@ -297,6 +331,7 @@ export const useAppStore = create<AppState>()(
           ...current,
           ...p,
           profile: { ...current.profile, ...p.profile },
+          eli: { ...current.eli, ...p.eli },
           settings: {
             ...current.settings,
             ...p.settings,

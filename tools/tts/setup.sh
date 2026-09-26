@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Downloads the Piper voices used by MindFlow into tools/tts/models and
+# Downloads the Piper voices used by the app into tools/tts/models and
 # creates a Python virtualenv with the renderer's dependencies.
 set -euo pipefail
 cd "$(dirname "$0")"

@@ -1,10 +1,10 @@
 ---
-voice: mateo
+voice: luz
 bells: none
-pace: 1.28
+pace: 1.25
 gaps: 1.45
 ---
-Hola. Esta noche te llevo a una isla pequeña, en medio del mar, donde vive el guardián de un faro.
+Hola. Esta noche te llevo a una isla pequeña, en medio del mar, donde vive la guardiana de un faro.
 Antes de empezar, acomódate. Deja que el cuerpo encuentre su lugar en la cama.
 Respira hondo, llenándote de aire salado imaginario… y suéltalo despacio, como una ola que se retira.
 Otra vez. Inhala… y deja ir.
@@ -14,9 +14,9 @@ Ahora solo escucha. No hace falta que prestes demasiada atención. Deja que las 
 La isla es apenas un puñado de roca, cubierta de pasto corto y flores silvestres que resisten el viento.
 En su punto más alto se levanta el faro. Una torre blanca, redonda, con una franja roja cerca de la cima, y una cúpula de vidrio que brilla con los últimos rayos del sol.
 Al pie de la torre hay una casita de piedra, con techo de tejas y una chimenea de la que sale un hilo de humo.
-Allí vive Tomás, el guardián del faro.
+Allí vive Elena, la guardiana del faro.
 
-Tomás es un hombre mayor, de manos grandes y mirada serena. Hace muchos años que vive en la isla. Conoce cada roca, cada ave, cada cambio del viento.
+Elena es una mujer mayor, de manos fuertes y mirada serena. Hace muchos años que vive en la isla. Conoce cada roca, cada ave, cada cambio del viento.
 Y cada tarde, cuando el sol empieza a bajar, cumple con su ritual.
 [4]
 
@@ -25,7 +25,7 @@ Hoy el mar está tranquilo. Las olas llegan a las rocas con un ritmo lento, sin 
 El cielo está limpio. Solo unas nubes largas y finas, teñidas de rosa y naranja, se estiran sobre el horizonte.
 Las gaviotas vuelan en círculos, cada vez más bajo, buscando dónde pasar la noche en los acantilados.
 
-Tomás respira hondo el aire salado. Huele a algas, a sal, a piedra mojada.
+Elena respira hondo el aire salado. Huele a algas, a sal, a piedra mojada.
 Anota en una libreta la dirección del viento, el estado del mar, la forma de las nubes. Lo hace con una letra pequeña y prolija, con un lápiz que siempre lleva detrás de la oreja.
 [4]
 
@@ -33,16 +33,16 @@ Luego, entra en la torre.
 La puerta es de madera gruesa, pintada de azul, y cruje suavemente al abrirse.
 Adentro, una escalera de caracol de hierro sube en espiral, girando y girando, hasta perderse en lo alto.
 
-Tomás empieza a subir. Un escalón, y otro, y otro.
+Elena empieza a subir. Un escalón, y otro, y otro.
 Sus pasos resuenan en la torre con un eco suave. Toc. Toc. Toc.
 Cada tanto, una pequeña ventana redonda deja ver el mar, cada vez más abajo, cada vez más amplio.
-Tomás no tiene apuro. Sube despacio, apoyando la mano en la baranda fría y lisa, gastada por los años.
+Elena no tiene apuro. Sube despacio, apoyando la mano en la baranda fría y lisa, gastada por los años.
 Ciento veinte escalones. Los conoce todos.
 [5]
 
 Arriba, en la sala de la lámpara, todo es de vidrio y bronce.
 En el centro está la gran lente del faro, un prisma enorme, hecho de anillos de cristal que brillan como hielo.
-Tomás limpia los cristales con un paño suave, en círculos lentos, hasta que no queda ni una mancha.
+Elena limpia los cristales con un paño suave, en círculos lentos, hasta que no queda ni una mancha.
 Revisa el aceite, ajusta la mecha, da cuerda al mecanismo.
 Y cuando el sol toca el horizonte, enciende la lámpara.
 [4]
@@ -54,57 +54,57 @@ Una vuelta, y otra, y otra.
 Barre el agua oscura, las rocas, el horizonte. Y vuelve a empezar.
 
 Allá lejos, en el mar, algún barco pesquero verá esa luz, y sabrá dónde está la costa. Sabrá que no está solo en la noche.
-Por eso Tomás enciende el faro cada tarde. Para que otros encuentren el camino a casa.
+Por eso Elena enciende el faro cada tarde. Para que otros encuentren el camino a casa.
 [5]
 
-Tomás sale al balcón que rodea la cúpula.
+Elena sale al balcón que rodea la cúpula.
 El viento es suave a esta altura, fresco, y trae el sonido del mar desde abajo. Un murmullo largo, profundo, que sube y baja, como una respiración enorme.
 El sol ya se hundió en el agua. Queda solo una franja de luz naranja en el horizonte, que poco a poco se apaga.
 Y en el cielo, que se vuelve azul oscuro, aparecen las primeras estrellas.
 [4]
 
-Tomás se queda allí un rato, mirando.
+Elena se queda allí un rato, mirando.
 Ve pasar una bandada de aves marinas, volando bajo sobre el agua, rumbo a su nido.
 Ve, muy lejos, las luces pequeñas de un barco que avanza despacio.
 Ve la luna, que asoma detrás de una nube, y deja un camino de plata sobre el mar.
 El haz del faro gira, y gira, y la luna brilla, y el mar respira.
 [5]
 
-Cuando el frío empieza a sentirse, Tomás vuelve a entrar.
+Cuando el frío empieza a sentirse, Elena vuelve a entrar.
 Baja la escalera de caracol, despacio, escalón por escalón. Toc. Toc. Toc.
 Las ventanitas redondas ahora muestran un mar negro, iluminado a intervalos por el haz que gira arriba.
 
 En la casita de piedra, el fuego de la chimenea sigue encendido.
-Tomás agrega un par de troncos. Las llamas crecen, crujen, y llenan la habitación de una luz cálida y danzante.
+Elena agrega un par de troncos. Las llamas crecen, crujen, y llenan la habitación de una luz cálida y danzante.
 Pone agua a calentar en una tetera de hierro. Mientras espera, se sienta en su sillón favorito, cubierto con una manta tejida.
 [4]
 
 La tetera empieza a silbar, bajito.
-Tomás prepara un té de manzanilla, y le agrega una cucharada de miel.
+Elena prepara un té de manzanilla, y le agrega una cucharada de miel.
 Se sienta junto a la ventana, con la taza caliente entre las manos.
 Por la ventana, ve pasar el haz del faro. Luz, y oscuridad. Luz, y oscuridad. Como un parpadeo lento, tranquilo.
 [5]
 
 Abre su libro. Es un libro viejo, de tapas gastadas, sobre las islas lejanas y los navegantes antiguos.
 Lee algunas páginas, despacio. Pero las palabras empiezan a volverse borrosas. Los párrafos se alargan.
-Tomás cierra el libro, y lo deja sobre la mesa.
+Elena cierra el libro, y lo deja sobre la mesa.
 Termina el té, y apaga la lámpara de la mesa.
 Solo queda la luz del fuego, cada vez más baja, y el destello regular del faro.
 [5]
 
-Tomás se acuesta en su cama, junto a la pared de piedra.
+Elena se acuesta en su cama, junto a la pared de piedra.
 La cama es sencilla, pero cómoda. Las sábanas huelen a sal y a sol. La manta de lana es gruesa y tibia.
 Apoya la cabeza en la almohada, y cierra los ojos.
 [5]
 
 Desde la cama, escucha el mar.
 Las olas llegan a las rocas, y se retiran. Llegan, y se retiran.
-Un sonido que lo acompaña desde hace tantos años que ya forma parte de su propia respiración.
+Un sonido que la acompaña desde hace tantos años que ya forma parte de su propia respiración.
 Inhala, y la ola llega. Exhala, y la ola se va.
 [6]
 
-Arriba, en la torre, la luz sigue girando. Toda la noche. Sin descanso. Cuidando el mar mientras él duerme.
-Tomás sabe que puede dormir tranquilo. El faro hace su trabajo.
+Arriba, en la torre, la luz sigue girando. Toda la noche. Sin descanso. Cuidando el mar mientras ella duerme.
+Elena sabe que puede dormir tranquila. El faro hace su trabajo.
 Y tú también puedes descansar ahora. No hay nada que vigilar. Nada que cuidar. Alguien está manteniendo la luz encendida por ti.
 [6]
 

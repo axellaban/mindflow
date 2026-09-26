@@ -7,27 +7,29 @@
   --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
 
-  --color-ink-950: #04061a;
-  --color-ink-900: #070b1e;
-  --color-ink-850: #0a0f28;
-  --color-ink-800: #0e1433;
-  --color-ink-700: #161d45;
-  --color-ink-600: #212a5c;
-  --color-ink-500: #2e3875;
+  --color-ink-950: #0e0811;
+  --color-ink-900: #150c19;
+  --color-ink-850: #1b1020;
+  --color-ink-800: #221528;
+  --color-ink-700: #2f1e37;
+  --color-ink-600: #412b4b;
+  --color-ink-500: #5a3e66;
 
-  --color-mist-50: #f6f4ff;
-  --color-mist-100: #ecebfb;
-  --color-mist-200: #d7d6f0;
+  --color-mist-50: #fdf3f5;
+  --color-mist-100: #f5e6eb;
+  --color-mist-200: #e6d0d8;
 
-  --color-lilac-300: #cfc6ff;
-  --color-lilac-400: #b3a6ff;
-  --color-lilac-500: #9585f5;
+  --color-blush-300: #f7cbd6;
+  --color-blush-400: #f0a9bd;
+  --color-blush-500: #e0879f;
   --color-peach-300: #ffd6bd;
   --color-peach-400: #ffbf99;
-  --color-mint-300: #a6ecdf;
-  --color-mint-400: #7fd4c8;
+  --color-sage-300: #cfe2d5;
+  --color-sage-400: #a8c5b2;
+  --color-sage-500: #8da396;
   --color-rose-300: #ffc2d1;
-  --color-gold-300: #ffe3a3;
+  --color-gold-300: #f6deaf;
+  --color-lavender-300: #dccbf5;
 
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-breath: cubic-bezier(0.45, 0, 0.55, 1);
@@ -81,9 +83,9 @@
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
-    --text: #f6f4ff;
-    --text-2: rgb(236 234 255 / 0.74);
-    --text-3: rgb(236 234 255 / 0.54);
+    --text: #fdf3f5;
+    --text-2: rgb(250 233 239 / 0.74);
+    --text-3: rgb(250 233 239 / 0.54);
     --line: rgb(255 255 255 / 0.08);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
@@ -115,7 +117,7 @@
   }
 
   ::selection {
-    background: rgb(179 166 255 / 0.35);
+    background: rgb(240 169 189 / 0.35);
   }
 
   button,
@@ -126,7 +128,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid rgb(207 198 255 / 0.9);
+    outline: 2px solid rgb(247 203 214 / 0.9);
     outline-offset: 3px;
     border-radius: 12px;
   }
@@ -184,7 +186,7 @@
   }
 
   .glass-strong {
-    background: rgb(14 20 51 / 0.72);
+    background: rgb(30 18 36 / 0.72);
     border: 1px solid rgb(255 255 255 / 0.1);
     backdrop-filter: blur(28px) saturate(160%);
     -webkit-backdrop-filter: blur(28px) saturate(160%);
@@ -238,7 +240,7 @@
     cursor: pointer;
     --pct: 50%;
     --track: rgb(255 255 255 / 0.14);
-    --fill: rgb(246 244 255 / 0.92);
+    --fill: rgb(253 243 245 / 0.92);
   }
   .range::-webkit-slider-runnable-track {
     height: 4px;

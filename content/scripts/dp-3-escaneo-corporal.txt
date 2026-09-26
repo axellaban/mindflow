@@ -4,7 +4,7 @@ target: 15:00
 bells: none
 pace: 1.22
 ---
-Hola. Te doy la bienvenida a la tercera noche.
+Hola. Bienvenida a la tercera noche.
 Esta noche vamos a recorrer el cuerpo, parte por parte, invitando a cada zona a soltarse y a descansar. Es una práctica muy eficaz para conciliar el sueño, así que no te preocupes si no llegas al final.
 
 Acuéstate boca arriba, o en la posición que te resulte más cómoda.

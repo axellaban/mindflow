@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a reflexionar sobre una verdad sencilla: todo pasa.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a reflexionar sobre una verdad sencilla: todo pasa.
 Hay una historia de un rey que pidió a sus sabios una frase que sirviera para cualquier situación, buena o mala. Después de mucho pensar, le entregaron un anillo con una inscripción: «esto también pasará».
 En los días difíciles, la frase le daba consuelo. En los días felices, le recordaba disfrutarlos, porque tampoco durarían para siempre.
 

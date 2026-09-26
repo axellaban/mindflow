@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de la amabilidad.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de la amabilidad.
 Cuando tiramos una piedra a un lago, las ondas se expanden mucho más allá del punto donde cayó. Con la amabilidad pasa algo parecido. Un gesto amable, por pequeño que sea, viaja. La persona que lo recibe suele ser más amable con la siguiente. Y así sigue.
 Y hay algo más: la amabilidad no solo beneficia a quien la recibe. También cambia a quien la ofrece.
 

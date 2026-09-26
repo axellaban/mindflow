@@ -3,7 +3,7 @@ voice: luz
 target: 8:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a esta práctica de gratitud.
+Hola. Bienvenida a esta práctica de gratitud.
 Nuestro cerebro está diseñado para detectar problemas. Es un rasgo que nos ayudó a sobrevivir, pero que hoy nos hace pasar por alto muchas cosas buenas que ya están aquí.
 La gratitud es la práctica de mirar también hacia ellas. No para negar lo difícil, sino para ver el cuadro completo.
 

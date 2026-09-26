@@ -51,7 +51,7 @@ export function BreatheScreen() {
       <motion.div
         className="absolute inset-0"
         animate={{
-          background: `radial-gradient(120% 80% at 50% 40%, ${rgba(palette.sky[1], 0.95)} 0%, ${rgba(palette.sky[0], 1)} 55%, #05071a 100%)`,
+          background: `radial-gradient(120% 80% at 50% 40%, ${rgba(palette.sky[1], 0.95)} 0%, ${rgba(palette.sky[0], 1)} 55%, #0e0811 100%)`,
         }}
         transition={{ duration: 1.2 }}
       />
@@ -131,7 +131,7 @@ function Setup({
       <div className="no-scrollbar flex-1 overflow-y-auto">
         <div className="px-5 pt-4 text-center">
           <p className="text-[12px] font-bold tracking-[0.16em] text-2 uppercase">Respirar</p>
-          <h1 className="mt-2 font-display text-[36px] leading-tight md:text-[44px]">Encuentra tu ritmo</h1>
+          <h1 className="mt-2 font-display text-[36px] leading-tight md:text-[44px]">Encontrá tu ritmo</h1>
           <p className="mx-auto mt-2 max-w-sm text-[15px] text-2">Unos minutos de respiración consciente cambian cómo se siente tu cuerpo.</p>
         </div>
 
@@ -447,7 +447,7 @@ function Done({
 }) {
   const minutes = Math.max(1, Math.round(result.seconds / 60));
   const lines = useMemo(
-    () => ['Tu cuerpo ya lo nota.', 'Lleva este ritmo contigo.', 'Una pausa bien aprovechada.', 'Respirar es volver a casa.'],
+    () => ['Tu cuerpo ya lo nota.', 'Llevá este ritmo con vos.', 'Una pausa bien aprovechada.', 'Respirar es volver a casa.'],
     [],
   );
   const line = lines[result.cycles % lines.length];

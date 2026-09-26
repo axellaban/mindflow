@@ -19,9 +19,9 @@ export interface BreathPattern {
   recommendedMinutes: number;
 }
 
-const IN = (s: number, label = 'Inhala'): BreathPhase => ({ kind: 'in', seconds: s, label });
-const OUT = (s: number, label = 'Exhala'): BreathPhase => ({ kind: 'out', seconds: s, label });
-const HOLD = (s: number, label = 'Sostén'): BreathPhase => ({ kind: 'hold', seconds: s, label });
+const IN = (s: number, label = 'Inhalá'): BreathPhase => ({ kind: 'in', seconds: s, label });
+const OUT = (s: number, label = 'Exhalá'): BreathPhase => ({ kind: 'out', seconds: s, label });
+const HOLD = (s: number, label = 'Sostené'): BreathPhase => ({ kind: 'hold', seconds: s, label });
 const REST = (s: number, label = 'Pausa'): BreathPhase => ({ kind: 'rest', seconds: s, label });
 
 export const BREATH_PATTERNS: BreathPattern[] = [
@@ -42,7 +42,7 @@ export const BREATH_PATTERNS: BreathPattern[] = [
     short: '4 · 6',
     benefit: 'Bajar revoluciones',
     description:
-      'Exhalar más largo de lo que inhalas activa el sistema de descanso del cuerpo. El interruptor más sencillo para calmar la ansiedad.',
+      'Exhalar más largo de lo que inhalás activa el sistema de descanso del cuerpo. El interruptor más sencillo para calmar la ansiedad.',
     phases: [IN(4), OUT(6)],
     palette: 'ocean',
     recommendedMinutes: 3,
@@ -54,7 +54,7 @@ export const BREATH_PATTERNS: BreathPattern[] = [
     benefit: 'Claridad y control',
     description:
       'Cuatro tiempos iguales: inhalar, sostener, exhalar, sostener. Usada por deportistas y equipos de rescate para mantener la calma bajo presión.',
-    phases: [IN(4), HOLD(4), OUT(4), REST(4, 'Sostén')],
+    phases: [IN(4), HOLD(4), OUT(4), REST(4, 'Sostené')],
     palette: 'lavender',
     recommendedMinutes: 4,
   },
@@ -64,7 +64,7 @@ export const BREATH_PATTERNS: BreathPattern[] = [
     short: '4 · 7 · 8',
     benefit: 'Para dormir',
     description:
-      'Inhala en cuatro, sostén en siete y exhala lentamente en ocho. Un sedante natural para el sistema nervioso, perfecto antes de dormir.',
+      'Inhalá en cuatro, sostené en siete y exhalá lentamente en ocho. Un sedante natural para el sistema nervioso, perfecto antes de dormir.',
     phases: [IN(4), HOLD(7), OUT(8)],
     palette: 'night',
     recommendedMinutes: 3,
@@ -76,7 +76,7 @@ export const BREATH_PATTERNS: BreathPattern[] = [
     benefit: 'Alivio inmediato',
     description:
       'Dos inhalaciones seguidas por la nariz y una exhalación larga por la boca. La forma más rápida que conoce la ciencia de reducir el estrés en tiempo real.',
-    phases: [IN(2.2), { kind: 'in2', seconds: 1, label: 'Un poco más' }, OUT(6, 'Suelta todo')],
+    phases: [IN(2.2), { kind: 'in2', seconds: 1, label: 'Un poco más' }, OUT(6, 'Soltá todo')],
     palette: 'sunset',
     recommendedMinutes: 2,
   },

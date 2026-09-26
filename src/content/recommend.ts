@@ -4,13 +4,15 @@ import { DAILY_POOL, PROGRAM_BY_ID, SESSIONS } from './catalog';
 import type { CategoryId, GoalId, Program, Session } from './types';
 
 const GOAL_CATEGORIES: Record<GoalId, CategoryId[]> = {
-  dormir: ['sueno'],
   estres: ['estres', 'cuerpo'],
+  mente: ['enfoque', 'ansiedad'],
+  autoexigencia: ['autoexigencia', 'autocompasion'],
+  descanso: ['sueno', 'cuerpo'],
+  culpa: ['autoexigencia', 'autocompasion', 'emociones'],
   ansiedad: ['ansiedad'],
-  enfoque: ['enfoque'],
-  aprender: ['principiantes'],
+  dormir: ['sueno'],
   autocuidado: ['autocompasion', 'cuerpo'],
-  felicidad: ['emociones', 'autocompasion'],
+  aprender: ['principiantes'],
 };
 
 const PART_CATEGORIES: Record<DayPart, CategoryId[]> = {
@@ -75,15 +77,17 @@ export function forDayPart(date = new Date()): { title: string; sessions: Sessio
   }
   return {
     title: 'Un respiro en tu tarde',
-    sessions: pick(['pausa-3-minutos', 'soltar-tension', 'nsdr', 'enfoque-profundo', 'caminar', 'montana']),
+    sessions: pick(['pausa-3-minutos', 'carga-mental', 'soltar-tension', 'nsdr', 'poner-limites', 'enfoque-profundo', 'caminar']),
   };
 }
 
 export function suggestedProgram(profile: Profile): Program {
-  if (profile.experience === 'nuevo' || profile.goals.includes('aprender')) return PROGRAM_BY_ID['aprende-a-meditar'];
-  if (profile.goals.includes('ansiedad')) return PROGRAM_BY_ID['calma-la-ansiedad'];
-  if (profile.goals.includes('dormir')) return PROGRAM_BY_ID['duerme-profundo'];
-  return PROGRAM_BY_ID['aprende-a-meditar'];
+  const g = (id: GoalId) => profile.goals.includes(id);
+  if (g('autoexigencia') || g('culpa') || g('estres') || g('mente') || g('descanso')) return PROGRAM_BY_ID['bajar-un-cambio'];
+  if (g('ansiedad')) return PROGRAM_BY_ID['calma-la-ansiedad'];
+  if (profile.experience === 'nuevo' || g('aprender')) return PROGRAM_BY_ID['aprende-a-meditar'];
+  if (g('dormir')) return PROGRAM_BY_ID['duerme-profundo'];
+  return PROGRAM_BY_ID['bajar-un-cambio'];
 }
 
 /** A session that fits a check-in: how someone feels right now. */
@@ -91,7 +95,9 @@ export function forMood(level: number, feelings: string[]): Session | undefined 
   const by = (id: string) => SESSIONS.find((s) => s.id === id);
   const has = (f: string) => feelings.includes(f);
   const night = dayPart() === 'noche' || dayPart() === 'madrugada';
-  if (has('ansiedad') || has('abrumado')) return level <= 2 ? by('sos-ansiedad') : by('cla-1-entender');
+  if (has('ansiedad')) return level <= 2 ? by('sos-ansiedad') : by('cla-1-entender');
+  if (has('abrumado')) return level <= 2 ? by('sos-ansiedad') : by('carga-mental');
+  if (has('culpa')) return by('buc-4-culpa');
   if (has('enojo')) return by('cuando-sientes-enojo');
   if (has('estres') || has('inquietud')) return night ? by('dp-4-aquietar-la-mente') : by('soltar-tension');
   if (has('cansancio')) return night ? by('dp-3-escaneo-corporal') : by('nsdr');

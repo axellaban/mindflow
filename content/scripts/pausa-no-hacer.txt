@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a practicar algo que suele costarnos mucho: no hacer nada.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a practicar algo que suele costarnos mucho: no hacer nada.
 Vivimos en una cultura que valora la ocupación constante. Llenamos cada minuto libre con el teléfono, con tareas, con planes. Y cuando por fin paramos, aparece una culpa extraña, como si descansar fuera perder el tiempo.
 Pero el descanso no es lo opuesto a la productividad. Es su fundamento. La tierra necesita estaciones de barbecho. La música necesita silencios. Y tú también.
 

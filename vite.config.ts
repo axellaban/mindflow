@@ -14,18 +14,18 @@ export default defineConfig({
       // the glob below already precaches the icons
       includeManifestIcons: false,
       manifest: {
-        name: 'MindFlow — Meditación y sueño',
-        short_name: 'MindFlow',
+        name: 'Mindfulness by Eli',
+        short_name: 'Mindfulness',
         description:
-          'Meditaciones guiadas, historias para dormir, respiración y paisajes sonoros para vivir con más calma.',
+          'Meditaciones guiadas, respiración y descanso para mujeres, de la mano de Eli. Bajá un cambio, soltá la autoexigencia y dormí mejor.',
         lang: 'es',
         dir: 'ltr',
         start_url: '/',
         scope: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#070B1E',
-        theme_color: '#070B1E',
+        background_color: '#150C19',
+        theme_color: '#150C19',
         categories: ['health', 'lifestyle', 'medical'],
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
@@ -34,12 +34,13 @@ export default defineConfig({
         ],
         shortcuts: [
           { name: 'Respirar', url: '/respirar', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
+          { name: 'Sesiones con Eli', url: '/eli', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
           { name: 'Dormir', url: '/dormir', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
           { name: 'Temporizador', url: '/temporizador', icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2}'],
         // Spanish only needs the latin subsets; social image isn't needed offline.
         globIgnores: ['**/*vietnamese*', '**/*latin-ext*', 'icons/og.png'],
         navigateFallback: '/index.html',

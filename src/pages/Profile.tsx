@@ -12,6 +12,7 @@ import { ACHIEVEMENTS } from '@/content/achievements';
 import { SESSION_BY_ID } from '@/content/catalog';
 import { MUSIC_BY_ID } from '@/content/sounds';
 import type { MusicId } from '@/content/types';
+import { EliInvite } from '@/features/eli/EliInvite';
 import { useStats } from '@/lib/hooks';
 import { longestStreak, minutesByDay } from '@/lib/stats';
 import { dayKey, formatDuration, formatMinutesTotal, monthName, relativeDay } from '@/lib/time';
@@ -27,7 +28,7 @@ export function Profile() {
   const unlocked = useAppStore((s) => s.achievements);
   const stats = useStats();
   const best = useMemo(() => longestStreak(stats.days), [stats.days]);
-  const initial = (profile.name.trim()[0] ?? 'M').toUpperCase();
+  const initial = (profile.name.trim()[0] ?? '✿').toUpperCase();
   const since = new Date(profile.createdAt);
 
   const favSessions = favorites.filter((f) => f.startsWith('session:')).map((f) => SESSION_BY_ID[f.slice(8)]).filter(Boolean);
@@ -48,7 +49,7 @@ export function Profile() {
         <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-2 flex items-center gap-4">
           <div
             className="flex size-16 items-center justify-center rounded-full font-display text-[28px] text-ink-900"
-            style={{ background: 'radial-gradient(circle at 35% 30%, #fff6ea, #ffc6a8 50%, #b3a6ff)' }}
+            style={{ background: 'radial-gradient(circle at 35% 30%, #fff6ea, #ffc6a8 50%, #f0a9bd)' }}
           >
             {initial}
           </div>
@@ -63,8 +64,8 @@ export function Profile() {
 
       <section className="mt-7 grid grid-cols-2 gap-3 px-5 md:grid-cols-4 md:px-0">
         <Stat icon={<Flame className="size-4.5 text-peach-300" />} value={String(stats.streak)} label={stats.streak === 1 ? 'día de racha' : 'días de racha'} />
-        <Stat icon={<Timer className="size-4.5 text-lilac-300" />} value={formatMinutesTotal(stats.minutes)} label={stats.minutes >= 60 ? 'horas de calma' : 'minutos de calma'} />
-        <Stat icon={<Sparkles className="size-4.5 text-mint-300" />} value={String(stats.sessions)} label="prácticas" />
+        <Stat icon={<Timer className="size-4.5 text-blush-300" />} value={formatMinutesTotal(stats.minutes)} label={stats.minutes >= 60 ? 'horas de calma' : 'minutos de calma'} />
+        <Stat icon={<Sparkles className="size-4.5 text-sage-300" />} value={String(stats.sessions)} label="prácticas" />
         <Stat icon={<Trophy className="size-4.5 text-gold-300" />} value={String(best)} label="mejor racha" />
       </section>
 
@@ -84,6 +85,20 @@ export function Profile() {
         </div>
       </section>
 
+      <section className="mt-10 px-5 md:px-0 lg:max-w-2xl">
+        <EliInvite
+          placement="profile"
+          eyebrow="Sesiones 1:1 con Eli"
+          title="Tu práctica, con acompañamiento"
+          body={
+            stats.sessions > 0
+              ? `Llevás ${stats.sessions} ${stats.sessions === 1 ? 'práctica' : 'prácticas'}. Si querés profundizar, en una sesión 1:1 armamos juntas un camino a tu medida.`
+              : 'Si querés empezar acompañada, en una sesión 1:1 armamos juntas un camino a tu medida.'
+          }
+          more
+        />
+      </section>
+
       <section className="mt-10">
         <SectionTitle title="Logros" action={<span className="text-[13px] text-3">{Object.keys(unlocked).length} de {ACHIEVEMENTS.length}</span>} />
         <div className="grid grid-cols-3 gap-2.5 px-5 sm:grid-cols-5 md:px-0">
@@ -97,7 +112,7 @@ export function Profile() {
               >
                 <span
                   className={cn('flex size-12 items-center justify-center rounded-full', got ? 'text-ink-900' : 'bg-white/6 text-mist-50/25')}
-                  style={got ? { background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #b3a6ff)' } : undefined}
+                  style={got ? { background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #f0a9bd)' } : undefined}
                 >
                   <Icon name={a.icon} className="size-5.5" />
                 </span>
@@ -120,7 +135,7 @@ export function Profile() {
       {favSessions.length === 0 && favMusic.length === 0 && (
         <section className="mx-5 mt-10 flex items-center gap-3 rounded-3xl bg-white/4 p-4 text-[14px] text-2 md:mx-0">
           <Heart className="size-5 shrink-0" />
-          Guarda tus prácticas favoritas desde el menú del reproductor y aparecerán aquí.
+          Guardá tus prácticas favoritas desde el menú del reproductor y van a aparecer acá.
         </section>
       )}
 

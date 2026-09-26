@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a practicar el arte de soltar.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a practicar el arte de soltar.
 Hay una vieja historia sobre cómo se atrapaba a los monos en algunas selvas. Se ponía una fruta dentro de un frasco con una boca estrecha. El mono metía la mano, agarraba la fruta, y ya no podía sacar el puño cerrado.
 Lo único que tenía que hacer para ser libre era soltar. Pero no lo hacía.
 

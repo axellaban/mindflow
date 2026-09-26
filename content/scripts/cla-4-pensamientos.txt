@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Este es el cuarto día de Calma la ansiedad.
+Hola. Este es el cuarto día de Calmar la ansiedad.
 La ansiedad tiene una voz muy convincente. Nos dice cosas como «esto va a salir mal», «no voy a poder», «algo terrible va a pasar». Y como esa voz suena dentro de nuestra cabeza, tendemos a creerle.
 Hoy vamos a practicar algo liberador: recordar que los pensamientos no son hechos. Son eventos mentales. Aparecen, se quedan un rato, y se van.
 

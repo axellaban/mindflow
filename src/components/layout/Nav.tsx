@@ -2,6 +2,7 @@ import { AudioLines, BookHeart, House, Moon, NotebookPen, Settings, Sparkles, Ti
 import { motion } from 'motion/react';
 import { NavLink, useLocation } from 'react-router';
 import { Logo } from '@/components/Logo';
+import { EliAvatar } from '@/features/eli/EliAvatar';
 import { haptic } from '@/lib/device';
 import { useStats } from '@/lib/hooks';
 import { cn } from '@/lib/utils';
@@ -113,12 +114,25 @@ export function SideNav() {
         ))}
       </div>
       <div className="mt-auto">
+        <NavLink
+          to="/eli"
+          className={cn(
+            'mb-3 flex items-center gap-3 rounded-3xl border border-white/8 bg-[linear-gradient(135deg,rgb(247_203_214/0.16),rgb(255_214_189/0.06))] p-3.5 transition-colors hover:bg-white/6',
+            isActive(pathname, '/eli') && 'border-blush-300/40',
+          )}
+        >
+          <EliAvatar size={40} />
+          <span className="min-w-0">
+            <span className="block text-[14px] font-semibold">Sesiones con Eli</span>
+            <span className="block text-[12px] text-3">Tu espacio 1:1, online</span>
+          </span>
+        </NavLink>
         <div className="glass rounded-3xl p-4">
           <div className="flex items-center gap-3">
             <BookHeart className="size-5 text-peach-300" />
             <div>
-              <p className="text-[14px] font-semibold">{streak > 0 ? `Racha de ${streak} ${streak === 1 ? 'día' : 'días'}` : 'Empieza tu racha'}</p>
-              <p className="text-[12px] text-3">{streak > 0 ? 'Sigue así, un día a la vez' : 'Unos minutos hoy son suficientes'}</p>
+              <p className="text-[14px] font-semibold">{streak > 0 ? `Racha de ${streak} ${streak === 1 ? 'día' : 'días'}` : 'Empezá tu racha'}</p>
+              <p className="text-[12px] text-3">{streak > 0 ? 'Seguí así, un día a la vez' : 'Unos minutos hoy son suficientes'}</p>
             </div>
           </div>
         </div>

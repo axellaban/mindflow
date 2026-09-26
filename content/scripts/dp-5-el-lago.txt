@@ -4,7 +4,7 @@ target: 15:00
 bells: none
 pace: 1.22
 ---
-Hola. Te doy la bienvenida a la última noche de Duerme profundo.
+Hola. Bienvenida a la última noche de Dormir profundo.
 Esta noche vamos a hacer un pequeño viaje con la imaginación, hacia un lago en calma. Solo tienes que escuchar, y dejar que las imágenes lleguen a su manera.
 
 Acomódate en la cama. Deja que el cuerpo pese.

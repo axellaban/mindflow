@@ -3,7 +3,7 @@ voice: luz
 target: 12:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida al tercer día de Calma la ansiedad.
+Hola. Bienvenida al tercer día de Calmar la ansiedad.
 Hoy vamos a aprender una práctica para esos momentos en que una emoción difícil te visita y no se quiere ir. Se llama RAIN, que en inglés significa lluvia. Cada letra es un paso: reconocer, aceptar, investigar y nutrir.
 La idea es sencilla: en lugar de pelear con lo que sentimos, o de huir, le hacemos espacio. Y curiosamente, cuando dejamos de resistirnos, la emoción suele perder fuerza.
 

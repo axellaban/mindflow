@@ -31,7 +31,7 @@ export function Toaster() {
             transition={{ type: 'spring', stiffness: 420, damping: 32 }}
             className="glass-strong flex items-center gap-2.5 rounded-full px-5 py-3 text-[14px] font-semibold shadow-[0_16px_40px_-16px_rgb(0_0_0/0.7)]"
           >
-            {t.tone === 'success' && <CheckCircle2 className="size-4.5 text-mint-300" />}
+            {t.tone === 'success' && <CheckCircle2 className="size-4.5 text-sage-300" />}
             {t.text}
           </motion.div>
         ))}
@@ -84,7 +84,7 @@ export function Celebration() {
             <div className="pointer-events-none absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-peach-300/25 blur-3xl" />
             <motion.div
               className="relative mx-auto flex size-24 items-center justify-center rounded-full"
-              style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #b3a6ff)' }}
+              style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #f0a9bd)' }}
               initial={{ rotate: -20, scale: 0.6 }}
               animate={{ rotate: 0, scale: 1 }}
               transition={{ type: 'spring', stiffness: 180, damping: 12, delay: 0.1 }}

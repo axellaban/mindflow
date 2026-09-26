@@ -3,7 +3,7 @@ voice: luz
 target: 12:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la meditación de la montaña.
+Hola. Bienvenida a la meditación de la montaña.
 Es una práctica clásica para cultivar estabilidad. Para esos momentos en que la vida se mueve rápido, cambia el clima a nuestro alrededor, y necesitamos recordar que dentro de nosotros hay algo firme, que no se mueve con cada tormenta.
 
 Siéntate con la espalda erguida, como si tu propio cuerpo fuera una montaña. La base amplia y apoyada. La cabeza, como una cumbre, mirando al cielo.

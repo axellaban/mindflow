@@ -73,13 +73,13 @@ function clearTimers(): void {
 function itemTitle(item: PlayerItem): { title: string; artist: string; album: string } {
   if (item.type === 'session') {
     const s = SESSION_BY_ID[item.id]!;
-    return { title: s.title, artist: `MindFlow · ${NARRATORS[s.narrator].name}`, album: sessionKindLabel(s) };
+    return { title: s.title, artist: `Mindfulness by Eli · voz de ${NARRATORS[s.narrator].name}`, album: sessionKindLabel(s) };
   }
   if (item.type === 'music') {
     const m = MUSIC_BY_ID[item.id];
-    return { title: m.title, artist: 'MindFlow', album: m.subtitle };
+    return { title: m.title, artist: 'Mindfulness by Eli', album: m.subtitle };
   }
-  return { title: item.name, artist: 'MindFlow', album: 'Paisaje sonoro' };
+  return { title: item.name, artist: 'Mindfulness by Eli', album: 'Paisaje sonoro' };
 }
 
 export const usePlayer = create<PlayerState>()((set, get) => {

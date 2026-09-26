@@ -129,14 +129,14 @@ export function Mixer() {
             )}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="truncate text-[15px] font-semibold">{active.length ? mixName(mix) : 'Crea tu paisaje sonoro'}</p>
+            <p className="truncate text-[15px] font-semibold">{active.length ? mixName(mix) : 'Creá tu paisaje sonoro'}</p>
             <p className="truncate text-[13px] text-3">
-              {active.length ? `${active.length} ${active.length === 1 ? 'sonido' : 'sonidos'} · ${playing ? 'sonando' : 'en pausa'}` : 'Toca los sonidos para combinarlos'}
+              {active.length ? `${active.length} ${active.length === 1 ? 'sonido' : 'sonidos'} · ${playing ? 'sonando' : 'en pausa'}` : 'Tocá los sonidos para combinarlos'}
             </p>
           </div>
           {active.length > 0 && (
             <>
-              <IconButton label="Temporizador" variant="plain" onClick={() => setTimerOpen(true)} className={cn(Boolean(sleepTimerEnd) && 'text-lilac-300')}>
+              <IconButton label="Temporizador" variant="plain" onClick={() => setTimerOpen(true)} className={cn(Boolean(sleepTimerEnd) && 'text-blush-300')}>
                 <Moon className="size-5" />
               </IconButton>
               <IconButton label="Guardar mezcla" variant="plain" onClick={() => setSaving(true)}>
@@ -293,7 +293,7 @@ export function Mixer() {
               onChange={(e) => setName(e.target.value)}
               placeholder={mixName(mix)}
               maxLength={40}
-              className="h-12 w-full rounded-2xl border border-white/10 bg-white/6 px-4 text-[16px] outline-none placeholder:text-mist-50/35 focus:border-lilac-300/60"
+              className="h-12 w-full rounded-2xl border border-white/10 bg-white/6 px-4 text-[16px] outline-none placeholder:text-mist-50/35 focus:border-blush-300/60"
             />
             {name && (
               <button type="button" onClick={() => setName('')} className="absolute top-1/2 right-3 -translate-y-1/2 text-3" aria-label="Borrar">

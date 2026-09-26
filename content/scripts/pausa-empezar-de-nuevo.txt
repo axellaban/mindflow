@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de empezar de nuevo.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de empezar de nuevo.
 Quizás ayer no fue el día que esperabas. Quizás abandonaste un hábito, dijiste algo que no querías decir, o simplemente no tuviste energía. Le pasa a todo el mundo.
 Una de las enseñanzas más bonitas de la meditación es esta: cada vez que la mente se distrae y volvemos a la respiración, estamos empezando de nuevo. Y podemos hacerlo mil veces. No hay límite.
 

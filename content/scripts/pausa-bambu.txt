@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de la resiliencia, a través de una planta: el bambú.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de la resiliencia, a través de una planta: el bambú.
 Cuando llega una tormenta fuerte, los árboles más rígidos a veces se quiebran. El bambú, en cambio, se dobla. Se inclina con el viento, casi hasta tocar el suelo. Y cuando la tormenta pasa, vuelve a erguirse.
 Su secreto está en dos cosas: raíces profundas, y un tallo flexible.
 

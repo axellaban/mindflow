@@ -3,7 +3,7 @@ voice: luz
 target: 5:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a tu primera meditación.
+Hola. Bienvenida a tu primera meditación.
 Durante los próximos cinco minutos no tienes que lograr nada. Solo vamos a practicar estar aquí.
 
 Busca una postura cómoda. Puedes sentarte en una silla, en un cojín, o incluso recostarte.

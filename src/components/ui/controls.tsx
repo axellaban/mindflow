@@ -49,7 +49,7 @@ export function Switch({ checked, onChange, label }: { checked: boolean; onChang
       }}
       className={cn(
         'relative inline-flex h-[30px] w-[50px] shrink-0 items-center rounded-full p-[3px] transition-colors duration-300',
-        checked ? 'bg-lilac-400' : 'bg-white/14',
+        checked ? 'bg-blush-400' : 'bg-white/14',
       )}
     >
       <motion.span
@@ -141,7 +141,7 @@ export function ProgressRing({
   value,
   size = 120,
   stroke = 3,
-  color = 'rgb(246 244 255)',
+  color = 'rgb(253 243 245)',
   track = 'rgb(255 255 255 / 0.12)',
   children,
   className,

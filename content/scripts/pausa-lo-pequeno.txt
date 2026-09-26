@@ -3,7 +3,7 @@ voice: luz
 target: 10:00
 bells: start,end
 ---
-Hola. Te doy la bienvenida a la pausa de hoy. Hoy vamos a hablar de las pequeñas cosas.
+Hola. Bienvenida a la pausa de hoy. Hoy vamos a hablar de las pequeñas cosas.
 Nuestro cerebro es como el velcro para las experiencias negativas, y como el teflón para las positivas. Lo malo se nos pega con facilidad. Lo bueno, en cambio, resbala y se olvida.
 No es un defecto personal. Es cómo evolucionamos para sobrevivir. Pero la buena noticia es que podemos entrenarlo.
 
