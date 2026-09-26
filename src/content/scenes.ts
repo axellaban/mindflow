@@ -1,8 +1,8 @@
 import type { Mix, Motif, PaletteId } from './types';
 
-export type SceneId = 'jardin' | 'lago' | 'lluvia' | 'oceano' | 'aurora' | 'fogata' | 'nieve' | 'desierto' | 'amanecer';
+export type SceneId = 'calma' | 'jardin' | 'lago' | 'lluvia' | 'oceano' | 'aurora' | 'fogata' | 'nieve' | 'desierto' | 'amanecer';
 
-export type Particles = 'stars' | 'rain' | 'snow' | 'embers' | 'fireflies' | 'petals' | 'none';
+export type Particles = 'stars' | 'rain' | 'snow' | 'embers' | 'fireflies' | 'petals' | 'motes' | 'none';
 
 export interface SceneDef {
   id: SceneId;
@@ -17,6 +17,15 @@ export interface SceneDef {
 }
 
 export const SCENES: SceneDef[] = [
+  {
+    id: 'calma',
+    name: 'Amanecer en el lago',
+    palette: 'calma',
+    layout: 'lake',
+    particles: ['motes'],
+    sound: { lago: 0.6, bosque: 0.45 },
+    seed: 228,
+  },
   {
     id: 'jardin',
     name: 'Atardecer rosa',

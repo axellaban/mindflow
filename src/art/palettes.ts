@@ -185,6 +185,17 @@ export const PALETTES: Record<PaletteId, Palette> = {
     accent: ['#ffe1e6', '#f7b7c8', '#d99bc8'],
     ui: '#f7bccb',
   },
+  // CalmabyEli dawn: deep green sky, sage mountains and a warm cream horizon.
+  calma: {
+    sky: ['#132520', '#4d7263', '#eadfc4'],
+    layers: ['#9bb3a0', '#6f8f7b', '#4b6b59', '#2b4538'],
+    celestial: '#fff4dc',
+    glow: '#ffe6bd',
+    night: false,
+    water: '#355546',
+    accent: ['#f4f1e9', '#c5d5bc', '#acc39f'],
+    ui: '#c5d5bc',
+  },
   sage: {
     sky: ['#233a36', '#7fa092', '#e9eedd'],
     layers: ['#a9c2b0', '#86a592', '#638673', '#435f52'],

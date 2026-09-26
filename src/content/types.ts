@@ -16,7 +16,8 @@ export type PaletteId =
   | 'teal'
   | 'plum'
   | 'rose'
-  | 'sage';
+  | 'sage'
+  | 'calma';
 
 export type Motif =
   | 'mountains'

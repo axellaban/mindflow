@@ -132,7 +132,7 @@ const DEFAULTS: Data = {
     captions: false,
     haptics: true,
     keepAwake: true,
-    sceneId: 'jardin',
+    sceneId: 'calma',
     sceneSound: false,
     reminderTime: null,
     sleepFadeMinutes: 20,

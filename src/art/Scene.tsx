@@ -74,7 +74,10 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
         background: `linear-gradient(180deg, ${p.sky[0]} 0%, ${p.sky[1]} ${Math.round(horizon * 62)}%, ${p.sky[2]} ${Math.round(horizon * 100)}%, ${p.sky[2]} 100%)`,
       }}
     >
-      <div className={cn('absolute inset-0 will-change-transform', drift && 'animate-drift')} style={{ animationDuration: '46s' }}>
+      <div
+        className={cn('absolute inset-0 will-change-transform', drift && 'animate-drift')}
+        style={{ animationDuration: '46s', animationPlayState: paused ? 'paused' : 'running' }}
+      >
         {scene.layout === 'aurora' && (
           <canvas ref={auroraRef} className="pointer-events-none absolute inset-0 h-full w-full" style={{ filter: 'blur(24px)' }} />
         )}
@@ -93,7 +96,7 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
           />
         )}
         {(scene.layout === 'forest' || scene.layout === 'valley' || scene.layout === 'lake' || scene.layout === 'snow') && (
-          <Mist color={scene.layout === 'lake' ? p.sky[2] : p.layers[0]} opacity={scene.layout === 'valley' ? 0.4 : 0.26} />
+          <Mist color={scene.layout === 'lake' ? p.sky[2] : p.layers[0]} opacity={scene.layout === 'valley' ? 0.4 : 0.26} paused={paused} />
         )}
       </div>
       <canvas ref={frontRef} className="pointer-events-none absolute inset-0 h-full w-full" />
@@ -101,16 +104,17 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
   );
 });
 
-function Mist({ color, opacity }: { color: string; opacity: number }) {
+function Mist({ color, opacity, paused }: { color: string; opacity: number; paused?: boolean }) {
+  const playState = paused ? 'paused' : 'running';
   return (
     <div className="pointer-events-none absolute inset-x-0 top-[48%] h-[30%]" style={{ opacity }}>
       <div
         className="absolute -left-1/4 top-0 h-full w-[90%] rounded-full blur-3xl"
-        style={{ background: color, animation: 'drift 38s ease-in-out infinite alternate' }}
+        style={{ background: color, animation: 'drift 38s ease-in-out infinite alternate', animationPlayState: playState }}
       />
       <div
         className="absolute -right-1/4 top-[25%] h-[80%] w-[80%] rounded-full blur-3xl"
-        style={{ background: color, animation: 'drift 52s ease-in-out infinite alternate-reverse' }}
+        style={{ background: color, animation: 'drift 52s ease-in-out infinite alternate-reverse', animationPlayState: playState }}
       />
     </div>
   );
@@ -162,6 +166,12 @@ function useParticles(
 ): void {
   const pausedRef = useRef(paused);
   pausedRef.current = paused;
+  const resumeRef = useRef<() => void>(() => {});
+
+  // A paused scene keeps its last frame and stops the animation loop entirely.
+  useEffect(() => {
+    if (!paused) resumeRef.current();
+  }, [paused]);
 
   useEffect(() => {
     const back = backRef.current;
@@ -184,12 +194,14 @@ function useParticles(
     let embers: Mover[] = [];
     let flies: Mover[] = [];
     let petals: Mover[] = [];
+    let motes: Mover[] = [];
     let shimmer: Star[] = [];
     let shooting: { x: number; y: number; vx: number; vy: number; life: number } | null = null;
     let nextShoot = 5 + Math.random() * 8;
     const emberSprite = glowSprite(p.accent[1]);
     const flySprite = glowSprite('#fff1a8');
     const petalColors = ['#ffd6df', '#ffc2d1', '#fbe4ea', '#f7b6c6', '#ffe3d6'];
+    const moteSprite = glowSprite('#fff6e2');
 
     const size = (c: HTMLCanvasElement, g: CanvasRenderingContext2D, scale: number) => {
       c.width = Math.max(1, Math.round(w * scale));
@@ -265,6 +277,20 @@ function useParticles(
             a: 0.4 + Math.random() * 0.45,
             life: Math.random() * 6.28,
             max: (Math.random() < 0.5 ? -1 : 1) * (0.4 + Math.random() * 1.1),
+            ph: Math.random() * 6.28,
+          }))
+        : [];
+      // tiny specks of light that rise slowly, like dust in morning sun
+      motes = kinds.has('motes')
+        ? Array.from({ length: Math.min(44, Math.round(16 + area * 0.14)) }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 4,
+            vy: -(2.5 + Math.random() * 6),
+            r: 0.7 + Math.pow(Math.random(), 2) * 1.8,
+            a: 0.22 + Math.random() * 0.5,
+            life: 0,
+            max: 0,
             ph: Math.random() * 6.28,
           }))
         : [];
@@ -448,6 +474,24 @@ function useParticles(
         }
         fctx.globalAlpha = 1;
       }
+      if (motes.length) {
+        fctx.globalCompositeOperation = 'lighter';
+        for (const m of motes) {
+          if (!reduced) {
+            m.y += m.vy * dt;
+            m.x += (m.vx + Math.sin(t * 0.22 + m.ph) * 6) * dt;
+            if (m.y < -8) {
+              m.y = h + 8;
+              m.x = Math.random() * w;
+            }
+          }
+          fctx.globalAlpha = m.a * (reduced ? 0.7 : 0.55 + 0.45 * Math.sin(t * 0.5 + m.ph));
+          const d = m.r * 7;
+          fctx.drawImage(moteSprite, m.x - d / 2, m.y - d / 2, d, d);
+        }
+        fctx.globalCompositeOperation = 'source-over';
+        fctx.globalAlpha = 1;
+      }
       if (flies.length) {
         fctx.globalCompositeOperation = 'lighter';
         for (const f of flies) {
@@ -472,10 +516,14 @@ function useParticles(
     };
 
     const frame = (now: number) => {
+      if (pausedRef.current) {
+        raf = 0;
+        return;
+      }
       raf = requestAnimationFrame(frame);
       const dt = Math.min(0.1, (now - last) / 1000);
       last = now;
-      if (pausedRef.current || !visible || document.hidden) return;
+      if (!visible || document.hidden) return;
       acc += dt;
       if (acc < 1 / 32) return;
       draw(acc);
@@ -493,8 +541,14 @@ function useParticles(
       visible = Boolean(e?.isIntersecting);
     });
     io.observe(front);
+    resumeRef.current = () => {
+      if (raf || reduced) return;
+      last = performance.now();
+      raf = requestAnimationFrame(frame);
+    };
     if (!reduced) raf = requestAnimationFrame(frame);
     return () => {
+      resumeRef.current = () => {};
       cancelAnimationFrame(raf);
       ro.disconnect();
       io.disconnect();

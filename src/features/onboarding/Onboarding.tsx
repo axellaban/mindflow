@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, Bed, Brain, CalendarPlus, Feather, Heart, Moon, Mountain, Sprout, Waves, Wind } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { type ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { engine } from '@/audio/engine';
 import { CoverArt } from '@/art/CoverArt';
@@ -21,6 +21,7 @@ import { cn } from '@/lib/utils';
 import { type Profile, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
+import { BreathIntro } from './BreathIntro';
 
 const GOAL_ICONS: Record<GoalId, ReactNode> = {
   estres: <Wind className="size-5" />,
@@ -58,6 +59,8 @@ export function Onboarding() {
   const navigate = useNavigate();
   const complete = useAppStore((s) => s.completeOnboarding);
   const updateSettings = useAppStore((s) => s.updateSettings);
+  const [intro, setIntro] = useState(true);
+  const endIntro = useCallback(() => setIntro(false), []);
   const [step, setStep] = useState(0);
   const [goals, setGoals] = useState<GoalId[]>([]);
   const [experience, setExperience] = useState<Profile['experience']>(null);
@@ -84,7 +87,7 @@ export function Onboarding() {
   };
 
   const tryPractice = () => {
-    complete({ name: '', goals: [], experience: 'nuevo' });
+    complete({ name: name.trim(), goals, experience: experience ?? 'nuevo' });
     usePlayer.getState().playSession('pausa-3-minutos');
     navigate('/', { replace: true });
   };
@@ -104,182 +107,200 @@ export function Onboarding() {
 
   return (
     <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <div className="absolute inset-0 opacity-25"><Scene scene={SCENE_BY_ID.jardin} paused drift={false} /></div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/65 to-ink-900" />
-      {step > 0 && (
-        <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-4 pt-safe">
-          <button type="button" aria-label="Volver al paso anterior" onClick={() => setStep((s) => Math.max(0, s - 1))} className="flex size-11 items-center justify-center rounded-full hover:bg-white/10"><ArrowLeft className="size-5" /></button>
-          <div className="flex gap-1.5 pt-4">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <span key={i} className={cn('h-1 rounded-full transition-all duration-500', i <= step ? 'w-6 bg-mist-50' : 'w-3 bg-white/25')} />
-            ))}
-          </div>
-          <button type="button" onClick={() => finish(false)} className="min-h-11 px-3 text-sm text-2">Omitir</button>
+      {/* Alive while breathing; afterwards a still, soft backdrop. */}
+      <motion.div className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'easeOut' }}>
+        <div
+          className="absolute inset-0 transition-[opacity,filter] duration-[1600ms] ease-out"
+          style={intro ? undefined : { opacity: 0.3, filter: 'blur(20px)' }}
+        >
+          <Scene scene={SCENE_BY_ID.calma} paused={!intro} />
         </div>
-      )}
+      </motion.div>
+      <div className={cn('pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/10 via-transparent to-ink-950/45 transition-opacity duration-[1600ms]', !intro && 'opacity-0')} />
+      <div className={cn('pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/65 to-ink-900 transition-opacity duration-[1600ms]', intro && 'opacity-0')} />
 
-      <div className={cn('relative mx-auto flex h-full max-w-lg flex-col px-6 pb-safe', step === 0 ? 'pt-safe' : 'overflow-y-auto pt-20')}>
-        <AnimatePresence mode="wait">
-          {step === 0 && <Welcome key="w" onBegin={begin} onTry={tryPractice} />}
-
-          {step === 1 && <MeetEli key="eli" onNext={next} />}
-
-          {step === 2 && (
-            <motion.div key="goals" {...panel} className="pb-4">
-              <h1 className="font-display text-[32px] leading-tight">¿Qué es lo que más te cuesta hoy?</h1>
-              <p className="mt-2 text-[15px] text-2">Elegí todo lo que resuene. Con esto armamos tu práctica.</p>
-              <div className="mt-6 grid grid-cols-2 gap-2.5">
-                {GOALS.map((g) => {
-                  const on = goals.includes(g.id);
-                  return (
-                    <motion.button
-                      key={g.id}
-                      type="button"
-                      whileTap={{ scale: 0.96 }}
-                      onClick={() => {
-                        haptic(6);
-                        setGoals((xs) => (on ? xs.filter((x) => x !== g.id) : [...xs, g.id]));
-                      }}
-                      className={cn(
-                        'flex items-center gap-3 rounded-3xl border px-4 py-3.5 text-left text-[14.5px] font-semibold backdrop-blur-xl transition-all duration-300',
-                        on ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 text-mist-50 hover:bg-ink-900/50',
-                        g.id === 'aprender' && 'col-span-2 justify-center',
-                      )}
-                      aria-pressed={on}
-                    >
-                      {g.icon}
-                      {g.label}
-                    </motion.button>
-                  );
-                })}
-              </div>
-              <div className="mt-6 flex gap-2.5">
-                <Button variant="ghost" onClick={next}>
-                  Omitir
-                </Button>
-                <Button full size="lg" onClick={next} disabled={!goals.length}>
-                  Continuar
-                </Button>
-              </div>
-            </motion.div>
-          )}
-
-          {step === 3 && (
-            <motion.div key="exp" {...panel} className="pb-4">
-              <h1 className="font-display text-[34px] leading-tight">¿Meditaste alguna vez?</h1>
-              <p className="mt-2 text-[15px] text-2">No hay respuesta correcta. Nos ayuda a elegir por dónde empezar.</p>
-              <div className="mt-6 space-y-2.5">
-                {EXPERIENCE.map((e) => (
-                  <motion.button
-                    key={e.id}
-                    type="button"
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => {
-                      setExperience(e.id);
-                      setTimeout(next, 180);
-                    }}
-                    className={cn(
-                      'flex w-full items-center justify-between rounded-3xl border px-5 py-4 text-left backdrop-blur-xl transition-all duration-300',
-                      experience === e.id ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 hover:bg-ink-900/50',
-                    )}
-                  >
-                    <span>
-                      <span className="block text-[16px] font-semibold">{e.label}</span>
-                      <span className={cn('block text-[13px]', experience === e.id ? 'text-ink-900/60' : 'text-3')}>{e.hint}</span>
-                    </span>
-                    <ArrowRight className="size-4 opacity-60" />
-                  </motion.button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {step === 4 && (
-            <motion.div key="name" {...panel} className="pb-4">
-              <h1 className="font-display text-[34px] leading-tight">¿Cómo te llamás?</h1>
-              <p className="mt-2 text-[15px] text-2">Para saludarte por tu nombre. Queda solo en tu dispositivo.</p>
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  next();
-                }}
-              >
-                <input
-                  autoFocus
-                  value={name}
-                  onChange={(e) => setName(e.target.value.slice(0, 40))}
-                  placeholder="Tu nombre"
-                  autoComplete="given-name"
-                  className="mt-6 h-14 w-full rounded-3xl border border-white/15 bg-ink-900/45 px-5 text-[18px] outline-none backdrop-blur-xl placeholder:text-mist-50/35 focus:border-mist-50/60"
-                />
-                <div className="mt-5 flex gap-2.5">
-                  <Button variant="ghost" onClick={next}>
-                    Omitir
-                  </Button>
-                  <Button type="submit" full size="lg" disabled={!name.trim()}>
-                    Continuar
-                  </Button>
-                </div>
-              </form>
-            </motion.div>
-          )}
-
-          {step === 5 && (
-            <motion.div key="plan" {...panel} className="no-scrollbar max-h-full overflow-y-auto pt-16 pb-4">
-              <p className="text-[12px] font-bold tracking-[0.16em] text-2 uppercase">Tu plan</p>
-              <h1 className="mt-1 font-display text-[32px] leading-tight">Todo listo{name.trim() ? `, ${name.trim().split(' ')[0]}` : ''}</h1>
-              <p className="mt-2 text-[15px] text-2">Te propongo empezar así:</p>
-
-              <div className="mt-5 space-y-2.5">
-                <PlanItem art={<CoverArt spec={first.art} rounded="rounded-2xl" className="size-14" grain={false} />} eyebrow="Hoy" title={first.title} meta={`${formatDuration(first.duration)} · ${first.subtitle}`} />
-                <PlanItem
-                  art={<CoverArt spec={program.art} rounded="rounded-2xl" className="size-14" grain={false} />}
-                  eyebrow="Después"
-                  title={PROGRAM_BY_ID[program.id].title}
-                  meta={program.subtitle}
-                />
-              </div>
-
-              <div className="mt-6">
-                <p className="text-[15px] font-semibold">¿Cuándo querés tu momento de calma?</p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {TIMES.map((t) => (
-                    <Chip key={t.time} active={time === t.time} onClick={() => setTime(time === t.time ? null : t.time)} className="backdrop-blur-xl">
-                      {t.label}
-                    </Chip>
+      <AnimatePresence mode="wait">
+        {intro ? (
+          <BreathIntro key="intro" onDone={endIntro} />
+        ) : (
+          <div key="steps" className="absolute inset-0">
+            {step > 0 && (
+              <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between bg-gradient-to-b from-ink-900 via-ink-900/85 to-transparent px-4 pt-safe pb-3">
+                <button type="button" aria-label="Volver al paso anterior" onClick={() => setStep((s) => Math.max(0, s - 1))} className="flex size-11 items-center justify-center rounded-full hover:bg-white/10"><ArrowLeft className="size-5" /></button>
+                <div className="flex gap-1.5">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <span key={i} className={cn('h-1 rounded-full transition-all duration-500', i <= step ? 'w-6 bg-mist-50' : 'w-3 bg-white/25')} />
                   ))}
                 </div>
-                <AnimatePresence>
-                  {time && (
-                    <motion.button
-                      type="button"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      onClick={() => {
-                        downloadFile('mindfulness-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
-                        useUI.getState().toast('Abrí el archivo para agregarlo a tu calendario');
-                      }}
-                      className="mt-3 flex items-center gap-2 text-[14px] font-semibold text-blush-300"
-                    >
-                      <CalendarPlus className="size-4" /> Agregar un recordatorio diario a mi calendario ({time})
-                    </motion.button>
-                  )}
-                </AnimatePresence>
+                <button type="button" onClick={() => finish(false)} className="min-h-11 px-3 text-sm text-2">Ir al inicio</button>
               </div>
+            )}
 
-              <div className="mt-7 flex flex-col gap-2.5">
-                <Button full size="lg" onClick={() => finish(true)}>
-                  Empezar ahora
-                </Button>
-                <Button full variant="secondary" size="lg" onClick={() => finish(false)}>
-                  Explorar primero
-                </Button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+            <div className={cn('relative mx-auto flex h-full max-w-lg flex-col px-6 pb-safe', step === 0 ? 'pt-safe' : 'overflow-y-auto pt-[calc(max(12px,var(--safe-top))+68px)]')}>
+              <AnimatePresence mode="wait">
+                {step === 0 && <Welcome key="w" onBegin={begin} onTry={tryPractice} />}
+
+                {step === 1 && <MeetEli key="eli" onNext={next} />}
+
+                {step === 2 && (
+                  <motion.div key="goals" {...panel} className="pb-4">
+                    <h1 className="font-display text-[32px] leading-tight">¿Qué es lo que más te cuesta hoy?</h1>
+                    <p className="mt-2 text-[15px] text-2">Elegí todo lo que resuene. Con esto armamos tu práctica.</p>
+                    <div className="mt-6 grid grid-cols-2 gap-2.5">
+                      {GOALS.map((g) => {
+                        const on = goals.includes(g.id);
+                        return (
+                          <motion.button
+                            key={g.id}
+                            type="button"
+                            whileTap={{ scale: 0.96 }}
+                            onClick={() => {
+                              haptic(6);
+                              setGoals((xs) => (on ? xs.filter((x) => x !== g.id) : [...xs, g.id]));
+                            }}
+                            className={cn(
+                              'flex items-center gap-3 rounded-3xl border px-4 py-3.5 text-left text-[14.5px] font-semibold backdrop-blur-xl transition-all duration-300',
+                              on ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 text-mist-50 hover:bg-ink-900/50',
+                              g.id === 'aprender' && 'col-span-2 justify-center',
+                            )}
+                            aria-pressed={on}
+                          >
+                            {g.icon}
+                            {g.label}
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-6 flex gap-2.5">
+                      <Button variant="ghost" onClick={next}>
+                        Omitir
+                      </Button>
+                      <Button full size="lg" onClick={next} disabled={!goals.length}>
+                        Continuar
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+
+                {step === 3 && (
+                  <motion.div key="exp" {...panel} className="pb-4">
+                    <h1 className="font-display text-[34px] leading-tight">¿Meditaste alguna vez?</h1>
+                    <p className="mt-2 text-[15px] text-2">No hay respuesta correcta. Nos ayuda a elegir por dónde empezar.</p>
+                    <div className="mt-6 space-y-2.5">
+                      {EXPERIENCE.map((e) => (
+                        <motion.button
+                          key={e.id}
+                          type="button"
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => {
+                            setExperience(e.id);
+                            setTimeout(next, 180);
+                          }}
+                          className={cn(
+                            'flex w-full items-center justify-between rounded-3xl border px-5 py-4 text-left backdrop-blur-xl transition-all duration-300',
+                            experience === e.id ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 hover:bg-ink-900/50',
+                          )}
+                        >
+                          <span>
+                            <span className="block text-[16px] font-semibold">{e.label}</span>
+                            <span className={cn('block text-[13px]', experience === e.id ? 'text-ink-900/60' : 'text-3')}>{e.hint}</span>
+                          </span>
+                          <ArrowRight className="size-4 opacity-60" />
+                        </motion.button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {step === 4 && (
+                  <motion.div key="name" {...panel} className="pb-4">
+                    <h1 className="font-display text-[34px] leading-tight">¿Cómo te llamás?</h1>
+                    <p className="mt-2 text-[15px] text-2">Para saludarte por tu nombre. Queda solo en tu dispositivo.</p>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        next();
+                      }}
+                    >
+                      <input
+                        autoFocus
+                        value={name}
+                        onChange={(e) => setName(e.target.value.slice(0, 40))}
+                        placeholder="Tu nombre"
+                        autoComplete="given-name"
+                        className="mt-6 h-14 w-full rounded-3xl border border-white/15 bg-ink-900/45 px-5 text-[18px] outline-none backdrop-blur-xl placeholder:text-mist-50/35 focus:border-mist-50/60"
+                      />
+                      <div className="mt-5 flex gap-2.5">
+                        <Button variant="ghost" onClick={next}>
+                          Omitir
+                        </Button>
+                        <Button type="submit" full size="lg" disabled={!name.trim()}>
+                          Continuar
+                        </Button>
+                      </div>
+                    </form>
+                  </motion.div>
+                )}
+
+                {step === 5 && (
+                  <motion.div key="plan" {...panel} className="pb-4">
+                    <p className="text-[12px] font-bold tracking-[0.16em] text-2 uppercase">Tu plan</p>
+                    <h1 className="mt-1 font-display text-[32px] leading-tight">Todo listo{name.trim() ? `, ${name.trim().split(' ')[0]}` : ''}</h1>
+                    <p className="mt-2 text-[15px] text-2">Te propongo empezar así:</p>
+
+                    <div className="mt-5 space-y-2.5">
+                      <PlanItem art={<CoverArt spec={first.art} rounded="rounded-2xl" className="size-14" grain={false} />} eyebrow="Hoy" title={first.title} meta={`${formatDuration(first.duration)} · ${first.subtitle}`} />
+                      <PlanItem
+                        art={<CoverArt spec={program.art} rounded="rounded-2xl" className="size-14" grain={false} />}
+                        eyebrow="Después"
+                        title={PROGRAM_BY_ID[program.id].title}
+                        meta={program.subtitle}
+                      />
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-[15px] font-semibold">¿Cuándo querés tu momento de calma?</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {TIMES.map((t) => (
+                          <Chip key={t.time} active={time === t.time} onClick={() => setTime(time === t.time ? null : t.time)} className="backdrop-blur-xl">
+                            {t.label}
+                          </Chip>
+                        ))}
+                      </div>
+                      <AnimatePresence>
+                        {time && (
+                          <motion.button
+                            type="button"
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            onClick={() => {
+                              downloadFile('mindfulness-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
+                              useUI.getState().toast('Abrí el archivo para agregarlo a tu calendario');
+                            }}
+                            className="mt-3 flex items-center gap-2 text-[14px] font-semibold text-blush-300"
+                          >
+                            <CalendarPlus className="size-4" /> Agregar un recordatorio diario a mi calendario ({time})
+                          </motion.button>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    <div className="mt-7 flex flex-col gap-2.5">
+                      <Button full size="lg" onClick={() => finish(true)}>
+                        Empezar ahora
+                      </Button>
+                      <Button full variant="secondary" size="lg" onClick={() => finish(false)}>
+                        Explorar primero
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
