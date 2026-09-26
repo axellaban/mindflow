@@ -1,0 +1,296 @@
+{
+  "aam-1-respiracion": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1356851,
+    "v": "60fe5a703b"
+  },
+  "aam-2-cuerpo": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1335490,
+    "v": "9914033ca6"
+  },
+  "aam-3-pensamientos": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1212826,
+    "v": "93eb5a4348"
+  },
+  "aam-4-emociones": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1201591,
+    "v": "26535818aa"
+  },
+  "aam-5-sentidos": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1131427,
+    "v": "865156b76d"
+  },
+  "aam-6-bondad": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1147727,
+    "v": "1802feb983"
+  },
+  "aam-7-tu-practica": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1255350,
+    "v": "d56e6a0790"
+  },
+  "antes-de-algo-importante": {
+    "duration": 300.0,
+    "voice": "luz",
+    "bytes": 755409,
+    "v": "67039b8320"
+  },
+  "bondad-amorosa": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1341094,
+    "v": "7b78f6cd34"
+  },
+  "caminar": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1095187,
+    "v": "4edc0c7005"
+  },
+  "cla-1-entender": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1289921,
+    "v": "a042445678"
+  },
+  "cla-2-anclar": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1221075,
+    "v": "f227d7a036"
+  },
+  "cla-3-hacer-espacio": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1414101,
+    "v": "0a53e70d2a"
+  },
+  "cla-4-pensamientos": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1170138,
+    "v": "76df750b1e"
+  },
+  "cla-5-cuidado": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1253562,
+    "v": "1911beebbc"
+  },
+  "cuando-sientes-enojo": {
+    "duration": 420.0,
+    "voice": "luz",
+    "bytes": 885045,
+    "v": "17e0c86942"
+  },
+  "despertar": {
+    "duration": 420.0,
+    "voice": "luz",
+    "bytes": 889565,
+    "v": "dafa8c86fb"
+  },
+  "dp-1-soltar-el-dia": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1282908,
+    "v": "49577a97f5"
+  },
+  "dp-2-respirar-para-dormir": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1181741,
+    "v": "2fbe4ca006"
+  },
+  "dp-3-escaneo-corporal": {
+    "duration": 900.0,
+    "voice": "luz",
+    "bytes": 1568529,
+    "v": "de97f796bc"
+  },
+  "dp-4-aquietar-la-mente": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1324984,
+    "v": "31f5e6a3ea"
+  },
+  "dp-5-el-lago": {
+    "duration": 900.0,
+    "voice": "luz",
+    "bytes": 1445987,
+    "v": "2b05f0f28d"
+  },
+  "enfoque-profundo": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1095887,
+    "v": "3349770e51"
+  },
+  "gratitud": {
+    "duration": 480.0,
+    "voice": "luz",
+    "bytes": 1025338,
+    "v": "b456756bcf"
+  },
+  "historia-atacama": {
+    "duration": 688.53,
+    "voice": "luz",
+    "bytes": 2495736,
+    "v": "9fb585510a"
+  },
+  "historia-biblioteca-lluvia": {
+    "duration": 735.39,
+    "voice": "luz",
+    "bytes": 2646910,
+    "v": "c628dc9ed5"
+  },
+  "historia-cabana-nieve": {
+    "duration": 638.46,
+    "voice": "luz",
+    "bytes": 2251674,
+    "v": "b85f866e25"
+  },
+  "historia-faro": {
+    "duration": 612.23,
+    "voice": "mateo",
+    "bytes": 2083363,
+    "v": "4117a00515"
+  },
+  "historia-tren-patagonia": {
+    "duration": 734.71,
+    "voice": "mateo",
+    "bytes": 2553646,
+    "v": "e4471f2c6c"
+  },
+  "montana": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1399758,
+    "v": "ec8f1cb20c"
+  },
+  "nsdr": {
+    "duration": 1200.0,
+    "voice": "luz",
+    "bytes": 2343640,
+    "v": "334f2b6710"
+  },
+  "pausa-3-minutos": {
+    "duration": 210.0,
+    "voice": "luz",
+    "bytes": 481114,
+    "v": "19205b1d4e"
+  },
+  "pausa-aceptacion": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1123020,
+    "v": "6ae35e40eb"
+  },
+  "pausa-amabilidad": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1119979,
+    "v": "30d1e19b2c"
+  },
+  "pausa-aqui-y-ahora": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1108333,
+    "v": "90ec363de0"
+  },
+  "pausa-bambu": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1090835,
+    "v": "711d6d3b44"
+  },
+  "pausa-confianza": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1074175,
+    "v": "4ee95684d0"
+  },
+  "pausa-empezar-de-nuevo": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1051541,
+    "v": "8ad4754de7"
+  },
+  "pausa-lo-pequeno": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1104439,
+    "v": "987a2ae6bf"
+  },
+  "pausa-mente-de-principiante": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1129776,
+    "v": "4a08aadebd"
+  },
+  "pausa-no-hacer": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1024021,
+    "v": "c06e9016dc"
+  },
+  "pausa-paciencia": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1156357,
+    "v": "c285bb1daa"
+  },
+  "pausa-soltar": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1153565,
+    "v": "91e30ba2f0"
+  },
+  "pausa-todo-pasa": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1120261,
+    "v": "f60df2110c"
+  },
+  "primera-meditacion": {
+    "duration": 300.0,
+    "voice": "luz",
+    "bytes": 778222,
+    "v": "64ac5fcfed"
+  },
+  "relajacion-progresiva": {
+    "duration": 720.0,
+    "voice": "luz",
+    "bytes": 1364595,
+    "v": "0a7c70c8af"
+  },
+  "soltar-tension": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1224115,
+    "v": "da60eacca9"
+  },
+  "sos-ansiedad": {
+    "duration": 210.0,
+    "voice": "luz",
+    "bytes": 537318,
+    "v": "e815b4c501"
+  },
+  "volver-a-dormir": {
+    "duration": 600.0,
+    "voice": "luz",
+    "bytes": 1083863,
+    "v": "1b08881b9d"
+  }
+}

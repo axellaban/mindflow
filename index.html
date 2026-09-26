@@ -1,93 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MindFlow AI - Escala tu práctica</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: '#6B8AF8', // Vibrant Periwinkle Blue
-              surface: '#FFFFFF',
-              primary: '#FFC805', // Sunshine Yellow
-              secondary: '#FFC2D4', // Soft Pink
-              text: '#1E293B', // Dark Slate for readability on white
-              'brand-blue': '#6B8AF8',
-              'brand-dark': '#0F172A',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'float-delayed': 'float 6s ease-in-out 3s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              }
-            }
-          },
-        },
-      };
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>MindFlow — Meditación, sueño y calma</title>
+    <meta
+      name="description"
+      content="Meditaciones guiadas, historias para dormir, respiración y paisajes sonoros. Encuentra tu calma en minutos."
+    />
+    <meta name="theme-color" content="#070B1E" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MindFlow" />
+    <meta property="og:title" content="MindFlow — Meditación, sueño y calma" />
+    <meta
+      property="og:description"
+      content="Meditaciones guiadas, historias para dormir, respiración y paisajes sonoros."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icons/og.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <style>
+      html,
       body {
-        background-color: #6B8AF8;
-        color: #fff;
-        font-family: 'Inter', sans-serif;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #6B8AF8;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(255,255,255,0.3);
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255,255,255,0.5);
-      }
-      
-      .wave-divider {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-      }
-      
-      .wave-divider svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 80px;
+        background: #070b1e;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <noscript>MindFlow necesita JavaScript para funcionar.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

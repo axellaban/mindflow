@@ -1,0 +1,48 @@
+---
+voice: luz
+target: 15:00
+bells: none
+pace: 1.22
+---
+Hola. Te doy la bienvenida a la última noche de Duerme profundo.
+Esta noche vamos a hacer un pequeño viaje con la imaginación, hacia un lago en calma. Solo tienes que escuchar, y dejar que las imágenes lleguen a su manera.
+
+Acomódate en la cama. Deja que el cuerpo pese.
+[5]
+Inhala lentamente…
+[3]
+y exhala todavía más lento.
+[6]
+Una vez más. Inhala…
+[3]
+y suelta, largo y suave.
+[6]
+Imagina que es el final de una tarde de verano. Estás caminando por un sendero de tierra, entre pinos altos. El aire huele a resina y a hierba tibia.
+[*1]
+Tus pasos son lentos. No hay prisa. Nadie te espera.
+Escuchas el crujido suave de las agujas de pino bajo tus pies, y a lo lejos, algún pájaro que se despide del día.
+[*2]
+El sendero se abre, y aparece el lago. Quieto como un espejo. Refleja las montañas, y un cielo que va pasando del naranja al rosa, y del rosa al violeta.
+[*2]
+Junto a la orilla hay un muelle de madera. Caminas hasta el final, y te sientas. La madera todavía guarda el calor del sol.
+[*1]
+Dejas que tus pies cuelguen sobre el agua. Sientes el aire fresco que sube desde el lago.
+[*2]
+Pequeñas ondas llegan a los pilares del muelle, con un sonido suave, rítmico. Como una respiración.
+Tu propia respiración empieza a acompasarse con ese ritmo. Lenta. Tranquila.
+[*3]
+Poco a poco, el cielo se oscurece. Aparece la primera estrella, justo encima de las montañas.
+Luego otra. Y otra más.
+[*2]
+Te recuestas sobre la madera tibia, mirando el cielo. Las estrellas se multiplican, como si alguien las encendiera una por una.
+[*2]
+La luna asoma detrás de un cerro, y deja un camino de luz plateada sobre el agua.
+[*3]
+Todo está en silencio. Solo el agua. Solo tu respiración.
+Sientes tu cuerpo pesado, tan pesado como el muelle, tan quieto como el lago.
+[*3]
+Con cada ola pequeña que llega a la orilla, te hundes un poco más en el descanso.
+[*4]
+No hay nada que hacer. No hay a dónde ir. Puedes quedarte aquí, bajo las estrellas, todo el tiempo que quieras.
+[*5]
+Buenas noches.

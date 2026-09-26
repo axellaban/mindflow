@@ -1,0 +1,49 @@
+---
+voice: luz
+target: 5:00
+bells: start,end
+---
+Hola. Te doy la bienvenida a tu primera meditación.
+Durante los próximos cinco minutos no tienes que lograr nada. Solo vamos a practicar estar aquí.
+
+Busca una postura cómoda. Puedes sentarte en una silla, en un cojín, o incluso recostarte.
+Deja que la espalda esté erguida, pero sin rigidez. Los hombros, sueltos.
+[3]
+Si te sientes a gusto, cierra los ojos. Si prefieres, baja la mirada y déjala descansar en un punto frente a ti.
+[4]
+Vamos a comenzar con tres respiraciones un poco más profundas.
+Inhala por la nariz…
+[2.5]
+y suelta el aire despacio, por la boca.
+[3]
+Otra vez. Inhala…
+[2.5]
+y exhala, dejando ir cualquier prisa.
+[3]
+Una última vez. Inhala…
+[2.5]
+y exhala por completo.
+[4]
+Ahora deja que la respiración encuentre su propio ritmo. No necesitas controlarla.
+Simplemente observa cómo el aire entra… y cómo sale.
+[*1]
+Quizás lo notes en la punta de la nariz, en el pecho, o en el abdomen, que sube y baja.
+Elige el lugar donde lo sientas con más claridad, y deja ahí tu atención.
+[*2]
+En algún momento, tu mente se irá a otra parte. Un recuerdo, un plan, una preocupación.
+Eso no es un error. Es exactamente lo que hacen las mentes.
+Cuando te des cuenta, ese instante de darte cuenta ya es meditar.
+Con suavidad, sin juzgarte, vuelve a la respiración.
+[*3]
+Si te ayuda, puedes contar en silencio. Uno al inhalar. Dos al exhalar. Hasta diez, y vuelves a empezar.
+[*3]
+Muy bien. Sigue así, un momento más, respiración tras respiración.
+[*2]
+Ahora, poco a poco, amplía tu atención. Siente el peso de tu cuerpo. Los sonidos a tu alrededor.
+[4]
+Mueve suavemente los dedos de las manos y de los pies.
+[3]
+Y cuando quieras, abre los ojos.
+[2]
+Acabas de dar el primer paso. Así de simple, y así de valioso.
+Gracias por regalarte este momento.

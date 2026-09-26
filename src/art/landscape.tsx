@@ -1,0 +1,657 @@
+import type { ReactNode } from 'react';
+import type { ArtSpec, Motif } from '@/content/types';
+import { mulberry32 } from '@/lib/utils';
+import { PALETTES, type Palette, mixHex } from './palettes';
+
+/**
+ * Procedural landscape illustrations. Every cover, hero and scene backdrop in
+ * the app is drawn from an ArtSpec (palette + motif + seed), so the whole
+ * catalogue shares one visual language without shipping a single image.
+ */
+
+export const W = 400;
+
+type Rnd = () => number;
+
+function valueNoise(rnd: Rnd, points: number): (x: number) => number {
+  const v = Array.from({ length: points + 2 }, () => rnd());
+  return (x: number) => {
+    const xi = Math.floor(x);
+    const t = x - xi;
+    const s = t * t * (3 - 2 * t);
+    const a = v[((xi % points) + points) % points]!;
+    const b = v[(((xi + 1) % points) + points) % points]!;
+    return a + (b - a) * s;
+  };
+}
+
+interface RidgeOpts {
+  y: number;
+  amp: number;
+  freq: number;
+  sharp?: number;
+  step?: number;
+}
+
+function ridgePoints(rnd: Rnd, width: number, o: RidgeOpts): Array<[number, number]> {
+  const n1 = valueNoise(rnd, 64);
+  const n2 = valueNoise(rnd, 64);
+  const n3 = valueNoise(rnd, 64);
+  const off = rnd() * 40;
+  const step = o.step ?? 8;
+  const pts: Array<[number, number]> = [];
+  for (let x = -20; x <= width + 20; x += step) {
+    const u = (x / width) * o.freq + off;
+    let h = n1(u) * 0.62 + n2(u * 2.3) * 0.26 + n3(u * 5.1) * 0.12;
+    if (o.sharp) {
+      const ridged = 1 - Math.abs(2 * n1(u * 0.9 + 3.3) - 1);
+      h = h * (1 - o.sharp) + ridged * o.sharp;
+    }
+    pts.push([x, o.y - h * o.amp]);
+  }
+  return pts;
+}
+
+function smoothPath(pts: Array<[number, number]>, bottom: number): string {
+  if (!pts.length) return '';
+  let d = `M ${pts[0]![0]} ${bottom} L ${pts[0]![0]} ${pts[0]![1]}`;
+  for (let i = 1; i < pts.length - 1; i++) {
+    const [x, y] = pts[i]!;
+    const [nx, ny] = pts[i + 1]!;
+    d += ` Q ${x.toFixed(1)} ${y.toFixed(1)} ${((x + nx) / 2).toFixed(1)} ${((y + ny) / 2).toFixed(1)}`;
+  }
+  const last = pts[pts.length - 1]!;
+  d += ` L ${last[0]} ${last[1]} L ${last[0]} ${bottom} Z`;
+  return d;
+}
+
+function starsGroup(rnd: Rnd, h: number, count: number, maxY: number, key: string): ReactNode {
+  const stars: ReactNode[] = [];
+  for (let i = 0; i < count; i++) {
+    const x = rnd() * W;
+    const y = Math.pow(rnd(), 1.4) * maxY * h;
+    const r = 0.35 + Math.pow(rnd(), 3) * 1.25;
+    const o = 0.35 + rnd() * 0.65;
+    stars.push(<circle key={`${key}${i}`} cx={x.toFixed(1)} cy={y.toFixed(1)} r={r.toFixed(2)} fill="#fff" opacity={o.toFixed(2)} />);
+  }
+  return <g>{stars}</g>;
+}
+
+function pine(x: number, base: number, height: number, color: string, key: string): ReactNode {
+  const w = height * 0.36;
+  const tiers = 4;
+  let d = '';
+  for (let i = 0; i < tiers; i++) {
+    const tTop = base - height + (i * height) / (tiers + 0.6);
+    const tBot = base - height + ((i + 1.6) * height) / (tiers + 0.6);
+    const tw = (w * (i + 1.4)) / (tiers + 0.4);
+    d += `M ${x} ${tTop} L ${x - tw / 2} ${tBot} L ${x + tw / 2} ${tBot} Z `;
+  }
+  d += `M ${x - height * 0.03} ${base - height * 0.12} h ${height * 0.06} v ${height * 0.14} h ${-height * 0.06} Z`;
+  return <path key={key} d={d} fill={color} />;
+}
+
+function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [number, number], density: number, key: string): ReactNode {
+  const out: ReactNode[] = [];
+  let x = -10 + rnd() * 10;
+  let k = 0;
+  while (x < W + 10) {
+    const idx = Math.max(0, Math.min(pts.length - 1, Math.round(((x + 20) / (W + 40)) * (pts.length - 1))));
+    const base = pts[idx]![1] + 4;
+    const h = size[0] + rnd() * (size[1] - size[0]);
+    out.push(pine(x, base, h, color, `${key}${k++}`));
+    x += (h * 0.28 + rnd() * h * 0.5) / density;
+  }
+  return <g>{out}</g>;
+}
+
+export interface LandscapeProps {
+  spec: ArtSpec;
+  ratio?: number; // width / height
+  uid: string;
+  /** Hide stars (the animated Scene draws its own twinkling ones). */
+  noStars?: boolean;
+  /** Leave the sky transparent so animated layers can sit behind the land. */
+  skyless?: boolean;
+  detail?: 'card' | 'scene';
+}
+
+export function Landscape({ spec, ratio = 1, uid, noStars, skyless, detail = 'card' }: LandscapeProps): ReactNode {
+  const p = PALETTES[spec.palette];
+  const safeRatio = Number.isFinite(ratio) && ratio > 0 ? Math.min(4, Math.max(0.25, ratio)) : 1;
+  const h = Math.round(W / safeRatio);
+  const rnd = mulberry32(spec.seed * 9973 + 17);
+  const id = (s: string) => `${uid}-${s}`;
+  const horizon = h * horizonFor(spec.motif);
+  const body = drawMotif(spec.motif, p, rnd, h, horizon, id, detail);
+
+  return (
+    <svg
+      viewBox={`0 0 ${W} ${h}`}
+      preserveAspectRatio="xMidYMid slice"
+      width="100%"
+      height="100%"
+      aria-hidden="true"
+      style={{ display: 'block' }}
+    >
+      <defs>
+        <linearGradient id={id('sky')} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={p.sky[0]} />
+          <stop offset={((horizon / h) * 0.62).toFixed(3)} stopColor={p.sky[1]} />
+          <stop offset={(horizon / h).toFixed(3)} stopColor={p.sky[2]} />
+          <stop offset="1" stopColor={p.sky[2]} />
+        </linearGradient>
+        <radialGradient id={id('glow')}>
+          <stop offset="0" stopColor={p.glow} stopOpacity="0.85" />
+          <stop offset="0.35" stopColor={p.glow} stopOpacity="0.28" />
+          <stop offset="1" stopColor={p.glow} stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id={id('haze')} cx="0.5" cy="1" r="0.8">
+          <stop offset="0" stopColor={p.sky[2]} stopOpacity="0.55" />
+          <stop offset="1" stopColor={p.sky[2]} stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id={id('fade')} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={p.layers[3]} stopOpacity="0" />
+          <stop offset="1" stopColor={p.layers[3]} stopOpacity="0.9" />
+        </linearGradient>
+        <filter id={id('blur')} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="14" />
+        </filter>
+        <filter id={id('soft')} x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2.2" />
+        </filter>
+      </defs>
+      {!skyless && <rect width={W} height={h} fill={`url(#${id('sky')})`} />}
+      {p.night && !noStars && starsGroup(rnd, h, detail === 'scene' ? 70 : 46, horizon / h, id('s'))}
+      {body}
+    </svg>
+  );
+}
+
+export function horizonFor(m: Motif): number {
+  switch (m) {
+    case 'moon':
+    case 'stars':
+      return 0.74;
+    case 'waves':
+    case 'lighthouse':
+      return 0.58;
+    case 'lake':
+      return 0.56;
+    case 'clouds':
+    case 'orb':
+      return 0.8;
+    case 'window':
+      return 0.7;
+    default:
+      return 0.64;
+  }
+}
+
+function celestial(p: Palette, cx: number, cy: number, r: number, id: (s: string) => string, moon: boolean): ReactNode {
+  return (
+    <g>
+      <circle cx={cx} cy={cy} r={r * 5.5} fill={`url(#${id('glow')})`} />
+      <circle cx={cx} cy={cy} r={r} fill={p.celestial} />
+      {moon && (
+        <g opacity="0.1" fill={p.sky[1]}>
+          <circle cx={cx - r * 0.3} cy={cy - r * 0.2} r={r * 0.22} />
+          <circle cx={cx + r * 0.35} cy={cy + r * 0.25} r={r * 0.15} />
+          <circle cx={cx + r * 0.05} cy={cy + r * 0.45} r={r * 0.1} />
+        </g>
+      )}
+    </g>
+  );
+}
+
+function mountains(p: Palette, rnd: Rnd, h: number, horizon: number, sharpness: number, count = 4, height = 1): ReactNode[] {
+  const out: ReactNode[] = [];
+  for (let i = 0; i < count; i++) {
+    const t = i / Math.max(1, count - 1);
+    const y = horizon + (h - horizon) * (t * 0.62) - (1 - t) * h * 0.02;
+    const amp = h * (0.26 - t * 0.16) * height;
+    const pts = ridgePoints(rnd, W, { y: y + amp * 0.35, amp, freq: 2 + i * 0.9, sharp: Math.min(0.9, sharpness * 1.25 * (1 - t * 0.45)) });
+    out.push(<path key={`m${i}`} d={smoothPath(pts, h + 2)} fill={p.layers[Math.min(3, i + (4 - count))]} />);
+  }
+  return out;
+}
+
+function hills(p: Palette, rnd: Rnd, h: number, horizon: number, count = 4): Array<{ node: ReactNode; pts: Array<[number, number]> }> {
+  const out: Array<{ node: ReactNode; pts: Array<[number, number]> }> = [];
+  for (let i = 0; i < count; i++) {
+    const t = i / Math.max(1, count - 1);
+    const y = horizon + (h - horizon) * t * 0.7;
+    const amp = h * (0.1 - t * 0.04);
+    const pts = ridgePoints(rnd, W, { y: y + amp * 0.3, amp, freq: 1.3 + i * 0.35, step: 10 });
+    out.push({ node: <path key={`h${i}`} d={smoothPath(pts, h + 2)} fill={p.layers[Math.min(3, i + (4 - count))]} />, pts });
+  }
+  return out;
+}
+
+function drawMotif(
+  m: Motif,
+  p: Palette,
+  rnd: Rnd,
+  h: number,
+  horizon: number,
+  id: (s: string) => string,
+  detail: 'card' | 'scene',
+): ReactNode {
+  const cx = W * (0.3 + rnd() * 0.4);
+  switch (m) {
+    case 'mountains': {
+      return (
+        <g>
+          {celestial(p, cx, horizon - h * 0.26, W * 0.055, id, p.night)}
+          <rect y={horizon - h * 0.2} width={W} height={h * 0.4} fill={`url(#${id('haze')})`} />
+          {mountains(p, rnd, h, horizon, 0.55)}
+        </g>
+      );
+    }
+    case 'hills': {
+      return (
+        <g>
+          {celestial(p, cx, horizon - h * 0.18, W * 0.07, id, p.night)}
+          {hills(p, rnd, h, horizon).map((x) => x.node)}
+        </g>
+      );
+    }
+    case 'sun': {
+      const r = W * 0.13;
+      return (
+        <g>
+          <circle cx={W / 2} cy={horizon} r={r * 6} fill={`url(#${id('glow')})`} />
+          <circle cx={W / 2} cy={horizon - r * 0.15} r={r} fill={p.celestial} />
+          {hills(p, rnd, h, horizon + h * 0.02, 3).map((x) => x.node)}
+        </g>
+      );
+    }
+    case 'moon': {
+      const r = W * 0.09;
+      return (
+        <g>
+          {celestial(p, W * 0.62, h * 0.3, r, id, true)}
+          {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
+        </g>
+      );
+    }
+    case 'lake': {
+      const peaks = mountains(p, rnd, horizon + h * 0.02, horizon - h * 0.04, 0.5, 3, 0.85);
+      const cy = horizon - h * 0.28;
+      return (
+        <g>
+          {celestial(p, cx, cy, W * 0.05, id, p.night)}
+          <g>{peaks}</g>
+          <rect y={horizon} width={W} height={h - horizon} fill={p.water} />
+          <g transform={`translate(0 ${horizon * 2}) scale(1 -1)`} opacity="0.26" filter={`url(#${id('soft')})`}>
+            <rect y={horizon - h * 0.5} width={W} height={h * 0.5} fill={`url(#${id('sky')})`} opacity="0.7" />
+            {peaks}
+          </g>
+          <ellipse cx={cx} cy={horizon + (horizon - cy) * 0.9} rx={W * 0.04} ry={h * 0.12} fill={p.celestial} opacity="0.18" filter={`url(#${id('soft')})`} />
+          {Array.from({ length: 9 }, (_, i) => {
+            const y = horizon + (h - horizon) * (0.12 + i * 0.1);
+            const len = W * (0.06 + rnd() * 0.12);
+            return (
+              <rect key={i} x={cx - len / 2 + (rnd() - 0.5) * 30} y={y} width={len} height="1.2" rx="0.6" fill={p.celestial} opacity={0.08 + rnd() * 0.12} />
+            );
+          })}
+          <rect y={h * 0.9} width={W} height={h * 0.1} fill={`url(#${id('fade')})`} />
+        </g>
+      );
+    }
+    case 'waves': {
+      const r = W * 0.075;
+      const bands: ReactNode[] = [];
+      for (let i = 0; i < 5; i++) {
+        const t = i / 4;
+        const y = horizon + (h - horizon) * (0.05 + t * 0.78);
+        const amp = 2 + t * 10;
+        const freq = 3 + rnd() * 2;
+        const phase = rnd() * 6;
+        let d = `M -10 ${h + 2} L -10 ${y}`;
+        for (let x = -10; x <= W + 10; x += 10) {
+          const yy = y + Math.sin((x / W) * Math.PI * freq + phase) * amp + Math.sin((x / W) * Math.PI * freq * 2.7 + phase) * amp * 0.3;
+          d += ` L ${x} ${yy.toFixed(1)}`;
+        }
+        d += ` L ${W + 10} ${h + 2} Z`;
+        const color = mixHex(p.water, p.layers[Math.min(3, i)], 0.5 + t * 0.5);
+        bands.push(<path key={i} d={d} fill={color} />);
+      }
+      return (
+        <g>
+          {celestial(p, W / 2, horizon - r * 1.1, r, id, p.night)}
+          <rect y={horizon} width={W} height={h - horizon} fill={p.water} />
+          <rect x={W / 2 - r * 0.9} y={horizon} width={r * 1.8} height={(h - horizon) * 0.8} fill={p.celestial} opacity="0.16" filter={`url(#${id('soft')})`} />
+          {bands}
+        </g>
+      );
+    }
+    case 'forest': {
+      const hs = hills(p, rnd, h, horizon, 3);
+      return (
+        <g>
+          {celestial(p, cx, horizon - h * 0.22, W * 0.055, id, p.night)}
+          {mountains(p, rnd, horizon + h * 0.05, horizon - h * 0.06, 0.4, 2, 0.8)}
+          {hs[0]!.node}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1.1, 'ta')}
+          {hs[1]!.node}
+          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.2], 0.9, 'tb')}
+          {hs[2]!.node}
+          {treeRow(rnd, hs[2]!.pts, p.layers[3], [h * 0.2, h * 0.34], 0.75, 'tc')}
+        </g>
+      );
+    }
+    case 'dunes': {
+      const out: ReactNode[] = [];
+      for (let i = 0; i < 4; i++) {
+        const t = i / 3;
+        const y = horizon + (h - horizon) * t * 0.72;
+        const pts = ridgePoints(rnd, W, { y: y + h * 0.04, amp: h * (0.1 - t * 0.03), freq: 0.9 + i * 0.3, step: 12 });
+        out.push(<path key={i} d={smoothPath(pts, h + 2)} fill={p.layers[i]} />);
+      }
+      return (
+        <g>
+          {celestial(p, cx, horizon - h * 0.2, W * 0.06, id, p.night)}
+          {out}
+        </g>
+      );
+    }
+    case 'aurora': {
+      const ribbons: ReactNode[] = [];
+      for (let i = 0; i < 3; i++) {
+        const baseY = h * (0.18 + i * 0.1);
+        let d = `M -20 ${baseY}`;
+        for (let x = -20; x <= W + 20; x += 20) d += ` L ${x} ${(baseY + Math.sin(x / 60 + i * 2 + rnd()) * 18).toFixed(1)}`;
+        ribbons.push(
+          <path
+            key={i}
+            d={d}
+            stroke={p.accent[i % 3]}
+            strokeWidth={26 - i * 5}
+            fill="none"
+            opacity={0.55 - i * 0.12}
+            filter={`url(#${id('blur')})`}
+          />,
+        );
+      }
+      return (
+        <g>
+          <g style={{ mixBlendMode: 'screen' }}>{ribbons}</g>
+          {mountains({ ...p, layers: [mixHex(p.layers[0], '#ffffff', 0.35), p.layers[1], p.layers[2], p.layers[3]] }, rnd, h, horizon, 0.7)}
+        </g>
+      );
+    }
+    case 'clouds': {
+      const clouds: ReactNode[] = [];
+      for (let i = 0; i < 4; i++) {
+        const y = h * (0.45 + i * 0.13);
+        const color = mixHex(p.sky[2], p.layers[i], 0.35 + i * 0.18);
+        const puffs: ReactNode[] = [];
+        let x = -30;
+        let k = 0;
+        while (x < W + 40) {
+          const r = h * (0.05 + rnd() * 0.07) * (1 + i * 0.25);
+          puffs.push(<circle key={k++} cx={x} cy={y + (rnd() - 0.5) * r * 0.5} r={r} />);
+          x += r * (1.1 + rnd() * 0.5);
+        }
+        clouds.push(
+          <g key={i} fill={color}>
+            {puffs}
+            <rect x="-10" y={y} width={W + 20} height={h} />
+          </g>,
+        );
+      }
+      return (
+        <g>
+          {celestial(p, cx, h * 0.3, W * 0.07, id, p.night)}
+          {clouds}
+        </g>
+      );
+    }
+    case 'orb': {
+      return (
+        <g>
+          <circle cx={W * 0.35} cy={h * 0.42} r={W * 0.28} fill={p.accent[0]} opacity="0.55" filter={`url(#${id('blur')})`} />
+          <circle cx={W * 0.68} cy={h * 0.58} r={W * 0.24} fill={p.accent[2]} opacity="0.55" filter={`url(#${id('blur')})`} />
+          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.2} fill={p.accent[1]} opacity="0.45" filter={`url(#${id('blur')})`} />
+          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.17} fill="none" stroke={p.celestial} strokeOpacity="0.55" strokeWidth="1.2" />
+          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.1} fill={p.celestial} opacity="0.85" />
+          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.28} fill="none" stroke={p.celestial} strokeOpacity="0.18" strokeWidth="0.8" />
+        </g>
+      );
+    }
+    case 'rain': {
+      const lines: ReactNode[] = [];
+      const count = detail === 'scene' ? 0 : 70;
+      for (let i = 0; i < count; i++) {
+        const x = rnd() * (W + 60) - 30;
+        const y = rnd() * h;
+        const len = 10 + rnd() * 18;
+        lines.push(<line key={i} x1={x} y1={y} x2={x - len * 0.18} y2={y + len} stroke={p.celestial} strokeOpacity={0.12 + rnd() * 0.22} strokeWidth="0.8" />);
+      }
+      return (
+        <g>
+          {hills(p, rnd, h, horizon, 4).map((x) => x.node)}
+          <g>{lines}</g>
+        </g>
+      );
+    }
+    case 'stars': {
+      const band: ReactNode = (
+        <g transform={`rotate(-28 ${W / 2} ${h * 0.35})`}>
+          <ellipse cx={W / 2} cy={h * 0.35} rx={W * 0.9} ry={h * 0.07} fill={p.accent[0]} opacity="0.16" filter={`url(#${id('blur')})`} />
+          <ellipse cx={W / 2} cy={h * 0.35} rx={W * 0.6} ry={h * 0.03} fill={p.accent[1]} opacity="0.14" filter={`url(#${id('blur')})`} />
+        </g>
+      );
+      return (
+        <g>
+          {band}
+          {starsGroup(rnd, h, 60, 0.7, id('st'))}
+          {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
+        </g>
+      );
+    }
+    case 'flame': {
+      const fx = W / 2;
+      const fy = h * 0.8;
+      return (
+        <g>
+          {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
+          <circle cx={fx} cy={fy} r={W * 0.4} fill={p.glow} opacity="0.35" filter={`url(#${id('blur')})`} />
+          <path
+            d={`M ${fx} ${fy - h * 0.2} C ${fx + W * 0.07} ${fy - h * 0.1}, ${fx + W * 0.06} ${fy - h * 0.02}, ${fx} ${fy} C ${fx - W * 0.06} ${fy - h * 0.02}, ${fx - W * 0.08} ${fy - h * 0.1}, ${fx} ${fy - h * 0.2} Z`}
+            fill={p.accent[1]}
+          />
+          <path
+            d={`M ${fx} ${fy - h * 0.12} C ${fx + W * 0.035} ${fy - h * 0.06}, ${fx + W * 0.03} ${fy - h * 0.01}, ${fx} ${fy} C ${fx - W * 0.03} ${fy - h * 0.01}, ${fx - W * 0.04} ${fy - h * 0.06}, ${fx} ${fy - h * 0.12} Z`}
+            fill={p.accent[0]}
+          />
+          <rect x={fx - W * 0.09} y={fy - 2} width={W * 0.18} height="7" rx="3.5" fill={p.layers[3]} transform={`rotate(-8 ${fx} ${fy})`} />
+          <rect x={fx - W * 0.09} y={fy - 2} width={W * 0.18} height="7" rx="3.5" fill={p.layers[3]} transform={`rotate(10 ${fx} ${fy})`} />
+          {Array.from({ length: 10 }, (_, i) => (
+            <circle key={i} cx={fx + (rnd() - 0.5) * W * 0.2} cy={fy - h * (0.22 + rnd() * 0.3)} r={0.8 + rnd()} fill={p.accent[0]} opacity={0.4 + rnd() * 0.5} />
+          ))}
+        </g>
+      );
+    }
+    case 'train': {
+      const hs = hills(p, rnd, h, horizon + h * 0.08, 2);
+      const railY = h * 0.8;
+      const cars: ReactNode[] = [];
+      const carW = W * 0.13;
+      const startX = W * 0.14;
+      for (let i = 0; i < 4; i++) {
+        const x = startX + i * (carW + 3);
+        cars.push(<rect key={`c${i}`} x={x} y={railY - h * 0.075} width={carW} height={h * 0.06} rx="2" fill={p.layers[3]} />);
+        for (let k = 0; k < 4; k++) {
+          cars.push(
+            <rect key={`w${i}${k}`} x={x + 4 + k * ((carW - 8) / 4)} y={railY - h * 0.062} width={(carW - 8) / 4 - 3} height={h * 0.018} rx="1" fill={p.accent[0]} opacity="0.95" />,
+          );
+        }
+      }
+      const lx = startX + 4 * (carW + 3);
+      return (
+        <g>
+          {celestial(p, W * 0.72, h * 0.25, W * 0.05, id, true)}
+          {mountains(p, rnd, horizon + h * 0.06, horizon, 0.6, 2, 0.9)}
+          {hs.map((x) => x.node)}
+          <rect x="0" y={railY - 1} width={W} height="2" fill={p.layers[3]} />
+          <circle cx={lx + carW * 0.5} cy={railY - h * 0.05} r={W * 0.3} fill={p.accent[0]} opacity="0.12" filter={`url(#${id('blur')})`} />
+          {cars}
+          <path
+            d={`M ${lx} ${railY - h * 0.015} L ${lx} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.075} Q ${lx + carW * 1.05} ${railY - h * 0.07} ${lx + carW * 1.02} ${railY - h * 0.015} Z`}
+            fill={p.layers[3]}
+          />
+          {Array.from({ length: 5 }, (_, i) => (
+            <circle
+              key={i}
+              cx={lx + carW * 0.63 - i * 9}
+              cy={railY - h * (0.13 + i * 0.022)}
+              r={4 + i * 2.2}
+              fill={p.celestial}
+              opacity={0.16 - i * 0.025}
+            />
+          ))}
+        </g>
+      );
+    }
+    case 'lighthouse': {
+      const baseX = W * 0.68;
+      const islandY = horizon + h * 0.03;
+      const towerH = h * 0.3;
+      return (
+        <g>
+          <rect y={horizon} width={W} height={h - horizon} fill={p.water} />
+          <path
+            d={`M ${baseX} ${islandY - towerH} L ${baseX - W * 0.9} ${islandY - towerH - h * 0.1} L ${baseX - W * 0.9} ${islandY - towerH + h * 0.12} Z`}
+            fill={p.celestial}
+            opacity="0.16"
+          />
+          <path
+            d={`M ${baseX - W * 0.22} ${islandY + 8} Q ${baseX - W * 0.1} ${islandY - h * 0.05} ${baseX} ${islandY - h * 0.03} Q ${baseX + W * 0.12} ${islandY - h * 0.05} ${baseX + W * 0.25} ${islandY + 8} Z`}
+            fill={p.layers[3]}
+          />
+          <path d={`M ${baseX - W * 0.035} ${islandY - h * 0.03} L ${baseX - W * 0.022} ${islandY - towerH} L ${baseX + W * 0.022} ${islandY - towerH} L ${baseX + W * 0.035} ${islandY - h * 0.03} Z`} fill="#eef0f6" />
+          <rect x={baseX - W * 0.03} y={islandY - towerH * 0.55} width={W * 0.06} height={towerH * 0.11} fill="#c96b6b" />
+          <rect x={baseX - W * 0.026} y={islandY - towerH - h * 0.045} width={W * 0.052} height={h * 0.045} fill={p.accent[0]} />
+          <circle cx={baseX} cy={islandY - towerH - h * 0.02} r={W * 0.12} fill={`url(#${id('glow')})`} />
+          <path d={`M ${baseX - W * 0.034} ${islandY - towerH - h * 0.045} L ${baseX} ${islandY - towerH - h * 0.075} L ${baseX + W * 0.034} ${islandY - towerH - h * 0.045} Z`} fill={p.layers[3]} />
+          {Array.from({ length: 4 }, (_, i) => {
+            const y = horizon + (h - horizon) * (0.25 + i * 0.2);
+            let d = `M -10 ${h + 2} L -10 ${y}`;
+            for (let x = -10; x <= W + 10; x += 12) d += ` L ${x} ${(y + Math.sin(x / (22 + i * 6) + i) * (2 + i * 2.5)).toFixed(1)}`;
+            d += ` L ${W + 10} ${h + 2} Z`;
+            return <path key={i} d={d} fill={mixHex(p.water, p.layers[3], 0.3 + i * 0.2)} />;
+          })}
+        </g>
+      );
+    }
+    case 'cabin': {
+      const hs = hills(p, rnd, h, horizon, 3);
+      const x = W * 0.58;
+      const baseY = hs[2]!.pts[Math.round(((x + 20) / (W + 40)) * (hs[2]!.pts.length - 1))]![1] + 6;
+      const cw = W * 0.2;
+      const ch = h * 0.1;
+      return (
+        <g>
+          {celestial(p, W * 0.25, h * 0.24, W * 0.045, id, p.night)}
+          {hs[0]!.node}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.11], 1, 'ca')}
+          {hs[1]!.node}
+          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.18], 0.8, 'cb')}
+          {hs[2]!.node}
+          <circle cx={x} cy={baseY - ch * 0.5} r={W * 0.2} fill={p.accent[2]} opacity="0.3" filter={`url(#${id('blur')})`} />
+          <rect x={x - cw / 2} y={baseY - ch} width={cw} height={ch} fill={mixHex(p.layers[3], '#000000', 0.25)} />
+          <path d={`M ${x - cw * 0.62} ${baseY - ch} L ${x} ${baseY - ch * 1.9} L ${x + cw * 0.62} ${baseY - ch} Z`} fill="#f4f7ff" />
+          <rect x={x + cw * 0.18} y={baseY - ch * 2.05} width={cw * 0.1} height={ch * 0.55} fill={mixHex(p.layers[3], '#000000', 0.3)} />
+          <rect x={x - cw * 0.3} y={baseY - ch * 0.7} width={cw * 0.22} height={ch * 0.36} rx="1" fill={p.accent[2]} />
+          <rect x={x + cw * 0.08} y={baseY - ch * 0.7} width={cw * 0.22} height={ch * 0.36} rx="1" fill={p.accent[2]} />
+          {Array.from({ length: 4 }, (_, i) => (
+            <circle key={i} cx={x + cw * 0.23 + i * 6} cy={baseY - ch * (2.25 + i * 0.35)} r={3 + i * 2} fill="#ffffff" opacity={0.28 - i * 0.05} />
+          ))}
+          {treeRow(rnd, hs[2]!.pts.map(([px, py]) => [px, py + 4] as [number, number]).filter(([px]) => Math.abs(px - x) > cw * 0.9), p.layers[3], [h * 0.16, h * 0.26], 0.35, 'cc')}
+        </g>
+      );
+    }
+    case 'window': {
+      const drops: ReactNode[] = [];
+      for (let i = 0; i < 38; i++) {
+        const x = rnd() * W;
+        const y = rnd() * h;
+        const r = 1 + rnd() * 3.5;
+        drops.push(<ellipse key={i} cx={x} cy={y} rx={r} ry={r * 1.25} fill={p.celestial} opacity={0.12 + rnd() * 0.2} />);
+        if (rnd() < 0.3) drops.push(<rect key={`t${i}`} x={x - 0.5} y={y} width="1" height={10 + rnd() * 30} fill={p.celestial} opacity="0.08" />);
+      }
+      return (
+        <g>
+          {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
+          <circle cx={W * 0.82} cy={h * 0.92} r={W * 0.38} fill={p.accent[2]} opacity="0.35" filter={`url(#${id('blur')})`} />
+          <g filter={`url(#${id('soft')})`}>{drops}</g>
+          <rect x="0" y="0" width={W} height={h} fill="none" stroke={p.layers[3]} strokeWidth="22" />
+          <rect x={W / 2 - 5} y="0" width="10" height={h} fill={p.layers[3]} />
+          <rect x="0" y={h * 0.46} width={W} height="10" fill={p.layers[3]} />
+        </g>
+      );
+    }
+    case 'bamboo': {
+      const stalks: ReactNode[] = [];
+      for (let i = 0; i < 9; i++) {
+        const x = (i / 8) * W + (rnd() - 0.5) * 30;
+        const layer = i % 3;
+        const color = p.layers[1 + layer]!;
+        const w = 6 + layer * 3;
+        const lean = (rnd() - 0.5) * 18;
+        stalks.push(
+          <g key={i}>
+            <path d={`M ${x} ${h + 5} Q ${x + lean * 0.4} ${h * 0.5} ${x + lean} ${-10}`} stroke={color} strokeWidth={w} fill="none" strokeLinecap="round" />
+            {Array.from({ length: 6 }, (_, k) => {
+              const t = (k + 1) / 7;
+              const yy = h + 5 - t * (h + 15);
+              const xx = x + lean * t;
+              return <rect key={k} x={xx - w / 2 - 1} y={yy} width={w + 2} height="2" fill={mixHex(color, '#000000', 0.3)} />;
+            })}
+            {Array.from({ length: 3 }, (_, k) => {
+              const t = 0.3 + rnd() * 0.6;
+              const yy = h + 5 - t * (h + 15);
+              const xx = x + lean * t;
+              const dir = rnd() < 0.5 ? -1 : 1;
+              return (
+                <path
+                  key={`l${k}`}
+                  d={`M ${xx} ${yy} q ${dir * 18} ${-6} ${dir * 34} ${4} q ${-dir * 16} ${2} ${-dir * 34} ${-4} Z`}
+                  fill={color}
+                />
+              );
+            })}
+          </g>,
+        );
+      }
+      return (
+        <g>
+          {celestial(p, cx, h * 0.3, W * 0.06, id, p.night)}
+          <rect y={h * 0.5} width={W} height={h * 0.5} fill={`url(#${id('haze')})`} />
+          {stalks}
+        </g>
+      );
+    }
+    case 'path': {
+      const hs = hills(p, rnd, h, horizon, 3);
+      const vx = W * (0.42 + rnd() * 0.16);
+      return (
+        <g>
+          {celestial(p, vx, horizon - h * 0.15, W * 0.06, id, p.night)}
+          {hs[0]!.node}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1, 'pa')}
+          {hs[1]!.node}
+          {hs[2]!.node}
+          <path
+            d={`M ${vx - 3} ${horizon + h * 0.08} C ${vx - 30} ${h * 0.8}, ${W * 0.2} ${h * 0.85}, ${W * 0.12} ${h + 2} L ${W * 0.62} ${h + 2} C ${W * 0.55} ${h * 0.85}, ${vx + 30} ${h * 0.8}, ${vx + 3} ${horizon + h * 0.08} Z`}
+            fill={p.sky[2]}
+            opacity="0.5"
+          />
+          {treeRow(rnd, hs[2]!.pts.filter(([px]) => px < W * 0.18 || px > W * 0.7), p.layers[3], [h * 0.22, h * 0.36], 0.5, 'pb')}
+        </g>
+      );
+    }
+  }
+}

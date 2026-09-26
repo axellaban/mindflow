@@ -1,0 +1,65 @@
+---
+voice: luz
+target: 12:00
+bells: start,end
+---
+Hola. Esta es una práctica de bondad amorosa, conocida en la tradición budista como metta.
+Consiste en cultivar, de forma deliberada, buenos deseos hacia nosotros y hacia los demás. Empezamos por quienes nos resulta fácil querer, y poco a poco ampliamos el círculo.
+No se trata de forzar sentimientos. Se trata de plantar semillas. Algunas florecen hoy, otras más adelante.
+
+Siéntate cómodamente. Cierra los ojos.
+[4]
+Respira profundo… y suelta.
+[4]
+Lleva una mano al pecho, si te resulta agradable. Siente el latido, la respiración.
+[*1]
+Vamos a empezar con un ser querido. Alguien que te haga sonreír: una persona, un animal, una niña, un abuelo.
+Visualízalo con claridad. Su cara, su forma de mirar.
+Y ofrécele en silencio estos deseos:
+Que seas feliz.
+[3]
+Que estés en paz.
+[3]
+Que estés libre de sufrimiento.
+[3]
+Que tu vida sea ligera.
+[*2]
+Ahora, dirige esos mismos deseos hacia ti. Imagínate como te vería alguien que te quiere mucho.
+Que yo sea feliz.
+[3]
+Que yo esté en paz.
+[3]
+Que yo esté libre de sufrimiento.
+[3]
+Que mi vida sea ligera.
+[*2]
+Ahora piensa en una persona neutral. Alguien a quien ves a menudo pero no conoces realmente: quien atiende la panadería, una vecina, alguien del trabajo.
+Esa persona también tiene alegrías y penas. También quiere ser feliz, igual que tú.
+Que seas feliz.
+[3]
+Que estés en paz.
+[3]
+Que estés libre de sufrimiento.
+[*2]
+Si te sientes con ánimo, trae a la mente a alguien con quien tengas alguna dificultad. No la persona más difícil de tu vida. Alguien que te genere una pequeña incomodidad.
+Recuerda que esa persona, detrás de sus acciones, también busca estar bien, aunque a veces lo haga con torpeza.
+Si puedes, ofrécele: que estés en paz.
+[3]
+Que estés libre de sufrimiento.
+[*2]
+Y si aparece resistencia, está bien. Vuelve a ofrecerte bondad a ti, por el esfuerzo.
+[*1]
+Por último, abre el corazón a todos los seres. Los que conoces y los que no. Cerca y lejos. Personas, animales, toda la vida.
+Que todos los seres sean felices.
+[3]
+Que todos los seres estén en paz.
+[3]
+Que todos los seres estén libres de sufrimiento.
+[*3]
+Descansa en lo que haya quedado. Calidez, quietud, o simplemente respiración.
+[*2]
+Vuelve a sentir tu cuerpo, el lugar donde estás.
+[4]
+Y cuando sea el momento, abre los ojos.
+[2]
+Que la bondad que cultivaste hoy te acompañe en cada encuentro.

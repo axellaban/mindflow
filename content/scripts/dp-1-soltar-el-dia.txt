@@ -1,0 +1,48 @@
+---
+voice: luz
+target: 12:00
+bells: none
+pace: 1.2
+---
+Hola. Te doy la bienvenida a la primera noche de Duerme profundo.
+Esta práctica está pensada para escucharla ya en la cama, con las luces apagadas. No tienes que hacer nada más que escuchar. Si te duermes antes de que termine, perfecto: ese es el objetivo.
+
+Acomódate en la posición en la que sueles dormir.
+Ajusta la almohada, la manta. Date permiso para encontrar la comodidad de verdad.
+[5]
+Haz una respiración lenta, llenando el abdomen…
+[3]
+y deja salir el aire muy despacio, como si soplaras sobre una vela sin apagarla.
+[5]
+Otra vez. Inhala…
+[3]
+y una exhalación larga, larga.
+[6]
+Deja que la respiración se vuelva lenta por sí sola.
+[*2]
+El día de hoy ya pasó. Hiciste lo que pudiste con lo que tenías. Ahora no hay nada más que resolver.
+Vamos a recorrerlo suavemente, como quien hojea un libro antes de cerrarlo.
+[*1]
+Recuerda cómo empezó tu día. El momento de despertar. La luz. Lo primero que hiciste.
+No te detengas en los detalles. Solo deja que la imagen pase.
+[*2]
+Recorre la mañana. Las personas que viste. Los lugares por los que pasaste. Como si miraras un paisaje desde la ventanilla de un tren.
+[*2]
+La tarde. Lo que salió bien. Lo que quizás no salió como esperabas. Todo eso también puede quedarse atrás.
+Si aparece algo pendiente, imagina que lo anotas en una hoja y la dejas sobre la mesa. Mañana seguirá ahí. Esta noche no te necesita.
+[*2]
+Y ahora, la noche. Este momento. Tu cuerpo en la cama.
+[*1]
+Elige un pequeño momento bueno de hoy. Por mínimo que sea. Un café caliente, una conversación, un rayo de sol, una risa.
+Quédate con él un instante. Deja que su calidez se extienda por el pecho.
+[*3]
+Ahora imagina que cierras el libro del día. Suavemente. Hoy termina aquí.
+[*1]
+Siente el peso de tu cuerpo, entregado a la cama. Los pies pesados. Las piernas pesadas. Las manos, tibias y pesadas.
+Cada exhalación te hunde un poco más en el descanso.
+[*3]
+No hay nada que hacer. Nada que pensar. Nada que resolver.
+Solo respirar… y descansar.
+[*4]
+Puedes seguir así, en silencio, dejándote llevar por el sueño.
+Buenas noches.

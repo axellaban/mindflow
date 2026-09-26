@@ -1,0 +1,46 @@
+---
+voice: luz
+target: 10:00
+bells: start,end
+---
+Hola. Te doy la bienvenida al primer día de Calma la ansiedad.
+Si llegaste hasta aquí, quizás la ansiedad forme parte de tu vida en este momento. Quiero empezar diciéndote algo importante: no hay nada roto en ti.
+
+La ansiedad es el sistema de alarma del cuerpo. Una función muy antigua, diseñada para protegernos del peligro.
+El problema es que a veces esa alarma se activa aunque no haya ningún león cerca. Se enciende con un correo, con una conversación pendiente, con un pensamiento sobre el futuro.
+Y cuando la alarma suena, el cuerpo responde: el corazón se acelera, la respiración se vuelve corta, los músculos se tensan.
+Es incómodo, a veces muy incómodo. Pero no es peligroso. Y lo más importante: tiene un interruptor que podemos aprender a usar.
+Ese interruptor es la respiración. Cuando la exhalación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse.
+
+Vamos a practicarlo. Siéntate, o recuéstate, en una postura cómoda.
+Si quieres, cierra los ojos.
+[4]
+Lleva una mano al pecho, y la otra al abdomen.
+Siente el calor de tus manos. Ese contacto ya es una forma de decirle al cuerpo: estoy aquí.
+[*1]
+Respira normalmente, y solo observa. ¿Qué mano se mueve más? No cambies nada todavía.
+[*1]
+Ahora, intenta que el aire llegue un poco más abajo, hacia el abdomen. Que la mano de abajo suba al inhalar.
+[*1]
+Vamos a respirar con un ritmo de cuatro y seis. Cuatro tiempos para inhalar, seis para exhalar.
+Inhala por la nariz{0.7} dos{0.7} tres{0.7} cuatro.
+Exhala suave{0.7} dos{0.7} tres{0.7} cuatro{0.7} cinco{0.7} seis.
+[2]
+Inhala{0.7} dos{0.7} tres{0.7} cuatro.
+Exhala{0.7} dos{0.7} tres{0.7} cuatro{0.7} cinco{0.7} seis.
+[2]
+Una vez más. Inhala{0.7} dos{0.7} tres{0.7} cuatro.
+Exhala{0.7} dos{0.7} tres{0.7} cuatro{0.7} cinco{0.7} seis.
+[3]
+Continúa con este ritmo por tu cuenta. Inhalación tranquila, exhalación larga.
+[*4]
+Si aparece un pensamiento ansioso, no tienes que discutir con él. Solo nota que está ahí, y vuelve a la exhalación larga.
+[*4]
+Quizás ya notes algún cambio. Tal vez un poco más de calma, o tal vez no mucho. Las dos cosas están bien. Esto es un entrenamiento, y el cuerpo aprende con la repetición.
+[*2]
+Deja ahora la respiración libre. Siente tus manos sobre el cuerpo una última vez.
+[4]
+Y cuando sea el momento, abre los ojos.
+[2]
+Hoy aprendiste el interruptor más básico: exhalar más largo de lo que inhalas. Puedes usarlo en cualquier lugar, sin que nadie lo note. En el transporte, en una reunión, antes de dormir.
+Mañana aprenderemos a anclarnos en el cuerpo cuando la mente se acelera. Hasta mañana.
