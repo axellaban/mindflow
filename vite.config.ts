@@ -14,8 +14,8 @@ export default defineConfig({
       // the glob below already precaches the icons
       includeManifestIcons: false,
       manifest: {
-        name: 'Mindfulness by Eli',
-        short_name: 'Mindfulness',
+        name: 'CalmabyEli',
+        short_name: 'CalmabyEli',
         description:
           'Meditaciones guiadas, respiración y descanso para mujeres, de la mano de Eli. Bajá un cambio, soltá la autoexigencia y dormí mejor.',
         lang: 'es',
@@ -24,8 +24,8 @@ export default defineConfig({
         scope: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#150C19',
-        theme_color: '#150C19',
+        background_color: '#17231f',
+        theme_color: '#17231f',
         categories: ['health', 'lifestyle', 'medical'],
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },

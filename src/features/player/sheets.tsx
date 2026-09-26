@@ -179,7 +179,7 @@ export function OptionsSheet({
           label="Compartir"
           onClick={async () => {
             const url = sessionId ? `${location.origin}/sesion/${sessionId}` : location.origin;
-            const r = await shareOrCopy({ title: info.title, text: `${info.title} — una pausa para vos en Mindfulness by Eli`, url });
+            const r = await shareOrCopy({ title: info.title, text: `${info.title} — una pausa para vos en CalmabyEli`, url });
             if (r === 'copied') useUI.getState().toast('Enlace copiado');
           }}
         />

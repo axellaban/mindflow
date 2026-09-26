@@ -18,7 +18,7 @@ import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
 import { SCENES, SCENE_BY_ID, type SceneId } from '@/content/scenes';
 import { haptic, shareOrCopy } from '@/lib/device';
-import { programProgress, useActiveProgram, useNow, useStats } from '@/lib/hooks';
+import { programProgress, useActiveProgram, useNow } from '@/lib/hooks';
 import { minutesByDay, currentWeek } from '@/lib/stats';
 import { dayKey, dayNumber, fromDayKey, greeting, longDate, shortWeekday } from '@/lib/time';
 import { cn } from '@/lib/utils';
@@ -42,7 +42,6 @@ export function Home() {
   const sceneSound = useAppStore((s) => s.settings.sceneSound);
   const updateSettings = useAppStore((s) => s.updateSettings);
   const playerItem = usePlayer((s) => s.item);
-  const stats = useStats();
   const active = useActiveProgram();
   const [scenesOpen, setScenesOpen] = useState(false);
 
@@ -86,14 +85,14 @@ export function Home() {
   return (
     <div className="relative pb-10">
       {/* Hero scene */}
-      <section className="relative h-[64svh] min-h-[440px] overflow-hidden lg:h-[62vh] lg:min-h-[520px]">
-        <Scene scene={scene} paused={Boolean(playerItem && usePlayer.getState().expanded)} />
+      <section className="relative h-[48svh] min-h-[350px] max-h-[510px] overflow-hidden lg:h-[50vh]">
+        <Scene scene={scene} drift={false} paused />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/35 via-transparent to-ink-900" />
         <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
-          <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="Mindfulness by Eli">
+          <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="CalmabyEli">
             <LogoMark className="size-8" />
             <span className="font-display text-[17px] leading-none tracking-[-0.01em] text-mist-50/95 max-[379px]:hidden">
-              Mindfulness <span className="text-blush-300 italic">by Eli</span>
+              Calma<span className="text-blush-300 italic">byEli</span>
             </span>
           </Link>
           <div className="flex items-center gap-2">
@@ -126,19 +125,12 @@ export function Home() {
             {name ? `, ${name}` : ''}
           </h1>
           <p className="mt-2 flex items-center gap-2 text-[14px] text-2">
-            {stats.streak > 0 ? (
-              <>
-                <span className="inline-block size-1.5 rounded-full bg-peach-300" />
-                Racha de {stats.streak} {stats.streak === 1 ? 'día' : 'días'} · {Math.round(stats.minutes)} min en total
-              </>
-            ) : (
-              'Regalate unos minutos de calma hoy.'
-            )}
+            Un momento para vos. A tu ritmo.
           </p>
         </motion.div>
       </section>
 
-      <motion.div variants={stagger} initial="hidden" animate="show" className="relative z-10 mx-auto -mt-16 max-w-5xl space-y-10 md:px-8 lg:px-10">
+      <motion.div variants={stagger} initial="hidden" animate="show" className="relative z-10 mx-auto -mt-16 max-w-5xl space-y-12 md:px-8 lg:px-10">
         <div className="space-y-10 lg:grid lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-6 lg:space-y-0">
           <motion.section variants={rise} className="px-5 md:px-0">
             <HeroSessionCard session={daily} eyebrow="La pausa del día" note={daily.daily?.theme} />
@@ -194,9 +186,10 @@ export function Home() {
           <QuoteCard text={quote.text} author={quote.author} />
         </motion.section>
 
-        <motion.section variants={rise} className="px-5 md:px-0">
-          <WeekCard />
-        </motion.section>
+        <details className="mx-5 border-t border-white/10 py-5 md:mx-0">
+          <summary className="cursor-pointer py-2 text-sm text-2">Tu semana, sin exigencias</summary>
+          <div className="mt-4"><WeekCard /></div>
+        </details>
       </motion.div>
 
       <Sheet open={scenesOpen} onClose={() => setScenesOpen(false)} title="Escena de inicio" size="lg">
@@ -338,7 +331,7 @@ function QuoteCard({ text, author }: { text: string; author?: string }) {
       <p className="text-[12px] font-bold tracking-[0.16em] text-3 uppercase">Frase del día</p>
       <blockquote className="mt-3 font-display text-[25px] leading-snug italic md:text-[30px]">“{text}”</blockquote>
       <figcaption className="mt-4 flex items-center justify-between">
-        <span className="text-[14px] text-2">{author ?? 'Mindfulness by Eli'}</span>
+        <span className="text-[14px] text-2">{author ?? 'CalmabyEli'}</span>
         <IconButton
           label="Compartir frase"
           size="sm"

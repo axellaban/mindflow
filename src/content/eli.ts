@@ -92,7 +92,7 @@ export type WhatsAppTopic = 'hello' | 'sessions' | 'support' | 'workshop' | 'pro
 
 /** A ready-to-send first message in the user's own voice; she can edit it before sending. */
 export function whatsappMessage(topic: WhatsAppTopic, opts: { name?: string; struggles?: string | null; program?: string } = {}): string {
-  const hi = `¡Hola Eli! ${opts.name ? `Soy ${opts.name}, v` : 'V'}engo de la app Mindfulness by Eli 🌸`;
+  const hi = `¡Hola Eli! ${opts.name ? `Soy ${opts.name}, v` : 'V'}engo de la app CalmabyEli 🌸`;
   switch (topic) {
     case 'sessions':
       return `${hi} Me gustaría saber más sobre las sesiones 1:1.${opts.struggles ? ` Me está costando ${opts.struggles}.` : ''}`;

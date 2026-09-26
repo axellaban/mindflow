@@ -36,8 +36,8 @@ export function SessionCard({ session, className, size = 'md' }: { session: Sess
       aria-label={`${session.title}, ${formatDuration(session.duration)}`}
     >
       <div className="relative">
-        <CoverArt spec={session.art} className="aspect-square w-full shadow-[0_18px_40px_-22px_rgb(0_0_0/0.9)] transition-transform duration-500 group-hover:scale-[1.02]" />
-        <div className="absolute right-2.5 bottom-2.5 flex size-9 items-center justify-center rounded-full bg-ink-900/45 opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
+        <CoverArt spec={session.art} className="aspect-square w-full transition-transform duration-500 group-hover:scale-[1.01]" />
+        <div className="absolute right-2.5 bottom-2.5 flex size-9 items-center justify-center rounded-full bg-ink-900/70 backdrop-blur-md">
           <Play className="ml-0.5 size-4 fill-current" />
         </div>
         {completed && (
@@ -103,7 +103,7 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
         haptic(10);
         play(session.id);
       }}
-      className="group relative block w-full overflow-hidden rounded-[30px] text-left shadow-[0_30px_60px_-30px_rgb(0_0_0/0.9)]"
+      className="group relative block w-full overflow-hidden rounded-2xl text-left"
     >
       <CoverArt spec={session.art} ratio={1.45} rounded="rounded-[30px]" className="aspect-[1.45] w-full transition-transform duration-700 group-hover:scale-[1.02]" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/25 to-transparent" />
@@ -118,7 +118,7 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
             {completed && ' · Completada'}
           </p>
         </div>
-        <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-mist-50 text-ink-900 shadow-[0_10px_30px_-8px_rgb(246_244_255/0.6)] transition-transform duration-300 group-hover:scale-105">
+        <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-mist-50 text-ink-900 transition-transform duration-300 group-hover:scale-105">
           <Play className="ml-1 size-6 fill-current" />
         </div>
       </div>

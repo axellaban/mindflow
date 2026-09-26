@@ -11,7 +11,7 @@ interface Props {
   grain?: boolean;
 }
 
-export const CoverArt = memo(function CoverArt({ spec, ratio = 1, className, rounded = 'rounded-3xl', grain = true }: Props) {
+export const CoverArt = memo(function CoverArt({ spec, ratio = 1, className, rounded = 'rounded-2xl', grain = false }: Props) {
   const uid = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   return (
     <div className={cn('relative overflow-hidden', rounded, grain && 'grain', className)} style={{ contain: 'paint' }}>

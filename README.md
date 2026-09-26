@@ -1,4 +1,4 @@
-# Mindfulness by Eli — meditación para mujeres
+# CalmabyEli — meditación para mujeres
 
 Web app (PWA instalable) de [@mindfulnessbyeli](https://www.instagram.com/mindfulnessbyeli): meditaciones guiadas, programas, historias para dormir, respiración, temporizador, paisajes sonoros y diario de ánimo, pensada 100 % para mujeres. Todo en español, sin registro y funcionando también sin conexión: 61 sesiones narradas (unas 10 horas de audio).
 
@@ -26,7 +26,7 @@ La interfaz habla con voseo, como Eli. Las narraciones usan una voz neuronal de 
 Todo lo editable está en **`src/content/eli.ts`**: links, número de WhatsApp, credenciales, pasos de reserva, testimonios y el próximo workshop.
 
 - **Agendar sesión** → formulario de Tally (`bookingForm`). Cada link lleva `utm_source=app` y `utm_content=<lugar>` (`home`, `completion`, `program`, `checkin`, `profile`, `settings`, `eli-page`) para saber qué invitación funciona mejor. Para verlo en Tally, agregá campos ocultos `utm_content` y `utm_campaign` al formulario.
-- **WhatsApp** → `wa.me` directo al número que Eli publica en su formulario, con un primer mensaje ya escrito según el contexto (por ejemplo: *"¡Hola Eli! Soy Sofía, vengo de la app Mindfulness by Eli 🌸 Me gustaría saber más sobre las sesiones 1:1. Me está costando la autoexigencia."*). La usuaria puede editarlo antes de enviarlo.
+- **WhatsApp** → `wa.me` directo al número que Eli publica en su formulario, con un primer mensaje ya escrito según el contexto (por ejemplo: *"¡Hola Eli! Soy Sofía, vengo de la app CalmabyEli 🌸 Me gustaría saber más sobre las sesiones 1:1. Me está costando la autoexigencia."*). La usuaria puede editarlo antes de enviarlo.
 - **Workshop** → `EVENTS`: se muestra en el inicio y en `/eli` hasta la fecha de inicio y después desaparece solo. Para una nueva edición, agregá otro evento.
 - **Dónde aparecen**:
   - En la pantalla de sesión completada, después de marcar el ánimo. Nunca en la primera sesión y como máximo cada 3 días. El texto cambia según el ánimo y el tema; si el día fue difícil, la invitación es a escribirle.

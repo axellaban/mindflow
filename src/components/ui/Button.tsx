@@ -15,14 +15,14 @@ interface ButtonProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
 }
 
 const VARIANTS: Record<Variant, string> = {
-  primary: 'bg-mist-50 text-ink-900 shadow-[0_10px_30px_-10px_rgb(246_244_255/0.55)] hover:bg-white',
+  primary: 'bg-mist-50 text-ink-900 hover:bg-white',
   secondary: 'glass text-mist-50 hover:bg-white/12',
   soft: 'bg-white/10 text-mist-50 hover:bg-white/15',
   ghost: 'text-mist-50/80 hover:text-mist-50 hover:bg-white/6',
 };
 
 const SIZES: Record<Size, string> = {
-  sm: 'h-9 px-4 text-[13px] gap-1.5',
+  sm: 'min-h-11 px-4 text-[13px] gap-1.5',
   md: 'h-12 px-6 text-[15px] gap-2',
   lg: 'h-14 px-8 text-base gap-2.5',
 };
@@ -31,7 +31,7 @@ export function Button({ variant = 'primary', size = 'md', icon, children, class
   return (
     <motion.button
       type="button"
-      whileTap={{ scale: 0.965 }}
+      whileTap={{ scale: 0.985 }}
       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
       className={cn(
         'inline-flex items-center justify-center rounded-full font-semibold tracking-[-0.005em] transition-colors duration-300 disabled:pointer-events-none disabled:opacity-40',

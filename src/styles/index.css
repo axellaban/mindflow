@@ -7,21 +7,21 @@
   --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
 
-  --color-ink-950: #0e0811;
-  --color-ink-900: #150c19;
-  --color-ink-850: #1b1020;
-  --color-ink-800: #221528;
-  --color-ink-700: #2f1e37;
-  --color-ink-600: #412b4b;
-  --color-ink-500: #5a3e66;
+  --color-ink-950: #101916;
+  --color-ink-900: #17231f;
+  --color-ink-850: #1c2a25;
+  --color-ink-800: #23332c;
+  --color-ink-700: #31453b;
+  --color-ink-600: #496052;
+  --color-ink-500: #64796a;
 
-  --color-mist-50: #fdf3f5;
-  --color-mist-100: #f5e6eb;
-  --color-mist-200: #e6d0d8;
+  --color-mist-50: #f4f1e9;
+  --color-mist-100: #e8e5dc;
+  --color-mist-200: #d4d8cd;
 
-  --color-blush-300: #f7cbd6;
-  --color-blush-400: #f0a9bd;
-  --color-blush-500: #e0879f;
+  --color-blush-300: #c5d5bc;
+  --color-blush-400: #acc39f;
+  --color-blush-500: #8aa77d;
   --color-peach-300: #ffd6bd;
   --color-peach-400: #ffbf99;
   --color-sage-300: #cfe2d5;
@@ -83,9 +83,9 @@
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
-    --text: #fdf3f5;
-    --text-2: rgb(250 233 239 / 0.74);
-    --text-3: rgb(250 233 239 / 0.54);
+    --text: #f4f1e9;
+    --text-2: #c8d0c6;
+    --text-3: #a5b3a9;
     --line: rgb(255 255 255 / 0.08);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
@@ -117,7 +117,7 @@
   }
 
   ::selection {
-    background: rgb(240 169 189 / 0.35);
+    background: rgb(172 195 159 / 0.35);
   }
 
   button,
@@ -128,7 +128,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid rgb(247 203 214 / 0.9);
+    outline: 2px solid #c5d5bc;
     outline-offset: 3px;
     border-radius: 12px;
   }
@@ -181,12 +181,12 @@
   .glass {
     background: var(--glass);
     border: 1px solid var(--line);
-    backdrop-filter: blur(20px) saturate(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .glass-strong {
-    background: rgb(30 18 36 / 0.72);
+    background: rgb(23 35 31 / 0.94);
     border: 1px solid rgb(255 255 255 / 0.1);
     backdrop-filter: blur(28px) saturate(160%);
     -webkit-backdrop-filter: blur(28px) saturate(160%);

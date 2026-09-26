@@ -16,7 +16,7 @@ function Icon({ size, scale }: { size: number; scale: number }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'radial-gradient(120% 120% at 50% 18%, #4a2a52 0%, #221528 55%, #150c19 100%)',
+        background: '#17231f',
       }}
     >
       <LogoMark size={size * scale} />
@@ -48,7 +48,7 @@ function OG() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
           <LogoMark size={64} />
           <span className="font-display" style={{ fontSize: 40 }}>
-            Mindfulness <span style={{ fontStyle: 'italic', color: '#f7cbd6' }}>by Eli</span>
+            Calma<span style={{ fontStyle: 'italic', color: '#c5d5bc' }}>byEli</span>
           </span>
         </div>
         <h1 className="font-display" style={{ fontSize: 70, lineHeight: 1.04, margin: '36px 0 0', maxWidth: 600 }}>

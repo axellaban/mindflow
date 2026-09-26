@@ -143,7 +143,7 @@ export function SettingsPage() {
                   </>
                 ) : isIOS ? (
                   <p>
-                    En Safari, tocá <strong className="text-mist-50">Compartir</strong> y luego <strong className="text-mist-50">Agregar a inicio</strong>. Vas a tener Mindfulness by Eli como una app más.
+                    En Safari, tocá <strong className="text-mist-50">Compartir</strong> y luego <strong className="text-mist-50">Agregar a inicio</strong>. Vas a tener CalmabyEli como una app más.
                   </p>
                 ) : (
                   <p>Desde el menú de tu navegador, elegí “Instalar aplicación” o “Agregar a la pantalla de inicio”.</p>
@@ -207,8 +207,9 @@ export function SettingsPage() {
 
         <Group title="Acerca de">
           <div className="space-y-3 text-[14px] leading-relaxed text-2">
+            <p>Tu progreso queda en este navegador. No se sincroniza entre dispositivos y puede perderse si borrás los datos del sitio. Podés guardar una copia desde los ajustes.</p>
             <p>
-              Mindfulness by Eli es un espacio para meditar, respirar y descansar mejor, pensado para mujeres. Las meditaciones guiadas usan una voz neuronal
+              CalmabyEli es un espacio para meditar, respirar y descansar mejor, pensado para mujeres. Las meditaciones guiadas usan una voz neuronal
               en español (Luz), y todos los paisajes sonoros y la música se generan en tiempo real en tu dispositivo.
             </p>
             <p className="flex gap-2.5 rounded-2xl bg-white/4 p-3.5">

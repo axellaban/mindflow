@@ -47,7 +47,7 @@ export function TimerScreen() {
 
   return (
     <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#3d2548_0%,#1b1020_60%,#0e0811_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#31453b_0%,#1c2a25_60%,#101916_100%)]" />
       <div className="grain absolute inset-0" />
       <AnimatePresence mode="wait">
         {stage === 'setup' && (

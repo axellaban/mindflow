@@ -1,4 +1,4 @@
-import { ArrowRight, Bed, Brain, CalendarPlus, Feather, Heart, Moon, Mountain, Sprout, Waves, Wind } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bed, Brain, CalendarPlus, Feather, Heart, Moon, Mountain, Sprout, Waves, Wind } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
@@ -80,10 +80,13 @@ export function Onboarding() {
   };
 
   const begin = () => {
-    engine.unlock(true);
-    engine.setLayersVolume(0.45, 0.5);
-    engine.setMix(SCENE_BY_ID.jardin.sound, 4);
     next();
+  };
+
+  const tryPractice = () => {
+    complete({ name: '', goals: [], experience: 'nuevo' });
+    usePlayer.getState().playSession('pausa-3-minutos');
+    navigate('/', { replace: true });
   };
 
   const profile: Profile = { name, goals, experience, createdAt: Date.now(), onboarded: true };
@@ -101,21 +104,23 @@ export function Onboarding() {
 
   return (
     <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <Scene scene={SCENE_BY_ID.jardin} />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/15 via-ink-950/5 to-ink-950/85" />
+      <div className="absolute inset-0 opacity-25"><Scene scene={SCENE_BY_ID.jardin} paused drift={false} /></div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/65 to-ink-900" />
       {step > 0 && (
-        <div className="absolute inset-x-0 top-0 flex justify-center gap-1.5 pt-safe">
+        <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-4 pt-safe">
+          <button type="button" aria-label="Volver al paso anterior" onClick={() => setStep((s) => Math.max(0, s - 1))} className="flex size-11 items-center justify-center rounded-full hover:bg-white/10"><ArrowLeft className="size-5" /></button>
           <div className="flex gap-1.5 pt-4">
             {[1, 2, 3, 4, 5].map((i) => (
               <span key={i} className={cn('h-1 rounded-full transition-all duration-500', i <= step ? 'w-6 bg-mist-50' : 'w-3 bg-white/25')} />
             ))}
           </div>
+          <button type="button" onClick={() => finish(false)} className="min-h-11 px-3 text-sm text-2">Omitir</button>
         </div>
       )}
 
-      <div className="relative mx-auto flex h-full max-w-lg flex-col justify-end px-6 pt-safe pb-safe">
+      <div className={cn('relative mx-auto flex h-full max-w-lg flex-col px-6 pb-safe', step === 0 ? 'pt-safe' : 'overflow-y-auto pt-20')}>
         <AnimatePresence mode="wait">
-          {step === 0 && <Welcome key="w" onBegin={begin} />}
+          {step === 0 && <Welcome key="w" onBegin={begin} onTry={tryPractice} />}
 
           {step === 1 && <MeetEli key="eli" onNext={next} />}
 
@@ -292,68 +297,25 @@ function PlanItem({ art, eyebrow, title, meta }: { art: ReactNode; eyebrow: stri
   );
 }
 
-function Welcome({ onBegin }: { onBegin: () => void }) {
-  const [phase, setPhase] = useState<'logo' | 'in' | 'out' | 'ready'>('logo');
-  useEffect(() => {
-    // warm up Eli's photo for the next step
-    new Image().src = ELI.photo;
-    const t1 = setTimeout(() => setPhase('in'), 1400);
-    const t2 = setTimeout(() => setPhase('out'), 1400 + 4200);
-    const t3 = setTimeout(() => setPhase('ready'), 1400 + 4200 + 5200);
-    return () => [t1, t2, t3].forEach(clearTimeout);
-  }, []);
-
-  const circleScale = phase === 'in' ? 1.35 : phase === 'out' ? 0.85 : 1;
-  const circleDur = phase === 'in' ? 4.2 : phase === 'out' ? 5.2 : 1.2;
-
+function Welcome({ onBegin, onTry }: { onBegin: () => void; onTry: () => void }) {
   return (
-    <motion.div {...panel} className="flex h-full flex-col items-center justify-center text-center">
-      <div className="relative flex flex-1 flex-col items-center justify-center">
-        <motion.div
-          className="absolute size-56 rounded-full border border-white/25 bg-white/6 backdrop-blur-[2px]"
-          animate={{ scale: circleScale, opacity: phase === 'logo' ? 0 : phase === 'ready' ? 0.35 : 1 }}
-          transition={{ duration: circleDur, ease: [0.45, 0, 0.55, 1] }}
-        />
-        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}>
-          <LogoMark className="size-14" />
-        </motion.div>
-        <div className="relative mt-6 h-24">
-          <AnimatePresence mode="wait">
-            {phase === 'logo' && (
-              <motion.h1 key="t0" {...panel} className="font-display text-[40px] leading-tight">
-                Respirá hondo
-              </motion.h1>
-            )}
-            {phase === 'in' && (
-              <motion.p key="t1" {...panel} className="font-display text-[34px] leading-tight text-mist-50/90">
-                Inhalá…
-              </motion.p>
-            )}
-            {phase === 'out' && (
-              <motion.p key="t2" {...panel} className="font-display text-[34px] leading-tight text-mist-50/90">
-                y soltá despacio
-              </motion.p>
-            )}
-            {phase === 'ready' && (
-              <motion.div key="t3" {...panel}>
-                <h1 className="font-display text-[38px] leading-tight">Bienvenida</h1>
-                <p className="mt-2 text-[15px] text-2">Tu espacio para bajar un cambio, descansar de verdad y tratarte con más amabilidad.</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+    <motion.div {...panel} className="flex h-full min-h-0 flex-col items-center justify-between overflow-y-auto py-6 text-center">
+      <p className="pt-5 text-xs tracking-[0.18em] text-2 uppercase">Mindfulness con Eli</p>
+      <div className="my-8 flex flex-col items-center">
+        <LogoMark className="mb-8 size-12" />
+        <h1 className="font-display text-[48px] leading-tight sm:text-[60px]">Calma<span className="italic text-blush-300">byEli</span></h1>
+        <p className="mt-5 font-display text-[28px] leading-snug">Un momento para vos.</p>
+        <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-2">Prácticas guiadas para bajar un cambio, descansar y volver a lo que sentís.</p>
+        <div className="mt-8 flex items-center gap-3 text-left">
+          <EliAvatar size={40} halo={false} />
+          <p className="text-sm text-2">Con Eli Curcio<br /><span className="text-xs text-3">Profesora de mindfulness</span></p>
         </div>
       </div>
-      <motion.div
-        className="w-full pb-4"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.8 }}
-      >
-        <Button full size="lg" onClick={onBegin}>
-          Comenzar
-        </Button>
-        <p className="mt-3 text-[12px] text-3">Sin registro. Todo se guarda en tu dispositivo.</p>
-      </motion.div>
+      <div className="w-full space-y-3 pb-2">
+        <Button full size="lg" onClick={onTry}>Probar una pausa · 3 min</Button>
+        <Button full variant="ghost" onClick={onBegin}>Personalizar mi espacio</Button>
+        <p className="text-xs leading-relaxed text-3">Sin cuenta ni contraseña.<br />Tu progreso se guarda en este dispositivo.</p>
+      </div>
     </motion.div>
   );
 }
@@ -361,8 +323,8 @@ function Welcome({ onBegin }: { onBegin: () => void }) {
 /** Eli introduces herself: the person behind the app, before any question. */
 function MeetEli({ onNext }: { onNext: () => void }) {
   return (
-    <motion.div {...panel} className="no-scrollbar flex max-h-full flex-col overflow-y-auto pt-16 pb-4">
-      <div className="relative mx-auto w-44 shrink-0 sm:w-52">
+    <motion.div {...panel} className="flex flex-col pb-6">
+      <div className="relative mx-auto w-32 shrink-0 sm:w-40">
         <motion.div
           aria-hidden="true"
           className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(247_203_214/0.45),transparent)] blur-xl"
@@ -373,8 +335,8 @@ function MeetEli({ onNext }: { onNext: () => void }) {
           src={ELI.photo}
           alt={ELI.fullName}
           className="relative aspect-[4/5] w-full rounded-[32px] border border-white/15 object-cover shadow-[0_30px_60px_-24px_rgb(0_0_0/0.7)]"
-          initial={{ opacity: 0, scale: 0.94, rotate: -2 }}
-          animate={{ opacity: 1, scale: 1, rotate: -2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         />
         <div className="absolute -right-4 -bottom-3 rotate-[4deg] rounded-full bg-mist-50 px-3.5 py-1.5 font-display text-[17px] text-ink-900 italic shadow-lg">
@@ -383,11 +345,10 @@ function MeetEli({ onNext }: { onNext: () => void }) {
       </div>
       <h1 className="mt-9 font-display text-[30px] leading-tight">Este espacio es para vos</h1>
       <p className="mt-3 text-[15.5px] leading-relaxed text-2">
-        Soy profesora de mindfulness, instructora de yoga y coach ontológica. Acompaño a mujeres que están todo el día resolviendo, y a las que
-        incluso descansar les cuesta.
+        Soy Eli, profesora de mindfulness. Te acompaño a hacer una pausa en medio de todo lo que tenés que resolver.
       </p>
       <p className="mt-3 text-[15.5px] leading-relaxed text-2">
-        Acá vas a encontrar prácticas cortas para bajar un cambio, dormir mejor y tratarte con más amabilidad, todos los días.
+        Podemos empezar de a poco. Estas preguntas son opcionales y me ayudan a sugerirte por dónde seguir.
       </p>
       <p className="mt-3 font-display text-[20px] text-blush-300 italic">Eli</p>
       <div className="mt-6 flex items-center gap-3">
