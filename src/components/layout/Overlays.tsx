@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { ACHIEVEMENT_BY_ID } from '@/content/achievements';
 import { haptic } from '@/lib/device';
+import { EASE, breath } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
@@ -25,10 +26,10 @@ export function Toaster() {
           <motion.div
             key={t.id}
             layout
-            initial={{ opacity: 0, y: 16, scale: 0.96 }}
+            initial={{ opacity: 0, y: 12, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 8, scale: 0.98 }}
-            transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+            exit={{ opacity: 0, y: 6, transition: { duration: 0.35, ease: 'easeOut' } }}
+            transition={{ duration: 0.6, ease: EASE }}
             className="glass-strong flex items-center gap-2.5 rounded-full px-5 py-3 text-[14px] font-semibold shadow-[0_16px_40px_-16px_rgb(0_0_0/0.7)]"
           >
             {t.tone === 'success' && <CheckCircle2 className="size-4.5 text-sage-300" />}
@@ -72,38 +73,46 @@ export function Celebration() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: EASE }}
         >
           <div className="absolute inset-0 bg-ink-950/80" onClick={next} />
           <motion.div
             className="relative w-full max-w-sm overflow-hidden rounded-[32px] border border-white/10 bg-ink-800/95 px-7 pt-10 pb-7 text-center"
-            initial={{ scale: 0.9, y: 20 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.95, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 26 }}
+            initial={{ opacity: 0, scale: 0.97, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.98, y: 8 }}
+            transition={{ duration: 0.8, ease: EASE }}
           >
             <div className="pointer-events-none absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-gold-300/20 blur-3xl" />
-            <motion.div
-              className="relative mx-auto flex size-24 items-center justify-center rounded-full"
-              style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #f6deaf 55%, #acc39f)' }}
-              initial={{ rotate: -20, scale: 0.6 }}
-              animate={{ rotate: 0, scale: 1 }}
-              transition={{ type: 'spring', stiffness: 180, damping: 12, delay: 0.1 }}
-            >
-              <Icon name={def.icon} className="size-10 text-ink-900" strokeWidth={1.8} />
-              {Array.from({ length: 10 }, (_, i) => (
+            <div className="relative mx-auto flex size-24 items-center justify-center">
+              {/* a soft glow that breathes, and two ripples like a drop on still water */}
+              <motion.span
+                aria-hidden="true"
+                className="absolute -inset-5 rounded-full bg-gold-300/25 blur-xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0.45, 1, 0.45], scale: [0.92, 1.08, 0.92] }}
+                transition={breath}
+              />
+              {[0.5, 1.3].map((delay) => (
                 <motion.span
-                  key={i}
-                  className="absolute size-1.5 rounded-full bg-gold-300"
-                  initial={{ x: 0, y: 0, opacity: 1 }}
-                  animate={{
-                    x: Math.cos((i / 10) * Math.PI * 2) * 80,
-                    y: Math.sin((i / 10) * Math.PI * 2) * 80,
-                    opacity: 0,
-                  }}
-                  transition={{ duration: 1.2, delay: 0.25, ease: 'easeOut' }}
+                  key={delay}
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-full border border-gold-300/50"
+                  initial={{ scale: 1, opacity: 0 }}
+                  animate={{ scale: 2.1, opacity: [0, 0.6, 0] }}
+                  transition={{ duration: 2.8, delay, ease: EASE }}
                 />
               ))}
-            </motion.div>
+              <motion.div
+                className="relative flex size-24 items-center justify-center rounded-full"
+                style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #f6deaf 55%, #acc39f)' }}
+                initial={{ opacity: 0, scale: 0.85, filter: 'blur(6px)' }}
+                animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
+              >
+                <Icon name={def.icon} className="size-10 text-ink-900" strokeWidth={1.8} />
+              </motion.div>
+            </div>
             <p className="relative mt-6 text-[12px] font-bold tracking-[0.16em] text-gold-300 uppercase">Nuevo logro</p>
             <h2 className="relative mt-2 font-display text-[28px] leading-tight">{def.title}</h2>
             <p className="relative mt-2 text-[15px] text-2">{def.description}</p>

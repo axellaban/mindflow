@@ -10,6 +10,7 @@ import { useEliInvite } from '@/features/eli/useEliInvite';
 import { haptic } from '@/lib/device';
 import { programProgress, useStats } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
+import { EASE, EASE_IN_OUT, breath, reveal, revealFocus, stagger } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
@@ -32,36 +33,36 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
   const eli = useEliInvite(programEnd ? 'program' : 'completion', programEnd || (mood !== null && completedCount >= 2), programEnd ? 30 : 3, programEnd ? 2 : 5);
   const invite = eliCopy(session, mood, programEnd ? program?.title : undefined);
 
-  const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.15 } } };
-  const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } } };
+  const container = stagger(0.1, 0.2);
+  const item = reveal;
 
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="flex w-full max-w-md flex-col items-center text-center">
       <motion.div variants={item} className="relative mb-6 flex size-28 items-center justify-center">
         <motion.span
           className="absolute inset-0 rounded-full bg-mist-50/10"
-          animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.15, 0.6] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          animate={{ scale: [1, 1.22, 1], opacity: [0.6, 0.18, 0.6] }}
+          transition={breath}
         />
         <span className="absolute inset-3 rounded-full bg-mist-50/15" />
         <svg viewBox="0 0 52 52" className="relative size-14">
           <motion.path
             d="M14 27 L23 36 L39 18"
             fill="none"
-            stroke="#fdf3f5"
+            stroke="#f4f1e9"
             strokeWidth="3.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 0.9, delay: 0.45, ease: [0.65, 0, 0.35, 1] }}
+            transition={{ duration: 1.1, delay: 0.55, ease: EASE_IN_OUT }}
           />
         </svg>
       </motion.div>
       <motion.p variants={item} className="text-[13px] font-bold tracking-[0.16em] text-2 uppercase">
         Sesión completada
       </motion.p>
-      <motion.h2 variants={item} className="mt-2 font-display text-[34px] leading-tight">
+      <motion.h2 variants={revealFocus} className="mt-2 font-display text-[34px] leading-tight">
         {session.daily ? 'Gracias por tu pausa' : 'Bien hecho'}
       </motion.h2>
 
@@ -118,7 +119,18 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
             </button>
           ))}
         </div>
-        {mood !== null && <p className="mt-3 text-[13px] text-2">Registrado en tu diario. Gracias por escucharte.</p>}
+        <AnimatePresence>
+          {mood !== null && (
+            <motion.p
+              className="mt-3 text-[13px] text-2"
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: EASE, delay: 0.2 }}
+            >
+              Registrado en tu diario. Gracias por escucharte.
+            </motion.p>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       <AnimatePresence>

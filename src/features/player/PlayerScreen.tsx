@@ -8,6 +8,7 @@ import { IconButton } from '@/components/ui/Button';
 import { BED_BY_ID } from '@/content/sounds';
 import { haptic } from '@/lib/device';
 import { formatClock } from '@/lib/time';
+import { EASE, EASE_IN_OUT, SPRING_PRESS, breath, press } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 import { type Caption, type PlayerItem, usePlayer } from '@/store/player';
@@ -85,9 +86,8 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
     <motion.div
       className="fixed inset-0 z-[70] overflow-hidden bg-ink-900"
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 60 }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } }}
+      exit={{ opacity: 0, y: 60, transition: { duration: 0.45, ease: EASE } }}
       onPointerMove={poke}
       onPointerDown={poke}
       role="dialog"
@@ -97,7 +97,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/55 via-transparent via-40% to-ink-950/90" />
       <motion.div
         className="pointer-events-none absolute inset-0 bg-ink-950"
-        animate={{ opacity: ended && info.sleep ? 0.55 : hideUi ? 0.28 : 0.12 }}
+        animate={{ opacity: ended ? (info.sleep ? 0.55 : 0.38) : hideUi ? 0.28 : 0.12 }}
         transition={{ duration: 1.6 }}
       />
 
@@ -129,9 +129,9 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
               <motion.div
                 animate={{ opacity: hideUi ? 0.55 : 1 }}
                 transition={{ duration: 1.2 }}
-                className="relative px-4 [text-shadow:0_2px_24px_rgb(4_6_26/0.55)]"
+                className="relative px-4 [text-shadow:0_2px_24px_rgb(10_16_14/0.55)]"
               >
-                <span className="pointer-events-none absolute inset-[-40%_-10%] -z-10 bg-[radial-gradient(closest-side,rgb(4_6_26/0.42),transparent)]" />
+                <span className="pointer-events-none absolute inset-[-40%_-10%] -z-10 bg-[radial-gradient(closest-side,rgb(10_16_14/0.42),transparent)]" />
                 <h1 className="font-display text-[38px] leading-[1.05] md:text-[52px]">{info.title}</h1>
                 <p className="mt-3 text-[15px] text-2">{ended && info.sleep ? 'Que descanses' : info.subtitle}</p>
               </motion.div>
@@ -148,7 +148,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
               {!info.infinite ? (
                 <Scrubber position={position} duration={duration} onSeek={seek} />
               ) : (
-                <p className="mb-2 text-center font-display text-[15px] text-2 tabular-nums">{formatClock(position)}</p>
+                <p className="mb-2 text-center font-display text-[17px] font-semibold text-2 tabular-nums">{formatClock(position)}</p>
               )}
 
               <div className="mt-4 flex items-center justify-center gap-8">
@@ -159,25 +159,52 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
                 ) : (
                   <span className="size-14" />
                 )}
-                <motion.button
-                  type="button"
-                  whileTap={{ scale: 0.92 }}
-                  onClick={() => {
-                    haptic(10);
-                    toggle();
-                  }}
-                  aria-label={playing ? 'Pausar' : 'Reproducir'}
-                  className="relative flex size-20 items-center justify-center rounded-full bg-mist-50 text-ink-900 shadow-[0_18px_50px_-12px_rgb(246_244_255/0.55)]"
-                >
-                  {status === 'loading' && (
-                    <motion.span
-                      className="absolute inset-[-6px] rounded-full border-2 border-transparent border-t-mist-50/80"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                    />
-                  )}
-                  {playing ? <Pause className="size-8 fill-current" /> : <Play className="ml-1 size-8 fill-current" />}
-                </motion.button>
+                <div className="relative">
+                  <AnimatePresence>
+                    {status === 'playing' && (
+                      <motion.span
+                        key="halo"
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -inset-5 rounded-full bg-mist-50/20 blur-xl"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0.35, 0.9, 0.35], scale: [0.9, 1.1, 0.9] }}
+                        exit={{ opacity: 0, transition: { duration: 0.8 } }}
+                        transition={breath}
+                      />
+                    )}
+                  </AnimatePresence>
+                  <motion.button
+                    type="button"
+                    whileTap={{ scale: 0.94 }}
+                    transition={SPRING_PRESS}
+                    onClick={() => {
+                      haptic(10);
+                      toggle();
+                    }}
+                    aria-label={playing ? 'Pausar' : 'Reproducir'}
+                    className="relative flex size-20 items-center justify-center rounded-full bg-mist-50 text-ink-900 shadow-[0_18px_50px_-14px_rgb(244_241_233/0.45)]"
+                  >
+                    {status === 'loading' && (
+                      <motion.span
+                        className="absolute inset-[-6px] rounded-full border-2 border-transparent border-t-mist-50/70"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1.8, repeat: Infinity, ease: EASE_IN_OUT }}
+                      />
+                    )}
+                    <AnimatePresence mode="popLayout" initial={false}>
+                      <motion.span
+                        key={playing ? 'pause' : 'play'}
+                        className="flex"
+                        initial={{ opacity: 0, scale: 0.6 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.6 }}
+                        transition={{ duration: 0.28, ease: EASE }}
+                      >
+                        {playing ? <Pause className="size-8 fill-current" /> : <Play className="ml-1 size-8 fill-current" />}
+                      </motion.span>
+                    </AnimatePresence>
+                  </motion.button>
+                </div>
                 {!info.infinite ? (
                   <IconButton label="Adelantar 15 segundos" variant="plain" size="lg" onClick={() => skip(15)}>
                     <SkipIcon dir="fwd" />
@@ -243,7 +270,7 @@ function Pill({
   return (
     <motion.button
       type="button"
-      whileTap={{ scale: 0.94 }}
+      {...press}
       onClick={() => {
         haptic(5);
         onClick();
@@ -289,7 +316,7 @@ function CaptionLine({ captions, position }: { captions: Caption[]; position: nu
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -4, filter: 'blur(4px)' }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[19px] leading-relaxed text-mist-50/90 [text-shadow:0_2px_18px_rgb(4_6_26/0.7)] md:text-[22px]"
+            className="text-[19px] leading-relaxed text-mist-50/90 [text-shadow:0_2px_18px_rgb(10_16_14/0.7)] md:text-[22px]"
           >
             {current.t}
           </motion.p>

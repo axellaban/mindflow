@@ -1,12 +1,12 @@
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { ELI } from '@/content/eli';
+import { EASE, EASE_BREATH } from '@/lib/motion';
 
 const INHALE = 4;
 const EXHALE = 6;
 /** Breaths before moving on by itself. */
 const BREATHS = 2;
-const EASE_BREATH = [0.45, 0, 0.55, 1] as const;
 
 /**
  * The very first screen: two slow breaths, nothing else. The scene behind it
@@ -50,8 +50,8 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
       className="absolute inset-0 z-20 cursor-pointer outline-none focus-visible:outline-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 1.1, ease: [0.22, 1, 0.36, 1] } }}
-      transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+      exit={{ opacity: 0, transition: { duration: 1.1, ease: EASE } }}
+      transition={{ duration: 1.6, ease: EASE }}
     >
       {/* light that breathes with the words, centered on the sun */}
       <motion.span
@@ -71,7 +71,7 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
             initial={{ opacity: 0, y: 8, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -8, filter: 'blur(8px)' }}
-            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.5, ease: EASE }}
           >
             {word}
           </motion.span>

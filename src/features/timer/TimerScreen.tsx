@@ -8,6 +8,7 @@ import { Chip, ProgressRing } from '@/components/ui/controls';
 import { BED_BY_ID } from '@/content/sounds';
 import type { BedId } from '@/content/types';
 import { haptic, keepAwake } from '@/lib/device';
+import { SPRING_PRESS, breath } from '@/lib/motion';
 import { formatClock } from '@/lib/time';
 import { type BellId, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
@@ -267,7 +268,7 @@ function Running({
           <motion.div
             className="absolute inset-[-40px] rounded-full bg-blush-400/10 blur-2xl"
             animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.9, 0.5] }}
-            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+            transition={breath}
           />
           <ProgressRing value={elapsed / total} size={290} stroke={2.5}>
             <div className="text-center">
@@ -280,7 +281,8 @@ function Running({
       <div className="pb-6">
         <motion.button
           type="button"
-          whileTap={{ scale: 0.92 }}
+          whileTap={{ scale: 0.94 }}
+          transition={SPRING_PRESS}
           onClick={() => {
             haptic(8);
             setPaused((p) => !p);

@@ -6,6 +6,7 @@ import { goalsPhrase } from '@/content/goals';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { EliEventCard } from '@/features/eli/EliHomeCard';
 import { EliPrimaryLink, EliSecondaryLink, InstagramIcon, WhatsAppIcon, useEliLinks } from '@/features/eli/actions';
+import { EASE_BREATH, breath } from '@/lib/motion';
 import { useAppStore } from '@/store/app';
 import { PageHeader } from './PageHeader';
 
@@ -102,7 +103,7 @@ export function EliPage() {
         <ol className="mt-5 space-y-4">
           {ELI.steps.map((s, i) => (
             <li key={s.title} className="flex gap-4">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-gold-300 font-display text-[17px] text-ink-900">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-gold-300 font-display text-[18px] font-semibold text-ink-900">
                 {i + 1}
               </span>
               <span className="pt-1">
@@ -120,7 +121,7 @@ export function EliPage() {
           {ELI.testimonials.map((t) => (
             <figure key={t} className="glass w-[78%] shrink-0 rounded-3xl p-5 md:w-auto">
               <Quote className="size-5 text-blush-300" />
-              <blockquote className="mt-3 font-display text-[19px] leading-snug italic">“{t}”</blockquote>
+              <blockquote className="mt-3 font-display text-[21px] leading-snug italic">“{t}”</blockquote>
               <figcaption className="mt-3 text-[12.5px] text-3">Participante de un encuentro con Eli</figcaption>
             </figure>
           ))}
@@ -162,7 +163,7 @@ export function EliPage() {
         <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-16 size-64 rounded-full bg-blush-400/25 blur-3xl" />
         <div className="relative flex items-center gap-3">
           <EliAvatar size={44} />
-          <p className="font-display text-[18px] text-blush-300 italic">Eli</p>
+          <p className="font-display text-[20px] font-semibold text-blush-300 italic">Eli</p>
         </div>
         <h2 className="relative mt-4 font-display text-[30px] leading-tight">¿Lista para empezar?</h2>
         <p className="relative mt-2 max-w-md text-[15.5px] leading-relaxed text-2">
@@ -195,7 +196,7 @@ function Portrait() {
         aria-hidden="true"
         className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.42),rgb(246_222_175/0.16),transparent)] blur-2xl"
         animate={reduced ? undefined : { opacity: [0.6, 1, 0.6], scale: [0.96, 1.04, 0.96] }}
-        transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+        transition={breath}
       />
       <img
         src={ELI.photo}
@@ -208,8 +209,8 @@ function Portrait() {
           aria-hidden="true"
           className="absolute rounded-[60%_40%_60%_40%] bg-gradient-to-br from-mist-50 to-blush-400"
           style={{ left: p.left, top: p.top, width: p.size, height: p.size * 0.7 }}
-          animate={reduced ? undefined : { y: [0, -12, 0], rotate: [0, 35, 0], opacity: [0.55, 0.95, 0.55] }}
-          transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}
+          animate={reduced ? undefined : { y: [0, -10, 0], rotate: [0, 18, 0], opacity: [0.5, 0.9, 0.5] }}
+          transition={{ duration: p.dur * 1.4, delay: p.delay, repeat: Infinity, ease: EASE_BREATH }}
         />
       ))}
     </motion.div>

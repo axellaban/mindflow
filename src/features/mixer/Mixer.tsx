@@ -12,6 +12,7 @@ import { MIX_PRESETS, SOUNDS, SOUND_BY_ID } from '@/content/sounds';
 import type { ArtSpec, Mix, SoundId } from '@/content/types';
 import { haptic } from '@/lib/device';
 import { cn } from '@/lib/utils';
+import { SPRING_PRESS } from '@/lib/motion';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
@@ -144,7 +145,8 @@ export function Mixer() {
               </IconButton>
               <motion.button
                 type="button"
-                whileTap={{ scale: 0.9 }}
+                whileTap={{ scale: 0.94 }}
+                transition={SPRING_PRESS}
                 onClick={() => {
                   haptic(8);
                   toggle();
@@ -219,6 +221,7 @@ export function Mixer() {
               key={p.id}
               type="button"
               whileTap={{ scale: 0.97 }}
+              transition={SPRING_PRESS}
               onClick={() => {
                 haptic(8);
                 playMix({ id: p.id, name: p.name, mix: p.mix, art: p.art });

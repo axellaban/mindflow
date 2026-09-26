@@ -1,6 +1,7 @@
 import { type HTMLMotionProps, motion } from 'motion/react';
 import type { ReactNode } from 'react';
 import { haptic } from '@/lib/device';
+import { SPRING_PRESS } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'soft';
@@ -31,8 +32,8 @@ export function Button({ variant = 'primary', size = 'md', icon, children, class
   return (
     <motion.button
       type="button"
-      whileTap={{ scale: 0.985 }}
-      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+      whileTap={{ scale: 0.98 }}
+      transition={SPRING_PRESS}
       className={cn(
         'inline-flex items-center justify-center rounded-full font-semibold tracking-[-0.005em] transition-colors duration-300 disabled:pointer-events-none disabled:opacity-40',
         VARIANTS[variant],
@@ -67,8 +68,8 @@ export function IconButton({ label, children, size = 'md', variant = 'glass', cl
       type="button"
       aria-label={label}
       title={label}
-      whileTap={{ scale: 0.9 }}
-      transition={{ type: 'spring', stiffness: 520, damping: 28 }}
+      whileTap={{ scale: 0.93 }}
+      transition={SPRING_PRESS}
       className={cn(
         'inline-flex shrink-0 items-center justify-center rounded-full transition-colors duration-300',
         ICON_SIZES[size],

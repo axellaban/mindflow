@@ -9,6 +9,7 @@ import { Button, IconButton } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/controls';
 import { BREATH_BY_ID, BREATH_PATTERNS, type BreathPattern, type PhaseKind, cycleSeconds } from '@/content/breathing';
 import { haptic, keepAwake } from '@/lib/device';
+import { EASE, breath, press } from '@/lib/motion';
 import { formatClock } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
@@ -96,7 +97,7 @@ const fade = {
   initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -10 },
-  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  transition: { duration: 0.8, ease: EASE },
 };
 
 function Setup({
@@ -143,7 +144,7 @@ function Setup({
               <motion.button
                 key={p.id}
                 type="button"
-                whileTap={{ scale: 0.98 }}
+                {...press}
                 onClick={() => {
                   haptic(6);
                   onPattern(p.id);
@@ -225,7 +226,7 @@ function Runner({
   const [phaseLeft, setPhaseLeft] = useState(pattern.phases[0]!.seconds);
   const [elapsed, setElapsed] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [countIn, setCountIn] = useState(3);
+  const [countIn, setCountIn] = useState(2);
   const toneRef = useRef<BreathTone | null>(null);
   const state = useRef({ elapsed: 0, phase: 0, phaseT: 0, from: MIN_SCALE, cycles: 0, last: 0 });
   const palette = PALETTES[pattern.palette];
@@ -241,10 +242,10 @@ function Runner({
     [logPractice, pattern],
   );
 
-  // count-in 3·2·1
+  // a short moment to settle before the first breath
   useEffect(() => {
     if (countIn <= 0) return;
-    const t = setTimeout(() => setCountIn((c) => c - 1), 900);
+    const t = setTimeout(() => setCountIn((c) => c - 1), 1400);
     return () => clearTimeout(t);
   }, [countIn]);
 
@@ -343,7 +344,7 @@ function Runner({
         >
           <X className="size-5" />
         </IconButton>
-        <p className="font-display text-[15px] text-2 tabular-nums">{formatClock(remaining)}</p>
+        <p className="font-display text-[17px] font-semibold text-2 tabular-nums">{formatClock(remaining)}</p>
         <IconButton label={sound ? 'Silenciar guía' : 'Activar guía'} onClick={() => onSound(!sound)}>
           {sound ? <Volume2 className="size-5" /> : <VolumeX className="size-5" />}
         </IconButton>
@@ -387,21 +388,22 @@ function Runner({
           <AnimatePresence mode="wait">
             {countIn > 0 ? (
               <motion.span
-                key={`c${countIn}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1 }}
-                className="font-display text-[56px] text-ink-900/80"
+                key="settle"
+                initial={{ opacity: 0, filter: 'blur(4px)' }}
+                animate={{ opacity: 1, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, filter: 'blur(4px)' }}
+                transition={{ duration: 0.8, ease: EASE }}
+                className="font-display text-[24px] text-ink-900/80"
               >
-                {countIn}
+                Acomodate…
               </motion.span>
             ) : (
               <motion.div
                 key={`${phaseIdx}-${phase.label}`}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.45 }}
+                initial={{ opacity: 0, y: 6, filter: 'blur(3px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, y: -6, filter: 'blur(3px)' }}
+                transition={{ duration: 0.55, ease: EASE }}
                 className="flex flex-col items-center"
               >
                 <span className="font-display text-[30px] leading-none text-ink-900/85">{phase.label}</span>
@@ -418,7 +420,7 @@ function Runner({
         </p>
         <motion.button
           type="button"
-          whileTap={{ scale: 0.92 }}
+          {...press}
           onClick={() => {
             haptic(8);
             setPaused((p) => !p);
@@ -457,7 +459,7 @@ function Done({
         className="mb-8 size-28 rounded-full"
         style={{ background: `radial-gradient(circle at 34% 28%, #fff, ${PALETTES[pattern.palette].accent[1]} 60%, ${PALETTES[pattern.palette].accent[2]})` }}
         animate={{ scale: [1, 1.08, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        transition={breath}
       />
       <p className="text-[13px] font-bold tracking-[0.16em] text-2 uppercase">Práctica completada</p>
       <h2 className="mt-2 font-display text-[36px] leading-tight">{line}</h2>

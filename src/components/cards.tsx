@@ -10,10 +10,11 @@ import type { Session } from '@/content/types';
 import { haptic } from '@/lib/device';
 import { type ProgramProgress, useCompletedSessions } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
+import { SPRING_PRESS, press } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { usePlayer } from '@/store/player';
 
-const tap = { whileTap: { scale: 0.975 }, transition: { type: 'spring' as const, stiffness: 420, damping: 30 } };
+const tap = press;
 
 export function Rail({ children, className }: { children: ReactNode; className?: string }) {
   return (
@@ -184,7 +185,8 @@ export function ContinueCard({ progress }: { progress: ProgramProgress }) {
       </Link>
       <motion.button
         type="button"
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: 0.94 }}
+        transition={SPRING_PRESS}
         aria-label={`Reproducir ${program.unit.toLowerCase()} ${nextDay}`}
         onClick={() => {
           haptic(10);

@@ -56,7 +56,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,jpg,woff2}'],
         // Spanish only needs the latin subsets; social image isn't needed offline.
-        globIgnores: ['**/*vietnamese*', '**/*latin-ext*', 'icons/og.png'],
+        globIgnores: ['**/*vietnamese*', '**/*latin-ext*', '**/*cyrillic*', 'icons/og.png'],
         navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/audio\//, /^\/captions\//],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
