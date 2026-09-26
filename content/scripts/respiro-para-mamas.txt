@@ -4,7 +4,7 @@ target: 5:00
 bells: start,end
 ---
 Hola. Esta es una pausa corta para ti, mamá.
-Sabemos que el tiempo no sobra. Quizás estás escuchando esto mientras duermen, mientras juegan en la otra habitación, o encerrada cinco minutos en el baño. Está bien. Cinco minutos alcanzan.
+Sabemos que tienes poco tiempo. Quizás estás escuchando esto mientras duermen, mientras juegan en la otra habitación, o encerrada cinco minutos en el baño. Está bien. Cinco minutos alcanzan.
 
 No hace falta cerrar los ojos si necesitas estar atenta. Solo baja un poco la mirada.
 [3]
