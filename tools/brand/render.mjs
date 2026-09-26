@@ -1,9 +1,9 @@
-// Renders PWA icons + social image from tools/brand (requires `npm run dev` on :5173 and Playwright).
+// Renders PWA icons + social image from tools/brand (requires `npm run dev` on :3000 and Playwright).
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW_PATH || 'playwright');
 const out = new URL('../../public/icons/', import.meta.url).pathname;
-const base = process.env.BASE || 'http://localhost:5173/tools/brand/index.html';
+const base = process.env.BASE || 'http://localhost:3000/tools/brand/index.html';
 const jobs = [
   ['og', 1200, 630, 'og.png'],
   ['icon', 192, 192, 'icon-192.png'],

@@ -2,7 +2,7 @@
   "name": "mindflow",
   "private": true,
   "version": "1.0.0",
-  "description": "Mindfulness by Eli — web app (PWA) de meditación para mujeres: meditaciones guiadas, programas, historias para dormir, respiración y paisajes sonoros.",
+  "description": "CalmabyEli — web app (PWA) de meditación para mujeres: meditaciones guiadas, programas, historias para dormir, respiración y paisajes sonoros.",
   "license": "MIT",
   "type": "module",
   "scripts": {
