@@ -1,27 +1,17 @@
-import { useId } from 'react';
 import { cn } from '@/lib/utils';
 
-/** Lotus on a blush → peach moon. Also used by tools/brand to render the app icons. */
+/**
+ * Three-petal lotus on a sage moon. Kept flat and simple so it still reads as a
+ * 16px favicon; public/favicon.svg is the same drawing and tools/brand renders
+ * the app icons from this component.
+ */
 export function LogoMark({ className, size }: { className?: string; size?: number }) {
-  const gid = `eli-mark-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   return (
     <svg viewBox="0 0 48 48" width={size} height={size} className={cn(size == null && 'size-8', className)} aria-hidden="true">
-      <defs>
-        <linearGradient id={gid} x1="0.15" y1="0" x2="0.85" y2="1">
-          <stop offset="0" stopColor="#ecece0" />
-          <stop offset="0.5" stopColor="#d0dcc5" />
-          <stop offset="1" stopColor="#acc39f" />
-        </linearGradient>
-      </defs>
-      <circle cx="24" cy="24" r="22" fill={`url(#${gid})`} />
-      <g fill="#23332c">
-        <path d="M24 34.2c-7.6 1-13.7-1.6-16.6-6.4 5.9-1.3 11.8.6 16.6 6.4Z" fillOpacity="0.38" />
-        <path d="M24 34.2c7.6 1 13.7-1.6 16.6-6.4-5.9-1.3-11.8.6-16.6 6.4Z" fillOpacity="0.38" />
-        <path d="M24 34c-6.3-1.4-10.4-6.2-11.1-12.6 6.1 1.2 10 5.6 11.1 12.6Z" fillOpacity="0.62" />
-        <path d="M24 34c6.3-1.4 10.4-6.2 11.1-12.6-6.1 1.2-10 5.6-11.1 12.6Z" fillOpacity="0.62" />
-        <path d="M24 11.5c4.3 4.6 5.6 11.8 0 22.5-5.6-10.7-4.3-17.9 0-22.5Z" fillOpacity="0.9" />
-      </g>
-      <path d="M13.5 38.2c6.8 1.9 14.2 1.9 21 0" fill="none" stroke="#23332c" strokeOpacity="0.3" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="24" cy="24" r="24" fill="#c5d5bc" />
+      <path d="M22.6 35.5C16 34.8 11.4 30.2 10.6 22.8c6 1.3 10.2 5.5 12 12.7Z" fill="#4f6e5c" />
+      <path d="M25.4 35.5C32 34.8 36.6 30.2 37.4 22.8c-6 1.3-10.2 5.5-12 12.7Z" fill="#4f6e5c" />
+      <path d="M24 11.7c4.6 4.9 6 12.4 0 23.5-6-11.1-4.6-18.6 0-23.5Z" fill="#17231f" />
     </svg>
   );
 }
