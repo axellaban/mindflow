@@ -1,11 +1,11 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/plus-jakarta-sans/wght.css';
-@import '@fontsource-variable/fraunces/full.css';
-@import '@fontsource-variable/fraunces/full-italic.css';
+@import '@fontsource-variable/jost/wght.css';
+@import '@fontsource-variable/cormorant-garamond/wght.css';
+@import '@fontsource-variable/cormorant-garamond/wght-italic.css';
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --font-sans: 'Jost Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond Variable', ui-serif, Georgia, serif;
 
   --color-ink-950: #101916;
   --color-ink-900: #17231f;
@@ -104,7 +104,6 @@
     background: var(--color-ink-900);
     color: var(--text);
     font-family: var(--font-sans);
-    font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior-y: none;
@@ -162,20 +161,11 @@
 @layer components {
   .font-display {
     font-family: var(--font-serif);
-    font-variation-settings:
-      'SOFT' 100,
-      'WONK' 0,
-      'opsz' 72;
-    letter-spacing: -0.015em;
-  }
-
-  .font-display-sm {
-    font-family: var(--font-serif);
-    font-variation-settings:
-      'SOFT' 100,
-      'WONK' 0,
-      'opsz' 24;
-    letter-spacing: -0.01em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    /* Cormorant defaults to old-style figures; clocks and stats need them level.
+       A feature setting (not font-variant-numeric) so tabular-nums can still combine with it. */
+    font-feature-settings: 'lnum' 1;
   }
 
   .glass {

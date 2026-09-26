@@ -363,7 +363,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.1, ease: EASE }}
         />
-        <div className="absolute -right-4 -bottom-3 rotate-[4deg] rounded-full bg-mist-50 px-3.5 py-1.5 font-display text-[17px] text-ink-900 italic shadow-lg">
+        <div className="absolute -right-4 -bottom-3 rotate-[4deg] rounded-full bg-mist-50 px-3.5 py-1.5 font-display text-[19px] font-semibold text-ink-900 italic shadow-lg">
           Hola, soy Eli
         </div>
       </div>

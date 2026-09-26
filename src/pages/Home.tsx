@@ -98,7 +98,7 @@ export function Home() {
         <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
           <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="CalmabyEli">
             <LogoMark className="size-8" />
-            <span className="font-display text-[17px] leading-none tracking-[-0.01em] text-mist-50/95 max-[379px]:hidden">
+            <span className="font-display text-[20px] leading-none font-semibold tracking-[-0.005em] text-mist-50/95 max-[379px]:hidden">
               Calma<span className="text-blush-300 italic">byEli</span>
             </span>
           </Link>
@@ -255,7 +255,7 @@ function Tool({ to, icon, label, onClick }: { to?: string; icon: ReactNode; labe
       className="glass flex flex-col items-center gap-2 rounded-3xl px-1 py-4 transition-colors hover:bg-white/10"
     >
       <span className="text-mist-50/90">{icon}</span>
-      <span className="text-[12.5px] font-semibold">{label}</span>
+      <span className="text-[11.5px] font-medium min-[380px]:text-[12px]">{label}</span>
     </motion.button>
   );
 }

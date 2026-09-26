@@ -106,7 +106,7 @@ export function EliInvite({
         </div>
       </div>
       <div className="relative mt-3 text-[15px] leading-relaxed text-2">{body}</div>
-      {signature && <p className="relative mt-2 font-display text-[18px] text-blush-300 italic">Eli</p>}
+      {signature && <p className="relative mt-2 font-display text-[20px] font-semibold text-blush-300 italic">Eli</p>}
 
       <div className="relative mt-4 flex flex-wrap items-center gap-x-1 gap-y-2">
         {lead === 'book' ? [book, chatSecondary] : [chatPrimary, bookSecondary]}

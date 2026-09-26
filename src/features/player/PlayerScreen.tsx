@@ -148,7 +148,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
               {!info.infinite ? (
                 <Scrubber position={position} duration={duration} onSeek={seek} />
               ) : (
-                <p className="mb-2 text-center font-display text-[15px] text-2 tabular-nums">{formatClock(position)}</p>
+                <p className="mb-2 text-center font-display text-[17px] font-semibold text-2 tabular-nums">{formatClock(position)}</p>
               )}
 
               <div className="mt-4 flex items-center justify-center gap-8">

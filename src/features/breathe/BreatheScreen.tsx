@@ -344,7 +344,7 @@ function Runner({
         >
           <X className="size-5" />
         </IconButton>
-        <p className="font-display text-[15px] text-2 tabular-nums">{formatClock(remaining)}</p>
+        <p className="font-display text-[17px] font-semibold text-2 tabular-nums">{formatClock(remaining)}</p>
         <IconButton label={sound ? 'Silenciar guía' : 'Activar guía'} onClick={() => onSound(!sound)}>
           {sound ? <Volume2 className="size-5" /> : <VolumeX className="size-5" />}
         </IconButton>
