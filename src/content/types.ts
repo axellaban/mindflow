@@ -17,7 +17,8 @@ export type PaletteId =
   | 'plum'
   | 'rose'
   | 'sage'
-  | 'calma';
+  | 'calma'
+  | 'playa';
 
 export type Motif =
   | 'mountains'
@@ -39,7 +40,8 @@ export type Motif =
   | 'cabin'
   | 'window'
   | 'bamboo'
-  | 'path';
+  | 'path'
+  | 'beach';
 
 export interface ArtSpec {
   palette: PaletteId;

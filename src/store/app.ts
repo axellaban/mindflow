@@ -132,7 +132,7 @@ const DEFAULTS: Data = {
     captions: false,
     haptics: true,
     keepAwake: true,
-    sceneId: 'calma',
+    sceneId: 'playa',
     sceneSound: false,
     reminderTime: null,
     sleepFadeMinutes: 20,
@@ -311,12 +311,16 @@ export const useAppStore = create<AppState>()(
     },
     {
       name: STORAGE_KEY,
-      version: 2,
-      // v2: the default home scene went from the pink "jardin" to "calma". Almost everyone on
-      // "jardin" just kept the old default (a deliberate pick can't be told apart), so move them.
+      version: 3,
+      // The default home scene went from the pink "jardin" (v1) to the green lake "calma" (v2) to the
+      // beach "playa" (v3). Almost everyone on an old default just kept it (a deliberate pick can't be
+      // told apart), so move them to the current one.
       migrate: (persisted, version) => {
         const s = (persisted ?? {}) as Partial<Data>;
-        if (version < 2 && s.settings?.sceneId === 'jardin') s.settings = { ...s.settings, sceneId: 'calma' };
+        const scene = s.settings?.sceneId;
+        if (s.settings && ((version < 2 && scene === 'jardin') || (version < 3 && scene === 'calma'))) {
+          s.settings = { ...s.settings, sceneId: 'playa' };
+        }
         return s as Data;
       },
       storage: createJSONStorage(() => localStorage),

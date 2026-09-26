@@ -49,7 +49,7 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
           <motion.path
             d="M14 27 L23 36 L39 18"
             fill="none"
-            stroke="#f4f1e9"
+            stroke="#f7f1e6"
             strokeWidth="3.5"
             strokeLinecap="round"
             strokeLinejoin="round"

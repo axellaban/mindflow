@@ -105,6 +105,72 @@ function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [n
   return <g>{out}</g>;
 }
 
+const f1 = (n: number) => n.toFixed(1);
+
+/**
+ * One palm frond: its spine leaves the crown at angle `a` and bends down under
+ * its own weight (g); the blade is widest near the base and hangs below the spine.
+ */
+function frond(cx: number, cy: number, a: number, len: number, g: number, t: number): string {
+  const upper: string[] = [];
+  const lower: string[] = [];
+  const steps = 18;
+  for (let i = 0; i <= steps; i++) {
+    const u = i / steps;
+    const x = cx + Math.cos(a) * len * u;
+    const y = cy + Math.sin(a) * len * u + g * len * u * u;
+    const dx = Math.cos(a) * len;
+    const dy = Math.sin(a) * len + 2 * g * len * u;
+    const d = Math.hypot(dx, dy) || 1;
+    let nx = -dy / d;
+    let ny = dx / d;
+    if (ny < 0) {
+      nx = -nx;
+      ny = -ny;
+    }
+    const w = t * 2.4 * Math.pow(u, 0.35) * Math.pow(1 - u, 0.85);
+    lower.push(`${f1(x + nx * w)} ${f1(y + ny * w)}`);
+    upper.push(`${f1(x - nx * w * 0.35)} ${f1(y - ny * w * 0.35)}`);
+  }
+  return `M ${upper.join(' L ')} L ${lower.reverse().join(' L ')} Z`;
+}
+
+/**
+ * A palm silhouette: a slender trunk curving from (bx, by) up to the crown at
+ * (tx, ty), and a fountain of fronds that can sway gently around the crown.
+ */
+function palm(bx: number, by: number, tx: number, ty: number, size: number, color: string, key: string, sway: boolean, period = 7): ReactNode {
+  const qx = bx + (tx - bx) * 0.12;
+  const qy = by - (by - ty) * 0.6;
+  const w0 = size * 0.04;
+  const w1 = size * 0.024;
+  const trunk = `M ${f1(bx - w0)} ${f1(by)} Q ${f1(qx - w0)} ${f1(qy)} ${f1(tx - w1)} ${f1(ty)} L ${f1(tx + w1)} ${f1(ty)} Q ${f1(qx + w0)} ${f1(qy)} ${f1(bx + w0)} ${f1(by)} Z`;
+  // [angle°, length, droop]: a fan that rises and falls on both sides, plus two hanging fronds
+  const spec: Array<[number, number, number]> = [
+    [-162, 0.62, 0.95],
+    [-136, 0.56, 0.85],
+    [-106, 0.5, 0.7],
+    [-74, 0.5, 0.7],
+    [-44, 0.56, 0.85],
+    [-18, 0.62, 0.95],
+    [150, 0.42, 0.55],
+    [28, 0.44, 0.55],
+  ];
+  const d = spec.map(([deg, l, g]) => frond(tx, ty, (deg * Math.PI) / 180, size * l, g, size * 0.05)).join(' ');
+  return (
+    <g key={key}>
+      <path d={trunk} fill={color} />
+      <g
+        className={sway ? 'palm-sway' : undefined}
+        style={sway ? { transformOrigin: `${f1(tx)}px ${f1(ty)}px`, animationDuration: `${period}s` } : undefined}
+      >
+        <path d={d} fill={color} />
+        <circle cx={f1(tx)} cy={f1(ty + size * 0.015)} r={f1(size * 0.028)} fill={color} />
+      </g>
+    </g>
+  );
+}
+
 export interface LandscapeProps {
   spec: ArtSpec;
   ratio?: number; // width / height
@@ -178,6 +244,8 @@ export function horizonFor(m: Motif): number {
       return 0.58;
     case 'lake':
       return 0.56;
+    case 'beach':
+      return 0.5;
     case 'clouds':
     case 'orb':
       return 0.8;
@@ -512,6 +580,60 @@ function drawMotif(
               opacity={0.16 - i * 0.025}
             />
           ))}
+        </g>
+      );
+    }
+    case 'beach': {
+      const scene = detail === 'scene';
+      const sunY = horizon - h * 0.22;
+      const shoreY = horizon + (h - horizon) * 0.4;
+      const shore = (dy: number) => `M -10 ${f1(shoreY - 8 + dy)} C ${f1(W * 0.25)} ${f1(shoreY - 16 + dy)} ${f1(W * 0.6)} ${f1(shoreY + 6 + dy)} ${W + 10} ${f1(shoreY + 14 + dy)}`;
+      const islandX = W * (0.62 + rnd() * 0.12);
+      // palms frame the view; on wide or short views they step back so the middle stays open
+      const palmSize = Math.min(W * 0.42, h * 0.26);
+      return (
+        <g>
+          <defs>
+            <linearGradient id={id('sea')} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor={mixHex(p.water, p.sky[2], 0.35)} />
+              <stop offset="0.45" stopColor={p.water} />
+              <stop offset="1" stopColor={mixHex(p.water, '#9fe0d6', 0.5)} />
+            </linearGradient>
+            {/* sand keeps a hint of the palette's light but always reads as sand */}
+            <linearGradient id={id('sand')} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor={mixHex(p.layers[2], '#d9bf99', 0.6)} />
+              <stop offset="0.12" stopColor={mixHex(p.layers[1], '#f1dcbc', 0.6)} />
+              <stop offset="1" stopColor={mixHex(mixHex(p.layers[1], p.layers[2], 0.55), '#e2c9a4', 0.6)} />
+            </linearGradient>
+          </defs>
+          {celestial(p, W / 2, sunY, Math.min(W * 0.055, h * 0.07), id, false)}
+          <rect y={horizon} width={W} height={h - horizon} fill={`url(#${id('sea')})`} />
+          {/* a low island far away */}
+          <path
+            d={`M ${f1(islandX - W * 0.2)} ${f1(horizon + 0.5)} Q ${f1(islandX - W * 0.08)} ${f1(horizon - h * 0.022)} ${f1(islandX)} ${f1(horizon - h * 0.018)} Q ${f1(islandX + W * 0.1)} ${f1(horizon - h * 0.014)} ${f1(islandX + W * 0.2)} ${f1(horizon + 0.5)} Z`}
+            fill={p.layers[0]}
+            opacity="0.75"
+          />
+          {/* the sun's path on the water */}
+          <ellipse cx={W / 2} cy={f1(horizon + (shoreY - horizon) * 0.45)} rx={W * 0.045} ry={f1((shoreY - horizon) * 0.5)} fill={p.celestial} opacity="0.2" filter={`url(#${id('soft')})`} />
+          {Array.from({ length: 7 }, (_, i) => {
+            const y = horizon + (shoreY - horizon) * (0.1 + i * 0.12);
+            const len = W * (0.05 + rnd() * 0.1) * (1 + i * 0.15);
+            return <rect key={i} x={f1(W / 2 - len / 2 + (rnd() - 0.5) * 24)} y={f1(y)} width={f1(len)} height="1.2" rx="0.6" fill={p.celestial} opacity={f1(0.12 + rnd() * 0.14)} />;
+          })}
+          {/* the incoming wave and the shore */}
+          {/* the animated groups fade in and out; the lines keep their own, lower opacity inside them */}
+          <g className={scene ? 'tide' : undefined} style={scene ? { animationDuration: '6s' } : undefined}>
+            <path d={shore(-(shoreY - horizon) * 0.12)} fill="none" stroke={p.accent[0]} strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
+          </g>
+          <path d={`${shore(0)} L ${W + 10} ${h + 2} L -10 ${h + 2} Z`} fill={`url(#${id('sand')})`} />
+          <g className={scene ? 'tide' : undefined}>
+            <path d={shore(0)} fill="none" stroke={p.accent[0]} strokeWidth="2.2" strokeLinecap="round" opacity="0.8" />
+          </g>
+          {h > W * 1.6
+            ? palm(W * 0.97, h * 1.02, W * 0.87, horizon + h * 0.14, palmSize * 0.66, p.layers[3], id('p2'), scene, 8.5)
+            : palm(W * 1.06, h * 1.02, W * 0.95, horizon + h * 0.12, palmSize * 0.66, p.layers[3], id('p2'), scene, 8.5)}
+          {palm(W * 0.06, h * 1.02, W * (h > W * 1.6 ? 0.22 : 0.15), horizon - h * 0.1, palmSize, p.layers[3], id('p1'), scene, 7)}
         </g>
       );
     }

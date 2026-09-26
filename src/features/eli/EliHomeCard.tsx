@@ -48,7 +48,7 @@ export function EliEventCard({ event, placement = 'home', dismissible = true }: 
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(150deg,rgb(197_213_188/0.18),rgb(246_222_175/0.09)_50%,rgb(207_226_213/0.08))] p-5"
+      className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(150deg,rgb(168_220_213/0.18),rgb(246_222_175/0.09)_50%,rgb(195_230_223/0.08))] p-5"
       aria-label={event.kind}
     >
       <motion.div

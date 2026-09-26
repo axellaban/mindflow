@@ -15,7 +15,7 @@ function Icon({ size, scale }: { size: number; scale: number }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#17231f',
+        background: '#0f2330',
       }}
     >
       <LogoMark size={size * scale} />
@@ -25,20 +25,20 @@ function Icon({ size, scale }: { size: number; scale: number }) {
 
 function Wordmark() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#f4f1e9' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#f7f1e6' }}>
       <LogoMark size={72} />
       <div className="font-display" style={{ fontSize: 108, lineHeight: 1, letterSpacing: '-0.02em', marginTop: 36 }}>
-        Calma<span style={{ fontStyle: 'italic', color: '#c5d5bc' }}>byEli</span>
+        Calma<span style={{ fontStyle: 'italic', color: '#a8dcd5' }}>byEli</span>
       </div>
-      <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, color: 'rgba(244,241,233,0.62)', marginTop: 28 }}>Un momento para vos.</div>
+      <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, color: 'rgba(247,241,230,0.62)', marginTop: 28 }}>Un momento para vos.</div>
     </div>
   );
 }
 
-/** Deep green with the first light of dawn coming up behind the name. */
+/** Deep sea with the first light of dawn coming up behind the name. */
 function OG() {
   return (
-    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: '#17231f' }}>
+    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: '#0f2330' }}>
       <div
         style={{
           position: 'absolute',
@@ -47,7 +47,7 @@ function OG() {
           width: 1500,
           height: 1000,
           transform: 'translate(-50%, -50%)',
-          background: 'radial-gradient(closest-side, rgba(214,222,194,0.17), rgba(172,195,159,0.07) 45%, rgba(23,35,31,0) 72%)',
+          background: 'radial-gradient(closest-side, rgba(247,220,192,0.16), rgba(124,197,191,0.08) 45%, rgba(15,35,48,0) 72%)',
         }}
       />
       <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -114,7 +114,7 @@ export function Onboarding() {
           className="absolute inset-0 transition-[opacity,filter] duration-[1600ms] ease-out"
           style={intro ? undefined : { opacity: 0.3, filter: 'blur(20px)' }}
         >
-          <Scene scene={SCENE_BY_ID.calma} paused={!intro} />
+          <Scene scene={SCENE_BY_ID.playa} paused={!intro} />
         </div>
       </motion.div>
       <div className={cn('pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/10 via-transparent to-ink-950/45 transition-opacity duration-[1600ms]', !intro && 'opacity-0')} />
@@ -351,7 +351,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
       <div className="relative mx-auto w-32 shrink-0 sm:w-40">
         <motion.div
           aria-hidden="true"
-          className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.4),transparent)] blur-xl"
+          className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(168_220_213/0.4),transparent)] blur-xl"
           animate={{ opacity: [0.6, 1, 0.6], scale: [0.97, 1.04, 0.97] }}
           transition={breath}
         />

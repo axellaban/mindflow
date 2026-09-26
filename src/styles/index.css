@@ -7,26 +7,26 @@
   --font-sans: 'Jost Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Cormorant Garamond Variable', ui-serif, Georgia, serif;
 
-  --color-ink-950: #101916;
-  --color-ink-900: #17231f;
-  --color-ink-850: #1c2a25;
-  --color-ink-800: #23332c;
-  --color-ink-700: #31453b;
-  --color-ink-600: #496052;
-  --color-ink-500: #64796a;
+  --color-ink-950: #0a1a22;
+  --color-ink-900: #0f2330;
+  --color-ink-850: #132a39;
+  --color-ink-800: #183243;
+  --color-ink-700: #234557;
+  --color-ink-600: #3a6072;
+  --color-ink-500: #597e8f;
 
-  --color-mist-50: #f4f1e9;
-  --color-mist-100: #e8e5dc;
-  --color-mist-200: #d4d8cd;
+  --color-mist-50: #f7f1e6;
+  --color-mist-100: #ece4d6;
+  --color-mist-200: #d8d5ca;
 
-  --color-blush-300: #c5d5bc;
-  --color-blush-400: #acc39f;
-  --color-blush-500: #8aa77d;
+  --color-blush-300: #a8dcd5;
+  --color-blush-400: #7cc5bf;
+  --color-blush-500: #4fa4a2;
   --color-peach-300: #ffd6bd;
   --color-peach-400: #ffbf99;
-  --color-sage-300: #cfe2d5;
-  --color-sage-400: #a8c5b2;
-  --color-sage-500: #8da396;
+  --color-sage-300: #c3e6df;
+  --color-sage-400: #94cdc5;
+  --color-sage-500: #6aa7a1;
   --color-rose-300: #ffc2d1;
   --color-gold-300: #f6deaf;
   --color-lavender-300: #dccbf5;
@@ -83,9 +83,9 @@
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
-    --text: #f4f1e9;
-    --text-2: #c8d0c6;
-    --text-3: #a5b3a9;
+    --text: #f7f1e6;
+    --text-2: #cfd9da;
+    --text-3: #a3b7bd;
     --line: rgb(255 255 255 / 0.08);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
@@ -116,7 +116,7 @@
   }
 
   ::selection {
-    background: rgb(172 195 159 / 0.35);
+    background: rgb(124 197 191 / 0.35);
   }
 
   button,
@@ -127,7 +127,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #c5d5bc;
+    outline: 2px solid #a8dcd5;
     outline-offset: 3px;
     border-radius: 12px;
   }
@@ -158,7 +158,39 @@
   }
 }
 
+/* Beach scene: fronds sway around their crown and the waterline comes and goes. */
+@keyframes palm-sway {
+  from {
+    transform: rotate(-1.4deg);
+  }
+  to {
+    transform: rotate(1.6deg);
+  }
+}
+@keyframes tide {
+  from {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  to {
+    transform: translateY(3px);
+    opacity: 0.9;
+  }
+}
+
 @layer components {
+  .palm-sway {
+    transform-box: view-box;
+    animation: palm-sway 7s ease-in-out infinite alternate;
+  }
+  .tide {
+    animation: tide 5s ease-in-out infinite alternate;
+  }
+  [data-paused='true'] .palm-sway,
+  [data-paused='true'] .tide {
+    animation-play-state: paused;
+  }
+
   .font-display {
     font-family: var(--font-serif);
     font-weight: 500;
@@ -176,7 +208,7 @@
   }
 
   .glass-strong {
-    background: rgb(23 35 31 / 0.94);
+    background: rgb(15 35 48 / 0.94);
     border: 1px solid rgb(255 255 255 / 0.1);
     backdrop-filter: blur(28px) saturate(160%);
     -webkit-backdrop-filter: blur(28px) saturate(160%);
@@ -230,7 +262,7 @@
     cursor: pointer;
     --pct: 50%;
     --track: rgb(255 255 255 / 0.14);
-    --fill: rgb(244 241 233 / 0.92);
+    --fill: rgb(247 241 230 / 0.92);
   }
   .range::-webkit-slider-runnable-track {
     height: 4px;

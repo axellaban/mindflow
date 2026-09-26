@@ -52,7 +52,7 @@ export function BreatheScreen() {
       <motion.div
         className="absolute inset-0"
         animate={{
-          background: `radial-gradient(120% 80% at 50% 40%, ${rgba(palette.sky[1], 0.95)} 0%, ${rgba(palette.sky[0], 1)} 55%, #101916 100%)`,
+          background: `radial-gradient(120% 80% at 50% 40%, ${rgba(palette.sky[1], 0.95)} 0%, ${rgba(palette.sky[0], 1)} 55%, #0a1a22 100%)`,
         }}
         transition={{ duration: 1.2 }}
       />

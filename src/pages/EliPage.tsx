@@ -158,7 +158,7 @@ export function EliPage() {
 
       <motion.section
         {...rise}
-        className="relative mx-5 mt-14 overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(140deg,rgb(197_213_188/0.2),rgb(246_222_175/0.09)_50%,rgb(207_226_213/0.1))] p-6 md:mx-0 md:p-9"
+        className="relative mx-5 mt-14 overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(140deg,rgb(168_220_213/0.2),rgb(246_222_175/0.09)_50%,rgb(195_230_223/0.1))] p-6 md:mx-0 md:p-9"
       >
         <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-16 size-64 rounded-full bg-blush-400/25 blur-3xl" />
         <div className="relative flex items-center gap-3">
@@ -194,7 +194,7 @@ function Portrait() {
     >
       <motion.div
         aria-hidden="true"
-        className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.42),rgb(246_222_175/0.16),transparent)] blur-2xl"
+        className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(168_220_213/0.42),rgb(246_222_175/0.16),transparent)] blur-2xl"
         animate={reduced ? undefined : { opacity: [0.6, 1, 0.6], scale: [0.96, 1.04, 0.96] }}
         transition={breath}
       />
