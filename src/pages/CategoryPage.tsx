@@ -27,7 +27,7 @@ export function CategoryPage() {
     <div className="pb-12">
       <PageHeader title={cat.name} subtitle={cat.blurb} back />
       <div className="px-5 md:px-0">
-        <CoverArt spec={cat.art} ratio={2.6} rounded="rounded-[28px]" className="aspect-[2.6] w-full" />
+        <CoverArt spec={cat.art} ratio={2.6} rounded="rounded-[28px]" live className="aspect-[2.6] w-full" />
       </div>
       {program && (
         <section className="mt-9">

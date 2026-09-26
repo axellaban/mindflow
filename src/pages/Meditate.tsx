@@ -82,7 +82,7 @@ export function Meditate() {
               <div className="grid grid-cols-2 gap-3 px-5 sm:grid-cols-3 md:px-0 lg:grid-cols-4">
                 {CATEGORIES.map((c) => (
                   <Link key={c.id} to={`/tema/${c.id}`} onClick={() => haptic(5)} className="group relative block overflow-hidden rounded-[24px]">
-                    <CoverArt spec={c.art} ratio={1.5} rounded="rounded-[24px]" className="aspect-[1.5] w-full transition-transform duration-700 group-hover:scale-[1.04]" />
+                    <CoverArt spec={c.art} ratio={1.5} rounded="rounded-[24px]" live className="aspect-[1.5] w-full transition-transform duration-700 group-hover:scale-[1.04]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-3.5">
                       <p className="text-[16px] font-semibold">{c.name}</p>

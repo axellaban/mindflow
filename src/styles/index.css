@@ -161,10 +161,10 @@
 /* Beach scene: fronds sway around their crown and the waterline comes and goes. */
 @keyframes palm-sway {
   from {
-    transform: rotate(-1.4deg);
+    transform: rotate(-2deg);
   }
   to {
-    transform: rotate(1.6deg);
+    transform: rotate(2.3deg);
   }
 }
 @keyframes tide {
@@ -173,12 +173,66 @@
     opacity: 0.45;
   }
   to {
-    transform: translateY(3px);
+    transform: translateY(4px);
     opacity: 0.9;
   }
 }
 
+/* Wind bends tree rows a little from their base; swell rolls the open sea; foam washes up the sand. */
+@keyframes wind {
+  from {
+    transform: skewX(-0.9deg);
+  }
+  to {
+    transform: skewX(1.3deg);
+  }
+}
+@keyframes swell {
+  from {
+    transform: translate(-7px, 0.8px);
+  }
+  to {
+    transform: translate(7px, -0.8px);
+  }
+}
+@keyframes wash {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  45% {
+    transform: translateY(-7px);
+    opacity: 1;
+  }
+}
+/* Big covers: a slow drift so still artwork feels alive. */
+@keyframes kenburns {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(-1.5%, -1%, 0);
+  }
+}
+
 @layer components {
+  .wind {
+    transform-box: view-box;
+    animation: wind 10s ease-in-out infinite alternate;
+  }
+  .swell {
+    transform-box: view-box;
+    animation: swell 9s ease-in-out infinite alternate;
+  }
+  .wash {
+    transform-box: view-box;
+    animation: wash 8s ease-in-out infinite;
+  }
+  .kenburns {
+    animation: kenburns 26s ease-in-out infinite alternate;
+    will-change: transform;
+  }
   .palm-sway {
     transform-box: view-box;
     animation: palm-sway 7s ease-in-out infinite alternate;
@@ -187,7 +241,10 @@
     animation: tide 5s ease-in-out infinite alternate;
   }
   [data-paused='true'] .palm-sway,
-  [data-paused='true'] .tide {
+  [data-paused='true'] .tide,
+  [data-paused='true'] .wind,
+  [data-paused='true'] .swell,
+  [data-paused='true'] .wash {
     animation-play-state: paused;
   }
 

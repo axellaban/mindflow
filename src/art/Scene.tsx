@@ -3,7 +3,7 @@ import type { SceneDef } from '@/content/scenes';
 import type { ArtSpec, Motif } from '@/content/types';
 import { cn, prefersReducedMotion } from '@/lib/utils';
 import { Landscape, horizonFor } from './landscape';
-import { PALETTES, rgba } from './palettes';
+import { PALETTES, mixHex, rgba } from './palettes';
 
 const MOTIF_FOR: Record<SceneDef['layout'], Motif> = {
   lake: 'lake',
@@ -64,7 +64,7 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
   const backRef = useRef<HTMLCanvasElement>(null);
   const frontRef = useRef<HTMLCanvasElement>(null);
   const auroraRef = useRef<HTMLCanvasElement>(null);
-  useParticles(scene, horizon, paused, backRef, frontRef, auroraRef);
+  useParticles(scene, horizon, ratio, paused, backRef, frontRef, auroraRef);
 
   return (
     <div
@@ -99,16 +99,17 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
         {(scene.layout === 'forest' || scene.layout === 'valley' || scene.layout === 'lake' || scene.layout === 'snow') && (
           <Mist color={scene.layout === 'lake' ? p.sky[2] : p.layers[0]} opacity={scene.layout === 'valley' ? 0.4 : 0.26} paused={paused} />
         )}
+        {scene.layout === 'ocean' && <Mist color={p.sky[2]} opacity={0.3} paused={paused} top={`${Math.round((horizon - 0.06) * 100)}%`} height="12%" />}
       </div>
       <canvas ref={frontRef} className="pointer-events-none absolute inset-0 h-full w-full" />
     </div>
   );
 });
 
-function Mist({ color, opacity, paused }: { color: string; opacity: number; paused?: boolean }) {
+function Mist({ color, opacity, paused, top = '48%', height = '30%' }: { color: string; opacity: number; paused?: boolean; top?: string; height?: string }) {
   const playState = paused ? 'paused' : 'running';
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-[48%] h-[30%]" style={{ opacity }}>
+    <div className="pointer-events-none absolute inset-x-0" style={{ opacity, top, height }}>
       <div
         className="absolute -left-1/4 top-0 h-full w-[90%] rounded-full blur-3xl"
         style={{ background: color, animation: 'drift 38s ease-in-out infinite alternate', animationPlayState: playState }}
@@ -160,6 +161,7 @@ function glowSprite(color: string, size = 64): HTMLCanvasElement {
 function useParticles(
   scene: SceneDef,
   horizon: number,
+  ratio: number,
   paused: boolean | undefined,
   backRef: RefObject<HTMLCanvasElement | null>,
   frontRef: RefObject<HTMLCanvasElement | null>,
@@ -168,11 +170,17 @@ function useParticles(
   const pausedRef = useRef(paused);
   pausedRef.current = paused;
   const resumeRef = useRef<() => void>(() => {});
+  const rebuildRef = useRef<() => void>(() => {});
 
   // A paused scene keeps its last frame and stops the animation loop entirely.
   useEffect(() => {
     if (!paused) resumeRef.current();
   }, [paused]);
+
+  // The drawing re-renders when its proportions settle; find the sun again.
+  useEffect(() => {
+    rebuildRef.current();
+  }, [ratio]);
 
   useEffect(() => {
     const back = backRef.current;
@@ -203,6 +211,57 @@ function useParticles(
     const flySprite = glowSprite('#fff1a8');
     const petalColors = ['#ffd6df', '#ffc2d1', '#fbe4ea', '#f7b6c6', '#ffe3d6'];
     const moteSprite = glowSprite('#fff6e2');
+
+    // Sky life: clouds drift across, the sun's light breathes and throws soft rays, birds pass now and then.
+    type Cloud = { x: number; y: number; v: number; a: number; sprite: HTMLCanvasElement };
+    type Bird = { x: number; y: number; vx: number; s: number; ph: number; age: number; bob: number };
+    const calmWeather = !kinds.has('rain') && !kinds.has('snow') && scene.palette !== 'rain' && scene.palette !== 'snow';
+    const cloudsOn = scene.layout !== 'aurora' && scene.layout !== 'campfire';
+    const birdsOn = !p.night && calmWeather && ['ocean', 'lake', 'valley', 'forest'].includes(scene.layout);
+    const cloudColor = p.night ? mixHex(p.sky[1], p.sky[2], 0.4) : mixHex(p.sky[2], '#ffffff', 0.55);
+    let clouds: Cloud[] = [];
+    let birds: Bird[] = [];
+    let nextBirds = 3 + Math.random() * 5;
+    let sun: { x: number; y: number; r: number; moon: boolean } | null = null;
+    const raySprite = (() => {
+      const c = document.createElement('canvas');
+      c.width = 256;
+      c.height = 32;
+      const g = c.getContext('2d')!;
+      const gr = g.createLinearGradient(0, 0, 256, 0);
+      gr.addColorStop(0, 'rgba(255,255,255,0.9)');
+      gr.addColorStop(0.35, 'rgba(255,255,255,0.35)');
+      gr.addColorStop(1, 'rgba(255,255,255,0)');
+      g.fillStyle = gr;
+      g.beginPath();
+      g.moveTo(0, 16);
+      g.lineTo(256, 0);
+      g.lineTo(256, 32);
+      g.closePath();
+      g.fill();
+      return c;
+    })();
+    const cloudSprite = (cw: number, ch: number) => {
+      const c = document.createElement('canvas');
+      c.width = Math.max(1, Math.round(cw));
+      c.height = Math.max(1, Math.round(ch));
+      const g = c.getContext('2d')!;
+      const puffs = 6 + Math.floor(Math.random() * 4);
+      for (let i = 0; i < puffs; i++) {
+        const u = (i + 0.5) / puffs;
+        const hump = Math.sin(u * Math.PI);
+        const px = cw * (0.12 + u * 0.76) + (Math.random() - 0.5) * cw * 0.08;
+        const py = ch * 0.62 - hump * ch * 0.12;
+        const pr = ch * (0.28 + 0.3 * hump) * (0.8 + Math.random() * 0.4);
+        const gr = g.createRadialGradient(px, py, 0, px, py, pr);
+        gr.addColorStop(0, rgba(cloudColor, 0.9));
+        gr.addColorStop(0.55, rgba(cloudColor, 0.45));
+        gr.addColorStop(1, rgba(cloudColor, 0));
+        g.fillStyle = gr;
+        g.fillRect(px - pr, py - pr, pr * 2, pr * 2);
+      }
+      return c;
+    };
 
     const size = (c: HTMLCanvasElement, g: CanvasRenderingContext2D, scale: number) => {
       c.width = Math.max(1, Math.round(w * scale));
@@ -295,10 +354,37 @@ function useParticles(
             ph: Math.random() * 6.28,
           }))
         : [];
+      sun = null;
+      const orb = front.parentElement?.querySelector<SVGCircleElement>('circle[data-celestial]');
+      const svg = orb?.ownerSVGElement;
+      if (orb && svg && svg.viewBox.baseVal.width > 0) {
+        // map the circle from the drawing's viewBox (scaled with "slice") into canvas pixels
+        const vb = svg.viewBox.baseVal;
+        const k = Math.max(w / vb.width, h / vb.height);
+        sun = {
+          x: orb.cx.baseVal.value * k + (w - vb.width * k) / 2,
+          y: orb.cy.baseVal.value * k + (h - vb.height * k) / 2,
+          r: orb.r.baseVal.value * k,
+          moon: orb.dataset.celestial === 'moon',
+        };
+      }
+      clouds = cloudsOn
+        ? Array.from({ length: 3 + Math.round(w / 600) }, (_, i) => {
+            const cw = w * (0.38 + Math.random() * 0.3);
+            const ch = cw * (0.22 + Math.random() * 0.1);
+            return {
+              x: Math.random() * (w + cw) - cw,
+              y: h * horizon * (0.1 + Math.random() * 0.55) - ch / 2,
+              v: w * (0.0056 + Math.random() * 0.0084) * (i % 2 ? 1 : 0.8),
+              a: p.night ? 0.1 + Math.random() * 0.08 : 0.18 + Math.random() * 0.16,
+              sprite: cloudSprite(cw, ch),
+            };
+          })
+        : [];
       const waterEnd = scene.motif === 'beach' ? horizon + (1 - horizon) * 0.36 : 0.95;
       shimmer =
         scene.layout === 'lake' || scene.layout === 'ocean'
-          ? Array.from({ length: 36 }, () => ({
+          ? Array.from({ length: scene.layout === 'ocean' ? 48 : 36 }, () => ({
               x: w * (0.3 + Math.random() * 0.4),
               y: h * (horizon + 0.02 + Math.pow(Math.random(), 1.3) * (waterEnd - horizon)),
               r: 6 + Math.random() * 26,
@@ -317,6 +403,30 @@ function useParticles(
 
     const drawBack = (dt: number) => {
       bctx.clearRect(0, 0, w, h);
+      if (sun) {
+        const breathe = reduced ? 0.5 : 0.5 + 0.5 * Math.sin((t * Math.PI * 2) / 10);
+        bctx.globalCompositeOperation = 'lighter';
+        const reach = sun.r * (sun.moon ? 6 : 8);
+        const glow = bctx.createRadialGradient(sun.x, sun.y, sun.r * 0.8, sun.x, sun.y, reach);
+        glow.addColorStop(0, rgba(p.glow, (sun.moon ? 0.08 : 0.12) + 0.07 * breathe));
+        glow.addColorStop(1, rgba(p.glow, 0));
+        bctx.fillStyle = glow;
+        bctx.fillRect(sun.x - reach, sun.y - reach, reach * 2, reach * 2);
+        if (!sun.moon && !p.night) {
+          const len = Math.max(w, h) * 0.75;
+          const spread = sun.r * 5;
+          for (let i = 0; i < 7; i++) {
+            bctx.globalAlpha = reduced ? 0.05 : 0.035 + 0.045 * (0.5 + 0.5 * Math.sin(t * 0.3 + i * 1.7));
+            bctx.save();
+            bctx.translate(sun.x, sun.y);
+            bctx.rotate((i / 7) * Math.PI * 2 + t * 0.012 + 0.3);
+            bctx.drawImage(raySprite, 0, -spread / 2, len, spread);
+            bctx.restore();
+          }
+          bctx.globalAlpha = 1;
+        }
+        bctx.globalCompositeOperation = 'source-over';
+      }
       for (const s of stars) {
         const tw = reduced ? 1 : 0.55 + 0.45 * Math.sin(t * s.s + s.ph);
         bctx.globalAlpha = s.a * tw;
@@ -374,10 +484,58 @@ function useParticles(
         }
         actx.globalCompositeOperation = 'source-over';
       }
+      // clouds pass in front of the stars and the sun's glow
+      for (const c of clouds) {
+        if (!reduced) {
+          c.x += c.v * dt;
+          if (c.x > w) c.x = -c.sprite.width;
+        }
+        bctx.globalAlpha = c.a;
+        bctx.drawImage(c.sprite, c.x, c.y);
+      }
+      bctx.globalAlpha = 1;
     };
 
     const drawFront = (dt: number) => {
       fctx.clearRect(0, 0, w, h);
+      if (birdsOn && !reduced) {
+        nextBirds -= dt;
+        if (nextBirds <= 0) {
+          const dir = Math.random() < 0.5 ? 1 : -1;
+          const n = 1 + Math.floor(Math.random() * 3);
+          const y0 = h * horizon * (0.25 + Math.random() * 0.45);
+          const v = w * (0.02 + Math.random() * 0.012) + 8;
+          for (let i = 0; i < n; i++) {
+            birds.push({
+              x: dir > 0 ? -20 - i * 26 : w + 20 + i * 26,
+              y: y0 + (Math.random() - 0.5) * 24 + i * 6,
+              vx: dir * v * (0.92 + Math.random() * 0.16),
+              s: 3.2 + Math.random() * 2.6,
+              ph: Math.random() * 6.28,
+              age: Math.random() * 3,
+              bob: Math.random() * 6.28,
+            });
+          }
+          nextBirds = 12 + Math.random() * 12;
+        }
+        birds = birds.filter((b) => b.x > -80 && b.x < w + 80);
+        fctx.strokeStyle = rgba(p.layers[3], 0.55);
+        fctx.lineCap = 'round';
+        fctx.lineWidth = 1.25;
+        for (const b of birds) {
+          b.x += b.vx * dt;
+          b.age += dt;
+          // a few wingbeats, then a long glide
+          const beat = b.age % 3.6 < 1.4 ? 0.5 + 0.5 * Math.sin(b.ph + b.age * 9) : 0.35;
+          const y = b.y + Math.sin(t * 0.8 + b.bob) * 2.5;
+          const lift = b.s * (0.1 + 0.55 * beat);
+          fctx.beginPath();
+          fctx.moveTo(b.x - b.s, y - lift);
+          fctx.quadraticCurveTo(b.x - b.s * 0.45, y - b.s * 0.28, b.x, y);
+          fctx.quadraticCurveTo(b.x + b.s * 0.45, y - b.s * 0.28, b.x + b.s, y - lift);
+          fctx.stroke();
+        }
+      }
       for (const s of shimmer) {
         const tw = reduced ? 0.6 : 0.5 + 0.5 * Math.sin(t * s.s + s.ph);
         fctx.globalAlpha = s.a * tw;
@@ -543,6 +701,10 @@ function useParticles(
       visible = Boolean(e?.isIntersecting);
     });
     io.observe(front);
+    rebuildRef.current = () => {
+      build();
+      draw(0);
+    };
     resumeRef.current = () => {
       if (raf || reduced) return;
       last = performance.now();
@@ -551,6 +713,7 @@ function useParticles(
     if (!reduced) raf = requestAnimationFrame(frame);
     return () => {
       resumeRef.current = () => {};
+      rebuildRef.current = () => {};
       cancelAnimationFrame(raf);
       ro.disconnect();
       io.disconnect();
