@@ -91,7 +91,7 @@ function pine(x: number, base: number, height: number, color: string, key: strin
   return <path key={key} d={d} fill={color} />;
 }
 
-function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [number, number], density: number, key: string): ReactNode {
+function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [number, number], density: number, key: string, wind = false): ReactNode {
   const out: ReactNode[] = [];
   let x = -10 + rnd() * 10;
   let k = 0;
@@ -102,7 +102,14 @@ function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [n
     out.push(pine(x, base, h, color, `${key}${k++}`));
     x += (h * 0.28 + rnd() * h * 0.5) / density;
   }
-  return <g>{out}</g>;
+  if (!wind) return <g>{out}</g>;
+  // the whole row leans a little around its base line, like trees in a light wind
+  const base = pts.reduce((sum, q) => sum + q[1], 0) / Math.max(1, pts.length);
+  return (
+    <g className="wind" style={{ transformOrigin: `0px ${base.toFixed(1)}px`, animationDuration: `${9 + (key.charCodeAt(1) % 5) * 1.5}s` }}>
+      {out}
+    </g>
+  );
 }
 
 const f1 = (n: number) => n.toFixed(1);
@@ -260,7 +267,7 @@ function celestial(p: Palette, cx: number, cy: number, r: number, id: (s: string
   return (
     <g>
       <circle cx={cx} cy={cy} r={r * 5.5} fill={`url(#${id('glow')})`} />
-      <circle cx={cx} cy={cy} r={r} fill={p.celestial} />
+      <circle cx={cx} cy={cy} r={r} fill={p.celestial} data-celestial={moon ? 'moon' : 'sun'} />
       {moon && (
         <g opacity="0.1" fill={p.sky[1]}>
           <circle cx={cx - r * 0.3} cy={cy - r * 0.2} r={r * 0.22} />
@@ -383,7 +390,15 @@ function drawMotif(
         }
         d += ` L ${W + 10} ${h + 2} Z`;
         const color = mixHex(p.water, p.layers[Math.min(3, i)], 0.5 + t * 0.5);
-        bands.push(<path key={i} d={d} fill={color} />);
+        bands.push(
+          detail === 'scene' ? (
+            <g key={i} className="swell" style={{ animationDuration: `${7 + i * 1.7}s`, animationDelay: `${-i * 1.3}s` }}>
+              <path d={d} fill={color} />
+            </g>
+          ) : (
+            <path key={i} d={d} fill={color} />
+          ),
+        );
       }
       return (
         <g>
@@ -401,11 +416,11 @@ function drawMotif(
           {celestial(p, cx, horizon - h * 0.22, W * 0.055, id, p.night)}
           {mountains(p, rnd, horizon + h * 0.05, horizon - h * 0.06, 0.4, 2, 0.8)}
           {hs[0]!.node}
-          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1.1, 'ta')}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1.1, 'ta', detail === 'scene')}
           {hs[1]!.node}
-          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.2], 0.9, 'tb')}
+          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.2], 0.9, 'tb', detail === 'scene')}
           {hs[2]!.node}
-          {treeRow(rnd, hs[2]!.pts, p.layers[3], [h * 0.2, h * 0.34], 0.75, 'tc')}
+          {treeRow(rnd, hs[2]!.pts, p.layers[3], [h * 0.2, h * 0.34], 0.75, 'tc', detail === 'scene')}
         </g>
       );
     }
@@ -627,6 +642,11 @@ function drawMotif(
             <path d={shore(-(shoreY - horizon) * 0.12)} fill="none" stroke={p.accent[0]} strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
           </g>
           <path d={`${shore(0)} L ${W + 10} ${h + 2} L -10 ${h + 2} Z`} fill={`url(#${id('sand')})`} />
+          {scene && (
+            <g className="wash">
+              <path d={`${shore(0)} L ${W + 10} ${f1(shoreY + 14 + (h - shoreY) * 0.1)} C ${f1(W * 0.6)} ${f1(shoreY + 6 + (h - shoreY) * 0.08)} ${f1(W * 0.25)} ${f1(shoreY - 16 + (h - shoreY) * 0.06)} -10 ${f1(shoreY - 8 + (h - shoreY) * 0.07)} Z`} fill={p.accent[0]} opacity="0.16" />
+            </g>
+          )}
           <g className={scene ? 'tide' : undefined}>
             <path d={shore(0)} fill="none" stroke={p.accent[0]} strokeWidth="2.2" strokeLinecap="round" opacity="0.8" />
           </g>
@@ -678,9 +698,9 @@ function drawMotif(
         <g>
           {celestial(p, W * 0.25, h * 0.24, W * 0.045, id, p.night)}
           {hs[0]!.node}
-          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.11], 1, 'ca')}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.11], 1, 'ca', detail === 'scene')}
           {hs[1]!.node}
-          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.18], 0.8, 'cb')}
+          {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.18], 0.8, 'cb', detail === 'scene')}
           {hs[2]!.node}
           <circle cx={x} cy={baseY - ch * 0.5} r={W * 0.2} fill={p.accent[2]} opacity="0.3" filter={`url(#${id('blur')})`} />
           <rect x={x - cw / 2} y={baseY - ch} width={cw} height={ch} fill={mixHex(p.layers[3], '#000000', 0.25)} />
@@ -691,7 +711,7 @@ function drawMotif(
           {Array.from({ length: 4 }, (_, i) => (
             <circle key={i} cx={x + cw * 0.23 + i * 6} cy={baseY - ch * (2.25 + i * 0.35)} r={3 + i * 2} fill="#ffffff" opacity={0.28 - i * 0.05} />
           ))}
-          {treeRow(rnd, hs[2]!.pts.map(([px, py]) => [px, py + 4] as [number, number]).filter(([px]) => Math.abs(px - x) > cw * 0.9), p.layers[3], [h * 0.16, h * 0.26], 0.35, 'cc')}
+          {treeRow(rnd, hs[2]!.pts.map(([px, py]) => [px, py + 4] as [number, number]).filter(([px]) => Math.abs(px - x) > cw * 0.9), p.layers[3], [h * 0.16, h * 0.26], 0.35, 'cc', detail === 'scene')}
         </g>
       );
     }
@@ -752,7 +772,13 @@ function drawMotif(
         <g>
           {celestial(p, cx, h * 0.3, W * 0.06, id, p.night)}
           <rect y={h * 0.5} width={W} height={h * 0.5} fill={`url(#${id('haze')})`} />
-          {stalks}
+          {detail === 'scene' ? (
+            <g className="wind" style={{ transformOrigin: `0px ${h}px`, animationDuration: '8s' }}>
+              {stalks}
+            </g>
+          ) : (
+            stalks
+          )}
         </g>
       );
     }
@@ -763,7 +789,7 @@ function drawMotif(
         <g>
           {celestial(p, vx, horizon - h * 0.15, W * 0.06, id, p.night)}
           {hs[0]!.node}
-          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1, 'pa')}
+          {treeRow(rnd, hs[0]!.pts, p.layers[1], [h * 0.07, h * 0.12], 1, 'pa', detail === 'scene')}
           {hs[1]!.node}
           {hs[2]!.node}
           <path

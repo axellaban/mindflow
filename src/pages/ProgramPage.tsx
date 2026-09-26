@@ -36,7 +36,7 @@ export function ProgramPage() {
   return (
     <div className="pb-14">
       <section className="relative overflow-hidden lg:mt-6 lg:rounded-[40px]">
-        <CoverArt spec={program.art} ratio={0.95} rounded="rounded-none" className="aspect-[0.95] w-full md:aspect-[1.9]" />
+        <CoverArt spec={program.art} ratio={0.95} rounded="rounded-none" live className="aspect-[0.95] w-full md:aspect-[1.9]" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-transparent to-ink-900" />
         <div className="absolute top-0 left-0 px-5 pt-safe lg:px-8 lg:pt-6">
           <div className="pt-2">
