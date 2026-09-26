@@ -348,7 +348,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
       <div className="relative mx-auto w-32 shrink-0 sm:w-40">
         <motion.div
           aria-hidden="true"
-          className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(247_203_214/0.45),transparent)] blur-xl"
+          className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.4),transparent)] blur-xl"
           animate={{ opacity: [0.6, 1, 0.6], scale: [0.97, 1.04, 0.97] }}
           transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
         />

@@ -105,7 +105,7 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
       }}
       className="group relative block w-full overflow-hidden rounded-2xl text-left"
     >
-      <CoverArt spec={session.art} ratio={1.45} rounded="rounded-[30px]" className="aspect-[1.45] w-full transition-transform duration-700 group-hover:scale-[1.02]" />
+      <CoverArt spec={session.art} ratio={1.45} rounded="rounded-2xl" className="aspect-[1.45] w-full transition-transform duration-700 group-hover:scale-[1.02]" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/25 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 md:p-6">
         <div className="min-w-0">

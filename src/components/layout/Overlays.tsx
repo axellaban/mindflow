@@ -81,10 +81,10 @@ export function Celebration() {
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 26 }}
           >
-            <div className="pointer-events-none absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-peach-300/25 blur-3xl" />
+            <div className="pointer-events-none absolute -top-24 left-1/2 size-64 -translate-x-1/2 rounded-full bg-gold-300/20 blur-3xl" />
             <motion.div
               className="relative mx-auto flex size-24 items-center justify-center rounded-full"
-              style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #f0a9bd)' }}
+              style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #f6deaf 55%, #acc39f)' }}
               initial={{ rotate: -20, scale: 0.6 }}
               animate={{ rotate: 0, scale: 1 }}
               transition={{ type: 'spring', stiffness: 180, damping: 12, delay: 0.1 }}
@@ -104,7 +104,7 @@ export function Celebration() {
                 />
               ))}
             </motion.div>
-            <p className="relative mt-6 text-[12px] font-bold tracking-[0.16em] text-peach-300 uppercase">Nuevo logro</p>
+            <p className="relative mt-6 text-[12px] font-bold tracking-[0.16em] text-gold-300 uppercase">Nuevo logro</p>
             <h2 className="relative mt-2 font-display text-[28px] leading-tight">{def.title}</h2>
             <p className="relative mt-2 text-[15px] text-2">{def.description}</p>
             <Button full size="lg" className="relative mt-7" onClick={next}>

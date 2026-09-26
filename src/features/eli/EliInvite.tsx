@@ -75,7 +75,7 @@ export function EliInvite({
       exit={{ opacity: 0, y: 8 }}
       transition={{ delay, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        'relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(140deg,rgb(247_203_214/0.17),rgb(255_214_189/0.08)_48%,rgb(207_226_213/0.07))] p-5 backdrop-blur-xl',
+        'relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(140deg,rgb(197_213_188/0.16),rgb(246_222_175/0.07)_48%,rgb(207_226_213/0.07))] p-5 backdrop-blur-xl',
         className,
       )}
       aria-label={eyebrow ?? title}

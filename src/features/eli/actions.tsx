@@ -49,7 +49,7 @@ interface ExternalProps {
   icon?: ReactNode;
 }
 
-/** The main call to action: a warm gradient pill with a slow shimmer. */
+/** The main call to action: a sage-to-dawn gradient pill with a slow shimmer. */
 export function EliPrimaryLink({ href, onClick, children, className, icon }: ExternalProps) {
   const reduced = useReducedMotion();
   return (
@@ -61,7 +61,7 @@ export function EliPrimaryLink({ href, onClick, children, className, icon }: Ext
       whileTap={{ scale: 0.97 }}
       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
       className={cn(
-        'relative inline-flex h-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-blush-300 via-[#f9c9c4] to-peach-300 px-6 text-[15px] font-semibold text-ink-900 shadow-[0_12px_32px_-12px_rgb(240_169_189/0.75)]',
+        'relative inline-flex h-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-blush-300 to-gold-300 px-6 text-[15px] font-semibold text-ink-900 shadow-[0_12px_32px_-12px_rgb(172_195_159/0.7)]',
         className,
       )}
     >

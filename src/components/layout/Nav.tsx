@@ -117,7 +117,7 @@ export function SideNav() {
         <NavLink
           to="/eli"
           className={cn(
-            'mb-3 flex items-center gap-3 rounded-3xl border border-white/8 bg-[linear-gradient(135deg,rgb(247_203_214/0.16),rgb(255_214_189/0.06))] p-3.5 transition-colors hover:bg-white/6',
+            'mb-3 flex items-center gap-3 rounded-3xl border border-white/8 bg-[linear-gradient(135deg,rgb(197_213_188/0.14),rgb(246_222_175/0.05))] p-3.5 transition-colors hover:bg-white/6',
             isActive(pathname, '/eli') && 'border-blush-300/40',
           )}
         >
