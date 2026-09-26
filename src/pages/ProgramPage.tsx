@@ -11,6 +11,7 @@ import { haptic } from '@/lib/device';
 import { programProgress } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
 import { cn } from '@/lib/utils';
+import { SPRING_PRESS } from '@/lib/motion';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { NotFound } from './NotFound';
@@ -87,6 +88,7 @@ export function ProgramPage() {
                 <motion.button
                   type="button"
                   whileTap={{ scale: 0.98 }}
+                  transition={SPRING_PRESS}
                   onClick={() => {
                     haptic(8);
                     play(sid);

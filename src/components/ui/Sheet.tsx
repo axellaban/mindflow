@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useDragControls } from 'motion/react';
 import { type ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils';
+import { EASE, SPRING_SOFT } from '@/lib/motion';
 
 interface SheetProps {
   open: boolean;
@@ -34,7 +35,7 @@ export function Sheet({ open, onClose, children, title, className, size = 'md' }
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.5, ease: EASE }}
             onClick={onClose}
           />
           <motion.div
@@ -46,7 +47,7 @@ export function Sheet({ open, onClose, children, title, className, size = 'md' }
             initial={{ y: '100%', opacity: 0.6 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: '100%', opacity: 0.4 }}
-            transition={{ type: 'spring', stiffness: 320, damping: 34 }}
+            transition={SPRING_SOFT}
             drag="y"
             dragListener={false}
             dragControls={controls}

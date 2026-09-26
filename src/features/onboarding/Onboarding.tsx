@@ -17,6 +17,7 @@ import type { GoalId } from '@/content/types';
 import { downloadFile, haptic, reminderICS } from '@/lib/device';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { formatDuration } from '@/lib/time';
+import { EASE, SPRING_PRESS, breath } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { type Profile, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
@@ -52,7 +53,7 @@ const panel = {
   initial: { opacity: 0, y: 24, filter: 'blur(6px)' },
   animate: { opacity: 1, y: 0, filter: 'blur(0px)' },
   exit: { opacity: 0, y: -16, filter: 'blur(6px)' },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+  transition: { duration: 0.8, ease: EASE },
 };
 
 export function Onboarding() {
@@ -154,6 +155,7 @@ export function Onboarding() {
                             key={g.id}
                             type="button"
                             whileTap={{ scale: 0.96 }}
+                            transition={SPRING_PRESS}
                             onClick={() => {
                               haptic(6);
                               setGoals((xs) => (on ? xs.filter((x) => x !== g.id) : [...xs, g.id]));
@@ -192,6 +194,7 @@ export function Onboarding() {
                           key={e.id}
                           type="button"
                           whileTap={{ scale: 0.98 }}
+                          transition={SPRING_PRESS}
                           onClick={() => {
                             setExperience(e.id);
                             setTimeout(next, 180);
@@ -350,7 +353,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
           aria-hidden="true"
           className="absolute -inset-6 rounded-[44px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.4),transparent)] blur-xl"
           animate={{ opacity: [0.6, 1, 0.6], scale: [0.97, 1.04, 0.97] }}
-          transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+          transition={breath}
         />
         <motion.img
           src={ELI.photo}
@@ -358,7 +361,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
           className="relative aspect-[4/5] w-full rounded-[32px] border border-white/15 object-cover shadow-[0_30px_60px_-24px_rgb(0_0_0/0.7)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.1, ease: EASE }}
         />
         <div className="absolute -right-4 -bottom-3 rotate-[4deg] rounded-full bg-mist-50 px-3.5 py-1.5 font-display text-[17px] text-ink-900 italic shadow-lg">
           Hola, soy Eli

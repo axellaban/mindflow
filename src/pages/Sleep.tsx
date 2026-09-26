@@ -10,6 +10,7 @@ import { SCENE_BY_ID } from '@/content/scenes';
 import { MIX_PRESETS, MUSIC } from '@/content/sounds';
 import { haptic } from '@/lib/device';
 import { useProgramProgress } from '@/lib/hooks';
+import { SPRING_PRESS } from '@/lib/motion';
 import { usePlayer } from '@/store/player';
 
 const SLEEP_MIXES = ['cabana-lluvia', 'playa-noche', 'noche-lago', 'tren-nocturno', 'invierno', 'tormenta-bosque'];
@@ -83,6 +84,7 @@ export function Sleep() {
                 key={p.id}
                 type="button"
                 whileTap={{ scale: 0.97 }}
+                transition={SPRING_PRESS}
                 onClick={() => {
                   haptic(8);
                   playMix({ id: p.id, name: p.name, mix: p.mix, art: p.art });

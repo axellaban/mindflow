@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import type { ReactNode } from 'react';
 import { haptic } from '@/lib/device';
+import { SPRING_GLIDE, SPRING_PRESS, press } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 
 export function Slider({
@@ -54,7 +55,7 @@ export function Switch({ checked, onChange, label }: { checked: boolean; onChang
     >
       <motion.span
         layout
-        transition={{ type: 'spring', stiffness: 600, damping: 34 }}
+        transition={SPRING_PRESS}
         className={cn('block size-6 rounded-full bg-white shadow-md', checked && 'ml-auto')}
       />
     </button>
@@ -77,7 +78,7 @@ export function Chip({
   return (
     <motion.button
       type="button"
-      whileTap={{ scale: 0.95 }}
+      {...press}
       onClick={() => {
         haptic(5);
         onClick?.();
@@ -127,7 +128,7 @@ export function Segmented<T extends string>({
             <motion.span
               layoutId={`seg-${options.map((x) => x.value).join('')}`}
               className="absolute inset-0 -z-10 rounded-full bg-mist-50"
-              transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+              transition={SPRING_GLIDE}
             />
           )}
           {o.label}

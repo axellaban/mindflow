@@ -5,6 +5,7 @@ import { Logo } from '@/components/Logo';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { haptic } from '@/lib/device';
 import { useStats } from '@/lib/hooks';
+import { SPRING_GLIDE } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 
 export const TABS = [
@@ -45,7 +46,7 @@ export function TabBar() {
                   <motion.span
                     layoutId="tab-glow"
                     className="absolute top-1.5 h-8 w-14 rounded-full bg-white/10"
-                    transition={{ type: 'spring', stiffness: 460, damping: 36 }}
+                    transition={SPRING_GLIDE}
                   />
                 )}
                 <Icon className={cn('relative size-[22px] transition-all duration-300', active ? 'text-mist-50' : 'text-mist-50/45')} strokeWidth={active ? 2 : 1.6} />
@@ -91,7 +92,7 @@ export function SideNav() {
                 <motion.span
                   layoutId="side-active"
                   className="absolute inset-0 rounded-2xl bg-white/9"
-                  transition={{ type: 'spring', stiffness: 460, damping: 38 }}
+                  transition={SPRING_GLIDE}
                 />
               )}
               <Icon className="relative size-5" strokeWidth={active ? 2 : 1.7} />

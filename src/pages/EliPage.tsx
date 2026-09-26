@@ -6,6 +6,7 @@ import { goalsPhrase } from '@/content/goals';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { EliEventCard } from '@/features/eli/EliHomeCard';
 import { EliPrimaryLink, EliSecondaryLink, InstagramIcon, WhatsAppIcon, useEliLinks } from '@/features/eli/actions';
+import { EASE_BREATH, breath } from '@/lib/motion';
 import { useAppStore } from '@/store/app';
 import { PageHeader } from './PageHeader';
 
@@ -195,7 +196,7 @@ function Portrait() {
         aria-hidden="true"
         className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.42),rgb(246_222_175/0.16),transparent)] blur-2xl"
         animate={reduced ? undefined : { opacity: [0.6, 1, 0.6], scale: [0.96, 1.04, 0.96] }}
-        transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
+        transition={breath}
       />
       <img
         src={ELI.photo}
@@ -208,8 +209,8 @@ function Portrait() {
           aria-hidden="true"
           className="absolute rounded-[60%_40%_60%_40%] bg-gradient-to-br from-mist-50 to-blush-400"
           style={{ left: p.left, top: p.top, width: p.size, height: p.size * 0.7 }}
-          animate={reduced ? undefined : { y: [0, -12, 0], rotate: [0, 35, 0], opacity: [0.55, 0.95, 0.55] }}
-          transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}
+          animate={reduced ? undefined : { y: [0, -10, 0], rotate: [0, 18, 0], opacity: [0.5, 0.9, 0.5] }}
+          transition={{ duration: p.dur * 1.4, delay: p.delay, repeat: Infinity, ease: EASE_BREATH }}
         />
       ))}
     </motion.div>

@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { type EliPlacement, type WhatsAppTopic, bookingUrl, whatsappMessage, whatsappUrl } from '@/content/eli';
 import { goalsPhrase } from '@/content/goals';
 import { haptic } from '@/lib/device';
+import { EASE_IN_OUT, press } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 
@@ -58,8 +59,7 @@ export function EliPrimaryLink({ href, onClick, children, className, icon }: Ext
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
-      whileTap={{ scale: 0.97 }}
-      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+      {...press}
       className={cn(
         'relative inline-flex h-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-blush-300 to-gold-300 px-6 text-[15px] font-semibold text-ink-900 shadow-[0_12px_32px_-12px_rgb(172_195_159/0.7)]',
         className,
@@ -68,10 +68,10 @@ export function EliPrimaryLink({ href, onClick, children, className, icon }: Ext
       {!reduced && (
         <motion.span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/55 to-transparent"
-          initial={{ left: '-40%' }}
-          animate={{ left: ['-40%', '140%'] }}
-          transition={{ duration: 1.6, ease: 'easeInOut', repeat: Infinity, repeatDelay: 4.5, delay: 1.2 }}
+          className="pointer-events-none absolute inset-y-0 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent"
+          initial={{ left: '-60%' }}
+          animate={{ left: ['-60%', '140%'] }}
+          transition={{ duration: 2.6, ease: EASE_IN_OUT, repeat: Infinity, repeatDelay: 8, delay: 2 }}
         />
       )}
       {icon}

@@ -1,5 +1,5 @@
 import { ArrowRight, Check, LifeBuoy, Moon, Mountain, Share2, Timer, Volume2, VolumeX, Wind } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { type ReactNode, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { engine } from '@/audio/engine';
@@ -18,6 +18,7 @@ import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
 import { SCENES, SCENE_BY_ID, type SceneId } from '@/content/scenes';
 import { haptic, shareOrCopy } from '@/lib/device';
+import { SPRING_PRESS, reveal, revealFocus, stagger } from '@/lib/motion';
 import { programProgress, useActiveProgram, useNow } from '@/lib/hooks';
 import { minutesByDay, currentWeek } from '@/lib/stats';
 import { dayKey, dayNumber, fromDayKey, greeting, longDate, shortWeekday } from '@/lib/time';
@@ -26,11 +27,7 @@ import { type MoodEntry, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
 
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } } };
-const rise = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } },
-};
+const sections = stagger(0.08, 0.2);
 
 export function Home() {
   const now = useNow();
@@ -44,6 +41,14 @@ export function Home() {
   const playerItem = usePlayer((s) => s.item);
   const active = useActiveProgram();
   const [scenesOpen, setScenesOpen] = useState(false);
+  const reduced = useReducedMotion();
+  // the scene sleeps while the full-screen player covers it
+  const covered = usePlayer((s) => s.expanded && Boolean(s.item));
+  // the landscape scrolls slower than the page, and the greeting fades as it leaves
+  const { scrollY } = useScroll();
+  const sceneY = useTransform(scrollY, [0, 500], [0, 140]);
+  const greetingOpacity = useTransform(scrollY, [0, 240], [1, 0]);
+  const greetingY = useTransform(scrollY, [0, 240], [0, -20]);
 
   const scene = SCENE_BY_ID[sceneId] ?? SCENES[0]!;
   const daily = useMemo(() => dailyFor(now), [now]);
@@ -86,7 +91,9 @@ export function Home() {
     <div className="relative pb-10">
       {/* Hero scene */}
       <section className="relative h-[48svh] min-h-[350px] max-h-[510px] overflow-hidden lg:h-[50vh]">
-        <Scene scene={scene} drift={false} paused />
+        <motion.div className="absolute inset-0" style={reduced ? undefined : { y: sceneY }}>
+          <Scene scene={scene} drift={false} paused={covered} />
+        </motion.div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/35 via-transparent to-ink-900" />
         <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
           <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="CalmabyEli">
@@ -115,33 +122,33 @@ export function Home() {
         </div>
         <motion.div
           className="absolute inset-x-0 bottom-24 mx-auto max-w-5xl px-5 md:px-8 lg:bottom-24 lg:px-10"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          style={reduced ? undefined : { opacity: greetingOpacity, y: greetingY }}
         >
-          <p className="text-[13px] font-semibold tracking-wide text-2">{longDate(now)}</p>
-          <h1 className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
-            {greeting(now)}
-            {name ? `, ${name}` : ''}
-          </h1>
-          <p className="mt-2 flex items-center gap-2 text-[14px] text-2">
-            Un momento para vos. A tu ritmo.
-          </p>
+          <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show">
+            <motion.p variants={reveal} className="text-[13px] font-semibold tracking-wide text-2">{longDate(now)}</motion.p>
+            <motion.h1 variants={revealFocus} className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
+              {greeting(now)}
+              {name ? `, ${name}` : ''}
+            </motion.h1>
+            <motion.p variants={reveal} className="mt-2 flex items-center gap-2 text-[14px] text-2">
+              Un momento para vos. A tu ritmo.
+            </motion.p>
+          </motion.div>
         </motion.div>
       </section>
 
-      <motion.div variants={stagger} initial="hidden" animate="show" className="relative z-10 mx-auto -mt-16 max-w-5xl space-y-12 md:px-8 lg:px-10">
+      <motion.div variants={sections} initial="hidden" animate="show" className="relative z-10 mx-auto -mt-16 max-w-5xl space-y-12 md:px-8 lg:px-10">
         <div className="space-y-10 lg:grid lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-6 lg:space-y-0">
-          <motion.section variants={rise} className="px-5 md:px-0">
+          <motion.section variants={reveal} className="px-5 md:px-0">
             <HeroSessionCard session={daily} eyebrow="La pausa del día" note={daily.daily?.theme} />
           </motion.section>
 
           <div className="space-y-10 lg:space-y-5">
-            <motion.section variants={rise} className="px-5 md:px-0">
+            <motion.section variants={reveal} className="px-5 md:px-0">
               <CheckInCard todayMood={todayMood} />
             </motion.section>
 
-            <motion.section variants={rise}>
+            <motion.section variants={reveal}>
               <div className="grid grid-cols-4 gap-2.5 px-5 md:px-0">
                 <Tool to="/respirar" icon={<Wind className="size-6" />} label="Respirar" />
                 <Tool to="/temporizador" icon={<Timer className="size-6" />} label="Temporizador" />
@@ -152,7 +159,7 @@ export function Home() {
           </div>
         </div>
 
-        <motion.section variants={rise} className="px-5 md:px-0">
+        <motion.section variants={reveal} className="px-5 md:px-0">
           {active ? (
             <ContinueCard progress={active} />
           ) : !suggestedProgress.complete ? (
@@ -160,7 +167,7 @@ export function Home() {
           ) : null}
         </motion.section>
 
-        <motion.section variants={rise}>
+        <motion.section variants={reveal}>
           <SectionTitle title="Para vos" action={<SeeAll to="/meditar" />} />
           <Rail>
             {forYou.map((s) => (
@@ -169,11 +176,11 @@ export function Home() {
           </Rail>
         </motion.section>
 
-        <motion.section variants={rise} className="px-5 md:px-0 lg:max-w-2xl">
+        <motion.section variants={reveal} className="px-5 md:px-0 lg:max-w-2xl">
           <EliHomeCard />
         </motion.section>
 
-        <motion.section variants={rise}>
+        <motion.section variants={reveal}>
           <SectionTitle title={part.title} />
           <Rail>
             {part.sessions.map((s) => (
@@ -182,7 +189,7 @@ export function Home() {
           </Rail>
         </motion.section>
 
-        <motion.section variants={rise} className="px-5 md:px-0">
+        <motion.section variants={reveal} className="px-5 md:px-0">
           <QuoteCard text={quote.text} author={quote.author} />
         </motion.section>
 
@@ -239,6 +246,7 @@ function Tool({ to, icon, label, onClick }: { to?: string; icon: ReactNode; labe
     <motion.button
       type="button"
       whileTap={{ scale: 0.94 }}
+      transition={SPRING_PRESS}
       onClick={() => {
         haptic(6);
         if (onClick) onClick();

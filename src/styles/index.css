@@ -36,7 +36,7 @@
 
   --animate-drift: drift 24s ease-in-out infinite alternate;
   --animate-float: float 8s ease-in-out infinite;
-  --animate-shimmer: shimmer 2.4s linear infinite;
+  --animate-shimmer: shimmer 2.8s ease-in-out infinite;
   --animate-pulse-soft: pulse-soft 3.6s ease-in-out infinite;
 
   @keyframes drift {
@@ -240,7 +240,7 @@
     cursor: pointer;
     --pct: 50%;
     --track: rgb(255 255 255 / 0.14);
-    --fill: rgb(253 243 245 / 0.92);
+    --fill: rgb(244 241 233 / 0.92);
   }
   .range::-webkit-slider-runnable-track {
     height: 4px;

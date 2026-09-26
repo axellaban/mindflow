@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { CoverArt } from '@/art/CoverArt';
 import { haptic } from '@/lib/device';
 import { formatClock } from '@/lib/time';
+import { SPRING_SOFT } from '@/lib/motion';
 import { usePlayer } from '@/store/player';
 import { itemInfo } from './itemInfo';
 
@@ -26,7 +27,7 @@ export function MiniPlayer() {
           initial={{ y: 90, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 90, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 380, damping: 34 }}
+          transition={SPRING_SOFT}
           className="fixed inset-x-3 bottom-[calc(var(--tabbar-h)+max(10px,var(--safe-bottom)))] z-[60] mx-auto max-w-xl lg:bottom-6 lg:left-[calc(260px+24px)] lg:right-6"
         >
           <div className="glass-strong relative flex items-center gap-3 overflow-hidden rounded-[22px] p-2 pr-2.5 shadow-[0_20px_50px_-20px_rgb(0_0_0/0.8)]">
@@ -49,7 +50,7 @@ export function MiniPlayer() {
             </button>
             <motion.button
               type="button"
-              whileTap={{ scale: 0.88 }}
+              whileTap={{ scale: 0.93 }}
               onClick={() => {
                 haptic(6);
                 toggle();
@@ -64,7 +65,7 @@ export function MiniPlayer() {
             </button>
             {!info.infinite && duration > 0 && (
               <div className="absolute inset-x-4 bottom-0 h-[2px] overflow-hidden rounded-full bg-white/10">
-                <div className="h-full bg-mist-50/80" style={{ width: `${Math.min(100, (position / duration) * 100)}%` }} />
+                <div className="h-full bg-mist-50/80 transition-[width] duration-700 ease-linear" style={{ width: `${Math.min(100, (position / duration) * 100)}%` }} />
               </div>
             )}
           </div>
