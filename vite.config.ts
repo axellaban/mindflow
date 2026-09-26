@@ -38,8 +38,8 @@ export default defineConfig({
         scope: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#17231f',
-        theme_color: '#17231f',
+        background_color: '#0f2330',
+        theme_color: '#0f2330',
         categories: ['health', 'lifestyle', 'medical'],
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },

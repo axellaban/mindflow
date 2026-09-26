@@ -6,6 +6,7 @@ const LAYOUT: Partial<Record<Motif, SceneDef['layout']>> = {
   lake: 'lake',
   waves: 'ocean',
   lighthouse: 'ocean',
+  beach: 'ocean',
   forest: 'forest',
   path: 'forest',
   bamboo: 'forest',

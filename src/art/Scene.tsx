@@ -69,6 +69,7 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
   return (
     <div
       ref={ref}
+      data-paused={paused ? 'true' : 'false'}
       className={cn('absolute inset-0 overflow-hidden', className)}
       style={{
         background: `linear-gradient(180deg, ${p.sky[0]} 0%, ${p.sky[1]} ${Math.round(horizon * 62)}%, ${p.sky[2]} ${Math.round(horizon * 100)}%, ${p.sky[2]} 100%)`,
@@ -294,11 +295,12 @@ function useParticles(
             ph: Math.random() * 6.28,
           }))
         : [];
+      const waterEnd = scene.motif === 'beach' ? horizon + (1 - horizon) * 0.36 : 0.95;
       shimmer =
         scene.layout === 'lake' || scene.layout === 'ocean'
           ? Array.from({ length: 36 }, () => ({
               x: w * (0.3 + Math.random() * 0.4),
-              y: h * (horizon + 0.02 + Math.pow(Math.random(), 1.3) * (0.95 - horizon)),
+              y: h * (horizon + 0.02 + Math.pow(Math.random(), 1.3) * (waterEnd - horizon)),
               r: 6 + Math.random() * 26,
               a: 0.06 + Math.random() * 0.22,
               s: 0.6 + Math.random() * 1.6,

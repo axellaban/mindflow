@@ -105,7 +105,7 @@ export function Celebration() {
               ))}
               <motion.div
                 className="relative flex size-24 items-center justify-center rounded-full"
-                style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #f6deaf 55%, #acc39f)' }}
+                style={{ background: 'radial-gradient(circle at 35% 30%, #fff6e6, #f6deaf 55%, #7cc5bf)' }}
                 initial={{ opacity: 0, scale: 0.85, filter: 'blur(6px)' }}
                 animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}

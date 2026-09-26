@@ -1,6 +1,6 @@
 import type { Mix, Motif, PaletteId } from './types';
 
-export type SceneId = 'calma' | 'jardin' | 'lago' | 'lluvia' | 'oceano' | 'aurora' | 'fogata' | 'nieve' | 'desierto' | 'amanecer';
+export type SceneId = 'playa' | 'calma' | 'jardin' | 'lago' | 'lluvia' | 'oceano' | 'aurora' | 'fogata' | 'nieve' | 'desierto' | 'amanecer';
 
 export type Particles = 'stars' | 'rain' | 'snow' | 'embers' | 'fireflies' | 'petals' | 'motes' | 'none';
 
@@ -17,6 +17,16 @@ export interface SceneDef {
 }
 
 export const SCENES: SceneDef[] = [
+  {
+    id: 'playa',
+    name: 'Amanecer en la playa',
+    palette: 'playa',
+    layout: 'ocean',
+    motif: 'beach',
+    particles: ['none'],
+    sound: { oceano: 0.8 },
+    seed: 11,
+  },
   {
     id: 'calma',
     name: 'Amanecer en el lago',
