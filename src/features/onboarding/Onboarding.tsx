@@ -312,7 +312,7 @@ function Welcome({ onBegin, onTry }: { onBegin: () => void; onTry: () => void })
         </div>
       </div>
       <div className="w-full space-y-3 pb-2">
-        <Button full size="lg" onClick={onTry}>Probar una pausa · 3 min</Button>
+        <Button full size="lg" onClick={onTry}>Probar una pausa</Button>
         <Button full variant="ghost" onClick={onBegin}>Personalizar mi espacio</Button>
         <p className="text-xs leading-relaxed text-3">Sin cuenta ni contraseña.<br />Tu progreso se guarda en este dispositivo.</p>
       </div>
