@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { coverImage } from '@/art/artwork';
 import { engine } from '@/audio/engine';
 import { clearMediaSession, narration, setMediaPlayback, setMediaSession } from '@/audio/narration';
 import type { AchievementId } from '@/content/achievements';
@@ -192,6 +193,17 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     }, 1000);
   };
 
+  const setMixMediaSession = (item: Extract<PlayerItem, { type: 'mix' }>) =>
+    setMediaSession(
+      itemTitle(item),
+      {
+        play: () => get().resume(),
+        pause: () => get().pause(),
+        stop: () => get().close(),
+      },
+      coverImage(item.art),
+    );
+
   const resetFor = (item: PlayerItem) => {
     const prev = get().item;
     if (prev) logCurrent(false);
@@ -250,7 +262,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
         seekbackward: () => get().skip(-15),
         seekforward: () => get().skip(15),
         seekto: (d) => d.seekTime != null && get().seek(d.seekTime),
-      });
+      }, coverImage(s.art));
       fetch(captionsUrl(id))
         .then((r) => (r.ok ? r.json() : null))
         .then((doc: { captions: Caption[] } | null) => {
@@ -273,7 +285,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
         seekbackward: () => get().skip(-15),
         seekforward: () => get().skip(15),
         seekto: (d) => d.seekTime != null && get().seek(d.seekTime),
-      });
+      }, coverImage(s.art));
       fetch(captionsUrl(id))
         .then((r) => (r.ok ? r.json() : null))
         .then((doc: { captions: Caption[] } | null) => {
@@ -294,7 +306,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
         play: () => get().resume(),
         pause: () => get().pause(),
         stop: () => get().close(),
-      });
+      }, coverImage(MUSIC_BY_ID[id].art));
       setMediaPlayback('playing');
     },
 
@@ -306,19 +318,17 @@ export const usePlayer = create<PlayerState>()((set, get) => {
       engine.setLayersVolume(0.9, 0.3);
       engine.setMix(m.mix, 2);
       beginTicker();
-      setMediaSession(itemTitle({ type: 'mix', ...m }), {
-        play: () => get().resume(),
-        pause: () => get().pause(),
-        stop: () => get().close(),
-      });
+      setMixMediaSession({ type: 'mix', ...m });
       setMediaPlayback('playing');
     },
 
     updateMix: (mix, meta) => {
       const { item } = get();
       if (item?.type !== 'mix') return;
-      set({ item: meta ? { ...item, id: 'custom', mix, ...meta } : { ...item, mix } });
+      const next: PlayerItem = meta ? { ...item, id: 'custom', mix, ...meta } : { ...item, mix };
+      set({ item: next });
       if (get().status === 'playing') engine.setMix(mix, 0.6);
+      if (meta) setMixMediaSession(next);
     },
 
     toggle: () => {

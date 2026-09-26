@@ -1,0 +1,50 @@
+---
+voice: luz
+target: 6:00
+bells: start,end
+---
+Buenos días. Esta práctica es para despertar el cuerpo y la mente cuando te cuesta arrancar. Son seis minutos para pasar del sueño a la energía, sin café de por medio.
+Puedes hacerla de pie o en el borde de la cama.
+
+Empieza con los ojos abiertos. Estira los brazos hacia arriba, lo más alto que puedas, como si quisieras tocar el techo.
+[3]
+Y suelta.
+[2]
+Otra vez. Estírate hacia arriba, y ahora inclínate un poco hacia la derecha…
+[3]
+y hacia la izquierda.
+[3]
+Vuelve al centro y suelta los brazos.
+[3]
+Ahora, unas respiraciones que dan energía. Inhala profundo por la nariz, llenando bien los pulmones, y exhala rápido por la boca, con fuerza, como si apagaras una vela de un soplo.
+Inhala{1.5} y suelta.
+[2]
+Inhala{1.5} y suelta.
+[2]
+Inhala{1.5} y suelta.
+[2]
+Tres más, un poco más rápido.
+Inhala{1.2} y suelta.
+[1]
+Inhala{1.2} y suelta.
+[1]
+Inhala{1.2} y suelta.
+[3]
+Nota el cosquilleo en el cuerpo. La sangre que circula. El calor en las manos.
+[*1]
+Frota las palmas entre sí, con energía, hasta que se calienten.
+[4]
+Y apóyalas sobre los ojos cerrados. Siente el calor. Descansa ahí un momento.
+[4]
+Ahora baja las manos, y abre los ojos. Mira a tu alrededor. La luz de la mañana. Los colores.
+[*1]
+Da unos golpecitos suaves con las yemas de los dedos sobre la cabeza, como lluvia. Luego sobre los hombros, los brazos, el pecho.
+Despertando cada parte del cuerpo.
+[*2]
+Para terminar, piensa en una sola cosa que quieras hacer hoy con esta energía. Algo que te importe.
+[*1]
+Haz una última inhalación profunda, estirándote hacia arriba…
+[3]
+y suelta con una sonrisa.
+[2]
+Tu día empieza ahora. Que lo disfrutes.

@@ -56,8 +56,16 @@ class Narration {
 
 export const narration = typeof window !== 'undefined' ? new Narration() : (null as unknown as Narration);
 
-export function setMediaSession(meta: { title: string; artist: string; album: string }, handlers: Partial<Record<MediaSessionAction, MediaSessionActionHandler | null>>): void {
+let generation = 0;
+
+export function setMediaSession(
+  meta: { title: string; artist: string; album: string },
+  handlers: Partial<Record<MediaSessionAction, MediaSessionActionHandler | null>>,
+  /** Resolves to the cover image once it's drawn; the app icon is shown until then. */
+  cover?: Promise<string | null>,
+): void {
   if (!('mediaSession' in navigator)) return;
+  const gen = ++generation;
   try {
     navigator.mediaSession.metadata = new MediaMetadata({
       ...meta,
@@ -77,6 +85,14 @@ export function setMediaSession(meta: { title: string; artist: string; album: st
   } catch {
     /* noop */
   }
+  void cover?.then((src) => {
+    if (!src || gen !== generation) return;
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ ...meta, artwork: [{ src, sizes: '512x512', type: 'image/jpeg' }] });
+    } catch {
+      /* noop */
+    }
+  });
 }
 
 export function setMediaPlayback(state: MediaSessionPlaybackState, position?: { duration: number; position: number }): void {
@@ -97,6 +113,7 @@ export function setMediaPlayback(state: MediaSessionPlaybackState, position?: { 
 
 export function clearMediaSession(): void {
   if (!('mediaSession' in navigator)) return;
+  generation++;
   try {
     navigator.mediaSession.metadata = null;
     navigator.mediaSession.playbackState = 'none';

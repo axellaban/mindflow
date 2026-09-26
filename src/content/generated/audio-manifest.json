@@ -53,6 +53,12 @@
     "bytes": 1341094,
     "v": "7b78f6cd34"
   },
+  "cafe-consciente": {
+    "duration": 330.0,
+    "voice": "luz",
+    "bytes": 776174,
+    "v": "218a0b1cd5"
+  },
   "caminar": {
     "duration": 600.0,
     "voice": "luz",
@@ -130,6 +136,12 @@
     "voice": "luz",
     "bytes": 1445987,
     "v": "2b05f0f28d"
+  },
+  "energia-matinal": {
+    "duration": 360.0,
+    "voice": "luz",
+    "bytes": 795388,
+    "v": "fd0318ae5d"
   },
   "enfoque-profundo": {
     "duration": 600.0,

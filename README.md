@@ -1,6 +1,6 @@
 # MindFlow — meditación, sueño y calma
 
-Web app (PWA instalable) de bienestar mental inspirada en las mejores apps de meditación: meditaciones guiadas con voz, historias para dormir, respiración guiada, temporizador, paisajes sonoros y música que nunca se repite, diario de ánimo y seguimiento de progreso. Todo en español, sin registro y funcionando también sin conexión.
+Web app (PWA instalable) de bienestar mental inspirada en las mejores apps de meditación: meditaciones guiadas con voz, historias para dormir, respiración guiada, temporizador, paisajes sonoros y música que nunca se repite, diario de ánimo y seguimiento de progreso. Todo en español, sin registro y funcionando también sin conexión: 51 sesiones narradas (más de 8 horas de audio).
 
 ## Qué incluye
 
@@ -8,9 +8,9 @@ Web app (PWA instalable) de bienestar mental inspirada en las mejores apps de me
 | --- | --- |
 | **La pausa del día** | 12 meditaciones temáticas de 10 min (paciencia, aceptación, soltar, confianza…) que rotan cada día, con una frase para llevar. |
 | **Programas** | *Aprende a meditar* (7 días), *Calma la ansiedad* (5 días) y *Duerme profundo* (5 noches), con progreso y "continuar". |
-| **Meditaciones** | 15 sesiones sueltas: SOS ansiedad, pausa de 3 minutos, escaneo corporal, enfoque, NSDR (descanso profundo), metta, montaña, relajación progresiva, caminar, volver a dormir… |
+| **Meditaciones** | 17 sesiones sueltas: SOS ansiedad, pausa de 3 minutos, escaneo corporal, enfoque, NSDR (descanso profundo), metta, montaña, relajación progresiva, caminar, volver a dormir, café consciente, energía para empezar… |
 | **Historias para dormir** | 5 historias originales (tren patagónico, faro, biblioteca bajo la lluvia, cielo de Atacama, cabaña en la nieve) con fondo sonoro que sigue sonando y se apaga solo. |
-| **Reproductor** | Escena animada, subtítulos sincronizados, sonido de fondo elegible con volumen, temporizador de sueño, modo inmersivo, controles de pantalla bloqueada (Media Session), descarga para escuchar sin conexión y pantalla de sesión completada con registro de ánimo. |
+| **Reproductor** | Escena animada, subtítulos sincronizados, sonido de fondo elegible con volumen, temporizador de sueño, modo inmersivo, controles de pantalla bloqueada con la portada de cada sesión (Media Session), descarga para escuchar sin conexión y pantalla de sesión completada con registro de ánimo. |
 | **Respirar** | Burbuja animada con 6 patrones (coherencia, 4‑7‑8, cuadrada, suspiro fisiológico, calma rápida, energía), tono guía que acompaña la respiración y vibración. |
 | **Temporizador** | Meditación en silencio con campanas de inicio, intervalo y fin (cuenco, campana, gong, madera) y ambiente opcional. |
 | **Sonidos** | Mezclador de 17 sonidos procedurales (lluvia, truenos, olas, lago, arroyo, viento, pájaros, grillos, fuego, tren, ventilador, ronroneo, campanillas, ruidos blanco/rosa/marrón), mezclas sugeridas y guardadas, y 9 pistas de música generativa (pads, piano, kalimba, cuencos, cristal, drones y ondas binaurales). |

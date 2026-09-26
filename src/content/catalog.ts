@@ -319,6 +319,32 @@ const SEEDS: SessionSeed[] = [
     goals: ['felicidad', 'autocuidado'],
   },
   {
+    id: 'energia-matinal',
+    kind: 'meditation',
+    title: 'Energía para empezar',
+    subtitle: 'Despertar el cuerpo sin café',
+    description:
+      'Estiramientos, respiraciones energizantes y una intención clara. Seis minutos para pasar del sueño a la energía.',
+    categories: ['mananas', 'cuerpo'],
+    narrator: 'luz',
+    art: { palette: 'gold', motif: 'sun', seed: 416 },
+    bed: 'bosque',
+    goals: ['enfoque', 'felicidad'],
+  },
+  {
+    id: 'cafe-consciente',
+    kind: 'meditation',
+    title: 'Café consciente',
+    subtitle: 'Una pausa con tu taza de la mañana',
+    description:
+      'Convierte tu café o tu té en una pequeña meditación: el calor en las manos, el aroma, el primer sorbo. Cinco minutos para empezar con presencia.',
+    categories: ['mananas', 'principiantes'],
+    narrator: 'luz',
+    art: { palette: 'sunset', motif: 'clouds', seed: 417 },
+    bed: 'piano',
+    goals: ['felicidad', 'autocuidado', 'aprender'],
+  },
+  {
     id: 'gratitud',
     kind: 'meditation',
     title: 'Gratitud',

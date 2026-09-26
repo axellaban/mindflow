@@ -11,7 +11,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,
-      includeAssets: ['favicon.svg', 'icons/*.png'],
+      // the glob below already precaches the icons
+      includeManifestIcons: false,
       manifest: {
         name: 'MindFlow — Meditación y sueño',
         short_name: 'MindFlow',
@@ -38,7 +39,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
         // Spanish only needs the latin subsets; social image isn't needed offline.
         globIgnores: ['**/*vietnamese*', '**/*latin-ext*', 'icons/og.png'],
         navigateFallback: '/index.html',

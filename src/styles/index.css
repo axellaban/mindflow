@@ -82,8 +82,8 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
     --text: #f6f4ff;
-    --text-2: rgb(236 234 255 / 0.7);
-    --text-3: rgb(236 234 255 / 0.46);
+    --text-2: rgb(236 234 255 / 0.74);
+    --text-3: rgb(236 234 255 / 0.54);
     --line: rgb(255 255 255 / 0.08);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);

@@ -68,7 +68,10 @@ export function forDayPart(date = new Date()): { title: string; sessions: Sessio
     };
   }
   if (part === 'mañana') {
-    return { title: 'Para empezar el día', sessions: pick(['despertar', 'enfoque-profundo', 'pausa-3-minutos', 'gratitud', 'caminar']) };
+    return {
+      title: 'Para empezar el día',
+      sessions: pick(['despertar', 'cafe-consciente', 'energia-matinal', 'enfoque-profundo', 'pausa-3-minutos', 'gratitud', 'caminar']),
+    };
   }
   return {
     title: 'Un respiro en tu tarde',
