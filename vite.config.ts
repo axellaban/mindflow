@@ -1,13 +1,27 @@
 import path from 'node:path';
-import { defineConfig } from 'vite';
+import { type Plugin, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+
+/**
+ * Link previews (WhatsApp, Instagram, Facebook) only load absolute image URLs.
+ * The site URL comes from SITE_URL or, on Vercel, the project's production domain.
+ */
+function absoluteShareImage(): Plugin {
+  const domain = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const site = (process.env.SITE_URL ?? (domain ? `https://${domain}` : '')).replace(/\/$/, '');
+  return {
+    name: 'absolute-share-image',
+    transformIndexHtml: (html) => (site ? html.replaceAll('content="/icons/og.png"', `content="${site}/icons/og.png"`) : html),
+  };
+}
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    absoluteShareImage(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,

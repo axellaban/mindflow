@@ -132,7 +132,7 @@ const DEFAULTS: Data = {
     captions: false,
     haptics: true,
     keepAwake: true,
-    sceneId: 'jardin',
+    sceneId: 'calma',
     sceneSound: false,
     reminderTime: null,
     sleepFadeMinutes: 20,
@@ -311,7 +311,14 @@ export const useAppStore = create<AppState>()(
     },
     {
       name: STORAGE_KEY,
-      version: 1,
+      version: 2,
+      // v2: the default home scene went from the pink "jardin" to "calma". Almost everyone on
+      // "jardin" just kept the old default (a deliberate pick can't be told apart), so move them.
+      migrate: (persisted, version) => {
+        const s = (persisted ?? {}) as Partial<Data>;
+        if (version < 2 && s.settings?.sceneId === 'jardin') s.settings = { ...s.settings, sceneId: 'calma' };
+        return s as Data;
+      },
       storage: createJSONStorage(() => localStorage),
       partialize: (s) => ({
         profile: s.profile,

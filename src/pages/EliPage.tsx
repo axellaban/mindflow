@@ -102,7 +102,7 @@ export function EliPage() {
         <ol className="mt-5 space-y-4">
           {ELI.steps.map((s, i) => (
             <li key={s.title} className="flex gap-4">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-peach-300 font-display text-[17px] text-ink-900">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-gold-300 font-display text-[17px] text-ink-900">
                 {i + 1}
               </span>
               <span className="pt-1">
@@ -157,7 +157,7 @@ export function EliPage() {
 
       <motion.section
         {...rise}
-        className="relative mx-5 mt-14 overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(140deg,rgb(247_203_214/0.22),rgb(255_214_189/0.1)_50%,rgb(207_226_213/0.1))] p-6 md:mx-0 md:p-9"
+        className="relative mx-5 mt-14 overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(140deg,rgb(197_213_188/0.2),rgb(246_222_175/0.09)_50%,rgb(207_226_213/0.1))] p-6 md:mx-0 md:p-9"
       >
         <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-16 size-64 rounded-full bg-blush-400/25 blur-3xl" />
         <div className="relative flex items-center gap-3">
@@ -174,10 +174,10 @@ export function EliPage() {
   );
 }
 
-/** Eli's portrait with a breathing glow and a few petals drifting around it. */
+/** Eli's portrait with a breathing glow and a few leaves drifting around it. */
 function Portrait() {
   const reduced = useReducedMotion();
-  const petals = [
+  const leaves = [
     { left: '-6%', top: '12%', size: 12, dur: 7, delay: 0 },
     { left: '92%', top: '6%', size: 9, dur: 8.5, delay: 1.2 },
     { left: '96%', top: '58%', size: 13, dur: 9, delay: 0.6 },
@@ -193,7 +193,7 @@ function Portrait() {
     >
       <motion.div
         aria-hidden="true"
-        className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(247_203_214/0.5),rgb(255_214_189/0.18),transparent)] blur-2xl"
+        className="absolute -inset-8 rounded-[56px] bg-[radial-gradient(closest-side,rgb(197_213_188/0.42),rgb(246_222_175/0.16),transparent)] blur-2xl"
         animate={reduced ? undefined : { opacity: [0.6, 1, 0.6], scale: [0.96, 1.04, 0.96] }}
         transition={{ duration: 7, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
       />
@@ -202,11 +202,11 @@ function Portrait() {
         alt={ELI.fullName}
         className="relative aspect-[4/5] w-full -rotate-2 rounded-[36px] border border-white/15 object-cover shadow-[0_40px_80px_-30px_rgb(0_0_0/0.75)]"
       />
-      {petals.map((p, i) => (
+      {leaves.map((p, i) => (
         <motion.span
           key={i}
           aria-hidden="true"
-          className="absolute rounded-[60%_40%_60%_40%] bg-gradient-to-br from-[#ffe1e8] to-blush-400"
+          className="absolute rounded-[60%_40%_60%_40%] bg-gradient-to-br from-mist-50 to-blush-400"
           style={{ left: p.left, top: p.top, width: p.size, height: p.size * 0.7 }}
           animate={reduced ? undefined : { y: [0, -12, 0], rotate: [0, 35, 0], opacity: [0.55, 0.95, 0.55] }}
           transition={{ duration: p.dur, delay: p.delay, repeat: Infinity, ease: 'easeInOut' }}

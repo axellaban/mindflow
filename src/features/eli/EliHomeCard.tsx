@@ -48,12 +48,12 @@ export function EliEventCard({ event, placement = 'home', dismissible = true }: 
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(150deg,rgb(247_203_214/0.2),rgb(255_214_189/0.1)_50%,rgb(207_226_213/0.08))] p-5"
+      className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(150deg,rgb(197_213_188/0.18),rgb(246_222_175/0.09)_50%,rgb(207_226_213/0.08))] p-5"
       aria-label={event.kind}
     >
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-24 -left-16 size-56 rounded-full bg-peach-400/20 blur-3xl"
+        className="pointer-events-none absolute -bottom-24 -left-16 size-56 rounded-full bg-gold-300/15 blur-3xl"
         animate={reduced ? undefined : { x: [0, 20, 0], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
       />

@@ -24,7 +24,7 @@ export function MoodOrb({ level, size = 44, selected }: { level: MoodLevel; size
         width: size,
         height: size,
         background: `radial-gradient(circle at 35% 30%, #ffffff, ${m.color} 58%, ${m.color}cc)`,
-        boxShadow: selected ? `0 0 0 2px #221528, 0 0 0 4px ${m.color}, 0 10px 30px -6px ${m.color}` : `0 8px 24px -10px ${m.color}`,
+        boxShadow: selected ? `0 0 0 2px var(--color-ink-800), 0 0 0 4px ${m.color}, 0 10px 30px -6px ${m.color}` : `0 8px 24px -10px ${m.color}`,
       }}
     />
   );
