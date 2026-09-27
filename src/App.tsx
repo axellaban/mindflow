@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate, useOu
 import { SideNav, TabBar } from '@/components/layout/Nav';
 import { Celebration, Toaster } from '@/components/layout/Overlays';
 import { CATEGORY_BY_ID, PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
+import { isNightHour } from '@/content/scenes';
 import { CheckInSheet } from '@/features/checkin/CheckInSheet';
 import { Onboarding } from '@/features/onboarding/Onboarding';
 import { MiniPlayer } from '@/features/player/MiniPlayer';
@@ -12,6 +13,7 @@ import { Home } from '@/pages/Home';
 import { Meditate } from '@/pages/Meditate';
 import { NotFound } from '@/pages/NotFound';
 import { Sleep } from '@/pages/Sleep';
+import { useNow } from '@/lib/hooks';
 import { EASE } from '@/lib/motion';
 import { Sounds } from '@/pages/Sounds';
 import { useAppStore } from '@/store/app';
@@ -145,11 +147,16 @@ function RouteTitle() {
   return null;
 }
 
-/** Dormir and the sleep stories wear the night palette; everywhere else is the sea. */
+/**
+ * Dormir and the sleep stories wear the night palette, and so does the whole app from 20 h to 5 h
+ * while the beach follows the hour (a scene chosen by hand keeps the sea colours).
+ */
 function ThemeSync() {
   const { pathname } = useLocation();
   const sleepStory = usePlayer((s) => s.expanded && s.item?.type === 'session' && Boolean(SESSION_BY_ID[s.item.id]?.sleep));
-  const night = pathname.startsWith('/dormir') || sleepStory;
+  const followsHour = useAppStore((s) => s.settings.sceneId === 'auto');
+  const now = useNow(60_000);
+  const night = pathname.startsWith('/dormir') || sleepStory || (followsHour && isNightHour(now));
   useEffect(() => {
     const root = document.documentElement;
     if (night) root.dataset.theme = 'noche';
