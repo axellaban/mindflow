@@ -44,9 +44,24 @@
       "audio_sha256": "3bbe2527d04bc5b8f45c38b8dda378745a0dc7feb46618e6e3e40a36d249eb39",
       "captions_sha256": "888672f388768e74174a65a873400d5259560ac93cf58687a4d7af445764718a",
       "version": "be9b0de8445f"
+    },
+    "buc-1-piloto-automatico": {
+      "audio_sha256": "723ec166cc586027ea6e941a85ba9b056d15b084589d7207a62c5fd085693ea1",
+      "captions_sha256": "8a2ea0a320a25b261e6a510a86c8c37c2e4ad0f1b5b93f5385667044ca320b1e",
+      "version": "7557c8fa79ec"
+    },
+    "buc-2-mente-acelerada": {
+      "audio_sha256": "b14156123685fbf5b15878163a28b9b074519c9c4717c827aa80cb9afd44f015",
+      "captions_sha256": "87808bfee34c2c1a12013e5eb1744e7ebca3adcea59ca471ca2af334a117ecf4",
+      "version": "e1a788a3c4e1"
+    },
+    "buc-3-autoexigencia": {
+      "audio_sha256": "033b50900a48d1bf141f233256b70cdaf0ed5383cb106af6597b839e66436c22",
+      "captions_sha256": "7ed6ebc25dc2c7f13d4226b2f6ba01ecebb5618e41c0abc91dba07fe7c57f3cf",
+      "version": "98b5044e6892"
     }
   },
-  "completed": 9,
+  "completed": 12,
   "total": 61,
   "audio_complete": false
 }

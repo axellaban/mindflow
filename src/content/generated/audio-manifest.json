@@ -74,20 +74,26 @@
   "buc-1-piloto-automatico": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1072911,
-    "v": "887b344511"
+    "bytes": 1030147,
+    "v": "7557c8fa79ec",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "buc-2-mente-acelerada": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1066102,
-    "v": "1f7c7696b0"
+    "bytes": 1018459,
+    "v": "e1a788a3c4e1",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "buc-3-autoexigencia": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1187353,
-    "v": "75614085c7"
+    "bytes": 1137571,
+    "v": "98b5044e6892",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "buc-4-culpa": {
     "duration": 540.0,
