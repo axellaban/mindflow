@@ -482,7 +482,9 @@
   "volver-a-dormir": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1083863,
-    "v": "1b08881b9d"
+    "bytes": 1079371,
+    "v": "8efde978a194",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   }
 }

@@ -1,1 +1,248 @@
-{"id":"volver-a-dormir","duration":600.0,"voice":"luz","captions":[{"s":1.2,"e":1.79,"t":"Hola."},{"s":2.59,"e":10.04,"t":"Si te despertaste en mitad de la noche y no logras volver a dormir, esta práctica es para ti."},{"s":10.84,"e":13.24,"t":"Lo primero: no mires el reloj."},{"s":14.04,"e":17.34,"t":"Saber la hora solo activa la mente a hacer cuentas."},{"s":18.14,"e":21.33,"t":"Ahora mismo, la hora no importa."},{"s":22.13,"e":26.63,"t":"Y lo segundo: despertarse de noche es completamente normal."},{"s":27.43,"e":29.05,"t":"Tu cuerpo sabe dormir."},{"s":29.85,"e":34.38,"t":"Solo vamos a darle las condiciones para que vuelva a hacerlo."},{"s":36.28,"e":40.17,"t":"Quédate en la posición en la que estás, si es cómoda."},{"s":40.97,"e":42.53,"t":"O acomódate un poco."},{"s":43.33,"e":44.97,"t":"Deja los ojos cerrados."},{"s":45.77,"e":50.81,"t":"Aunque no duermas, descansar con los ojos cerrados ya es reparador."},{"s":55.81,"e":57.73,"t":"Haz una respiración lenta…"},{"s":59.08,"e":63.07,"t":"y suelta el aire muy despacio, como un suspiro largo."},{"s":69.07,"e":70.23,"t":"Una vez más."},{"s":77.23,"e":81.42,"t":"Si hay pensamientos dando vueltas, no te pelees con ellos."},{"s":82.22,"e":85.91,"t":"Imagina que son como el ruido de una calle lejana."},{"s":86.71,"e":89.79,"t":"Están ahí, pero no tienen que ver contigo ahora."},{"s":106.74,"e":110.24,"t":"Siente el peso de tu cabeza sobre la almohada."},{"s":111.04,"e":113.14,"t":"Déjala hundirse un poco más."},{"s":130.09,"e":132.6,"t":"Siente el peso de los hombros."},{"s":133.4,"e":134.41,"t":"De los brazos."},{"s":135.21,"e":136.3,"t":"De las manos."},{"s":153.24,"e":155.58,"t":"El peso del tronco sobre el colchón."},{"s":156.38,"e":157.49,"t":"De las caderas."},{"s":158.29,"e":159.36,"t":"De las piernas."},{"s":160.16,"e":160.99,"t":"De los pies."},{"s":194.89,"e":196.92,"t":"Todo tu cuerpo está sostenido."},{"s":197.72,"e":199.48,"t":"No tienes que hacer nada."},{"s":200.28,"e":202.99,"t":"La cama hace todo el trabajo."},{"s":236.89,"e":241.55,"t":"Vamos a contar hacia atrás, muy despacio, desde cien."},{"s":242.35,"e":243.52,"t":"Pero de tres en tres."},{"s":244.32,"e":244.96,"t":"Cien."},{"s":245.76,"e":247.04,"t":"Noventa y siete."},{"s":247.84,"e":249.13,"t":"Noventa y cuatro."},{"s":249.93,"e":253.69,"t":"Es un ejercicio aburrido a propósito."},{"s":254.49,"e":258.73,"t":"Deja que la mente se entretenga con él, sin prisa."},{"s":259.53,"e":262.42,"t":"Si pierdes la cuenta, está perfecto."},{"s":263.22,"e":265.86,"t":"Eso significa que el sueño se acerca."},{"s":367.55,"e":369.03,"t":"Suelta los números."},{"s":369.83,"e":374.75,"t":"Siente otra vez la respiración, lenta, profunda, tranquila."},{"s":425.59,"e":430.52,"t":"Imagina que cada exhalación te hunde un centímetro más en la cama."},{"s":431.32,"e":432.28,"t":"Más hondo."},{"s":433.08,"e":434.02,"t":"Más suave."},{"s":501.82,"e":503.0,"t":"No hay prisa."},{"s":503.8,"e":506.3,"t":"La noche todavía es larga."},{"s":507.1,"e":510.07,"t":"Tienes todo el tiempo del mundo para descansar."},{"s":594.81,"e":596.0,"t":"Buenas noches."}],"cues":[]}
+{
+  "id": "volver-a-dormir",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 1.2,
+      "e": 1.82,
+      "t": "Hola."
+    },
+    {
+      "s": 2.62,
+      "e": 9.63,
+      "t": "Si te despertaste en mitad de la noche y no logras volver a dormir, esta práctica es para ti."
+    },
+    {
+      "s": 10.43,
+      "e": 13.05,
+      "t": "Lo primero: no mires el reloj."
+    },
+    {
+      "s": 13.85,
+      "e": 17.82,
+      "t": "Saber la hora solo activa la mente a hacer cuentas."
+    },
+    {
+      "s": 18.62,
+      "e": 21.27,
+      "t": "Ahora mismo, la hora no importa."
+    },
+    {
+      "s": 22.07,
+      "e": 27.03,
+      "t": "Y lo segundo: despertarse de noche es completamente normal."
+    },
+    {
+      "s": 27.83,
+      "e": 29.88,
+      "t": "Tu cuerpo sabe dormir."
+    },
+    {
+      "s": 30.68,
+      "e": 35.64,
+      "t": "Solo vamos a darle las condiciones para que vuelva a hacerlo."
+    },
+    {
+      "s": 38.64,
+      "e": 42.47,
+      "t": "Quédate en la posición en la que estás, si es cómoda."
+    },
+    {
+      "s": 43.27,
+      "e": 45.2,
+      "t": "O acomódate un poco."
+    },
+    {
+      "s": 46.0,
+      "e": 48.03,
+      "t": "Deja los ojos cerrados."
+    },
+    {
+      "s": 48.83,
+      "e": 53.98,
+      "t": "Aunque no duermas, descansar con los ojos cerrados ya es reparador."
+    },
+    {
+      "s": 58.98,
+      "e": 61.25,
+      "t": "Haz una respiración lenta…"
+    },
+    {
+      "s": 62.6,
+      "e": 66.7,
+      "t": "y suelta el aire muy despacio, como un suspiro largo."
+    },
+    {
+      "s": 72.7,
+      "e": 73.96,
+      "t": "Una vez más."
+    },
+    {
+      "s": 80.96,
+      "e": 85.44,
+      "t": "Si hay pensamientos dando vueltas, no te pelees con ellos."
+    },
+    {
+      "s": 86.24,
+      "e": 90.18,
+      "t": "Imagina que son como el ruido de una calle lejana."
+    },
+    {
+      "s": 90.98,
+      "e": 94.63,
+      "t": "Están ahí, pero no tienen que ver contigo ahora."
+    },
+    {
+      "s": 111.19,
+      "e": 114.79,
+      "t": "Siente el peso de tu cabeza sobre la almohada."
+    },
+    {
+      "s": 115.59,
+      "e": 118.08,
+      "t": "Déjala hundirse un poco más."
+    },
+    {
+      "s": 134.64,
+      "e": 136.89,
+      "t": "Siente el peso de los hombros."
+    },
+    {
+      "s": 137.69,
+      "e": 139.07,
+      "t": "De los brazos."
+    },
+    {
+      "s": 139.87,
+      "e": 141.08,
+      "t": "De las manos."
+    },
+    {
+      "s": 157.63,
+      "e": 160.57,
+      "t": "El peso del tronco sobre el colchón."
+    },
+    {
+      "s": 161.37,
+      "e": 162.75,
+      "t": "De las caderas."
+    },
+    {
+      "s": 163.55,
+      "e": 164.89,
+      "t": "De las piernas."
+    },
+    {
+      "s": 165.69,
+      "e": 166.82,
+      "t": "De los pies."
+    },
+    {
+      "s": 199.94,
+      "e": 202.65,
+      "t": "Todo tu cuerpo está sostenido."
+    },
+    {
+      "s": 203.45,
+      "e": 205.53,
+      "t": "No tienes que hacer nada."
+    },
+    {
+      "s": 206.33,
+      "e": 208.95,
+      "t": "La cama hace todo el trabajo."
+    },
+    {
+      "s": 242.06,
+      "e": 246.19,
+      "t": "Vamos a contar hacia atrás, muy despacio, desde cien."
+    },
+    {
+      "s": 246.99,
+      "e": 248.83,
+      "t": "Pero de tres en tres."
+    },
+    {
+      "s": 249.63,
+      "e": 250.3,
+      "t": "Cien."
+    },
+    {
+      "s": 251.1,
+      "e": 252.78,
+      "t": "Noventa y siete."
+    },
+    {
+      "s": 253.58,
+      "e": 255.31,
+      "t": "Noventa y cuatro."
+    },
+    {
+      "s": 256.11,
+      "e": 259.21,
+      "t": "Es un ejercicio aburrido a propósito."
+    },
+    {
+      "s": 260.01,
+      "e": 263.88,
+      "t": "Deja que la mente se entretenga con él, sin prisa."
+    },
+    {
+      "s": 264.68,
+      "e": 267.79,
+      "t": "Si pierdes la cuenta, está perfecto."
+    },
+    {
+      "s": 268.59,
+      "e": 271.75,
+      "t": "Eso significa que el sueño se acerca."
+    },
+    {
+      "s": 371.1,
+      "e": 372.74,
+      "t": "Suelta los números."
+    },
+    {
+      "s": 373.54,
+      "e": 378.25,
+      "t": "Siente otra vez la respiración, lenta, profunda, tranquila."
+    },
+    {
+      "s": 427.92,
+      "e": 432.93,
+      "t": "Imagina que cada exhalación te hunde un centímetro más en la cama."
+    },
+    {
+      "s": 433.73,
+      "e": 434.87,
+      "t": "Más hondo."
+    },
+    {
+      "s": 435.67,
+      "e": 436.76,
+      "t": "Más suave."
+    },
+    {
+      "s": 502.99,
+      "e": 504.32,
+      "t": "No hay prisa."
+    },
+    {
+      "s": 505.12,
+      "e": 507.64,
+      "t": "La noche todavía es larga."
+    },
+    {
+      "s": 508.44,
+      "e": 511.75,
+      "t": "Tienes todo el tiempo del mundo para descansar."
+    },
+    {
+      "s": 594.54,
+      "e": 596.0,
+      "t": "Buenas noches."
+    }
+  ],
+  "cues": []
+}

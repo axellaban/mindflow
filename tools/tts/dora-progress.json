@@ -299,9 +299,14 @@
       "audio_sha256": "721d1f10235069443f9ca960ec2b7f8d44a606d1b0574539c94c40421167a718",
       "captions_sha256": "a50579143102864612916bc0d23882d497887e65144dca47546b2591a02aa388",
       "version": "3bee4fa06a85"
+    },
+    "volver-a-dormir": {
+      "audio_sha256": "0e2b7bfe812c80644a6ae79dbdefb1e1839c224e744e1c0b8dfb7ea5b1d2a657",
+      "captions_sha256": "7e119a65bff92332e540325f8e88e795ed51285e08c5340f4cad476c6e59cdd6",
+      "version": "8efde978a194"
     }
   },
-  "completed": 60,
+  "completed": 61,
   "total": 61,
-  "audio_complete": false
+  "audio_complete": true
 }
