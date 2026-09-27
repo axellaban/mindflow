@@ -1,4 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react';
+import { hideSplash, reloadOnce } from '@/lib/recover';
 
 interface State {
   error: Error | null;
@@ -14,18 +15,10 @@ export class ErrorBoundary extends Component<{ children: ReactNode }, State> {
 
   componentDidCatch(error: Error, info: ErrorInfo): void {
     console.error('App error', error, info.componentStack);
+    // the app never got to take the loading screen away: do it, so this screen can be seen
+    hideSplash();
     // a screen from an older version that is no longer on the server: reload once into the new one
-    if (/dynamically imported module|module script failed|Loading chunk/i.test(error.message)) {
-      try {
-        const last = Number(sessionStorage.getItem('mf-reload-at') || 0);
-        if (Date.now() - last > 30_000) {
-          sessionStorage.setItem('mf-reload-at', String(Date.now()));
-          location.reload();
-        }
-      } catch {
-        /* storage unavailable: keep the friendly screen */
-      }
-    }
+    if (/dynamically imported module|module script failed|Loading chunk/i.test(error.message)) reloadOnce();
   }
 
   render(): ReactNode {

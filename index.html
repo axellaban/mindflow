@@ -93,6 +93,30 @@
       :where(html[data-theme='noche']) #splash i {
         color: #cdd8ff;
       }
+      /* shown only if the app could not start: a short note and a way to try again */
+      #splash .retry {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 10px;
+        padding: 0 32px;
+        text-align: center;
+        font: 400 15px/1.45 'Jost Variable', system-ui, sans-serif;
+        color: #e2f6f7;
+      }
+      #splash.stuck .retry {
+        display: flex;
+      }
+      #splash .retry button {
+        height: 46px;
+        padding: 0 28px;
+        border: 0;
+        border-radius: 999px;
+        background: #f7f1e6;
+        color: #064657;
+        font: 600 15px/1 'Jost Variable', system-ui, sans-serif;
+      }
       @keyframes splash-breath {
         0%,
         100% {
@@ -120,8 +144,45 @@
         <path d="M24 11.7c4.6 4.9 6 12.4 0 23.5-6-11.1-4.6-18.6 0-23.5Z" fill="#0f2330" />
       </svg>
       <p>Calma<i>byEli</i></p>
+      <div class="retry">
+        <span>No pudimos abrir la app. Revisá tu conexión y probá de nuevo.</span>
+        <button type="button" onclick="location.reload()">Reintentar</button>
+      </div>
     </div>
     <div id="root"></div>
+    <script>
+      // If the app never starts (one of its files could not load or run), this device's saved copy
+      // of the app is cleared once and the page loads fresh. If that fails too, say so and offer to
+      // retry, instead of leaving the loading screen up forever. Downloaded audio is kept.
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var splash = document.getElementById('splash');
+          if (!splash || splash.classList.contains('gone')) return;
+          var tried = true;
+          try {
+            tried = Date.now() - Number(sessionStorage.getItem('mf-recover-at') || 0) < 60000;
+            if (!tried) sessionStorage.setItem('mf-recover-at', String(Date.now()));
+          } catch (e) {}
+          if (tried) {
+            splash.removeAttribute('aria-hidden');
+            splash.classList.add('stuck');
+            return;
+          }
+          var jobs = [];
+          if ('serviceWorker' in navigator) {
+            jobs.push(navigator.serviceWorker.getRegistrations().then(function (all) {
+              return Promise.all(all.map(function (r) { return r.unregister(); }));
+            }));
+          }
+          if (window.caches) {
+            jobs.push(caches.keys().then(function (keys) {
+              return Promise.all(keys.filter(function (k) { return k.indexOf('workbox-precache') === 0; }).map(function (k) { return caches.delete(k); }));
+            }));
+          }
+          Promise.all(jobs).catch(function () {}).then(function () { location.reload(); });
+        }, 5000);
+      });
+    </script>
     <noscript>CalmabyEli necesita JavaScript para funcionar.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
