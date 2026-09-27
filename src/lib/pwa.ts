@@ -1,5 +1,6 @@
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
+import { reloadOnce } from './recover';
 
 /** The welcome: a reload would lose the answers given so far. */
 const WELCOME = /^\/bienvenida/;
@@ -62,6 +63,6 @@ export function setupUpdates(): void {
   // A screen from an older version that is gone from the server: load the current one instead.
   window.addEventListener('vite:preloadError', (e) => {
     e.preventDefault();
-    location.reload();
+    reloadOnce();
   });
 }

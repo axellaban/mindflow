@@ -125,6 +125,11 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // A new version takes over as soon as it is installed, and pwa.ts reloads into it when nobody
+        // would notice. The plugin only turns these on by itself when it injects its own registration,
+        // which this app does not do: without them each new version waited until every tab was closed.
+        skipWaiting: true,
+        clientsClaim: true,
         globPatterns: ['**/*.{js,css,html,svg,png,jpg,webp,woff2}'],
         // Spanish only needs the latin subsets; social image isn't needed offline.
         globIgnores: ['**/*vietnamese*', '**/*latin-ext*', '**/*cyrillic*', 'icons/og*', 'eli/index.html'],

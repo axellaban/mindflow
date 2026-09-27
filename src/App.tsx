@@ -14,6 +14,7 @@ import { Meditate } from '@/pages/Meditate';
 import { NotFound } from '@/pages/NotFound';
 import { Sleep } from '@/pages/Sleep';
 import { useNow } from '@/lib/hooks';
+import { hideSplash } from '@/lib/recover';
 import { EASE } from '@/lib/motion';
 import { Sounds } from '@/pages/Sounds';
 import { useAppStore } from '@/store/app';
@@ -168,13 +169,7 @@ function ThemeSync() {
 
 /** The HTML's loading screen fades away once the app has drawn its first frame. */
 function useHideSplash() {
-  useEffect(() => {
-    const splash = document.getElementById('splash');
-    if (!splash) return;
-    requestAnimationFrame(() => splash.classList.add('gone'));
-    const t = setTimeout(() => splash.remove(), 1200);
-    return () => clearTimeout(t);
-  }, []);
+  useEffect(hideSplash, []);
 }
 
 export default function App() {
