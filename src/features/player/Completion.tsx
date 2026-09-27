@@ -2,6 +2,7 @@ import { ArrowRight, Flame } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { Words } from '@/components/ui/Words';
 import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import { MOODS, type MoodLevel } from '@/content/journal';
 import type { Session } from '@/content/types';
@@ -10,7 +11,7 @@ import { useEliInvite } from '@/features/eli/useEliInvite';
 import { haptic } from '@/lib/device';
 import { programProgress, useStats } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
-import { EASE, EASE_IN_OUT, breath, reveal, revealFocus, stagger } from '@/lib/motion';
+import { EASE, EASE_IN_OUT, breath, reveal, stagger } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
@@ -62,9 +63,9 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
       <motion.p variants={item} className="text-[13px] font-bold tracking-[0.16em] text-2 uppercase">
         Sesión completada
       </motion.p>
-      <motion.h2 variants={revealFocus} className="mt-2 font-display text-[34px] leading-tight">
-        {session.daily ? 'Gracias por tu pausa' : 'Bien hecho'}
-      </motion.h2>
+      <h2 className="mt-2 font-display text-[34px] leading-tight">
+        <Words text={session.daily ? 'Gracias por tu pausa' : 'Bien hecho'} delay={0.4} />
+      </h2>
 
       <motion.div variants={item} className="mt-6 grid w-full grid-cols-2 gap-3">
         <div className="rounded-3xl border border-white/10 bg-ink-950/40 px-4 py-4 backdrop-blur-md">

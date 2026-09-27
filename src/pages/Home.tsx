@@ -10,6 +10,7 @@ import { LogoMark } from '@/components/Logo';
 import { IconButton } from '@/components/ui/Button';
 import { Sheet } from '@/components/ui/Sheet';
 import { SectionTitle } from '@/components/ui/controls';
+import { Words } from '@/components/ui/Words';
 import { MoodOrb } from '@/features/checkin/CheckInSheet';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { EliHomeCard } from '@/features/eli/EliHomeCard';
@@ -18,7 +19,7 @@ import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
 import { AUTO_SCENE_NAME, SCENES, SCENE_BY_ID, type SceneChoice, type SceneId, beachAt, resolveScene } from '@/content/scenes';
 import { haptic, shareOrCopy } from '@/lib/device';
-import { SPRING_PRESS, reveal, revealFocus, stagger } from '@/lib/motion';
+import { SPRING_PRESS, reveal, stagger } from '@/lib/motion';
 import { programProgress, useActiveProgram, useNow } from '@/lib/hooks';
 import { minutesByDay, currentWeek } from '@/lib/stats';
 import { dayKey, dayNumber, fromDayKey, greeting, longDate, shortWeekday } from '@/lib/time';
@@ -136,10 +137,9 @@ export function Home() {
         >
           <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show" className="[text-shadow:0_2px_20px_rgb(3_40_50/0.55)]">
             <motion.p variants={reveal} className="text-[13px] font-semibold tracking-wide text-2">{longDate(now)}</motion.p>
-            <motion.h1 variants={revealFocus} className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
-              {greeting(now)}
-              {name ? `, ${name}` : ''}
-            </motion.h1>
+            <h1 className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
+              <Words text={`${greeting(now)}${name ? `, ${name}` : ''}`} delay={0.27} />
+            </h1>
             <motion.p variants={reveal} className="mt-2 flex items-center gap-2 text-[14px] text-2">
               Un momento para vos. A tu ritmo.
             </motion.p>

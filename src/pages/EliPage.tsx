@@ -1,6 +1,7 @@
 import { CalendarHeart, Check, Laptop, Leaf, Quote, Sparkles } from 'lucide-react';
 import { motion, useReducedMotion } from 'motion/react';
 import { useEffect } from 'react';
+import { Words } from '@/components/ui/Words';
 import { ELI, nextEvent } from '@/content/eli';
 import { goalsPhrase } from '@/content/goals';
 import { EliAvatar } from '@/features/eli/EliAvatar';
@@ -51,7 +52,9 @@ export function EliPage() {
         <Portrait />
         <motion.div {...rise} className="mt-10 md:mt-0">
           <p className="text-[12px] font-bold tracking-[0.16em] text-blush-300 uppercase">Sesiones 1:1 online</p>
-          <h1 className="mt-2 font-display text-[42px] leading-[1.02] md:text-[56px]">Hola, soy Eli</h1>
+          <h1 className="mt-2 font-display text-[42px] leading-[1.02] md:text-[56px]">
+            <Words text="Hola, soy Eli" delay={0.15} />
+          </h1>
           <p className="mt-4 text-[16px] leading-relaxed text-2">
             Acompaño a mujeres que están todo el día resolviendo, pensando en lo que sigue, y a las que incluso descansar les cuesta.
           </p>

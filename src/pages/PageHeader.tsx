@@ -2,7 +2,9 @@ import { ChevronLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 import type { ReactNode } from 'react';
 import { IconButton } from '@/components/ui/Button';
+import { Words } from '@/components/ui/Words';
 import { useBack } from '@/lib/hooks';
+import { EASE } from '@/lib/motion';
 import { cn } from '@/lib/utils';
 
 export function PageHeader({
@@ -29,11 +31,20 @@ export function PageHeader({
         )}
         {action}
       </div>
-      {(title || subtitle) && (
-        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-          {title && <h1 className="mt-3 font-display text-[40px] leading-[1.02] md:text-[52px]">{title}</h1>}
-          {subtitle && <p className="mt-2 text-[15px] text-2">{subtitle}</p>}
-        </motion.div>
+      {title && (
+        <h1 className="mt-3 font-display text-[40px] leading-[1.02] md:text-[52px]">
+          <Words text={title} />
+        </h1>
+      )}
+      {subtitle && (
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: EASE }}
+          className="mt-2 text-[15px] text-2"
+        >
+          {subtitle}
+        </motion.p>
       )}
     </header>
   );

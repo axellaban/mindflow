@@ -8,6 +8,7 @@ import { PALETTES } from '@/art/palettes';
 import { Scene } from '@/art/Scene';
 import { Button, IconButton } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/controls';
+import { Words } from '@/components/ui/Words';
 import { BREATH_BY_ID, BREATH_PATTERNS, type BreathPattern, type PhaseKind, cycleSeconds } from '@/content/breathing';
 import { beachAt } from '@/content/scenes';
 import { haptic, keepAwake } from '@/lib/device';
@@ -18,7 +19,7 @@ import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
-import { BreathCircle, SeaGlass } from './BreathCircle';
+import { BreathCircle, BreathWord, ClosedCircle } from './BreathCircle';
 
 const MINUTES = [1, 2, 3, 5, 10];
 const MIN_SCALE = 0.56;
@@ -369,20 +370,12 @@ function Runner({
           {countIn > 0 ? 'Acomodate' : phase.label}
         </p>
         <BreathCircle scale={scale} turn={turn} marks={starts.map((at) => at / cycle)}>
-          {/* the words cross-fade in place, so the circle is never empty */}
-          <AnimatePresence initial={false}>
-            <motion.span
-              key={countIn > 0 ? 'settle' : `${phaseIdx}-${phase.label}`}
-              aria-hidden="true"
-              initial={{ opacity: 0, filter: 'blur(6px)' }}
-              animate={{ opacity: 1, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, filter: 'blur(6px)' }}
-              transition={{ duration: 0.7, ease: EASE }}
-              className="col-start-1 row-start-1 text-[clamp(24px,8vw,32px)] font-light tracking-[0.02em] text-white lowercase [text-shadow:0_1px_14px_rgb(2_38_48/0.35)]"
-            >
-              {countIn > 0 ? 'acomodate' : phase.label}
-            </motion.span>
-          </AnimatePresence>
+          <BreathWord
+            silent
+            word={countIn > 0 ? 'acomodate' : phase.label.toLowerCase()}
+            id={countIn > 0 ? 'settle' : `${phaseIdx}-${phase.label}`}
+            className="text-[clamp(24px,8vw,32px)] font-normal tracking-[0.02em] text-white [text-shadow:0_1px_2px_rgb(2_38_48/0.3),0_0_18px_rgb(2_38_48/0.45)]"
+          />
         </BreathCircle>
       </div>
 
@@ -432,11 +425,13 @@ function Done({
   const line = lines[result.cycles % lines.length];
   return (
     <motion.div {...fade} className="relative mx-auto flex h-full max-w-md flex-col items-center justify-center px-6 pt-safe pb-safe text-center">
-      <motion.div className="mb-8" animate={{ scale: [1, 1.08, 1] }} transition={breath}>
-        <SeaGlass className="size-28" />
+      <motion.div className="mb-9" animate={{ scale: [1, 1.06, 1] }} transition={breath}>
+        <ClosedCircle className="size-28" />
       </motion.div>
       <p className="text-[13px] font-bold tracking-[0.16em] text-2 uppercase">Práctica completada</p>
-      <h2 className="mt-2 font-display text-[36px] leading-tight">{line}</h2>
+      <h2 className="mt-2 font-display text-[36px] leading-tight">
+        <Words text={line!} delay={0.2} />
+      </h2>
       <p className="mt-3 text-[15px] text-2">
         {minutes} {minutes === 1 ? 'minuto' : 'minutos'} · {result.cycles} {result.cycles === 1 ? 'ciclo' : 'ciclos'} de {pattern.name.toLowerCase()}
       </p>

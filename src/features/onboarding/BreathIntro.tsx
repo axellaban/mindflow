@@ -1,7 +1,7 @@
-import { AnimatePresence, motion, useMotionValue, useReducedMotion } from 'motion/react';
+import { motion, useMotionValue, useReducedMotion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { ELI } from '@/content/eli';
-import { BreathCircle } from '@/features/breathe/BreathCircle';
+import { BreathCircle, BreathWord } from '@/features/breathe/BreathCircle';
 import { EASE } from '@/lib/motion';
 
 const INHALE = 4;
@@ -73,19 +73,10 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
       transition={{ duration: 1.6, ease: EASE }}
     >
       <BreathCircle scale={scale} turn={turn} marks={[0, INHALE / (INHALE + EXHALE)]}>
-        {/* the words cross-fade in place, so the circle is never empty */}
-        <AnimatePresence initial={false}>
-          <motion.span
-            key={word}
-            className="col-start-1 row-start-1 text-[clamp(26px,8.6vw,34px)] font-light tracking-[0.02em] text-white [text-shadow:0_1px_14px_rgb(2_38_48/0.35)]"
-            initial={{ opacity: 0, filter: 'blur(6px)' }}
-            animate={{ opacity: 1, filter: 'blur(0px)' }}
-            exit={{ opacity: 0, filter: 'blur(6px)' }}
-            transition={{ duration: 0.9, ease: EASE }}
-          >
-            {word}
-          </motion.span>
-        </AnimatePresence>
+        <BreathWord
+          word={word}
+          className="text-[clamp(26px,8.6vw,34px)] font-normal tracking-[0.02em] text-white [text-shadow:0_1px_2px_rgb(2_38_48/0.3),0_0_18px_rgb(2_38_48/0.45)]"
+        />
       </BreathCircle>
 
       {/* always in the button's name; it only fades into view after the first breath */}
