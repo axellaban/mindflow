@@ -338,20 +338,26 @@
   "pausa-aceptacion": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1123892,
-    "v": "c06f1d7fbc"
+    "bytes": 1087987,
+    "v": "5fde7fc3dd8a",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-amabilidad": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1118004,
-    "v": "de76040c0c"
+    "bytes": 1082179,
+    "v": "874e65b174d9",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-aqui-y-ahora": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1108162,
-    "v": "bddf8df5a9"
+    "bytes": 1074379,
+    "v": "aa013709d41a",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-bambu": {
     "duration": 600.0,

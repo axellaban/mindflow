@@ -1,1 +1,267 @@
-{"id":"pausa-aqui-y-ahora","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":12.01,"t":"Hoy vamos a volver a casa: al aquí y al ahora."},{"s":12.81,"e":16.94,"t":"¿Te pasó alguna vez llegar a un lugar sin recordar el camino?"},{"s":17.89,"e":21.13,"t":"¿O terminar un plato de comida sin haberlo saboreado?"},{"s":22.08,"e":24.67,"t":"Es lo que llamamos piloto automático."},{"s":25.47,"e":29.01,"t":"El cuerpo está en un lugar, y la mente en otro."},{"s":29.81,"e":35.04,"t":"Pasamos gran parte del día así: repasando el pasado o ensayando el futuro."},{"s":35.84,"e":42.04,"t":"Y mientras tanto, el presente, que es donde de verdad ocurre la vida, pasa de largo."},{"s":43.94,"e":50.11,"t":"Una frase de la tradición zen lo dice de forma muy simple: cuando camines, camina."},{"s":50.91,"e":52.35,"t":"Cuando comas, come."},{"s":53.15,"e":56.57,"t":"Hoy vamos a practicar eso: estar donde estamos."},{"s":58.47,"e":59.31,"t":"Acomódate."},{"s":60.11,"e":61.26,"t":"Cierra los ojos."},{"s":65.26,"e":67.35,"t":"Haz una respiración profunda…"},{"s":68.7,"e":69.55,"t":"y suelta."},{"s":73.55,"e":76.72,"t":"Empieza preguntándote: ¿dónde estoy ahora?"},{"s":77.67,"e":78.73,"t":"No en tu mente."},{"s":79.53,"e":80.51,"t":"En tu cuerpo."},{"s":81.31,"e":82.29,"t":"En este lugar."},{"s":83.09,"e":85.32,"t":"Siente el apoyo bajo tu cuerpo."},{"s":86.12,"e":87.79,"t":"La temperatura del aire."},{"s":88.59,"e":90.26,"t":"La posición de tus manos."},{"s":138.43,"e":143.12,"t":"Vamos a recorrer los sentidos, uno por uno, para anclarnos en el presente."},{"s":143.92,"e":145.61,"t":"Primero, el oído."},{"s":146.41,"e":149.85,"t":"Escucha el sonido más lejano que puedas percibir."},{"s":173.94,"e":175.94,"t":"Y ahora, el más cercano."},{"s":176.74,"e":178.74,"t":"Quizás tu propia respiración."},{"s":226.92,"e":227.62,"t":"El tacto."},{"s":228.42,"e":231.2,"t":"Nota el contacto de la ropa sobre la piel."},{"s":232.0,"e":233.41,"t":"El peso de las manos."},{"s":234.21,"e":235.71,"t":"El aire en la cara."},{"s":283.89,"e":284.75,"t":"El olfato."},{"s":285.55,"e":287.24,"t":"¿Hay algún aroma en el aire?"},{"s":288.19,"e":289.89,"t":"Aunque sea muy sutil."},{"s":313.97,"e":314.66,"t":"El gusto."},{"s":315.46,"e":318.32,"t":"Nota el sabor de tu boca en este momento."},{"s":342.4,"e":346.98,"t":"Y la respiración, que ocurre ahora, y ahora, y ahora."},{"s":419.24,"e":423.99,"t":"Cada vez que la mente viaje al pasado o al futuro, vuelve a un sentido."},{"s":424.79,"e":426.55,"t":"El que tengas más a mano."},{"s":427.35,"e":429.08,"t":"Es tu atajo al presente."},{"s":501.34,"e":503.06,"t":"Descansa en este momento."},{"s":503.86,"e":505.98,"t":"No hace falta que sea especial."},{"s":506.78,"e":509.94,"t":"Este momento, tal como es, es suficiente."},{"s":558.12,"e":559.42,"t":"Vamos terminando."},{"s":562.42,"e":565.24,"t":"Y cuando sea el momento, abre los ojos."},{"s":566.04,"e":570.53,"t":"Mira el lugar donde estás, con atención, como si acabaras de llegar."},{"s":572.53,"e":577.06,"t":"La frase para hoy es: «estoy aquí, y esto es suficiente»."},{"s":577.86,"e":586.12,"t":"Elige hoy una actividad simple, como lavar los platos o tomar una bebida caliente, y hazla con toda tu atención."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-aqui-y-ahora",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 11.55,
+      "t": "Hoy vamos a volver a casa: al aquí y al ahora."
+    },
+    {
+      "s": 12.35,
+      "e": 16.28,
+      "t": "¿Te pasó alguna vez llegar a un lugar sin recordar el camino?"
+    },
+    {
+      "s": 17.23,
+      "e": 20.57,
+      "t": "¿O terminar un plato de comida sin haberlo saboreado?"
+    },
+    {
+      "s": 21.52,
+      "e": 24.15,
+      "t": "Es lo que llamamos piloto automático."
+    },
+    {
+      "s": 24.95,
+      "e": 27.95,
+      "t": "El cuerpo está en un lugar, y la mente en otro."
+    },
+    {
+      "s": 28.75,
+      "e": 34.02,
+      "t": "Pasamos gran parte del día así: repasando el pasado o ensayando el futuro."
+    },
+    {
+      "s": 34.82,
+      "e": 40.24,
+      "t": "Y mientras tanto, el presente, que es donde de verdad ocurre la vida, pasa de largo."
+    },
+    {
+      "s": 43.24,
+      "e": 48.48,
+      "t": "Una frase de la tradición zen lo dice de forma muy simple: cuando camines, camina."
+    },
+    {
+      "s": 49.28,
+      "e": 50.84,
+      "t": "Cuando comas, come."
+    },
+    {
+      "s": 51.64,
+      "e": 54.8,
+      "t": "Hoy vamos a practicar eso: estar donde estamos."
+    },
+    {
+      "s": 57.8,
+      "e": 58.93,
+      "t": "Acomódate."
+    },
+    {
+      "s": 59.73,
+      "e": 61.12,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 65.12,
+      "e": 67.35,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 68.7,
+      "e": 69.64,
+      "t": "y suelta."
+    },
+    {
+      "s": 73.64,
+      "e": 76.6,
+      "t": "Empieza preguntándote: ¿dónde estoy ahora?"
+    },
+    {
+      "s": 77.55,
+      "e": 78.73,
+      "t": "No en tu mente."
+    },
+    {
+      "s": 79.53,
+      "e": 80.52,
+      "t": "En tu cuerpo."
+    },
+    {
+      "s": 81.32,
+      "e": 82.54,
+      "t": "En este lugar."
+    },
+    {
+      "s": 83.34,
+      "e": 85.6,
+      "t": "Siente el apoyo bajo tu cuerpo."
+    },
+    {
+      "s": 86.4,
+      "e": 88.15,
+      "t": "La temperatura del aire."
+    },
+    {
+      "s": 88.95,
+      "e": 90.79,
+      "t": "La posición de tus manos."
+    },
+    {
+      "s": 139.09,
+      "e": 143.58,
+      "t": "Vamos a recorrer los sentidos, uno por uno, para anclarnos en el presente."
+    },
+    {
+      "s": 144.38,
+      "e": 145.94,
+      "t": "Primero, el oído."
+    },
+    {
+      "s": 146.74,
+      "e": 150.16,
+      "t": "Escucha el sonido más lejano que puedas percibir."
+    },
+    {
+      "s": 174.31,
+      "e": 176.25,
+      "t": "Y ahora, el más cercano."
+    },
+    {
+      "s": 177.05,
+      "e": 179.38,
+      "t": "Quizás tu propia respiración."
+    },
+    {
+      "s": 227.68,
+      "e": 228.65,
+      "t": "El tacto."
+    },
+    {
+      "s": 229.45,
+      "e": 232.29,
+      "t": "Nota el contacto de la ropa sobre la piel."
+    },
+    {
+      "s": 233.09,
+      "e": 234.62,
+      "t": "El peso de las manos."
+    },
+    {
+      "s": 235.42,
+      "e": 236.8,
+      "t": "El aire en la cara."
+    },
+    {
+      "s": 285.1,
+      "e": 286.11,
+      "t": "El olfato."
+    },
+    {
+      "s": 286.91,
+      "e": 288.87,
+      "t": "¿Hay algún aroma en el aire?"
+    },
+    {
+      "s": 289.82,
+      "e": 291.54,
+      "t": "Aunque sea muy sutil."
+    },
+    {
+      "s": 315.69,
+      "e": 316.58,
+      "t": "El gusto."
+    },
+    {
+      "s": 317.38,
+      "e": 320.32,
+      "t": "Nota el sabor de tu boca en este momento."
+    },
+    {
+      "s": 344.47,
+      "e": 348.0,
+      "t": "Y la respiración, que ocurre ahora, y ahora, y ahora."
+    },
+    {
+      "s": 420.45,
+      "e": 425.09,
+      "t": "Cada vez que la mente viaje al pasado o al futuro, vuelve a un sentido."
+    },
+    {
+      "s": 425.89,
+      "e": 427.87,
+      "t": "El que tengas más a mano."
+    },
+    {
+      "s": 428.67,
+      "e": 430.49,
+      "t": "Es tu atajo al presente."
+    },
+    {
+      "s": 502.94,
+      "e": 504.99,
+      "t": "Descansa en este momento."
+    },
+    {
+      "s": 505.79,
+      "e": 508.05,
+      "t": "No hace falta que sea especial."
+    },
+    {
+      "s": 508.85,
+      "e": 511.75,
+      "t": "Este momento, tal como es, es suficiente."
+    },
+    {
+      "s": 560.05,
+      "e": 561.37,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 564.37,
+      "e": 567.0,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 567.8,
+      "e": 571.98,
+      "t": "Mira el lugar donde estás, con atención, como si acabaras de llegar."
+    },
+    {
+      "s": 573.98,
+      "e": 577.71,
+      "t": "La frase para hoy es: «estoy aquí, y esto es suficiente»."
+    },
+    {
+      "s": 578.51,
+      "e": 585.93,
+      "t": "Elige hoy una actividad simple, como lavar los platos o tomar una bebida caliente, y hazla con toda tu atención."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

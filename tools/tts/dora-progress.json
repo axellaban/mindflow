@@ -209,9 +209,24 @@
       "audio_sha256": "d576bdd0baf2f9984d42539af423eee7f79c0275f2f7792872731561621dd75d",
       "captions_sha256": "20d08214c065a546ef4b981915297f7ee40e6b4a8be2a551ea1512547dc08680",
       "version": "2cd204d7511e"
+    },
+    "pausa-aceptacion": {
+      "audio_sha256": "61414cc7a4526ad4a0fa3e16da698ef69960ed439bc2a3a8ec98fed4878c912b",
+      "captions_sha256": "4c4b8cbc6e00cbb699287494a6c6a07e6a403a49a61f6b1c354dccc9af1ba5b6",
+      "version": "5fde7fc3dd8a"
+    },
+    "pausa-amabilidad": {
+      "audio_sha256": "dc19f2c74003e3a7bf17ebd6261b1406febd7b47c5afbbca2fbe9d431a8d49ee",
+      "captions_sha256": "30bdc8eacb7ba9d6764360b91c88a04c28d598afd17dd8eb8b9feb0b0c166435",
+      "version": "874e65b174d9"
+    },
+    "pausa-aqui-y-ahora": {
+      "audio_sha256": "920addcfc551a31333adeea039b437fe7dc13a47c7546f7710a292befc9bf705",
+      "captions_sha256": "f5240e1138e965534fa113d757f5ba2ac1da7ac201a783bb324c548e70dcc8c8",
+      "version": "aa013709d41a"
     }
   },
-  "completed": 42,
+  "completed": 45,
   "total": 61,
   "audio_complete": false
 }
