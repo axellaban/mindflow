@@ -1,38 +1,17 @@
 """Dora synthesis and phrase captions, reusing the existing session assembler."""
 import hashlib
 import os
-import re
 import tempfile
 from pathlib import Path
 
 import numpy as np
 import render as r
 
-VERSION = 'dora-batches-v1-082'
+VERSION = 'dora-batches-v2-es419'
 r.SR = 24000
 r.PARAGRAPH_GAP = 3.0
 
 
-def phrases(paragraph):
-    parts = r.INLINE_PAUSE_RE.split(re.sub(r'\s+', ' ', paragraph).strip())
-    result = []
-    for i in range(0, len(parts), 2):
-        group = []
-        for sentence, _ in r._split_plain(parts[i]):
-            words = sentence.split()
-            for k in range(0, len(words), 35):
-                piece = ' '.join(words[k:k + 35])
-                if group and len((' '.join(group) + ' ' + piece).split()) > 35:
-                    result.append((' '.join(group), r.SENTENCE_GAP))
-                    group = []
-                group.append(piece)
-        if group:
-            gap = float(parts[i + 1]) if i + 1 < len(parts) else r.PARAGRAPH_GAP
-            result.append((' '.join(group), gap))
-    return result
-
-
-r.split_sentences = phrases
 r.voice_space = lambda audio: audio
 original_bell = r.bell
 
@@ -63,7 +42,7 @@ class Synth:
         cache = r.CACHE_DIR / 'dora' / f'{key}.npy'
         if cache.exists():
             return np.load(cache, allow_pickle=False)
-        samples, rate = self.model.create(spoken, voice='ef_dora', speed=speed, lang='es')
+        samples, rate = self.model.create(spoken, voice='ef_dora', speed=speed, lang='es-419')
         assert rate == r.SR and len(samples) and np.isfinite(samples).all()
         samples = r.trim(np.asarray(samples, dtype=np.float32))
         cache.parent.mkdir(parents=True, exist_ok=True)
