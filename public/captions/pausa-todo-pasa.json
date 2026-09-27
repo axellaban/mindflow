@@ -1,1 +1,222 @@
-{"id":"pausa-todo-pasa","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":13.02,"t":"Hoy vamos a reflexionar sobre una verdad sencilla: todo pasa."},{"s":13.82,"e":20.92,"t":"Hay una historia de un rey que pidió a sus sabios una frase que sirviera para cualquier situación, buena o mala."},{"s":21.72,"e":28.34,"t":"Después de mucho pensar, le entregaron un anillo con una inscripción: «esto también pasará»."},{"s":29.14,"e":32.77,"t":"En los días difíciles, la frase le daba consuelo."},{"s":33.57,"e":39.41,"t":"En los días felices, le recordaba disfrutarlos, porque tampoco durarían para siempre."},{"s":41.31,"e":42.94,"t":"Nada permanece igual."},{"s":43.74,"e":49.82,"t":"Ni el clima, ni las estaciones, ni nuestras emociones, ni nuestros problemas."},{"s":50.62,"e":58.44,"t":"Y cuando lo recordamos, podemos sostener lo difícil con más ligereza, y abrazar lo bueno con más presencia."},{"s":60.34,"e":61.19,"t":"Acomódate."},{"s":61.99,"e":63.13,"t":"Cierra los ojos."},{"s":67.13,"e":69.22,"t":"Haz una respiración profunda…"},{"s":70.57,"e":71.42,"t":"y suelta."},{"s":75.42,"e":77.06,"t":"Observa la respiración."},{"s":77.86,"e":84.03,"t":"Cada inhalación aparece, llega a su punto más alto, y se transforma en exhalación."},{"s":84.83,"e":88.51,"t":"Cada exhalación se vacía, y da paso a la siguiente."},{"s":89.31,"e":90.85,"t":"Nada se queda quieto."},{"s":91.65,"e":93.69,"t":"La respiración es cambio puro."},{"s":158.78,"e":161.12,"t":"Ahora nota las sensaciones del cuerpo."},{"s":161.92,"e":165.1,"t":"Una picazón, un calor, una presión."},{"s":165.9,"e":170.09,"t":"Si te quedas observando una sensación, vas a ver que cambia."},{"s":170.89,"e":174.5,"t":"Se intensifica, se desplaza, se disuelve."},{"s":239.59,"e":241.05,"t":"Escucha los sonidos."},{"s":241.85,"e":244.38,"t":"Aparecen, suenan, y desaparecen."},{"s":245.18,"e":246.5,"t":"Ninguno se queda."},{"s":289.89,"e":292.01,"t":"Ahora observa tus pensamientos."},{"s":292.81,"e":297.68,"t":"Uno llega, se queda un momento, y es reemplazado por otro."},{"s":298.48,"e":300.42,"t":"Como nubes en un día de viento."},{"s":365.51,"e":370.63,"t":"Si hay algo difícil en tu vida en este momento, trae su imagen con suavidad."},{"s":371.43,"e":374.9,"t":"Y dile en silencio: «esto también pasará»."},{"s":375.7,"e":379.87,"t":"No lo dices para negarlo, sino para darle su lugar en el tiempo."},{"s":380.67,"e":383.82,"t":"Es una estación, no el clima de toda tu vida."},{"s":448.91,"e":454.36,"t":"Y si hay algo bueno, algo que disfrutas, trae también su imagen."},{"s":455.16,"e":459.5,"t":"Y dile: «esto también pasará, así que lo disfruto ahora»."},{"s":524.59,"e":526.36,"t":"Vuelve a la respiración."},{"s":527.16,"e":529.35,"t":"Cambiante, viva, presente."},{"s":572.74,"e":574.05,"t":"Vamos terminando."},{"s":578.05,"e":580.86,"t":"Y cuando sea el momento, abre los ojos."},{"s":582.86,"e":586.12,"t":"La frase para hoy es: «esto también pasará»."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-todo-pasa",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 12.65,
+      "t": "Hoy vamos a reflexionar sobre una verdad sencilla: todo pasa."
+    },
+    {
+      "s": 13.45,
+      "e": 20.4,
+      "t": "Hay una historia de un rey que pidió a sus sabios una frase que sirviera para cualquier situación, buena o mala."
+    },
+    {
+      "s": 21.2,
+      "e": 27.0,
+      "t": "Después de mucho pensar, le entregaron un anillo con una inscripción: «esto también pasará»."
+    },
+    {
+      "s": 27.8,
+      "e": 31.23,
+      "t": "En los días difíciles, la frase le daba consuelo."
+    },
+    {
+      "s": 32.03,
+      "e": 37.68,
+      "t": "En los días felices, le recordaba disfrutarlos, porque tampoco durarían para siempre."
+    },
+    {
+      "s": 40.68,
+      "e": 42.46,
+      "t": "Nada permanece igual."
+    },
+    {
+      "s": 43.26,
+      "e": 48.26,
+      "t": "Ni el clima, ni las estaciones, ni nuestras emociones, ni nuestros problemas."
+    },
+    {
+      "s": 49.06,
+      "e": 56.3,
+      "t": "Y cuando lo recordamos, podemos sostener lo difícil con más ligereza, y abrazar lo bueno con más presencia."
+    },
+    {
+      "s": 59.3,
+      "e": 60.43,
+      "t": "Acomódate."
+    },
+    {
+      "s": 61.23,
+      "e": 62.62,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 66.62,
+      "e": 68.85,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 70.2,
+      "e": 71.14,
+      "t": "y suelta."
+    },
+    {
+      "s": 75.14,
+      "e": 76.97,
+      "t": "Observa la respiración."
+    },
+    {
+      "s": 77.77,
+      "e": 83.22,
+      "t": "Cada inhalación aparece, llega a su punto más alto, y se transforma en exhalación."
+    },
+    {
+      "s": 84.02,
+      "e": 87.6,
+      "t": "Cada exhalación se vacía, y da paso a la siguiente."
+    },
+    {
+      "s": 88.4,
+      "e": 89.92,
+      "t": "Nada se queda quieto."
+    },
+    {
+      "s": 90.72,
+      "e": 93.03,
+      "t": "La respiración es cambio puro."
+    },
+    {
+      "s": 158.91,
+      "e": 161.54,
+      "t": "Ahora nota las sensaciones del cuerpo."
+    },
+    {
+      "s": 162.34,
+      "e": 165.08,
+      "t": "Una picazón, un calor, una presión."
+    },
+    {
+      "s": 165.88,
+      "e": 169.87,
+      "t": "Si te quedas observando una sensación, vas a ver que cambia."
+    },
+    {
+      "s": 170.67,
+      "e": 173.73,
+      "t": "Se intensifica, se desplaza, se disuelve."
+    },
+    {
+      "s": 239.61,
+      "e": 241.16,
+      "t": "Escucha los sonidos."
+    },
+    {
+      "s": 241.96,
+      "e": 244.63,
+      "t": "Aparecen, suenan, y desaparecen."
+    },
+    {
+      "s": 245.43,
+      "e": 246.77,
+      "t": "Ninguno se queda."
+    },
+    {
+      "s": 290.69,
+      "e": 292.92,
+      "t": "Ahora observa tus pensamientos."
+    },
+    {
+      "s": 293.72,
+      "e": 297.58,
+      "t": "Uno llega, se queda un momento, y es reemplazado por otro."
+    },
+    {
+      "s": 298.38,
+      "e": 300.64,
+      "t": "Como nubes en un día de viento."
+    },
+    {
+      "s": 366.52,
+      "e": 371.6,
+      "t": "Si hay algo difícil en tu vida en este momento, trae su imagen con suavidad."
+    },
+    {
+      "s": 372.4,
+      "e": 375.13,
+      "t": "Y dile en silencio: «esto también pasará»."
+    },
+    {
+      "s": 375.93,
+      "e": 380.12,
+      "t": "No lo dices para negarlo, sino para darle su lugar en el tiempo."
+    },
+    {
+      "s": 380.92,
+      "e": 383.85,
+      "t": "Es una estación, no el clima de toda tu vida."
+    },
+    {
+      "s": 449.73,
+      "e": 454.02,
+      "t": "Y si hay algo bueno, algo que disfrutas, trae también su imagen."
+    },
+    {
+      "s": 454.82,
+      "e": 458.61,
+      "t": "Y dile: «esto también pasará, así que lo disfruto ahora»."
+    },
+    {
+      "s": 524.49,
+      "e": 526.25,
+      "t": "Vuelve a la respiración."
+    },
+    {
+      "s": 527.05,
+      "e": 529.23,
+      "t": "Cambiante, viva, presente."
+    },
+    {
+      "s": 573.15,
+      "e": 574.47,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 578.47,
+      "e": 581.1,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 583.1,
+      "e": 585.93,
+      "t": "La frase para hoy es: «esto también pasará»."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

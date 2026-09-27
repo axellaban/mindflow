@@ -410,20 +410,26 @@
   "pausa-paciencia": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1153631,
-    "v": "71a97b4171"
+    "bytes": 1114579,
+    "v": "0f7471c87072",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-soltar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1150829,
-    "v": "b1cc0aac34"
+    "bytes": 1105411,
+    "v": "40ae4262329f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-todo-pasa": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1116284,
-    "v": "fec7cc46cb"
+    "bytes": 1073563,
+    "v": "647b0dc57d8a",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "poner-limites": {
     "duration": 480.0,

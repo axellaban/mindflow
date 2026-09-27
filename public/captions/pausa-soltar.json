@@ -1,1 +1,267 @@
-{"id":"pausa-soltar","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":10.81,"t":"Hoy vamos a practicar el arte de soltar."},{"s":11.61,"e":16.46,"t":"Hay una vieja historia sobre cómo se atrapaba a los monos en algunas selvas."},{"s":17.26,"e":21.7,"t":"Se ponía una fruta dentro de un frasco con una boca estrecha."},{"s":22.5,"e":29.26,"t":"El mono metía la mano, agarraba la fruta, y ya no podía sacar el puño cerrado."},{"s":30.06,"e":33.55,"t":"Lo único que tenía que hacer para ser libre era soltar."},{"s":34.35,"e":35.57,"t":"Pero no lo hacía."},{"s":37.47,"e":40.21,"t":"A veces nosotros también nos aferramos."},{"s":41.01,"e":44.26,"t":"A una idea de cómo deberían ser las cosas."},{"s":45.06,"e":46.03,"t":"A un rencor."},{"s":46.83,"e":48.16,"t":"A una preocupación."},{"s":48.96,"e":51.69,"t":"A una versión antigua de nosotros mismos."},{"s":52.49,"e":54.41,"t":"Y ese aferrarse nos atrapa."},{"s":56.31,"e":57.16,"t":"Acomódate."},{"s":57.96,"e":59.11,"t":"Cierra los ojos."},{"s":63.11,"e":66.25,"t":"Cierra las manos en puños, suavemente."},{"s":67.05,"e":69.01,"t":"Siente la tensión de sostener."},{"s":72.01,"e":76.48,"t":"Y ahora, ábrelas despacio, con las palmas hacia arriba."},{"s":77.28,"e":78.8,"t":"Siente la diferencia."},{"s":82.8,"e":87.28,"t":"Deja las manos así, abiertas, durante toda la práctica."},{"s":88.08,"e":89.5,"t":"Un gesto de soltar."},{"s":114.25,"e":116.56,"t":"Lleva la atención a la respiración."},{"s":117.36,"e":122.21,"t":"Y nota algo: para inhalar de nuevo, primero hay que soltar el aire."},{"s":123.01,"e":125.39,"t":"No podemos retenerlo para siempre."},{"s":126.19,"e":129.41,"t":"La respiración es una lección constante de soltar."},{"s":178.9,"e":181.51,"t":"Con cada exhalación, suelta un poco."},{"s":182.31,"e":183.43,"t":"Primero el cuerpo."},{"s":184.23,"e":185.46,"t":"Suelta la frente…"},{"s":186.81,"e":187.74,"t":"los hombros…"},{"s":189.09,"e":189.89,"t":"el abdomen."},{"s":239.38,"e":243.98,"t":"Ahora pregúntate, con honestidad: ¿a qué me estoy aferrando hoy?"},{"s":244.93,"e":251.46,"t":"Quizás a una preocupación, a una expectativa, a una conversación que no fue como querías."},{"s":252.26,"e":254.93,"t":"Deja que aparezca, sin juzgarla."},{"s":304.42,"e":308.56,"t":"Imagina que eso que sostienes está en tus manos abiertas."},{"s":309.36,"e":310.38,"t":"No lo arrojas."},{"s":311.18,"e":312.91,"t":"Solo dejas de apretarlo."},{"s":313.71,"e":318.14,"t":"Con cada exhalación, imagina que se vuelve más liviano."},{"s":318.94,"e":321.37,"t":"Que el viento lo puede llevar cuando quiera."},{"s":395.61,"e":398.57,"t":"Soltar no es olvidar, ni dejar de importar."},{"s":399.37,"e":403.33,"t":"Es dejar de cargar lo que no nos toca cargar en este momento."},{"s":477.56,"e":479.72,"t":"Descansa con las manos abiertas."},{"s":480.52,"e":481.36,"t":"Respirando."},{"s":482.16,"e":483.03,"t":"Soltando."},{"s":557.26,"e":558.57,"t":"Vamos terminando."},{"s":559.37,"e":561.22,"t":"Una respiración profunda."},{"s":565.22,"e":568.04,"t":"Y cuando sea el momento, abre los ojos."},{"s":570.04,"e":576.01,"t":"La frase para hoy es: «suelto lo que no puedo sostener, y me quedo con lo esencial»."},{"s":576.81,"e":586.12,"t":"Si durante el día notas que aprietas algo, las manos, la mandíbula, una idea, recuerda este gesto: abrir."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-soltar",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 11.47,
+      "t": "Hoy vamos a practicar el arte de soltar."
+    },
+    {
+      "s": 12.27,
+      "e": 17.12,
+      "t": "Hay una vieja historia sobre cómo se atrapaba a los monos en algunas selvas."
+    },
+    {
+      "s": 17.92,
+      "e": 21.94,
+      "t": "Se ponía una fruta dentro de un frasco con una boca estrecha."
+    },
+    {
+      "s": 22.74,
+      "e": 28.1,
+      "t": "El mono metía la mano, agarraba la fruta, y ya no podía sacar el puño cerrado."
+    },
+    {
+      "s": 28.9,
+      "e": 32.6,
+      "t": "Lo único que tenía que hacer para ser libre era soltar."
+    },
+    {
+      "s": 33.4,
+      "e": 34.83,
+      "t": "Pero no lo hacía."
+    },
+    {
+      "s": 37.83,
+      "e": 40.63,
+      "t": "A veces nosotros también nos aferramos."
+    },
+    {
+      "s": 41.43,
+      "e": 44.36,
+      "t": "A una idea de cómo deberían ser las cosas."
+    },
+    {
+      "s": 45.16,
+      "e": 46.28,
+      "t": "A un rencor."
+    },
+    {
+      "s": 47.08,
+      "e": 48.58,
+      "t": "A una preocupación."
+    },
+    {
+      "s": 49.38,
+      "e": 52.23,
+      "t": "A una versión antigua de nosotros mismos."
+    },
+    {
+      "s": 53.03,
+      "e": 55.21,
+      "t": "Y ese aferrarse nos atrapa."
+    },
+    {
+      "s": 58.21,
+      "e": 59.34,
+      "t": "Acomódate."
+    },
+    {
+      "s": 60.14,
+      "e": 61.53,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 65.53,
+      "e": 68.17,
+      "t": "Cierra las manos en puños, suavemente."
+    },
+    {
+      "s": 68.97,
+      "e": 71.2,
+      "t": "Siente la tensión de sostener."
+    },
+    {
+      "s": 74.2,
+      "e": 77.95,
+      "t": "Y ahora, ábrelas despacio, con las palmas hacia arriba."
+    },
+    {
+      "s": 78.75,
+      "e": 80.29,
+      "t": "Siente la diferencia."
+    },
+    {
+      "s": 84.29,
+      "e": 88.22,
+      "t": "Deja las manos así, abiertas, durante toda la práctica."
+    },
+    {
+      "s": 89.02,
+      "e": 90.62,
+      "t": "Un gesto de soltar."
+    },
+    {
+      "s": 115.57,
+      "e": 118.04,
+      "t": "Lleva la atención a la respiración."
+    },
+    {
+      "s": 118.84,
+      "e": 123.16,
+      "t": "Y nota algo: para inhalar de nuevo, primero hay que soltar el aire."
+    },
+    {
+      "s": 123.96,
+      "e": 126.22,
+      "t": "No podemos retenerlo para siempre."
+    },
+    {
+      "s": 127.02,
+      "e": 130.44,
+      "t": "La respiración es una lección constante de soltar."
+    },
+    {
+      "s": 180.35,
+      "e": 182.88,
+      "t": "Con cada exhalación, suelta un poco."
+    },
+    {
+      "s": 183.68,
+      "e": 185.03,
+      "t": "Primero el cuerpo."
+    },
+    {
+      "s": 185.83,
+      "e": 187.16,
+      "t": "Suelta la frente…"
+    },
+    {
+      "s": 188.51,
+      "e": 189.43,
+      "t": "los hombros…"
+    },
+    {
+      "s": 190.78,
+      "e": 191.83,
+      "t": "el abdomen."
+    },
+    {
+      "s": 241.74,
+      "e": 245.79,
+      "t": "Ahora pregúntate, con honestidad: ¿a qué me estoy aferrando hoy?"
+    },
+    {
+      "s": 246.74,
+      "e": 252.76,
+      "t": "Quizás a una preocupación, a una expectativa, a una conversación que no fue como querías."
+    },
+    {
+      "s": 253.56,
+      "e": 255.93,
+      "t": "Deja que aparezca, sin juzgarla."
+    },
+    {
+      "s": 305.83,
+      "e": 309.71,
+      "t": "Imagina que eso que sostienes está en tus manos abiertas."
+    },
+    {
+      "s": 310.51,
+      "e": 311.68,
+      "t": "No lo arrojas."
+    },
+    {
+      "s": 312.48,
+      "e": 314.21,
+      "t": "Solo dejas de apretarlo."
+    },
+    {
+      "s": 315.01,
+      "e": 318.75,
+      "t": "Con cada exhalación, imagina que se vuelve más liviano."
+    },
+    {
+      "s": 319.55,
+      "e": 322.02,
+      "t": "Que el viento lo puede llevar cuando quiera."
+    },
+    {
+      "s": 396.88,
+      "e": 399.86,
+      "t": "Soltar no es olvidar, ni dejar de importar."
+    },
+    {
+      "s": 400.66,
+      "e": 404.65,
+      "t": "Es dejar de cargar lo que no nos toca cargar en este momento."
+    },
+    {
+      "s": 479.51,
+      "e": 481.94,
+      "t": "Descansa con las manos abiertas."
+    },
+    {
+      "s": 482.74,
+      "e": 483.8,
+      "t": "Respirando."
+    },
+    {
+      "s": 484.6,
+      "e": 485.59,
+      "t": "Soltando."
+    },
+    {
+      "s": 560.45,
+      "e": 561.77,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 562.57,
+      "e": 564.6,
+      "t": "Una respiración profunda."
+    },
+    {
+      "s": 568.6,
+      "e": 571.23,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 573.23,
+      "e": 578.4,
+      "t": "La frase para hoy es: «suelto lo que no puedo sostener, y me quedo con lo esencial»."
+    },
+    {
+      "s": 579.2,
+      "e": 585.93,
+      "t": "Si durante el día notas que aprietas algo, las manos, la mandíbula, una idea, recuerda este gesto: abrir."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}
