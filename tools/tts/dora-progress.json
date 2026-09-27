@@ -164,9 +164,24 @@
       "audio_sha256": "bfa9c6ccefe032b32f35fa48f2b5df5438b2d70f02325d56bb3aa73b72e124b9",
       "captions_sha256": "ed50c3dabea5170b15ec8116ba6bf8edd8c84aec961797c257703bcdb5e34b9f",
       "version": "0b07b8141b1f"
+    },
+    "gratitud": {
+      "audio_sha256": "7c40da79e2f54df8a89ff604cf52ef1636b35d3a481e7c4eba0bd172cf0322a3",
+      "captions_sha256": "07878b2a8c4399598a8adbf892b004bdadbc1e0d4e2fd4a88ea6dff545ecaed1",
+      "version": "47bb84120aab"
+    },
+    "historia-atacama": {
+      "audio_sha256": "b0da0517dc014b56795055ff29d92dc6aa50afdb78ec5acdae0a589dc15e080d",
+      "captions_sha256": "6f5c86d41c729aaf5fa5c09c48fa29861953084ebd9d3741b4b1949f30d2d0d3",
+      "version": "b4f74ff1cfab"
+    },
+    "historia-biblioteca-lluvia": {
+      "audio_sha256": "af184130cec8e0812419732b5a3bb5de3dd8751b48674a75fa506b63c464b2a3",
+      "captions_sha256": "4a0588e5bf79af751bafe35235fe3888b1fd24d7e0a31abff47765db19b49f75",
+      "version": "8fd605558c1e"
     }
   },
-  "completed": 33,
+  "completed": 36,
   "total": 61,
   "audio_complete": false
 }

@@ -266,20 +266,26 @@
   "gratitud": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1025995,
-    "v": "5ddb88780b"
+    "bytes": 996763,
+    "v": "47bb84120aab",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "historia-atacama": {
-    "duration": 688.53,
+    "duration": 704.53,
     "voice": "luz",
-    "bytes": 2495736,
-    "v": "9fb585510a"
+    "bytes": 2451883,
+    "v": "b4f74ff1cfab",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "historia-biblioteca-lluvia": {
-    "duration": 735.81,
+    "duration": 753.75,
     "voice": "luz",
-    "bytes": 2649447,
-    "v": "57e9736363"
+    "bytes": 2614147,
+    "v": "8fd605558c1e",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "historia-cabana-nieve": {
     "duration": 638.46,

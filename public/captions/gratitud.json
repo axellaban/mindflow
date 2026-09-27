@@ -1,1 +1,252 @@
-{"id":"gratitud","duration":480.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.38,"t":"Bienvenida a esta práctica de gratitud."},{"s":9.18,"e":12.44,"t":"Nuestro cerebro está diseñado para detectar problemas."},{"s":13.24,"e":20.69,"t":"Es un rasgo que nos ayudó a sobrevivir, pero que hoy nos hace pasar por alto muchas cosas buenas que ya están aquí."},{"s":21.49,"e":25.52,"t":"La gratitud es la práctica de mirar también hacia ellas."},{"s":26.32,"e":30.04,"t":"No para negar lo difícil, sino para ver el cuadro completo."},{"s":31.94,"e":32.79,"t":"Acomódate."},{"s":33.59,"e":34.74,"t":"Cierra los ojos."},{"s":38.74,"e":40.82,"t":"Haz una respiración profunda…"},{"s":42.17,"e":43.02,"t":"y suelta."},{"s":47.02,"e":51.47,"t":"Empieza dando gracias por algo muy básico: esta respiración."},{"s":52.27,"e":57.01,"t":"Sin que tengas que pedírselo, tu cuerpo respira por ti, día y noche."},{"s":57.81,"e":59.29,"t":"Siente el aire entrar."},{"s":60.09,"e":61.72,"t":"Siente el aire salir."},{"s":62.52,"e":65.47,"t":"Un regalo que se repite miles de veces al día."},{"s":103.18,"e":104.79,"t":"Ahora piensa en tu cuerpo."},{"s":105.59,"e":107.15,"t":"En todo lo que hace por ti."},{"s":107.95,"e":110.65,"t":"Tus pies, que te llevan de un lado a otro."},{"s":111.45,"e":115.0,"t":"Tus manos, que crean, sostienen, acarician."},{"s":115.8,"e":119.53,"t":"Tu corazón, que no ha dejado de latir ni un segundo."},{"s":120.33,"e":122.72,"t":"Quizás tu cuerpo no sea perfecto."},{"s":123.52,"e":126.45,"t":"Pero está aquí, haciendo lo mejor que puede."},{"s":164.17,"e":169.67,"t":"Trae a la mente algo pequeño y bueno que te haya pasado en los últimos días."},{"s":170.47,"e":176.28,"t":"Un sabor, una risa, un mensaje, una canción, un momento de sol."},{"s":177.08,"e":178.53,"t":"Revívelo con detalle."},{"s":179.33,"e":180.39,"t":"¿Dónde estabas?"},{"s":181.34,"e":182.33,"t":"¿Qué sentías?"},{"s":183.28,"e":186.4,"t":"Y quédate ahí unos segundos más de lo habitual."},{"s":187.2,"e":190.26,"t":"Deja que el recuerdo se asiente en el cuerpo."},{"s":246.84,"e":250.08,"t":"Ahora piensa en una persona por la que sientas gratitud."},{"s":250.88,"e":256.79,"t":"Alguien que te haya ayudado, enseñado, cuidado, o simplemente acompañado."},{"s":257.59,"e":258.95,"t":"Visualiza su cara."},{"s":259.75,"e":261.55,"t":"Y dile en silencio: «gracias»."},{"s":262.35,"e":264.79,"t":"Si quieres, dile también por qué."},{"s":321.36,"e":325.57,"t":"Por último, piensa en algo que suele pasar desapercibido."},{"s":326.37,"e":327.96,"t":"El agua que sale del grifo."},{"s":328.76,"e":330.43,"t":"Un techo sobre tu cabeza."},{"s":331.23,"e":334.07,"t":"Las personas que cultivaron lo que comiste hoy."},{"s":334.87,"e":338.2,"t":"Hay una red enorme de vida que te sostiene cada día."},{"s":375.92,"e":380.31,"t":"Descansa ahora en esta sensación de gratitud, sea grande o pequeña."},{"s":381.11,"e":383.25,"t":"Nota dónde la sientes en el cuerpo."},{"s":439.82,"e":441.13,"t":"Vamos terminando."},{"s":441.93,"e":443.79,"t":"Una respiración profunda."},{"s":447.79,"e":450.6,"t":"Y cuando sea el momento, abre los ojos."},{"s":452.6,"e":460.13,"t":"Te propongo un hábito sencillo: cada noche, antes de dormir, anota tres cosas por las que sientas gratitud."},{"s":460.93,"e":463.53,"t":"Puedes hacerlo en el diario de esta app."},{"s":464.33,"e":467.9,"t":"En pocas semanas, tu mente empezará a buscarlas sola."}],"cues":[{"t":0.4,"type":"bell"},{"t":470.5,"type":"bell"}]}
+{
+  "id": "gratitud",
+  "voice": "luz",
+  "duration": 480.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.45,
+      "t": "Bienvenida a esta práctica de gratitud."
+    },
+    {
+      "s": 9.25,
+      "e": 12.98,
+      "t": "Nuestro cerebro está diseñado para detectar problemas."
+    },
+    {
+      "s": 13.78,
+      "e": 21.24,
+      "t": "Es un rasgo que nos ayudó a sobrevivir, pero que hoy nos hace pasar por alto muchas cosas buenas que ya están aquí."
+    },
+    {
+      "s": 22.04,
+      "e": 25.82,
+      "t": "La gratitud es la práctica de mirar también hacia ellas."
+    },
+    {
+      "s": 26.62,
+      "e": 30.52,
+      "t": "No para negar lo difícil, sino para ver el cuadro completo."
+    },
+    {
+      "s": 33.52,
+      "e": 34.65,
+      "t": "Acomódate."
+    },
+    {
+      "s": 35.45,
+      "e": 36.84,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 40.84,
+      "e": 43.07,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 44.42,
+      "e": 45.36,
+      "t": "y suelta."
+    },
+    {
+      "s": 49.36,
+      "e": 53.48,
+      "t": "Empieza dando gracias por algo muy básico: esta respiración."
+    },
+    {
+      "s": 54.28,
+      "e": 58.77,
+      "t": "Sin que tengas que pedírselo, tu cuerpo respira por ti, día y noche."
+    },
+    {
+      "s": 59.57,
+      "e": 61.18,
+      "t": "Siente el aire entrar."
+    },
+    {
+      "s": 61.98,
+      "e": 63.61,
+      "t": "Siente el aire salir."
+    },
+    {
+      "s": 64.41,
+      "e": 67.91,
+      "t": "Un regalo que se repite miles de veces al día."
+    },
+    {
+      "s": 105.4,
+      "e": 107.24,
+      "t": "Ahora piensa en tu cuerpo."
+    },
+    {
+      "s": 108.04,
+      "e": 109.93,
+      "t": "En todo lo que hace por ti."
+    },
+    {
+      "s": 110.73,
+      "e": 113.36,
+      "t": "Tus pies, que te llevan de un lado a otro."
+    },
+    {
+      "s": 114.16,
+      "e": 117.28,
+      "t": "Tus manos, que crean, sostienen, acarician."
+    },
+    {
+      "s": 118.08,
+      "e": 121.26,
+      "t": "Tu corazón, que no ha dejado de latir ni un segundo."
+    },
+    {
+      "s": 122.06,
+      "e": 124.54,
+      "t": "Quizás tu cuerpo no sea perfecto."
+    },
+    {
+      "s": 125.34,
+      "e": 128.16,
+      "t": "Pero está aquí, haciendo lo mejor que puede."
+    },
+    {
+      "s": 165.65,
+      "e": 170.69,
+      "t": "Trae a la mente algo pequeño y bueno que te haya pasado en los últimos días."
+    },
+    {
+      "s": 171.49,
+      "e": 176.06,
+      "t": "Un sabor, una risa, un mensaje, una canción, un momento de sol."
+    },
+    {
+      "s": 176.86,
+      "e": 178.49,
+      "t": "Revívelo con detalle."
+    },
+    {
+      "s": 179.29,
+      "e": 180.48,
+      "t": "¿Dónde estabas?"
+    },
+    {
+      "s": 181.43,
+      "e": 182.53,
+      "t": "¿Qué sentías?"
+    },
+    {
+      "s": 183.48,
+      "e": 186.47,
+      "t": "Y quédate ahí unos segundos más de lo habitual."
+    },
+    {
+      "s": 187.27,
+      "e": 190.1,
+      "t": "Deja que el recuerdo se asiente en el cuerpo."
+    },
+    {
+      "s": 246.34,
+      "e": 249.93,
+      "t": "Ahora piensa en una persona por la que sientas gratitud."
+    },
+    {
+      "s": 250.73,
+      "e": 255.96,
+      "t": "Alguien que te haya ayudado, enseñado, cuidado, o simplemente acompañado."
+    },
+    {
+      "s": 256.76,
+      "e": 258.22,
+      "t": "Visualiza su cara."
+    },
+    {
+      "s": 259.02,
+      "e": 261.0,
+      "t": "Y dile en silencio: «gracias»."
+    },
+    {
+      "s": 261.8,
+      "e": 263.86,
+      "t": "Si quieres, dile también por qué."
+    },
+    {
+      "s": 320.09,
+      "e": 324.02,
+      "t": "Por último, piensa en algo que suele pasar desapercibido."
+    },
+    {
+      "s": 324.82,
+      "e": 326.72,
+      "t": "El agua que sale del grifo."
+    },
+    {
+      "s": 327.52,
+      "e": 329.53,
+      "t": "Un techo sobre tu cabeza."
+    },
+    {
+      "s": 330.33,
+      "e": 333.53,
+      "t": "Las personas que cultivaron lo que comiste hoy."
+    },
+    {
+      "s": 334.33,
+      "e": 337.94,
+      "t": "Hay una red enorme de vida que te sostiene cada día."
+    },
+    {
+      "s": 375.43,
+      "e": 380.03,
+      "t": "Descansa ahora en esta sensación de gratitud, sea grande o pequeña."
+    },
+    {
+      "s": 380.83,
+      "e": 383.4,
+      "t": "Nota dónde la sientes en el cuerpo."
+    },
+    {
+      "s": 439.64,
+      "e": 440.96,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 441.76,
+      "e": 443.79,
+      "t": "Una respiración profunda."
+    },
+    {
+      "s": 447.79,
+      "e": 450.42,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 452.42,
+      "e": 459.94,
+      "t": "Te propongo un hábito sencillo: cada noche, antes de dormir, anota tres cosas por las que sientas gratitud."
+    },
+    {
+      "s": 460.74,
+      "e": 463.67,
+      "t": "Puedes hacerlo en el diario de esta app."
+    },
+    {
+      "s": 464.47,
+      "e": 467.9,
+      "t": "En pocas semanas, tu mente empezará a buscarlas sola."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 470.5,
+      "type": "bell"
+    }
+  ]
+}
