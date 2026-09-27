@@ -1,1 +1,237 @@
-{"id":"pausa-mente-de-principiante","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":11.18,"t":"Hoy vamos a practicar la mente de principiante."},{"s":11.98,"e":19.96,"t":"Un maestro zen decía que en la mente del principiante hay muchas posibilidades, y en la del experto, muy pocas."},{"s":20.76,"e":25.29,"t":"Cuando creemos que ya sabemos cómo es algo, dejamos de mirarlo."},{"s":26.09,"e":32.24,"t":"Tu calle, tu casa, las personas con las que vives, incluso tu propia respiración."},{"s":33.04,"e":35.8,"t":"Las conocemos tan bien que ya no las vemos."},{"s":37.7,"e":40.44,"t":"Los niños pequeños no tienen ese problema."},{"s":41.24,"e":42.95,"t":"Todo es nuevo para ellos."},{"s":43.75,"e":47.68,"t":"Un charco, una hormiga, el ruido de una puerta."},{"s":48.48,"e":50.58,"t":"Todo merece su atención completa."},{"s":51.38,"e":53.43,"t":"Hoy vamos a intentar mirar así."},{"s":54.23,"e":55.49,"t":"Con ojos nuevos."},{"s":57.39,"e":58.24,"t":"Acomódate."},{"s":59.04,"e":60.19,"t":"Cierra los ojos."},{"s":64.19,"e":66.27,"t":"Haz una respiración profunda…"},{"s":67.62,"e":68.47,"t":"y suelta."},{"s":72.47,"e":77.83,"t":"Ahora, observa tu respiración como si nunca antes hubieras respirado."},{"s":78.63,"e":82.47,"t":"Como si fuera la primera vez que sientes el aire entrar en tu cuerpo."},{"s":83.27,"e":85.93,"t":"¿Dónde empieza exactamente la inhalación?"},{"s":86.88,"e":87.66,"t":"¿Es fresca?"},{"s":88.61,"e":89.18,"t":"¿Tibia?"},{"s":90.13,"e":92.15,"t":"¿Qué partes del cuerpo se mueven?"},{"s":179.23,"e":182.59,"t":"Nota que ninguna respiración es igual a la anterior."},{"s":183.39,"e":188.38,"t":"Algunas son más largas, otras más cortas, algunas más profundas."},{"s":189.18,"e":192.62,"t":"Cada una es única, y no se va a repetir."},{"s":279.7,"e":282.94,"t":"Ahora lleva esa misma curiosidad a tus manos."},{"s":283.74,"e":288.02,"t":"Siéntelas desde dentro, como si fueran un territorio desconocido."},{"s":288.82,"e":292.9,"t":"El calor, el pulso, el hormigueo, el peso."},{"s":350.95,"e":357.58,"t":"Si aparece el pensamiento «esto ya lo sé», o «esto es aburrido», obsérvalo con una sonrisa."},{"s":358.38,"e":360.02,"t":"Es la mente del experto."},{"s":360.82,"e":363.23,"t":"Y vuelve a mirar como principiante."},{"s":450.32,"e":452.71,"t":"Abre ahora la atención a los sonidos."},{"s":453.51,"e":457.45,"t":"Escúchalos como si fueran música de un lugar desconocido."},{"s":458.25,"e":460.35,"t":"Sin nombres, sin juicios."},{"s":461.15,"e":463.21,"t":"Solo sonido, textura, ritmo."},{"s":550.29,"e":551.6,"t":"Vamos terminando."},{"s":555.6,"e":563.22,"t":"Antes de abrir los ojos, proponte algo: vas a mirar lo primero que veas como si fuera la primera vez."},{"s":565.22,"e":567.14,"t":"Y ahora, abre los ojos."},{"s":567.94,"e":569.03,"t":"Mira despacio."},{"s":569.83,"e":570.53,"t":"Descubre."},{"s":572.53,"e":576.1,"t":"La frase para hoy es: «hoy miro con ojos nuevos»."},{"s":576.9,"e":586.12,"t":"Elige algo cotidiano, tu taza, tu calle, la cara de alguien que quieres, y obsérvalo hoy como si lo vieras por primera vez."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-mente-de-principiante",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 11.94,
+      "t": "Hoy vamos a practicar la mente de principiante."
+    },
+    {
+      "s": 12.74,
+      "e": 19.84,
+      "t": "Un maestro zen decía que en la mente del principiante hay muchas posibilidades, y en la del experto, muy pocas."
+    },
+    {
+      "s": 20.64,
+      "e": 24.53,
+      "t": "Cuando creemos que ya sabemos cómo es algo, dejamos de mirarlo."
+    },
+    {
+      "s": 25.33,
+      "e": 30.98,
+      "t": "Tu calle, tu casa, las personas con las que vives, incluso tu propia respiración."
+    },
+    {
+      "s": 31.78,
+      "e": 34.71,
+      "t": "Las conocemos tan bien que ya no las vemos."
+    },
+    {
+      "s": 37.71,
+      "e": 40.7,
+      "t": "Los niños pequeños no tienen ese problema."
+    },
+    {
+      "s": 41.5,
+      "e": 43.31,
+      "t": "Todo es nuevo para ellos."
+    },
+    {
+      "s": 44.11,
+      "e": 47.41,
+      "t": "Un charco, una hormiga, el ruido de una puerta."
+    },
+    {
+      "s": 48.21,
+      "e": 50.66,
+      "t": "Todo merece su atención completa."
+    },
+    {
+      "s": 51.46,
+      "e": 53.89,
+      "t": "Hoy vamos a intentar mirar así."
+    },
+    {
+      "s": 54.69,
+      "e": 56.05,
+      "t": "Con ojos nuevos."
+    },
+    {
+      "s": 59.05,
+      "e": 60.18,
+      "t": "Acomódate."
+    },
+    {
+      "s": 60.98,
+      "e": 62.37,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 66.37,
+      "e": 68.6,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 69.95,
+      "e": 70.89,
+      "t": "y suelta."
+    },
+    {
+      "s": 74.89,
+      "e": 79.65,
+      "t": "Ahora, observa tu respiración como si nunca antes hubieras respirado."
+    },
+    {
+      "s": 80.45,
+      "e": 84.69,
+      "t": "Como si fuera la primera vez que sientes el aire entrar en tu cuerpo."
+    },
+    {
+      "s": 85.49,
+      "e": 88.42,
+      "t": "¿Dónde empieza exactamente la inhalación?"
+    },
+    {
+      "s": 89.37,
+      "e": 90.38,
+      "t": "¿Es fresca?"
+    },
+    {
+      "s": 91.33,
+      "e": 92.07,
+      "t": "¿Tibia?"
+    },
+    {
+      "s": 93.02,
+      "e": 95.25,
+      "t": "¿Qué partes del cuerpo se mueven?"
+    },
+    {
+      "s": 182.65,
+      "e": 186.21,
+      "t": "Nota que ninguna respiración es igual a la anterior."
+    },
+    {
+      "s": 187.01,
+      "e": 191.37,
+      "t": "Algunas son más largas, otras más cortas, algunas más profundas."
+    },
+    {
+      "s": 192.17,
+      "e": 194.9,
+      "t": "Cada una es única, y no se va a repetir."
+    },
+    {
+      "s": 282.3,
+      "e": 285.45,
+      "t": "Ahora lleva esa misma curiosidad a tus manos."
+    },
+    {
+      "s": 286.25,
+      "e": 290.4,
+      "t": "Siéntelas desde dentro, como si fueran un territorio desconocido."
+    },
+    {
+      "s": 291.2,
+      "e": 294.41,
+      "t": "El calor, el pulso, el hormigueo, el peso."
+    },
+    {
+      "s": 352.67,
+      "e": 358.54,
+      "t": "Si aparece el pensamiento «esto ya lo sé», o «esto es aburrido», obsérvalo con una sonrisa."
+    },
+    {
+      "s": 359.34,
+      "e": 361.09,
+      "t": "Es la mente del experto."
+    },
+    {
+      "s": 361.89,
+      "e": 364.36,
+      "t": "Y vuelve a mirar como principiante."
+    },
+    {
+      "s": 451.76,
+      "e": 454.25,
+      "t": "Abre ahora la atención a los sonidos."
+    },
+    {
+      "s": 455.05,
+      "e": 459.01,
+      "t": "Escúchalos como si fueran música de un lugar desconocido."
+    },
+    {
+      "s": 459.81,
+      "e": 461.52,
+      "t": "Sin nombres, sin juicios."
+    },
+    {
+      "s": 462.32,
+      "e": 464.7,
+      "t": "Solo sonido, textura, ritmo."
+    },
+    {
+      "s": 552.1,
+      "e": 553.42,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 557.42,
+      "e": 564.11,
+      "t": "Antes de abrir los ojos, proponte algo: vas a mirar lo primero que veas como si fuera la primera vez."
+    },
+    {
+      "s": 566.11,
+      "e": 568.04,
+      "t": "Y ahora, abre los ojos."
+    },
+    {
+      "s": 568.84,
+      "e": 570.13,
+      "t": "Mira despacio."
+    },
+    {
+      "s": 570.93,
+      "e": 571.87,
+      "t": "Descubre."
+    },
+    {
+      "s": 573.87,
+      "e": 576.93,
+      "t": "La frase para hoy es: «hoy miro con ojos nuevos»."
+    },
+    {
+      "s": 577.73,
+      "e": 585.93,
+      "t": "Elige algo cotidiano, tu taza, tu calle, la cara de alguien que quieres, y obsérvalo hoy como si lo vieras por primera vez."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

@@ -1,1 +1,207 @@
-{"id":"pausa-no-hacer","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":13.18,"t":"Hoy vamos a practicar algo que suele costarnos mucho: no hacer nada."},{"s":13.98,"e":18.31,"t":"Vivimos en una cultura que valora la ocupación constante."},{"s":19.11,"e":23.85,"t":"Llenamos cada minuto libre con el teléfono, con tareas, con planes."},{"s":24.65,"e":31.22,"t":"Y cuando por fin paramos, aparece una culpa extraña, como si descansar fuera perder el tiempo."},{"s":32.02,"e":35.08,"t":"Pero el descanso no es lo opuesto a la productividad."},{"s":35.88,"e":37.11,"t":"Es su fundamento."},{"s":37.91,"e":40.53,"t":"La tierra necesita estaciones de barbecho."},{"s":41.33,"e":43.26,"t":"La música necesita silencios."},{"s":44.06,"e":45.13,"t":"Y tú también."},{"s":47.03,"e":50.31,"t":"Hoy no vamos a mejorar nada, ni a lograr nada."},{"s":51.11,"e":52.46,"t":"Solo vamos a estar."},{"s":54.36,"e":57.2,"t":"Acomódate de la forma más cómoda posible."},{"s":58.0,"e":59.92,"t":"Puedes recostarte si quieres."},{"s":60.72,"e":61.86,"t":"Cierra los ojos."},{"s":65.86,"e":67.95,"t":"Haz una respiración profunda…"},{"s":69.3,"e":70.9,"t":"y suelta con un suspiro."},{"s":74.9,"e":80.97,"t":"Durante esta práctica no tienes que concentrarte en la respiración, ni en nada en particular."},{"s":81.77,"e":84.73,"t":"Si la mente piensa, deja que piense."},{"s":85.53,"e":89.08,"t":"Si el cuerpo quiere moverse un poco, deja que se mueva."},{"s":89.88,"e":91.84,"t":"Solo estás aquí, sin tareas."},{"s":186.03,"e":190.99,"t":"Quizás notes una inquietud, una voz que dice «deberías estar haciendo algo»."},{"s":191.79,"e":196.78,"t":"Obsérvala con cariño, como a un niño que no sabe quedarse quieto."},{"s":197.58,"e":200.52,"t":"Y respóndele: «ahora estoy descansando»."},{"s":294.7,"e":296.2,"t":"Deja que el cuerpo pese."},{"s":297.0,"e":298.81,"t":"Que la cara se afloje."},{"s":299.61,"e":302.94,"t":"Que el tiempo pase sin que tengas que usarlo para nada."},{"s":428.51,"e":431.0,"t":"No hay ningún lugar al que llegar."},{"s":431.8,"e":433.59,"t":"No hay nada que corregir."},{"s":434.39,"e":436.54,"t":"Ya estás donde tienes que estar."},{"s":562.12,"e":564.3,"t":"Vamos terminando, sin prisa."},{"s":568.3,"e":570.79,"t":"Cuando sea el momento, abre los ojos."},{"s":572.79,"e":576.78,"t":"La frase para hoy es: «descansar también es avanzar»."},{"s":577.58,"e":581.02,"t":"Intenta regalarte hoy cinco minutos de no hacer nada."},{"s":581.82,"e":583.61,"t":"Sin teléfono, sin tareas."},{"s":584.41,"e":586.12,"t":"Solo mirar por la ventana."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-no-hacer",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 13.02,
+      "t": "Hoy vamos a practicar algo que suele costarnos mucho: no hacer nada."
+    },
+    {
+      "s": 13.82,
+      "e": 17.84,
+      "t": "Vivimos en una cultura que valora la ocupación constante."
+    },
+    {
+      "s": 18.64,
+      "e": 23.06,
+      "t": "Llenamos cada minuto libre con el teléfono, con tareas, con planes."
+    },
+    {
+      "s": 23.86,
+      "e": 30.01,
+      "t": "Y cuando por fin paramos, aparece una culpa extraña, como si descansar fuera perder el tiempo."
+    },
+    {
+      "s": 30.81,
+      "e": 34.2,
+      "t": "Pero el descanso no es lo opuesto a la productividad."
+    },
+    {
+      "s": 35.0,
+      "e": 36.3,
+      "t": "Es su fundamento."
+    },
+    {
+      "s": 37.1,
+      "e": 40.2,
+      "t": "La tierra necesita estaciones de barbecho."
+    },
+    {
+      "s": 41.0,
+      "e": 43.33,
+      "t": "La música necesita silencios."
+    },
+    {
+      "s": 44.13,
+      "e": 45.29,
+      "t": "Y tú también."
+    },
+    {
+      "s": 48.29,
+      "e": 51.33,
+      "t": "Hoy no vamos a mejorar nada, ni a lograr nada."
+    },
+    {
+      "s": 52.13,
+      "e": 53.81,
+      "t": "Solo vamos a estar."
+    },
+    {
+      "s": 56.81,
+      "e": 59.9,
+      "t": "Acomódate de la forma más cómoda posible."
+    },
+    {
+      "s": 60.7,
+      "e": 62.66,
+      "t": "Puedes recostarte si quieres."
+    },
+    {
+      "s": 63.46,
+      "e": 64.85,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 68.85,
+      "e": 71.08,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 72.43,
+      "e": 74.24,
+      "t": "y suelta con un suspiro."
+    },
+    {
+      "s": 78.24,
+      "e": 84.35,
+      "t": "Durante esta práctica no tienes que concentrarte en la respiración, ni en nada en particular."
+    },
+    {
+      "s": 85.15,
+      "e": 87.63,
+      "t": "Si la mente piensa, deja que piense."
+    },
+    {
+      "s": 88.43,
+      "e": 91.94,
+      "t": "Si el cuerpo quiere moverse un poco, deja que se mueva."
+    },
+    {
+      "s": 92.74,
+      "e": 94.69,
+      "t": "Solo estás aquí, sin tareas."
+    },
+    {
+      "s": 188.45,
+      "e": 193.55,
+      "t": "Quizás notes una inquietud, una voz que dice «deberías estar haciendo algo»."
+    },
+    {
+      "s": 194.35,
+      "e": 198.52,
+      "t": "Obsérvala con cariño, como a un niño que no sabe quedarse quieto."
+    },
+    {
+      "s": 199.32,
+      "e": 202.06,
+      "t": "Y respóndele: «ahora estoy descansando»."
+    },
+    {
+      "s": 295.82,
+      "e": 297.58,
+      "t": "Deja que el cuerpo pese."
+    },
+    {
+      "s": 298.38,
+      "e": 300.02,
+      "t": "Que la cara se afloje."
+    },
+    {
+      "s": 300.82,
+      "e": 304.37,
+      "t": "Que el tiempo pase sin que tengas que usarlo para nada."
+    },
+    {
+      "s": 429.38,
+      "e": 431.61,
+      "t": "No hay ningún lugar al que llegar."
+    },
+    {
+      "s": 432.41,
+      "e": 434.14,
+      "t": "No hay nada que corregir."
+    },
+    {
+      "s": 434.94,
+      "e": 437.1,
+      "t": "Ya estás donde tienes que estar."
+    },
+    {
+      "s": 562.11,
+      "e": 564.19,
+      "t": "Vamos terminando, sin prisa."
+    },
+    {
+      "s": 568.19,
+      "e": 570.69,
+      "t": "Cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 572.69,
+      "e": 576.19,
+      "t": "La frase para hoy es: «descansar también es avanzar»."
+    },
+    {
+      "s": 576.99,
+      "e": 580.68,
+      "t": "Intenta regalarte hoy cinco minutos de no hacer nada."
+    },
+    {
+      "s": 581.48,
+      "e": 583.36,
+      "t": "Sin teléfono, sin tareas."
+    },
+    {
+      "s": 584.16,
+      "e": 585.93,
+      "t": "Solo mirar por la ventana."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

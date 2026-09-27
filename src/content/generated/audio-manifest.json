@@ -386,20 +386,26 @@
   "pausa-lo-pequeno": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1102482,
-    "v": "a4c76a2923"
+    "bytes": 1078531,
+    "v": "2197f93e5c5d",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-mente-de-principiante": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1130196,
-    "v": "73f0499e2e"
+    "bytes": 1084987,
+    "v": "dc910e94d849",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-no-hacer": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1021698,
-    "v": "f8c99cae22"
+    "bytes": 997627,
+    "v": "b8ec8326e434",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-paciencia": {
     "duration": 600.0,

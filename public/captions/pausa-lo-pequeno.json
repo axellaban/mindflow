@@ -1,1 +1,262 @@
-{"id":"pausa-lo-pequeno","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":10.78,"t":"Hoy vamos a hablar de las pequeñas cosas."},{"s":11.58,"e":18.09,"t":"Nuestro cerebro es como el velcro para las experiencias negativas, y como el teflón para las positivas."},{"s":18.89,"e":21.05,"t":"Lo malo se nos pega con facilidad."},{"s":21.85,"e":25.81,"t":"Lo bueno, en cambio, resbala y se olvida."},{"s":26.61,"e":28.48,"t":"No es un defecto personal."},{"s":29.28,"e":31.78,"t":"Es cómo evolucionamos para sobrevivir."},{"s":32.58,"e":35.87,"t":"Pero la buena noticia es que podemos entrenarlo."},{"s":37.77,"e":40.59,"t":"La práctica de hoy consiste en saborear."},{"s":41.39,"e":46.62,"t":"Detenernos en los pequeños momentos buenos el tiempo suficiente para que dejen huella."},{"s":47.42,"e":49.47,"t":"Unos segundos más de lo habitual."},{"s":51.37,"e":52.22,"t":"Acomódate."},{"s":53.02,"e":54.17,"t":"Cierra los ojos."},{"s":58.17,"e":59.4,"t":"Respira profundo…"},{"s":60.75,"e":61.59,"t":"y suelta."},{"s":65.59,"e":70.17,"t":"Empieza por algo pequeño y bueno que está ocurriendo ahora mismo."},{"s":70.97,"e":72.91,"t":"Quizás el alivio de sentarte."},{"s":73.71,"e":75.56,"t":"El aire que entra con facilidad."},{"s":76.36,"e":78.22,"t":"Un lugar tranquilo donde estar."},{"s":79.02,"e":79.98,"t":"Quédate ahí."},{"s":80.78,"e":83.41,"t":"Deja que la sensación se expanda."},{"s":138.14,"e":142.98,"t":"Ahora trae a la mente un momento pequeño y agradable de estos días."},{"s":143.78,"e":145.86,"t":"No tiene que ser extraordinario."},{"s":146.66,"e":147.87,"t":"El olor del café."},{"s":148.67,"e":149.86,"t":"El sol en la cara."},{"s":150.66,"e":151.64,"t":"Una canción."},{"s":152.44,"e":154.06,"t":"Un mensaje inesperado."},{"s":154.86,"e":156.64,"t":"Una sonrisa de alguien."},{"s":157.44,"e":158.71,"t":"Elige uno."},{"s":186.08,"e":188.16,"t":"Revívelo con todos los sentidos."},{"s":188.96,"e":189.8,"t":"¿Qué veías?"},{"s":190.75,"e":191.86,"t":"¿Qué escuchabas?"},{"s":192.81,"e":194.54,"t":"¿Qué sentías en el cuerpo?"},{"s":249.27,"e":252.99,"t":"Y ahora, quédate con esa sensación durante un rato."},{"s":253.79,"e":260.05,"t":"Como si la dejaras empapar el cuerpo, igual que el agua empapa una esponja."},{"s":260.85,"e":262.3,"t":"Nota dónde la sientes."},{"s":263.1,"e":266.25,"t":"En el pecho, en la cara, en las manos."},{"s":348.34,"e":351.27,"t":"Si quieres, trae otro momento pequeño."},{"s":352.07,"e":356.26,"t":"Y repite: revivir, saborear, dejar que se asiente."},{"s":438.34,"e":440.71,"t":"Estos momentos siempre estuvieron ahí."},{"s":441.51,"e":446.3,"t":"Solo necesitaban un poco de atención para convertirse en algo nuestro."},{"s":501.02,"e":502.8,"t":"Vuelve a la respiración."},{"s":503.6,"e":508.3,"t":"A la sensación agradable, o neutral, de simplemente estar."},{"s":563.02,"e":564.33,"t":"Vamos terminando."},{"s":568.33,"e":571.14,"t":"Y cuando sea el momento, abre los ojos."},{"s":573.14,"e":578.1,"t":"La frase para hoy es: «lo pequeño también es grande, si lo miro»."},{"s":578.9,"e":586.12,"t":"Te propongo que hoy, cuando algo agradable ocurra, te detengas y lo saborees durante tres respiraciones."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-lo-pequeno",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 11.35,
+      "t": "Hoy vamos a hablar de las pequeñas cosas."
+    },
+    {
+      "s": 12.15,
+      "e": 18.8,
+      "t": "Nuestro cerebro es como el velcro para las experiencias negativas, y como el teflón para las positivas."
+    },
+    {
+      "s": 19.6,
+      "e": 22.18,
+      "t": "Lo malo se nos pega con facilidad."
+    },
+    {
+      "s": 22.98,
+      "e": 26.02,
+      "t": "Lo bueno, en cambio, resbala y se olvida."
+    },
+    {
+      "s": 26.82,
+      "e": 28.83,
+      "t": "No es un defecto personal."
+    },
+    {
+      "s": 29.63,
+      "e": 32.17,
+      "t": "Es cómo evolucionamos para sobrevivir."
+    },
+    {
+      "s": 32.97,
+      "e": 36.26,
+      "t": "Pero la buena noticia es que podemos entrenarlo."
+    },
+    {
+      "s": 39.26,
+      "e": 42.1,
+      "t": "La práctica de hoy consiste en saborear."
+    },
+    {
+      "s": 42.9,
+      "e": 48.49,
+      "t": "Detenernos en los pequeños momentos buenos el tiempo suficiente para que dejen huella."
+    },
+    {
+      "s": 49.29,
+      "e": 51.64,
+      "t": "Unos segundos más de lo habitual."
+    },
+    {
+      "s": 54.64,
+      "e": 55.77,
+      "t": "Acomódate."
+    },
+    {
+      "s": 56.57,
+      "e": 57.96,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 61.96,
+      "e": 63.45,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 64.8,
+      "e": 65.74,
+      "t": "y suelta."
+    },
+    {
+      "s": 69.74,
+      "e": 73.82,
+      "t": "Empieza por algo pequeño y bueno que está ocurriendo ahora mismo."
+    },
+    {
+      "s": 74.62,
+      "e": 76.87,
+      "t": "Quizás el alivio de sentarte."
+    },
+    {
+      "s": 77.67,
+      "e": 80.05,
+      "t": "El aire que entra con facilidad."
+    },
+    {
+      "s": 80.85,
+      "e": 83.07,
+      "t": "Un lugar tranquilo donde estar."
+    },
+    {
+      "s": 83.87,
+      "e": 84.88,
+      "t": "Quédate ahí."
+    },
+    {
+      "s": 85.68,
+      "e": 88.01,
+      "t": "Deja que la sensación se expanda."
+    },
+    {
+      "s": 142.6,
+      "e": 146.91,
+      "t": "Ahora trae a la mente un momento pequeño y agradable de estos días."
+    },
+    {
+      "s": 147.71,
+      "e": 149.94,
+      "t": "No tiene que ser extraordinario."
+    },
+    {
+      "s": 150.74,
+      "e": 152.19,
+      "t": "El olor del café."
+    },
+    {
+      "s": 152.99,
+      "e": 154.39,
+      "t": "El sol en la cara."
+    },
+    {
+      "s": 155.19,
+      "e": 156.36,
+      "t": "Una canción."
+    },
+    {
+      "s": 157.16,
+      "e": 158.99,
+      "t": "Un mensaje inesperado."
+    },
+    {
+      "s": 159.79,
+      "e": 161.62,
+      "t": "Una sonrisa de alguien."
+    },
+    {
+      "s": 162.42,
+      "e": 163.55,
+      "t": "Elige uno."
+    },
+    {
+      "s": 190.84,
+      "e": 193.07,
+      "t": "Revívelo con todos los sentidos."
+    },
+    {
+      "s": 193.87,
+      "e": 194.84,
+      "t": "¿Qué veías?"
+    },
+    {
+      "s": 195.79,
+      "e": 197.11,
+      "t": "¿Qué escuchabas?"
+    },
+    {
+      "s": 198.06,
+      "e": 199.95,
+      "t": "¿Qué sentías en el cuerpo?"
+    },
+    {
+      "s": 254.54,
+      "e": 258.12,
+      "t": "Y ahora, quédate con esa sensación durante un rato."
+    },
+    {
+      "s": 258.92,
+      "e": 263.74,
+      "t": "Como si la dejaras empapar el cuerpo, igual que el agua empapa una esponja."
+    },
+    {
+      "s": 264.54,
+      "e": 266.3,
+      "t": "Nota dónde la sientes."
+    },
+    {
+      "s": 267.1,
+      "e": 269.7,
+      "t": "En el pecho, en la cara, en las manos."
+    },
+    {
+      "s": 351.59,
+      "e": 354.34,
+      "t": "Si quieres, trae otro momento pequeño."
+    },
+    {
+      "s": 355.14,
+      "e": 358.69,
+      "t": "Y repite: revivir, saborear, dejar que se asiente."
+    },
+    {
+      "s": 440.57,
+      "e": 443.11,
+      "t": "Estos momentos siempre estuvieron ahí."
+    },
+    {
+      "s": 443.91,
+      "e": 448.62,
+      "t": "Solo necesitaban un poco de atención para convertirse en algo nuestro."
+    },
+    {
+      "s": 503.21,
+      "e": 504.97,
+      "t": "Vuelve a la respiración."
+    },
+    {
+      "s": 505.77,
+      "e": 509.77,
+      "t": "A la sensación agradable, o neutral, de simplemente estar."
+    },
+    {
+      "s": 564.36,
+      "e": 565.68,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 569.68,
+      "e": 572.31,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 574.31,
+      "e": 578.27,
+      "t": "La frase para hoy es: «lo pequeño también es grande, si lo miro»."
+    },
+    {
+      "s": 579.07,
+      "e": 585.93,
+      "t": "Te propongo que hoy, cuando algo agradable ocurra, te detengas y lo saborees durante tres respiraciones."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}
