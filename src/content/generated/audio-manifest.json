@@ -50,20 +50,26 @@
   "aam-7-tu-practica": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1254119,
-    "v": "793843225a"
+    "bytes": 1212187,
+    "v": "f814313f4136",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "antes-de-algo-importante": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 755409,
-    "v": "67039b8320"
+    "bytes": 719803,
+    "v": "cd9f0c444d10",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "bondad-amorosa": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1341094,
-    "v": "7b78f6cd34"
+    "bytes": 1303219,
+    "v": "be9b0de8445f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "buc-1-piloto-automatico": {
     "duration": 480.0,

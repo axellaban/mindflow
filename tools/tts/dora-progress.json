@@ -29,9 +29,24 @@
       "audio_sha256": "1f79bc0b69fd8107b3f7fb34672743fcd4e198d472c31ef96a44e05e4472adfe",
       "captions_sha256": "e0db9506b1348c38f0a61b68c4aa398957e83b07af3b4c487022d6ac68077939",
       "version": "4204f3539da0"
+    },
+    "aam-7-tu-practica": {
+      "audio_sha256": "c397a65510ed231e39007e61f0a3d708b643b774bf290d4b765446d8e82a4c2a",
+      "captions_sha256": "5605c97053b17e2e6c4f06a363d3a519f0a869c7fd6912238a71427938250a28",
+      "version": "f814313f4136"
+    },
+    "antes-de-algo-importante": {
+      "audio_sha256": "6047400393d31dec045fd3d4c916f6a40689a763da1f195f1e0fe8e3663c81b1",
+      "captions_sha256": "094457fa54bfd43fb9783f8d4ea9d18aa6e2b13694eb5016bcf9963598d3a658",
+      "version": "cd9f0c444d10"
+    },
+    "bondad-amorosa": {
+      "audio_sha256": "3bbe2527d04bc5b8f45c38b8dda378745a0dc7feb46618e6e3e40a36d249eb39",
+      "captions_sha256": "888672f388768e74174a65a873400d5259560ac93cf58687a4d7af445764718a",
+      "version": "be9b0de8445f"
     }
   },
-  "completed": 6,
+  "completed": 9,
   "total": 61,
   "audio_complete": false
 }
