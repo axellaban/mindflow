@@ -194,9 +194,24 @@
       "audio_sha256": "6d3603f5713c54cf26ae3fd7534f4fa8779a3e8c4fe84c5b6346dbb00bb5d408",
       "captions_sha256": "c915c8f313410ca1ad248c580d28eec7fb7e19312ec491d30b918e0a5ccbd09e",
       "version": "99d026c8f719"
+    },
+    "montana": {
+      "audio_sha256": "fe90bcc28d2c213174d4183c9bee7b2eba9514284694784913d65a5aec3dc2e7",
+      "captions_sha256": "ee277e2c9011640176e7014e0dcd3384f0d6ae7fba0b6a0e302100bd2de9fee5",
+      "version": "dc87189515ed"
+    },
+    "nsdr": {
+      "audio_sha256": "f38cad29302a0c400cbca975014ac15df032eed37c5033c1537cacdc478411a6",
+      "captions_sha256": "d2380f726b1085bd6a04a0e7f118c652bbcfcc687969f8aada91bfb784030e81",
+      "version": "f6b46638793e"
+    },
+    "pausa-3-minutos": {
+      "audio_sha256": "d576bdd0baf2f9984d42539af423eee7f79c0275f2f7792872731561621dd75d",
+      "captions_sha256": "20d08214c065a546ef4b981915297f7ee40e6b4a8be2a551ea1512547dc08680",
+      "version": "2cd204d7511e"
     }
   },
-  "completed": 39,
+  "completed": 42,
   "total": 61,
   "audio_complete": false
 }

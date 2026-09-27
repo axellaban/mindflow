@@ -1,1 +1,322 @@
-{"id":"montana","duration":720.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.98,"t":"Bienvenida a la meditación de la montaña."},{"s":8.78,"e":12.09,"t":"Es una práctica clásica para cultivar estabilidad."},{"s":12.89,"e":24.84,"t":"Para esos momentos en que la vida se mueve rápido, cambia el clima a nuestro alrededor, y necesitamos recordar que dentro de nosotros hay algo firme, que no se mueve con cada tormenta."},{"s":26.74,"e":31.83,"t":"Siéntate con la espalda erguida, como si tu propio cuerpo fuera una montaña."},{"s":32.63,"e":35.16,"t":"La base amplia y apoyada."},{"s":35.96,"e":39.69,"t":"La cabeza, como una cumbre, mirando al cielo."},{"s":40.49,"e":44.35,"t":"Deja que los hombros caigan, y las manos descansen."},{"s":48.35,"e":49.49,"t":"Cierra los ojos."},{"s":52.49,"e":53.72,"t":"Respira profundo…"},{"s":55.07,"e":55.92,"t":"y suelta."},{"s":59.92,"e":65.49,"t":"Siente, durante unos momentos, tu respiración y la solidez de tu postura."},{"s":89.13,"e":93.48,"t":"Ahora, en tu imaginación, trae la imagen de una montaña."},{"s":94.28,"e":97.04,"t":"Una que conozcas, o una que inventes."},{"s":97.84,"e":100.9,"t":"La montaña más hermosa que puedas imaginar."},{"s":101.7,"e":103.06,"t":"Observa su forma."},{"s":103.86,"e":106.87,"t":"Su base enorme, enraizada en la tierra."},{"s":107.67,"e":108.62,"t":"Sus laderas."},{"s":109.42,"e":114.02,"t":"Su cumbre, quizás cubierta de nieve, recortada contra el cielo."},{"s":161.31,"e":162.89,"t":"Nota lo inmóvil que es."},{"s":163.69,"e":164.6,"t":"Lo estable."},{"s":165.4,"e":169.51,"t":"Está ahí, simplemente siendo montaña, sin esfuerzo."},{"s":216.81,"e":220.62,"t":"Ahora, deja que esa montaña se vuelva parte de ti."},{"s":221.42,"e":223.85,"t":"Tu cuerpo sentado es la montaña."},{"s":224.65,"e":226.19,"t":"Tu base, sus raíces."},{"s":226.99,"e":228.82,"t":"Tu columna, su eje."},{"s":229.62,"e":231.94,"t":"Tu cabeza, su cumbre elevada."},{"s":232.74,"e":234.54,"t":"Respira como montaña."},{"s":235.34,"e":237.21,"t":"Quieta, digna, presente."},{"s":284.5,"e":288.32,"t":"Imagina cómo pasa el día sobre la montaña."},{"s":289.12,"e":292.81,"t":"Al amanecer, la luz dorada ilumina su cara oriental."},{"s":293.61,"e":296.24,"t":"A mediodía, el sol cae de lleno."},{"s":297.04,"e":299.98,"t":"Por la tarde, las sombras se alargan."},{"s":300.78,"e":303.6,"t":"Y llega la noche, con sus estrellas."},{"s":304.4,"e":307.51,"t":"Y la montaña, simplemente, permanece."},{"s":378.44,"e":379.95,"t":"Pasan las estaciones."},{"s":380.75,"e":385.47,"t":"En primavera, la nieve se derrite y aparecen las flores."},{"s":386.27,"e":387.96,"t":"En verano, el calor."},{"s":388.76,"e":390.65,"t":"En otoño, los colores."},{"s":391.45,"e":395.92,"t":"En invierno, la nieve y el hielo la cubren por completo."},{"s":396.72,"e":398.49,"t":"A veces llegan tormentas."},{"s":399.29,"e":402.14,"t":"Nubes oscuras, rayos, viento feroz."},{"s":402.94,"e":407.73,"t":"A veces la niebla la envuelve tanto que nadie podría adivinar que está ahí."},{"s":408.53,"e":410.22,"t":"Y la montaña permanece."},{"s":411.02,"e":411.73,"t":"Firme."},{"s":412.53,"e":413.25,"t":"Serena."},{"s":414.05,"e":416.47,"t":"Sin que nada de eso cambie su esencia."},{"s":487.41,"e":491.25,"t":"Nuestras vidas también tienen días de sol y días de tormenta."},{"s":492.05,"e":497.71,"t":"Pensamientos que se nublan, emociones que caen como lluvia, épocas de hielo."},{"s":498.51,"e":503.1,"t":"Tú puedes sentirlo todo, y al mismo tiempo, recordar tu base."},{"s":503.9,"e":504.56,"t":"Tu raíz."},{"s":505.36,"e":509.05,"t":"Esa parte de ti que observa el clima sin ser el clima."},{"s":579.98,"e":581.66,"t":"Permanece como la montaña."},{"s":582.46,"e":585.3,"t":"Deja que el clima interior pase sobre ti."},{"s":679.89,"e":681.19,"t":"Vamos terminando."},{"s":681.99,"e":684.58,"t":"Siente tu cuerpo, estable y presente."},{"s":688.58,"e":690.66,"t":"Haz una respiración profunda."},{"s":693.66,"e":696.48,"t":"Y cuando sea el momento, abre los ojos."},{"s":698.48,"e":702.26,"t":"Cuando el día se ponga difícil, recuerda esta imagen."},{"s":703.06,"e":705.36,"t":"Puedes decirte: «soy montaña»."},{"s":706.16,"e":707.9,"t":"Y volver a sentir tu base."}],"cues":[{"t":0.4,"type":"bell"},{"t":710.5,"type":"bell"}]}
+{
+  "id": "montana",
+  "voice": "luz",
+  "duration": 720.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.46,
+      "t": "Bienvenida a la meditación de la montaña."
+    },
+    {
+      "s": 9.26,
+      "e": 12.66,
+      "t": "Es una práctica clásica para cultivar estabilidad."
+    },
+    {
+      "s": 13.46,
+      "e": 25.1,
+      "t": "Para esos momentos en que la vida se mueve rápido, cambia el clima a nuestro alrededor, y necesitamos recordar que dentro de nosotros hay algo firme, que no se mueve con cada tormenta."
+    },
+    {
+      "s": 28.1,
+      "e": 32.97,
+      "t": "Siéntate con la espalda erguida, como si tu propio cuerpo fuera una montaña."
+    },
+    {
+      "s": 33.77,
+      "e": 35.87,
+      "t": "La base amplia y apoyada."
+    },
+    {
+      "s": 36.67,
+      "e": 39.66,
+      "t": "La cabeza, como una cumbre, mirando al cielo."
+    },
+    {
+      "s": 40.46,
+      "e": 43.82,
+      "t": "Deja que los hombros caigan, y las manos descansen."
+    },
+    {
+      "s": 47.82,
+      "e": 49.21,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 52.21,
+      "e": 53.7,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 55.05,
+      "e": 55.99,
+      "t": "y suelta."
+    },
+    {
+      "s": 59.99,
+      "e": 65.0,
+      "t": "Siente, durante unos momentos, tu respiración y la solidez de tu postura."
+    },
+    {
+      "s": 88.95,
+      "e": 92.65,
+      "t": "Ahora, en tu imaginación, trae la imagen de una montaña."
+    },
+    {
+      "s": 93.45,
+      "e": 95.99,
+      "t": "Una que conozcas, o una que inventes."
+    },
+    {
+      "s": 96.79,
+      "e": 100.08,
+      "t": "La montaña más hermosa que puedas imaginar."
+    },
+    {
+      "s": 100.88,
+      "e": 102.36,
+      "t": "Observa su forma."
+    },
+    {
+      "s": 103.16,
+      "e": 105.89,
+      "t": "Su base enorme, enraizada en la tierra."
+    },
+    {
+      "s": 106.69,
+      "e": 107.74,
+      "t": "Sus laderas."
+    },
+    {
+      "s": 108.54,
+      "e": 112.82,
+      "t": "Su cumbre, quizás cubierta de nieve, recortada contra el cielo."
+    },
+    {
+      "s": 160.72,
+      "e": 162.47,
+      "t": "Nota lo inmóvil que es."
+    },
+    {
+      "s": 163.27,
+      "e": 164.28,
+      "t": "Lo estable."
+    },
+    {
+      "s": 165.08,
+      "e": 168.59,
+      "t": "Está ahí, simplemente siendo montaña, sin esfuerzo."
+    },
+    {
+      "s": 216.48,
+      "e": 220.06,
+      "t": "Ahora, deja que esa montaña se vuelva parte de ti."
+    },
+    {
+      "s": 220.86,
+      "e": 223.3,
+      "t": "Tu cuerpo sentado es la montaña."
+    },
+    {
+      "s": 224.1,
+      "e": 225.76,
+      "t": "Tu base, sus raíces."
+    },
+    {
+      "s": 226.56,
+      "e": 228.14,
+      "t": "Tu columna, su eje."
+    },
+    {
+      "s": 228.94,
+      "e": 231.06,
+      "t": "Tu cabeza, su cumbre elevada."
+    },
+    {
+      "s": 231.86,
+      "e": 233.65,
+      "t": "Respira como montaña."
+    },
+    {
+      "s": 234.45,
+      "e": 236.52,
+      "t": "Quieta, digna, presente."
+    },
+    {
+      "s": 284.42,
+      "e": 287.47,
+      "t": "Imagina cómo pasa el día sobre la montaña."
+    },
+    {
+      "s": 288.27,
+      "e": 291.78,
+      "t": "Al amanecer, la luz dorada ilumina su cara oriental."
+    },
+    {
+      "s": 292.58,
+      "e": 294.84,
+      "t": "A mediodía, el sol cae de lleno."
+    },
+    {
+      "s": 295.64,
+      "e": 298.03,
+      "t": "Por la tarde, las sombras se alargan."
+    },
+    {
+      "s": 298.83,
+      "e": 301.39,
+      "t": "Y llega la noche, con sus estrellas."
+    },
+    {
+      "s": 302.19,
+      "e": 305.0,
+      "t": "Y la montaña, simplemente, permanece."
+    },
+    {
+      "s": 376.85,
+      "e": 378.53,
+      "t": "Pasan las estaciones."
+    },
+    {
+      "s": 379.33,
+      "e": 383.02,
+      "t": "En primavera, la nieve se derrite y aparecen las flores."
+    },
+    {
+      "s": 383.82,
+      "e": 385.57,
+      "t": "En verano, el calor."
+    },
+    {
+      "s": 386.37,
+      "e": 388.06,
+      "t": "En otoño, los colores."
+    },
+    {
+      "s": 388.86,
+      "e": 392.43,
+      "t": "En invierno, la nieve y el hielo la cubren por completo."
+    },
+    {
+      "s": 393.23,
+      "e": 395.14,
+      "t": "A veces llegan tormentas."
+    },
+    {
+      "s": 395.94,
+      "e": 398.81,
+      "t": "Nubes oscuras, rayos, viento feroz."
+    },
+    {
+      "s": 399.61,
+      "e": 404.25,
+      "t": "A veces la niebla la envuelve tanto que nadie podría adivinar que está ahí."
+    },
+    {
+      "s": 405.05,
+      "e": 406.96,
+      "t": "Y la montaña permanece."
+    },
+    {
+      "s": 407.76,
+      "e": 408.47,
+      "t": "Firme."
+    },
+    {
+      "s": 409.27,
+      "e": 410.03,
+      "t": "Serena."
+    },
+    {
+      "s": 410.83,
+      "e": 413.48,
+      "t": "Sin que nada de eso cambie su esencia."
+    },
+    {
+      "s": 485.32,
+      "e": 489.32,
+      "t": "Nuestras vidas también tienen días de sol y días de tormenta."
+    },
+    {
+      "s": 490.12,
+      "e": 495.2,
+      "t": "Pensamientos que se nublan, emociones que caen como lluvia, épocas de hielo."
+    },
+    {
+      "s": 496.0,
+      "e": 500.3,
+      "t": "Tú puedes sentirlo todo, y al mismo tiempo, recordar tu base."
+    },
+    {
+      "s": 501.1,
+      "e": 501.99,
+      "t": "Tu raíz."
+    },
+    {
+      "s": 502.79,
+      "e": 506.43,
+      "t": "Esa parte de ti que observa el clima sin ser el clima."
+    },
+    {
+      "s": 578.28,
+      "e": 580.32,
+      "t": "Permanece como la montaña."
+    },
+    {
+      "s": 581.12,
+      "e": 583.87,
+      "t": "Deja que el clima interior pase sobre ti."
+    },
+    {
+      "s": 679.66,
+      "e": 680.98,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 681.78,
+      "e": 684.52,
+      "t": "Siente tu cuerpo, estable y presente."
+    },
+    {
+      "s": 688.52,
+      "e": 690.75,
+      "t": "Haz una respiración profunda."
+    },
+    {
+      "s": 693.75,
+      "e": 696.38,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 698.38,
+      "e": 702.01,
+      "t": "Cuando el día se ponga difícil, recuerda esta imagen."
+    },
+    {
+      "s": 702.81,
+      "e": 705.04,
+      "t": "Puedes decirte: «soy montaña»."
+    },
+    {
+      "s": 705.84,
+      "e": 707.9,
+      "t": "Y volver a sentir tu base."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 710.5,
+      "type": "bell"
+    }
+  ]
+}

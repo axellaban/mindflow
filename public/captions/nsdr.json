@@ -1,1 +1,737 @@
-{"id":"nsdr","duration":1200.0,"voice":"luz","captions":[{"s":4.2,"e":4.75,"t":"Hola."},{"s":5.55,"e":8.66,"t":"Bienvenida a esta práctica de descanso profundo."},{"s":9.46,"e":15.66,"t":"Está inspirada en el yoga nidra, y en lo que hoy se conoce como descanso profundo sin sueño."},{"s":16.46,"e":25.64,"t":"Durante veinte minutos, vas a llevar el cuerpo a un estado de reposo muy profundo, mientras la mente permanece ligeramente consciente."},{"s":26.44,"e":35.63,"t":"Es ideal para recuperar energía a media tarde, después de una mala noche, o cuando necesitas recargar sin dormir una siesta larga."},{"s":37.53,"e":42.88,"t":"Acuéstate boca arriba, sobre una cama, un sofá o una colchoneta."},{"s":43.68,"e":47.84,"t":"Deja los brazos a los lados, con las palmas hacia arriba."},{"s":48.64,"e":51.05,"t":"Separa un poco las piernas."},{"s":51.85,"e":55.32,"t":"Si hace fresco, cúbrete con una manta."},{"s":56.12,"e":60.15,"t":"La temperatura del cuerpo baja durante el descanso profundo."},{"s":65.15,"e":66.35,"t":"Cierra los ojos."},{"s":69.35,"e":71.94,"t":"Haz una inhalación larga por la nariz…"},{"s":73.29,"e":76.98,"t":"y una exhalación todavía más larga por la boca."},{"s":81.98,"e":82.71,"t":"Otra vez."},{"s":83.51,"e":84.18,"t":"Inhala…"},{"s":87.18,"e":90.92,"t":"y exhala despacio, vaciando por completo."},{"s":95.92,"e":97.42,"t":"Una última vez."},{"s":103.42,"e":105.77,"t":"Ahora deja la respiración libre."},{"s":106.57,"e":113.32,"t":"Durante esta práctica, tu única tarea es escuchar mi voz y llevar la atención adonde te indique."},{"s":114.12,"e":116.81,"t":"Si te distraes, simplemente vuelve."},{"s":142.84,"e":148.51,"t":"Vamos a recorrer el cuerpo con rapidez, como una luz que salta de un punto a otro."},{"s":149.31,"e":151.49,"t":"No hace falta relajar nada."},{"s":152.29,"e":155.7,"t":"Solo toca cada punto con la atención, y sigue."},{"s":158.7,"e":160.58,"t":"El pulgar de la mano derecha."},{"s":161.78,"e":162.67,"t":"El índice."},{"s":163.87,"e":164.89,"t":"El dedo medio."},{"s":166.09,"e":166.93,"t":"El anular."},{"s":168.13,"e":168.98,"t":"El meñique."},{"s":169.78,"e":171.18,"t":"La palma de la mano."},{"s":172.38,"e":173.18,"t":"El dorso."},{"s":174.38,"e":175.21,"t":"La muñeca."},{"s":176.41,"e":177.45,"t":"El antebrazo."},{"s":178.65,"e":179.31,"t":"El codo."},{"s":180.51,"e":181.28,"t":"El brazo."},{"s":182.48,"e":183.53,"t":"El hombro derecho."},{"s":184.33,"e":185.17,"t":"La axila."},{"s":186.37,"e":187.74,"t":"El costado derecho."},{"s":188.94,"e":189.68,"t":"La cadera."},{"s":190.88,"e":191.62,"t":"El muslo."},{"s":192.82,"e":193.74,"t":"La rodilla."},{"s":194.94,"e":196.01,"t":"La pantorrilla."},{"s":197.21,"e":198.03,"t":"El tobillo."},{"s":198.83,"e":199.59,"t":"El talón."},{"s":200.79,"e":202.01,"t":"La planta del pie."},{"s":203.21,"e":205.19,"t":"El dedo gordo del pie derecho."},{"s":206.39,"e":207.48,"t":"El segundo dedo."},{"s":208.68,"e":209.52,"t":"El tercero."},{"s":210.72,"e":211.52,"t":"El cuarto."},{"s":212.72,"e":213.58,"t":"El quinto."},{"s":216.58,"e":218.68,"t":"Ahora el lado izquierdo."},{"s":219.48,"e":222.02,"t":"El pulgar de la mano izquierda."},{"s":223.22,"e":224.11,"t":"El índice."},{"s":225.31,"e":226.32,"t":"El dedo medio."},{"s":227.52,"e":228.37,"t":"El anular."},{"s":229.57,"e":230.42,"t":"El meñique."},{"s":231.22,"e":232.08,"t":"La palma."},{"s":233.28,"e":234.08,"t":"El dorso."},{"s":235.28,"e":236.1,"t":"La muñeca."},{"s":237.3,"e":238.35,"t":"El antebrazo."},{"s":239.55,"e":240.21,"t":"El codo."},{"s":241.41,"e":242.18,"t":"El brazo."},{"s":243.38,"e":244.8,"t":"El hombro izquierdo."},{"s":245.6,"e":246.43,"t":"La axila."},{"s":247.63,"e":249.22,"t":"El costado izquierdo."},{"s":250.42,"e":251.16,"t":"La cadera."},{"s":252.36,"e":253.1,"t":"El muslo."},{"s":254.3,"e":255.22,"t":"La rodilla."},{"s":256.42,"e":257.48,"t":"La pantorrilla."},{"s":258.68,"e":259.5,"t":"El tobillo."},{"s":260.3,"e":261.07,"t":"El talón."},{"s":262.27,"e":263.49,"t":"La planta del pie."},{"s":264.69,"e":267.02,"t":"El dedo gordo del pie izquierdo."},{"s":268.22,"e":269.31,"t":"El segundo dedo."},{"s":270.51,"e":271.35,"t":"El tercero."},{"s":272.55,"e":273.35,"t":"El cuarto."},{"s":274.55,"e":275.41,"t":"El quinto."},{"s":278.41,"e":279.23,"t":"La espalda."},{"s":280.43,"e":281.52,"t":"Los omóplatos."},{"s":282.72,"e":285.87,"t":"La columna, de abajo hacia arriba."},{"s":287.37,"e":288.07,"t":"La nuca."},{"s":289.27,"e":291.2,"t":"La parte de atrás de la cabeza."},{"s":292.0,"e":293.03,"t":"La coronilla."},{"s":294.23,"e":295.08,"t":"La frente."},{"s":296.28,"e":297.45,"t":"La ceja derecha."},{"s":298.65,"e":300.01,"t":"La ceja izquierda."},{"s":301.21,"e":303.03,"t":"El espacio entre las cejas."},{"s":303.83,"e":304.86,"t":"El ojo derecho."},{"s":306.06,"e":307.41,"t":"El ojo izquierdo."},{"s":308.61,"e":309.28,"t":"La nariz."},{"s":310.48,"e":311.86,"t":"La mejilla derecha."},{"s":313.06,"e":314.71,"t":"La mejilla izquierda."},{"s":315.91,"e":317.28,"t":"El labio superior."},{"s":318.48,"e":320.31,"t":"El labio inferior."},{"s":321.51,"e":322.51,"t":"La barbilla."},{"s":323.31,"e":324.21,"t":"La garganta."},{"s":325.41,"e":326.17,"t":"El pecho."},{"s":327.37,"e":328.23,"t":"El abdomen."},{"s":329.43,"e":330.31,"t":"El ombligo."},{"s":331.51,"e":332.29,"t":"La pelvis."},{"s":335.29,"e":337.24,"t":"Todo el lado derecho del cuerpo."},{"s":339.24,"e":341.2,"t":"Todo el lado izquierdo."},{"s":343.2,"e":345.07,"t":"Todo el cuerpo, a la vez."},{"s":397.14,"e":401.51,"t":"Siente el cuerpo entero, quieto, pesado, respirando solo."},{"s":427.54,"e":431.62,"t":"Ahora lleva la atención a la respiración, justo en el abdomen."},{"s":432.42,"e":433.61,"t":"No la controles."},{"s":434.41,"e":435.61,"t":"Solo obsérvala."},{"s":436.41,"e":443.31,"t":"Vamos a contar hacia atrás, desde veintisiete hasta uno, una cuenta por cada respiración completa."},{"s":444.11,"e":447.96,"t":"Al inhalar piensa el número, al exhalar lo sueltas."},{"s":448.76,"e":452.17,"t":"Si pierdes la cuenta, vuelve a empezar desde veintisiete."},{"s":452.97,"e":454.82,"t":"No importa cuántas veces."},{"s":611.02,"e":613.43,"t":"Suelta la cuenta, estés donde estés."},{"s":639.46,"e":642.48,"t":"Ahora vamos a explorar sensaciones opuestas."},{"s":643.28,"e":645.34,"t":"Siente el cuerpo pesado."},{"s":646.14,"e":647.16,"t":"Muy pesado."},{"s":647.96,"e":650.73,"t":"Como si fuera de plomo, hundiéndose en el suelo."},{"s":676.77,"e":679.45,"t":"Y ahora, siente el cuerpo ligero."},{"s":680.25,"e":681.26,"t":"Muy ligero."},{"s":682.06,"e":684.57,"t":"Como una pluma, casi flotando."},{"s":710.6,"e":711.21,"t":"Pesado."},{"s":714.21,"e":715.0,"t":"Y ligero."},{"s":718.0,"e":720.77,"t":"Pesado y ligero al mismo tiempo."},{"s":772.84,"e":774.25,"t":"Ahora siente calor."},{"s":775.05,"e":782.06,"t":"Imagina que estás bajo un sol de verano, tibio, agradable, sobre toda la piel."},{"s":808.09,"e":809.42,"t":"Y ahora frescura."},{"s":810.22,"e":815.16,"t":"Una brisa suave, fresca, como al lado del mar por la noche."},{"s":841.19,"e":841.78,"t":"Calor."},{"s":844.78,"e":845.57,"t":"Frescura."},{"s":848.57,"e":850.49,"t":"Las dos sensaciones a la vez."},{"s":902.56,"e":905.3,"t":"Descansa ahora en la pura sensación de estar."},{"s":906.1,"e":909.08,"t":"Sin nombre, sin tarea, sin historia."},{"s":909.88,"e":911.17,"t":"Solo presencia."},{"s":911.97,"e":913.37,"t":"Solo respiración."},{"s":914.17,"e":915.28,"t":"Solo descanso."},{"s":1123.54,"e":1126.6,"t":"Poco a poco, empieza a regresar."},{"s":1129.6,"e":1133.5,"t":"Nota la respiración, que se vuelve un poco más profunda."},{"s":1136.5,"e":1138.96,"t":"Siente el suelo bajo el cuerpo."},{"s":1139.76,"e":1141.58,"t":"Los sonidos de la habitación."},{"s":1144.58,"e":1147.99,"t":"Mueve suavemente los dedos de las manos y de los pies."},{"s":1150.99,"e":1154.25,"t":"Estírate como lo harías al despertar por la mañana."},{"s":1158.25,"e":1165.1,"t":"Cuando estés en condiciones, gira hacia un costado, y quédate ahí unos segundos antes de incorporarte."},{"s":1170.1,"e":1172.98,"t":"Y cuando sea el momento, abre los ojos."},{"s":1174.98,"e":1178.57,"t":"Regalarse un descanso profundo no es perder el tiempo."},{"s":1179.37,"e":1183.91,"t":"Es la forma en que el cuerpo y la mente recuperan su energía."},{"s":1184.71,"e":1187.9,"t":"Que el resto de tu día sea más ligero."}],"cues":[{"t":0.4,"type":"bell"},{"t":1190.5,"type":"bell"}]}
+{
+  "id": "nsdr",
+  "voice": "luz",
+  "duration": 1200.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 9.52,
+      "t": "Bienvenida a esta práctica de descanso profundo."
+    },
+    {
+      "s": 10.32,
+      "e": 17.31,
+      "t": "Está inspirada en el yoga nidra, y en lo que hoy se conoce como descanso profundo sin sueño."
+    },
+    {
+      "s": 18.11,
+      "e": 28.3,
+      "t": "Durante veinte minutos, vas a llevar el cuerpo a un estado de reposo muy profundo, mientras la mente permanece ligeramente consciente."
+    },
+    {
+      "s": 29.1,
+      "e": 38.89,
+      "t": "Es ideal para recuperar energía a media tarde, después de una mala noche, o cuando necesitas recargar sin dormir una siesta larga."
+    },
+    {
+      "s": 41.89,
+      "e": 46.83,
+      "t": "Acuéstate boca arriba, sobre una cama, un sofá o una colchoneta."
+    },
+    {
+      "s": 47.63,
+      "e": 51.78,
+      "t": "Deja los brazos a los lados, con las palmas hacia arriba."
+    },
+    {
+      "s": 52.58,
+      "e": 54.81,
+      "t": "Separa un poco las piernas."
+    },
+    {
+      "s": 55.61,
+      "e": 58.61,
+      "t": "Si hace fresco, cúbrete con una manta."
+    },
+    {
+      "s": 59.41,
+      "e": 64.1,
+      "t": "La temperatura del cuerpo baja durante el descanso profundo."
+    },
+    {
+      "s": 69.1,
+      "e": 70.58,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 73.58,
+      "e": 76.54,
+      "t": "Haz una inhalación larga por la nariz…"
+    },
+    {
+      "s": 77.89,
+      "e": 81.55,
+      "t": "y una exhalación todavía más larga por la boca."
+    },
+    {
+      "s": 86.55,
+      "e": 87.56,
+      "t": "Otra vez."
+    },
+    {
+      "s": 88.36,
+      "e": 89.15,
+      "t": "Inhala…"
+    },
+    {
+      "s": 92.15,
+      "e": 95.56,
+      "t": "y exhala despacio, vaciando por completo."
+    },
+    {
+      "s": 100.56,
+      "e": 102.0,
+      "t": "Una última vez."
+    },
+    {
+      "s": 108.0,
+      "e": 110.6,
+      "t": "Ahora deja la respiración libre."
+    },
+    {
+      "s": 111.4,
+      "e": 118.42,
+      "t": "Durante esta práctica, tu única tarea es escuchar mi voz y llevar la atención adonde te indique."
+    },
+    {
+      "s": 119.22,
+      "e": 122.09,
+      "t": "Si te distraes, simplemente vuelve."
+    },
+    {
+      "s": 146.96,
+      "e": 152.82,
+      "t": "Vamos a recorrer el cuerpo con rapidez, como una luz que salta de un punto a otro."
+    },
+    {
+      "s": 153.62,
+      "e": 156.09,
+      "t": "No hace falta relajar nada."
+    },
+    {
+      "s": 156.89,
+      "e": 160.49,
+      "t": "Solo toca cada punto con la atención, y sigue."
+    },
+    {
+      "s": 163.49,
+      "e": 165.86,
+      "t": "El pulgar de la mano derecha."
+    },
+    {
+      "s": 167.06,
+      "e": 168.18,
+      "t": "El índice."
+    },
+    {
+      "s": 169.38,
+      "e": 170.71,
+      "t": "El dedo medio."
+    },
+    {
+      "s": 171.91,
+      "e": 172.84,
+      "t": "El anular."
+    },
+    {
+      "s": 174.04,
+      "e": 175.16,
+      "t": "El meñique."
+    },
+    {
+      "s": 175.96,
+      "e": 177.67,
+      "t": "La palma de la mano."
+    },
+    {
+      "s": 178.87,
+      "e": 179.91,
+      "t": "El dorso."
+    },
+    {
+      "s": 181.11,
+      "e": 182.2,
+      "t": "La muñeca."
+    },
+    {
+      "s": 183.4,
+      "e": 184.68,
+      "t": "El antebrazo."
+    },
+    {
+      "s": 185.88,
+      "e": 186.75,
+      "t": "El codo."
+    },
+    {
+      "s": 187.95,
+      "e": 188.95,
+      "t": "El brazo."
+    },
+    {
+      "s": 190.15,
+      "e": 191.71,
+      "t": "El hombro derecho."
+    },
+    {
+      "s": 192.51,
+      "e": 193.52,
+      "t": "La axila."
+    },
+    {
+      "s": 194.72,
+      "e": 196.48,
+      "t": "El costado derecho."
+    },
+    {
+      "s": 197.68,
+      "e": 198.68,
+      "t": "La cadera."
+    },
+    {
+      "s": 199.88,
+      "e": 200.86,
+      "t": "El muslo."
+    },
+    {
+      "s": 202.06,
+      "e": 203.17,
+      "t": "La rodilla."
+    },
+    {
+      "s": 204.37,
+      "e": 205.68,
+      "t": "La pantorrilla."
+    },
+    {
+      "s": 206.88,
+      "e": 208.0,
+      "t": "El tobillo."
+    },
+    {
+      "s": 208.8,
+      "e": 209.79,
+      "t": "El talón."
+    },
+    {
+      "s": 210.99,
+      "e": 212.52,
+      "t": "La planta del pie."
+    },
+    {
+      "s": 213.72,
+      "e": 216.15,
+      "t": "El dedo gordo del pie derecho."
+    },
+    {
+      "s": 217.35,
+      "e": 218.84,
+      "t": "El segundo dedo."
+    },
+    {
+      "s": 220.04,
+      "e": 221.21,
+      "t": "El tercero."
+    },
+    {
+      "s": 222.41,
+      "e": 223.42,
+      "t": "El cuarto."
+    },
+    {
+      "s": 224.62,
+      "e": 225.59,
+      "t": "El quinto."
+    },
+    {
+      "s": 228.59,
+      "e": 230.47,
+      "t": "Ahora el lado izquierdo."
+    },
+    {
+      "s": 231.27,
+      "e": 233.7,
+      "t": "El pulgar de la mano izquierda."
+    },
+    {
+      "s": 234.9,
+      "e": 236.02,
+      "t": "El índice."
+    },
+    {
+      "s": 237.22,
+      "e": 238.55,
+      "t": "El dedo medio."
+    },
+    {
+      "s": 239.75,
+      "e": 240.68,
+      "t": "El anular."
+    },
+    {
+      "s": 241.88,
+      "e": 243.0,
+      "t": "El meñique."
+    },
+    {
+      "s": 243.8,
+      "e": 244.74,
+      "t": "La palma."
+    },
+    {
+      "s": 245.94,
+      "e": 246.98,
+      "t": "El dorso."
+    },
+    {
+      "s": 248.18,
+      "e": 249.27,
+      "t": "La muñeca."
+    },
+    {
+      "s": 250.47,
+      "e": 251.75,
+      "t": "El antebrazo."
+    },
+    {
+      "s": 252.95,
+      "e": 253.82,
+      "t": "El codo."
+    },
+    {
+      "s": 255.02,
+      "e": 256.02,
+      "t": "El brazo."
+    },
+    {
+      "s": 257.22,
+      "e": 258.83,
+      "t": "El hombro izquierdo."
+    },
+    {
+      "s": 259.63,
+      "e": 260.64,
+      "t": "La axila."
+    },
+    {
+      "s": 261.84,
+      "e": 263.62,
+      "t": "El costado izquierdo."
+    },
+    {
+      "s": 264.82,
+      "e": 265.82,
+      "t": "La cadera."
+    },
+    {
+      "s": 267.02,
+      "e": 268.0,
+      "t": "El muslo."
+    },
+    {
+      "s": 269.2,
+      "e": 270.31,
+      "t": "La rodilla."
+    },
+    {
+      "s": 271.51,
+      "e": 272.82,
+      "t": "La pantorrilla."
+    },
+    {
+      "s": 274.02,
+      "e": 275.14,
+      "t": "El tobillo."
+    },
+    {
+      "s": 275.94,
+      "e": 276.93,
+      "t": "El talón."
+    },
+    {
+      "s": 278.13,
+      "e": 279.66,
+      "t": "La planta del pie."
+    },
+    {
+      "s": 280.86,
+      "e": 283.3,
+      "t": "El dedo gordo del pie izquierdo."
+    },
+    {
+      "s": 284.5,
+      "e": 285.99,
+      "t": "El segundo dedo."
+    },
+    {
+      "s": 287.19,
+      "e": 288.36,
+      "t": "El tercero."
+    },
+    {
+      "s": 289.56,
+      "e": 290.57,
+      "t": "El cuarto."
+    },
+    {
+      "s": 291.77,
+      "e": 292.74,
+      "t": "El quinto."
+    },
+    {
+      "s": 295.74,
+      "e": 296.8,
+      "t": "La espalda."
+    },
+    {
+      "s": 298.0,
+      "e": 299.31,
+      "t": "Los omóplatos."
+    },
+    {
+      "s": 300.51,
+      "e": 303.19,
+      "t": "La columna, de abajo hacia arriba."
+    },
+    {
+      "s": 304.69,
+      "e": 305.55,
+      "t": "La nuca."
+    },
+    {
+      "s": 306.75,
+      "e": 309.22,
+      "t": "La parte de atrás de la cabeza."
+    },
+    {
+      "s": 310.02,
+      "e": 311.24,
+      "t": "La coronilla."
+    },
+    {
+      "s": 312.44,
+      "e": 313.43,
+      "t": "La frente."
+    },
+    {
+      "s": 314.63,
+      "e": 316.22,
+      "t": "La ceja derecha."
+    },
+    {
+      "s": 317.42,
+      "e": 319.01,
+      "t": "La ceja izquierda."
+    },
+    {
+      "s": 320.21,
+      "e": 322.24,
+      "t": "El espacio entre las cejas."
+    },
+    {
+      "s": 323.04,
+      "e": 324.5,
+      "t": "El ojo derecho."
+    },
+    {
+      "s": 325.7,
+      "e": 327.18,
+      "t": "El ojo izquierdo."
+    },
+    {
+      "s": 328.38,
+      "e": 329.32,
+      "t": "La nariz."
+    },
+    {
+      "s": 330.52,
+      "e": 332.18,
+      "t": "La mejilla derecha."
+    },
+    {
+      "s": 333.38,
+      "e": 335.09,
+      "t": "La mejilla izquierda."
+    },
+    {
+      "s": 336.29,
+      "e": 337.87,
+      "t": "El labio superior."
+    },
+    {
+      "s": 339.07,
+      "e": 340.58,
+      "t": "El labio inferior."
+    },
+    {
+      "s": 341.78,
+      "e": 342.95,
+      "t": "La barbilla."
+    },
+    {
+      "s": 343.75,
+      "e": 344.94,
+      "t": "La garganta."
+    },
+    {
+      "s": 346.14,
+      "e": 347.15,
+      "t": "El pecho."
+    },
+    {
+      "s": 348.35,
+      "e": 349.47,
+      "t": "El abdomen."
+    },
+    {
+      "s": 350.67,
+      "e": 351.79,
+      "t": "El ombligo."
+    },
+    {
+      "s": 352.99,
+      "e": 353.98,
+      "t": "La pelvis."
+    },
+    {
+      "s": 356.98,
+      "e": 359.47,
+      "t": "Todo el lado derecho del cuerpo."
+    },
+    {
+      "s": 361.47,
+      "e": 363.25,
+      "t": "Todo el lado izquierdo."
+    },
+    {
+      "s": 365.25,
+      "e": 367.2,
+      "t": "Todo el cuerpo, a la vez."
+    },
+    {
+      "s": 416.95,
+      "e": 421.26,
+      "t": "Siente el cuerpo entero, quieto, pesado, respirando solo."
+    },
+    {
+      "s": 446.13,
+      "e": 450.44,
+      "t": "Ahora lleva la atención a la respiración, justo en el abdomen."
+    },
+    {
+      "s": 451.24,
+      "e": 452.63,
+      "t": "No la controles."
+    },
+    {
+      "s": 453.43,
+      "e": 454.86,
+      "t": "Solo obsérvala."
+    },
+    {
+      "s": 455.66,
+      "e": 463.23,
+      "t": "Vamos a contar hacia atrás, desde veintisiete hasta uno, una cuenta por cada respiración completa."
+    },
+    {
+      "s": 464.03,
+      "e": 467.95,
+      "t": "Al inhalar piensa el número, al exhalar lo sueltas."
+    },
+    {
+      "s": 468.75,
+      "e": 473.06,
+      "t": "Si pierdes la cuenta, vuelve a empezar desde veintisiete."
+    },
+    {
+      "s": 473.86,
+      "e": 476.09,
+      "t": "No importa cuántas veces."
+    },
+    {
+      "s": 625.32,
+      "e": 628.1,
+      "t": "Suelta la cuenta, estés donde estés."
+    },
+    {
+      "s": 652.97,
+      "e": 656.45,
+      "t": "Ahora vamos a explorar sensaciones opuestas."
+    },
+    {
+      "s": 657.25,
+      "e": 659.23,
+      "t": "Siente el cuerpo pesado."
+    },
+    {
+      "s": 660.03,
+      "e": 661.18,
+      "t": "Muy pesado."
+    },
+    {
+      "s": 661.98,
+      "e": 665.4,
+      "t": "Como si fuera de plomo, hundiéndose en el suelo."
+    },
+    {
+      "s": 690.27,
+      "e": 692.88,
+      "t": "Y ahora, siente el cuerpo ligero."
+    },
+    {
+      "s": 693.68,
+      "e": 694.79,
+      "t": "Muy ligero."
+    },
+    {
+      "s": 695.59,
+      "e": 698.12,
+      "t": "Como una pluma, casi flotando."
+    },
+    {
+      "s": 722.99,
+      "e": 723.88,
+      "t": "Pesado."
+    },
+    {
+      "s": 726.88,
+      "e": 727.9,
+      "t": "Y ligero."
+    },
+    {
+      "s": 730.9,
+      "e": 733.81,
+      "t": "Pesado y ligero al mismo tiempo."
+    },
+    {
+      "s": 783.56,
+      "e": 785.26,
+      "t": "Ahora siente calor."
+    },
+    {
+      "s": 786.06,
+      "e": 791.68,
+      "t": "Imagina que estás bajo un sol de verano, tibio, agradable, sobre toda la piel."
+    },
+    {
+      "s": 816.55,
+      "e": 818.13,
+      "t": "Y ahora frescura."
+    },
+    {
+      "s": 818.93,
+      "e": 823.33,
+      "t": "Una brisa suave, fresca, como al lado del mar por la noche."
+    },
+    {
+      "s": 848.2,
+      "e": 848.93,
+      "t": "Calor."
+    },
+    {
+      "s": 851.93,
+      "e": 852.92,
+      "t": "Frescura."
+    },
+    {
+      "s": 855.92,
+      "e": 858.3,
+      "t": "Las dos sensaciones a la vez."
+    },
+    {
+      "s": 908.05,
+      "e": 911.69,
+      "t": "Descansa ahora en la pura sensación de estar."
+    },
+    {
+      "s": 912.49,
+      "e": 915.19,
+      "t": "Sin nombre, sin tarea, sin historia."
+    },
+    {
+      "s": 915.99,
+      "e": 917.43,
+      "t": "Solo presencia."
+    },
+    {
+      "s": 918.23,
+      "e": 919.77,
+      "t": "Solo respiración."
+    },
+    {
+      "s": 920.57,
+      "e": 921.99,
+      "t": "Solo descanso."
+    },
+    {
+      "s": 1120.96,
+      "e": 1123.65,
+      "t": "Poco a poco, empieza a regresar."
+    },
+    {
+      "s": 1126.65,
+      "e": 1130.84,
+      "t": "Nota la respiración, que se vuelve un poco más profunda."
+    },
+    {
+      "s": 1133.84,
+      "e": 1136.09,
+      "t": "Siente el suelo bajo el cuerpo."
+    },
+    {
+      "s": 1136.89,
+      "e": 1138.95,
+      "t": "Los sonidos de la habitación."
+    },
+    {
+      "s": 1141.95,
+      "e": 1145.9,
+      "t": "Mueve suavemente los dedos de las manos y de los pies."
+    },
+    {
+      "s": 1148.9,
+      "e": 1152.87,
+      "t": "Estírate como lo harías al despertar por la mañana."
+    },
+    {
+      "s": 1156.87,
+      "e": 1164.41,
+      "t": "Cuando estés en condiciones, gira hacia un costado, y quédate ahí unos segundos antes de incorporarte."
+    },
+    {
+      "s": 1169.41,
+      "e": 1172.5,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 1174.5,
+      "e": 1178.72,
+      "t": "Regalarse un descanso profundo no es perder el tiempo."
+    },
+    {
+      "s": 1179.52,
+      "e": 1184.02,
+      "t": "Es la forma en que el cuerpo y la mente recuperan su energía."
+    },
+    {
+      "s": 1184.82,
+      "e": 1187.9,
+      "t": "Que el resto de tu día sea más ligero."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 1190.5,
+      "type": "bell"
+    }
+  ]
+}

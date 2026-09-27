@@ -314,20 +314,26 @@
   "montana": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1396032,
-    "v": "1913edf706"
+    "bytes": 1341427,
+    "v": "dc87189515ed",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "nsdr": {
     "duration": 1200.0,
     "voice": "luz",
-    "bytes": 2343789,
-    "v": "d87e95efe8"
+    "bytes": 2380339,
+    "v": "f6b46638793e",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-3-minutos": {
     "duration": 210.0,
     "voice": "luz",
-    "bytes": 481114,
-    "v": "19205b1d4e"
+    "bytes": 451891,
+    "v": "2cd204d7511e",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "pausa-aceptacion": {
     "duration": 600.0,
