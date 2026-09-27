@@ -269,9 +269,24 @@
       "audio_sha256": "e68c6ce1865738c3ffb0eab41ab071033addb3bfbefebb17976fd0aff1b6defc",
       "captions_sha256": "73696c82fc3af8a2ccb6ec13d3556d49f98f6065d8cfde1fed48bf4f2f05248f",
       "version": "647b0dc57d8a"
+    },
+    "poner-limites": {
+      "audio_sha256": "8532b0e3ff1011930baeb8f36717c4dae3cf6044d0ccc73343de47bbc5004146",
+      "captions_sha256": "4fd4a56fa455ccbd36eb35f4cb307b8f492ac6c300a8b85767a7a36dedf4ec93",
+      "version": "11fa702bfdd7"
+    },
+    "primera-meditacion": {
+      "audio_sha256": "89d5a519b5bb42e30ff44f026484a1b548d5296dcdabcd7fb84e52a612c3aa6b",
+      "captions_sha256": "4bae18a3914885fcbfeab8dba5583ae3d053f035be30c5d6fc6fa768794fe05b",
+      "version": "a108cb741f6c"
+    },
+    "relajacion-progresiva": {
+      "audio_sha256": "d4e7aa60a61eb75c8212b2038fedb742cf169352148bb790ef2fda2a000951e9",
+      "captions_sha256": "65c7ff31c75b752a4cfe15a86dc3f0384b0fe9293501abdc4a81e1b1a9b5d042",
+      "version": "71d462944537"
     }
   },
-  "completed": 54,
+  "completed": 57,
   "total": 61,
   "audio_complete": false
 }

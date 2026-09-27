@@ -434,20 +434,26 @@
   "poner-limites": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1012781,
-    "v": "677b9ba6b7"
+    "bytes": 977995,
+    "v": "11fa702bfdd7",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "primera-meditacion": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 776737,
-    "v": "acb7fa421a"
+    "bytes": 737683,
+    "v": "a108cb741f6c",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "relajacion-progresiva": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1364595,
-    "v": "0a7c70c8af"
+    "bytes": 1309363,
+    "v": "71d462944537",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "respiro-para-mamas": {
     "duration": 300.0,

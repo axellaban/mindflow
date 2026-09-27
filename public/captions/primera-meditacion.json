@@ -1,1 +1,242 @@
-{"id":"primera-meditacion","duration":300.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.94,"t":"Bienvenida a tu primera meditación."},{"s":8.74,"e":12.63,"t":"Durante los próximos cinco minutos no tienes que lograr nada."},{"s":13.43,"e":15.64,"t":"Solo vamos a practicar estar aquí."},{"s":17.54,"e":19.6,"t":"Busca una postura cómoda."},{"s":20.4,"e":25.31,"t":"Puedes sentarte en una silla, en un cojín, o incluso recostarte."},{"s":26.11,"e":30.2,"t":"Deja que la espalda esté erguida, pero sin rigidez."},{"s":31.0,"e":32.45,"t":"Los hombros, sueltos."},{"s":35.45,"e":37.96,"t":"Si te sientes a gusto, cierra los ojos."},{"s":38.76,"e":44.6,"t":"Si prefieres, baja la mirada y déjala descansar en un punto frente a ti."},{"s":48.6,"e":53.11,"t":"Vamos a comenzar con tres respiraciones un poco más profundas."},{"s":53.91,"e":55.23,"t":"Inhala por la nariz…"},{"s":57.73,"e":60.16,"t":"y suelta el aire despacio, por la boca."},{"s":63.16,"e":63.88,"t":"Otra vez."},{"s":64.68,"e":65.21,"t":"Inhala…"},{"s":67.71,"e":70.67,"t":"y exhala, dejando ir cualquier prisa."},{"s":73.67,"e":75.18,"t":"Una última vez."},{"s":75.98,"e":76.51,"t":"Inhala…"},{"s":79.01,"e":80.69,"t":"y exhala por completo."},{"s":84.69,"e":87.99,"t":"Ahora deja que la respiración encuentre su propio ritmo."},{"s":88.79,"e":90.56,"t":"No necesitas controlarla."},{"s":91.36,"e":94.73,"t":"Simplemente observa cómo el aire entra…"},{"s":96.08,"e":97.0,"t":"y cómo sale."},{"s":106.76,"e":113.13,"t":"Quizás lo notes en la punta de la nariz, en el pecho, o en el abdomen, que sube y baja."},{"s":113.93,"e":118.74,"t":"Elige el lugar donde lo sientas con más claridad, y deja ahí tu atención."},{"s":138.27,"e":141.68,"t":"En algún momento, tu mente se irá a otra parte."},{"s":142.48,"e":145.93,"t":"Un recuerdo, un plan, una preocupación."},{"s":146.73,"e":148.11,"t":"Eso no es un error."},{"s":148.91,"e":151.3,"t":"Es exactamente lo que hacen las mentes."},{"s":152.1,"e":156.25,"t":"Cuando te des cuenta, ese instante de darte cuenta ya es meditar."},{"s":157.05,"e":161.09,"t":"Con suavidad, sin juzgarte, vuelve a la respiración."},{"s":190.38,"e":192.82,"t":"Si te ayuda, puedes contar en silencio."},{"s":193.62,"e":194.62,"t":"Uno al inhalar."},{"s":195.42,"e":196.57,"t":"Dos al exhalar."},{"s":197.37,"e":199.82,"t":"Hasta diez, y vuelves a empezar."},{"s":229.11,"e":229.93,"t":"Muy bien."},{"s":230.73,"e":235.24,"t":"Sigue así, un momento más, respiración tras respiración."},{"s":254.77,"e":258.6,"t":"Ahora, poco a poco, amplía tu atención."},{"s":259.4,"e":261.63,"t":"Siente el peso de tu cuerpo."},{"s":262.43,"e":264.15,"t":"Los sonidos a tu alrededor."},{"s":268.15,"e":271.41,"t":"Mueve suavemente los dedos de las manos y de los pies."},{"s":274.41,"e":276.66,"t":"Y cuando quieras, abre los ojos."},{"s":278.66,"e":280.99,"t":"Acabas de dar el primer paso."},{"s":281.79,"e":284.66,"t":"Así de simple, y así de valioso."},{"s":285.46,"e":287.9,"t":"Gracias por regalarte este momento."}],"cues":[{"t":0.4,"type":"bell"},{"t":290.5,"type":"bell"}]}
+{
+  "id": "primera-meditacion",
+  "voice": "luz",
+  "duration": 300.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.3,
+      "t": "Bienvenida a tu primera meditación."
+    },
+    {
+      "s": 9.1,
+      "e": 13.13,
+      "t": "Durante los próximos cinco minutos no tienes que lograr nada."
+    },
+    {
+      "s": 13.93,
+      "e": 16.44,
+      "t": "Solo vamos a practicar estar aquí."
+    },
+    {
+      "s": 19.44,
+      "e": 21.32,
+      "t": "Busca una postura cómoda."
+    },
+    {
+      "s": 22.12,
+      "e": 26.44,
+      "t": "Puedes sentarte en una silla, en un cojín, o incluso recostarte."
+    },
+    {
+      "s": 27.24,
+      "e": 30.68,
+      "t": "Deja que la espalda esté erguida, pero sin rigidez."
+    },
+    {
+      "s": 31.48,
+      "e": 32.95,
+      "t": "Los hombros, sueltos."
+    },
+    {
+      "s": 35.95,
+      "e": 38.61,
+      "t": "Si te sientes a gusto, cierra los ojos."
+    },
+    {
+      "s": 39.41,
+      "e": 44.33,
+      "t": "Si prefieres, baja la mirada y déjala descansar en un punto frente a ti."
+    },
+    {
+      "s": 48.33,
+      "e": 52.64,
+      "t": "Vamos a comenzar con tres respiraciones un poco más profundas."
+    },
+    {
+      "s": 53.44,
+      "e": 54.98,
+      "t": "Inhala por la nariz…"
+    },
+    {
+      "s": 57.48,
+      "e": 60.3,
+      "t": "y suelta el aire despacio, por la boca."
+    },
+    {
+      "s": 63.3,
+      "e": 64.24,
+      "t": "Otra vez."
+    },
+    {
+      "s": 65.04,
+      "e": 65.81,
+      "t": "Inhala…"
+    },
+    {
+      "s": 68.31,
+      "e": 70.86,
+      "t": "y exhala, dejando ir cualquier prisa."
+    },
+    {
+      "s": 73.86,
+      "e": 75.21,
+      "t": "Una última vez."
+    },
+    {
+      "s": 76.01,
+      "e": 76.78,
+      "t": "Inhala…"
+    },
+    {
+      "s": 79.28,
+      "e": 80.94,
+      "t": "y exhala por completo."
+    },
+    {
+      "s": 84.94,
+      "e": 88.61,
+      "t": "Ahora deja que la respiración encuentre su propio ritmo."
+    },
+    {
+      "s": 89.41,
+      "e": 91.36,
+      "t": "No necesitas controlarla."
+    },
+    {
+      "s": 92.16,
+      "e": 94.86,
+      "t": "Simplemente observa cómo el aire entra…"
+    },
+    {
+      "s": 96.21,
+      "e": 97.41,
+      "t": "y cómo sale."
+    },
+    {
+      "s": 107.37,
+      "e": 112.89,
+      "t": "Quizás lo notes en la punta de la nariz, en el pecho, o en el abdomen, que sube y baja."
+    },
+    {
+      "s": 113.69,
+      "e": 118.58,
+      "t": "Elige el lugar donde lo sientas con más claridad, y deja ahí tu atención."
+    },
+    {
+      "s": 138.5,
+      "e": 141.62,
+      "t": "En algún momento, tu mente se irá a otra parte."
+    },
+    {
+      "s": 142.42,
+      "e": 145.54,
+      "t": "Un recuerdo, un plan, una preocupación."
+    },
+    {
+      "s": 146.34,
+      "e": 147.95,
+      "t": "Eso no es un error."
+    },
+    {
+      "s": 148.75,
+      "e": 151.45,
+      "t": "Es exactamente lo que hacen las mentes."
+    },
+    {
+      "s": 152.25,
+      "e": 156.58,
+      "t": "Cuando te des cuenta, ese instante de darte cuenta ya es meditar."
+    },
+    {
+      "s": 157.38,
+      "e": 160.88,
+      "t": "Con suavidad, sin juzgarte, vuelve a la respiración."
+    },
+    {
+      "s": 190.77,
+      "e": 193.47,
+      "t": "Si te ayuda, puedes contar en silencio."
+    },
+    {
+      "s": 194.27,
+      "e": 195.48,
+      "t": "Uno al inhalar."
+    },
+    {
+      "s": 196.28,
+      "e": 197.6,
+      "t": "Dos al exhalar."
+    },
+    {
+      "s": 198.4,
+      "e": 200.68,
+      "t": "Hasta diez, y vuelves a empezar."
+    },
+    {
+      "s": 230.56,
+      "e": 231.47,
+      "t": "Muy bien."
+    },
+    {
+      "s": 232.27,
+      "e": 236.15,
+      "t": "Sigue así, un momento más, respiración tras respiración."
+    },
+    {
+      "s": 256.07,
+      "e": 258.9,
+      "t": "Ahora, poco a poco, amplía tu atención."
+    },
+    {
+      "s": 259.7,
+      "e": 261.7,
+      "t": "Siente el peso de tu cuerpo."
+    },
+    {
+      "s": 262.5,
+      "e": 264.49,
+      "t": "Los sonidos a tu alrededor."
+    },
+    {
+      "s": 268.49,
+      "e": 271.89,
+      "t": "Mueve suavemente los dedos de las manos y de los pies."
+    },
+    {
+      "s": 274.89,
+      "e": 277.2,
+      "t": "Y cuando quieras, abre los ojos."
+    },
+    {
+      "s": 279.2,
+      "e": 281.41,
+      "t": "Acabas de dar el primer paso."
+    },
+    {
+      "s": 282.21,
+      "e": 284.52,
+      "t": "Así de simple, y así de valioso."
+    },
+    {
+      "s": 285.32,
+      "e": 287.9,
+      "t": "Gracias por regalarte este momento."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 290.5,
+      "type": "bell"
+    }
+  ]
+}

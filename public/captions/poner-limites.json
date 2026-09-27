@@ -1,1 +1,272 @@
-{"id":"poner-limites","duration":480.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.74,"t":"Esta es una práctica para aprender a poner límites."},{"s":9.54,"e":14.51,"t":"Decir que no, pedir lo que necesitas, cuidar tu tiempo y tu energía."},{"s":15.31,"e":22.06,"t":"A muchas nos enseñaron a estar siempre disponibles, a no incomodar, a poner a los demás primero."},{"s":22.86,"e":25.19,"t":"Pero un límite no es un rechazo."},{"s":25.99,"e":29.75,"t":"Es una forma de cuidar el vínculo, y de cuidarte a ti."},{"s":31.65,"e":34.11,"t":"Acomódate, y cierra los ojos."},{"s":38.11,"e":39.33,"t":"Respira profundo…"},{"s":40.68,"e":41.53,"t":"y suelta."},{"s":45.53,"e":47.95,"t":"Siente tus pies apoyados en el suelo."},{"s":48.75,"e":49.46,"t":"Tu base."},{"s":50.26,"e":51.07,"t":"Tu centro."},{"s":68.19,"e":73.53,"t":"Vamos a empezar por escuchar al cuerpo, que muchas veces sabe antes que la mente."},{"s":74.33,"e":77.11,"t":"Piensa en algo que te guste mucho hacer."},{"s":77.91,"e":79.91,"t":"Algo que te llene de energía."},{"s":80.71,"e":82.55,"t":"Nota cómo responde el cuerpo."},{"s":83.35,"e":86.69,"t":"Quizás se expande, se relaja, se abre."},{"s":87.49,"e":88.49,"t":"Ese es tu sí."},{"s":122.73,"e":126.5,"t":"Ahora piensa en algo que aceptaste hacer aunque no querías."},{"s":127.3,"e":131.01,"t":"Un compromiso, un favor, algo que te pesó."},{"s":131.81,"e":134.02,"t":"Nota cómo responde el cuerpo ahora."},{"s":134.82,"e":137.82,"t":"Quizás se cierra, se tensa, se encoge."},{"s":138.62,"e":139.68,"t":"Ese es tu no."},{"s":173.92,"e":176.4,"t":"Tu cuerpo te da información valiosa."},{"s":177.2,"e":181.0,"t":"Aprender a escucharlo es el primer paso para poner límites."},{"s":198.12,"e":202.76,"t":"Ahora piensa en una situación concreta en la que te gustaría poner un límite."},{"s":203.56,"e":206.92,"t":"Una persona, un pedido, una costumbre."},{"s":224.04,"e":227.04,"t":"Imagina que estás frente a esa situación."},{"s":227.84,"e":228.48,"t":"Respira."},{"s":229.28,"e":230.97,"t":"Siente los pies en el suelo."},{"s":248.09,"e":253.37,"t":"Y di en silencio, con calma y con firmeza, una frase sencilla."},{"s":254.17,"e":255.25,"t":"Por ejemplo:"},{"s":255.95,"e":257.56,"t":"«Esta vez no voy a poder»."},{"s":261.56,"e":264.78,"t":"O: «Necesito pensarlo, te respondo mañana»."},{"s":268.78,"e":272.34,"t":"O: «Esto no me hace bien, y prefiero no hacerlo»."},{"s":306.58,"e":308.13,"t":"Nota qué aparece."},{"s":308.93,"e":312.97,"t":"Quizás culpa, miedo a decepcionar, incomodidad."},{"s":313.77,"e":314.68,"t":"Es normal."},{"s":315.48,"e":317.14,"t":"Estás haciendo algo nuevo."},{"s":317.94,"e":319.1,"t":"Respira con eso."},{"s":319.9,"e":323.47,"t":"Deja que la incomodidad esté, sin que decida por ti."},{"s":357.71,"e":360.79,"t":"Lleva una mano al pecho, y recuerda:"},{"s":361.49,"e":363.81,"t":"«Mis necesidades también importan»."},{"s":367.81,"e":370.29,"t":"«Puedo querer a alguien y decirle que no»."},{"s":374.29,"e":376.72,"t":"«Cuando me cuido, tengo más para dar»."},{"s":428.08,"e":431.23,"t":"Vuelve a sentir los pies en el suelo, firmes."},{"s":432.03,"e":434.1,"t":"La respiración, tranquila."},{"s":451.22,"e":453.43,"t":"Abre los ojos cuando estés lista."},{"s":456.43,"e":459.91,"t":"Esta semana, practica con un límite pequeño."},{"s":460.71,"e":463.76,"t":"No hace falta empezar por el más difícil."},{"s":464.56,"e":467.9,"t":"Cada no que dices con amor, es un sí para ti."}],"cues":[{"t":0.4,"type":"bell"},{"t":470.5,"type":"bell"}]}
+{
+  "id": "poner-limites",
+  "voice": "luz",
+  "duration": 480.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.82,
+      "t": "Esta es una práctica para aprender a poner límites."
+    },
+    {
+      "s": 9.62,
+      "e": 14.12,
+      "t": "Decir que no, pedir lo que necesitas, cuidar tu tiempo y tu energía."
+    },
+    {
+      "s": 14.92,
+      "e": 21.32,
+      "t": "A muchas nos enseñaron a estar siempre disponibles, a no incomodar, a poner a los demás primero."
+    },
+    {
+      "s": 22.12,
+      "e": 24.55,
+      "t": "Pero un límite no es un rechazo."
+    },
+    {
+      "s": 25.35,
+      "e": 28.8,
+      "t": "Es una forma de cuidar el vínculo, y de cuidarte a ti."
+    },
+    {
+      "s": 31.8,
+      "e": 34.15,
+      "t": "Acomódate, y cierra los ojos."
+    },
+    {
+      "s": 38.15,
+      "e": 39.64,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 40.99,
+      "e": 41.93,
+      "t": "y suelta."
+    },
+    {
+      "s": 45.93,
+      "e": 48.53,
+      "t": "Siente tus pies apoyados en el suelo."
+    },
+    {
+      "s": 49.33,
+      "e": 50.22,
+      "t": "Tu base."
+    },
+    {
+      "s": 51.02,
+      "e": 51.98,
+      "t": "Tu centro."
+    },
+    {
+      "s": 69.21,
+      "e": 74.45,
+      "t": "Vamos a empezar por escuchar al cuerpo, que muchas veces sabe antes que la mente."
+    },
+    {
+      "s": 75.25,
+      "e": 78.13,
+      "t": "Piensa en algo que te guste mucho hacer."
+    },
+    {
+      "s": 78.93,
+      "e": 80.94,
+      "t": "Algo que te llene de energía."
+    },
+    {
+      "s": 81.74,
+      "e": 83.88,
+      "t": "Nota cómo responde el cuerpo."
+    },
+    {
+      "s": 84.68,
+      "e": 87.34,
+      "t": "Quizás se expande, se relaja, se abre."
+    },
+    {
+      "s": 88.14,
+      "e": 89.35,
+      "t": "Ese es tu sí."
+    },
+    {
+      "s": 123.82,
+      "e": 127.52,
+      "t": "Ahora piensa en algo que aceptaste hacer aunque no querías."
+    },
+    {
+      "s": 128.32,
+      "e": 131.4,
+      "t": "Un compromiso, un favor, algo que te pesó."
+    },
+    {
+      "s": 132.2,
+      "e": 134.65,
+      "t": "Nota cómo responde el cuerpo ahora."
+    },
+    {
+      "s": 135.45,
+      "e": 138.22,
+      "t": "Quizás se cierra, se tensa, se encoge."
+    },
+    {
+      "s": 139.02,
+      "e": 140.22,
+      "t": "Ese es tu no."
+    },
+    {
+      "s": 174.69,
+      "e": 177.47,
+      "t": "Tu cuerpo te da información valiosa."
+    },
+    {
+      "s": 178.27,
+      "e": 182.33,
+      "t": "Aprender a escucharlo es el primer paso para poner límites."
+    },
+    {
+      "s": 199.56,
+      "e": 204.58,
+      "t": "Ahora piensa en una situación concreta en la que te gustaría poner un límite."
+    },
+    {
+      "s": 205.38,
+      "e": 208.26,
+      "t": "Una persona, un pedido, una costumbre."
+    },
+    {
+      "s": 225.5,
+      "e": 228.39,
+      "t": "Imagina que estás frente a esa situación."
+    },
+    {
+      "s": 229.19,
+      "e": 230.08,
+      "t": "Respira."
+    },
+    {
+      "s": 230.88,
+      "e": 232.72,
+      "t": "Siente los pies en el suelo."
+    },
+    {
+      "s": 249.95,
+      "e": 254.47,
+      "t": "Y di en silencio, con calma y con firmeza, una frase sencilla."
+    },
+    {
+      "s": 255.27,
+      "e": 256.28,
+      "t": "Por ejemplo:"
+    },
+    {
+      "s": 256.98,
+      "e": 258.92,
+      "t": "«Esta vez no voy a poder»."
+    },
+    {
+      "s": 262.92,
+      "e": 265.98,
+      "t": "O: «Necesito pensarlo, te respondo mañana»."
+    },
+    {
+      "s": 269.98,
+      "e": 273.2,
+      "t": "O: «Esto no me hace bien, y prefiero no hacerlo»."
+    },
+    {
+      "s": 307.67,
+      "e": 309.16,
+      "t": "Nota qué aparece."
+    },
+    {
+      "s": 309.96,
+      "e": 313.18,
+      "t": "Quizás culpa, miedo a decepcionar, incomodidad."
+    },
+    {
+      "s": 313.98,
+      "e": 314.96,
+      "t": "Es normal."
+    },
+    {
+      "s": 315.76,
+      "e": 317.86,
+      "t": "Estás haciendo algo nuevo."
+    },
+    {
+      "s": 318.66,
+      "e": 320.08,
+      "t": "Respira con eso."
+    },
+    {
+      "s": 320.88,
+      "e": 324.29,
+      "t": "Deja que la incomodidad esté, sin que decida por ti."
+    },
+    {
+      "s": 358.75,
+      "e": 361.26,
+      "t": "Lleva una mano al pecho, y recuerda:"
+    },
+    {
+      "s": 361.96,
+      "e": 364.57,
+      "t": "«Mis necesidades también importan»."
+    },
+    {
+      "s": 368.57,
+      "e": 371.24,
+      "t": "«Puedo querer a alguien y decirle que no»."
+    },
+    {
+      "s": 375.24,
+      "e": 377.68,
+      "t": "«Cuando me cuido, tengo más para dar»."
+    },
+    {
+      "s": 429.38,
+      "e": 432.29,
+      "t": "Vuelve a sentir los pies en el suelo, firmes."
+    },
+    {
+      "s": 433.09,
+      "e": 435.13,
+      "t": "La respiración, tranquila."
+    },
+    {
+      "s": 452.36,
+      "e": 454.59,
+      "t": "Abre los ojos cuando estés lista."
+    },
+    {
+      "s": 457.59,
+      "e": 460.61,
+      "t": "Esta semana, practica con un límite pequeño."
+    },
+    {
+      "s": 461.41,
+      "e": 464.2,
+      "t": "No hace falta empezar por el más difícil."
+    },
+    {
+      "s": 465.0,
+      "e": 467.9,
+      "t": "Cada no que dices con amor, es un sí para ti."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 470.5,
+      "type": "bell"
+    }
+  ]
+}

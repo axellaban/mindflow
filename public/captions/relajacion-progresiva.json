@@ -1,1 +1,372 @@
-{"id":"relajacion-progresiva","duration":720.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":9.39,"t":"Esta es una práctica de relajación muscular progresiva."},{"s":10.19,"e":19.2,"t":"La técnica es sencilla y muy eficaz: tensamos un grupo de músculos durante unos segundos, y luego lo soltamos por completo."},{"s":20.0,"e":26.17,"t":"Al notar el contraste entre tensión y relajación, el cuerpo aprende a soltar más profundamente."},{"s":26.97,"e":30.3,"t":"Tensa siempre con moderación, sin llegar al dolor."},{"s":31.1,"e":34.08,"t":"Y si tienes alguna lesión, salta esa zona."},{"s":35.98,"e":38.54,"t":"Recuéstate o siéntate cómodamente."},{"s":39.34,"e":40.48,"t":"Cierra los ojos."},{"s":44.48,"e":46.57,"t":"Haz una respiración profunda…"},{"s":47.92,"e":48.77,"t":"y suelta."},{"s":52.77,"e":54.42,"t":"Empezamos por los pies."},{"s":55.22,"e":60.27,"t":"Encoge los dedos de los pies con fuerza, como si quisieras agarrar el suelo."},{"s":61.07,"e":62.36,"t":"Mantén la tensión…"},{"s":67.36,"e":68.21,"t":"y suelta."},{"s":69.01,"e":72.17,"t":"Deja que los pies se aflojen por completo."},{"s":72.97,"e":74.38,"t":"Nota la diferencia."},{"s":100.56,"e":102.05,"t":"Ahora las pantorrillas."},{"s":102.85,"e":107.79,"t":"Tira de las puntas de los pies hacia ti, tensando la parte de atrás de las piernas."},{"s":108.59,"e":109.27,"t":"Mantén…"},{"s":114.27,"e":115.12,"t":"y suelta."},{"s":115.92,"e":119.26,"t":"Siente cómo el calor y la calma llenan las piernas."},{"s":145.44,"e":146.37,"t":"Los muslos."},{"s":147.17,"e":151.51,"t":"Aprieta los músculos de los muslos, presionando las rodillas."},{"s":152.31,"e":152.99,"t":"Mantén…"},{"s":157.99,"e":158.84,"t":"y suelta."},{"s":159.64,"e":161.62,"t":"Las piernas se vuelven pesadas."},{"s":187.8,"e":188.78,"t":"Los glúteos."},{"s":189.58,"e":190.54,"t":"Apriétalos."},{"s":191.34,"e":192.02,"t":"Mantén…"},{"s":197.02,"e":197.86,"t":"y suelta."},{"s":224.04,"e":224.82,"t":"El abdomen."},{"s":225.62,"e":233.3,"t":"Mete el ombligo hacia adentro, tensando el vientre, como si te prepararas para un pequeño empujón."},{"s":234.1,"e":234.78,"t":"Mantén…"},{"s":239.78,"e":240.63,"t":"y suelta."},{"s":241.43,"e":245.32,"t":"Deja que el vientre vuelva a respirar libre y suave."},{"s":271.5,"e":272.43,"t":"Las manos."},{"s":273.23,"e":275.13,"t":"Cierra los puños con fuerza."},{"s":275.93,"e":276.6,"t":"Mantén…"},{"s":281.6,"e":282.45,"t":"y suelta."},{"s":283.25,"e":287.39,"t":"Abre los dedos, y deja que las manos descansen, tibias."},{"s":313.57,"e":314.51,"t":"Los brazos."},{"s":315.31,"e":319.51,"t":"Dobla los codos y tensa los bíceps, como mostrando fuerza."},{"s":320.31,"e":320.99,"t":"Mantén…"},{"s":325.99,"e":326.84,"t":"y suelta."},{"s":327.64,"e":330.15,"t":"Deja caer los brazos, pesados."},{"s":356.33,"e":357.23,"t":"Los hombros."},{"s":358.03,"e":362.29,"t":"Súbelos hacia las orejas, lo más alto que puedas."},{"s":363.09,"e":363.77,"t":"Mantén…"},{"s":368.77,"e":369.62,"t":"y suelta."},{"s":370.42,"e":371.45,"t":"Déjalos caer."},{"s":372.25,"e":373.89,"t":"Siente el alivio."},{"s":400.07,"e":400.7,"t":"La cara."},{"s":401.5,"e":407.28,"t":"Arruga toda la cara: aprieta los ojos, frunce la nariz, aprieta los labios."},{"s":408.08,"e":408.75,"t":"Mantén…"},{"s":413.75,"e":414.6,"t":"y suelta."},{"s":415.4,"e":419.06,"t":"Deja la cara lisa, suave, sin expresión."},{"s":445.24,"e":446.13,"t":"La mandíbula."},{"s":446.93,"e":448.9,"t":"Aprieta los dientes suavemente."},{"s":449.7,"e":450.38,"t":"Mantén…"},{"s":454.38,"e":455.22,"t":"y suelta."},{"s":456.02,"e":458.28,"t":"Deja que la boca se entreabra."},{"s":510.64,"e":514.53,"t":"Ahora recorre todo el cuerpo, de los pies a la cabeza."},{"s":515.33,"e":520.68,"t":"Si queda algún rincón con tensión, tensa un poco esa zona, y suéltala."},{"s":573.03,"e":576.72,"t":"Siente el cuerpo entero, relajado, pesado, tibio."},{"s":577.52,"e":579.16,"t":"Cada músculo en reposo."},{"s":579.96,"e":583.71,"t":"Respira con suavidad, disfrutando de esta sensación."},{"s":688.43,"e":689.74,"t":"Vamos terminando."},{"s":690.54,"e":692.97,"t":"Haz una respiración más profunda."},{"s":693.77,"e":695.53,"t":"Mueve suavemente los dedos."},{"s":699.53,"e":702.34,"t":"Y cuando sea el momento, abre los ojos."},{"s":703.14,"e":707.9,"t":"O, si es de noche, deja que esta relajación te lleve directo al sueño."}],"cues":[{"t":0.4,"type":"bell"},{"t":710.5,"type":"bell"}]}
+{
+  "id": "relajacion-progresiva",
+  "voice": "luz",
+  "duration": 720.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 9.34,
+      "t": "Esta es una práctica de relajación muscular progresiva."
+    },
+    {
+      "s": 10.14,
+      "e": 18.63,
+      "t": "La técnica es sencilla y muy eficaz: tensamos un grupo de músculos durante unos segundos, y luego lo soltamos por completo."
+    },
+    {
+      "s": 19.43,
+      "e": 25.82,
+      "t": "Al notar el contraste entre tensión y relajación, el cuerpo aprende a soltar más profundamente."
+    },
+    {
+      "s": 26.62,
+      "e": 29.95,
+      "t": "Tensa siempre con moderación, sin llegar al dolor."
+    },
+    {
+      "s": 30.75,
+      "e": 33.65,
+      "t": "Y si tienes alguna lesión, salta esa zona."
+    },
+    {
+      "s": 36.65,
+      "e": 39.37,
+      "t": "Recuéstate o siéntate cómodamente."
+    },
+    {
+      "s": 40.17,
+      "e": 41.56,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 45.56,
+      "e": 47.79,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 49.14,
+      "e": 50.08,
+      "t": "y suelta."
+    },
+    {
+      "s": 54.08,
+      "e": 55.76,
+      "t": "Empezamos por los pies."
+    },
+    {
+      "s": 56.56,
+      "e": 61.33,
+      "t": "Encoge los dedos de los pies con fuerza, como si quisieras agarrar el suelo."
+    },
+    {
+      "s": 62.13,
+      "e": 63.6,
+      "t": "Mantén la tensión…"
+    },
+    {
+      "s": 68.6,
+      "e": 69.54,
+      "t": "y suelta."
+    },
+    {
+      "s": 70.34,
+      "e": 73.12,
+      "t": "Deja que los pies se aflojen por completo."
+    },
+    {
+      "s": 73.92,
+      "e": 75.47,
+      "t": "Nota la diferencia."
+    },
+    {
+      "s": 101.84,
+      "e": 103.5,
+      "t": "Ahora las pantorrillas."
+    },
+    {
+      "s": 104.3,
+      "e": 109.31,
+      "t": "Tira de las puntas de los pies hacia ti, tensando la parte de atrás de las piernas."
+    },
+    {
+      "s": 110.11,
+      "e": 110.93,
+      "t": "Mantén…"
+    },
+    {
+      "s": 115.93,
+      "e": 116.87,
+      "t": "y suelta."
+    },
+    {
+      "s": 117.67,
+      "e": 120.9,
+      "t": "Siente cómo el calor y la calma llenan las piernas."
+    },
+    {
+      "s": 147.27,
+      "e": 148.27,
+      "t": "Los muslos."
+    },
+    {
+      "s": 149.07,
+      "e": 152.78,
+      "t": "Aprieta los músculos de los muslos, presionando las rodillas."
+    },
+    {
+      "s": 153.58,
+      "e": 154.4,
+      "t": "Mantén…"
+    },
+    {
+      "s": 159.4,
+      "e": 160.34,
+      "t": "y suelta."
+    },
+    {
+      "s": 161.14,
+      "e": 163.39,
+      "t": "Las piernas se vuelven pesadas."
+    },
+    {
+      "s": 189.76,
+      "e": 190.81,
+      "t": "Los glúteos."
+    },
+    {
+      "s": 191.61,
+      "e": 192.65,
+      "t": "Apriétalos."
+    },
+    {
+      "s": 193.45,
+      "e": 194.27,
+      "t": "Mantén…"
+    },
+    {
+      "s": 199.27,
+      "e": 200.21,
+      "t": "y suelta."
+    },
+    {
+      "s": 226.58,
+      "e": 227.63,
+      "t": "El abdomen."
+    },
+    {
+      "s": 228.43,
+      "e": 234.36,
+      "t": "Mete el ombligo hacia adentro, tensando el vientre, como si te prepararas para un pequeño empujón."
+    },
+    {
+      "s": 235.16,
+      "e": 235.98,
+      "t": "Mantén…"
+    },
+    {
+      "s": 240.98,
+      "e": 241.92,
+      "t": "y suelta."
+    },
+    {
+      "s": 242.72,
+      "e": 246.02,
+      "t": "Deja que el vientre vuelva a respirar libre y suave."
+    },
+    {
+      "s": 272.39,
+      "e": 273.28,
+      "t": "Las manos."
+    },
+    {
+      "s": 274.08,
+      "e": 276.02,
+      "t": "Cierra los puños con fuerza."
+    },
+    {
+      "s": 276.82,
+      "e": 277.64,
+      "t": "Mantén…"
+    },
+    {
+      "s": 282.64,
+      "e": 283.58,
+      "t": "y suelta."
+    },
+    {
+      "s": 284.38,
+      "e": 288.06,
+      "t": "Abre los dedos, y deja que las manos descansen, tibias."
+    },
+    {
+      "s": 314.43,
+      "e": 315.45,
+      "t": "Los brazos."
+    },
+    {
+      "s": 316.25,
+      "e": 320.11,
+      "t": "Dobla los codos y tensa los bíceps, como mostrando fuerza."
+    },
+    {
+      "s": 320.91,
+      "e": 321.73,
+      "t": "Mantén…"
+    },
+    {
+      "s": 326.73,
+      "e": 327.67,
+      "t": "y suelta."
+    },
+    {
+      "s": 328.47,
+      "e": 330.83,
+      "t": "Deja caer los brazos, pesados."
+    },
+    {
+      "s": 357.2,
+      "e": 358.12,
+      "t": "Los hombros."
+    },
+    {
+      "s": 358.92,
+      "e": 362.16,
+      "t": "Súbelos hacia las orejas, lo más alto que puedas."
+    },
+    {
+      "s": 362.96,
+      "e": 363.78,
+      "t": "Mantén…"
+    },
+    {
+      "s": 368.78,
+      "e": 369.72,
+      "t": "y suelta."
+    },
+    {
+      "s": 370.52,
+      "e": 371.67,
+      "t": "Déjalos caer."
+    },
+    {
+      "s": 372.47,
+      "e": 373.76,
+      "t": "Siente el alivio."
+    },
+    {
+      "s": 400.13,
+      "e": 400.92,
+      "t": "La cara."
+    },
+    {
+      "s": 401.72,
+      "e": 406.8,
+      "t": "Arruga toda la cara: aprieta los ojos, frunce la nariz, aprieta los labios."
+    },
+    {
+      "s": 407.6,
+      "e": 408.42,
+      "t": "Mantén…"
+    },
+    {
+      "s": 413.42,
+      "e": 414.36,
+      "t": "y suelta."
+    },
+    {
+      "s": 415.16,
+      "e": 418.16,
+      "t": "Deja la cara lisa, suave, sin expresión."
+    },
+    {
+      "s": 444.53,
+      "e": 445.65,
+      "t": "La mandíbula."
+    },
+    {
+      "s": 446.45,
+      "e": 448.65,
+      "t": "Aprieta los dientes suavemente."
+    },
+    {
+      "s": 449.45,
+      "e": 450.27,
+      "t": "Mantén…"
+    },
+    {
+      "s": 454.27,
+      "e": 455.21,
+      "t": "y suelta."
+    },
+    {
+      "s": 456.01,
+      "e": 458.21,
+      "t": "Deja que la boca se entreabra."
+    },
+    {
+      "s": 510.95,
+      "e": 514.31,
+      "t": "Ahora recorre todo el cuerpo, de los pies a la cabeza."
+    },
+    {
+      "s": 515.11,
+      "e": 519.8,
+      "t": "Si queda algún rincón con tensión, tensa un poco esa zona, y suéltala."
+    },
+    {
+      "s": 572.54,
+      "e": 576.09,
+      "t": "Siente el cuerpo entero, relajado, pesado, tibio."
+    },
+    {
+      "s": 576.89,
+      "e": 578.7,
+      "t": "Cada músculo en reposo."
+    },
+    {
+      "s": 579.5,
+      "e": 583.08,
+      "t": "Respira con suavidad, disfrutando de esta sensación."
+    },
+    {
+      "s": 688.56,
+      "e": 689.88,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 690.68,
+      "e": 693.16,
+      "t": "Haz una respiración más profunda."
+    },
+    {
+      "s": 693.96,
+      "e": 695.92,
+      "t": "Mueve suavemente los dedos."
+    },
+    {
+      "s": 699.92,
+      "e": 702.55,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 703.35,
+      "e": 707.9,
+      "t": "O, si es de noche, deja que esta relajación te lleve directo al sueño."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 710.5,
+      "type": "bell"
+    }
+  ]
+}
