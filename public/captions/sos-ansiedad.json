@@ -1,1 +1,168 @@
-{"id":"sos-ansiedad","duration":210.0,"voice":"luz","captions":[{"s":1.2,"e":2.75,"t":"Estoy aquí contigo."},{"s":3.55,"e":6.48,"t":"Vamos a atravesar este momento, paso a paso."},{"s":7.28,"e":10.69,"t":"Lo que sientes es muy incómodo, pero no es peligroso."},{"s":11.49,"e":16.39,"t":"Tu cuerpo activó su alarma, y ahora vamos a ayudarlo a apagarla."},{"s":18.29,"e":20.34,"t":"Primero, suelta el aire."},{"s":21.14,"e":23.94,"t":"Todo el aire, despacio, por la boca."},{"s":24.74,"e":26.94,"t":"Como si soplaras por una pajita."},{"s":28.94,"e":36.05,"t":"Ahora, haz dos inhalaciones cortas por la nariz, una detrás de la otra, llenando bien los pulmones…"},{"s":38.05,"e":41.71,"t":"y suelta un suspiro largo, largo, por la boca."},{"s":44.71,"e":45.44,"t":"Otra vez."},{"s":46.24,"e":48.13,"t":"Dos inhalaciones por la nariz…"},{"s":50.13,"e":51.81,"t":"y un suspiro muy largo."},{"s":54.81,"e":55.55,"t":"Una más."},{"s":56.35,"e":58.78,"t":"Inhala, y un poquito más…"},{"s":60.78,"e":61.8,"t":"y suelta todo."},{"s":65.8,"e":66.63,"t":"Muy bien."},{"s":67.43,"e":68.93,"t":"Ahora siente tus pies."},{"s":69.73,"e":71.95,"t":"Apóyalos con firmeza en el suelo."},{"s":72.75,"e":74.92,"t":"Siente cómo el suelo te sostiene."},{"s":77.92,"e":81.91,"t":"Mira a tu alrededor, y encuentra tres cosas que puedas ver."},{"s":82.71,"e":84.22,"t":"Nómbralas en silencio."},{"s":90.22,"e":93.08,"t":"Ahora, tres sonidos que puedas escuchar."},{"s":99.08,"e":101.12,"t":"Y tres cosas que puedas tocar."},{"s":101.92,"e":103.29,"t":"Siente su textura."},{"s":109.29,"e":110.48,"t":"Sigue respirando."},{"s":111.28,"e":114.56,"t":"Inhala con calma, y exhala más largo."},{"s":119.56,"e":122.21,"t":"Puedes repetirte: «esto va a pasar."},{"s":123.01,"e":124.25,"t":"Ya está pasando»."},{"s":129.25,"e":132.75,"t":"Cada exhalación le dice a tu cuerpo que estás a salvo."},{"s":191.71,"e":193.49,"t":"Lo estás haciendo muy bien."},{"s":194.29,"e":199.94,"t":"Quédate con tus pies en el suelo y tu exhalación larga todo el tiempo que necesites."},{"s":200.74,"e":206.0,"t":"Y si lo necesitas, puedes volver a escuchar esta práctica las veces que quieras."}],"cues":[]}
+{
+  "id": "sos-ansiedad",
+  "voice": "luz",
+  "duration": 210.0,
+  "captions": [
+    {
+      "s": 1.2,
+      "e": 2.78,
+      "t": "Estoy aquí contigo."
+    },
+    {
+      "s": 3.58,
+      "e": 6.77,
+      "t": "Vamos a atravesar este momento, paso a paso."
+    },
+    {
+      "s": 7.57,
+      "e": 11.11,
+      "t": "Lo que sientes es muy incómodo, pero no es peligroso."
+    },
+    {
+      "s": 11.91,
+      "e": 16.16,
+      "t": "Tu cuerpo activó su alarma, y ahora vamos a ayudarlo a apagarla."
+    },
+    {
+      "s": 19.16,
+      "e": 20.97,
+      "t": "Primero, suelta el aire."
+    },
+    {
+      "s": 21.77,
+      "e": 24.53,
+      "t": "Todo el aire, despacio, por la boca."
+    },
+    {
+      "s": 25.33,
+      "e": 27.59,
+      "t": "Como si soplaras por una pajita."
+    },
+    {
+      "s": 29.59,
+      "e": 35.75,
+      "t": "Ahora, haz dos inhalaciones cortas por la nariz, una detrás de la otra, llenando bien los pulmones…"
+    },
+    {
+      "s": 37.75,
+      "e": 40.98,
+      "t": "y suelta un suspiro largo, largo, por la boca."
+    },
+    {
+      "s": 43.98,
+      "e": 44.92,
+      "t": "Otra vez."
+    },
+    {
+      "s": 45.72,
+      "e": 47.8,
+      "t": "Dos inhalaciones por la nariz…"
+    },
+    {
+      "s": 49.8,
+      "e": 51.61,
+      "t": "y un suspiro muy largo."
+    },
+    {
+      "s": 54.61,
+      "e": 55.48,
+      "t": "Una más."
+    },
+    {
+      "s": 56.28,
+      "e": 58.28,
+      "t": "Inhala, y un poquito más…"
+    },
+    {
+      "s": 60.28,
+      "e": 61.6,
+      "t": "y suelta todo."
+    },
+    {
+      "s": 65.6,
+      "e": 66.51,
+      "t": "Muy bien."
+    },
+    {
+      "s": 67.31,
+      "e": 68.87,
+      "t": "Ahora siente tus pies."
+    },
+    {
+      "s": 69.67,
+      "e": 72.11,
+      "t": "Apóyalos con firmeza en el suelo."
+    },
+    {
+      "s": 72.91,
+      "e": 75.24,
+      "t": "Siente cómo el suelo te sostiene."
+    },
+    {
+      "s": 78.24,
+      "e": 82.03,
+      "t": "Mira a tu alrededor, y encuentra tres cosas que puedas ver."
+    },
+    {
+      "s": 82.83,
+      "e": 84.51,
+      "t": "Nómbralas en silencio."
+    },
+    {
+      "s": 90.51,
+      "e": 93.22,
+      "t": "Ahora, tres sonidos que puedas escuchar."
+    },
+    {
+      "s": 99.22,
+      "e": 101.48,
+      "t": "Y tres cosas que puedas tocar."
+    },
+    {
+      "s": 102.28,
+      "e": 103.73,
+      "t": "Siente su textura."
+    },
+    {
+      "s": 109.73,
+      "e": 111.03,
+      "t": "Sigue respirando."
+    },
+    {
+      "s": 111.83,
+      "e": 114.54,
+      "t": "Inhala con calma, y exhala más largo."
+    },
+    {
+      "s": 119.54,
+      "e": 122.04,
+      "t": "Puedes repetirte: «esto va a pasar."
+    },
+    {
+      "s": 122.84,
+      "e": 124.3,
+      "t": "Ya está pasando»."
+    },
+    {
+      "s": 129.3,
+      "e": 132.89,
+      "t": "Cada exhalación le dice a tu cuerpo que estás a salvo."
+    },
+    {
+      "s": 191.61,
+      "e": 193.79,
+      "t": "Lo estás haciendo muy bien."
+    },
+    {
+      "s": 194.59,
+      "e": 200.19,
+      "t": "Quédate con tus pies en el suelo y tu exhalación larga todo el tiempo que necesites."
+    },
+    {
+      "s": 200.99,
+      "e": 206.0,
+      "t": "Y si lo necesitas, puedes volver a escuchar esta práctica las veces que quieras."
+    }
+  ],
+  "cues": []
+}

@@ -458,20 +458,26 @@
   "respiro-para-mamas": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 658917,
-    "v": "632602df5e"
+    "bytes": 624211,
+    "v": "eeaa082f7f40",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "soltar-tension": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1224115,
-    "v": "da60eacca9"
+    "bytes": 1176859,
+    "v": "133586317f3b",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "sos-ansiedad": {
     "duration": 210.0,
     "voice": "luz",
-    "bytes": 537318,
-    "v": "e815b4c501"
+    "bytes": 513307,
+    "v": "3bee4fa06a85",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "volver-a-dormir": {
     "duration": 600.0,

@@ -1,1 +1,177 @@
-{"id":"respiro-para-mamas","duration":300.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.93,"t":"Esta es una pausa corta para ti, mamá."},{"s":9.73,"e":12.0,"t":"Sabemos que tienes poco tiempo."},{"s":12.8,"e":20.52,"t":"Quizás estás escuchando esto mientras duermen, mientras juegan en la otra habitación, o encerrada cinco minutos en el baño."},{"s":21.32,"e":22.14,"t":"Está bien."},{"s":22.94,"e":24.71,"t":"Cinco minutos alcanzan."},{"s":26.61,"e":30.18,"t":"No hace falta cerrar los ojos si necesitas estar atenta."},{"s":30.98,"e":33.96,"t":"Solo baja un poco la mirada."},{"s":36.96,"e":39.04,"t":"Haz una respiración profunda…"},{"s":40.39,"e":41.99,"t":"y suelta con un suspiro."},{"s":45.99,"e":46.72,"t":"Otra vez…"},{"s":48.07,"e":48.92,"t":"y suelta."},{"s":52.92,"e":54.77,"t":"Siente tus pies en el suelo."},{"s":55.57,"e":56.35,"t":"Tu espalda."},{"s":57.15,"e":59.13,"t":"Tu cuerpo, que sostiene tanto."},{"s":76.75,"e":79.07,"t":"Lleva una mano al pecho."},{"s":79.87,"e":82.13,"t":"Siente cómo sube y baja."},{"s":99.76,"e":103.33,"t":"Durante estos minutos, tú también mereces ser cuidada."},{"s":120.96,"e":122.89,"t":"Piensa en todo lo que hiciste hoy."},{"s":123.69,"e":126.58,"t":"Las cosas visibles, y las invisibles."},{"s":127.38,"e":132.37,"t":"Las que nadie ve, pero que sostienen la casa, la rutina, a los tuyos."},{"s":133.17,"e":136.6,"t":"Reconócelo en silencio: «estoy haciendo mucho»."},{"s":171.85,"e":176.55,"t":"Si aparece la culpa por no ser la mamá perfecta, respira con ella."},{"s":177.35,"e":179.34,"t":"La mamá perfecta no existe."},{"s":180.14,"e":184.56,"t":"Existe una mamá real, que está haciendo lo mejor que puede."},{"s":219.81,"e":227.12,"t":"Imagina que te abrazas a ti misma, como abrazarías a tu hija o a tu hijo cuando necesita consuelo."},{"s":227.92,"e":232.04,"t":"Y repite en silencio: «yo también necesito cuidado."},{"s":232.84,"e":234.35,"t":"Y está bien pedirlo»."},{"s":269.6,"e":273.18,"t":"Una respiración más, larga y lenta."},{"s":278.18,"e":281.69,"t":"Ahora vuelve a tu día, un poco más liviana."},{"s":282.49,"e":285.7,"t":"Y recuerda: cuidarte no es quitarles tiempo."},{"s":286.5,"e":287.9,"t":"Es tener más para dar."}],"cues":[{"t":0.4,"type":"bell"},{"t":290.5,"type":"bell"}]}
+{
+  "id": "respiro-para-mamas",
+  "voice": "luz",
+  "duration": 300.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.18,
+      "t": "Esta es una pausa corta para ti, mamá."
+    },
+    {
+      "s": 8.98,
+      "e": 11.14,
+      "t": "Sabemos que tienes poco tiempo."
+    },
+    {
+      "s": 11.94,
+      "e": 20.02,
+      "t": "Quizás estás escuchando esto mientras duermen, mientras juegan en la otra habitación, o encerrada cinco minutos en el baño."
+    },
+    {
+      "s": 20.82,
+      "e": 21.83,
+      "t": "Está bien."
+    },
+    {
+      "s": 22.63,
+      "e": 24.64,
+      "t": "Cinco minutos alcanzan."
+    },
+    {
+      "s": 27.64,
+      "e": 31.48,
+      "t": "No hace falta cerrar los ojos si necesitas estar atenta."
+    },
+    {
+      "s": 32.28,
+      "e": 34.42,
+      "t": "Solo baja un poco la mirada."
+    },
+    {
+      "s": 37.42,
+      "e": 39.65,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 41.0,
+      "e": 42.81,
+      "t": "y suelta con un suspiro."
+    },
+    {
+      "s": 46.81,
+      "e": 47.75,
+      "t": "Otra vez…"
+    },
+    {
+      "s": 49.1,
+      "e": 50.04,
+      "t": "y suelta."
+    },
+    {
+      "s": 54.04,
+      "e": 55.99,
+      "t": "Siente tus pies en el suelo."
+    },
+    {
+      "s": 56.79,
+      "e": 57.83,
+      "t": "Tu espalda."
+    },
+    {
+      "s": 58.63,
+      "e": 60.84,
+      "t": "Tu cuerpo, que sostiene tanto."
+    },
+    {
+      "s": 78.82,
+      "e": 80.58,
+      "t": "Lleva una mano al pecho."
+    },
+    {
+      "s": 81.38,
+      "e": 83.36,
+      "t": "Siente cómo sube y baja."
+    },
+    {
+      "s": 101.34,
+      "e": 104.84,
+      "t": "Durante estos minutos, tú también mereces ser cuidada."
+    },
+    {
+      "s": 122.83,
+      "e": 125.28,
+      "t": "Piensa en todo lo que hiciste hoy."
+    },
+    {
+      "s": 126.08,
+      "e": 128.86,
+      "t": "Las cosas visibles, y las invisibles."
+    },
+    {
+      "s": 129.66,
+      "e": 134.06,
+      "t": "Las que nadie ve, pero que sostienen la casa, la rutina, a los tuyos."
+    },
+    {
+      "s": 134.86,
+      "e": 138.04,
+      "t": "Reconócelo en silencio: «estoy haciendo mucho»."
+    },
+    {
+      "s": 174.0,
+      "e": 178.37,
+      "t": "Si aparece la culpa por no ser la mamá perfecta, respira con ella."
+    },
+    {
+      "s": 179.17,
+      "e": 181.26,
+      "t": "La mamá perfecta no existe."
+    },
+    {
+      "s": 182.06,
+      "e": 185.64,
+      "t": "Existe una mamá real, que está haciendo lo mejor que puede."
+    },
+    {
+      "s": 221.61,
+      "e": 228.22,
+      "t": "Imagina que te abrazas a ti misma, como abrazarías a tu hija o a tu hijo cuando necesita consuelo."
+    },
+    {
+      "s": 229.02,
+      "e": 232.65,
+      "t": "Y repite en silencio: «yo también necesito cuidado."
+    },
+    {
+      "s": 233.45,
+      "e": 235.09,
+      "t": "Y está bien pedirlo»."
+    },
+    {
+      "s": 271.05,
+      "e": 273.79,
+      "t": "Una respiración más, larga y lenta."
+    },
+    {
+      "s": 278.79,
+      "e": 281.7,
+      "t": "Ahora vuelve a tu día, un poco más liviana."
+    },
+    {
+      "s": 282.5,
+      "e": 285.42,
+      "t": "Y recuerda: cuidarte no es quitarles tiempo."
+    },
+    {
+      "s": 286.22,
+      "e": 287.9,
+      "t": "Es tener más para dar."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 290.5,
+      "type": "bell"
+    }
+  ]
+}

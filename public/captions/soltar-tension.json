@@ -1,1 +1,322 @@
-{"id":"soltar-tension","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":10.53,"t":"Esta práctica es para esos días en que el estrés se queda atrapado en el cuerpo."},{"s":11.33,"e":14.9,"t":"En los hombros, en la mandíbula, en el estómago."},{"s":15.7,"e":20.78,"t":"Vamos a recorrer el cuerpo buscando esos lugares, y a invitarlos a soltar."},{"s":21.58,"e":26.51,"t":"No a la fuerza, sino con paciencia, como quien desata un nudo."},{"s":28.41,"e":30.04,"t":"Siéntate o recuéstate."},{"s":30.84,"e":31.99,"t":"Cierra los ojos."},{"s":35.99,"e":37.89,"t":"Inhala profundo por la nariz…"},{"s":39.24,"e":42.96,"t":"y suelta el aire por la boca, con un sonido si quieres."},{"s":43.76,"e":44.7,"t":"Un «ahh» largo."},{"s":48.7,"e":49.43,"t":"Otra vez."},{"s":50.23,"e":50.75,"t":"Inhala…"},{"s":52.1,"e":52.95,"t":"y suelta."},{"s":57.95,"e":63.84,"t":"Empecemos por la cara, donde solemos acumular mucha tensión sin darnos cuenta."},{"s":64.64,"e":65.81,"t":"Nota la frente."},{"s":66.61,"e":69.61,"t":"Si está fruncida, deja que se alise."},{"s":86.95,"e":87.82,"t":"Los ojos."},{"s":88.62,"e":92.97,"t":"Deja que se hundan un poco, suaves, dentro de sus órbitas."},{"s":110.31,"e":111.2,"t":"La mandíbula."},{"s":112.0,"e":115.1,"t":"Muchas personas la aprietan todo el día."},{"s":115.9,"e":117.6,"t":"Separa un poco los dientes."},{"s":118.4,"e":120.76,"t":"Deja que la boca se afloje."},{"s":121.56,"e":125.2,"t":"Quizás quieras abrirla y cerrarla un par de veces."},{"s":159.88,"e":160.96,"t":"Baja al cuello."},{"s":161.76,"e":167.67,"t":"Puedes moverlo suavemente de un lado a otro, muy despacio, y luego volver al centro."},{"s":185.02,"e":186.19,"t":"Ahora los hombros."},{"s":186.99,"e":190.61,"t":"Súbelos hacia las orejas, apretando fuerte…"},{"s":191.96,"e":193.25,"t":"mantén un momento…"},{"s":195.25,"e":197.08,"t":"y déjalos caer de golpe."},{"s":197.88,"e":199.4,"t":"Siente la diferencia."},{"s":202.4,"e":203.12,"t":"Otra vez."},{"s":203.92,"e":205.12,"t":"Sube los hombros…"},{"s":206.47,"e":207.29,"t":"aprieta…"},{"s":209.29,"e":210.14,"t":"y suelta."},{"s":244.82,"e":247.8,"t":"Lleva la atención a los brazos y las manos."},{"s":248.6,"e":252.48,"t":"Cierra los puños con fuerza, como si apretaras algo…"},{"s":255.48,"e":258.34,"t":"y abre las manos, extendiendo los dedos."},{"s":259.14,"e":260.81,"t":"Luego déjalas descansar."},{"s":261.61,"e":264.79,"t":"Siente el hormigueo, la sangre que circula."},{"s":299.47,"e":300.64,"t":"Ahora el pecho."},{"s":301.44,"e":304.75,"t":"Deja que la respiración lo expanda libremente."},{"s":305.55,"e":307.19,"t":"No hay nada que contener."},{"s":324.53,"e":325.37,"t":"El estómago."},{"s":326.17,"e":329.4,"t":"El estrés suele esconderse aquí, como un nudo."},{"s":330.2,"e":336.89,"t":"Respira hacia el abdomen, y deja que se ablande, que se vuelva suave y redondo."},{"s":371.57,"e":372.4,"t":"La espalda."},{"s":373.2,"e":378.79,"t":"Imagina que cada vértebra se acomoda sobre la anterior, con espacio entre ellas."},{"s":396.13,"e":397.9,"t":"Las piernas, los pies."},{"s":398.7,"e":400.17,"t":"Pesados, apoyados."},{"s":400.97,"e":402.68,"t":"Suelta los dedos de los pies."},{"s":437.36,"e":444.2,"t":"Ahora recorre todo el cuerpo de un vistazo, de la cabeza a los pies, como una ola cálida que baja."},{"s":445.0,"e":449.29,"t":"Si queda algún rincón con tensión, envíale tu respiración."},{"s":501.32,"e":504.27,"t":"Quédate un momento en este cuerpo más suelto."},{"s":505.07,"e":509.69,"t":"Recuerda cómo se siente, para poder volver a esta sensación más tarde."},{"s":561.72,"e":563.02,"t":"Vamos terminando."},{"s":563.82,"e":566.26,"t":"Haz una respiración más profunda."},{"s":567.06,"e":568.22,"t":"Mueve los dedos."},{"s":569.02,"e":570.39,"t":"Estírate lentamente."},{"s":574.39,"e":577.21,"t":"Y cuando sea el momento, abre los ojos."},{"s":579.21,"e":584.48,"t":"El cuerpo guarda lo que vivimos, pero también sabe soltarlo cuando le damos permiso."},{"s":585.28,"e":587.9,"t":"Vuelve a esta práctica cuando lo necesites."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "soltar-tension",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 10.76,
+      "t": "Esta práctica es para esos días en que el estrés se queda atrapado en el cuerpo."
+    },
+    {
+      "s": 11.56,
+      "e": 14.65,
+      "t": "En los hombros, en la mandíbula, en el estómago."
+    },
+    {
+      "s": 15.45,
+      "e": 20.44,
+      "t": "Vamos a recorrer el cuerpo buscando esos lugares, y a invitarlos a soltar."
+    },
+    {
+      "s": 21.24,
+      "e": 25.28,
+      "t": "No a la fuerza, sino con paciencia, como quien desata un nudo."
+    },
+    {
+      "s": 28.28,
+      "e": 30.19,
+      "t": "Siéntate o recuéstate."
+    },
+    {
+      "s": 30.99,
+      "e": 32.38,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 36.38,
+      "e": 38.39,
+      "t": "Inhala profundo por la nariz…"
+    },
+    {
+      "s": 39.74,
+      "e": 43.19,
+      "t": "y suelta el aire por la boca, con un sonido si quieres."
+    },
+    {
+      "s": 43.99,
+      "e": 45.09,
+      "t": "Un «ahh» largo."
+    },
+    {
+      "s": 49.09,
+      "e": 50.03,
+      "t": "Otra vez."
+    },
+    {
+      "s": 50.83,
+      "e": 51.6,
+      "t": "Inhala…"
+    },
+    {
+      "s": 52.95,
+      "e": 53.89,
+      "t": "y suelta."
+    },
+    {
+      "s": 58.89,
+      "e": 64.18,
+      "t": "Empecemos por la cara, donde solemos acumular mucha tensión sin darnos cuenta."
+    },
+    {
+      "s": 64.98,
+      "e": 66.28,
+      "t": "Nota la frente."
+    },
+    {
+      "s": 67.08,
+      "e": 69.86,
+      "t": "Si está fruncida, deja que se alise."
+    },
+    {
+      "s": 87.33,
+      "e": 88.29,
+      "t": "Los ojos."
+    },
+    {
+      "s": 89.09,
+      "e": 92.97,
+      "t": "Deja que se hundan un poco, suaves, dentro de sus órbitas."
+    },
+    {
+      "s": 110.45,
+      "e": 111.57,
+      "t": "La mandíbula."
+    },
+    {
+      "s": 112.37,
+      "e": 115.26,
+      "t": "Muchas personas la aprietan todo el día."
+    },
+    {
+      "s": 116.06,
+      "e": 118.06,
+      "t": "Separa un poco los dientes."
+    },
+    {
+      "s": 118.86,
+      "e": 120.99,
+      "t": "Deja que la boca se afloje."
+    },
+    {
+      "s": 121.79,
+      "e": 125.17,
+      "t": "Quizás quieras abrirla y cerrarla un par de veces."
+    },
+    {
+      "s": 160.12,
+      "e": 161.39,
+      "t": "Baja al cuello."
+    },
+    {
+      "s": 162.19,
+      "e": 167.64,
+      "t": "Puedes moverlo suavemente de un lado a otro, muy despacio, y luego volver al centro."
+    },
+    {
+      "s": 185.11,
+      "e": 186.36,
+      "t": "Ahora los hombros."
+    },
+    {
+      "s": 187.16,
+      "e": 190.15,
+      "t": "Súbelos hacia las orejas, apretando fuerte…"
+    },
+    {
+      "s": 191.5,
+      "e": 193.0,
+      "t": "mantén un momento…"
+    },
+    {
+      "s": 195.0,
+      "e": 196.91,
+      "t": "y déjalos caer de golpe."
+    },
+    {
+      "s": 197.71,
+      "e": 199.25,
+      "t": "Siente la diferencia."
+    },
+    {
+      "s": 202.25,
+      "e": 203.19,
+      "t": "Otra vez."
+    },
+    {
+      "s": 203.99,
+      "e": 205.23,
+      "t": "Sube los hombros…"
+    },
+    {
+      "s": 206.58,
+      "e": 207.45,
+      "t": "aprieta…"
+    },
+    {
+      "s": 209.45,
+      "e": 210.39,
+      "t": "y suelta."
+    },
+    {
+      "s": 245.34,
+      "e": 248.19,
+      "t": "Lleva la atención a los brazos y las manos."
+    },
+    {
+      "s": 248.99,
+      "e": 252.36,
+      "t": "Cierra los puños con fuerza, como si apretaras algo…"
+    },
+    {
+      "s": 255.36,
+      "e": 257.95,
+      "t": "y abre las manos, extendiendo los dedos."
+    },
+    {
+      "s": 258.75,
+      "e": 260.77,
+      "t": "Luego déjalas descansar."
+    },
+    {
+      "s": 261.57,
+      "e": 264.42,
+      "t": "Siente el hormigueo, la sangre que circula."
+    },
+    {
+      "s": 299.37,
+      "e": 300.58,
+      "t": "Ahora el pecho."
+    },
+    {
+      "s": 301.38,
+      "e": 304.51,
+      "t": "Deja que la respiración lo expanda libremente."
+    },
+    {
+      "s": 305.31,
+      "e": 307.09,
+      "t": "No hay nada que contener."
+    },
+    {
+      "s": 324.56,
+      "e": 325.71,
+      "t": "El estómago."
+    },
+    {
+      "s": 326.51,
+      "e": 329.49,
+      "t": "El estrés suele esconderse aquí, como un nudo."
+    },
+    {
+      "s": 330.29,
+      "e": 335.21,
+      "t": "Respira hacia el abdomen, y deja que se ablande, que se vuelva suave y redondo."
+    },
+    {
+      "s": 370.16,
+      "e": 371.17,
+      "t": "La espalda."
+    },
+    {
+      "s": 371.97,
+      "e": 377.03,
+      "t": "Imagina que cada vértebra se acomoda sobre la anterior, con espacio entre ellas."
+    },
+    {
+      "s": 394.51,
+      "e": 396.18,
+      "t": "Las piernas, los pies."
+    },
+    {
+      "s": 396.98,
+      "e": 398.75,
+      "t": "Pesados, apoyados."
+    },
+    {
+      "s": 399.55,
+      "e": 401.4,
+      "t": "Suelta los dedos de los pies."
+    },
+    {
+      "s": 436.34,
+      "e": 442.52,
+      "t": "Ahora recorre todo el cuerpo de un vistazo, de la cabeza a los pies, como una ola cálida que baja."
+    },
+    {
+      "s": 443.32,
+      "e": 447.38,
+      "t": "Si queda algún rincón con tensión, envíale tu respiración."
+    },
+    {
+      "s": 499.81,
+      "e": 502.96,
+      "t": "Quédate un momento en este cuerpo más suelto."
+    },
+    {
+      "s": 503.76,
+      "e": 508.45,
+      "t": "Recuerda cómo se siente, para poder volver a esta sensación más tarde."
+    },
+    {
+      "s": 560.87,
+      "e": 562.19,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 562.99,
+      "e": 565.47,
+      "t": "Haz una respiración más profunda."
+    },
+    {
+      "s": 566.27,
+      "e": 567.51,
+      "t": "Mueve los dedos."
+    },
+    {
+      "s": 568.31,
+      "e": 570.07,
+      "t": "Estírate lentamente."
+    },
+    {
+      "s": 574.07,
+      "e": 576.7,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 578.7,
+      "e": 584.17,
+      "t": "El cuerpo guarda lo que vivimos, pero también sabe soltarlo cuando le damos permiso."
+    },
+    {
+      "s": 584.97,
+      "e": 587.9,
+      "t": "Vuelve a esta práctica cuando lo necesites."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}
