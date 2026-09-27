@@ -8,8 +8,8 @@ export const ELI = {
   fullName: 'Eli Curcio',
   handle: '@mindfulnessbyeli',
   instagram: 'https://www.instagram.com/mindfulnessbyeli',
-  photo: '/eli/eli.jpg',
-  avatar: '/eli/eli-avatar.jpg',
+  photo: '/eli/eli.webp',
+  avatar: '/eli/eli-avatar.webp',
   /** Direct WhatsApp chat (the same number Eli publishes in her booking form). */
   whatsappNumber: '5491121829771',
   /** Intake + booking form for 1:1 sessions. */

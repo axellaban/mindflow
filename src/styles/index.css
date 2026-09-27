@@ -158,54 +158,6 @@
   }
 }
 
-/* Beach scene: fronds sway around their crown and the waterline comes and goes. */
-@keyframes palm-sway {
-  from {
-    transform: rotate(-2deg);
-  }
-  to {
-    transform: rotate(2.3deg);
-  }
-}
-@keyframes tide {
-  from {
-    transform: translateY(0);
-    opacity: 0.45;
-  }
-  to {
-    transform: translateY(4px);
-    opacity: 0.9;
-  }
-}
-
-/* Wind bends tree rows a little from their base; swell rolls the open sea; foam washes up the sand. */
-@keyframes wind {
-  from {
-    transform: skewX(-0.9deg);
-  }
-  to {
-    transform: skewX(1.3deg);
-  }
-}
-@keyframes swell {
-  from {
-    transform: translate(-7px, 0.8px);
-  }
-  to {
-    transform: translate(7px, -0.8px);
-  }
-}
-@keyframes wash {
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.35;
-  }
-  45% {
-    transform: translateY(-7px);
-    opacity: 1;
-  }
-}
 /* Big covers: a slow drift so still artwork feels alive. */
 @keyframes kenburns {
   from {
@@ -217,35 +169,18 @@
 }
 
 @layer components {
-  .wind {
+  /* Living parts of a scene's drawing (palms, tide, swell, wind). Scene moves them from its
+     animation loop at a gentle frame rate: CSS animations would repaint the whole drawing every frame. */
+  .wind,
+  .swell,
+  .wash,
+  .tide,
+  .palm-sway {
     transform-box: view-box;
-    animation: wind 10s ease-in-out infinite alternate;
-  }
-  .swell {
-    transform-box: view-box;
-    animation: swell 9s ease-in-out infinite alternate;
-  }
-  .wash {
-    transform-box: view-box;
-    animation: wash 8s ease-in-out infinite;
   }
   .kenburns {
     animation: kenburns 26s ease-in-out infinite alternate;
     will-change: transform;
-  }
-  .palm-sway {
-    transform-box: view-box;
-    animation: palm-sway 7s ease-in-out infinite alternate;
-  }
-  .tide {
-    animation: tide 5s ease-in-out infinite alternate;
-  }
-  [data-paused='true'] .palm-sway,
-  [data-paused='true'] .tide,
-  [data-paused='true'] .wind,
-  [data-paused='true'] .swell,
-  [data-paused='true'] .wash {
-    animation-play-state: paused;
   }
 
   .font-display {

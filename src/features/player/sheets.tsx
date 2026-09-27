@@ -18,7 +18,7 @@ import {
 import { type ReactNode, useEffect, useState } from 'react';
 import { Sheet } from '@/components/ui/Sheet';
 import { Slider, Switch } from '@/components/ui/controls';
-import { audioUrl } from '@/content/catalog';
+import { audioUrl, captionsUrl } from '@/content/catalog';
 import { BED_BY_ID, PICKER_BEDS } from '@/content/sounds';
 import type { BedId } from '@/content/types';
 import { haptic, shareOrCopy } from '@/lib/device';
@@ -59,6 +59,7 @@ export function BedSheet({ open, onClose, defaultBed }: { open: boolean; onClose
           <button
             key={id}
             type="button"
+            aria-pressed={bed === id}
             onClick={() => {
               haptic(6);
               setBed(id);
@@ -154,6 +155,10 @@ export function OptionsSheet({
       if (!res.ok) throw new Error(String(res.status));
       const cache = await caches.open('mf-audio');
       await cache.put(url, res);
+      // subtitles too, so they also work offline (best effort)
+      void fetch(captionsUrl(sessionId))
+        .then(async (r) => (r.ok ? (await caches.open('mf-captions')).put(captionsUrl(sessionId), r) : undefined))
+        .catch(() => undefined);
       setOffline('yes');
       useUI.getState().toast('Disponible sin conexión', 'success');
     } catch {

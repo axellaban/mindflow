@@ -5,6 +5,7 @@ import { haptic } from '@/lib/device';
 import { formatClock } from '@/lib/time';
 import { SPRING_SOFT } from '@/lib/motion';
 import { usePlayer } from '@/store/player';
+import { useUI } from '@/store/ui';
 import { itemInfo } from './itemInfo';
 
 export function MiniPlayer() {
@@ -18,10 +19,12 @@ export function MiniPlayer() {
   const setExpanded = usePlayer((s) => s.setExpanded);
   const info = item ? itemInfo(item) : null;
   const playing = status === 'playing' || status === 'loading';
+  // the sound mixer shows its own controls for a mix; no need to repeat them below
+  const inMixer = useUI((s) => s.mixerOnScreen) && item?.type === 'mix';
 
   return (
     <AnimatePresence>
-      {info && !expanded && (
+      {info && !expanded && !inMixer && (
         <motion.div
           key="mini"
           initial={{ y: 90, opacity: 0 }}

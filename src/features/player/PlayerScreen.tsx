@@ -65,7 +65,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (sheet) return;
+      if (sheet || e.defaultPrevented) return;
       const tag = (e.target as HTMLElement)?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA') return;
       if (e.code === 'Space') {
@@ -81,23 +81,46 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
   }, [sheet, toggle, skip, setExpanded, poke, info.infinite]);
 
   const hideUi = idle && !sheet;
+  const finished = ended && Boolean(info.session) && !info.sleep;
+
+  // focus starts inside the player and returns to where it was when it closes
+  const rootRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const before = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    rootRef.current?.focus({ preventScroll: true });
+    return () => {
+      if (before?.isConnected) before.focus({ preventScroll: true });
+    };
+  }, []);
 
   return (
     <motion.div
-      className="fixed inset-0 z-[70] overflow-hidden bg-ink-900"
+      ref={rootRef}
+      tabIndex={-1}
+      className="fixed inset-0 z-[70] overflow-hidden bg-ink-900 outline-none"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } }}
       exit={{ opacity: 0, y: 60, transition: { duration: 0.45, ease: EASE } }}
       onPointerMove={poke}
       onPointerDown={poke}
       role="dialog"
+      aria-modal="true"
       aria-label={`Reproductor: ${info.title}`}
     >
-      <Scene scene={scene} />
+      {/* when a session ends the scene rests and softens behind the summary */}
+      <Scene scene={scene} paused={finished} />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/55 via-transparent via-40% to-ink-950/90" />
+      {finished && (
+        <motion.div
+          className="pointer-events-none absolute inset-0 bg-ink-950/10 backdrop-blur-xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.6, ease: EASE }}
+        />
+      )}
       <motion.div
         className="pointer-events-none absolute inset-0 bg-ink-950"
-        animate={{ opacity: ended ? (info.sleep ? 0.55 : 0.38) : hideUi ? 0.28 : 0.12 }}
+        animate={{ opacity: ended ? (info.sleep ? 0.55 : 0.4) : hideUi ? 0.28 : 0.12 }}
         transition={{ duration: 1.6 }}
       />
 
@@ -107,6 +130,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
           className="flex items-center justify-between py-2"
           animate={{ opacity: hideUi ? 0 : 1 }}
           transition={{ duration: 0.8 }}
+          style={{ pointerEvents: hideUi ? 'none' : undefined }}
         >
           <IconButton label="Minimizar" onClick={() => setExpanded(false)}>
             <ChevronDown className="size-5" />
@@ -119,7 +143,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
           </IconButton>
         </motion.div>
 
-        {ended && info.session && !info.sleep ? (
+        {finished && info.session ? (
           <div className="no-scrollbar flex flex-1 items-start justify-center overflow-y-auto py-6 md:items-center">
             <Completion session={info.session} onDone={close} />
           </div>
@@ -131,7 +155,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
                 transition={{ duration: 1.2 }}
                 className="relative px-4 [text-shadow:0_2px_24px_rgb(7_20_28/0.55)]"
               >
-                <span className="pointer-events-none absolute inset-[-40%_-10%] -z-10 bg-[radial-gradient(closest-side,rgb(7_20_28/0.42),transparent)]" />
+                <span className="pointer-events-none absolute inset-[-55%_-14%] -z-10 bg-[radial-gradient(closest-side,rgb(7_20_28/0.5),transparent)]" />
                 <h1 className="font-display text-[38px] leading-[1.05] md:text-[52px]">{info.title}</h1>
                 <p className="mt-3 text-[15px] text-2">{ended && info.sleep ? 'Que descanses' : info.subtitle}</p>
               </motion.div>
@@ -141,10 +165,15 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
                   El sonido de fondo seguirá acompañándote un rato y se apagará solo.
                 </motion.p>
               )}
-              {error && <p className="mt-6 max-w-xs rounded-2xl bg-rose-300/15 px-4 py-3 text-[14px] text-rose-300">{error}</p>}
+              {error && <p role="alert" className="mt-6 max-w-xs rounded-2xl bg-peach-300/12 px-4 py-3 text-[14px] text-peach-300">{error}</p>}
             </div>
 
-            <motion.div animate={{ opacity: hideUi ? 0 : 1, y: hideUi ? 12 : 0 }} transition={{ duration: 0.8 }} className="pb-2">
+            <motion.div
+              animate={{ opacity: hideUi ? 0 : 1, y: hideUi ? 12 : 0 }}
+              transition={{ duration: 0.8 }}
+              className="pb-2"
+              style={{ pointerEvents: hideUi ? 'none' : undefined }}
+            >
               {!info.infinite ? (
                 <Scrubber position={position} duration={duration} onSeek={seek} />
               ) : (
@@ -360,8 +389,20 @@ function Scrubber({ position, duration, onSeek }: { position: number; duration: 
         }}
         onPointerCancel={() => setDrag(null)}
         onKeyDown={(e) => {
-          if (e.key === 'ArrowLeft') onSeek(Math.max(0, position - 5));
-          if (e.key === 'ArrowRight') onSeek(Math.min(duration, position + 5));
+          const to =
+            e.key === 'ArrowLeft' || e.key === 'ArrowDown'
+              ? Math.max(0, position - 5)
+              : e.key === 'ArrowRight' || e.key === 'ArrowUp'
+                ? Math.min(duration, position + 5)
+                : e.key === 'Home'
+                  ? 0
+                  : e.key === 'End'
+                    ? Math.max(0, duration - 1)
+                    : null;
+          if (to === null) return;
+          // the player also listens for arrows; this slider owns them while focused
+          e.preventDefault();
+          onSeek(to);
         }}
       >
         <div className="h-[3px] w-full overflow-hidden rounded-full bg-white/18">

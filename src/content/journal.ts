@@ -42,12 +42,13 @@ export const FEELINGS: { id: string; label: string; tone: 'up' | 'calm' | 'down'
   { id: 'culpa', label: 'Culpa', tone: 'down' },
 ];
 
+/** The inner weather, from a stormy sea to a sunny shore. */
 export const MOODS = [
-  { level: 1, label: 'Muy mal', color: '#9d8fbd' },
-  { level: 2, label: 'Mal', color: '#bb9fd0' },
-  { level: 3, label: 'Normal', color: '#e3b3c8' },
-  { level: 4, label: 'Bien', color: '#f6c3ae' },
-  { level: 5, label: 'Muy bien', color: '#FFE1A8' },
+  { level: 1, label: 'Muy mal', color: '#7f91b3' },
+  { level: 2, label: 'Mal', color: '#92b4cf' },
+  { level: 3, label: 'Normal', color: '#a8dcd5' },
+  { level: 4, label: 'Bien', color: '#f4cda2' },
+  { level: 5, label: 'Muy bien', color: '#ffe3a1' },
 ] as const;
 
 export type MoodLevel = 1 | 2 | 3 | 4 | 5;

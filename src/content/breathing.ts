@@ -55,7 +55,7 @@ export const BREATH_PATTERNS: BreathPattern[] = [
     description:
       'Cuatro tiempos iguales: inhalar, sostener, exhalar, sostener. Usada por deportistas y equipos de rescate para mantener la calma bajo presión.',
     phases: [IN(4), HOLD(4), OUT(4), REST(4, 'Sostené')],
-    palette: 'lavender',
+    palette: 'mist',
     recommendedMinutes: 4,
   },
   {

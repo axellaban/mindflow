@@ -142,7 +142,7 @@ export function ProgressRing({
   value,
   size = 120,
   stroke = 3,
-  color = 'rgb(253 243 245)',
+  color = 'rgb(247 241 230)',
   track = 'rgb(255 255 255 / 0.12)',
   children,
   className,

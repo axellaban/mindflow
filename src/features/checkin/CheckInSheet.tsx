@@ -64,7 +64,7 @@ export function CheckInSheet() {
   };
 
   return (
-    <Sheet open={open} onClose={close} size="md">
+    <Sheet open={open} onClose={close} size="md" label="Registro de ánimo">
       <div className="pb-4">
         <AnimatePresence mode="wait" initial={false}>
           {step === 0 && (
@@ -76,6 +76,7 @@ export function CheckInSheet() {
                   <button
                     key={m.level}
                     type="button"
+                    aria-pressed={level === m.level}
                     className="flex flex-col items-center gap-2"
                     onClick={() => {
                       haptic(8);
@@ -104,6 +105,7 @@ export function CheckInSheet() {
                     <button
                       key={f.id}
                       type="button"
+                      aria-pressed={on}
                       onClick={() => {
                         haptic(5);
                         setFeelings((xs) => (on ? xs.filter((x) => x !== f.id) : [...xs, f.id]));
@@ -137,6 +139,7 @@ export function CheckInSheet() {
                 onChange={(e) => setNote(e.target.value)}
                 rows={5}
                 maxLength={2000}
+                aria-label={prompt}
                 placeholder="Escribí con libertad. Solo vos podés verlo."
                 className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-white/5 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-blush-300/50"
               />

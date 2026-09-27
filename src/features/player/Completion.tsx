@@ -67,21 +67,21 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
       </motion.h2>
 
       <motion.div variants={item} className="mt-6 grid w-full grid-cols-2 gap-3">
-        <div className="glass rounded-3xl px-4 py-4">
+        <div className="rounded-3xl border border-white/10 bg-ink-950/40 px-4 py-4 backdrop-blur-md">
           <p className="font-display text-[28px] leading-none tabular-nums">+{minutes}</p>
-          <p className="mt-1.5 text-[13px] text-3">{minutes === 1 ? 'minuto de calma' : 'minutos de calma'}</p>
+          <p className="mt-1.5 text-[13px] text-2">{minutes === 1 ? 'minuto de calma' : 'minutos de calma'}</p>
         </div>
-        <div className="glass rounded-3xl px-4 py-4">
+        <div className="rounded-3xl border border-white/10 bg-ink-950/40 px-4 py-4 backdrop-blur-md">
           <p className="flex items-center justify-center gap-1.5 font-display text-[28px] leading-none tabular-nums">
             <Flame className="size-5 text-peach-400" />
             {stats.streak}
           </p>
-          <p className="mt-1.5 text-[13px] text-3">{stats.streak === 1 ? 'día de racha' : 'días de racha'}</p>
+          <p className="mt-1.5 text-[13px] text-2">{stats.streak === 1 ? 'día de racha' : 'días de racha'}</p>
         </div>
       </motion.div>
 
       {session.daily && (
-        <motion.blockquote variants={item} className="mt-5 w-full rounded-3xl border border-white/8 px-5 py-4">
+        <motion.blockquote variants={item} className="mt-5 w-full rounded-3xl border border-white/10 bg-ink-950/30 px-5 py-4 backdrop-blur-md">
           <p className="text-[12px] font-bold tracking-[0.14em] text-3 uppercase">Tu frase para hoy</p>
           <p className="mt-1.5 font-display text-[21px] leading-snug italic">“{session.daily.phrase}”</p>
         </motion.blockquote>
@@ -108,6 +108,7 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
                 addMood({ level: m.level, feelings: [], source: 'after' });
               }}
               disabled={mood !== null}
+              aria-pressed={mood === m.level}
               aria-label={m.label}
               className={cn('group flex flex-col items-center gap-1.5 transition-opacity', mood !== null && mood !== m.level && 'opacity-30')}
             >
@@ -115,7 +116,7 @@ export function Completion({ session, onDone }: { session: Session; onDone: () =
                 className={cn('block size-11 rounded-full transition-transform duration-300 group-hover:scale-110', mood === m.level && 'scale-110 ring-2 ring-white/80 ring-offset-2 ring-offset-transparent')}
                 style={{ background: `radial-gradient(circle at 35% 30%, #ffffff, ${m.color} 60%)` }}
               />
-              <span className="text-[11px] text-3">{m.label}</span>
+              <span className="text-[11px] text-2">{m.label}</span>
             </button>
           ))}
         </div>

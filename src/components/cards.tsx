@@ -113,7 +113,7 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
           <p className="text-[12px] font-bold tracking-[0.14em] uppercase" style={{ color: p.ui }}>
             {eyebrow}
           </p>
-          <h3 className="mt-1 font-display text-[28px] leading-[1.05] md:text-[34px]">{session.title}</h3>
+          <h2 className="mt-1 font-display text-[28px] leading-[1.05] md:text-[34px]">{session.title}</h2>
           <p className="mt-1.5 line-clamp-1 text-[14px] text-2">
             {formatDuration(session.duration)} · {note ?? session.subtitle}
             {completed && ' · Completada'}
@@ -166,21 +166,21 @@ export function ContinueCard({ progress }: { progress: ProgramProgress }) {
   const total = program.sessions.length;
   return (
     <div className="glass flex items-center gap-4 rounded-[28px] p-3 pr-4">
-      <Link to={`/programa/${program.id}`} className="shrink-0" onClick={() => haptic(5)}>
-        <CoverArt spec={program.art} rounded="rounded-[20px]" className="size-[72px]" grain={false} />
-      </Link>
-      <Link to={`/programa/${program.id}`} className="min-w-0 flex-1" onClick={() => haptic(5)}>
-        <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Continuar</p>
-        <p className="truncate text-[16px] font-semibold">{program.title}</p>
-        <div className="mt-2 flex items-center gap-2">
-          <div className="flex gap-1">
-            {Array.from({ length: total }, (_, i) => (
-              <span key={i} className={cn('h-1.5 w-3.5 rounded-full', done.includes(i + 1) ? 'bg-mist-50' : 'bg-white/15')} />
-            ))}
+      <Link to={`/programa/${program.id}`} className="flex min-w-0 flex-1 items-center gap-4" onClick={() => haptic(5)}>
+        <CoverArt spec={program.art} rounded="rounded-[20px]" className="size-[72px] shrink-0" grain={false} />
+        <div className="min-w-0 flex-1">
+          <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Continuar</p>
+          <p className="truncate text-[16px] font-semibold">{program.title}</p>
+          <div className="mt-2 flex items-center gap-2">
+            <div className="flex gap-1" aria-hidden="true">
+              {Array.from({ length: total }, (_, i) => (
+                <span key={i} className={cn('h-1.5 w-3.5 rounded-full', done.includes(i + 1) ? 'bg-mist-50' : 'bg-white/15')} />
+              ))}
+            </div>
+            <span className="text-[12px] text-3">
+              {program.unit} {nextDay} de {total}
+            </span>
           </div>
-          <span className="text-[12px] text-3">
-            {program.unit} {nextDay}
-          </span>
         </div>
       </Link>
       <motion.button

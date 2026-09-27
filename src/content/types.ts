@@ -18,7 +18,10 @@ export type PaletteId =
   | 'rose'
   | 'sage'
   | 'calma'
-  | 'playa';
+  | 'playa'
+  | 'playaDia'
+  | 'playaOcaso'
+  | 'playaNoche';
 
 export type Motif =
   | 'mountains'

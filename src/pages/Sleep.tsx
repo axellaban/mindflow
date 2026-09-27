@@ -24,7 +24,8 @@ export function Sleep() {
   return (
     <div className="pb-12">
       <section className="relative h-[46svh] min-h-[340px] overflow-hidden lg:h-[52vh]">
-        <Scene scene={SCENE_BY_ID.desierto} paused={expanded} />
+        {/* the beach by moonlight, the same place as home, now resting */}
+        <Scene scene={SCENE_BY_ID['playa-noche']} paused={expanded} />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/40 via-transparent to-ink-900" />
         <motion.div
           initial={{ opacity: 0, y: 10 }}

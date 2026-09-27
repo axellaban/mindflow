@@ -1,4 +1,4 @@
-import { ArrowRight, Check, LifeBuoy, Moon, Mountain, Share2, Timer, Volume2, VolumeX, Wind } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, LifeBuoy, Moon, Mountain, Share2, Timer, Volume2, VolumeX, Wind } from 'lucide-react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { type ReactNode, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
@@ -16,7 +16,7 @@ import { EliHomeCard } from '@/features/eli/EliHomeCard';
 import { FEELINGS, MOODS } from '@/content/journal';
 import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
-import { SCENES, SCENE_BY_ID, type SceneId } from '@/content/scenes';
+import { AUTO_SCENE_NAME, SCENES, SCENE_BY_ID, type SceneChoice, type SceneId, beachAt, resolveScene } from '@/content/scenes';
 import { haptic, shareOrCopy } from '@/lib/device';
 import { SPRING_PRESS, reveal, revealFocus, stagger } from '@/lib/motion';
 import { programProgress, useActiveProgram, useNow } from '@/lib/hooks';
@@ -50,7 +50,15 @@ export function Home() {
   const greetingOpacity = useTransform(scrollY, [0, 240], [1, 0]);
   const greetingY = useTransform(scrollY, [0, 240], [0, -20]);
 
-  const scene = SCENE_BY_ID[sceneId] ?? SCENES[0]!;
+  // the beach follows the light of the day unless a fixed scene was chosen
+  const scene = useMemo(() => resolveScene(sceneId, now), [sceneId, now]);
+  const sceneChoices = useMemo(
+    () => [
+      { id: 'auto' as SceneChoice, name: AUTO_SCENE_NAME, note: 'Amanecer, día, atardecer o noche', preview: beachAt(now).id },
+      ...SCENES.map((s) => ({ id: s.id as SceneChoice, name: s.name, note: undefined, preview: s.id })),
+    ],
+    [now],
+  );
   const daily = useMemo(() => dailyFor(now), [now]);
   const forYou = useMemo(() => recommended(profile, history, now), [profile, history, now]);
   const part = useMemo(() => forDayPart(now), [now]);
@@ -195,23 +203,29 @@ export function Home() {
           <QuoteCard text={quote.text} author={quote.author} />
         </motion.section>
 
-        <details className="mx-5 border-t border-white/10 py-5 md:mx-0">
-          <summary className="cursor-pointer py-2 text-sm text-2">Tu semana, sin exigencias</summary>
-          <div className="mt-4"><WeekCard /></div>
+        <details className="group mx-5 border-t border-white/10 py-5 md:mx-0">
+          <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl py-2 text-[14px] font-semibold text-2 transition-colors hover:text-mist-50 [&::-webkit-details-marker]:hidden">
+            Tu semana, sin exigencias
+            <ChevronDown className="size-4 transition-transform duration-300 group-open:rotate-180" />
+          </summary>
+          <div className="mt-4">
+            <WeekCard />
+          </div>
         </details>
       </motion.div>
 
       <Sheet open={scenesOpen} onClose={() => setScenesOpen(false)} title="Escena de inicio" size="lg">
         <div className="grid grid-cols-2 gap-3 pb-4 sm:grid-cols-3">
-          {SCENES.map((s) => (
+          {sceneChoices.map((s) => (
             <button
               key={s.id}
               type="button"
+              aria-pressed={s.id === sceneId}
               onClick={() => {
                 haptic(6);
-                updateSettings({ sceneId: s.id as SceneId });
+                updateSettings({ sceneId: s.id });
               }}
-              className={cn('group text-left', s.id === sceneId && 'opacity-100')}
+              className="group text-left"
             >
               <div
                 className={cn(
@@ -219,14 +233,15 @@ export function Home() {
                   s.id === sceneId ? 'ring-mist-50' : 'ring-transparent group-hover:ring-white/25',
                 )}
               >
-                <ScenePreview sceneId={s.id as SceneId} />
+                <ScenePreview sceneId={s.preview} />
                 {s.id === sceneId && (
                   <span className="absolute top-2.5 right-2.5 flex size-7 items-center justify-center rounded-full bg-mist-50 text-ink-900">
                     <Check className="size-4" strokeWidth={3} />
                   </span>
                 )}
               </div>
-              <p className="mt-2 text-[14px] font-semibold">{s.name}</p>
+              <p className="mt-2 text-[14px] leading-snug font-semibold">{s.name}</p>
+              {s.note && <p className="text-[12.5px] leading-snug text-3">{s.note}</p>}
             </button>
           ))}
         </div>

@@ -6,7 +6,7 @@ import { Sheet } from '@/components/ui/Sheet';
 import { Chip, Slider, Switch } from '@/components/ui/controls';
 import { ELI } from '@/content/eli';
 import { GOALS } from '@/content/goals';
-import { SCENES } from '@/content/scenes';
+import { AUTO_SCENE_NAME, SCENES } from '@/content/scenes';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { InstagramIcon, WhatsAppIcon, useEliLinks } from '@/features/eli/actions';
 import { downloadFile, reminderICS } from '@/lib/device';
@@ -82,7 +82,7 @@ export function SettingsPage() {
               icon={<CalendarPlus className="size-4.5" />}
               onClick={() => {
                 updateSettings({ reminderTime: reminder });
-                downloadFile('mindfulness-recordatorio.ics', reminderICS(reminder, location.origin), 'text/calendar');
+                downloadFile('calmabyeli-recordatorio.ics', reminderICS(reminder, location.origin), 'text/calendar');
                 toast('Abrí el archivo para agregarlo a tu calendario');
               }}
             >
@@ -120,6 +120,9 @@ export function SettingsPage() {
           <div className="py-3">
             <p className="mb-3 text-[15px]">Escena de inicio</p>
             <div className="flex flex-wrap gap-2">
+              <Chip active={settings.sceneId === 'auto'} onClick={() => updateSettings({ sceneId: 'auto' })}>
+                {AUTO_SCENE_NAME}
+              </Chip>
               {SCENES.map((s) => (
                 <Chip key={s.id} active={settings.sceneId === s.id} onClick={() => updateSettings({ sceneId: s.id })}>
                   {s.name}

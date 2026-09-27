@@ -12,7 +12,7 @@ import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import { ELI } from '@/content/eli';
 import { GOALS as GOAL_DEFS } from '@/content/goals';
 import { suggestedProgram } from '@/content/recommend';
-import { SCENE_BY_ID } from '@/content/scenes';
+import { beachAt } from '@/content/scenes';
 import type { GoalId } from '@/content/types';
 import { downloadFile, haptic, reminderICS } from '@/lib/device';
 import { EliAvatar } from '@/features/eli/EliAvatar';
@@ -67,6 +67,8 @@ export function Onboarding() {
   const [experience, setExperience] = useState<Profile['experience']>(null);
   const [name, setName] = useState('');
   const [time, setTime] = useState<string | null>(null);
+  // the first breath happens on the beach as it looks right now
+  const [scene] = useState(() => beachAt());
 
   useEffect(
     () => () => {
@@ -114,7 +116,7 @@ export function Onboarding() {
           className="absolute inset-0 transition-[opacity,filter] duration-[1600ms] ease-out"
           style={intro ? undefined : { opacity: 0.3, filter: 'blur(20px)' }}
         >
-          <Scene scene={SCENE_BY_ID.playa} paused={!intro} />
+          <Scene scene={scene} paused={!intro} />
         </div>
       </motion.div>
       <div className={cn('pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/10 via-transparent to-ink-950/45 transition-opacity duration-[1600ms]', !intro && 'opacity-0')} />
@@ -278,7 +280,7 @@ export function Onboarding() {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             onClick={() => {
-                              downloadFile('mindfulness-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
+                              downloadFile('calmabyeli-recordatorio.ics', reminderICS(time, location.origin), 'text/calendar');
                               useUI.getState().toast('Abrí el archivo para agregarlo a tu calendario');
                             }}
                             className="mt-3 flex items-center gap-2 text-[14px] font-semibold text-blush-300"

@@ -47,7 +47,7 @@ export function TimerScreen() {
   const exit = () => (window.history.length > 1 ? navigate(-1) : navigate('/'));
 
   return (
-    <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
+    <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
       <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#234557_0%,#132a39_60%,#0a1a22_100%)]" />
       <div className="grain absolute inset-0" />
       <AnimatePresence mode="wait">
@@ -161,7 +161,7 @@ export function TimerScreen() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </main>
   );
 }
 
