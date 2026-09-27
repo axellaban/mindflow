@@ -1,0 +1,14 @@
+{
+  "sessions": {
+    "aam-1-respiracion": {
+      "v": "09bfa9f091",
+      "audio_sha256": "b90d0259384f743ca4469bf1f2f9c61bdfe90089fe9ac19c6f6900d27a108d6d",
+      "sentences": 58,
+      "retaken": 0,
+      "lowest_score": 0.667,
+      "flagged": []
+    }
+  },
+  "verified": 1,
+  "total": 61
+}
