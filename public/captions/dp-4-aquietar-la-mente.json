@@ -1,1 +1,263 @@
-{"id":"dp-4-aquietar-la-mente","duration":720.0,"voice":"luz","captions":[{"s":1.2,"e":1.74,"t":"Hola."},{"s":2.54,"e":4.5,"t":"Bienvenida a la cuarta noche."},{"s":5.3,"e":9.93,"t":"Muchas veces el cuerpo está agotado, pero la mente sigue encendida."},{"s":10.73,"e":18.13,"t":"Repasa conversaciones, planifica mañana, se preocupa por cosas que ahora no puede resolver."},{"s":18.93,"e":24.04,"t":"Esta noche vamos a aprender dos herramientas para aquietar esa mente inquieta."},{"s":24.84,"e":27.6,"t":"La primera es guardar las preocupaciones."},{"s":28.4,"e":33.81,"t":"La segunda es un juego de imaginación que ayuda al cerebro a entrar en modo sueño."},{"s":35.71,"e":37.33,"t":"Acomódate en la cama."},{"s":38.13,"e":41.47,"t":"Apaga las luces si todavía no lo hiciste."},{"s":46.47,"e":47.78,"t":"Respira profundo…"},{"s":49.13,"e":50.91,"t":"y suelta el aire despacio."},{"s":55.91,"e":58.75,"t":"Una vez más, más lento todavía."},{"s":64.75,"e":71.85,"t":"Imagina que junto a tu cama hay una caja de madera, con una tapa que cierra bien."},{"s":72.65,"e":80.23,"t":"Cada preocupación, cada pendiente, cada pensamiento que da vueltas, lo vas a poner dentro de esa caja."},{"s":97.92,"e":100.49,"t":"Deja que aparezca el primero."},{"s":101.29,"e":103.05,"t":"No tienes que resolverlo."},{"s":103.85,"e":107.09,"t":"Solo reconócelo, y colócalo en la caja."},{"s":107.89,"e":109.86,"t":"Puedes decirte: «ahora no."},{"s":110.66,"e":112.01,"t":"Mañana me ocupo»."},{"s":147.4,"e":150.12,"t":"Si aparece otro, haz lo mismo."},{"s":150.92,"e":153.65,"t":"Lo tomas con suavidad, y lo guardas."},{"s":189.03,"e":191.37,"t":"Y otro más, si hace falta."},{"s":192.17,"e":194.92,"t":"La caja tiene espacio para todo."},{"s":230.31,"e":231.81,"t":"Ahora cierra la tapa."},{"s":232.61,"e":235.84,"t":"Escucha el pequeño sonido de la madera al encajar."},{"s":236.64,"e":239.85,"t":"Todo lo que está ahí dentro seguirá ahí por la mañana."},{"s":240.65,"e":243.08,"t":"Esta noche, no te necesita."},{"s":278.46,"e":280.05,"t":"Ahora, el juego."},{"s":280.85,"e":289.79,"t":"Vamos a pensar en una palabra sencilla, y con cada una de sus letras vas a imaginar cosas distintas, sin relación entre sí."},{"s":290.59,"e":293.17,"t":"Por ejemplo, con la palabra «luna»."},{"s":296.17,"e":298.98,"t":"Con la ele, imagina un limón."},{"s":299.78,"e":301.51,"t":"Amarillo, brillante."},{"s":319.21,"e":322.89,"t":"Luego, un león, descansando bajo un árbol."},{"s":340.58,"e":343.59,"t":"Una lámpara encendida en una ventana."},{"s":361.28,"e":362.15,"t":"Ahora la u."},{"s":362.95,"e":365.32,"t":"Unas uvas, verdes y frescas."},{"s":383.01,"e":385.44,"t":"Un unicornio, en un prado."},{"s":403.13,"e":404.28,"t":"Ahora la ene."},{"s":405.08,"e":407.7,"t":"Un nido, con tres huevos celestes."},{"s":425.4,"e":427.5,"t":"Una nube blanca, suave."},{"s":445.2,"e":447.75,"t":"Una naranja, recién cortada."},{"s":465.44,"e":466.2,"t":"Y la a."},{"s":467.0,"e":470.2,"t":"Un árbol grande, con hojas que se mueven."},{"s":487.89,"e":491.65,"t":"Una abeja, volando despacio sobre una flor."},{"s":509.34,"e":511.48,"t":"Ahora sigue tú, a tu ritmo."},{"s":512.28,"e":518.69,"t":"Puedes volver a empezar con la palabra «luna», o elegir otra, como «mar», «sol» o «jardín»."},{"s":519.49,"e":524.38,"t":"Deja que las imágenes aparezcan solas, sin esfuerzo, sin orden."},{"s":525.18,"e":528.96,"t":"Si una imagen se desvanece, pasa a la siguiente."},{"s":617.42,"e":624.49,"t":"Cada imagen es un paso más lejos de las preocupaciones, y un paso más cerca del sueño."},{"s":712.95,"e":713.9,"t":"Descansa."},{"s":714.7,"e":716.0,"t":"Que duermas bien."}],"cues":[]}
+{
+  "id": "dp-4-aquietar-la-mente",
+  "voice": "luz",
+  "duration": 720.0,
+  "captions": [
+    {
+      "s": 1.2,
+      "e": 1.82,
+      "t": "Hola."
+    },
+    {
+      "s": 2.62,
+      "e": 5.05,
+      "t": "Bienvenida a la cuarta noche."
+    },
+    {
+      "s": 5.85,
+      "e": 11.08,
+      "t": "Muchas veces el cuerpo está agotado, pero la mente sigue encendida."
+    },
+    {
+      "s": 11.88,
+      "e": 19.17,
+      "t": "Repasa conversaciones, planifica mañana, se preocupa por cosas que ahora no puede resolver."
+    },
+    {
+      "s": 19.97,
+      "e": 25.69,
+      "t": "Esta noche vamos a aprender dos herramientas para aquietar esa mente inquieta."
+    },
+    {
+      "s": 26.49,
+      "e": 29.98,
+      "t": "La primera es guardar las preocupaciones."
+    },
+    {
+      "s": 30.78,
+      "e": 37.0,
+      "t": "La segunda es un juego de imaginación que ayuda al cerebro a entrar en modo sueño."
+    },
+    {
+      "s": 40.0,
+      "e": 41.93,
+      "t": "Acomódate en la cama."
+    },
+    {
+      "s": 42.73,
+      "e": 45.98,
+      "t": "Apaga las luces si todavía no lo hiciste."
+    },
+    {
+      "s": 50.98,
+      "e": 52.69,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 54.04,
+      "e": 56.34,
+      "t": "y suelta el aire despacio."
+    },
+    {
+      "s": 61.34,
+      "e": 64.27,
+      "t": "Una vez más, más lento todavía."
+    },
+    {
+      "s": 70.27,
+      "e": 76.26,
+      "t": "Imagina que junto a tu cama hay una caja de madera, con una tapa que cierra bien."
+    },
+    {
+      "s": 77.06,
+      "e": 84.77,
+      "t": "Cada preocupación, cada pendiente, cada pensamiento que da vueltas, lo vas a poner dentro de esa caja."
+    },
+    {
+      "s": 102.19,
+      "e": 104.47,
+      "t": "Deja que aparezca el primero."
+    },
+    {
+      "s": 105.27,
+      "e": 107.37,
+      "t": "No tienes que resolverlo."
+    },
+    {
+      "s": 108.17,
+      "e": 111.35,
+      "t": "Solo reconócelo, y colócalo en la caja."
+    },
+    {
+      "s": 112.15,
+      "e": 114.41,
+      "t": "Puedes decirte: «ahora no."
+    },
+    {
+      "s": 115.21,
+      "e": 116.89,
+      "t": "Mañana me ocupo»."
+    },
+    {
+      "s": 151.74,
+      "e": 154.39,
+      "t": "Si aparece otro, haz lo mismo."
+    },
+    {
+      "s": 155.19,
+      "e": 158.21,
+      "t": "Lo tomas con suavidad, y lo guardas."
+    },
+    {
+      "s": 193.05,
+      "e": 195.32,
+      "t": "Y otro más, si hace falta."
+    },
+    {
+      "s": 196.12,
+      "e": 198.89,
+      "t": "La caja tiene espacio para todo."
+    },
+    {
+      "s": 233.73,
+      "e": 235.54,
+      "t": "Ahora cierra la tapa."
+    },
+    {
+      "s": 236.34,
+      "e": 240.25,
+      "t": "Escucha el pequeño sonido de la madera al encajar."
+    },
+    {
+      "s": 241.05,
+      "e": 244.94,
+      "t": "Todo lo que está ahí dentro seguirá ahí por la mañana."
+    },
+    {
+      "s": 245.74,
+      "e": 248.09,
+      "t": "Esta noche, no te necesita."
+    },
+    {
+      "s": 282.94,
+      "e": 284.53,
+      "t": "Ahora, el juego."
+    },
+    {
+      "s": 285.33,
+      "e": 295.37,
+      "t": "Vamos a pensar en una palabra sencilla, y con cada una de sus letras vas a imaginar cosas distintas, sin relación entre sí."
+    },
+    {
+      "s": 296.17,
+      "e": 298.77,
+      "t": "Por ejemplo, con la palabra «luna»."
+    },
+    {
+      "s": 301.77,
+      "e": 304.11,
+      "t": "Con la ele, imagina un limón."
+    },
+    {
+      "s": 304.91,
+      "e": 306.81,
+      "t": "Amarillo, brillante."
+    },
+    {
+      "s": 324.23,
+      "e": 327.68,
+      "t": "Luego, un león, descansando bajo un árbol."
+    },
+    {
+      "s": 345.1,
+      "e": 348.16,
+      "t": "Una lámpara encendida en una ventana."
+    },
+    {
+      "s": 365.58,
+      "e": 366.7,
+      "t": "Ahora la u."
+    },
+    {
+      "s": 367.5,
+      "e": 370.1,
+      "t": "Unas uvas, verdes y frescas."
+    },
+    {
+      "s": 387.52,
+      "e": 389.73,
+      "t": "Un unicornio, en un prado."
+    },
+    {
+      "s": 407.15,
+      "e": 408.34,
+      "t": "Ahora la ene."
+    },
+    {
+      "s": 409.14,
+      "e": 411.9,
+      "t": "Un nido, con tres huevos celestes."
+    },
+    {
+      "s": 429.33,
+      "e": 431.43,
+      "t": "Una nube blanca, suave."
+    },
+    {
+      "s": 448.85,
+      "e": 451.42,
+      "t": "Una naranja, recién cortada."
+    },
+    {
+      "s": 468.84,
+      "e": 469.7,
+      "t": "Y la a."
+    },
+    {
+      "s": 470.5,
+      "e": 473.69,
+      "t": "Un árbol grande, con hojas que se mueven."
+    },
+    {
+      "s": 491.11,
+      "e": 494.57,
+      "t": "Una abeja, volando despacio sobre una flor."
+    },
+    {
+      "s": 511.99,
+      "e": 514.23,
+      "t": "Ahora sigue tú, a tu ritmo."
+    },
+    {
+      "s": 515.03,
+      "e": 521.47,
+      "t": "Puedes volver a empezar con la palabra «luna», o elegir otra, como «mar», «sol» o «jardín»."
+    },
+    {
+      "s": 522.27,
+      "e": 527.16,
+      "t": "Deja que las imágenes aparezcan solas, sin esfuerzo, sin orden."
+    },
+    {
+      "s": 527.96,
+      "e": 531.56,
+      "t": "Si una imagen se desvanece, pasa a la siguiente."
+    },
+    {
+      "s": 618.67,
+      "e": 625.47,
+      "t": "Cada imagen es un paso más lejos de las preocupaciones, y un paso más cerca del sueño."
+    },
+    {
+      "s": 712.58,
+      "e": 713.68,
+      "t": "Descansa."
+    },
+    {
+      "s": 714.48,
+      "e": 716.0,
+      "t": "Que duermas bien."
+    }
+  ],
+  "cues": []
+}

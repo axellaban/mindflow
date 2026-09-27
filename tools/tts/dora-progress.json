@@ -134,9 +134,24 @@
       "audio_sha256": "a340ec1266b8a9c28064c3b7b97d9804f23b3db97654696b8b4482b57f234fd2",
       "captions_sha256": "3fe1a03fd8eb247dac4b42bf593de1b2f6496976cb7a2305bba203a441f3ede7",
       "version": "b4dfe782c9d6"
+    },
+    "dp-2-respirar-para-dormir": {
+      "audio_sha256": "dc5d956aa87caeb53708b0f673e54337c816eb53b3accbe627b532c7dfe26639",
+      "captions_sha256": "662537fb8337dd0fcde5d5a169af0e6ebeaecd511a4a41bde37118732f5732fa",
+      "version": "e284c9167e7f"
+    },
+    "dp-3-escaneo-corporal": {
+      "audio_sha256": "db0672956d28eb1729947273ce121c2bb3c8848c19ae184a6203e4a9aa96c56a",
+      "captions_sha256": "ff4850da51f812acd9c0d70107953bdbafe67b258a61aff379be89d18bfdd05a",
+      "version": "e7dddeb402a3"
+    },
+    "dp-4-aquietar-la-mente": {
+      "audio_sha256": "158aa325de75fb53b9d4238f35d28151a613e51d3bb0e6d89d735e424b3ddd27",
+      "captions_sha256": "bec4a311c596eb9c96ddcdf8202b4a782aba287c5574b9dc41421d425296ce2b",
+      "version": "a9820696e53f"
     }
   },
-  "completed": 27,
+  "completed": 30,
   "total": 61,
   "audio_complete": false
 }

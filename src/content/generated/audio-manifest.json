@@ -218,20 +218,26 @@
   "dp-2-respirar-para-dormir": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1181027,
-    "v": "207939f97e"
+    "bytes": 1189339,
+    "v": "e284c9167e7f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dp-3-escaneo-corporal": {
     "duration": 900.0,
     "voice": "luz",
-    "bytes": 1566753,
-    "v": "0a3fcc4f9a"
+    "bytes": 1569835,
+    "v": "e7dddeb402a3",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dp-4-aquietar-la-mente": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1322583,
-    "v": "6edc1aa140"
+    "bytes": 1318963,
+    "v": "a9820696e53f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dp-5-el-lago": {
     "duration": 900.0,
