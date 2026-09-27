@@ -1,1 +1,212 @@
-{"id":"enfoque-profundo","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":10.52,"t":"Esta meditación es para preparar la mente antes de un bloque de trabajo o estudio."},{"s":11.32,"e":19.5,"t":"Durante diez minutos vamos a entrenar la atención como un músculo, para luego llevar esa claridad a lo que tengas por delante."},{"s":21.4,"e":25.33,"t":"Siéntate con la espalda erguida, alerta pero sin tensión."},{"s":26.13,"e":27.87,"t":"Apoya los pies en el suelo."},{"s":28.67,"e":35.18,"t":"Si hay notificaciones activas en tus dispositivos, este es un buen momento para silenciarlas."},{"s":39.18,"e":45.52,"t":"Cierra los ojos, o fija la mirada en un punto a un metro frente a ti."},{"s":48.52,"e":51.86,"t":"Toma tres respiraciones profundas y enérgicas."},{"s":52.66,"e":53.19,"t":"Inhala…"},{"s":55.19,"e":55.82,"t":"exhala."},{"s":57.82,"e":58.35,"t":"Inhala…"},{"s":60.35,"e":60.98,"t":"exhala."},{"s":62.98,"e":63.51,"t":"Inhala…"},{"s":65.51,"e":66.35,"t":"y suelta."},{"s":70.35,"e":73.29,"t":"Ahora deja que la respiración sea natural."},{"s":74.09,"e":78.67,"t":"Lleva la atención a la punta de la nariz, justo donde el aire entra y sale."},{"s":79.47,"e":82.03,"t":"Es un punto pequeño y preciso."},{"s":82.83,"e":86.12,"t":"Nota la sensación sutil del aire rozando la piel."},{"s":113.88,"e":116.04,"t":"Vamos a contar respiraciones."},{"s":116.84,"e":121.72,"t":"Cuenta uno en la primera exhalación, dos en la siguiente, y así hasta diez."},{"s":122.52,"e":124.64,"t":"Luego vuelve a empezar desde uno."},{"s":125.44,"e":131.84,"t":"Si pierdes la cuenta, o te das cuenta de que seguiste contando más allá de diez, no pasa nada."},{"s":132.64,"e":133.73,"t":"Vuelve a uno."},{"s":134.53,"e":136.42,"t":"Ese regreso es el ejercicio."},{"s":247.45,"e":248.28,"t":"Muy bien."},{"s":249.08,"e":250.37,"t":"Sigue contando."},{"s":361.4,"e":368.17,"t":"Ahora deja de contar, y simplemente mantén la atención en la sensación de la respiración, sin ayuda."},{"s":368.97,"e":373.54,"t":"Nota el comienzo de cada inhalación, su punto medio, su final."},{"s":374.34,"e":376.25,"t":"Y lo mismo con la exhalación."},{"s":487.28,"e":492.34,"t":"Antes de terminar, piensa en la tarea que vas a hacer a continuación."},{"s":493.14,"e":493.96,"t":"Solo una."},{"s":494.76,"e":498.14,"t":"Imagina que la empiezas con esta misma atención."},{"s":498.94,"e":499.87,"t":"Sin prisa."},{"s":500.67,"e":502.02,"t":"Un paso a la vez."},{"s":529.78,"e":538.52,"t":"Formula una intención sencilla, por ejemplo: «durante la próxima hora, voy a dedicarme a esto, y solo a esto»."},{"s":566.28,"e":569.19,"t":"Haz una última respiración profunda."},{"s":572.19,"e":575.64,"t":"Y abre los ojos, con la mente clara y despierta."},{"s":577.64,"e":585.4,"t":"Cuando notes que la atención se dispersa mientras trabajas, haz una respiración consciente, y vuelve a la tarea."},{"s":586.2,"e":587.9,"t":"Igual que en la meditación."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "enfoque-profundo",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 11.2,
+      "t": "Esta meditación es para preparar la mente antes de un bloque de trabajo o estudio."
+    },
+    {
+      "s": 12.0,
+      "e": 20.42,
+      "t": "Durante diez minutos vamos a entrenar la atención como un músculo, para luego llevar esa claridad a lo que tengas por delante."
+    },
+    {
+      "s": 23.42,
+      "e": 27.27,
+      "t": "Siéntate con la espalda erguida, alerta pero sin tensión."
+    },
+    {
+      "s": 28.07,
+      "e": 29.98,
+      "t": "Apoya los pies en el suelo."
+    },
+    {
+      "s": 30.78,
+      "e": 37.03,
+      "t": "Si hay notificaciones activas en tus dispositivos, este es un buen momento para silenciarlas."
+    },
+    {
+      "s": 41.03,
+      "e": 45.25,
+      "t": "Cierra los ojos, o fija la mirada en un punto a un metro frente a ti."
+    },
+    {
+      "s": 48.25,
+      "e": 51.58,
+      "t": "Toma tres respiraciones profundas y enérgicas."
+    },
+    {
+      "s": 52.38,
+      "e": 53.15,
+      "t": "Inhala…"
+    },
+    {
+      "s": 55.15,
+      "e": 55.99,
+      "t": "exhala."
+    },
+    {
+      "s": 57.99,
+      "e": 58.76,
+      "t": "Inhala…"
+    },
+    {
+      "s": 60.76,
+      "e": 61.6,
+      "t": "exhala."
+    },
+    {
+      "s": 63.6,
+      "e": 64.37,
+      "t": "Inhala…"
+    },
+    {
+      "s": 66.37,
+      "e": 67.31,
+      "t": "y suelta."
+    },
+    {
+      "s": 71.31,
+      "e": 74.22,
+      "t": "Ahora deja que la respiración sea natural."
+    },
+    {
+      "s": 75.02,
+      "e": 79.53,
+      "t": "Lleva la atención a la punta de la nariz, justo donde el aire entra y sale."
+    },
+    {
+      "s": 80.33,
+      "e": 82.71,
+      "t": "Es un punto pequeño y preciso."
+    },
+    {
+      "s": 83.51,
+      "e": 86.93,
+      "t": "Nota la sensación sutil del aire rozando la piel."
+    },
+    {
+      "s": 114.82,
+      "e": 117.15,
+      "t": "Vamos a contar respiraciones."
+    },
+    {
+      "s": 117.95,
+      "e": 122.67,
+      "t": "Cuenta uno en la primera exhalación, dos en la siguiente, y así hasta diez."
+    },
+    {
+      "s": 123.47,
+      "e": 125.8,
+      "t": "Luego vuelve a empezar desde uno."
+    },
+    {
+      "s": 126.6,
+      "e": 132.86,
+      "t": "Si pierdes la cuenta, o te das cuenta de que seguiste contando más allá de diez, no pasa nada."
+    },
+    {
+      "s": 133.66,
+      "e": 134.83,
+      "t": "Vuelve a uno."
+    },
+    {
+      "s": 135.63,
+      "e": 138.1,
+      "t": "Ese regreso es el ejercicio."
+    },
+    {
+      "s": 249.68,
+      "e": 250.59,
+      "t": "Muy bien."
+    },
+    {
+      "s": 251.39,
+      "e": 252.59,
+      "t": "Sigue contando."
+    },
+    {
+      "s": 364.17,
+      "e": 370.53,
+      "t": "Ahora deja de contar, y simplemente mantén la atención en la sensación de la respiración, sin ayuda."
+    },
+    {
+      "s": 371.33,
+      "e": 375.35,
+      "t": "Nota el comienzo de cada inhalación, su punto medio, su final."
+    },
+    {
+      "s": 376.15,
+      "e": 378.08,
+      "t": "Y lo mismo con la exhalación."
+    },
+    {
+      "s": 489.66,
+      "e": 494.12,
+      "t": "Antes de terminar, piensa en la tarea que vas a hacer a continuación."
+    },
+    {
+      "s": 494.92,
+      "e": 495.81,
+      "t": "Solo una."
+    },
+    {
+      "s": 496.61,
+      "e": 499.91,
+      "t": "Imagina que la empiezas con esta misma atención."
+    },
+    {
+      "s": 500.71,
+      "e": 501.68,
+      "t": "Sin prisa."
+    },
+    {
+      "s": 502.48,
+      "e": 503.93,
+      "t": "Un paso a la vez."
+    },
+    {
+      "s": 531.83,
+      "e": 539.07,
+      "t": "Formula una intención sencilla, por ejemplo: «durante la próxima hora, voy a dedicarme a esto, y solo a esto»."
+    },
+    {
+      "s": 566.96,
+      "e": 569.68,
+      "t": "Haz una última respiración profunda."
+    },
+    {
+      "s": 572.68,
+      "e": 575.85,
+      "t": "Y abre los ojos, con la mente clara y despierta."
+    },
+    {
+      "s": 577.85,
+      "e": 585.17,
+      "t": "Cuando notes que la atención se dispersa mientras trabajas, haz una respiración consciente, y vuelve a la tarea."
+    },
+    {
+      "s": 585.97,
+      "e": 587.9,
+      "t": "Igual que en la meditación."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

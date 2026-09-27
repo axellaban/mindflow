@@ -242,20 +242,26 @@
   "dp-5-el-lago": {
     "duration": 900.0,
     "voice": "luz",
-    "bytes": 1445390,
-    "v": "7125ee253b"
+    "bytes": 1442851,
+    "v": "037ffaa1280b",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "energia-matinal": {
     "duration": 360.0,
     "voice": "luz",
-    "bytes": 795388,
-    "v": "fd0318ae5d"
+    "bytes": 762115,
+    "v": "4770e147210a",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "enfoque-profundo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1095887,
-    "v": "3349770e51"
+    "bytes": 1048699,
+    "v": "0b07b8141b1f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "gratitud": {
     "duration": 480.0,

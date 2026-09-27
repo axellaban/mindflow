@@ -149,9 +149,24 @@
       "audio_sha256": "158aa325de75fb53b9d4238f35d28151a613e51d3bb0e6d89d735e424b3ddd27",
       "captions_sha256": "bec4a311c596eb9c96ddcdf8202b4a782aba287c5574b9dc41421d425296ce2b",
       "version": "a9820696e53f"
+    },
+    "dp-5-el-lago": {
+      "audio_sha256": "ac4a791f4e7d7e1ae8f657e071aa95dbf2d8031112a671b53962f300af9f010f",
+      "captions_sha256": "ee7e85877acd316c1a4c0f5f277ba47f8d848f9d6ec97d084c558c23d6ec1dc2",
+      "version": "037ffaa1280b"
+    },
+    "energia-matinal": {
+      "audio_sha256": "39833b8a5203bac96225ef5e2a0396149c13bafb2f8c67ee7078d6f6f1ce0e80",
+      "captions_sha256": "c359aa66f1e2ae4fccb1c32a24e866e573016a28e0dc0efe84a70b397bc42e9e",
+      "version": "4770e147210a"
+    },
+    "enfoque-profundo": {
+      "audio_sha256": "bfa9c6ccefe032b32f35fa48f2b5df5438b2d70f02325d56bb3aa73b72e124b9",
+      "captions_sha256": "ed50c3dabea5170b15ec8116ba6bf8edd8c84aec961797c257703bcdb5e34b9f",
+      "version": "0b07b8141b1f"
     }
   },
-  "completed": 30,
+  "completed": 33,
   "total": 61,
   "audio_complete": false
 }
