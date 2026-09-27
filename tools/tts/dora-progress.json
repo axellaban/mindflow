@@ -179,9 +179,24 @@
       "audio_sha256": "af184130cec8e0812419732b5a3bb5de3dd8751b48674a75fa506b63c464b2a3",
       "captions_sha256": "4a0588e5bf79af751bafe35235fe3888b1fd24d7e0a31abff47765db19b49f75",
       "version": "8fd605558c1e"
+    },
+    "historia-cabana-nieve": {
+      "audio_sha256": "9d08bfddd1c438b09f258bd4d76c3a1b80d37701d2f3f44dd341bd40df2c3dc3",
+      "captions_sha256": "5eb35bf83f39c38737fdbe0ef917d23849cb21308357c1493801f074d43709f4",
+      "version": "f0dec98c6429"
+    },
+    "historia-faro": {
+      "audio_sha256": "ada402014150ec3886c2598103c249d8d3f1aaa1862788c65807c8df124869f8",
+      "captions_sha256": "ad9e4c88ec2dff0e4091ee0fc9dcfd669047dd08855c6f7713d64d44b8e1337a",
+      "version": "6257469a40cc"
+    },
+    "historia-tren-patagonia": {
+      "audio_sha256": "6d3603f5713c54cf26ae3fd7534f4fa8779a3e8c4fe84c5b6346dbb00bb5d408",
+      "captions_sha256": "c915c8f313410ca1ad248c580d28eec7fb7e19312ec491d30b918e0a5ccbd09e",
+      "version": "99d026c8f719"
     }
   },
-  "completed": 36,
+  "completed": 39,
   "total": 61,
   "audio_complete": false
 }

@@ -288,22 +288,28 @@
     "preset": "ef_dora"
   },
   "historia-cabana-nieve": {
-    "duration": 638.46,
+    "duration": 648.4,
     "voice": "luz",
-    "bytes": 2251674,
-    "v": "b85f866e25"
+    "bytes": 2221339,
+    "v": "f0dec98c6429",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "historia-faro": {
-    "duration": 723.99,
+    "duration": 734.27,
     "voice": "luz",
-    "bytes": 2600435,
-    "v": "8d66bb1af1"
+    "bytes": 2539579,
+    "v": "6257469a40cc",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "historia-tren-patagonia": {
-    "duration": 868.91,
+    "duration": 905.35,
     "voice": "luz",
-    "bytes": 3186354,
-    "v": "795b5362d2"
+    "bytes": 3152851,
+    "v": "99d026c8f719",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "montana": {
     "duration": 720.0,
