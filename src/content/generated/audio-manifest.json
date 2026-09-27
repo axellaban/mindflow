@@ -26,20 +26,26 @@
   "aam-4-emociones": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1203556,
-    "v": "ef524d646e"
+    "bytes": 1151563,
+    "v": "e80c8a61b743",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-5-sentidos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1132842,
-    "v": "9ef785cc41"
+    "bytes": 1081147,
+    "v": "f078ea7e777c",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-6-bondad": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1147727,
-    "v": "1802feb983"
+    "bytes": 1109155,
+    "v": "4204f3539da0",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-7-tu-practica": {
     "duration": 720.0,

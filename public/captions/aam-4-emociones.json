@@ -1,1 +1,262 @@
-{"id":"aam-4-emociones","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.41,"t":"Este es el cuarto día de Aprender a meditar."},{"s":9.21,"e":11.77,"t":"Hoy vamos a explorar las emociones."},{"s":12.57,"e":17.54,"t":"No para controlarlas ni hacerlas desaparecer, sino para conocerlas mejor."},{"s":18.34,"e":20.97,"t":"Las emociones son como el clima interior."},{"s":21.77,"e":25.73,"t":"A veces soleado, a veces nublado, a veces tormenta."},{"s":26.53,"e":29.61,"t":"Y como el clima, siempre están cambiando."},{"s":31.51,"e":32.86,"t":"Busca tu postura."},{"s":33.66,"e":35.69,"t":"Deja que el cuerpo se asiente."},{"s":36.49,"e":39.01,"t":"Cierra los ojos cuando quieras."},{"s":43.01,"e":45.2,"t":"Toma una respiración profunda…"},{"s":46.55,"e":47.89,"t":"y exhala despacio."},{"s":51.89,"e":56.97,"t":"Dedica unos momentos a llegar, sintiendo la respiración en el abdomen."},{"s":95.32,"e":99.92,"t":"Ahora pregúntate, con curiosidad: ¿cómo me siento en este momento?"},{"s":100.87,"e":103.37,"t":"No hace falta una respuesta perfecta."},{"s":104.17,"e":111.92,"t":"Puede ser calma, cansancio, inquietud, alegría, tristeza, o una mezcla difícil de nombrar."},{"s":150.27,"e":152.8,"t":"Las emociones no viven solo en la mente."},{"s":153.6,"e":155.56,"t":"También se sienten en el cuerpo."},{"s":156.36,"e":159.12,"t":"Explora dónde se manifiesta lo que sientes."},{"s":159.92,"e":167.16,"t":"Quizás un nudo en la garganta, un peso en el pecho, calor en la cara, o una ligereza en el vientre."},{"s":205.51,"e":209.19,"t":"Si encuentras una sensación, quédate con ella un momento."},{"s":209.99,"e":212.48,"t":"Obsérvala como si fuera la primera vez."},{"s":213.28,"e":214.42,"t":"¿Tiene una forma?"},{"s":215.37,"e":216.71,"t":"¿Una temperatura?"},{"s":217.66,"e":219.52,"t":"¿Se mueve, o está quieta?"},{"s":277.04,"e":281.41,"t":"Ahora prueba a ponerle nombre, en silencio y con suavidad."},{"s":282.21,"e":283.71,"t":"«Aquí hay tristeza»."},{"s":284.51,"e":286.14,"t":"«Aquí hay nervios»."},{"s":286.94,"e":288.93,"t":"«Aquí hay alegría»."},{"s":289.73,"e":293.4,"t":"Nombrar una emoción ayuda a calmar la mente."},{"s":294.2,"e":301.1,"t":"Es como encender una luz en una habitación oscura: lo que hay dentro no cambia, pero deja de asustar."},{"s":358.62,"e":360.25,"t":"Respira con lo que sientes."},{"s":361.05,"e":366.07,"t":"Imagina que, al inhalar, el aire llega hasta esa zona del cuerpo."},{"s":366.87,"e":369.3,"t":"Y al exhalar, le das espacio."},{"s":370.1,"e":371.92,"t":"No estás tratando de echarla."},{"s":372.72,"e":374.11,"t":"Solo le haces lugar."},{"s":431.63,"e":434.31,"t":"Recuerda: tú no eres tu emoción."},{"s":435.11,"e":437.93,"t":"La estás sintiendo, y eso es distinto."},{"s":438.73,"e":442.88,"t":"Como el cielo, que contiene la tormenta sin convertirse en ella."},{"s":500.4,"e":506.17,"t":"Y si en este momento no encuentras ninguna emoción clara, también está bien."},{"s":506.97,"e":512.0,"t":"Quédate con la calma, o con la neutralidad, con la misma atención amable."},{"s":550.35,"e":551.43,"t":"Vamos cerrando."},{"s":552.23,"e":557.22,"t":"Suelta cualquier foco, y descansa simplemente en la respiración."},{"s":561.22,"e":562.94,"t":"Nota el cuerpo completo."},{"s":563.74,"e":565.08,"t":"Los sonidos del lugar."},{"s":568.08,"e":570.89,"t":"Y cuando sea el momento, abre los ojos."},{"s":572.89,"e":581.29,"t":"Hoy, si aparece una emoción intensa, recuerda estos tres pasos: sentirla en el cuerpo, ponerle nombre y respirar con ella."},{"s":582.09,"e":586.12,"t":"Mañana abriremos la atención a los sentidos."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "aam-4-emociones",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.44,
+      "t": "Este es el cuarto día de Aprender a meditar."
+    },
+    {
+      "s": 9.24,
+      "e": 11.78,
+      "t": "Hoy vamos a explorar las emociones."
+    },
+    {
+      "s": 12.58,
+      "e": 17.67,
+      "t": "No para controlarlas ni hacerlas desaparecer, sino para conocerlas mejor."
+    },
+    {
+      "s": 18.47,
+      "e": 21.22,
+      "t": "Las emociones son como el clima interior."
+    },
+    {
+      "s": 22.02,
+      "e": 25.84,
+      "t": "A veces soleado, a veces nublado, a veces tormenta."
+    },
+    {
+      "s": 26.64,
+      "e": 29.25,
+      "t": "Y como el clima, siempre están cambiando."
+    },
+    {
+      "s": 32.25,
+      "e": 33.67,
+      "t": "Busca tu postura."
+    },
+    {
+      "s": 34.47,
+      "e": 36.6,
+      "t": "Deja que el cuerpo se asiente."
+    },
+    {
+      "s": 37.4,
+      "e": 39.35,
+      "t": "Cierra los ojos cuando quieras."
+    },
+    {
+      "s": 43.35,
+      "e": 45.65,
+      "t": "Toma una respiración profunda…"
+    },
+    {
+      "s": 47.0,
+      "e": 48.56,
+      "t": "y exhala despacio."
+    },
+    {
+      "s": 52.56,
+      "e": 57.44,
+      "t": "Dedica unos momentos a llegar, sintiendo la respiración en el abdomen."
+    },
+    {
+      "s": 96.48,
+      "e": 100.77,
+      "t": "Ahora pregúntate, con curiosidad: ¿cómo me siento en este momento?"
+    },
+    {
+      "s": 101.72,
+      "e": 104.4,
+      "t": "No hace falta una respuesta perfecta."
+    },
+    {
+      "s": 105.2,
+      "e": 111.72,
+      "t": "Puede ser calma, cansancio, inquietud, alegría, tristeza, o una mezcla difícil de nombrar."
+    },
+    {
+      "s": 150.76,
+      "e": 153.54,
+      "t": "Las emociones no viven solo en la mente."
+    },
+    {
+      "s": 154.34,
+      "e": 156.55,
+      "t": "También se sienten en el cuerpo."
+    },
+    {
+      "s": 157.35,
+      "e": 160.38,
+      "t": "Explora dónde se manifiesta lo que sientes."
+    },
+    {
+      "s": 161.18,
+      "e": 167.49,
+      "t": "Quizás un nudo en la garganta, un peso en el pecho, calor en la cara, o una ligereza en el vientre."
+    },
+    {
+      "s": 206.54,
+      "e": 210.29,
+      "t": "Si encuentras una sensación, quédate con ella un momento."
+    },
+    {
+      "s": 211.09,
+      "e": 213.8,
+      "t": "Obsérvala como si fuera la primera vez."
+    },
+    {
+      "s": 214.6,
+      "e": 215.89,
+      "t": "¿Tiene una forma?"
+    },
+    {
+      "s": 216.84,
+      "e": 218.21,
+      "t": "¿Una temperatura?"
+    },
+    {
+      "s": 219.16,
+      "e": 220.97,
+      "t": "¿Se mueve, o está quieta?"
+    },
+    {
+      "s": 279.53,
+      "e": 283.13,
+      "t": "Ahora prueba a ponerle nombre, en silencio y con suavidad."
+    },
+    {
+      "s": 283.93,
+      "e": 285.47,
+      "t": "«Aquí hay tristeza»."
+    },
+    {
+      "s": 286.27,
+      "e": 287.65,
+      "t": "«Aquí hay nervios»."
+    },
+    {
+      "s": 288.45,
+      "e": 289.88,
+      "t": "«Aquí hay alegría»."
+    },
+    {
+      "s": 290.68,
+      "e": 293.87,
+      "t": "Nombrar una emoción ayuda a calmar la mente."
+    },
+    {
+      "s": 294.67,
+      "e": 301.33,
+      "t": "Es como encender una luz en una habitación oscura: lo que hay dentro no cambia, pero deja de asustar."
+    },
+    {
+      "s": 359.89,
+      "e": 361.76,
+      "t": "Respira con lo que sientes."
+    },
+    {
+      "s": 362.56,
+      "e": 366.71,
+      "t": "Imagina que, al inhalar, el aire llega hasta esa zona del cuerpo."
+    },
+    {
+      "s": 367.51,
+      "e": 369.79,
+      "t": "Y al exhalar, le das espacio."
+    },
+    {
+      "s": 370.59,
+      "e": 372.72,
+      "t": "No estás tratando de echarla."
+    },
+    {
+      "s": 373.52,
+      "e": 375.05,
+      "t": "Solo le haces lugar."
+    },
+    {
+      "s": 433.61,
+      "e": 435.74,
+      "t": "Recuerda: tú no eres tu emoción."
+    },
+    {
+      "s": 436.54,
+      "e": 439.29,
+      "t": "La estás sintiendo, y eso es distinto."
+    },
+    {
+      "s": 440.09,
+      "e": 444.11,
+      "t": "Como el cielo, que contiene la tormenta sin convertirse en ella."
+    },
+    {
+      "s": 502.68,
+      "e": 507.42,
+      "t": "Y si en este momento no encuentras ninguna emoción clara, también está bien."
+    },
+    {
+      "s": 508.22,
+      "e": 512.87,
+      "t": "Quédate con la calma, o con la neutralidad, con la misma atención amable."
+    },
+    {
+      "s": 551.91,
+      "e": 553.03,
+      "t": "Vamos cerrando."
+    },
+    {
+      "s": 553.83,
+      "e": 558.18,
+      "t": "Suelta cualquier foco, y descansa simplemente en la respiración."
+    },
+    {
+      "s": 562.18,
+      "e": 563.96,
+      "t": "Nota el cuerpo completo."
+    },
+    {
+      "s": 564.76,
+      "e": 566.32,
+      "t": "Los sonidos del lugar."
+    },
+    {
+      "s": 569.32,
+      "e": 571.95,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 573.95,
+      "e": 581.9,
+      "t": "Hoy, si aparece una emoción intensa, recuerda estos tres pasos: sentirla en el cuerpo, ponerle nombre y respirar con ella."
+    },
+    {
+      "s": 582.7,
+      "e": 585.93,
+      "t": "Mañana abriremos la atención a los sentidos."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

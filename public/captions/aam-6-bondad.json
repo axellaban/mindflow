@@ -1,1 +1,257 @@
-{"id":"aam-6-bondad","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.18,"t":"Llegamos al sexto día."},{"s":7.98,"e":10.51,"t":"Hasta ahora entrenamos la atención."},{"s":11.31,"e":16.7,"t":"Hoy vamos a entrenar algo igual de importante: el tono de esa atención."},{"s":17.5,"e":21.93,"t":"Porque no es lo mismo observarnos con dureza que hacerlo con amabilidad."},{"s":22.73,"e":28.63,"t":"La práctica de hoy se llama bondad amorosa, y es una de las más antiguas y estudiadas."},{"s":30.53,"e":31.38,"t":"Acomódate."},{"s":32.18,"e":33.33,"t":"Cierra los ojos."},{"s":37.33,"e":38.56,"t":"Respira profundo…"},{"s":39.91,"e":40.76,"t":"y suelta."},{"s":44.76,"e":48.19,"t":"Si te ayuda, lleva una mano al centro del pecho."},{"s":48.99,"e":53.37,"t":"Siente su calor, el movimiento de la respiración debajo de ella."},{"s":96.4,"e":100.03,"t":"Trae a la mente a alguien que te haga sonreír con facilidad."},{"s":100.83,"e":106.62,"t":"Una persona querida, una mascota, alguien con quien el cariño fluya sin esfuerzo."},{"s":107.42,"e":108.78,"t":"Visualiza su cara."},{"s":109.58,"e":111.95,"t":"Nota lo que sientes al pensar en ese ser."},{"s":154.98,"e":158.51,"t":"Ahora, en silencio, dirígele estos deseos."},{"s":159.31,"e":161.61,"t":"Deja que cada frase resuene."},{"s":162.41,"e":163.52,"t":"Que seas feliz."},{"s":166.52,"e":167.66,"t":"Que estés en paz."},{"s":170.66,"e":173.23,"t":"Que tengas salud, y estés a salvo."},{"s":176.23,"e":177.9,"t":"Que vivas con tranquilidad."},{"s":220.93,"e":225.43,"t":"Nota si aparece alguna calidez, alguna suavidad en el pecho."},{"s":226.23,"e":229.92,"t":"Y si no aparece nada especial, también está bien."},{"s":230.72,"e":232.57,"t":"La intención es lo que cuenta."},{"s":275.6,"e":278.87,"t":"Ahora, vamos a dirigir esos mismos deseos hacia ti."},{"s":279.67,"e":284.03,"t":"Para muchas personas, esta es la parte más difícil."},{"s":284.83,"e":287.55,"t":"Por eso vale la pena practicarla."},{"s":288.35,"e":289.63,"t":"Que yo sea feliz."},{"s":292.63,"e":294.29,"t":"Que yo esté en paz."},{"s":297.29,"e":300.35,"t":"Que yo tenga salud, y esté a salvo."},{"s":303.35,"e":305.36,"t":"Que yo viva con tranquilidad."},{"s":369.91,"e":375.77,"t":"Si aparece resistencia, o una voz que dice que no lo mereces, obsérvala con ternura."},{"s":376.57,"e":378.81,"t":"Esa voz también necesita cariño."},{"s":421.84,"e":424.01,"t":"Por último, abre el círculo."},{"s":424.81,"e":429.8,"t":"Imagina a las personas de tu barrio, de tu ciudad, del mundo entero."},{"s":430.6,"e":434.61,"t":"Todos, igual que tú, desean ser felices y no sufrir."},{"s":435.41,"e":437.63,"t":"Que todos los seres sean felices."},{"s":440.63,"e":442.89,"t":"Que todos los seres estén en paz."},{"s":507.43,"e":511.83,"t":"Descansa ahora en el sentimiento que haya quedado, sea cual sea."},{"s":554.86,"e":556.14,"t":"Suelta las frases."},{"s":556.94,"e":559.68,"t":"Vuelve a la respiración, al cuerpo."},{"s":563.68,"e":566.5,"t":"Y cuando sea el momento, abre los ojos."},{"s":568.5,"e":572.09,"t":"La bondad es como un músculo: crece con la práctica."},{"s":572.89,"e":578.64,"t":"Hoy, cuando te cruces con alguien, prueba a desearle en silencio: «que seas feliz»."},{"s":579.44,"e":582.21,"t":"Nadie lo sabrá, pero algo cambia."},{"s":583.01,"e":586.38,"t":"Mañana es el último día de este programa."},{"s":587.18,"e":587.9,"t":"Te espero."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "aam-6-bondad",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.39,
+      "t": "Llegamos al sexto día."
+    },
+    {
+      "s": 8.19,
+      "e": 10.59,
+      "t": "Hasta ahora entrenamos la atención."
+    },
+    {
+      "s": 11.39,
+      "e": 15.99,
+      "t": "Hoy vamos a entrenar algo igual de importante: el tono de esa atención."
+    },
+    {
+      "s": 16.79,
+      "e": 21.34,
+      "t": "Porque no es lo mismo observarnos con dureza que hacerlo con amabilidad."
+    },
+    {
+      "s": 22.14,
+      "e": 27.87,
+      "t": "La práctica de hoy se llama bondad amorosa, y es una de las más antiguas y estudiadas."
+    },
+    {
+      "s": 30.87,
+      "e": 32.0,
+      "t": "Acomódate."
+    },
+    {
+      "s": 32.8,
+      "e": 34.19,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 38.19,
+      "e": 39.68,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 41.03,
+      "e": 41.97,
+      "t": "y suelta."
+    },
+    {
+      "s": 45.97,
+      "e": 49.2,
+      "t": "Si te ayuda, lleva una mano al centro del pecho."
+    },
+    {
+      "s": 50.0,
+      "e": 54.13,
+      "t": "Siente su calor, el movimiento de la respiración debajo de ella."
+    },
+    {
+      "s": 97.35,
+      "e": 101.31,
+      "t": "Trae a la mente a alguien que te haga sonreír con facilidad."
+    },
+    {
+      "s": 102.11,
+      "e": 107.55,
+      "t": "Una persona querida, una mascota, alguien con quien el cariño fluya sin esfuerzo."
+    },
+    {
+      "s": 108.35,
+      "e": 109.81,
+      "t": "Visualiza su cara."
+    },
+    {
+      "s": 110.61,
+      "e": 113.65,
+      "t": "Nota lo que sientes al pensar en ese ser."
+    },
+    {
+      "s": 156.87,
+      "e": 159.95,
+      "t": "Ahora, en silencio, dirígele estos deseos."
+    },
+    {
+      "s": 160.75,
+      "e": 162.95,
+      "t": "Deja que cada frase resuene."
+    },
+    {
+      "s": 163.75,
+      "e": 165.04,
+      "t": "Que seas feliz."
+    },
+    {
+      "s": 168.04,
+      "e": 169.48,
+      "t": "Que estés en paz."
+    },
+    {
+      "s": 172.48,
+      "e": 174.97,
+      "t": "Que tengas salud, y estés a salvo."
+    },
+    {
+      "s": 177.97,
+      "e": 179.88,
+      "t": "Que vivas con tranquilidad."
+    },
+    {
+      "s": 223.1,
+      "e": 227.35,
+      "t": "Nota si aparece alguna calidez, alguna suavidad en el pecho."
+    },
+    {
+      "s": 228.15,
+      "e": 231.41,
+      "t": "Y si no aparece nada especial, también está bien."
+    },
+    {
+      "s": 232.21,
+      "e": 234.37,
+      "t": "La intención es lo que cuenta."
+    },
+    {
+      "s": 277.59,
+      "e": 281.21,
+      "t": "Ahora, vamos a dirigir esos mismos deseos hacia ti."
+    },
+    {
+      "s": 282.01,
+      "e": 285.55,
+      "t": "Para muchas personas, esta es la parte más difícil."
+    },
+    {
+      "s": 286.35,
+      "e": 288.76,
+      "t": "Por eso vale la pena practicarla."
+    },
+    {
+      "s": 289.56,
+      "e": 291.02,
+      "t": "Que yo sea feliz."
+    },
+    {
+      "s": 294.02,
+      "e": 295.56,
+      "t": "Que yo esté en paz."
+    },
+    {
+      "s": 298.56,
+      "e": 301.18,
+      "t": "Que yo tenga salud, y esté a salvo."
+    },
+    {
+      "s": 304.18,
+      "e": 306.31,
+      "t": "Que yo viva con tranquilidad."
+    },
+    {
+      "s": 371.13,
+      "e": 376.88,
+      "t": "Si aparece resistencia, o una voz que dice que no lo mereces, obsérvala con ternura."
+    },
+    {
+      "s": 377.68,
+      "e": 380.3,
+      "t": "Esa voz también necesita cariño."
+    },
+    {
+      "s": 423.52,
+      "e": 425.68,
+      "t": "Por último, abre el círculo."
+    },
+    {
+      "s": 426.48,
+      "e": 430.91,
+      "t": "Imagina a las personas de tu barrio, de tu ciudad, del mundo entero."
+    },
+    {
+      "s": 431.71,
+      "e": 435.59,
+      "t": "Todos, igual que tú, desean ser felices y no sufrir."
+    },
+    {
+      "s": 436.39,
+      "e": 438.7,
+      "t": "Que todos los seres sean felices."
+    },
+    {
+      "s": 441.7,
+      "e": 444.11,
+      "t": "Que todos los seres estén en paz."
+    },
+    {
+      "s": 508.94,
+      "e": 513.13,
+      "t": "Descansa ahora en el sentimiento que haya quedado, sea cual sea."
+    },
+    {
+      "s": 556.35,
+      "e": 557.82,
+      "t": "Suelta las frases."
+    },
+    {
+      "s": 558.62,
+      "e": 561.15,
+      "t": "Vuelve a la respiración, al cuerpo."
+    },
+    {
+      "s": 565.15,
+      "e": 567.78,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 569.78,
+      "e": 573.29,
+      "t": "La bondad es como un músculo: crece con la práctica."
+    },
+    {
+      "s": 574.09,
+      "e": 579.23,
+      "t": "Hoy, cuando te cruces con alguien, prueba a desearle en silencio: «que seas feliz»."
+    },
+    {
+      "s": 580.03,
+      "e": 582.32,
+      "t": "Nadie lo sabrá, pero algo cambia."
+    },
+    {
+      "s": 583.12,
+      "e": 586.14,
+      "t": "Mañana es el último día de este programa."
+    },
+    {
+      "s": 586.94,
+      "e": 587.9,
+      "t": "Te espero."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

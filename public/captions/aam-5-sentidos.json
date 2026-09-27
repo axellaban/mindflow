@@ -1,1 +1,227 @@
-{"id":"aam-5-sentidos","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":6.32,"t":"Bienvenida al quinto día."},{"s":7.12,"e":11.79,"t":"Hoy vamos a descubrir que cualquier experiencia puede ser una puerta al presente."},{"s":12.59,"e":14.2,"t":"No solo la respiración."},{"s":15.0,"e":18.0,"t":"También los sonidos, el tacto, la luz."},{"s":18.8,"e":21.6,"t":"Los sentidos siempre están ocurriendo ahora."},{"s":22.4,"e":24.55,"t":"Por eso son maestros excelentes."},{"s":26.45,"e":28.02,"t":"Siéntate con comodidad."},{"s":28.82,"e":29.97,"t":"Cierra los ojos."},{"s":33.97,"e":35.82,"t":"Una respiración profunda…"},{"s":37.17,"e":38.02,"t":"y suelta."},{"s":42.02,"e":45.68,"t":"Siente la respiración durante unos momentos, para llegar."},{"s":84.76,"e":89.93,"t":"Ahora deja la respiración en segundo plano, y abre la atención a los sonidos."},{"s":90.73,"e":92.26,"t":"No tienes que buscarlos."},{"s":93.06,"e":98.28,"t":"Deja que lleguen a ti, como si tus oídos fueran un micrófono muy sensible."},{"s":137.36,"e":141.43,"t":"Quizás escuches sonidos lejanos: tráfico, viento, voces."},{"s":142.23,"e":146.69,"t":"Y sonidos cercanos: tu propia respiración, el roce de la ropa."},{"s":147.49,"e":152.63,"t":"Nota cómo cada sonido aparece, dura un momento, y desaparece."},{"s":211.24,"e":213.21,"t":"Intenta escuchar sin etiquetar."},{"s":214.01,"e":221.54,"t":"En lugar de pensar «auto», o «pájaro», escucha el sonido en sí: su volumen, su tono, su textura."},{"s":222.34,"e":226.33,"t":"Y si aparece una etiqueta, no pasa nada."},{"s":227.13,"e":228.56,"t":"Vuelve a escuchar."},{"s":287.17,"e":289.11,"t":"Escucha también el silencio."},{"s":289.91,"e":293.69,"t":"El silencio es el fondo sobre el que aparecen todos los sonidos."},{"s":352.3,"e":354.62,"t":"Ahora lleva la atención al tacto."},{"s":355.42,"e":356.89,"t":"El aire sobre la piel."},{"s":357.69,"e":359.52,"t":"La temperatura de las manos."},{"s":360.32,"e":361.53,"t":"El peso de la ropa."},{"s":400.6,"e":403.88,"t":"Y por último, abre la atención a todo a la vez."},{"s":404.68,"e":408.41,"t":"Sonidos, sensaciones, respiración, pensamientos."},{"s":409.21,"e":413.39,"t":"Todo aparece y desaparece en el espacio de tu conciencia."},{"s":414.19,"e":416.23,"t":"No elijas nada en particular."},{"s":417.03,"e":419.23,"t":"Solo descansa en ser consciente."},{"s":477.84,"e":480.09,"t":"Esto se llama conciencia abierta."},{"s":480.89,"e":486.9,"t":"Si notas mucha dispersión, vuelve a la respiración un momento, y luego vuelve a abrir."},{"s":545.52,"e":546.82,"t":"Vamos terminando."},{"s":547.62,"e":550.06,"t":"Haz una respiración más profunda."},{"s":554.06,"e":557.52,"t":"Nota el lugar donde estás, el suelo bajo tus pies."},{"s":560.52,"e":564.39,"t":"Y cuando sea el momento, abre los ojos, sin prisa."},{"s":565.19,"e":568.23,"t":"Mira a tu alrededor como si fuera la primera vez."},{"s":570.23,"e":583.32,"t":"Hoy te propongo un pequeño experimento: elige una actividad cotidiana, como ducharte, tomar un café o caminar, y hazla con los cinco sentidos despiertos."},{"s":584.12,"e":586.26,"t":"Mañana practicaremos la bondad."},{"s":587.06,"e":587.9,"t":"Nos vemos."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "aam-5-sentidos",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 6.13,
+      "t": "Bienvenida al quinto día."
+    },
+    {
+      "s": 6.93,
+      "e": 11.94,
+      "t": "Hoy vamos a descubrir que cualquier experiencia puede ser una puerta al presente."
+    },
+    {
+      "s": 12.74,
+      "e": 14.57,
+      "t": "No solo la respiración."
+    },
+    {
+      "s": 15.37,
+      "e": 18.02,
+      "t": "También los sonidos, el tacto, la luz."
+    },
+    {
+      "s": 18.82,
+      "e": 21.65,
+      "t": "Los sentidos siempre están ocurriendo ahora."
+    },
+    {
+      "s": 22.45,
+      "e": 24.84,
+      "t": "Por eso son maestros excelentes."
+    },
+    {
+      "s": 27.84,
+      "e": 29.78,
+      "t": "Siéntate con comodidad."
+    },
+    {
+      "s": 30.58,
+      "e": 31.97,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 35.97,
+      "e": 38.0,
+      "t": "Una respiración profunda…"
+    },
+    {
+      "s": 39.35,
+      "e": 40.29,
+      "t": "y suelta."
+    },
+    {
+      "s": 44.29,
+      "e": 48.08,
+      "t": "Siente la respiración durante unos momentos, para llegar."
+    },
+    {
+      "s": 87.49,
+      "e": 92.47,
+      "t": "Ahora deja la respiración en segundo plano, y abre la atención a los sonidos."
+    },
+    {
+      "s": 93.27,
+      "e": 95.01,
+      "t": "No tienes que buscarlos."
+    },
+    {
+      "s": 95.81,
+      "e": 100.5,
+      "t": "Deja que lleguen a ti, como si tus oídos fueran un micrófono muy sensible."
+    },
+    {
+      "s": 139.91,
+      "e": 143.95,
+      "t": "Quizás escuches sonidos lejanos: tráfico, viento, voces."
+    },
+    {
+      "s": 144.75,
+      "e": 148.89,
+      "t": "Y sonidos cercanos: tu propia respiración, el roce de la ropa."
+    },
+    {
+      "s": 149.69,
+      "e": 153.94,
+      "t": "Nota cómo cada sonido aparece, dura un momento, y desaparece."
+    },
+    {
+      "s": 213.05,
+      "e": 215.38,
+      "t": "Intenta escuchar sin etiquetar."
+    },
+    {
+      "s": 216.18,
+      "e": 222.61,
+      "t": "En lugar de pensar «auto», o «pájaro», escucha el sonido en sí: su volumen, su tono, su textura."
+    },
+    {
+      "s": 223.41,
+      "e": 226.38,
+      "t": "Y si aparece una etiqueta, no pasa nada."
+    },
+    {
+      "s": 227.18,
+      "e": 228.62,
+      "t": "Vuelve a escuchar."
+    },
+    {
+      "s": 287.74,
+      "e": 289.9,
+      "t": "Escucha también el silencio."
+    },
+    {
+      "s": 290.7,
+      "e": 294.83,
+      "t": "El silencio es el fondo sobre el que aparecen todos los sonidos."
+    },
+    {
+      "s": 353.94,
+      "e": 356.24,
+      "t": "Ahora lleva la atención al tacto."
+    },
+    {
+      "s": 357.04,
+      "e": 358.59,
+      "t": "El aire sobre la piel."
+    },
+    {
+      "s": 359.39,
+      "e": 361.22,
+      "t": "La temperatura de las manos."
+    },
+    {
+      "s": 362.02,
+      "e": 363.5,
+      "t": "El peso de la ropa."
+    },
+    {
+      "s": 402.91,
+      "e": 406.05,
+      "t": "Y por último, abre la atención a todo a la vez."
+    },
+    {
+      "s": 406.85,
+      "e": 410.38,
+      "t": "Sonidos, sensaciones, respiración, pensamientos."
+    },
+    {
+      "s": 411.18,
+      "e": 415.1,
+      "t": "Todo aparece y desaparece en el espacio de tu conciencia."
+    },
+    {
+      "s": 415.9,
+      "e": 418.2,
+      "t": "No elijas nada en particular."
+    },
+    {
+      "s": 419.0,
+      "e": 421.4,
+      "t": "Solo descansa en ser consciente."
+    },
+    {
+      "s": 480.52,
+      "e": 482.97,
+      "t": "Esto se llama conciencia abierta."
+    },
+    {
+      "s": 483.77,
+      "e": 489.33,
+      "t": "Si notas mucha dispersión, vuelve a la respiración un momento, y luego vuelve a abrir."
+    },
+    {
+      "s": 548.44,
+      "e": 549.76,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 550.56,
+      "e": 553.04,
+      "t": "Haz una respiración más profunda."
+    },
+    {
+      "s": 557.04,
+      "e": 560.28,
+      "t": "Nota el lugar donde estás, el suelo bajo tus pies."
+    },
+    {
+      "s": 563.28,
+      "e": 566.68,
+      "t": "Y cuando sea el momento, abre los ojos, sin prisa."
+    },
+    {
+      "s": 567.48,
+      "e": 570.83,
+      "t": "Mira a tu alrededor como si fuera la primera vez."
+    },
+    {
+      "s": 572.83,
+      "e": 583.06,
+      "t": "Hoy te propongo un pequeño experimento: elige una actividad cotidiana, como ducharte, tomar un café o caminar, y hazla con los cinco sentidos despiertos."
+    },
+    {
+      "s": 583.86,
+      "e": 586.19,
+      "t": "Mañana practicaremos la bondad."
+    },
+    {
+      "s": 586.99,
+      "e": 587.9,
+      "t": "Nos vemos."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

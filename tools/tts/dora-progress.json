@@ -14,9 +14,24 @@
       "audio_sha256": "154ceea5290c2152d18e12aea7d403335b0841ee53d1e34110234cd57b9574ec",
       "captions_sha256": "1ef5f97b10588b16b6cbbe8df8754b1741954602a740d5e95a81613c4f033fb3",
       "version": "e59b2f4d3d2f"
+    },
+    "aam-4-emociones": {
+      "audio_sha256": "b94d98151fc27f91e84125aa6f5ab8695e42c7519b7497fc588cc1cff5e946b9",
+      "captions_sha256": "ae932137026f3c2afe876463d311ad7b18df8d6194e77ced25ae6600017dc41f",
+      "version": "e80c8a61b743"
+    },
+    "aam-5-sentidos": {
+      "audio_sha256": "e3fde2e96ae079a50ccb61b274b596e8e8847f0bfa58f904a5d1f889dc37ba24",
+      "captions_sha256": "678fecb781a1eb47d8ceca7a251e1d9c9a8c067c7190945f81913c199a05f112",
+      "version": "f078ea7e777c"
+    },
+    "aam-6-bondad": {
+      "audio_sha256": "1f79bc0b69fd8107b3f7fb34672743fcd4e198d472c31ef96a44e05e4472adfe",
+      "captions_sha256": "e0db9506b1348c38f0a61b68c4aa398957e83b07af3b4c487022d6ac68077939",
+      "version": "4204f3539da0"
     }
   },
-  "completed": 3,
+  "completed": 6,
   "total": 61,
   "audio_complete": false
 }
