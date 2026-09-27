@@ -104,9 +104,24 @@
       "audio_sha256": "d85707f4702b5e7e4bdb7227663397674f88005c48d382fa5c7aca8023d1e467",
       "captions_sha256": "bb88aae63ceddcd75101303f4f30119cd760531964e1053b80a459fcc4da0724",
       "version": "5fc1c96c91fd"
+    },
+    "cla-5-cuidado": {
+      "audio_sha256": "99c1138600aac65f895a3c173c2ffb980ba38e207c9187562e8b41078b64c352",
+      "captions_sha256": "3344972e357f1e0b6eb5114f14ac97cf406435c2dac54a38e96dd4dde5d29658",
+      "version": "772d3416a262"
+    },
+    "cuando-sientes-enojo": {
+      "audio_sha256": "eb445790cb26fc6a1bdd5a4718665ff1ff419eafc1ac2f0a8a610fa2a34d1425",
+      "captions_sha256": "08f46fc51921d2fb2e3d9358b6399f5a557f9837b83bac9b7ff6e60063faef8d",
+      "version": "3c03974526fa"
+    },
+    "cuerpo-en-paz": {
+      "audio_sha256": "ca2b1a547927e7952a36f1d554aeb9d92b82db7c0c554a95222bc92a3ceeb071",
+      "captions_sha256": "c8b759736bce98a1607cd02d1a9fe4d6345d0ae59ad89f9cc5bf0004faac64ab",
+      "version": "aeabb5dc000b"
     }
   },
-  "completed": 21,
+  "completed": 24,
   "total": 61,
   "audio_complete": false
 }

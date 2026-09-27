@@ -1,1 +1,267 @@
-{"id":"cla-5-cuidado","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.67,"t":"Llegamos al último día de Calmar la ansiedad."},{"s":9.47,"e":17.39,"t":"Cuando lo pasamos mal, muchas veces sumamos un segundo sufrimiento al primero: nos criticamos por sentirnos así."},{"s":18.19,"e":20.02,"t":"«No debería ponerme así»."},{"s":20.82,"e":23.31,"t":"«Ya tendría que haberlo superado»."},{"s":24.11,"e":24.98,"t":"«¿Qué me pasa?»."},{"s":25.78,"e":29.69,"t":"Hoy vamos a practicar lo contrario: la autocompasión."},{"s":30.49,"e":35.25,"t":"Tratarnos con la misma calidez que le ofreceríamos a una persona querida."},{"s":37.15,"e":38.0,"t":"Acomódate."},{"s":38.8,"e":39.95,"t":"Cierra los ojos."},{"s":43.95,"e":45.18,"t":"Respira profundo…"},{"s":46.53,"e":47.38,"t":"y suelta."},{"s":51.38,"e":54.06,"t":"Siente la respiración, sin cambiarla."},{"s":74.84,"e":78.75,"t":"Trae a la mente algo que te esté costando en este momento."},{"s":79.55,"e":84.27,"t":"Una preocupación, una situación, una emoción que se repite."},{"s":85.07,"e":89.4,"t":"Deja que aparezca, y nota cómo se siente en el cuerpo."},{"s":130.97,"e":134.65,"t":"Ahora vamos a ofrecernos tres gestos, en tres frases."},{"s":135.45,"e":140.49,"t":"La primera reconoce lo que pasa: «este es un momento difícil»."},{"s":141.29,"e":143.61,"t":"Dilo en silencio, despacio."},{"s":144.41,"e":146.56,"t":"«Este es un momento difícil»."},{"s":147.36,"e":150.03,"t":"No lo minimizas, ni lo exageras."},{"s":150.83,"e":152.15,"t":"Solo lo reconoces."},{"s":193.72,"e":199.27,"t":"La segunda nos recuerda que no somos los únicos: «el sufrimiento es parte de la vida."},{"s":200.07,"e":202.51,"t":"Otras personas también se sienten así»."},{"s":203.31,"e":210.03,"t":"En este mismo instante, millones de personas en el mundo sienten algo parecido a lo que sientes tú."},{"s":210.83,"e":212.56,"t":"No hay nada raro en ti."},{"s":213.36,"e":214.18,"t":"Es humano."},{"s":255.75,"e":258.31,"t":"La tercera es un gesto de amabilidad."},{"s":259.11,"e":263.84,"t":"Lleva una o ambas manos al pecho, o a donde te resulte reconfortante."},{"s":264.64,"e":267.69,"t":"Siente el calor, la presión suave."},{"s":268.49,"e":272.89,"t":"Y dite: «que pueda ser amable conmigo en este momento»."},{"s":273.69,"e":275.55,"t":"«Que pueda darme lo que necesito»."},{"s":337.9,"e":343.93,"t":"Si te cuesta, imagina que una persona a la que quieres mucho está pasando por lo mismo."},{"s":344.73,"e":345.78,"t":"¿Qué le dirías?"},{"s":346.73,"e":347.68,"t":"¿Con qué tono?"},{"s":348.63,"e":353.49,"t":"Ahora, prueba a decirte eso mismo a ti, con ese mismo tono."},{"s":415.84,"e":418.13,"t":"Quédate con tus manos sobre el pecho."},{"s":418.93,"e":420.52,"t":"Respira debajo de ellas."},{"s":421.32,"e":423.37,"t":"Deja que ese cuidado te llegue."},{"s":485.72,"e":489.79,"t":"La autocompasión no es debilidad, ni es darse por vencido."},{"s":490.59,"e":499.65,"t":"Las investigaciones muestran que las personas que se tratan con amabilidad se recuperan más rápido y enfrentan mejor las dificultades."},{"s":500.45,"e":502.17,"t":"Es fortaleza con ternura."},{"s":543.74,"e":546.06,"t":"Suelta las manos, suavemente."},{"s":546.86,"e":549.22,"t":"Vuelve a sentir el cuerpo completo."},{"s":553.22,"e":556.03,"t":"Y cuando sea el momento, abre los ojos."},{"s":558.03,"e":560.08,"t":"Completaste Calmar la ansiedad."},{"s":560.88,"e":574.12,"t":"En estos cinco días aprendiste a usar la respiración como interruptor, a anclarte en el cuerpo, a hacer espacio para las emociones, a tomar distancia de los pensamientos y a tratarte con cuidado."},{"s":574.92,"e":578.01,"t":"Vuelve a estas prácticas cuando las necesites."},{"s":578.81,"e":585.52,"t":"Y recuerda: si la ansiedad te desborda, pedir ayuda profesional también es un acto de cuidado."},{"s":586.32,"e":587.9,"t":"Gracias por practicar."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "cla-5-cuidado",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.74,
+      "t": "Llegamos al último día de Calmar la ansiedad."
+    },
+    {
+      "s": 9.54,
+      "e": 16.99,
+      "t": "Cuando lo pasamos mal, muchas veces sumamos un segundo sufrimiento al primero: nos criticamos por sentirnos así."
+    },
+    {
+      "s": 17.79,
+      "e": 19.63,
+      "t": "«No debería ponerme así»."
+    },
+    {
+      "s": 20.43,
+      "e": 22.7,
+      "t": "«Ya tendría que haberlo superado»."
+    },
+    {
+      "s": 23.5,
+      "e": 24.61,
+      "t": "«¿Qué me pasa?»."
+    },
+    {
+      "s": 25.41,
+      "e": 28.97,
+      "t": "Hoy vamos a practicar lo contrario: la autocompasión."
+    },
+    {
+      "s": 29.77,
+      "e": 34.49,
+      "t": "Tratarnos con la misma calidez que le ofreceríamos a una persona querida."
+    },
+    {
+      "s": 37.49,
+      "e": 38.62,
+      "t": "Acomódate."
+    },
+    {
+      "s": 39.42,
+      "e": 40.81,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 44.81,
+      "e": 46.3,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 47.65,
+      "e": 48.59,
+      "t": "y suelta."
+    },
+    {
+      "s": 52.59,
+      "e": 54.98,
+      "t": "Siente la respiración, sin cambiarla."
+    },
+    {
+      "s": 75.96,
+      "e": 79.69,
+      "t": "Trae a la mente algo que te esté costando en este momento."
+    },
+    {
+      "s": 80.49,
+      "e": 84.72,
+      "t": "Una preocupación, una situación, una emoción que se repite."
+    },
+    {
+      "s": 85.52,
+      "e": 89.14,
+      "t": "Deja que aparezca, y nota cómo se siente en el cuerpo."
+    },
+    {
+      "s": 131.09,
+      "e": 134.71,
+      "t": "Ahora vamos a ofrecernos tres gestos, en tres frases."
+    },
+    {
+      "s": 135.51,
+      "e": 139.75,
+      "t": "La primera reconoce lo que pasa: «este es un momento difícil»."
+    },
+    {
+      "s": 140.55,
+      "e": 142.65,
+      "t": "Dilo en silencio, despacio."
+    },
+    {
+      "s": 143.45,
+      "e": 145.7,
+      "t": "«Este es un momento difícil»."
+    },
+    {
+      "s": 146.5,
+      "e": 148.91,
+      "t": "No lo minimizas, ni lo exageras."
+    },
+    {
+      "s": 149.71,
+      "e": 151.17,
+      "t": "Solo lo reconoces."
+    },
+    {
+      "s": 193.12,
+      "e": 198.29,
+      "t": "La segunda nos recuerda que no somos los únicos: «el sufrimiento es parte de la vida."
+    },
+    {
+      "s": 199.09,
+      "e": 201.86,
+      "t": "Otras personas también se sienten así»."
+    },
+    {
+      "s": 202.66,
+      "e": 209.23,
+      "t": "En este mismo instante, millones de personas en el mundo sienten algo parecido a lo que sientes tú."
+    },
+    {
+      "s": 210.03,
+      "e": 211.72,
+      "t": "No hay nada raro en ti."
+    },
+    {
+      "s": 212.52,
+      "e": 213.46,
+      "t": "Es humano."
+    },
+    {
+      "s": 255.41,
+      "e": 258.27,
+      "t": "La tercera es un gesto de amabilidad."
+    },
+    {
+      "s": 259.07,
+      "e": 264.06,
+      "t": "Lleva una o ambas manos al pecho, o a donde te resulte reconfortante."
+    },
+    {
+      "s": 264.86,
+      "e": 267.32,
+      "t": "Siente el calor, la presión suave."
+    },
+    {
+      "s": 268.12,
+      "e": 271.59,
+      "t": "Y dite: «que pueda ser amable conmigo en este momento»."
+    },
+    {
+      "s": 272.39,
+      "e": 274.82,
+      "t": "«Que pueda darme lo que necesito»."
+    },
+    {
+      "s": 337.74,
+      "e": 343.36,
+      "t": "Si te cuesta, imagina que una persona a la que quieres mucho está pasando por lo mismo."
+    },
+    {
+      "s": 344.16,
+      "e": 345.32,
+      "t": "¿Qué le dirías?"
+    },
+    {
+      "s": 346.27,
+      "e": 347.33,
+      "t": "¿Con qué tono?"
+    },
+    {
+      "s": 348.28,
+      "e": 352.17,
+      "t": "Ahora, prueba a decirte eso mismo a ti, con ese mismo tono."
+    },
+    {
+      "s": 415.1,
+      "e": 417.61,
+      "t": "Quédate con tus manos sobre el pecho."
+    },
+    {
+      "s": 418.41,
+      "e": 420.32,
+      "t": "Respira debajo de ellas."
+    },
+    {
+      "s": 421.12,
+      "e": 423.37,
+      "t": "Deja que ese cuidado te llegue."
+    },
+    {
+      "s": 486.29,
+      "e": 490.31,
+      "t": "La autocompasión no es debilidad, ni es darse por vencido."
+    },
+    {
+      "s": 491.11,
+      "e": 500.31,
+      "t": "Las investigaciones muestran que las personas que se tratan con amabilidad se recuperan más rápido y enfrentan mejor las dificultades."
+    },
+    {
+      "s": 501.11,
+      "e": 503.02,
+      "t": "Es fortaleza con ternura."
+    },
+    {
+      "s": 544.97,
+      "e": 547.05,
+      "t": "Suelta las manos, suavemente."
+    },
+    {
+      "s": 547.85,
+      "e": 550.23,
+      "t": "Vuelve a sentir el cuerpo completo."
+    },
+    {
+      "s": 554.23,
+      "e": 556.86,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 558.86,
+      "e": 561.17,
+      "t": "Completaste Calmar la ansiedad."
+    },
+    {
+      "s": 561.97,
+      "e": 574.79,
+      "t": "En estos cinco días aprendiste a usar la respiración como interruptor, a anclarte en el cuerpo, a hacer espacio para las emociones, a tomar distancia de los pensamientos y a tratarte con cuidado."
+    },
+    {
+      "s": 575.59,
+      "e": 578.57,
+      "t": "Vuelve a estas prácticas cuando las necesites."
+    },
+    {
+      "s": 579.37,
+      "e": 585.41,
+      "t": "Y recuerda: si la ansiedad te desborda, pedir ayuda profesional también es un acto de cuidado."
+    },
+    {
+      "s": 586.21,
+      "e": 587.9,
+      "t": "Gracias por practicar."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

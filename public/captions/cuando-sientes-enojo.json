@@ -1,1 +1,222 @@
-{"id":"cuando-sientes-enojo","duration":420.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":9.24,"t":"Si estás aquí, quizás algo te hizo enojar."},{"s":10.04,"e":16.02,"t":"Una situación, una persona, una injusticia, o una acumulación de cosas."},{"s":16.82,"e":19.48,"t":"El enojo es una emoción legítima."},{"s":20.28,"e":24.53,"t":"Nos avisa de que algo nos importa, de que un límite fue cruzado."},{"s":25.33,"e":29.68,"t":"El problema no es sentirlo, sino actuar desde él sin darnos cuenta."},{"s":30.48,"e":35.55,"t":"Vamos a crear un poco de espacio entre lo que sientes y lo que vas a hacer."},{"s":37.45,"e":39.06,"t":"Si puedes, siéntate."},{"s":39.86,"e":41.59,"t":"Apoya los pies en el suelo."},{"s":42.39,"e":45.1,"t":"Puedes dejar los ojos abiertos o cerrados."},{"s":48.1,"e":50.03,"t":"Primero, una pausa."},{"s":50.83,"e":53.37,"t":"No tienes que hacer nada ahora mismo."},{"s":54.17,"e":59.72,"t":"No hace falta responder ese mensaje, ni tener esa conversación, en este minuto."},{"s":89.5,"e":92.06,"t":"Nota dónde sientes el enojo en el cuerpo."},{"s":92.86,"e":99.5,"t":"Quizás calor en la cara, la mandíbula apretada, los puños cerrados, el pecho agitado."},{"s":100.3,"e":101.42,"t":"Solo obsérvalo."},{"s":102.22,"e":104.82,"t":"Nómbralo en silencio: «esto es enojo»."},{"s":164.39,"e":167.83,"t":"Ahora vamos a enfriar un poco el sistema."},{"s":168.63,"e":170.73,"t":"Inhala por la nariz, lento…"},{"s":173.73,"e":178.45,"t":"y exhala por la boca, largo, como si soplaras aire fresco."},{"s":181.45,"e":182.18,"t":"Otra vez."},{"s":182.98,"e":186.18,"t":"Imagina que inhalas aire fresco de montaña…"},{"s":189.18,"e":190.66,"t":"y exhalas el calor."},{"s":193.66,"e":194.71,"t":"Una vez más."},{"s":195.51,"e":196.64,"t":"Inhala frescura…"},{"s":199.64,"e":200.93,"t":"y suelta el fuego."},{"s":204.93,"e":207.65,"t":"Abre las manos, si estaban cerradas."},{"s":208.45,"e":209.81,"t":"Suelta la mandíbula."},{"s":210.61,"e":211.84,"t":"Baja los hombros."},{"s":241.62,"e":244.57,"t":"Pregúntate: ¿qué es lo que me importa aquí?"},{"s":245.52,"e":252.24,"t":"Detrás del enojo suele haber una necesidad: respeto, justicia, que te escuchen, descanso."},{"s":253.04,"e":255.09,"t":"No hace falta resolverlo ahora."},{"s":255.89,"e":257.32,"t":"Solo identificarlo."},{"s":316.89,"e":319.87,"t":"Ahora imagina que ya pasaron unas horas."},{"s":320.67,"e":321.81,"t":"Que el enojo bajó."},{"s":322.61,"e":327.43,"t":"Desde ese lugar más tranquilo, ¿cómo te gustaría responder a esta situación?"},{"s":328.38,"e":330.64,"t":"¿Qué haría la versión más sabia de ti?"},{"s":390.21,"e":392.71,"t":"Respira una vez más, profundo."},{"s":395.71,"e":399.04,"t":"El enojo pasará, como pasa una ola."},{"s":399.84,"e":403.67,"t":"Y cuando pase, vas a poder actuar con más claridad."},{"s":404.47,"e":407.9,"t":"Date el tiempo que necesites antes de responder."}],"cues":[{"t":0.4,"type":"bell"},{"t":410.5,"type":"bell"}]}
+{
+  "id": "cuando-sientes-enojo",
+  "voice": "luz",
+  "duration": 420.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.6,
+      "t": "Si estás aquí, quizás algo te hizo enojar."
+    },
+    {
+      "s": 9.4,
+      "e": 14.71,
+      "t": "Una situación, una persona, una injusticia, o una acumulación de cosas."
+    },
+    {
+      "s": 15.51,
+      "e": 18.16,
+      "t": "El enojo es una emoción legítima."
+    },
+    {
+      "s": 18.96,
+      "e": 23.07,
+      "t": "Nos avisa de que algo nos importa, de que un límite fue cruzado."
+    },
+    {
+      "s": 23.87,
+      "e": 28.24,
+      "t": "El problema no es sentirlo, sino actuar desde él sin darnos cuenta."
+    },
+    {
+      "s": 29.04,
+      "e": 33.85,
+      "t": "Vamos a crear un poco de espacio entre lo que sientes y lo que vas a hacer."
+    },
+    {
+      "s": 36.85,
+      "e": 38.39,
+      "t": "Si puedes, siéntate."
+    },
+    {
+      "s": 39.19,
+      "e": 41.1,
+      "t": "Apoya los pies en el suelo."
+    },
+    {
+      "s": 41.9,
+      "e": 45.0,
+      "t": "Puedes dejar los ojos abiertos o cerrados."
+    },
+    {
+      "s": 48.0,
+      "e": 49.74,
+      "t": "Primero, una pausa."
+    },
+    {
+      "s": 50.54,
+      "e": 53.12,
+      "t": "No tienes que hacer nada ahora mismo."
+    },
+    {
+      "s": 53.92,
+      "e": 59.27,
+      "t": "No hace falta responder ese mensaje, ni tener esa conversación, en este minuto."
+    },
+    {
+      "s": 89.4,
+      "e": 92.38,
+      "t": "Nota dónde sientes el enojo en el cuerpo."
+    },
+    {
+      "s": 93.18,
+      "e": 98.9,
+      "t": "Quizás calor en la cara, la mandíbula apretada, los puños cerrados, el pecho agitado."
+    },
+    {
+      "s": 99.7,
+      "e": 100.97,
+      "t": "Solo obsérvalo."
+    },
+    {
+      "s": 101.77,
+      "e": 104.26,
+      "t": "Nómbralo en silencio: «esto es enojo»."
+    },
+    {
+      "s": 164.53,
+      "e": 167.26,
+      "t": "Ahora vamos a enfriar un poco el sistema."
+    },
+    {
+      "s": 168.06,
+      "e": 169.99,
+      "t": "Inhala por la nariz, lento…"
+    },
+    {
+      "s": 172.99,
+      "e": 177.21,
+      "t": "y exhala por la boca, largo, como si soplaras aire fresco."
+    },
+    {
+      "s": 180.21,
+      "e": 181.15,
+      "t": "Otra vez."
+    },
+    {
+      "s": 181.95,
+      "e": 184.94,
+      "t": "Imagina que inhalas aire fresco de montaña…"
+    },
+    {
+      "s": 187.94,
+      "e": 189.49,
+      "t": "y exhalas el calor."
+    },
+    {
+      "s": 192.49,
+      "e": 193.63,
+      "t": "Una vez más."
+    },
+    {
+      "s": 194.43,
+      "e": 195.72,
+      "t": "Inhala frescura…"
+    },
+    {
+      "s": 198.72,
+      "e": 200.09,
+      "t": "y suelta el fuego."
+    },
+    {
+      "s": 204.09,
+      "e": 206.42,
+      "t": "Abre las manos, si estaban cerradas."
+    },
+    {
+      "s": 207.22,
+      "e": 208.79,
+      "t": "Suelta la mandíbula."
+    },
+    {
+      "s": 209.59,
+      "e": 210.9,
+      "t": "Baja los hombros."
+    },
+    {
+      "s": 241.04,
+      "e": 243.79,
+      "t": "Pregúntate: ¿qué es lo que me importa aquí?"
+    },
+    {
+      "s": 244.74,
+      "e": 251.14,
+      "t": "Detrás del enojo suele haber una necesidad: respeto, justicia, que te escuchen, descanso."
+    },
+    {
+      "s": 251.94,
+      "e": 254.25,
+      "t": "No hace falta resolverlo ahora."
+    },
+    {
+      "s": 255.05,
+      "e": 256.62,
+      "t": "Solo identificarlo."
+    },
+    {
+      "s": 316.89,
+      "e": 319.79,
+      "t": "Ahora imagina que ya pasaron unas horas."
+    },
+    {
+      "s": 320.59,
+      "e": 322.1,
+      "t": "Que el enojo bajó."
+    },
+    {
+      "s": 322.9,
+      "e": 327.99,
+      "t": "Desde ese lugar más tranquilo, ¿cómo te gustaría responder a esta situación?"
+    },
+    {
+      "s": 328.94,
+      "e": 331.31,
+      "t": "¿Qué haría la versión más sabia de ti?"
+    },
+    {
+      "s": 391.58,
+      "e": 393.91,
+      "t": "Respira una vez más, profundo."
+    },
+    {
+      "s": 396.91,
+      "e": 399.51,
+      "t": "El enojo pasará, como pasa una ola."
+    },
+    {
+      "s": 400.31,
+      "e": 403.55,
+      "t": "Y cuando pase, vas a poder actuar con más claridad."
+    },
+    {
+      "s": 404.35,
+      "e": 407.9,
+      "t": "Date el tiempo que necesites antes de responder."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 410.5,
+      "type": "bell"
+    }
+  ]
+}

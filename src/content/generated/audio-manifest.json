@@ -170,20 +170,26 @@
   "cla-5-cuidado": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1254456,
-    "v": "16f48a5c11"
+    "bytes": 1204387,
+    "v": "772d3416a262",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cuando-sientes-enojo": {
     "duration": 420.0,
     "voice": "luz",
-    "bytes": 885045,
-    "v": "17e0c86942"
+    "bytes": 848347,
+    "v": "3c03974526fa",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cuerpo-en-paz": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1120090,
-    "v": "b873d55330"
+    "bytes": 1075939,
+    "v": "aeabb5dc000b",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "despertar": {
     "duration": 420.0,
