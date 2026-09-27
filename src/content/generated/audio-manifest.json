@@ -98,20 +98,26 @@
   "buc-4-culpa": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1147164,
-    "v": "7374ea4647"
+    "bytes": 1099411,
+    "v": "29790ba1e2c3",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "buc-5-descanso": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1278585,
-    "v": "725e3b530d"
+    "bytes": 1226275,
+    "v": "2f357766e5e3",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cafe-consciente": {
     "duration": 330.0,
     "voice": "luz",
-    "bytes": 776174,
-    "v": "218a0b1cd5"
+    "bytes": 739267,
+    "v": "8b0e72c6e237",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "caminar": {
     "duration": 600.0,

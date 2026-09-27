@@ -1,1 +1,277 @@
-{"id":"buc-4-culpa","duration":540.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.35,"t":"Este es el cuarto día de Bajar un cambio."},{"s":9.15,"e":11.07,"t":"Hoy vamos a hablar de la culpa."},{"s":11.87,"e":13.82,"t":"La culpa por no llegar a todo."},{"s":14.62,"e":15.53,"t":"Por descansar."},{"s":16.33,"e":17.44,"t":"Por decir que no."},{"s":18.24,"e":23.23,"t":"Por no estar con los tuyos todo lo que quisieras, o por necesitar tiempo para ti."},{"s":24.03,"e":28.43,"t":"A veces la culpa nos avisa que algo importa."},{"s":29.23,"e":36.45,"t":"Pero muchas otras veces es solo un hábito: una sensación que aparece aunque no hayas hecho nada malo."},{"s":37.25,"e":41.86,"t":"Hoy vamos a aprender a distinguirla, y a soltarla cuando no nos sirve."},{"s":43.76,"e":45.82,"t":"Busca una postura cómoda."},{"s":46.62,"e":49.33,"t":"Cierra los ojos, o baja la mirada."},{"s":53.33,"e":54.56,"t":"Respira profundo…"},{"s":55.91,"e":57.24,"t":"y suelta despacio."},{"s":61.24,"e":61.96,"t":"Otra vez."},{"s":62.76,"e":63.29,"t":"Inhala…"},{"s":64.64,"e":67.59,"t":"y al exhalar, deja caer los hombros."},{"s":71.59,"e":74.88,"t":"Siente el contacto del cuerpo con el lugar donde estás."},{"s":75.68,"e":76.56,"t":"Estás aquí."},{"s":77.36,"e":78.46,"t":"Estás a salvo."},{"s":94.35,"e":99.13,"t":"Trae a la mente algo por lo que te sientas culpable últimamente."},{"s":99.93,"e":102.06,"t":"Algo pequeño, para empezar."},{"s":117.95,"e":120.86,"t":"Nota dónde vive esa culpa en tu cuerpo."},{"s":121.66,"e":125.48,"t":"Quizás en el pecho, en el estómago, en la garganta."},{"s":126.28,"e":129.08,"t":"Nómbrala en silencio: «esto es culpa»."},{"s":160.87,"e":168.17,"t":"Ahora hazte una pregunta, con honestidad y con cariño: ¿hice algo que realmente dañó a alguien?"},{"s":199.97,"e":204.23,"t":"Si la respuesta es sí, la culpa te está mostrando algo valioso."},{"s":205.03,"e":210.29,"t":"Puedes preguntarte qué te gustaría reparar, o qué harías distinto la próxima vez."},{"s":211.09,"e":212.6,"t":"Y después, soltarla."},{"s":213.4,"e":215.71,"t":"No necesitas cargarla para aprender."},{"s":231.6,"e":233.07,"t":"Si la respuesta es no…"},{"s":234.42,"e":240.78,"t":"si la culpa aparece porque descansaste, porque pusiste un límite, porque no pudiste con todo…"},{"s":242.13,"e":244.04,"t":"entonces no es una señal."},{"s":244.84,"e":246.39,"t":"Es un mandato viejo."},{"s":247.19,"e":250.57,"t":"Una exigencia que no tiene por qué seguir mandando."},{"s":282.36,"e":287.49,"t":"Imagina que esa culpa es una mochila pesada que llevas en la espalda."},{"s":288.29,"e":289.52,"t":"Siente su peso."},{"s":305.41,"e":311.62,"t":"Ahora, muy despacio, imagina que te la quitas, y la apoyas en el suelo junto a ti."},{"s":327.51,"e":329.07,"t":"No hace falta tirarla."},{"s":329.87,"e":334.86,"t":"Solo dejarla ahí un momento, y sentir cómo es estar sin ese peso."},{"s":366.65,"e":368.43,"t":"Respira en ese espacio."},{"s":369.23,"e":372.51,"t":"Nota los hombros, la espalda, el pecho."},{"s":404.3,"e":406.17,"t":"Y repite en silencio:"},{"s":406.87,"e":409.49,"t":"«No tengo que ganarme el derecho a descansar»."},{"s":413.49,"e":415.75,"t":"«Cuidarme no le quita nada a nadie»."},{"s":419.75,"e":422.2,"t":"«Me doy permiso para hacerlo a mi manera»."},{"s":469.88,"e":473.82,"t":"Quédate unas respiraciones más con esta sensación de alivio."},{"s":505.61,"e":508.47,"t":"Abre los ojos suavemente cuando estés lista."},{"s":511.47,"e":517.83,"t":"Hoy, cuando aparezca la culpa, haz la pregunta: ¿hice algo que dañó a alguien?"},{"s":518.78,"e":521.54,"t":"Si la respuesta es no, recuerda la mochila."},{"s":522.34,"e":524.28,"t":"Puedes apoyarla en el suelo."},{"s":525.08,"e":527.9,"t":"Nos vemos mañana, para el último día."}],"cues":[{"t":0.4,"type":"bell"},{"t":530.5,"type":"bell"}]}
+{
+  "id": "buc-4-culpa",
+  "voice": "luz",
+  "duration": 540.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.3,
+      "t": "Este es el cuarto día de Bajar un cambio."
+    },
+    {
+      "s": 9.1,
+      "e": 11.25,
+      "t": "Hoy vamos a hablar de la culpa."
+    },
+    {
+      "s": 12.05,
+      "e": 14.16,
+      "t": "La culpa por no llegar a todo."
+    },
+    {
+      "s": 14.96,
+      "e": 16.18,
+      "t": "Por descansar."
+    },
+    {
+      "s": 16.98,
+      "e": 18.25,
+      "t": "Por decir que no."
+    },
+    {
+      "s": 19.05,
+      "e": 24.13,
+      "t": "Por no estar con los tuyos todo lo que quisieras, o por necesitar tiempo para ti."
+    },
+    {
+      "s": 24.93,
+      "e": 27.88,
+      "t": "A veces la culpa nos avisa que algo importa."
+    },
+    {
+      "s": 28.68,
+      "e": 35.5,
+      "t": "Pero muchas otras veces es solo un hábito: una sensación que aparece aunque no hayas hecho nada malo."
+    },
+    {
+      "s": 36.3,
+      "e": 40.63,
+      "t": "Hoy vamos a aprender a distinguirla, y a soltarla cuando no nos sirve."
+    },
+    {
+      "s": 43.63,
+      "e": 45.51,
+      "t": "Busca una postura cómoda."
+    },
+    {
+      "s": 46.31,
+      "e": 48.68,
+      "t": "Cierra los ojos, o baja la mirada."
+    },
+    {
+      "s": 52.68,
+      "e": 54.17,
+      "t": "Respira profundo…"
+    },
+    {
+      "s": 55.52,
+      "e": 57.12,
+      "t": "y suelta despacio."
+    },
+    {
+      "s": 61.12,
+      "e": 62.06,
+      "t": "Otra vez."
+    },
+    {
+      "s": 62.86,
+      "e": 63.63,
+      "t": "Inhala…"
+    },
+    {
+      "s": 64.98,
+      "e": 67.41,
+      "t": "y al exhalar, deja caer los hombros."
+    },
+    {
+      "s": 71.41,
+      "e": 74.84,
+      "t": "Siente el contacto del cuerpo con el lugar donde estás."
+    },
+    {
+      "s": 75.64,
+      "e": 76.78,
+      "t": "Estás aquí."
+    },
+    {
+      "s": 77.58,
+      "e": 78.94,
+      "t": "Estás a salvo."
+    },
+    {
+      "s": 94.97,
+      "e": 99.12,
+      "t": "Trae a la mente algo por lo que te sientas culpable últimamente."
+    },
+    {
+      "s": 99.92,
+      "e": 101.96,
+      "t": "Algo pequeño, para empezar."
+    },
+    {
+      "s": 117.99,
+      "e": 120.77,
+      "t": "Nota dónde vive esa culpa en tu cuerpo."
+    },
+    {
+      "s": 121.57,
+      "e": 124.98,
+      "t": "Quizás en el pecho, en el estómago, en la garganta."
+    },
+    {
+      "s": 125.78,
+      "e": 128.26,
+      "t": "Nómbrala en silencio: «esto es culpa»."
+    },
+    {
+      "s": 160.32,
+      "e": 166.67,
+      "t": "Ahora hazte una pregunta, con honestidad y con cariño: ¿hice algo que realmente dañó a alguien?"
+    },
+    {
+      "s": 198.72,
+      "e": 202.98,
+      "t": "Si la respuesta es sí, la culpa te está mostrando algo valioso."
+    },
+    {
+      "s": 203.78,
+      "e": 209.38,
+      "t": "Puedes preguntarte qué te gustaría reparar, o qué harías distinto la próxima vez."
+    },
+    {
+      "s": 210.18,
+      "e": 211.73,
+      "t": "Y después, soltarla."
+    },
+    {
+      "s": 212.53,
+      "e": 215.07,
+      "t": "No necesitas cargarla para aprender."
+    },
+    {
+      "s": 231.1,
+      "e": 232.86,
+      "t": "Si la respuesta es no…"
+    },
+    {
+      "s": 234.21,
+      "e": 240.32,
+      "t": "si la culpa aparece porque descansaste, porque pusiste un límite, porque no pudiste con todo…"
+    },
+    {
+      "s": 241.67,
+      "e": 243.84,
+      "t": "entonces no es una señal."
+    },
+    {
+      "s": 244.64,
+      "e": 246.37,
+      "t": "Es un mandato viejo."
+    },
+    {
+      "s": 247.17,
+      "e": 250.5,
+      "t": "Una exigencia que no tiene por qué seguir mandando."
+    },
+    {
+      "s": 282.56,
+      "e": 287.17,
+      "t": "Imagina que esa culpa es una mochila pesada que llevas en la espalda."
+    },
+    {
+      "s": 287.97,
+      "e": 289.25,
+      "t": "Siente su peso."
+    },
+    {
+      "s": 305.28,
+      "e": 310.77,
+      "t": "Ahora, muy despacio, imagina que te la quitas, y la apoyas en el suelo junto a ti."
+    },
+    {
+      "s": 326.8,
+      "e": 328.56,
+      "t": "No hace falta tirarla."
+    },
+    {
+      "s": 329.36,
+      "e": 333.83,
+      "t": "Solo dejarla ahí un momento, y sentir cómo es estar sin ese peso."
+    },
+    {
+      "s": 365.89,
+      "e": 367.82,
+      "t": "Respira en ese espacio."
+    },
+    {
+      "s": 368.62,
+      "e": 371.5,
+      "t": "Nota los hombros, la espalda, el pecho."
+    },
+    {
+      "s": 403.56,
+      "e": 405.21,
+      "t": "Y repite en silencio:"
+    },
+    {
+      "s": 405.91,
+      "e": 408.99,
+      "t": "«No tengo que ganarme el derecho a descansar»."
+    },
+    {
+      "s": 412.99,
+      "e": 415.49,
+      "t": "«Cuidarme no le quita nada a nadie»."
+    },
+    {
+      "s": 419.49,
+      "e": 422.16,
+      "t": "«Me doy permiso para hacerlo a mi manera»."
+    },
+    {
+      "s": 470.24,
+      "e": 474.47,
+      "t": "Quédate unas respiraciones más con esta sensación de alivio."
+    },
+    {
+      "s": 506.53,
+      "e": 509.48,
+      "t": "Abre los ojos suavemente cuando estés lista."
+    },
+    {
+      "s": 512.48,
+      "e": 517.62,
+      "t": "Hoy, cuando aparezca la culpa, haz la pregunta: ¿hice algo que dañó a alguien?"
+    },
+    {
+      "s": 518.57,
+      "e": 521.55,
+      "t": "Si la respuesta es no, recuerda la mochila."
+    },
+    {
+      "s": 522.35,
+      "e": 524.47,
+      "t": "Puedes apoyarla en el suelo."
+    },
+    {
+      "s": 525.27,
+      "e": 527.9,
+      "t": "Nos vemos mañana, para el último día."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 530.5,
+      "type": "bell"
+    }
+  ]
+}

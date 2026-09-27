@@ -1,1 +1,322 @@
-{"id":"buc-5-descanso","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.74,"t":"Llegamos al último día de Bajar un cambio."},{"s":9.54,"e":15.8,"t":"Hoy vamos a practicar algo que a muchas nos cuesta muchísimo: descansar de verdad."},{"s":16.6,"e":20.43,"t":"No descansar como premio, cuando ya terminaste todo."},{"s":21.23,"e":23.7,"t":"Porque la lista nunca termina."},{"s":24.5,"e":27.65,"t":"Descansar porque tu cuerpo y tu mente lo necesitan."},{"s":28.45,"e":30.51,"t":"Porque también es parte de la vida."},{"s":32.41,"e":37.42,"t":"Si puedes, recuéstate, o siéntate de forma que el cuerpo quede bien apoyado."},{"s":38.22,"e":39.37,"t":"Cierra los ojos."},{"s":44.37,"e":47.43,"t":"Durante estos minutos no tienes que hacer nada."},{"s":48.23,"e":50.2,"t":"No tienes que ser productiva."},{"s":51.0,"e":52.51,"t":"No tienes que mejorar."},{"s":53.31,"e":54.13,"t":"Solo estar."},{"s":70.93,"e":77.3,"t":"Haz una respiración larga, y al exhalar, suelta un suspiro, si quieres."},{"s":82.3,"e":83.03,"t":"Otra vez."},{"s":83.83,"e":84.36,"t":"Inhala…"},{"s":85.71,"e":86.62,"t":"y suspira."},{"s":91.62,"e":95.68,"t":"Vamos a recorrer el cuerpo, soltando un poco en cada lugar."},{"s":96.48,"e":101.66,"t":"No como una tarea más, sino como una forma de agradecerle todo lo que hace por ti."},{"s":104.66,"e":106.12,"t":"Empieza por los pies."},{"s":106.92,"e":108.2,"t":"Siéntelos pesados."},{"s":109.0,"e":110.36,"t":"Deja que descansen."},{"s":127.15,"e":130.22,"t":"Las piernas, que te llevan a todas partes."},{"s":131.02,"e":132.36,"t":"Déjalas aflojar."},{"s":149.16,"e":150.83,"t":"La pelvis y el abdomen."},{"s":151.63,"e":155.76,"t":"Suelta el abdomen, deja que se mueva libre con la respiración."},{"s":156.56,"e":158.37,"t":"No hace falta sostenerlo."},{"s":175.16,"e":175.99,"t":"La espalda."},{"s":176.79,"e":181.27,"t":"Siente cómo se apoya, cómo la sostiene el suelo o la silla."},{"s":182.07,"e":185.45,"t":"Deja que otra cosa te sostenga, para variar."},{"s":202.24,"e":206.04,"t":"Las manos y los brazos, que tanto hacen durante el día."},{"s":206.84,"e":209.49,"t":"Déjalos quietos, pesados, en reposo."},{"s":226.28,"e":227.18,"t":"Los hombros."},{"s":227.98,"e":230.43,"t":"Aquí solemos cargar el peso de todo."},{"s":231.23,"e":233.67,"t":"Déjalos caer, un poco más."},{"s":250.46,"e":252.48,"t":"El cuello, la mandíbula."},{"s":253.28,"e":255.31,"t":"Separa suavemente los dientes."},{"s":256.11,"e":257.31,"t":"Afloja la lengua."},{"s":274.1,"e":275.98,"t":"Los ojos, la frente."},{"s":276.78,"e":278.93,"t":"Deja que la cara se suavice."},{"s":312.52,"e":315.69,"t":"Ahora siente el cuerpo entero, descansando."},{"s":332.48,"e":338.05,"t":"Si aparece la sensación de que deberías estar haciendo otra cosa, obsérvala con cariño."},{"s":338.85,"e":341.82,"t":"Es la costumbre de estar siempre en movimiento."},{"s":342.62,"e":346.13,"t":"Respóndele en silencio: «ahora estoy descansando."},{"s":346.93,"e":348.8,"t":"Y eso también importa»."},{"s":399.18,"e":403.16,"t":"Imagina que el descanso es como la tierra en invierno."},{"s":403.96,"e":409.23,"t":"Parece que no pasa nada, pero debajo, todo se está preparando para florecer."},{"s":410.03,"e":412.37,"t":"Tú también necesitas tus inviernos."},{"s":462.75,"e":463.72,"t":"Quédate aquí."},{"s":464.52,"e":465.36,"t":"Respirando."},{"s":466.16,"e":467.83,"t":"Sin ir a ningún lado."},{"s":535.0,"e":537.67,"t":"Muy despacio, empieza a volver."},{"s":538.47,"e":541.11,"t":"Mueve los dedos de las manos y de los pies."},{"s":545.11,"e":547.06,"t":"Estira el cuerpo como te lo pida."},{"s":551.06,"e":553.54,"t":"Y abre los ojos cuando estés lista."},{"s":556.54,"e":558.55,"t":"Completaste Bajar un cambio."},{"s":559.35,"e":571.3,"t":"En estos cinco días practicaste salir del piloto automático, hacerle lugar a la mente acelerada, responderle a la autoexigencia, soltar la culpa y descansar sin tener que ganártelo."},{"s":572.1,"e":575.19,"t":"Vuelve a estas prácticas cuando las necesites."},{"s":575.99,"e":579.15,"t":"Y recuerda que bajar un cambio no es hacer menos."},{"s":579.95,"e":584.66,"t":"Es vivir lo que haces con más presencia, y con más amabilidad hacia ti."},{"s":585.46,"e":587.9,"t":"Gracias por regalarte este tiempo."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "buc-5-descanso",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.56,
+      "t": "Llegamos al último día de Bajar un cambio."
+    },
+    {
+      "s": 9.36,
+      "e": 14.66,
+      "t": "Hoy vamos a practicar algo que a muchas nos cuesta muchísimo: descansar de verdad."
+    },
+    {
+      "s": 15.46,
+      "e": 19.02,
+      "t": "No descansar como premio, cuando ya terminaste todo."
+    },
+    {
+      "s": 19.82,
+      "e": 21.97,
+      "t": "Porque la lista nunca termina."
+    },
+    {
+      "s": 22.77,
+      "e": 26.35,
+      "t": "Descansar porque tu cuerpo y tu mente lo necesitan."
+    },
+    {
+      "s": 27.15,
+      "e": 29.46,
+      "t": "Porque también es parte de la vida."
+    },
+    {
+      "s": 32.46,
+      "e": 37.58,
+      "t": "Si puedes, recuéstate, o siéntate de forma que el cuerpo quede bien apoyado."
+    },
+    {
+      "s": 38.38,
+      "e": 39.77,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 44.77,
+      "e": 47.97,
+      "t": "Durante estos minutos no tienes que hacer nada."
+    },
+    {
+      "s": 48.77,
+      "e": 50.81,
+      "t": "No tienes que ser productiva."
+    },
+    {
+      "s": 51.61,
+      "e": 53.22,
+      "t": "No tienes que mejorar."
+    },
+    {
+      "s": 54.02,
+      "e": 55.01,
+      "t": "Solo estar."
+    },
+    {
+      "s": 71.85,
+      "e": 76.5,
+      "t": "Haz una respiración larga, y al exhalar, suelta un suspiro, si quieres."
+    },
+    {
+      "s": 81.5,
+      "e": 82.44,
+      "t": "Otra vez."
+    },
+    {
+      "s": 83.24,
+      "e": 84.01,
+      "t": "Inhala…"
+    },
+    {
+      "s": 85.36,
+      "e": 86.4,
+      "t": "y suspira."
+    },
+    {
+      "s": 91.4,
+      "e": 95.18,
+      "t": "Vamos a recorrer el cuerpo, soltando un poco en cada lugar."
+    },
+    {
+      "s": 95.98,
+      "e": 101.14,
+      "t": "No como una tarea más, sino como una forma de agradecerle todo lo que hace por ti."
+    },
+    {
+      "s": 104.14,
+      "e": 105.66,
+      "t": "Empieza por los pies."
+    },
+    {
+      "s": 106.46,
+      "e": 107.9,
+      "t": "Siéntelos pesados."
+    },
+    {
+      "s": 108.7,
+      "e": 110.3,
+      "t": "Deja que descansen."
+    },
+    {
+      "s": 127.13,
+      "e": 129.86,
+      "t": "Las piernas, que te llevan a todas partes."
+    },
+    {
+      "s": 130.66,
+      "e": 132.19,
+      "t": "Déjalas aflojar."
+    },
+    {
+      "s": 149.03,
+      "e": 150.89,
+      "t": "La pelvis y el abdomen."
+    },
+    {
+      "s": 151.69,
+      "e": 155.75,
+      "t": "Suelta el abdomen, deja que se mueva libre con la respiración."
+    },
+    {
+      "s": 156.55,
+      "e": 158.46,
+      "t": "No hace falta sostenerlo."
+    },
+    {
+      "s": 175.3,
+      "e": 176.31,
+      "t": "La espalda."
+    },
+    {
+      "s": 177.11,
+      "e": 180.94,
+      "t": "Siente cómo se apoya, cómo la sostiene el suelo o la silla."
+    },
+    {
+      "s": 181.74,
+      "e": 184.78,
+      "t": "Deja que otra cosa te sostenga, para variar."
+    },
+    {
+      "s": 201.62,
+      "e": 205.35,
+      "t": "Las manos y los brazos, que tanto hacen durante el día."
+    },
+    {
+      "s": 206.15,
+      "e": 208.92,
+      "t": "Déjalos quietos, pesados, en reposo."
+    },
+    {
+      "s": 225.75,
+      "e": 226.67,
+      "t": "Los hombros."
+    },
+    {
+      "s": 227.47,
+      "e": 230.0,
+      "t": "Aquí solemos cargar el peso de todo."
+    },
+    {
+      "s": 230.8,
+      "e": 232.87,
+      "t": "Déjalos caer, un poco más."
+    },
+    {
+      "s": 249.71,
+      "e": 251.62,
+      "t": "El cuello, la mandíbula."
+    },
+    {
+      "s": 252.42,
+      "e": 254.63,
+      "t": "Separa suavemente los dientes."
+    },
+    {
+      "s": 255.43,
+      "e": 256.81,
+      "t": "Afloja la lengua."
+    },
+    {
+      "s": 273.65,
+      "e": 275.22,
+      "t": "Los ojos, la frente."
+    },
+    {
+      "s": 276.02,
+      "e": 278.1,
+      "t": "Deja que la cara se suavice."
+    },
+    {
+      "s": 311.77,
+      "e": 314.61,
+      "t": "Ahora siente el cuerpo entero, descansando."
+    },
+    {
+      "s": 331.45,
+      "e": 337.43,
+      "t": "Si aparece la sensación de que deberías estar haciendo otra cosa, obsérvala con cariño."
+    },
+    {
+      "s": 338.23,
+      "e": 341.06,
+      "t": "Es la costumbre de estar siempre en movimiento."
+    },
+    {
+      "s": 341.86,
+      "e": 345.24,
+      "t": "Respóndele en silencio: «ahora estoy descansando."
+    },
+    {
+      "s": 346.04,
+      "e": 347.92,
+      "t": "Y eso también importa»."
+    },
+    {
+      "s": 398.43,
+      "e": 401.83,
+      "t": "Imagina que el descanso es como la tierra en invierno."
+    },
+    {
+      "s": 402.63,
+      "e": 407.66,
+      "t": "Parece que no pasa nada, pero debajo, todo se está preparando para florecer."
+    },
+    {
+      "s": 408.46,
+      "e": 411.06,
+      "t": "Tú también necesitas tus inviernos."
+    },
+    {
+      "s": 461.57,
+      "e": 462.66,
+      "t": "Quédate aquí."
+    },
+    {
+      "s": 463.46,
+      "e": 464.52,
+      "t": "Respirando."
+    },
+    {
+      "s": 465.32,
+      "e": 466.89,
+      "t": "Sin ir a ningún lado."
+    },
+    {
+      "s": 534.24,
+      "e": 536.86,
+      "t": "Muy despacio, empieza a volver."
+    },
+    {
+      "s": 537.66,
+      "e": 540.19,
+      "t": "Mueve los dedos de las manos y de los pies."
+    },
+    {
+      "s": 544.19,
+      "e": 546.45,
+      "t": "Estira el cuerpo como te lo pida."
+    },
+    {
+      "s": 550.45,
+      "e": 552.81,
+      "t": "Y abre los ojos cuando estés lista."
+    },
+    {
+      "s": 555.81,
+      "e": 557.97,
+      "t": "Completaste Bajar un cambio."
+    },
+    {
+      "s": 558.77,
+      "e": 571.26,
+      "t": "En estos cinco días practicaste salir del piloto automático, hacerle lugar a la mente acelerada, responderle a la autoexigencia, soltar la culpa y descansar sin tener que ganártelo."
+    },
+    {
+      "s": 572.06,
+      "e": 575.04,
+      "t": "Vuelve a estas prácticas cuando las necesites."
+    },
+    {
+      "s": 575.84,
+      "e": 579.17,
+      "t": "Y recuerda que bajar un cambio no es hacer menos."
+    },
+    {
+      "s": 579.97,
+      "e": 584.62,
+      "t": "Es vivir lo que haces con más presencia, y con más amabilidad hacia ti."
+    },
+    {
+      "s": 585.42,
+      "e": 587.9,
+      "t": "Gracias por regalarte este tiempo."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

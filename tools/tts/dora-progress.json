@@ -59,9 +59,24 @@
       "audio_sha256": "033b50900a48d1bf141f233256b70cdaf0ed5383cb106af6597b839e66436c22",
       "captions_sha256": "7ed6ebc25dc2c7f13d4226b2f6ba01ecebb5618e41c0abc91dba07fe7c57f3cf",
       "version": "98b5044e6892"
+    },
+    "buc-4-culpa": {
+      "audio_sha256": "46ad6acc8c1bb1ef1a8cf5ff0d81b6580821dad25fa033091705c12151c942df",
+      "captions_sha256": "e09ca810b38062aabc6b509ef879d34ff446ece4e963878bba42595be91bac35",
+      "version": "29790ba1e2c3"
+    },
+    "buc-5-descanso": {
+      "audio_sha256": "dc792b1b6a0578c6118f7f4595ef66e2cd71f7d64bbd2a37e1456ad97e48aee4",
+      "captions_sha256": "b5cbbe556f3d0a05a635b0c9fd4f973e958ed1000c27ce952bccbb50e3db31d1",
+      "version": "2f357766e5e3"
+    },
+    "cafe-consciente": {
+      "audio_sha256": "87358cc50d574901885391399f27a30a998c10aa766787f2f3a494d41f9ba48d",
+      "captions_sha256": "ca9aef0b645d5a7d5d06c6e0c6dc9cdbfc6b1775f315c2328c8ae8e972dc92a5",
+      "version": "8b0e72c6e237"
     }
   },
-  "completed": 12,
+  "completed": 15,
   "total": 61,
   "audio_complete": false
 }
