@@ -33,7 +33,7 @@ export function MiniPlayer() {
           transition={SPRING_SOFT}
           className="fixed inset-x-3 bottom-[calc(var(--tabbar-h)+max(10px,var(--safe-bottom)))] z-[60] mx-auto max-w-xl lg:bottom-6 lg:left-[calc(260px+24px)] lg:right-6"
         >
-          <div className="glass-strong relative flex items-center gap-3 overflow-hidden rounded-[22px] p-2 pr-2.5 shadow-[0_20px_50px_-20px_rgb(0_0_0/0.8)]">
+          <div className="glass-strong relative flex items-center gap-3 overflow-hidden rounded-[22px] p-2 pr-2.5 shadow-[0_20px_50px_-20px_rgb(2_38_48/0.8)]">
             <button
               type="button"
               className="flex min-w-0 flex-1 items-center gap-3 text-left"

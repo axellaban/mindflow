@@ -19,7 +19,7 @@ const VARIANTS: Record<Variant, string> = {
   primary: 'bg-mist-50 text-ink-900 hover:bg-white',
   secondary: 'glass text-mist-50 hover:bg-white/12',
   soft: 'bg-white/10 text-mist-50 hover:bg-white/15',
-  ghost: 'text-mist-50/80 hover:text-mist-50 hover:bg-white/6',
+  ghost: 'text-mist-50/90 hover:text-mist-50 hover:bg-white/6',
 };
 
 const SIZES: Record<Size, string> = {

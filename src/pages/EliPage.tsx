@@ -207,7 +207,7 @@ function Portrait() {
       <img
         src={ELI.photo}
         alt={ELI.fullName}
-        className="relative aspect-[4/5] w-full -rotate-2 rounded-[36px] border border-white/15 object-cover shadow-[0_40px_80px_-30px_rgb(0_0_0/0.75)]"
+        className="relative aspect-[4/5] w-full -rotate-2 rounded-[36px] border border-white/15 object-cover shadow-[0_40px_80px_-30px_rgb(2_38_48/0.75)]"
       />
       {leaves.map((p, i) => (
         <motion.span

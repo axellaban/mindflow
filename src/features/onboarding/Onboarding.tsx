@@ -233,7 +233,7 @@ export function Onboarding() {
                         onChange={(e) => setName(e.target.value.slice(0, 40))}
                         placeholder="Tu nombre"
                         autoComplete="given-name"
-                        className="mt-6 h-14 w-full rounded-3xl border border-white/15 bg-ink-900/45 px-5 text-[18px] outline-none backdrop-blur-xl placeholder:text-mist-50/35 focus:border-mist-50/60"
+                        className="mt-6 h-14 w-full rounded-3xl border border-white/15 bg-ink-900/45 px-5 text-[18px] outline-none backdrop-blur-xl placeholder:text-mist-50/55 focus:border-mist-50/60"
                       />
                       <div className="mt-5 flex gap-2.5">
                         <Button variant="ghost" onClick={next}>
@@ -360,7 +360,7 @@ function MeetEli({ onNext }: { onNext: () => void }) {
         <motion.img
           src={ELI.photo}
           alt={ELI.fullName}
-          className="relative aspect-[4/5] w-full rounded-[32px] border border-white/15 object-cover shadow-[0_30px_60px_-24px_rgb(0_0_0/0.7)]"
+          className="relative aspect-[4/5] w-full rounded-[32px] border border-white/15 object-cover shadow-[0_30px_60px_-24px_rgb(2_38_48/0.7)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.1, ease: EASE }}

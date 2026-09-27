@@ -77,7 +77,7 @@ export function Sheet({ open, onClose, children, title, label, className, size =
             ref={panelRef}
             tabIndex={-1}
             className={cn(
-              'relative z-10 flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-[32px] border border-white/10 bg-ink-800 shadow-[0_-20px_60px_-20px_rgb(0_0_0/0.6)] outline-none md:rounded-[32px]',
+              'relative z-10 flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-[32px] border border-white/10 bg-ink-800 shadow-[0_-20px_60px_-20px_rgb(2_38_48/0.6)] outline-none md:rounded-[32px]',
               WIDTHS[size],
               className,
             )}

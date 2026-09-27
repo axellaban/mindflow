@@ -67,7 +67,7 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
         <AnimatePresence initial={false}>
           <motion.span
             key={word}
-            className="absolute font-display text-[44px] leading-none tracking-[-0.01em] text-mist-50 [text-shadow:0_2px_28px_rgb(0_0_0/0.28)] md:text-[56px]"
+            className="absolute font-display text-[44px] leading-none tracking-[-0.01em] text-mist-50 [text-shadow:0_2px_28px_rgb(2_38_48/0.35)] md:text-[56px]"
             initial={{ opacity: 0, y: 8, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -8, filter: 'blur(8px)' }}
@@ -80,7 +80,7 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
 
       {/* always in the button's name; it only fades into view after the first breath */}
       <motion.span
-        className="pointer-events-none absolute inset-x-0 bottom-[calc(max(20px,var(--safe-bottom))+20px)] text-center text-[13px] tracking-[0.04em] text-mist-50/60"
+        className="pointer-events-none absolute inset-x-0 bottom-[calc(max(20px,var(--safe-bottom))+20px)] text-center text-[13px] tracking-[0.04em] text-mist-50/75"
         initial={{ opacity: 0 }}
         animate={{ opacity: breaths >= 1 ? 1 : 0 }}
         transition={{ duration: 2 }}

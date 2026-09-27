@@ -43,7 +43,7 @@ export function SettingsPage() {
               value={profile.name}
               onChange={(e) => updateProfile({ name: e.target.value.slice(0, 40) })}
               placeholder="¿Cómo te llamás?"
-              className="h-12 w-full rounded-2xl border border-white/10 bg-white/5 px-4 text-[16px] outline-none placeholder:text-mist-50/35 focus:border-blush-300/60"
+              className="h-12 w-full rounded-2xl border border-white/10 bg-white/5 px-4 text-[16px] outline-none placeholder:text-mist-50/55 focus:border-blush-300/60"
             />
           </label>
           <div className="mt-5">

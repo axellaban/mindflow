@@ -119,12 +119,12 @@ export function Profile() {
                 title={detail}
               >
                 <span
-                  className={cn('flex size-12 items-center justify-center rounded-full', got ? 'text-ink-900' : 'bg-white/6 text-mist-50/40')}
+                  className={cn('flex size-12 items-center justify-center rounded-full', got ? 'text-ink-900' : 'bg-white/6 text-mist-50/70')}
                   style={got ? { background: 'radial-gradient(circle at 35% 30%, #fffaf0, #f6deaf 48%, #7cc5bf)' } : undefined}
                 >
                   <Icon name={a.icon} className="size-5.5" />
                 </span>
-                <span className={cn('text-[12px] leading-tight font-semibold', got ? 'text-mist-50' : 'text-mist-50/60')}>{a.title}</span>
+                <span className={cn('text-[12px] leading-tight font-semibold', got ? 'text-mist-50' : 'text-mist-50/85')}>{a.title}</span>
               </button>
             );
           })}
@@ -240,7 +240,7 @@ function Calendar() {
               <span
                 className={cn(
                   'flex size-9 items-center justify-center rounded-full text-[13px] font-medium tabular-nums transition-colors',
-                  (perDay.get(c.key) ?? 0) >= 1 ? 'bg-mist-50 font-semibold text-ink-900' : 'text-mist-50/55',
+                  (perDay.get(c.key) ?? 0) >= 1 ? 'bg-mist-50 font-semibold text-ink-900' : 'text-mist-50/85',
                   c.key === today && (perDay.get(c.key) ?? 0) < 1 && 'ring-1 ring-mist-50/60',
                 )}
               >

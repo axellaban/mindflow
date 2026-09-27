@@ -109,8 +109,8 @@ export default defineConfig({
         scope: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#0f2330',
-        theme_color: '#0f2330',
+        background_color: '#09596c',
+        theme_color: '#09596c',
         categories: ['health', 'lifestyle', 'medical'],
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },

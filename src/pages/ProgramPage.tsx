@@ -104,7 +104,7 @@ export function ProgramPage() {
                   <span
                     className={cn(
                       'flex size-11 shrink-0 items-center justify-center rounded-full text-[15px] font-semibold tabular-nums',
-                      isDone ? 'bg-sage-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/70',
+                      isDone ? 'bg-sage-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/95',
                     )}
                   >
                     {isDone ? <Check className="size-5" strokeWidth={2.6} /> : i + 1}
@@ -118,7 +118,7 @@ export function ProgramPage() {
                       {formatDuration(s.duration)} · {s.subtitle}
                     </span>
                   </span>
-                  <Play className={cn('size-4 shrink-0 fill-current', isNext ? 'text-mist-50' : 'text-mist-50/35')} />
+                  <Play className={cn('size-4 shrink-0 fill-current', isNext ? 'text-mist-50' : 'text-mist-50/60')} />
                 </motion.button>
               </li>
             );

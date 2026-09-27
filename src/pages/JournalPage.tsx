@@ -106,7 +106,7 @@ export function JournalPage() {
             rows={4}
             maxLength={4000}
             placeholder="Escribí lo que surja…"
-            className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-ink-900/40 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-blush-300/50"
+            className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-ink-900/40 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/55 focus:border-blush-300/50"
           />
           <div className="mt-3 flex justify-end">
             <Button size="sm" onClick={save} disabled={!text.trim()}>

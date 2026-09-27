@@ -30,7 +30,7 @@ export function Toaster() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, transition: { duration: 0.35, ease: 'easeOut' } }}
             transition={{ duration: 0.6, ease: EASE }}
-            className="glass-strong flex items-center gap-2.5 rounded-full px-5 py-3 text-[14px] font-semibold shadow-[0_16px_40px_-16px_rgb(0_0_0/0.7)]"
+            className="glass-strong flex items-center gap-2.5 rounded-full px-5 py-3 text-[14px] font-semibold shadow-[0_16px_40px_-16px_rgb(2_38_48/0.7)]"
           >
             {t.tone === 'success' && <CheckCircle2 className="size-4.5 text-sage-300" />}
             {t.text}
