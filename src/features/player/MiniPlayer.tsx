@@ -59,7 +59,7 @@ export function MiniPlayer() {
                 toggle();
               }}
               aria-label={playing ? 'Pausar' : 'Reproducir'}
-              className="flex size-11 items-center justify-center rounded-full bg-mist-50 text-ink-900"
+              className="flex size-11 items-center justify-center rounded-full bg-coral text-ink-950"
             >
               {playing ? <Pause className="size-5 fill-current" /> : <Play className="ml-0.5 size-5 fill-current" />}
             </motion.button>

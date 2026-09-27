@@ -157,7 +157,7 @@ export function Mixer() {
                   toggle();
                 }}
                 aria-label={playing ? 'Pausar' : 'Reproducir'}
-                className="flex size-12 items-center justify-center rounded-full bg-mist-50 text-ink-900"
+                className="flex size-12 items-center justify-center rounded-full bg-coral text-ink-950"
               >
                 {playing ? <Pause className="size-5 fill-current" /> : <Play className="ml-0.5 size-5 fill-current" />}
               </motion.button>
@@ -184,10 +184,10 @@ export function Mixer() {
                     <span
                       className={cn(
                         'relative flex size-12 items-center justify-center rounded-full transition-all duration-500',
-                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/85',
+                        on ? 'bg-coral text-ink-950' : 'bg-white/6 text-mist-50/85',
                       )}
                     >
-                      {on && playing && <span className="absolute inset-0 animate-pulse-soft rounded-full bg-mist-50/40 blur-md" />}
+                      {on && playing && <span className="absolute inset-0 animate-pulse-soft rounded-full bg-coral-400/40 blur-md" />}
                       <Icon name={s.icon} className="relative size-5.5" />
                     </span>
                     <span className={cn('text-[13px] leading-tight font-medium', on ? 'text-mist-50' : 'text-mist-50/85')}>{s.name}</span>

@@ -119,7 +119,7 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
             {completed && ' · Completada'}
           </p>
         </div>
-        <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-mist-50 text-ink-900 transition-transform duration-300 group-hover:scale-105">
+        <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-coral text-ink-950 transition-transform duration-300 group-hover:scale-105">
           <Play className="ml-1 size-6 fill-current" />
         </div>
       </div>
@@ -192,7 +192,7 @@ export function ContinueCard({ progress }: { progress: ProgramProgress }) {
           haptic(10);
           play(progress.nextSessionId!);
         }}
-        className="flex size-12 shrink-0 items-center justify-center rounded-full bg-mist-50 text-ink-900"
+        className="flex size-12 shrink-0 items-center justify-center rounded-full bg-coral text-ink-950"
       >
         <Play className="ml-0.5 size-5 fill-current" />
       </motion.button>
