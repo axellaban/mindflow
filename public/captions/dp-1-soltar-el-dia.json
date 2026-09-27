@@ -1,1 +1,298 @@
-{"id":"dp-1-soltar-el-dia","duration":720.0,"voice":"luz","captions":[{"s":1.2,"e":1.74,"t":"Hola."},{"s":2.54,"e":6.24,"t":"Bienvenida a la primera noche de Dormir profundo."},{"s":7.04,"e":12.7,"t":"Esta práctica está pensada para escucharla ya en la cama, con las luces apagadas."},{"s":13.5,"e":16.23,"t":"No tienes que hacer nada más que escuchar."},{"s":17.03,"e":21.75,"t":"Si te duermes antes de que termine, perfecto: ese es el objetivo."},{"s":23.65,"e":27.13,"t":"Acomódate en la posición en la que sueles dormir."},{"s":27.93,"e":30.61,"t":"Ajusta la almohada, la manta."},{"s":31.41,"e":34.64,"t":"Date permiso para encontrar la comodidad de verdad."},{"s":39.64,"e":43.23,"t":"Haz una respiración lenta, llenando el abdomen…"},{"s":46.23,"e":52.0,"t":"y deja salir el aire muy despacio, como si soplaras sobre una vela sin apagarla."},{"s":57.0,"e":57.74,"t":"Otra vez."},{"s":58.54,"e":59.12,"t":"Inhala…"},{"s":62.12,"e":65.15,"t":"y una exhalación larga, larga."},{"s":71.15,"e":74.98,"t":"Deja que la respiración se vuelva lenta por sí sola."},{"s":124.09,"e":125.71,"t":"El día de hoy ya pasó."},{"s":126.51,"e":128.99,"t":"Hiciste lo que pudiste con lo que tenías."},{"s":129.79,"e":132.26,"t":"Ahora no hay nada más que resolver."},{"s":133.06,"e":138.86,"t":"Vamos a recorrerlo suavemente, como quien hojea un libro antes de cerrarlo."},{"s":163.42,"e":165.46,"t":"Recuerda cómo empezó tu día."},{"s":166.26,"e":167.92,"t":"El momento de despertar."},{"s":168.72,"e":169.4,"t":"La luz."},{"s":170.2,"e":171.68,"t":"Lo primero que hiciste."},{"s":172.48,"e":174.53,"t":"No te detengas en los detalles."},{"s":175.33,"e":177.83,"t":"Solo deja que la imagen pase."},{"s":226.94,"e":228.18,"t":"Recorre la mañana."},{"s":228.98,"e":230.49,"t":"Las personas que viste."},{"s":231.29,"e":233.25,"t":"Los lugares por los que pasaste."},{"s":234.05,"e":237.96,"t":"Como si miraras un paisaje desde la ventanilla de un tren."},{"s":287.07,"e":287.92,"t":"La tarde."},{"s":288.72,"e":289.96,"t":"Lo que salió bien."},{"s":290.76,"e":293.29,"t":"Lo que quizás no salió como esperabas."},{"s":294.09,"e":296.55,"t":"Todo eso también puede quedarse atrás."},{"s":297.35,"e":304.25,"t":"Si aparece algo pendiente, imagina que lo anotas en una hoja y la dejas sobre la mesa."},{"s":305.05,"e":306.46,"t":"Mañana seguirá ahí."},{"s":307.26,"e":309.21,"t":"Esta noche no te necesita."},{"s":358.32,"e":360.05,"t":"Y ahora, la noche."},{"s":360.85,"e":361.95,"t":"Este momento."},{"s":362.75,"e":364.14,"t":"Tu cuerpo en la cama."},{"s":388.69,"e":391.58,"t":"Elige un pequeño momento bueno de hoy."},{"s":392.38,"e":393.65,"t":"Por mínimo que sea."},{"s":394.45,"e":399.96,"t":"Un café caliente, una conversación, un rayo de sol, una risa."},{"s":400.76,"e":402.55,"t":"Quédate con él un instante."},{"s":403.35,"e":406.46,"t":"Deja que su calidez se extienda por el pecho."},{"s":480.13,"e":483.27,"t":"Ahora imagina que cierras el libro del día."},{"s":484.07,"e":484.97,"t":"Suavemente."},{"s":485.77,"e":487.03,"t":"Hoy termina aquí."},{"s":511.58,"e":515.73,"t":"Siente el peso de tu cuerpo, entregado a la cama."},{"s":516.53,"e":517.84,"t":"Los pies pesados."},{"s":518.64,"e":520.34,"t":"Las piernas pesadas."},{"s":521.14,"e":523.51,"t":"Las manos, tibias y pesadas."},{"s":524.31,"e":527.9,"t":"Cada exhalación te hunde un poco más en el descanso."},{"s":601.57,"e":603.06,"t":"No hay nada que hacer."},{"s":603.86,"e":605.08,"t":"Nada que pensar."},{"s":605.88,"e":607.15,"t":"Nada que resolver."},{"s":607.95,"e":609.17,"t":"Solo respirar…"},{"s":610.52,"e":611.41,"t":"y descansar."},{"s":709.63,"e":713.95,"t":"Puedes seguir así, en silencio, dejándote llevar por el sueño."},{"s":714.75,"e":716.0,"t":"Buenas noches."}],"cues":[]}
+{
+  "id": "dp-1-soltar-el-dia",
+  "voice": "luz",
+  "duration": 720.0,
+  "captions": [
+    {
+      "s": 1.2,
+      "e": 1.82,
+      "t": "Hola."
+    },
+    {
+      "s": 2.62,
+      "e": 6.56,
+      "t": "Bienvenida a la primera noche de Dormir profundo."
+    },
+    {
+      "s": 7.36,
+      "e": 13.44,
+      "t": "Esta práctica está pensada para escucharla ya en la cama, con las luces apagadas."
+    },
+    {
+      "s": 14.24,
+      "e": 17.33,
+      "t": "No tienes que hacer nada más que escuchar."
+    },
+    {
+      "s": 18.13,
+      "e": 23.19,
+      "t": "Si te duermes antes de que termine, perfecto: ese es el objetivo."
+    },
+    {
+      "s": 26.19,
+      "e": 29.9,
+      "t": "Acomódate en la posición en la que sueles dormir."
+    },
+    {
+      "s": 30.7,
+      "e": 33.1,
+      "t": "Ajusta la almohada, la manta."
+    },
+    {
+      "s": 33.9,
+      "e": 37.78,
+      "t": "Date permiso para encontrar la comodidad de verdad."
+    },
+    {
+      "s": 42.78,
+      "e": 46.46,
+      "t": "Haz una respiración lenta, llenando el abdomen…"
+    },
+    {
+      "s": 49.46,
+      "e": 55.85,
+      "t": "y deja salir el aire muy despacio, como si soplaras sobre una vela sin apagarla."
+    },
+    {
+      "s": 60.85,
+      "e": 61.88,
+      "t": "Otra vez."
+    },
+    {
+      "s": 62.68,
+      "e": 63.47,
+      "t": "Inhala…"
+    },
+    {
+      "s": 66.47,
+      "e": 69.1,
+      "t": "y una exhalación larga, larga."
+    },
+    {
+      "s": 75.1,
+      "e": 79.21,
+      "t": "Deja que la respiración se vuelva lenta por sí sola."
+    },
+    {
+      "s": 126.77,
+      "e": 128.79,
+      "t": "El día de hoy ya pasó."
+    },
+    {
+      "s": 129.59,
+      "e": 132.66,
+      "t": "Hiciste lo que pudiste con lo que tenías."
+    },
+    {
+      "s": 133.46,
+      "e": 136.18,
+      "t": "Ahora no hay nada más que resolver."
+    },
+    {
+      "s": 136.98,
+      "e": 142.59,
+      "t": "Vamos a recorrerlo suavemente, como quien hojea un libro antes de cerrarlo."
+    },
+    {
+      "s": 166.37,
+      "e": 168.94,
+      "t": "Recuerda cómo empezó tu día."
+    },
+    {
+      "s": 169.74,
+      "e": 171.68,
+      "t": "El momento de despertar."
+    },
+    {
+      "s": 172.48,
+      "e": 173.29,
+      "t": "La luz."
+    },
+    {
+      "s": 174.09,
+      "e": 176.05,
+      "t": "Lo primero que hiciste."
+    },
+    {
+      "s": 176.85,
+      "e": 179.39,
+      "t": "No te detengas en los detalles."
+    },
+    {
+      "s": 180.19,
+      "e": 182.76,
+      "t": "Solo deja que la imagen pase."
+    },
+    {
+      "s": 230.32,
+      "e": 231.98,
+      "t": "Recorre la mañana."
+    },
+    {
+      "s": 232.78,
+      "e": 234.76,
+      "t": "Las personas que viste."
+    },
+    {
+      "s": 235.56,
+      "e": 238.13,
+      "t": "Los lugares por los que pasaste."
+    },
+    {
+      "s": 238.93,
+      "e": 243.33,
+      "t": "Como si miraras un paisaje desde la ventanilla de un tren."
+    },
+    {
+      "s": 290.88,
+      "e": 291.87,
+      "t": "La tarde."
+    },
+    {
+      "s": 292.67,
+      "e": 294.15,
+      "t": "Lo que salió bien."
+    },
+    {
+      "s": 294.95,
+      "e": 297.95,
+      "t": "Lo que quizás no salió como esperabas."
+    },
+    {
+      "s": 298.75,
+      "e": 302.05,
+      "t": "Todo eso también puede quedarse atrás."
+    },
+    {
+      "s": 302.85,
+      "e": 309.3,
+      "t": "Si aparece algo pendiente, imagina que lo anotas en una hoja y la dejas sobre la mesa."
+    },
+    {
+      "s": 310.1,
+      "e": 311.95,
+      "t": "Mañana seguirá ahí."
+    },
+    {
+      "s": 312.75,
+      "e": 315.1,
+      "t": "Esta noche no te necesita."
+    },
+    {
+      "s": 362.66,
+      "e": 364.32,
+      "t": "Y ahora, la noche."
+    },
+    {
+      "s": 365.12,
+      "e": 366.5,
+      "t": "Este momento."
+    },
+    {
+      "s": 367.3,
+      "e": 369.08,
+      "t": "Tu cuerpo en la cama."
+    },
+    {
+      "s": 392.86,
+      "e": 396.0,
+      "t": "Elige un pequeño momento bueno de hoy."
+    },
+    {
+      "s": 396.8,
+      "e": 398.5,
+      "t": "Por mínimo que sea."
+    },
+    {
+      "s": 399.3,
+      "e": 404.25,
+      "t": "Un café caliente, una conversación, un rayo de sol, una risa."
+    },
+    {
+      "s": 405.05,
+      "e": 407.35,
+      "t": "Quédate con él un instante."
+    },
+    {
+      "s": 408.15,
+      "e": 411.47,
+      "t": "Deja que su calidez se extienda por el pecho."
+    },
+    {
+      "s": 482.81,
+      "e": 486.17,
+      "t": "Ahora imagina que cierras el libro del día."
+    },
+    {
+      "s": 486.97,
+      "e": 488.21,
+      "t": "Suavemente."
+    },
+    {
+      "s": 489.01,
+      "e": 490.61,
+      "t": "Hoy termina aquí."
+    },
+    {
+      "s": 514.39,
+      "e": 518.13,
+      "t": "Siente el peso de tu cuerpo, entregado a la cama."
+    },
+    {
+      "s": 518.93,
+      "e": 520.54,
+      "t": "Los pies pesados."
+    },
+    {
+      "s": 521.34,
+      "e": 523.17,
+      "t": "Las piernas pesadas."
+    },
+    {
+      "s": 523.97,
+      "e": 526.49,
+      "t": "Las manos, tibias y pesadas."
+    },
+    {
+      "s": 527.29,
+      "e": 531.15,
+      "t": "Cada exhalación te hunde un poco más en el descanso."
+    },
+    {
+      "s": 602.48,
+      "e": 604.21,
+      "t": "No hay nada que hacer."
+    },
+    {
+      "s": 605.01,
+      "e": 606.47,
+      "t": "Nada que pensar."
+    },
+    {
+      "s": 607.27,
+      "e": 608.94,
+      "t": "Nada que resolver."
+    },
+    {
+      "s": 609.74,
+      "e": 611.06,
+      "t": "Solo respirar…"
+    },
+    {
+      "s": 612.41,
+      "e": 613.72,
+      "t": "y descansar."
+    },
+    {
+      "s": 708.84,
+      "e": 713.76,
+      "t": "Puedes seguir así, en silencio, dejándote llevar por el sueño."
+    },
+    {
+      "s": 714.56,
+      "e": 716.0,
+      "t": "Buenas noches."
+    }
+  ],
+  "cues": []
+}

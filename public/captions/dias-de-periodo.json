@@ -1,1 +1,297 @@
-{"id":"dias-de-periodo","duration":540.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":10.86,"t":"Esta práctica es para los días del período, cuando el cuerpo pide más cuidado."},{"s":11.66,"e":18.13,"t":"Quizás hay dolor, cansancio, hinchazón, o las emociones están más a flor de piel."},{"s":18.93,"e":21.73,"t":"Todo eso es parte de un ciclo natural."},{"s":22.53,"e":24.74,"t":"No vamos a pelear con lo que sientes."},{"s":25.54,"e":27.15,"t":"Vamos a acompañarlo."},{"s":29.05,"e":31.99,"t":"Busca una postura en la que puedas aflojarte."},{"s":32.79,"e":38.0,"t":"Si puedes, recuéstate de lado, o boca arriba con las rodillas flexionadas."},{"s":38.8,"e":42.62,"t":"Una bolsa de agua caliente sobre el vientre también puede ayudar."},{"s":47.62,"e":48.77,"t":"Cierra los ojos."},{"s":51.77,"e":55.67,"t":"Apoya una o ambas manos sobre el vientre bajo."},{"s":56.47,"e":58.9,"t":"Siente el calor de tus manos."},{"s":74.55,"e":81.77,"t":"Respira lento, llevando el aire hacia el abdomen, como si pudieras respirar justo debajo de tus manos."},{"s":82.57,"e":85.53,"t":"Al inhalar, el vientre se expande suavemente."},{"s":86.33,"e":88.32,"t":"Al exhalar, se ablanda."},{"s":119.61,"e":124.22,"t":"Ahora vamos a alargar la exhalación, que ayuda al cuerpo a relajarse."},{"s":125.02,"e":126.9,"t":"Inhala contando hasta cuatro."},{"s":127.7,"e":128.15,"t":"Uno"},{"s":128.85,"e":129.26,"t":"dos"},{"s":129.96,"e":130.4,"t":"tres"},{"s":131.1,"e":131.69,"t":"cuatro."},{"s":132.49,"e":134.35,"t":"Y exhala contando hasta seis."},{"s":135.15,"e":135.6,"t":"Uno"},{"s":136.3,"e":136.71,"t":"dos"},{"s":137.41,"e":137.85,"t":"tres"},{"s":138.55,"e":139.15,"t":"cuatro"},{"s":139.85,"e":140.52,"t":"cinco"},{"s":141.22,"e":141.78,"t":"seis."},{"s":143.78,"e":144.5,"t":"Otra vez."},{"s":145.3,"e":145.9,"t":"Inhala"},{"s":149.4,"e":150.55,"t":"y exhala lento."},{"s":155.55,"e":157.63,"t":"Sigue así, a tu ritmo."},{"s":188.92,"e":194.98,"t":"Si hay dolor, en lugar de tensarte alrededor de él, intenta observarlo con curiosidad."},{"s":195.78,"e":197.34,"t":"¿Dónde está exactamente?"},{"s":198.29,"e":200.43,"t":"¿Es fijo, o va y viene?"},{"s":201.38,"e":203.41,"t":"¿Es punzante, sordo, pesado?"},{"s":219.06,"e":228.12,"t":"Imagina que con cada exhalación, el calor de tus manos se derrite hacia adentro, y afloja un poco los músculos que están tensos."},{"s":259.41,"e":261.9,"t":"No hace falta que el dolor desaparezca."},{"s":262.7,"e":264.34,"t":"Solo deja de pelearle."},{"s":265.14,"e":270.68,"t":"Muchas veces, cuando dejamos de resistir, el dolor se vuelve más llevadero."},{"s":301.97,"e":306.18,"t":"Suelta también la mandíbula, los hombros, las manos."},{"s":306.98,"e":309.96,"t":"Cuando algo duele, el cuerpo entero se contrae."},{"s":310.76,"e":312.73,"t":"Deja que el resto descanse."},{"s":344.02,"e":349.91,"t":"Y si aparecen emociones, tristeza, irritación, sensibilidad, déjalas estar."},{"s":350.71,"e":354.19,"t":"En estos días, sentir más no es un problema."},{"s":354.99,"e":356.22,"t":"Es información."},{"s":387.51,"e":390.3,"t":"Repite en silencio, con suavidad:"},{"s":391.0,"e":393.08,"t":"«Mi cuerpo está haciendo su trabajo»."},{"s":397.08,"e":399.58,"t":"«Hoy me permito ir más despacio»."},{"s":403.58,"e":405.89,"t":"«Me trato con la ternura que necesito»."},{"s":452.82,"e":456.85,"t":"Sigue respirando bajo tus manos, todo el tiempo que quieras."},{"s":503.78,"e":506.43,"t":"Cuando estés lista, abre los ojos."},{"s":509.43,"e":515.17,"t":"Y si puedes, regálate hoy un poco más de descanso, de abrigo, de calma."},{"s":515.97,"e":517.83,"t":"Tu cuerpo te lo va a agradecer."},{"s":518.63,"e":525.53,"t":"Si el dolor es muy fuerte, o no te deja hacer tu vida, consulta con un profesional de la salud."},{"s":526.33,"e":527.9,"t":"Cuidarte también es eso."}],"cues":[{"t":0.4,"type":"bell"},{"t":530.5,"type":"bell"}]}
+{
+  "id": "dias-de-periodo",
+  "voice": "luz",
+  "duration": 540.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 10.39,
+      "t": "Esta práctica es para los días del período, cuando el cuerpo pide más cuidado."
+    },
+    {
+      "s": 11.19,
+      "e": 16.7,
+      "t": "Quizás hay dolor, cansancio, hinchazón, o las emociones están más a flor de piel."
+    },
+    {
+      "s": 17.5,
+      "e": 20.16,
+      "t": "Todo eso es parte de un ciclo natural."
+    },
+    {
+      "s": 20.96,
+      "e": 23.52,
+      "t": "No vamos a pelear con lo que sientes."
+    },
+    {
+      "s": 24.32,
+      "e": 26.07,
+      "t": "Vamos a acompañarlo."
+    },
+    {
+      "s": 29.07,
+      "e": 32.27,
+      "t": "Busca una postura en la que puedas aflojarte."
+    },
+    {
+      "s": 33.07,
+      "e": 38.01,
+      "t": "Si puedes, recuéstate de lado, o boca arriba con las rodillas flexionadas."
+    },
+    {
+      "s": 38.81,
+      "e": 42.83,
+      "t": "Una bolsa de agua caliente sobre el vientre también puede ayudar."
+    },
+    {
+      "s": 47.83,
+      "e": 49.22,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 52.22,
+      "e": 55.42,
+      "t": "Apoya una o ambas manos sobre el vientre bajo."
+    },
+    {
+      "s": 56.22,
+      "e": 58.15,
+      "t": "Siente el calor de tus manos."
+    },
+    {
+      "s": 73.98,
+      "e": 80.38,
+      "t": "Respira lento, llevando el aire hacia el abdomen, como si pudieras respirar justo debajo de tus manos."
+    },
+    {
+      "s": 81.18,
+      "e": 84.11,
+      "t": "Al inhalar, el vientre se expande suavemente."
+    },
+    {
+      "s": 84.91,
+      "e": 86.57,
+      "t": "Al exhalar, se ablanda."
+    },
+    {
+      "s": 118.24,
+      "e": 122.68,
+      "t": "Ahora vamos a alargar la exhalación, que ayuda al cuerpo a relajarse."
+    },
+    {
+      "s": 123.48,
+      "e": 125.63,
+      "t": "Inhala contando hasta cuatro."
+    },
+    {
+      "s": 126.43,
+      "e": 127.0,
+      "t": "Uno"
+    },
+    {
+      "s": 127.7,
+      "e": 128.26,
+      "t": "dos"
+    },
+    {
+      "s": 128.96,
+      "e": 129.62,
+      "t": "tres"
+    },
+    {
+      "s": 130.32,
+      "e": 131.08,
+      "t": "cuatro."
+    },
+    {
+      "s": 131.88,
+      "e": 134.09,
+      "t": "Y exhala contando hasta seis."
+    },
+    {
+      "s": 134.89,
+      "e": 135.46,
+      "t": "Uno"
+    },
+    {
+      "s": 136.16,
+      "e": 136.72,
+      "t": "dos"
+    },
+    {
+      "s": 137.42,
+      "e": 138.08,
+      "t": "tres"
+    },
+    {
+      "s": 138.78,
+      "e": 139.51,
+      "t": "cuatro"
+    },
+    {
+      "s": 140.21,
+      "e": 140.94,
+      "t": "cinco"
+    },
+    {
+      "s": 141.64,
+      "e": 142.24,
+      "t": "seis."
+    },
+    {
+      "s": 144.24,
+      "e": 145.18,
+      "t": "Otra vez."
+    },
+    {
+      "s": 145.98,
+      "e": 146.69,
+      "t": "Inhala"
+    },
+    {
+      "s": 150.19,
+      "e": 151.46,
+      "t": "y exhala lento."
+    },
+    {
+      "s": 156.46,
+      "e": 158.23,
+      "t": "Sigue así, a tu ritmo."
+    },
+    {
+      "s": 189.9,
+      "e": 195.57,
+      "t": "Si hay dolor, en lugar de tensarte alrededor de él, intenta observarlo con curiosidad."
+    },
+    {
+      "s": 196.37,
+      "e": 198.21,
+      "t": "¿Dónde está exactamente?"
+    },
+    {
+      "s": 199.16,
+      "e": 200.95,
+      "t": "¿Es fijo, o va y viene?"
+    },
+    {
+      "s": 201.9,
+      "e": 204.05,
+      "t": "¿Es punzante, sordo, pesado?"
+    },
+    {
+      "s": 219.88,
+      "e": 228.14,
+      "t": "Imagina que con cada exhalación, el calor de tus manos se derrite hacia adentro, y afloja un poco los músculos que están tensos."
+    },
+    {
+      "s": 259.81,
+      "e": 262.59,
+      "t": "No hace falta que el dolor desaparezca."
+    },
+    {
+      "s": 263.39,
+      "e": 265.12,
+      "t": "Solo deja de pelearle."
+    },
+    {
+      "s": 265.92,
+      "e": 270.87,
+      "t": "Muchas veces, cuando dejamos de resistir, el dolor se vuelve más llevadero."
+    },
+    {
+      "s": 302.53,
+      "e": 305.76,
+      "t": "Suelta también la mandíbula, los hombros, las manos."
+    },
+    {
+      "s": 306.56,
+      "e": 309.81,
+      "t": "Cuando algo duele, el cuerpo entero se contrae."
+    },
+    {
+      "s": 310.61,
+      "e": 312.69,
+      "t": "Deja que el resto descanse."
+    },
+    {
+      "s": 344.36,
+      "e": 349.88,
+      "t": "Y si aparecen emociones, tristeza, irritación, sensibilidad, déjalas estar."
+    },
+    {
+      "s": 350.68,
+      "e": 353.72,
+      "t": "En estos días, sentir más no es un problema."
+    },
+    {
+      "s": 354.52,
+      "e": 355.85,
+      "t": "Es información."
+    },
+    {
+      "s": 387.52,
+      "e": 390.01,
+      "t": "Repite en silencio, con suavidad:"
+    },
+    {
+      "s": 390.71,
+      "e": 393.16,
+      "t": "«Mi cuerpo está haciendo su trabajo»."
+    },
+    {
+      "s": 397.16,
+      "e": 399.57,
+      "t": "«Hoy me permito ir más despacio»."
+    },
+    {
+      "s": 403.57,
+      "e": 406.34,
+      "t": "«Me trato con la ternura que necesito»."
+    },
+    {
+      "s": 453.84,
+      "e": 457.4,
+      "t": "Sigue respirando bajo tus manos, todo el tiempo que quieras."
+    },
+    {
+      "s": 504.9,
+      "e": 507.39,
+      "t": "Cuando estés lista, abre los ojos."
+    },
+    {
+      "s": 510.39,
+      "e": 514.97,
+      "t": "Y si puedes, regálate hoy un poco más de descanso, de abrigo, de calma."
+    },
+    {
+      "s": 515.77,
+      "e": 518.08,
+      "t": "Tu cuerpo te lo va a agradecer."
+    },
+    {
+      "s": 518.88,
+      "e": 525.02,
+      "t": "Si el dolor es muy fuerte, o no te deja hacer tu vida, consulta con un profesional de la salud."
+    },
+    {
+      "s": 525.82,
+      "e": 527.9,
+      "t": "Cuidarte también es eso."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 530.5,
+      "type": "bell"
+    }
+  ]
+}

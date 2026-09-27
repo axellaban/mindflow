@@ -194,20 +194,26 @@
   "despertar": {
     "duration": 420.0,
     "voice": "luz",
-    "bytes": 889565,
-    "v": "dafa8c86fb"
+    "bytes": 838171,
+    "v": "9aa58ba9ca46",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dias-de-periodo": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1142997,
-    "v": "d3fae69c6c"
+    "bytes": 1095139,
+    "v": "7319b7cfe874",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dp-1-soltar-el-dia": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1282232,
-    "v": "05964c13ec"
+    "bytes": 1299547,
+    "v": "b4dfe782c9d6",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "dp-2-respirar-para-dormir": {
     "duration": 600.0,

@@ -119,9 +119,24 @@
       "audio_sha256": "ca2b1a547927e7952a36f1d554aeb9d92b82db7c0c554a95222bc92a3ceeb071",
       "captions_sha256": "c8b759736bce98a1607cd02d1a9fe4d6345d0ae59ad89f9cc5bf0004faac64ab",
       "version": "aeabb5dc000b"
+    },
+    "despertar": {
+      "audio_sha256": "7bbe2bc8a469059bdf04d24b95ecf7f04c7265b74ea28b6afd9e5729068e6d21",
+      "captions_sha256": "8a77b1fdb63524893caadb6e57bbc118d5900078359aec61bb1770005bd09f99",
+      "version": "9aa58ba9ca46"
+    },
+    "dias-de-periodo": {
+      "audio_sha256": "973741558eaf0f9324804c2ea19a9d4e6c2197949e7925697012d35d56ea1843",
+      "captions_sha256": "3fb451236b150c19ee02b11162096150849740112b3ea21c169e0f103fa5415e",
+      "version": "7319b7cfe874"
+    },
+    "dp-1-soltar-el-dia": {
+      "audio_sha256": "a340ec1266b8a9c28064c3b7b97d9804f23b3db97654696b8b4482b57f234fd2",
+      "captions_sha256": "3fe1a03fd8eb247dac4b42bf593de1b2f6496976cb7a2305bba203a441f3ede7",
+      "version": "b4dfe782c9d6"
     }
   },
-  "completed": 24,
+  "completed": 27,
   "total": 61,
   "audio_complete": false
 }
