@@ -1,0 +1,22 @@
+{
+  "validated": {
+    "aam-1-respiracion": {
+      "audio_sha256": "e5a86a1524f3b13774de06d4a0fdd578cc673b22301aa229c6ec117c96936110",
+      "captions_sha256": "ea4998588356130e2e93d6e525d0b8c4907eaf61f27c5d458bed228cdbc08551",
+      "version": "4a19394b879f"
+    },
+    "aam-2-cuerpo": {
+      "audio_sha256": "7ad96674d97246575e4d37a35bf2b09e2401c97a382e80e0871990e833ca519d",
+      "captions_sha256": "450f04ffeaaec412b25ed681b68fda7b830b381b085064ccac8b9971c0aae9d8",
+      "version": "caa8ac8439e2"
+    },
+    "aam-3-pensamientos": {
+      "audio_sha256": "154ceea5290c2152d18e12aea7d403335b0841ee53d1e34110234cd57b9574ec",
+      "captions_sha256": "1ef5f97b10588b16b6cbbe8df8754b1741954602a740d5e95a81613c4f033fb3",
+      "version": "e59b2f4d3d2f"
+    }
+  },
+  "completed": 3,
+  "total": 61,
+  "audio_complete": false
+}

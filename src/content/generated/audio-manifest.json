@@ -2,20 +2,26 @@
   "aam-1-respiracion": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1355181,
-    "v": "8e9769d454"
+    "bytes": 1282603,
+    "v": "4a19394b879f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-2-cuerpo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1335509,
-    "v": "c99d76bb22"
+    "bytes": 1265563,
+    "v": "caa8ac8439e2",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-3-pensamientos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1207565,
-    "v": "b0b5b11ec6"
+    "bytes": 1158259,
+    "v": "e59b2f4d3d2f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "aam-4-emociones": {
     "duration": 600.0,

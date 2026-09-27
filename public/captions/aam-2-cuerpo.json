@@ -1,1 +1,317 @@
-{"id":"aam-2-cuerpo","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":5.15,"t":"Hola de nuevo."},{"s":5.95,"e":9.0,"t":"Este es el segundo día de Aprender a meditar."},{"s":9.8,"e":12.76,"t":"Ayer usamos la respiración como ancla."},{"s":13.56,"e":17.3,"t":"Hoy vamos a ampliar esa ancla a todo el cuerpo."},{"s":18.1,"e":22.64,"t":"Muchas veces vivimos como si fuéramos solo una cabeza que piensa."},{"s":23.44,"e":28.67,"t":"Pero el cuerpo siempre está aquí, en el presente, enviándonos información."},{"s":29.47,"e":31.5,"t":"Solo hace falta escucharlo."},{"s":33.4,"e":35.23,"t":"Acomódate en tu postura."},{"s":36.03,"e":42.64,"t":"Si lo prefieres, hoy puedes hacer esta práctica boca arriba, sobre una cama o una colchoneta."},{"s":43.44,"e":46.38,"t":"Deja que los ojos se cierren suavemente."},{"s":50.38,"e":52.56,"t":"Toma una respiración profunda…"},{"s":53.91,"e":55.6,"t":"y suéltala con un suspiro."},{"s":59.6,"e":62.97,"t":"Siente, primero, el cuerpo como un todo."},{"s":63.77,"e":64.58,"t":"Su peso."},{"s":65.38,"e":66.22,"t":"Su forma."},{"s":67.02,"e":68.55,"t":"El espacio que ocupa."},{"s":69.35,"e":72.34,"t":"Nota los puntos de contacto con lo que te sostiene."},{"s":73.14,"e":78.76,"t":"No necesitas sostenerte por tu cuenta: deja que el suelo o la silla hagan ese trabajo."},{"s":110.3,"e":112.43,"t":"Ahora lleva la atención a los pies."},{"s":113.23,"e":120.65,"t":"Quizás notes la temperatura, un hormigueo, la presión del apoyo, o quizás no notes nada en especial."},{"s":121.45,"e":122.74,"t":"Todo eso está bien."},{"s":123.54,"e":126.27,"t":"No buscamos una sensación en particular."},{"s":127.07,"e":128.79,"t":"Solo observamos lo que hay."},{"s":160.33,"e":162.55,"t":"Sube lentamente por las piernas."},{"s":163.35,"e":166.85,"t":"Los tobillos, las pantorrillas, las rodillas."},{"s":167.65,"e":169.93,"t":"Los muslos, pesados y apoyados."},{"s":201.47,"e":205.48,"t":"Lleva la atención a la pelvis, a la zona baja de la espalda."},{"s":206.28,"e":209.25,"t":"Si encuentras tensión, no tienes que eliminarla."},{"s":210.05,"e":216.71,"t":"Puedes simplemente respirar hacia ese lugar, e imaginar que el aire le da un poco más de espacio."},{"s":248.25,"e":249.44,"t":"Ahora el abdomen."},{"s":250.24,"e":253.08,"t":"Siente cómo se mueve con cada respiración."},{"s":253.88,"e":255.1,"t":"Sube al inhalar…"},{"s":256.45,"e":257.91,"t":"baja al exhalar."},{"s":258.71,"e":263.58,"t":"Luego el pecho, y la espalda, amplia, apoyada."},{"s":295.12,"e":297.21,"t":"Lleva la atención a las manos."},{"s":298.01,"e":300.82,"t":"Las palmas, los dedos, uno por uno."},{"s":301.62,"e":305.7,"t":"Es posible que notes un leve pulso, calor o cosquilleo."},{"s":306.5,"e":308.8,"t":"Sube por los brazos hasta los hombros."},{"s":309.6,"e":312.54,"t":"Los hombros suelen cargar mucho de lo que vivimos."},{"s":313.34,"e":315.54,"t":"Déjalos caer, solo un poco."},{"s":347.07,"e":347.85,"t":"El cuello."},{"s":348.65,"e":354.02,"t":"La mandíbula: separa ligeramente los dientes y deja que la lengua descanse."},{"s":354.82,"e":358.01,"t":"Las mejillas, los ojos, la frente."},{"s":358.81,"e":362.5,"t":"Imagina que la frente se vuelve amplia y lisa."},{"s":394.03,"e":399.77,"t":"Y ahora, siente todo el cuerpo a la vez, de la cabeza a los pies, respirando."},{"s":400.57,"e":404.67,"t":"Un solo campo de sensaciones, vivo, cambiante."},{"s":451.98,"e":455.25,"t":"Si la mente se distrae, ya sabes qué hacer."},{"s":456.05,"e":459.15,"t":"Nota a dónde fue, y vuelve a sentir el cuerpo."},{"s":459.95,"e":462.81,"t":"Cualquier parte del cuerpo puede ser tu ancla."},{"s":510.12,"e":514.48,"t":"Quédate un momento más, simplemente habitando tu cuerpo."},{"s":546.02,"e":546.84,"t":"Muy bien."},{"s":547.64,"e":551.34,"t":"Empieza a hacer respiraciones un poco más profundas."},{"s":552.14,"e":554.78,"t":"Mueve los dedos de las manos y de los pies."},{"s":555.58,"e":557.96,"t":"Estírate como lo harías al despertar."},{"s":561.96,"e":564.77,"t":"Y cuando sea el momento, abre los ojos."},{"s":566.77,"e":574.13,"t":"Durante el día de hoy, te invito a hacer pequeñas pausas para preguntarte: ¿cómo está mi cuerpo ahora?"},{"s":575.08,"e":578.71,"t":"Quizás descubras hombros tensos o una mandíbula apretada."},{"s":579.51,"e":582.15,"t":"Al darte cuenta, ya puedes soltar."},{"s":582.95,"e":586.21,"t":"Mañana exploraremos los pensamientos."},{"s":587.01,"e":587.9,"t":"Hasta pronto."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "aam-2-cuerpo",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 5.29,
+      "t": "Hola de nuevo."
+    },
+    {
+      "s": 6.09,
+      "e": 9.05,
+      "t": "Este es el segundo día de Aprender a meditar."
+    },
+    {
+      "s": 9.85,
+      "e": 12.5,
+      "t": "Ayer usamos la respiración como ancla."
+    },
+    {
+      "s": 13.3,
+      "e": 16.4,
+      "t": "Hoy vamos a ampliar esa ancla a todo el cuerpo."
+    },
+    {
+      "s": 17.2,
+      "e": 21.5,
+      "t": "Muchas veces vivimos como si fuéramos solo una cabeza que piensa."
+    },
+    {
+      "s": 22.3,
+      "e": 27.02,
+      "t": "Pero el cuerpo siempre está aquí, en el presente, enviándonos información."
+    },
+    {
+      "s": 27.82,
+      "e": 29.85,
+      "t": "Solo hace falta escucharlo."
+    },
+    {
+      "s": 32.85,
+      "e": 34.81,
+      "t": "Acomódate en tu postura."
+    },
+    {
+      "s": 35.61,
+      "e": 41.57,
+      "t": "Si lo prefieres, hoy puedes hacer esta práctica boca arriba, sobre una cama o una colchoneta."
+    },
+    {
+      "s": 42.37,
+      "e": 45.03,
+      "t": "Deja que los ojos se cierren suavemente."
+    },
+    {
+      "s": 49.03,
+      "e": 51.33,
+      "t": "Toma una respiración profunda…"
+    },
+    {
+      "s": 52.68,
+      "e": 54.69,
+      "t": "y suéltala con un suspiro."
+    },
+    {
+      "s": 58.69,
+      "e": 61.62,
+      "t": "Siente, primero, el cuerpo como un todo."
+    },
+    {
+      "s": 62.42,
+      "e": 63.25,
+      "t": "Su peso."
+    },
+    {
+      "s": 64.05,
+      "e": 64.94,
+      "t": "Su forma."
+    },
+    {
+      "s": 65.74,
+      "e": 67.42,
+      "t": "El espacio que ocupa."
+    },
+    {
+      "s": 68.22,
+      "e": 71.47,
+      "t": "Nota los puntos de contacto con lo que te sostiene."
+    },
+    {
+      "s": 72.27,
+      "e": 78.22,
+      "t": "No necesitas sostenerte por tu cuenta: deja que el suelo o la silla hagan ese trabajo."
+    },
+    {
+      "s": 110.39,
+      "e": 112.6,
+      "t": "Ahora lleva la atención a los pies."
+    },
+    {
+      "s": 113.4,
+      "e": 120.34,
+      "t": "Quizás notes la temperatura, un hormigueo, la presión del apoyo, o quizás no notes nada en especial."
+    },
+    {
+      "s": 121.14,
+      "e": 122.77,
+      "t": "Todo eso está bien."
+    },
+    {
+      "s": 123.57,
+      "e": 126.64,
+      "t": "No buscamos una sensación en particular."
+    },
+    {
+      "s": 127.44,
+      "e": 129.28,
+      "t": "Solo observamos lo que hay."
+    },
+    {
+      "s": 161.46,
+      "e": 163.77,
+      "t": "Sube lentamente por las piernas."
+    },
+    {
+      "s": 164.57,
+      "e": 167.73,
+      "t": "Los tobillos, las pantorrillas, las rodillas."
+    },
+    {
+      "s": 168.53,
+      "e": 171.03,
+      "t": "Los muslos, pesados y apoyados."
+    },
+    {
+      "s": 203.2,
+      "e": 206.92,
+      "t": "Lleva la atención a la pelvis, a la zona baja de la espalda."
+    },
+    {
+      "s": 207.72,
+      "e": 210.8,
+      "t": "Si encuentras tensión, no tienes que eliminarla."
+    },
+    {
+      "s": 211.6,
+      "e": 217.94,
+      "t": "Puedes simplemente respirar hacia ese lugar, e imaginar que el aire le da un poco más de espacio."
+    },
+    {
+      "s": 250.12,
+      "e": 251.5,
+      "t": "Ahora el abdomen."
+    },
+    {
+      "s": 252.3,
+      "e": 255.32,
+      "t": "Siente cómo se mueve con cada respiración."
+    },
+    {
+      "s": 256.12,
+      "e": 257.39,
+      "t": "Sube al inhalar…"
+    },
+    {
+      "s": 258.74,
+      "e": 260.13,
+      "t": "baja al exhalar."
+    },
+    {
+      "s": 260.93,
+      "e": 264.34,
+      "t": "Luego el pecho, y la espalda, amplia, apoyada."
+    },
+    {
+      "s": 296.51,
+      "e": 298.51,
+      "t": "Lleva la atención a las manos."
+    },
+    {
+      "s": 299.31,
+      "e": 301.96,
+      "t": "Las palmas, los dedos, uno por uno."
+    },
+    {
+      "s": 302.76,
+      "e": 306.49,
+      "t": "Es posible que notes un leve pulso, calor o cosquilleo."
+    },
+    {
+      "s": 307.29,
+      "e": 309.74,
+      "t": "Sube por los brazos hasta los hombros."
+    },
+    {
+      "s": 310.54,
+      "e": 313.79,
+      "t": "Los hombros suelen cargar mucho de lo que vivimos."
+    },
+    {
+      "s": 314.59,
+      "e": 316.62,
+      "t": "Déjalos caer, solo un poco."
+    },
+    {
+      "s": 348.8,
+      "e": 349.71,
+      "t": "El cuello."
+    },
+    {
+      "s": 350.51,
+      "e": 355.73,
+      "t": "La mandíbula: separa ligeramente los dientes y deja que la lengua descanse."
+    },
+    {
+      "s": 356.53,
+      "e": 359.22,
+      "t": "Las mejillas, los ojos, la frente."
+    },
+    {
+      "s": 360.02,
+      "e": 363.33,
+      "t": "Imagina que la frente se vuelve amplia y lisa."
+    },
+    {
+      "s": 395.5,
+      "e": 400.28,
+      "t": "Y ahora, siente todo el cuerpo a la vez, de la cabeza a los pies, respirando."
+    },
+    {
+      "s": 401.08,
+      "e": 404.43,
+      "t": "Un solo campo de sensaciones, vivo, cambiante."
+    },
+    {
+      "s": 452.69,
+      "e": 455.5,
+      "t": "Si la mente se distrae, ya sabes qué hacer."
+    },
+    {
+      "s": 456.3,
+      "e": 459.4,
+      "t": "Nota a dónde fue, y vuelve a sentir el cuerpo."
+    },
+    {
+      "s": 460.2,
+      "e": 463.21,
+      "t": "Cualquier parte del cuerpo puede ser tu ancla."
+    },
+    {
+      "s": 511.48,
+      "e": 515.27,
+      "t": "Quédate un momento más, simplemente habitando tu cuerpo."
+    },
+    {
+      "s": 547.44,
+      "e": 548.35,
+      "t": "Muy bien."
+    },
+    {
+      "s": 549.15,
+      "e": 552.91,
+      "t": "Empieza a hacer respiraciones un poco más profundas."
+    },
+    {
+      "s": 553.71,
+      "e": 556.24,
+      "t": "Mueve los dedos de las manos y de los pies."
+    },
+    {
+      "s": 557.04,
+      "e": 559.77,
+      "t": "Estírate como lo harías al despertar."
+    },
+    {
+      "s": 563.77,
+      "e": 566.4,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 568.4,
+      "e": 574.64,
+      "t": "Durante el día de hoy, te invito a hacer pequeñas pausas para preguntarte: ¿cómo está mi cuerpo ahora?"
+    },
+    {
+      "s": 575.59,
+      "e": 579.43,
+      "t": "Quizás descubras hombros tensos o una mandíbula apretada."
+    },
+    {
+      "s": 580.23,
+      "e": 582.56,
+      "t": "Al darte cuenta, ya puedes soltar."
+    },
+    {
+      "s": 583.36,
+      "e": 585.99,
+      "t": "Mañana exploraremos los pensamientos."
+    },
+    {
+      "s": 586.79,
+      "e": 587.9,
+      "t": "Hasta pronto."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

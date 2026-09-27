@@ -1,1 +1,257 @@
-{"id":"aam-3-pensamientos","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":6.29,"t":"Bienvenida al tercer día."},{"s":7.09,"e":11.04,"t":"Hasta ahora practicamos volver a la respiración y al cuerpo."},{"s":11.84,"e":17.84,"t":"Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente: los pensamientos."},{"s":19.74,"e":24.43,"t":"Una idea muy común es que meditar consiste en dejar de pensar."},{"s":25.23,"e":26.18,"t":"No es así."},{"s":26.98,"e":30.71,"t":"Pensar es tan natural para la mente como latir para el corazón."},{"s":31.51,"e":35.86,"t":"Lo que sí podemos cambiar es nuestra relación con los pensamientos."},{"s":36.66,"e":40.61,"t":"Podemos aprender a verlos pasar, sin subirnos a cada uno."},{"s":42.51,"e":43.35,"t":"Acomódate."},{"s":44.15,"e":47.64,"t":"Cierra los ojos, o deja la mirada suave."},{"s":51.64,"e":53.72,"t":"Haz una respiración profunda…"},{"s":55.07,"e":55.93,"t":"y suéltala."},{"s":59.93,"e":63.99,"t":"Empieza, como siempre, sintiendo la respiración."},{"s":64.79,"e":67.38,"t":"Unas cuantas respiraciones para llegar."},{"s":110.27,"e":114.37,"t":"Ahora imagina que tu mente es un cielo amplio."},{"s":115.17,"e":118.26,"t":"Y los pensamientos, nubes que lo atraviesan."},{"s":119.06,"e":121.77,"t":"Algunas nubes son pequeñas y ligeras."},{"s":122.57,"e":126.16,"t":"Otras son grandes, oscuras, cargadas de lluvia."},{"s":126.96,"e":128.56,"t":"Pero ninguna es el cielo."},{"s":129.36,"e":132.58,"t":"El cielo siempre está ahí, detrás de todas ellas."},{"s":175.47,"e":182.17,"t":"Durante los próximos minutos, en lugar de seguir cada pensamiento, intenta simplemente notarlo."},{"s":182.97,"e":188.42,"t":"Cuando aparezca uno, puedes decirte en silencio, con amabilidad: «pensando»."},{"s":189.22,"e":191.32,"t":"Y luego volver a la respiración."},{"s":255.66,"e":259.07,"t":"Quizás notes que algunos pensamientos son recuerdos."},{"s":259.87,"e":260.91,"t":"Otros, planes."},{"s":261.71,"e":264.05,"t":"Otros, preocupaciones o juicios."},{"s":264.85,"e":272.34,"t":"Si te resulta útil, puedes nombrarlos con un poco más de detalle: «recordando», «planificando», «preocupándome»."},{"s":273.14,"e":274.97,"t":"Sin analizar su contenido."},{"s":275.77,"e":277.63,"t":"Solo reconociendo su forma."},{"s":341.96,"e":347.89,"t":"Es probable que en algún momento descubras que llevas un buen rato dentro de una historia."},{"s":348.69,"e":349.74,"t":"No pasa nada."},{"s":350.54,"e":354.05,"t":"El momento en que te das cuenta es un momento de despertar."},{"s":354.85,"e":357.27,"t":"Celébralo en silencio, y vuelve."},{"s":421.61,"e":425.31,"t":"Observa también el espacio entre pensamientos."},{"s":426.11,"e":431.35,"t":"Esos pequeños huecos de silencio, donde solo hay respiración y presencia."},{"s":432.15,"e":433.79,"t":"No intentes alargarlos."},{"s":434.59,"e":436.13,"t":"Solo nota que existen."},{"s":500.47,"e":502.4,"t":"Tú no eres tus pensamientos."},{"s":503.2,"e":504.71,"t":"Eres quien los observa."},{"s":505.51,"e":506.52,"t":"Eres el cielo."},{"s":549.41,"e":550.72,"t":"Vamos terminando."},{"s":551.52,"e":555.89,"t":"Vuelve a sentir la respiración, el cuerpo, el lugar donde estás."},{"s":559.89,"e":562.7,"t":"Mueve suavemente las manos, los pies."},{"s":565.7,"e":568.51,"t":"Y cuando sea el momento, abre los ojos."},{"s":570.51,"e":577.3,"t":"Hoy, cuando notes que un pensamiento te arrastra, prueba a decirte: «esto es solo un pensamiento»."},{"s":578.1,"e":582.77,"t":"A veces, ese pequeño gesto basta para recuperar un poco de espacio."},{"s":583.57,"e":586.12,"t":"Mañana hablaremos de las emociones."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "aam-3-pensamientos",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 6.23,
+      "t": "Bienvenida al tercer día."
+    },
+    {
+      "s": 7.03,
+      "e": 10.88,
+      "t": "Hasta ahora practicamos volver a la respiración y al cuerpo."
+    },
+    {
+      "s": 11.68,
+      "e": 17.71,
+      "t": "Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente: los pensamientos."
+    },
+    {
+      "s": 20.71,
+      "e": 24.81,
+      "t": "Una idea muy común es que meditar consiste en dejar de pensar."
+    },
+    {
+      "s": 25.61,
+      "e": 26.67,
+      "t": "No es así."
+    },
+    {
+      "s": 27.47,
+      "e": 31.56,
+      "t": "Pensar es tan natural para la mente como latir para el corazón."
+    },
+    {
+      "s": 32.36,
+      "e": 36.66,
+      "t": "Lo que sí podemos cambiar es nuestra relación con los pensamientos."
+    },
+    {
+      "s": 37.46,
+      "e": 41.25,
+      "t": "Podemos aprender a verlos pasar, sin subirnos a cada uno."
+    },
+    {
+      "s": 44.25,
+      "e": 45.38,
+      "t": "Acomódate."
+    },
+    {
+      "s": 46.18,
+      "e": 48.95,
+      "t": "Cierra los ojos, o deja la mirada suave."
+    },
+    {
+      "s": 52.95,
+      "e": 55.18,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 56.53,
+      "e": 57.57,
+      "t": "y suéltala."
+    },
+    {
+      "s": 61.57,
+      "e": 65.06,
+      "t": "Empieza, como siempre, sintiendo la respiración."
+    },
+    {
+      "s": 65.86,
+      "e": 68.52,
+      "t": "Unas cuantas respiraciones para llegar."
+    },
+    {
+      "s": 111.55,
+      "e": 114.63,
+      "t": "Ahora imagina que tu mente es un cielo amplio."
+    },
+    {
+      "s": 115.43,
+      "e": 118.45,
+      "t": "Y los pensamientos, nubes que lo atraviesan."
+    },
+    {
+      "s": 119.25,
+      "e": 122.0,
+      "t": "Algunas nubes son pequeñas y ligeras."
+    },
+    {
+      "s": 122.8,
+      "e": 126.12,
+      "t": "Otras son grandes, oscuras, cargadas de lluvia."
+    },
+    {
+      "s": 126.92,
+      "e": 128.86,
+      "t": "Pero ninguna es el cielo."
+    },
+    {
+      "s": 129.66,
+      "e": 132.87,
+      "t": "El cielo siempre está ahí, detrás de todas ellas."
+    },
+    {
+      "s": 175.91,
+      "e": 182.32,
+      "t": "Durante los próximos minutos, en lugar de seguir cada pensamiento, intenta simplemente notarlo."
+    },
+    {
+      "s": 183.12,
+      "e": 187.9,
+      "t": "Cuando aparezca uno, puedes decirte en silencio, con amabilidad: «pensando»."
+    },
+    {
+      "s": 188.7,
+      "e": 191.14,
+      "t": "Y luego volver a la respiración."
+    },
+    {
+      "s": 255.69,
+      "e": 259.18,
+      "t": "Quizás notes que algunos pensamientos son recuerdos."
+    },
+    {
+      "s": 259.98,
+      "e": 261.24,
+      "t": "Otros, planes."
+    },
+    {
+      "s": 262.04,
+      "e": 264.58,
+      "t": "Otros, preocupaciones o juicios."
+    },
+    {
+      "s": 265.38,
+      "e": 272.79,
+      "t": "Si te resulta útil, puedes nombrarlos con un poco más de detalle: «recordando», «planificando», «preocupándome»."
+    },
+    {
+      "s": 273.59,
+      "e": 275.49,
+      "t": "Sin analizar su contenido."
+    },
+    {
+      "s": 276.29,
+      "e": 278.24,
+      "t": "Solo reconociendo su forma."
+    },
+    {
+      "s": 342.79,
+      "e": 348.29,
+      "t": "Es probable que en algún momento descubras que llevas un buen rato dentro de una historia."
+    },
+    {
+      "s": 349.09,
+      "e": 350.31,
+      "t": "No pasa nada."
+    },
+    {
+      "s": 351.11,
+      "e": 354.95,
+      "t": "El momento en que te das cuenta es un momento de despertar."
+    },
+    {
+      "s": 355.75,
+      "e": 358.03,
+      "t": "Celébralo en silencio, y vuelve."
+    },
+    {
+      "s": 422.58,
+      "e": 425.78,
+      "t": "Observa también el espacio entre pensamientos."
+    },
+    {
+      "s": 426.58,
+      "e": 431.62,
+      "t": "Esos pequeños huecos de silencio, donde solo hay respiración y presencia."
+    },
+    {
+      "s": 432.42,
+      "e": 434.19,
+      "t": "No intentes alargarlos."
+    },
+    {
+      "s": 434.99,
+      "e": 436.68,
+      "t": "Solo nota que existen."
+    },
+    {
+      "s": 501.23,
+      "e": 503.27,
+      "t": "Tú no eres tus pensamientos."
+    },
+    {
+      "s": 504.07,
+      "e": 505.65,
+      "t": "Eres quien los observa."
+    },
+    {
+      "s": 506.45,
+      "e": 507.65,
+      "t": "Eres el cielo."
+    },
+    {
+      "s": 550.68,
+      "e": 552.0,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 552.8,
+      "e": 557.04,
+      "t": "Vuelve a sentir la respiración, el cuerpo, el lugar donde estás."
+    },
+    {
+      "s": 561.04,
+      "e": 563.57,
+      "t": "Mueve suavemente las manos, los pies."
+    },
+    {
+      "s": 566.57,
+      "e": 569.2,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 571.2,
+      "e": 577.26,
+      "t": "Hoy, cuando notes que un pensamiento te arrastra, prueba a decirte: «esto es solo un pensamiento»."
+    },
+    {
+      "s": 578.06,
+      "e": 582.7,
+      "t": "A veces, ese pequeño gesto basta para recuperar un poco de espacio."
+    },
+    {
+      "s": 583.5,
+      "e": 585.93,
+      "t": "Mañana hablaremos de las emociones."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}
