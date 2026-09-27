@@ -211,7 +211,7 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
                       toggle();
                     }}
                     aria-label={playing ? 'Pausar' : 'Reproducir'}
-                    className="relative flex size-20 items-center justify-center rounded-full bg-mist-50 text-ink-900 shadow-[0_18px_50px_-14px_rgb(247_241_230/0.45)]"
+                    className="relative flex size-20 items-center justify-center rounded-full bg-coral text-ink-950 shadow-[0_18px_50px_-14px_rgb(255_143_124/0.5)]"
                   >
                     {status === 'loading' && (
                       <motion.span
@@ -308,7 +308,7 @@ function Pill({
       aria-pressed={active}
       className={cn(
         'inline-flex h-10 items-center gap-2 rounded-full text-[13px] font-semibold backdrop-blur-xl transition-colors duration-300',
-        active ? 'bg-mist-50 text-ink-900' : 'bg-white/10 text-mist-50 hover:bg-white/16',
+        active ? 'bg-coral text-ink-950' : 'bg-white/10 text-mist-50 hover:bg-white/16',
         children ? 'px-4' : 'w-10 justify-center',
       )}
     >

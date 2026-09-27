@@ -164,7 +164,7 @@ export function Onboarding() {
                             }}
                             className={cn(
                               'flex items-center gap-3 rounded-3xl border px-4 py-3.5 text-left text-[14.5px] font-semibold backdrop-blur-xl transition-all duration-300',
-                              on ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 text-mist-50 hover:bg-ink-900/50',
+                              on ? 'border-coral-400 bg-coral text-ink-950' : 'border-white/12 bg-ink-900/35 text-mist-50 hover:bg-ink-900/50',
                               g.id === 'aprender' && 'col-span-2 justify-center',
                             )}
                             aria-pressed={on}
@@ -203,7 +203,7 @@ export function Onboarding() {
                           }}
                           className={cn(
                             'flex w-full items-center justify-between rounded-3xl border px-5 py-4 text-left backdrop-blur-xl transition-all duration-300',
-                            experience === e.id ? 'border-mist-50 bg-mist-50 text-ink-900' : 'border-white/12 bg-ink-900/35 hover:bg-ink-900/50',
+                            experience === e.id ? 'border-coral-400 bg-coral text-ink-950' : 'border-white/12 bg-ink-900/35 hover:bg-ink-900/50',
                           )}
                         >
                           <span>

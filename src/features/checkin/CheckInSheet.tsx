@@ -112,7 +112,7 @@ export function CheckInSheet() {
                       }}
                       className={cn(
                         'h-10 rounded-full px-4 text-[14px] font-medium transition-all duration-300',
-                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/95 hover:bg-white/12',
+                        on ? 'bg-coral text-ink-950' : 'bg-white/7 text-mist-50/95 hover:bg-white/12',
                       )}
                     >
                       {f.label}
@@ -178,7 +178,7 @@ export function CheckInSheet() {
                         {formatDuration(suggestion.duration)} · {suggestion.subtitle}
                       </span>
                     </span>
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-mist-50 text-ink-900">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-coral text-ink-950">
                       <Play className="ml-0.5 size-4.5 fill-current" />
                     </span>
                   </button>

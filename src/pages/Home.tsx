@@ -230,12 +230,12 @@ export function Home() {
               <div
                 className={cn(
                   'relative aspect-[3/4] overflow-hidden rounded-3xl ring-2 transition-all duration-300',
-                  s.id === sceneId ? 'ring-mist-50' : 'ring-transparent group-hover:ring-white/25',
+                  s.id === sceneId ? 'ring-coral-400' : 'ring-transparent group-hover:ring-white/25',
                 )}
               >
                 <ScenePreview sceneId={s.preview} />
                 {s.id === sceneId && (
-                  <span className="absolute top-2.5 right-2.5 flex size-7 items-center justify-center rounded-full bg-mist-50 text-ink-900">
+                  <span className="absolute top-2.5 right-2.5 flex size-7 items-center justify-center rounded-full bg-coral text-ink-950">
                     <Check className="size-4" strokeWidth={3} />
                   </span>
                 )}

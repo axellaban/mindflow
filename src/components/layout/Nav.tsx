@@ -28,7 +28,7 @@ export function TabBar() {
   return (
     <nav
       aria-label="Principal"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-white/6 bg-ink-900/80 backdrop-blur-2xl lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-white/6 bg-ink-900/80 backdrop-blur-2xl transition-colors duration-700 lg:hidden"
       style={{ paddingBottom: 'max(6px, var(--safe-bottom))' }}
     >
       <ul className="mx-auto flex h-[var(--tabbar-h)] max-w-lg items-stretch justify-around px-2">
@@ -72,7 +72,7 @@ export function SideNav() {
   const { pathname } = useLocation();
   const { streak } = useStats();
   return (
-    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[260px] flex-col border-r border-white/6 bg-ink-900/70 px-5 py-7 backdrop-blur-2xl lg:flex">
+    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[260px] flex-col border-r border-white/6 bg-ink-900/70 px-5 py-7 backdrop-blur-2xl transition-colors duration-700 lg:flex">
       <NavLink to="/" className="px-2">
         <Logo />
       </NavLink>

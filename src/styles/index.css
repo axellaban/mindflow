@@ -32,6 +32,10 @@
   --color-rose-300: #ffc2d1;
   --color-gold-300: #f6deaf;
   --color-lavender-300: #dccbf5;
+  /* the warm accent: sunset coral, for play buttons and whatever is chosen */
+  --color-coral-300: #ffc6ad;
+  --color-coral-400: #ffb592;
+  --color-coral-500: #ff8f7c;
 
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-breath: cubic-bezier(0.45, 0, 0.55, 1);
@@ -91,20 +95,38 @@
     --line: rgb(255 255 255 / 0.1);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
+    /* the deeper water at the bottom of the page, and the sheets */
+    --page-deep: #074b5c;
+    --sheet: rgb(8 76 94 / 0.95);
+  }
+
+  /* Noche: Dormir and the sleep stories move from the turquoise sea to a moonlit night. */
+  :root[data-theme='noche'] {
+    --color-ink-950: #070f24;
+    --color-ink-900: #0e1a3a;
+    --color-ink-850: #0f1d40;
+    --color-ink-800: #122247;
+    --color-ink-700: #1d3160;
+    --color-ink-600: #2f4680;
+    --color-ink-500: #5670a8;
+    --color-blush-300: #cdd8ff;
+    --color-blush-400: #a9bdf5;
+    --color-blush-500: #7f9bdc;
+    --text-2: #dfe6fb;
+    --text-3: #c3cdea;
+    --page-deep: #0a1430;
+    --sheet: rgb(18 34 71 / 0.95);
   }
 
   html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-    background: var(--color-ink-900);
   }
 
-  /* the sea gets a little deeper towards the bottom of the screen */
   body {
     margin: 0;
     min-height: 100dvh;
-    background: linear-gradient(180deg, var(--color-ink-900) 0%, var(--color-ink-900) 40%, #074b5c 100%) fixed var(--color-ink-900);
     color: var(--text);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -119,7 +141,7 @@
   }
 
   ::selection {
-    background: rgb(126 242 226 / 0.35);
+    background: color-mix(in srgb, var(--color-blush-400) 35%, transparent);
   }
 
   button,
@@ -130,7 +152,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #b4fff2;
+    outline: 2px solid var(--color-blush-300);
     outline-offset: 3px;
     border-radius: 12px;
   }
@@ -159,6 +181,18 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* The page colour lives outside the layers. index.html paints a plain colour for its loading
+   screen, and an unlayered rule like that one wins over anything inside a layer. Here the sea
+   gets a little deeper towards the bottom of the screen, and a change of theme glides. */
+html {
+  background: var(--color-ink-900);
+  transition: background-color 0.8s var(--ease-soft);
+}
+body {
+  background: linear-gradient(180deg, transparent 40%, var(--page-deep) 100%) fixed var(--color-ink-900);
+  transition: background-color 0.8s var(--ease-soft);
 }
 
 /* Big covers: a slow drift so still artwork feels alive. */
@@ -203,10 +237,16 @@
   }
 
   .glass-strong {
-    background: rgb(8 76 94 / 0.95);
+    background: var(--sheet);
     border: 1px solid rgb(255 255 255 / 0.1);
     backdrop-filter: blur(28px) saturate(160%);
     -webkit-backdrop-filter: blur(28px) saturate(160%);
+  }
+
+  /* the warm accent as a fill: sunset coral with a little light from the top left */
+  .bg-coral {
+    background-color: var(--color-coral-500);
+    background-image: linear-gradient(135deg, var(--color-coral-400), var(--color-coral-500));
   }
 
   .text-2 {

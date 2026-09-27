@@ -145,6 +145,20 @@ function RouteTitle() {
   return null;
 }
 
+/** Dormir and the sleep stories wear the night palette; everywhere else is the sea. */
+function ThemeSync() {
+  const { pathname } = useLocation();
+  const sleepStory = usePlayer((s) => s.expanded && s.item?.type === 'session' && Boolean(SESSION_BY_ID[s.item.id]?.sleep));
+  const night = pathname.startsWith('/dormir') || sleepStory;
+  useEffect(() => {
+    const root = document.documentElement;
+    if (night) root.dataset.theme = 'noche';
+    else delete root.dataset.theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', night ? '#0e1a3a' : '#09596c');
+  }, [night]);
+  return null;
+}
+
 /** The HTML's loading screen fades away once the app has drawn its first frame. */
 function useHideSplash() {
   useEffect(() => {
@@ -163,6 +177,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <BrowserRouter>
         <RouteTitle />
+        <ThemeSync />
         <Suspense fallback={<div className="min-h-dvh bg-ink-900" />}>
         <Routes>
           <Route path="/bienvenida" element={<Onboarding />} />
