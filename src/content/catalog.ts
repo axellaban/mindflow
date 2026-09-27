@@ -943,7 +943,7 @@ export const CATEGORIES: Category[] = [
 export const CATEGORY_BY_ID = Object.fromEntries(CATEGORIES.map((c) => [c.id, c])) as Record<CategoryId, Category>;
 
 export const NARRATORS = {
-  luz: { name: 'Luz', note: 'voz neural' },
+  luz: { name: 'Dora', note: 'voz sintética' },
 } as const;
 
 export function sessionKindLabel(s: Session): string {
