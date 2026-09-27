@@ -49,8 +49,8 @@ export function TabBar() {
                     transition={SPRING_GLIDE}
                   />
                 )}
-                <Icon className={cn('relative size-[22px] transition-all duration-300', active ? 'text-mist-50' : 'text-mist-50/60')} strokeWidth={active ? 2 : 1.6} />
-                <span className={cn('relative text-[11px] font-semibold tracking-wide transition-colors duration-300', active ? 'text-mist-50' : 'text-mist-50/60')}>
+                <Icon className={cn('relative size-[22px] transition-all duration-300', active ? 'text-mist-50' : 'text-mist-50/85')} strokeWidth={active ? 2 : 1.6} />
+                <span className={cn('relative text-[11px] font-semibold tracking-wide transition-colors duration-300', active ? 'text-mist-50' : 'text-mist-50/85')}>
                   {label}
                 </span>
               </NavLink>
@@ -85,7 +85,7 @@ export function SideNav() {
               to={to}
               className={cn(
                 'relative flex h-11 items-center gap-3.5 rounded-2xl px-3.5 text-[15px] font-semibold transition-colors duration-300',
-                active ? 'text-mist-50' : 'text-mist-50/60 hover:bg-white/4 hover:text-mist-50',
+                active ? 'text-mist-50' : 'text-mist-50/85 hover:bg-white/4 hover:text-mist-50',
               )}
             >
               {active && (
@@ -110,7 +110,7 @@ export function SideNav() {
             className={({ isActive: current }) =>
               cn(
                 'flex h-11 items-center gap-3.5 rounded-2xl px-3.5 text-[15px] font-semibold transition-colors hover:bg-white/4 hover:text-mist-50',
-                current ? 'bg-white/9 text-mist-50' : 'text-mist-50/60',
+                current ? 'bg-white/9 text-mist-50' : 'text-mist-50/85',
               )
             }
           >
@@ -144,7 +144,7 @@ export function SideNav() {
         </div>
         <NavLink
           to="/ajustes"
-          className="mt-3 flex h-11 items-center gap-3.5 rounded-2xl px-3.5 text-[14px] font-semibold text-mist-50/60 transition-colors hover:text-mist-50"
+          className="mt-3 flex h-11 items-center gap-3.5 rounded-2xl px-3.5 text-[14px] font-semibold text-mist-50/85 transition-colors hover:text-mist-50"
         >
           <Settings className="size-[18px]" strokeWidth={1.7} />
           Ajustes

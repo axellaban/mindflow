@@ -58,7 +58,7 @@ export function SearchPage() {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Ansiedad, dormir, respiración…"
-            className="h-full flex-1 bg-transparent text-[16px] outline-none placeholder:text-mist-50/35 [&::-webkit-search-cancel-button]:hidden"
+            className="h-full flex-1 bg-transparent text-[16px] outline-none placeholder:text-mist-50/55 [&::-webkit-search-cancel-button]:hidden"
             enterKeyHint="search"
             aria-label="Buscar"
           />

@@ -112,7 +112,7 @@ export function CheckInSheet() {
                       }}
                       className={cn(
                         'h-10 rounded-full px-4 text-[14px] font-medium transition-all duration-300',
-                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/85 hover:bg-white/12',
+                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/95 hover:bg-white/12',
                       )}
                     >
                       {f.label}
@@ -141,7 +141,7 @@ export function CheckInSheet() {
                 maxLength={2000}
                 aria-label={prompt}
                 placeholder="Escribí con libertad. Solo vos podés verlo."
-                className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-white/5 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/35 focus:border-blush-300/50"
+                className="mt-4 w-full resize-none rounded-3xl border border-white/10 bg-white/5 p-4 text-[16px] leading-relaxed outline-none placeholder:text-mist-50/55 focus:border-blush-300/50"
               />
               <div className="mt-5 flex gap-2.5">
                 <Button variant="secondary" onClick={() => setStep(1)}>

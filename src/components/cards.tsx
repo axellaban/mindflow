@@ -213,7 +213,7 @@ export function MusicCard({ music, className }: { music: MusicDef; className?: s
       className={cn('group flex w-[158px] shrink-0 flex-col text-left md:w-[188px]', className)}
     >
       <div className="relative">
-        <CoverArt spec={music.art} className="aspect-square w-full shadow-[0_18px_40px_-22px_rgb(0_0_0/0.9)]" />
+        <CoverArt spec={music.art} className="aspect-square w-full shadow-[0_18px_40px_-22px_rgb(2_38_48/0.9)]" />
         {music.headphones && (
           <div className="absolute top-2.5 right-2.5 flex size-7 items-center justify-center rounded-full bg-ink-900/50 backdrop-blur-md" title="Mejor con auriculares">
             <Headphones className="size-3.5" />

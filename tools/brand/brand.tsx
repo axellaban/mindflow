@@ -16,7 +16,7 @@ function Icon({ size, scale }: { size: number; scale: number }) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: '#0f2330',
+        background: 'linear-gradient(180deg, #0b6679 0%, #09596c 60%, #074b5c 100%)',
       }}
     >
       <LogoMark size={size * scale} />
@@ -29,17 +29,17 @@ function Wordmark() {
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', color: '#f7f1e6' }}>
       <LogoMark size={72} />
       <div className="font-display" style={{ fontSize: 108, lineHeight: 1, letterSpacing: '-0.02em', marginTop: 36 }}>
-        Calma<span style={{ fontStyle: 'italic', color: '#a8dcd5' }}>byEli</span>
+        Calma<span style={{ fontStyle: 'italic', color: '#b4fff2' }}>byEli</span>
       </div>
-      <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, color: 'rgba(247,241,230,0.62)', marginTop: 28 }}>Un momento para vos.</div>
+      <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, color: 'rgba(247,241,230,0.8)', marginTop: 28 }}>Un momento para vos.</div>
     </div>
   );
 }
 
-/** Deep sea with the first light of dawn coming up behind the name. */
+/** Caribbean sea with the first light of dawn coming up behind the name. */
 function OG() {
   return (
-    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: '#0f2330' }}>
+    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #0b6679 0%, #09596c 55%, #074b5c 100%)' }}>
       <div
         style={{
           position: 'absolute',
@@ -48,7 +48,7 @@ function OG() {
           width: 1500,
           height: 1000,
           transform: 'translate(-50%, -50%)',
-          background: 'radial-gradient(closest-side, rgba(247,220,192,0.16), rgba(124,197,191,0.08) 45%, rgba(15,35,48,0) 72%)',
+          background: 'radial-gradient(closest-side, rgba(200,255,246,0.16), rgba(126,242,226,0.08) 45%, rgba(9,89,108,0) 72%)',
         }}
       />
       <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -61,7 +61,7 @@ function OG() {
 /** Link preview for Eli's page (/eli), shared from her Instagram and WhatsApp. */
 function OGEli() {
   return (
-    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: '#0f2330', display: 'flex', alignItems: 'center' }}>
+    <div style={{ width: 1200, height: 630, position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, #0b6679 0%, #09596c 55%, #074b5c 100%)', display: 'flex', alignItems: 'center' }}>
       <div
         style={{
           position: 'absolute',
@@ -70,7 +70,7 @@ function OGEli() {
           width: 1100,
           height: 900,
           transform: 'translate(-50%, -50%)',
-          background: 'radial-gradient(closest-side, rgba(247,220,192,0.14), rgba(124,197,191,0.07) 48%, rgba(15,35,48,0) 72%)',
+          background: 'radial-gradient(closest-side, rgba(200,255,246,0.14), rgba(126,242,226,0.07) 48%, rgba(9,89,108,0) 72%)',
         }}
       />
       <img
@@ -88,19 +88,19 @@ function OGEli() {
         }}
       />
       <div style={{ position: 'relative', marginLeft: 72, color: '#f7f1e6', maxWidth: 560 }}>
-        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 22, fontWeight: 700, letterSpacing: '0.16em', color: '#a8dcd5', textTransform: 'uppercase' }}>
+        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 22, fontWeight: 700, letterSpacing: '0.16em', color: '#b4fff2', textTransform: 'uppercase' }}>
           Sesiones 1:1 online
         </div>
         <div className="font-display" style={{ fontSize: 96, lineHeight: 1, letterSpacing: '-0.02em', marginTop: 18 }}>
           Hola, soy Eli
         </div>
-        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, lineHeight: 1.35, color: 'rgba(247,241,230,0.72)', marginTop: 26 }}>
+        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 30, lineHeight: 1.35, color: 'rgba(247,241,230,0.85)', marginTop: 26 }}>
           Mindfulness para bajar un cambio, soltar la autoexigencia y descansar de verdad.
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 44 }}>
           <LogoMark size={44} />
           <div className="font-display" style={{ fontSize: 34, lineHeight: 1 }}>
-            Calma<span style={{ fontStyle: 'italic', color: '#a8dcd5' }}>byEli</span>
+            Calma<span style={{ fontStyle: 'italic', color: '#b4fff2' }}>byEli</span>
           </div>
         </div>
       </div>

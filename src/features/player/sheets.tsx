@@ -66,7 +66,7 @@ export function BedSheet({ open, onClose, defaultBed }: { open: boolean; onClose
             }}
             className={cn(
               'flex flex-col items-center gap-2 rounded-2xl px-2 py-3.5 text-center text-[13px] font-medium transition-all duration-300',
-              bed === id ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/85 hover:bg-white/10',
+              bed === id ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/95 hover:bg-white/10',
             )}
           >
             {BED_ICONS[id] ?? <Moon className="size-5" />}

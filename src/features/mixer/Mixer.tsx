@@ -124,7 +124,7 @@ export function Mixer() {
     <div>
       {/* now playing bar: stays at hand while the list scrolls */}
       <div className="sticky top-[max(10px,var(--safe-top))] z-20 px-5 md:px-0">
-        <motion.div layout className="glass-strong flex items-center gap-3 rounded-[28px] p-3 shadow-[0_18px_40px_-24px_rgb(0_0_0/0.9)]">
+        <motion.div layout className="glass-strong flex items-center gap-3 rounded-[28px] p-3 shadow-[0_18px_40px_-24px_rgb(2_38_48/0.9)]">
           <div className="relative size-14 shrink-0 overflow-hidden rounded-2xl">
             {active.length ? (
               <CoverArt spec={artForMix(mix)} rounded="rounded-2xl" className="size-14" grain={false} />
@@ -184,13 +184,13 @@ export function Mixer() {
                     <span
                       className={cn(
                         'relative flex size-12 items-center justify-center rounded-full transition-all duration-500',
-                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/75',
+                        on ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/85',
                       )}
                     >
                       {on && playing && <span className="absolute inset-0 animate-pulse-soft rounded-full bg-mist-50/40 blur-md" />}
                       <Icon name={s.icon} className="relative size-5.5" />
                     </span>
-                    <span className={cn('text-[13px] leading-tight font-medium', on ? 'text-mist-50' : 'text-mist-50/70')}>{s.name}</span>
+                    <span className={cn('text-[13px] leading-tight font-medium', on ? 'text-mist-50' : 'text-mist-50/85')}>{s.name}</span>
                   </button>
                   <AnimatePresence initial={false}>
                     {on && (
@@ -301,7 +301,7 @@ export function Mixer() {
               onChange={(e) => setName(e.target.value)}
               placeholder={mixName(mix)}
               maxLength={40}
-              className="h-12 w-full rounded-2xl border border-white/10 bg-white/6 px-4 text-[16px] outline-none placeholder:text-mist-50/35 focus:border-blush-300/60"
+              className="h-12 w-full rounded-2xl border border-white/10 bg-white/6 px-4 text-[16px] outline-none placeholder:text-mist-50/55 focus:border-blush-300/60"
             />
             {name && (
               <button type="button" onClick={() => setName('')} className="absolute top-1/2 right-3 -translate-y-1/2 text-3" aria-label="Borrar">

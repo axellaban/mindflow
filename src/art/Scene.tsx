@@ -71,6 +71,7 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
     <div
       ref={ref}
       data-paused={paused ? 'true' : 'false'}
+      aria-hidden="true"
       className={cn('absolute inset-0 overflow-hidden', className)}
       style={{
         background: `linear-gradient(180deg, ${p.sky[0]} 0%, ${p.sky[1]} ${Math.round(horizon * 62)}%, ${p.sky[2]} ${Math.round(horizon * 100)}%, ${p.sky[2]} 100%)`,

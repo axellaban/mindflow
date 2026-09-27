@@ -90,7 +90,7 @@ export function EliInvite({
         <button
           type="button"
           onClick={onDismiss}
-          className="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-full text-mist-50/45 transition-colors hover:bg-white/8 hover:text-mist-50"
+          className="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-full text-mist-50/75 transition-colors hover:bg-white/8 hover:text-mist-50"
           aria-label="Ahora no"
           title="Ahora no"
         >
@@ -114,7 +114,7 @@ export function EliInvite({
       {more && (
         <Link
           to="/eli"
-          className="relative mt-1 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-mist-50/60 transition-colors hover:text-mist-50"
+          className="relative mt-1 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-mist-50/85 transition-colors hover:text-mist-50"
         >
           Conocé a Eli <ArrowRight className="size-3.5" />
         </Link>

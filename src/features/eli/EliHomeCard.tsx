@@ -61,7 +61,7 @@ export function EliEventCard({ event, placement = 'home', dismissible = true }: 
       <button
         type="button"
         onClick={() => snooze('workshop', Math.max(1, days + 1))}
-        className="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-full text-mist-50/45 transition-colors hover:bg-white/8 hover:text-mist-50"
+        className="absolute top-3 right-3 z-10 flex size-8 items-center justify-center rounded-full text-mist-50/75 transition-colors hover:bg-white/8 hover:text-mist-50"
         aria-label="Ocultar"
         title="Ocultar"
       >
@@ -70,7 +70,7 @@ export function EliEventCard({ event, placement = 'home', dismissible = true }: 
       )}
 
       <div className="relative flex items-start gap-4 pr-6">
-        <div className="flex w-14 shrink-0 flex-col items-center overflow-hidden rounded-2xl bg-mist-50 text-ink-900 shadow-[0_10px_24px_-12px_rgb(0_0_0/0.6)]">
+        <div className="flex w-14 shrink-0 flex-col items-center overflow-hidden rounded-2xl bg-mist-50 text-ink-900 shadow-[0_10px_24px_-12px_rgb(2_38_48/0.6)]">
           <span className="w-full bg-blush-400 py-0.5 text-center text-[10px] font-bold tracking-[0.12em] text-ink-900 uppercase">{month}</span>
           <span className="py-1 font-display text-[26px] leading-none">{dayOfMonth}</span>
         </div>

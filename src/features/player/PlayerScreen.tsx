@@ -153,9 +153,9 @@ function PlayerView({ item: liveItem }: { item: PlayerItem }) {
               <motion.div
                 animate={{ opacity: hideUi ? 0.55 : 1 }}
                 transition={{ duration: 1.2 }}
-                className="relative px-4 [text-shadow:0_2px_24px_rgb(7_20_28/0.55)]"
+                className="relative px-4 [text-shadow:0_2px_24px_rgb(3_40_50/0.55)]"
               >
-                <span className="pointer-events-none absolute inset-[-55%_-14%] -z-10 bg-[radial-gradient(closest-side,rgb(7_20_28/0.5),transparent)]" />
+                <span className="pointer-events-none absolute inset-[-55%_-14%] -z-10 bg-[radial-gradient(closest-side,rgb(3_40_50/0.5),transparent)]" />
                 <h1 className="font-display text-[38px] leading-[1.05] md:text-[52px]">{info.title}</h1>
                 <p className="mt-3 text-[15px] text-2">{ended && info.sleep ? 'Que descanses' : info.subtitle}</p>
               </motion.div>
@@ -345,7 +345,7 @@ function CaptionLine({ captions, position }: { captions: Caption[]; position: nu
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: -4, filter: 'blur(4px)' }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[19px] leading-relaxed text-mist-50/90 [text-shadow:0_2px_18px_rgb(7_20_28/0.7)] md:text-[22px]"
+            className="text-[19px] leading-relaxed text-mist-50/90 [text-shadow:0_2px_18px_rgb(3_40_50/0.7)] md:text-[22px]"
           >
             {current.t}
           </motion.p>

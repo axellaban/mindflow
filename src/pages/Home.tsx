@@ -10,6 +10,7 @@ import { LogoMark } from '@/components/Logo';
 import { IconButton } from '@/components/ui/Button';
 import { Sheet } from '@/components/ui/Sheet';
 import { SectionTitle } from '@/components/ui/controls';
+import { Words } from '@/components/ui/Words';
 import { MoodOrb } from '@/features/checkin/CheckInSheet';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { EliHomeCard } from '@/features/eli/EliHomeCard';
@@ -18,7 +19,7 @@ import { quoteForDay } from '@/content/quotes';
 import { dailyFor, forDayPart, recommended, suggestedProgram } from '@/content/recommend';
 import { AUTO_SCENE_NAME, SCENES, SCENE_BY_ID, type SceneChoice, type SceneId, beachAt, resolveScene } from '@/content/scenes';
 import { haptic, shareOrCopy } from '@/lib/device';
-import { SPRING_PRESS, reveal, revealFocus, stagger } from '@/lib/motion';
+import { SPRING_PRESS, reveal, stagger } from '@/lib/motion';
 import { programProgress, useActiveProgram, useNow } from '@/lib/hooks';
 import { minutesByDay, currentWeek } from '@/lib/stats';
 import { dayKey, dayNumber, fromDayKey, greeting, longDate, shortWeekday } from '@/lib/time';
@@ -104,7 +105,7 @@ export function Home() {
         </motion.div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/35 via-transparent to-ink-900" />
         {/* a soft veil where the greeting sits, so the scene never competes with it */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_55%_at_20%_78%,rgb(10_26_34/0.55),transparent_75%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_55%_at_20%_78%,rgb(4_52_64/0.5),transparent_75%)]" />
         <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
           <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="CalmabyEli">
             <LogoMark className="size-8" />
@@ -134,12 +135,11 @@ export function Home() {
           className="absolute inset-x-0 bottom-24 mx-auto max-w-5xl px-5 md:px-8 lg:bottom-24 lg:px-10"
           style={reduced ? undefined : { opacity: greetingOpacity, y: greetingY }}
         >
-          <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show" className="[text-shadow:0_2px_20px_rgb(7_20_28/0.55)]">
+          <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show" className="[text-shadow:0_2px_20px_rgb(3_40_50/0.55)]">
             <motion.p variants={reveal} className="text-[13px] font-semibold tracking-wide text-2">{longDate(now)}</motion.p>
-            <motion.h1 variants={revealFocus} className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
-              {greeting(now)}
-              {name ? `, ${name}` : ''}
-            </motion.h1>
+            <h1 className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
+              <Words text={`${greeting(now)}${name ? `, ${name}` : ''}`} delay={0.27} />
+            </h1>
             <motion.p variants={reveal} className="mt-2 flex items-center gap-2 text-[14px] text-2">
               Un momento para vos. A tu ritmo.
             </motion.p>
@@ -394,7 +394,7 @@ function WeekCard() {
               <span
                 className={cn(
                   'flex size-9 items-center justify-center rounded-full text-[12px] font-semibold transition-colors',
-                  done ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/40',
+                  done ? 'bg-mist-50 text-ink-900' : 'bg-white/6 text-mist-50/80',
                   d === today && !done && 'ring-1 ring-mist-50/50',
                 )}
               >

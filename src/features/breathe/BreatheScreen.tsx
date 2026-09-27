@@ -1,20 +1,25 @@
 import { Pause, Play, Volume2, VolumeX, X } from 'lucide-react';
-import { AnimatePresence, motion, useMotionValue, useTransform } from 'motion/react';
+import { AnimatePresence, motion, useMotionValue } from 'motion/react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router';
+import { useSearchParams } from 'react-router';
 import type { BreathTone } from '@/audio/bells';
 import { engine } from '@/audio/engine';
-import { PALETTES, rgba } from '@/art/palettes';
+import { PALETTES } from '@/art/palettes';
+import { Scene } from '@/art/Scene';
 import { Button, IconButton } from '@/components/ui/Button';
 import { Chip } from '@/components/ui/controls';
+import { Words } from '@/components/ui/Words';
 import { BREATH_BY_ID, BREATH_PATTERNS, type BreathPattern, type PhaseKind, cycleSeconds } from '@/content/breathing';
+import { beachAt } from '@/content/scenes';
 import { haptic, keepAwake } from '@/lib/device';
+import { useBack } from '@/lib/hooks';
 import { EASE, breath, press } from '@/lib/motion';
 import { formatClock } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
+import { BreathCircle, BreathWord, ClosedCircle } from './BreathCircle';
 
 const MINUTES = [1, 2, 3, 5, 10];
 const MIN_SCALE = 0.56;
@@ -23,7 +28,6 @@ const TARGET: Record<PhaseKind, number | null> = { in: 1, in2: 1.1, out: MIN_SCA
 type Stage = 'setup' | 'run' | 'done';
 
 export function BreatheScreen() {
-  const navigate = useNavigate();
   const settings = useAppStore((s) => s.settings.breathe);
   const updateSettings = useAppStore((s) => s.updateSettings);
   const [search] = useSearchParams();
@@ -36,9 +40,9 @@ export function BreatheScreen() {
   const [stage, setStage] = useState<Stage>('setup');
   const [result, setResult] = useState<{ seconds: number; cycles: number } | null>(null);
   const pattern = BREATH_BY_ID[patternId]!;
-  const palette = PALETTES[pattern.palette];
+  const [scene] = useState(() => beachAt());
 
-  const exit = () => (window.history.length > 1 ? navigate(-1) : navigate('/'));
+  const exit = useBack();
 
   const start = () => {
     updateSettings({ breathe: { patternId, minutes, sound } });
@@ -47,16 +51,19 @@ export function BreatheScreen() {
     setStage('run');
   };
 
+  const breathing = stage === 'run';
   return (
     <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <motion.div
-        className="absolute inset-0"
-        animate={{
-          background: `radial-gradient(120% 80% at 50% 40%, ${rgba(palette.sky[1], 0.95)} 0%, ${rgba(palette.sky[0], 1)} 55%, #0a1a22 100%)`,
-        }}
-        transition={{ duration: 1.2 }}
-      />
-      <div className="grain absolute inset-0" />
+      {/* the beach as it looks now: soft behind the choices, clear while breathing */}
+      <div
+        className="absolute inset-0 transition-[filter,opacity] duration-[1400ms] ease-out"
+        style={breathing ? undefined : { filter: 'blur(18px)', opacity: 0.6 }}
+      >
+        <Scene scene={scene} paused={!breathing} />
+      </div>
+      <div className={cn('pointer-events-none absolute inset-0 transition-colors duration-[1400ms]', breathing ? 'bg-ink-950/10' : 'bg-ink-950/50')} />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink-950/45 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-ink-950/70 to-transparent" />
       <AnimatePresence mode="wait">
         {stage === 'setup' && (
           <Setup
@@ -221,16 +228,23 @@ function Runner({
 }) {
   const total = minutes * 60;
   const scale = useMotionValue(MIN_SCALE);
-  const glow = useTransform(scale, [MIN_SCALE, 1.1], [0.25, 0.85]);
-  const ringScale = useTransform(scale, (s) => s * 1.28);
+  const turn = useMotionValue(0);
+  const cycle = cycleSeconds(pattern);
+  // where each phase starts in the cycle, for the marks on the ring
+  const starts = useMemo(() => {
+    let acc = 0;
+    return pattern.phases.map((ph) => {
+      const at = acc;
+      acc += ph.seconds;
+      return at;
+    });
+  }, [pattern]);
   const [phaseIdx, setPhaseIdx] = useState(0);
-  const [phaseLeft, setPhaseLeft] = useState(Math.ceil(pattern.phases[0]!.seconds));
   const [elapsed, setElapsed] = useState(0);
   const [paused, setPaused] = useState(false);
   const [countIn, setCountIn] = useState(2);
   const toneRef = useRef<BreathTone | null>(null);
-  const state = useRef({ elapsed: 0, phase: 0, phaseT: 0, from: MIN_SCALE, cycles: 0, last: 0, shownLeft: 0 });
-  const palette = PALETTES[pattern.palette];
+  const state = useRef({ elapsed: 0, phase: 0, phaseT: 0, from: MIN_SCALE, cycles: 0, last: 0 });
   const logPractice = useAppStore((s) => s.logPractice);
 
   const finish = useCallback(
@@ -307,12 +321,7 @@ function Runner({
       } else {
         scale.set(s.from * (1 + 0.012 * Math.sin(s.phaseT * 3)));
       }
-      // re-render only when the visible count changes, not on every frame
-      const left = Math.ceil(Math.max(0, ph.seconds - s.phaseT));
-      if (left !== s.shownLeft) {
-        s.shownLeft = left;
-        setPhaseLeft(left);
-      }
+      turn.set((starts[s.phase]! + Math.min(s.phaseT, ph.seconds)) / cycle);
       if (Math.floor(s.elapsed * 4) !== Math.floor((s.elapsed - dt) * 4)) setElapsed(s.elapsed);
       if (s.phaseT >= ph.seconds) {
         const nextIdx = (s.phase + 1) % pattern.phases.length;
@@ -331,11 +340,10 @@ function Runner({
     };
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
-  }, [countIn, paused, pattern, scale, total, finish, onFinish]);
+  }, [countIn, paused, pattern, scale, turn, starts, cycle, total, finish, onFinish]);
 
   const phase = pattern.phases[phaseIdx]!;
   const remaining = Math.max(0, total - elapsed);
-  const cycle = cycleSeconds(pattern);
 
   return (
     <motion.div {...fade} className="relative flex h-full flex-col items-center pt-safe pb-safe">
@@ -357,71 +365,18 @@ function Runner({
       </div>
 
       <div className="relative flex w-full flex-1 items-center justify-center">
-        {/* halo */}
-        <motion.div
-          className="absolute size-[min(86vw,440px)] rounded-full"
-          style={{
-            scale: ringScale,
-            opacity: glow,
-            background: `radial-gradient(circle, ${rgba(palette.accent[1], 0.35)} 0%, ${rgba(palette.accent[2], 0.08)} 55%, transparent 70%)`,
-          }}
-        />
-        {/* orbit ring */}
-        <motion.div
-          className="absolute size-[min(78vw,400px)] rounded-full border border-white/10"
-          style={{ scale: ringScale }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-        >
-          {[0, 72, 144, 216, 288].map((deg, i) => (
-            <span
-              key={deg}
-              className="absolute top-1/2 left-1/2 size-1.5 rounded-full bg-white/70"
-              style={{ transform: `rotate(${deg}deg) translate(calc(min(39vw, 200px))) `, opacity: 0.4 + i * 0.12 }}
-            />
-          ))}
-        </motion.div>
-        {/* bubble */}
-        <motion.div
-          className="relative flex size-[min(70vw,360px)] items-center justify-center rounded-full"
-          style={{
-            scale,
-            background: `radial-gradient(circle at 34% 28%, ${rgba('#ffffff', 0.95)} 0%, ${rgba(palette.accent[0], 0.9)} 22%, ${rgba(palette.accent[1], 0.75)} 55%, ${rgba(palette.accent[2], 0.55)} 100%)`,
-            boxShadow: `0 0 90px 10px ${rgba(palette.accent[1], 0.35)}, inset 0 -30px 60px ${rgba(palette.sky[0], 0.35)}`,
-          }}
-        />
         {/* screen readers hear each phase as it begins */}
         <p className="sr-only" aria-live="polite">
           {countIn > 0 ? 'Acomodate' : phase.label}
         </p>
-        <div className="pointer-events-none absolute flex flex-col items-center text-ink-900" aria-hidden="true">
-          <AnimatePresence mode="wait">
-            {countIn > 0 ? (
-              <motion.span
-                key="settle"
-                initial={{ opacity: 0, filter: 'blur(4px)' }}
-                animate={{ opacity: 1, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, filter: 'blur(4px)' }}
-                transition={{ duration: 0.8, ease: EASE }}
-                className="font-display text-[24px] text-ink-900/80"
-              >
-                Acomodate…
-              </motion.span>
-            ) : (
-              <motion.div
-                key={`${phaseIdx}-${phase.label}`}
-                initial={{ opacity: 0, y: 6, filter: 'blur(3px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -6, filter: 'blur(3px)' }}
-                transition={{ duration: 0.55, ease: EASE }}
-                className="flex flex-col items-center"
-              >
-                <span className="font-display text-[30px] leading-none text-ink-900/85">{phase.label}</span>
-                <span className="mt-2 text-[15px] font-semibold text-ink-900/55 tabular-nums">{phaseLeft}</span>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+        <BreathCircle scale={scale} turn={turn} marks={starts.map((at) => at / cycle)}>
+          <BreathWord
+            silent
+            word={countIn > 0 ? 'acomodate' : phase.label.toLowerCase()}
+            id={countIn > 0 ? 'settle' : `${phaseIdx}-${phase.label}`}
+            className="text-[clamp(24px,8vw,32px)] font-normal tracking-[0.02em] text-white [text-shadow:0_1px_2px_rgb(2_38_48/0.3),0_0_18px_rgb(2_38_48/0.45)]"
+          />
+        </BreathCircle>
       </div>
 
       <div className="flex w-full max-w-md flex-col items-center gap-5 px-6 pb-4">
@@ -470,14 +425,13 @@ function Done({
   const line = lines[result.cycles % lines.length];
   return (
     <motion.div {...fade} className="relative mx-auto flex h-full max-w-md flex-col items-center justify-center px-6 pt-safe pb-safe text-center">
-      <motion.div
-        className="mb-8 size-28 rounded-full"
-        style={{ background: `radial-gradient(circle at 34% 28%, #fff, ${PALETTES[pattern.palette].accent[1]} 60%, ${PALETTES[pattern.palette].accent[2]})` }}
-        animate={{ scale: [1, 1.08, 1] }}
-        transition={breath}
-      />
+      <motion.div className="mb-9" animate={{ scale: [1, 1.06, 1] }} transition={breath}>
+        <ClosedCircle className="size-28" />
+      </motion.div>
       <p className="text-[13px] font-bold tracking-[0.16em] text-2 uppercase">Práctica completada</p>
-      <h2 className="mt-2 font-display text-[36px] leading-tight">{line}</h2>
+      <h2 className="mt-2 font-display text-[36px] leading-tight">
+        <Words text={line!} delay={0.2} />
+      </h2>
       <p className="mt-3 text-[15px] text-2">
         {minutes} {minutes === 1 ? 'minuto' : 'minutos'} · {result.cycles} {result.cycles === 1 ? 'ciclo' : 'ciclos'} de {pattern.name.toLowerCase()}
       </p>

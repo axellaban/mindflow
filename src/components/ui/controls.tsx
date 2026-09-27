@@ -86,7 +86,7 @@ export function Chip({
       aria-pressed={active}
       className={cn(
         'inline-flex h-10 shrink-0 items-center gap-2 rounded-full px-4 text-[14px] font-medium transition-all duration-300',
-        active ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/85 hover:bg-white/12',
+        active ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/95 hover:bg-white/12',
         className,
       )}
     >
@@ -121,7 +121,7 @@ export function Segmented<T extends string>({
           }}
           className={cn(
             'relative z-10 h-9 flex-1 rounded-full px-4 text-[14px] font-semibold whitespace-nowrap transition-colors duration-300',
-            value === o.value ? 'text-ink-900' : 'text-mist-50/70 hover:text-mist-50',
+            value === o.value ? 'text-ink-900' : 'text-mist-50/95 hover:text-mist-50',
           )}
         >
           {value === o.value && (

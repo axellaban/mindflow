@@ -7,21 +7,23 @@
   --font-sans: 'Jost Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Cormorant Garamond Variable', ui-serif, Georgia, serif;
 
-  --color-ink-950: #0a1a22;
-  --color-ink-900: #0f2330;
-  --color-ink-850: #132a39;
-  --color-ink-800: #183243;
-  --color-ink-700: #234557;
-  --color-ink-600: #3a6072;
-  --color-ink-500: #597e8f;
+  /* Caribe: turquoise sea. 900 is the page, 800 the sheets (a touch deeper, so text keeps
+     its contrast), 950 the deep water used for shadows over images. */
+  --color-ink-950: #064657;
+  --color-ink-900: #09596c;
+  --color-ink-850: #0a5467;
+  --color-ink-800: #0a5265;
+  --color-ink-700: #117186;
+  --color-ink-600: #2a8ea3;
+  --color-ink-500: #4fb0c2;
 
   --color-mist-50: #f7f1e6;
   --color-mist-100: #ece4d6;
   --color-mist-200: #d8d5ca;
 
-  --color-blush-300: #a8dcd5;
-  --color-blush-400: #7cc5bf;
-  --color-blush-500: #4fa4a2;
+  --color-blush-300: #b4fff2;
+  --color-blush-400: #7ef2e2;
+  --color-blush-500: #3fd6c6;
   --color-peach-300: #ffd6bd;
   --color-peach-400: #ffbf99;
   --color-sage-300: #c3e6df;
@@ -84,9 +86,9 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
     --text: #f7f1e6;
-    --text-2: #cfd9da;
-    --text-3: #a3b7bd;
-    --line: rgb(255 255 255 / 0.08);
+    --text-2: #e2f6f7;
+    --text-3: #c6ebee;
+    --line: rgb(255 255 255 / 0.1);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
   }
@@ -98,10 +100,11 @@
     background: var(--color-ink-900);
   }
 
+  /* the sea gets a little deeper towards the bottom of the screen */
   body {
     margin: 0;
     min-height: 100dvh;
-    background: var(--color-ink-900);
+    background: linear-gradient(180deg, var(--color-ink-900) 0%, var(--color-ink-900) 40%, #074b5c 100%) fixed var(--color-ink-900);
     color: var(--text);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -116,7 +119,7 @@
   }
 
   ::selection {
-    background: rgb(124 197 191 / 0.35);
+    background: rgb(126 242 226 / 0.35);
   }
 
   button,
@@ -127,7 +130,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #a8dcd5;
+    outline: 2px solid #b4fff2;
     outline-offset: 3px;
     border-radius: 12px;
   }
@@ -200,7 +203,7 @@
   }
 
   .glass-strong {
-    background: rgb(15 35 48 / 0.94);
+    background: rgb(8 76 94 / 0.95);
     border: 1px solid rgb(255 255 255 / 0.1);
     backdrop-filter: blur(28px) saturate(160%);
     -webkit-backdrop-filter: blur(28px) saturate(160%);

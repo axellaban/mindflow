@@ -1,6 +1,6 @@
 import { Check, ChevronLeft, Play } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { CoverArt } from '@/art/CoverArt';
 import { PALETTES } from '@/art/palettes';
 import { Button, IconButton } from '@/components/ui/Button';
@@ -8,7 +8,7 @@ import { PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import type { ProgramId } from '@/content/types';
 import { EliInvite } from '@/features/eli/EliInvite';
 import { haptic } from '@/lib/device';
-import { programProgress } from '@/lib/hooks';
+import { programProgress, useBack } from '@/lib/hooks';
 import { formatDuration } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { SPRING_PRESS } from '@/lib/motion';
@@ -20,7 +20,7 @@ const EMPTY: number[] = [];
 
 export function ProgramPage() {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const back = useBack('/meditar');
   const program = PROGRAM_BY_ID[id as ProgramId];
   const allPrograms = useAppStore((s) => s.programs);
   const done = (program && allPrograms[program.id]) || EMPTY;
@@ -40,7 +40,7 @@ export function ProgramPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-transparent to-ink-900" />
         <div className="absolute top-0 left-0 px-5 pt-safe lg:px-8 lg:pt-6">
           <div className="pt-2">
-            <IconButton label="Volver" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate('/meditar'))}>
+            <IconButton label="Volver" onClick={back}>
               <ChevronLeft className="size-5" />
             </IconButton>
           </div>
@@ -104,7 +104,7 @@ export function ProgramPage() {
                   <span
                     className={cn(
                       'flex size-11 shrink-0 items-center justify-center rounded-full text-[15px] font-semibold tabular-nums',
-                      isDone ? 'bg-sage-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/70',
+                      isDone ? 'bg-sage-400 text-ink-900' : isNext ? 'bg-mist-50 text-ink-900' : 'bg-white/7 text-mist-50/95',
                     )}
                   >
                     {isDone ? <Check className="size-5" strokeWidth={2.6} /> : i + 1}
@@ -118,7 +118,7 @@ export function ProgramPage() {
                       {formatDuration(s.duration)} · {s.subtitle}
                     </span>
                   </span>
-                  <Play className={cn('size-4 shrink-0 fill-current', isNext ? 'text-mist-50' : 'text-mist-50/35')} />
+                  <Play className={cn('size-4 shrink-0 fill-current', isNext ? 'text-mist-50' : 'text-mist-50/60')} />
                 </motion.button>
               </li>
             );

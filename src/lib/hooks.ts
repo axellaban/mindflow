@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router';
 import { PROGRAMS, SESSION_BY_ID } from '@/content/catalog';
 import type { Program } from '@/content/types';
 import { useAppStore } from '@/store/app';
@@ -93,4 +94,18 @@ export function useMediaQuery(query: string): boolean {
 
 export function sessionExists(id: string): boolean {
   return Boolean(SESSION_BY_ID[id]);
+}
+
+/**
+ * Goes back one screen inside the app. When this is the first screen of the visit (a shared link,
+ * a new tab), goes to `fallback` instead, so closing never takes you out of the app.
+ */
+export function useBack(fallback = '/'): () => void {
+  const navigate = useNavigate();
+  return useCallback(() => {
+    // React Router numbers the entries it creates; 0 is where the visit started
+    const idx = (window.history.state as { idx?: number } | null)?.idx ?? 0;
+    if (idx > 0) void navigate(-1);
+    else void navigate(fallback, { replace: true });
+  }, [navigate, fallback]);
 }
