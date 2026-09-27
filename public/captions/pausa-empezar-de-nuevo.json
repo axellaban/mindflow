@@ -1,1 +1,212 @@
-{"id":"pausa-empezar-de-nuevo","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":7.37,"t":"Bienvenida a la pausa de hoy."},{"s":8.17,"e":10.58,"t":"Hoy vamos a hablar de empezar de nuevo."},{"s":11.38,"e":14.3,"t":"Quizás ayer no fue el día que esperabas."},{"s":15.1,"e":23.22,"t":"Quizás abandonaste un hábito, dijiste algo que no querías decir, o simplemente no tuviste energía."},{"s":24.02,"e":25.67,"t":"Le pasa a todo el mundo."},{"s":26.47,"e":36.27,"t":"Una de las enseñanzas más bonitas de la meditación es esta: cada vez que la mente se distrae y volvemos a la respiración, estamos empezando de nuevo."},{"s":37.07,"e":39.13,"t":"Y podemos hacerlo mil veces."},{"s":39.93,"e":41.2,"t":"No hay límite."},{"s":43.1,"e":45.44,"t":"Cada respiración es un comienzo."},{"s":46.24,"e":48.19,"t":"Cada mañana, también."},{"s":48.99,"e":51.17,"t":"Cada momento, en realidad."},{"s":53.07,"e":53.92,"t":"Acomódate."},{"s":54.72,"e":55.86,"t":"Cierra los ojos."},{"s":59.86,"e":61.95,"t":"Haz una respiración profunda…"},{"s":63.3,"e":64.15,"t":"y suelta."},{"s":68.15,"e":69.69,"t":"Siente la respiración."},{"s":70.49,"e":73.77,"t":"Nota que esta inhalación es completamente nueva."},{"s":74.57,"e":76.34,"t":"Nunca antes existió."},{"s":77.14,"e":80.75,"t":"Y esta exhalación deja ir la anterior por completo."},{"s":131.44,"e":142.64,"t":"Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio, con amabilidad: «empiezo de nuevo»."},{"s":143.44,"e":149.03,"t":"Y vas a volver a la respiración, como quien abre una página en blanco."},{"s":250.41,"e":251.6,"t":"Empiezo de nuevo."},{"s":252.4,"e":254.66,"t":"Sin cargar con el intento anterior."},{"s":356.04,"e":362.4,"t":"Si aparece la voz de la autocrítica, algo como «no sirvo para esto», no la discutas."},{"s":363.2,"e":364.71,"t":"Solo empieza de nuevo."},{"s":365.51,"e":367.66,"t":"La práctica no es no distraerse."},{"s":368.46,"e":370.19,"t":"La práctica es volver."},{"s":446.22,"e":450.28,"t":"Ahora piensa en algo de tu vida donde te gustaría empezar de nuevo."},{"s":451.08,"e":456.07,"t":"Un hábito, una relación, un proyecto, la forma en que te tratas."},{"s":456.87,"e":458.96,"t":"No hace falta un gran plan."},{"s":459.76,"e":461.41,"t":"Solo el siguiente paso."},{"s":462.21,"e":463.95,"t":"El más pequeño posible."},{"s":514.63,"e":517.11,"t":"Imagina que das ese paso hoy."},{"s":517.91,"e":521.4,"t":"Con la misma sencillez con la que vuelves a la respiración."},{"s":572.09,"e":573.4,"t":"Vamos terminando."},{"s":577.4,"e":580.21,"t":"Y cuando sea el momento, abre los ojos."},{"s":582.21,"e":586.12,"t":"La frase para hoy es: «siempre puedo empezar de nuevo»."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "pausa-empezar-de-nuevo",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 7.8,
+      "t": "Bienvenida a la pausa de hoy."
+    },
+    {
+      "s": 8.6,
+      "e": 11.23,
+      "t": "Hoy vamos a hablar de empezar de nuevo."
+    },
+    {
+      "s": 12.03,
+      "e": 14.98,
+      "t": "Quizás ayer no fue el día que esperabas."
+    },
+    {
+      "s": 15.78,
+      "e": 22.6,
+      "t": "Quizás abandonaste un hábito, dijiste algo que no querías decir, o simplemente no tuviste energía."
+    },
+    {
+      "s": 23.4,
+      "e": 25.21,
+      "t": "Le pasa a todo el mundo."
+    },
+    {
+      "s": 26.01,
+      "e": 36.18,
+      "t": "Una de las enseñanzas más bonitas de la meditación es esta: cada vez que la mente se distrae y volvemos a la respiración, estamos empezando de nuevo."
+    },
+    {
+      "s": 36.98,
+      "e": 39.26,
+      "t": "Y podemos hacerlo mil veces."
+    },
+    {
+      "s": 40.06,
+      "e": 41.28,
+      "t": "No hay límite."
+    },
+    {
+      "s": 44.28,
+      "e": 46.73,
+      "t": "Cada respiración es un comienzo."
+    },
+    {
+      "s": 47.53,
+      "e": 49.25,
+      "t": "Cada mañana, también."
+    },
+    {
+      "s": 50.05,
+      "e": 52.15,
+      "t": "Cada momento, en realidad."
+    },
+    {
+      "s": 55.15,
+      "e": 56.28,
+      "t": "Acomódate."
+    },
+    {
+      "s": 57.08,
+      "e": 58.47,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 62.47,
+      "e": 64.7,
+      "t": "Haz una respiración profunda…"
+    },
+    {
+      "s": 66.05,
+      "e": 66.99,
+      "t": "y suelta."
+    },
+    {
+      "s": 70.99,
+      "e": 72.67,
+      "t": "Siente la respiración."
+    },
+    {
+      "s": 73.47,
+      "e": 76.81,
+      "t": "Nota que esta inhalación es completamente nueva."
+    },
+    {
+      "s": 77.61,
+      "e": 79.42,
+      "t": "Nunca antes existió."
+    },
+    {
+      "s": 80.22,
+      "e": 83.79,
+      "t": "Y esta exhalación deja ir la anterior por completo."
+    },
+    {
+      "s": 134.48,
+      "e": 144.59,
+      "t": "Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio, con amabilidad: «empiezo de nuevo»."
+    },
+    {
+      "s": 145.39,
+      "e": 149.73,
+      "t": "Y vas a volver a la respiración, como quien abre una página en blanco."
+    },
+    {
+      "s": 251.12,
+      "e": 252.52,
+      "t": "Empiezo de nuevo."
+    },
+    {
+      "s": 253.32,
+      "e": 255.7,
+      "t": "Sin cargar con el intento anterior."
+    },
+    {
+      "s": 357.09,
+      "e": 362.47,
+      "t": "Si aparece la voz de la autocrítica, algo como «no sirvo para esto», no la discutas."
+    },
+    {
+      "s": 363.27,
+      "e": 364.93,
+      "t": "Solo empieza de nuevo."
+    },
+    {
+      "s": 365.73,
+      "e": 368.12,
+      "t": "La práctica no es no distraerse."
+    },
+    {
+      "s": 368.92,
+      "e": 370.67,
+      "t": "La práctica es volver."
+    },
+    {
+      "s": 446.71,
+      "e": 451.0,
+      "t": "Ahora piensa en algo de tu vida donde te gustaría empezar de nuevo."
+    },
+    {
+      "s": 451.8,
+      "e": 456.16,
+      "t": "Un hábito, una relación, un proyecto, la forma en que te tratas."
+    },
+    {
+      "s": 456.96,
+      "e": 458.98,
+      "t": "No hace falta un gran plan."
+    },
+    {
+      "s": 459.78,
+      "e": 461.39,
+      "t": "Solo el siguiente paso."
+    },
+    {
+      "s": 462.19,
+      "e": 464.07,
+      "t": "El más pequeño posible."
+    },
+    {
+      "s": 514.77,
+      "e": 517.2,
+      "t": "Imagina que das ese paso hoy."
+    },
+    {
+      "s": 518.0,
+      "e": 521.79,
+      "t": "Con la misma sencillez con la que vuelves a la respiración."
+    },
+    {
+      "s": 572.48,
+      "e": 573.8,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 577.8,
+      "e": 580.43,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 582.43,
+      "e": 585.93,
+      "t": "La frase para hoy es: «siempre puedo empezar de nuevo»."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

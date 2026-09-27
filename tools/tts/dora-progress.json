@@ -224,9 +224,24 @@
       "audio_sha256": "920addcfc551a31333adeea039b437fe7dc13a47c7546f7710a292befc9bf705",
       "captions_sha256": "f5240e1138e965534fa113d757f5ba2ac1da7ac201a783bb324c548e70dcc8c8",
       "version": "aa013709d41a"
+    },
+    "pausa-bambu": {
+      "audio_sha256": "f7225e0bdbe37e046f839d90d5bca6199fd7ff305ba9a31e7c54335a17087351",
+      "captions_sha256": "fbc4c3455123a2e15faacd5dda23e18846688cfd3f7de042f11bc9a915e3ee24",
+      "version": "18fcb32c351b"
+    },
+    "pausa-confianza": {
+      "audio_sha256": "68564d5632cf54d41d6e62f0a298115d111779ab400cd58a45957c4cd6e1b4a3",
+      "captions_sha256": "40ef7c81ff641b5719c8e58bbd1a7e573c2ffc474733ce7c3deb108426efe499",
+      "version": "78521e8e5c42"
+    },
+    "pausa-empezar-de-nuevo": {
+      "audio_sha256": "8240e74592d47500bc18d2d66f0d1c2521ac77261c793c6376155bef9d397461",
+      "captions_sha256": "0d8dde1ac6e2f3827820178787c90ec1745b709930130ac9af4dff34e3ee61af",
+      "version": "b65be8b738d3"
     }
   },
-  "completed": 45,
+  "completed": 48,
   "total": 61,
   "audio_complete": false
 }
