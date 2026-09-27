@@ -17,9 +17,9 @@ Además de acompañar la práctica diaria, la app es la puerta de entrada a las 
 | **Diario y progreso** | Check-in de ánimo con emociones (y una práctica recomendada según cómo estás), preguntas de reflexión, gráfico de ánimo, racha, calendario, 15 logros y favoritos. |
 | **Personalización** | Onboarding con la presentación de Eli y la pregunta de su formulario (*¿Qué es lo que más te cuesta hoy?*): estrés, mente acelerada, autoexigencia, descanso, culpa… Con eso se arman el plan y las recomendaciones. |
 | **Escenas** | La playa del inicio sigue la luz del día (amanecer, mediodía, atardecer y noche con luna y estrellas) y está viva: palmeras con viento, marea, nubes, luz del sol, reflejos y pájaros. Con "Reducir movimiento" solo cambia la luz. También se puede fijar cualquiera de las 14 escenas. |
-| **Colores** | Turquesa de mar (paleta *Caribe*) en toda la app; Dormir y las historias para dormir pasan a azul noche; coral para reproducir y para lo que se elige. |
+| **Colores** | Turquesa de mar (paleta *Caribe*) de día; azul noche en Dormir, en las historias para dormir y en toda la app de 20 a 5 h (mientras la playa sigue la hora); coral para reproducir y para lo que se elige. |
 | **Eli** | Página propia (`/eli`, con su foto en la vista previa al compartirla por Instagram o WhatsApp), invitaciones a sesiones 1:1 y al workshop, y WhatsApp directo con un primer mensaje ya escrito. |
-| **PWA** | Instalable en iOS, Android y escritorio; funciona offline; se actualiza sola sin cortar nunca una práctica; recordatorio diario vía calendario (.ics); exportar/importar datos. |
+| **PWA** | Instalable en iOS, Android y escritorio; funciona offline; se actualiza sola al abrirla o al pasar a segundo plano, sin cortar nunca una práctica ni un audio; recordatorio diario vía calendario (.ics); exportar/importar datos. |
 | **Accesibilidad** | Contraste AA, lector de pantalla (diálogos con foco, fases de respiración anunciadas, títulos por pantalla), teclado en el reproductor y respeto por "Reducir movimiento". |
 
 La interfaz habla con voseo, como Eli. Las narraciones usan una voz neuronal de acento neutro (*Luz*), en femenino hacia quien escucha.

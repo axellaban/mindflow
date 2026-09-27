@@ -171,12 +171,21 @@ export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s])) as R
 export const AUTO_SCENE_NAME = 'Playa según la hora';
 
 /** The beach as it looks right now: dawn, midday, sunset or a moonlit night. */
+/**
+ * The moonlit hours: the beach turns to night and the app wears its night palette.
+ * index.html repeats these hours to paint the right colour before the app loads.
+ */
+export function isNightHour(d: Date = new Date()): boolean {
+  const h = d.getHours();
+  return h >= 20 || h < 5;
+}
+
 export function beachAt(d: Date = new Date()): SceneDef {
   const h = d.getHours();
-  if (h >= 5 && h < 9) return SCENE_BY_ID.playa;
-  if (h >= 9 && h < 17) return SCENE_BY_ID['playa-dia'];
-  if (h >= 17 && h < 20) return SCENE_BY_ID['playa-ocaso'];
-  return SCENE_BY_ID['playa-noche'];
+  if (isNightHour(d)) return SCENE_BY_ID['playa-noche'];
+  if (h < 9) return SCENE_BY_ID.playa;
+  if (h < 17) return SCENE_BY_ID['playa-dia'];
+  return SCENE_BY_ID['playa-ocaso'];
 }
 
 export function resolveScene(choice: SceneChoice | undefined, d: Date = new Date()): SceneDef {

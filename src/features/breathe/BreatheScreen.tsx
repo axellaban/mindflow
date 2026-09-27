@@ -264,12 +264,14 @@ function Runner({
     return () => clearTimeout(t);
   }, [countIn]);
 
-  // audio + wake lock lifetime
+  // audio + wake lock lifetime; updates wait until the practice is over
   useEffect(() => {
     void keepAwake(true);
+    useUI.getState().setPracticing(true);
     engine.bell('cuenco', 0.35);
     return () => {
       void keepAwake(false);
+      useUI.getState().setPracticing(false);
       toneRef.current?.dispose();
       toneRef.current = null;
       engine.releaseKeepAlive();

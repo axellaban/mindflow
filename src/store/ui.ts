@@ -16,11 +16,14 @@ interface UIState {
   checkInLevel: MoodLevel | null;
   /** The sound mixer is on screen with its own controls for the playing mix. */
   mixerOnScreen: boolean;
+  /** A breathing exercise or a silent timer is running. */
+  practicing: boolean;
   toast: (text: string, tone?: Toast['tone']) => void;
   dismissToast: (id: string) => void;
   celebrate: (ids: AchievementId[]) => void;
   clearCelebration: () => void;
   openCheckIn: (open: boolean, level?: MoodLevel) => void;
+  setPracticing: (on: boolean) => void;
 }
 
 export const useUI = create<UIState>()((set, get) => ({
@@ -29,6 +32,7 @@ export const useUI = create<UIState>()((set, get) => ({
   checkInOpen: false,
   checkInLevel: null,
   mixerOnScreen: false,
+  practicing: false,
   toast: (text, tone = 'default') => {
     const t = { id: uid(), text, tone };
     set({ toasts: [...get().toasts.slice(-2), t] });
@@ -38,4 +42,5 @@ export const useUI = create<UIState>()((set, get) => ({
   celebrate: (ids) => set({ celebration: [...get().celebration, ...ids] }),
   clearCelebration: () => set({ celebration: [] }),
   openCheckIn: (open, level) => set({ checkInOpen: open, checkInLevel: open ? (level ?? null) : get().checkInLevel }),
+  setPracticing: (on) => set({ practicing: on }),
 }));

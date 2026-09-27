@@ -47,7 +47,7 @@ export function TimerScreen() {
 
   return (
     <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
-      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,#117186_0%,#09596c_60%,#064657_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(110%_70%_at_50%_35%,var(--color-ink-700)_0%,var(--color-ink-900)_60%,var(--color-ink-950)_100%)]" />
       <div className="grain absolute inset-0" />
       <AnimatePresence mode="wait">
         {stage === 'setup' && (
@@ -206,11 +206,14 @@ function Running({
 
   useEffect(() => {
     void keepAwake(true);
+    // updates wait until the practice is over
+    useUI.getState().setPracticing(true);
     engine.bell(bell, 0.55);
     engine.setLayersVolume(0.7, 0.2);
     engine.setMix(BED_BY_ID[ambience].mix, 4);
     return () => {
       void keepAwake(false);
+      useUI.getState().setPracticing(false);
       engine.stopAll(2);
       engine.releaseKeepAlive();
     };

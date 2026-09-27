@@ -1,11 +1,12 @@
 import { usePlayer } from '@/store/player';
+import { useUI } from '@/store/ui';
 
-/** Screens where a reload would cut a practice short. */
-const PRACTICE = /^\/(respirar|temporizador|bienvenida)/;
+/** The welcome: a reload would lose the answers given so far. */
+const WELCOME = /^\/bienvenida/;
 
-/** Nothing is playing and no practice is on screen. */
+/** Nothing is playing, no practice is running and nobody is halfway through the welcome. */
 function quiet(): boolean {
-  return !usePlayer.getState().item && !PRACTICE.test(location.pathname);
+  return !usePlayer.getState().item && !useUI.getState().practicing && !WELCOME.test(location.pathname);
 }
 
 /**
@@ -53,6 +54,9 @@ export function setupUpdates(): void {
   document.addEventListener('visibilitychange', reloadIfQuiet);
   usePlayer.subscribe((s, prev) => {
     if (prev.item && !s.item) reloadIfQuiet();
+  });
+  useUI.subscribe((s, prev) => {
+    if (prev.practicing && !s.practicing) reloadIfQuiet();
   });
 
   // A screen from an older version that is gone from the server: load the current one instead.

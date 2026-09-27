@@ -30,10 +30,31 @@
     <meta name="twitter:image" content="/icons/og.png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <script>
+      // The night palette from the very first frame: on Dormir, and from 20 h to 5 h while the
+      // beach follows the hour. The same rule as ThemeSync (App.tsx) and isNightHour (scenes.ts).
+      (function () {
+        try {
+          var h = new Date().getHours();
+          var saved = JSON.parse(localStorage.getItem('mindfulness-by-eli') || 'null');
+          var scene = saved && saved.state && saved.state.settings && saved.state.settings.sceneId;
+          var followsHour = !scene || scene === 'auto';
+          if (location.pathname.indexOf('/dormir') === 0 || (followsHour && (h >= 20 || h < 5))) {
+            document.documentElement.setAttribute('data-theme', 'noche');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0e1a3a');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <style>
       html,
       body {
         background: #09596c;
+      }
+      /* the night palette; kept as weak as the rules above so the app's own colours still win */
+      html:where([data-theme='noche']),
+      :where(html[data-theme='noche']) body {
+        background: #0e1a3a;
       }
       /* Shown by the HTML itself while the app loads, then faded out by the app. */
       #splash {
@@ -65,6 +86,12 @@
       }
       #splash i {
         color: #b4fff2;
+      }
+      :where(html[data-theme='noche']) #splash {
+        background: radial-gradient(70% 50% at 50% 42%, rgba(247, 220, 192, 0.1), rgba(14, 26, 58, 0) 70%), #0e1a3a;
+      }
+      :where(html[data-theme='noche']) #splash i {
+        color: #cdd8ff;
       }
       @keyframes splash-breath {
         0%,
