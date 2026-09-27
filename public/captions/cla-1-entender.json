@@ -1,1 +1,387 @@
-{"id":"cla-1-entender","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.95,"t":"Bienvenida al primer día de Calmar la ansiedad."},{"s":9.75,"e":15.37,"t":"Si llegaste hasta aquí, quizás la ansiedad forme parte de tu vida en este momento."},{"s":16.17,"e":21.58,"t":"Quiero empezar diciéndote algo importante: no hay nada roto en ti."},{"s":23.48,"e":26.45,"t":"La ansiedad es el sistema de alarma del cuerpo."},{"s":27.25,"e":31.79,"t":"Una función muy antigua, diseñada para protegernos del peligro."},{"s":32.59,"e":38.17,"t":"El problema es que a veces esa alarma se activa aunque no haya ningún león cerca."},{"s":38.97,"e":45.51,"t":"Se enciende con un correo, con una conversación pendiente, con un pensamiento sobre el futuro."},{"s":46.31,"e":55.47,"t":"Y cuando la alarma suena, el cuerpo responde: el corazón se acelera, la respiración se vuelve corta, los músculos se tensan."},{"s":56.27,"e":59.04,"t":"Es incómodo, a veces muy incómodo."},{"s":59.84,"e":61.27,"t":"Pero no es peligroso."},{"s":62.07,"e":67.0,"t":"Y lo más importante: tiene un interruptor que podemos aprender a usar."},{"s":67.8,"e":70.88,"t":"Ese interruptor es la respiración."},{"s":71.68,"e":78.41,"t":"Cuando la exhalación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse."},{"s":80.31,"e":81.8,"t":"Vamos a practicarlo."},{"s":82.6,"e":86.22,"t":"Siéntate, o recuéstate, en una postura cómoda."},{"s":87.02,"e":89.35,"t":"Si quieres, cierra los ojos."},{"s":93.35,"e":97.39,"t":"Lleva una mano al pecho, y la otra al abdomen."},{"s":98.19,"e":100.63,"t":"Siente el calor de tus manos."},{"s":101.43,"e":106.04,"t":"Ese contacto ya es una forma de decirle al cuerpo: estoy aquí."},{"s":132.5,"e":135.56,"t":"Respira normalmente, y solo observa."},{"s":136.36,"e":137.85,"t":"¿Qué mano se mueve más?"},{"s":138.8,"e":140.6,"t":"No cambies nada todavía."},{"s":167.07,"e":172.6,"t":"Ahora, intenta que el aire llegue un poco más abajo, hacia el abdomen."},{"s":173.4,"e":175.87,"t":"Que la mano de abajo suba al inhalar."},{"s":202.33,"e":205.71,"t":"Vamos a respirar con un ritmo de cuatro y seis."},{"s":206.51,"e":209.73,"t":"Cuatro tiempos para inhalar, seis para exhalar."},{"s":210.53,"e":211.81,"t":"Inhala por la nariz"},{"s":212.51,"e":212.92,"t":"dos"},{"s":213.62,"e":214.06,"t":"tres"},{"s":214.76,"e":215.34,"t":"cuatro."},{"s":216.14,"e":217.21,"t":"Exhala suave"},{"s":217.91,"e":218.32,"t":"dos"},{"s":219.02,"e":219.46,"t":"tres"},{"s":220.16,"e":220.76,"t":"cuatro"},{"s":221.46,"e":222.13,"t":"cinco"},{"s":222.83,"e":223.39,"t":"seis."},{"s":225.39,"e":225.99,"t":"Inhala"},{"s":226.69,"e":227.1,"t":"dos"},{"s":227.8,"e":228.23,"t":"tres"},{"s":228.93,"e":229.52,"t":"cuatro."},{"s":230.32,"e":231.0,"t":"Exhala"},{"s":231.7,"e":232.11,"t":"dos"},{"s":232.81,"e":233.25,"t":"tres"},{"s":233.95,"e":234.55,"t":"cuatro"},{"s":235.25,"e":235.92,"t":"cinco"},{"s":236.62,"e":237.18,"t":"seis."},{"s":239.18,"e":240.23,"t":"Una vez más."},{"s":241.03,"e":241.63,"t":"Inhala"},{"s":242.33,"e":242.74,"t":"dos"},{"s":243.44,"e":243.88,"t":"tres"},{"s":244.58,"e":245.17,"t":"cuatro."},{"s":245.97,"e":246.65,"t":"Exhala"},{"s":247.35,"e":247.76,"t":"dos"},{"s":248.46,"e":248.9,"t":"tres"},{"s":249.6,"e":250.2,"t":"cuatro"},{"s":250.9,"e":251.57,"t":"cinco"},{"s":252.27,"e":252.82,"t":"seis."},{"s":255.82,"e":258.16,"t":"Continúa con este ritmo por tu cuenta."},{"s":258.96,"e":261.98,"t":"Inhalación tranquila, exhalación larga."},{"s":367.85,"e":372.17,"t":"Si aparece un pensamiento ansioso, no tienes que discutir con él."},{"s":372.97,"e":376.79,"t":"Solo nota que está ahí, y vuelve a la exhalación larga."},{"s":482.65,"e":484.88,"t":"Quizás ya notes algún cambio."},{"s":485.68,"e":489.58,"t":"Tal vez un poco más de calma, o tal vez no mucho."},{"s":490.38,"e":492.13,"t":"Las dos cosas están bien."},{"s":492.93,"e":497.11,"t":"Esto es un entrenamiento, y el cuerpo aprende con la repetición."},{"s":550.04,"e":552.26,"t":"Deja ahora la respiración libre."},{"s":553.06,"e":556.46,"t":"Siente tus manos sobre el cuerpo una última vez."},{"s":560.46,"e":563.27,"t":"Y cuando sea el momento, abre los ojos."},{"s":565.27,"e":571.22,"t":"Hoy aprendiste el interruptor más básico: exhalar más largo de lo que inhalas."},{"s":572.02,"e":575.71,"t":"Puedes usarlo en cualquier lugar, sin que nadie lo note."},{"s":576.51,"e":580.45,"t":"En el transporte, en una reunión, antes de dormir."},{"s":581.25,"e":586.12,"t":"Mañana aprenderemos a anclarnos en el cuerpo cuando la mente se acelera."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "cla-1-entender",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.8,
+      "t": "Bienvenida al primer día de Calmar la ansiedad."
+    },
+    {
+      "s": 9.6,
+      "e": 14.63,
+      "t": "Si llegaste hasta aquí, quizás la ansiedad forme parte de tu vida en este momento."
+    },
+    {
+      "s": 15.43,
+      "e": 19.87,
+      "t": "Quiero empezar diciéndote algo importante: no hay nada roto en ti."
+    },
+    {
+      "s": 22.87,
+      "e": 26.02,
+      "t": "La ansiedad es el sistema de alarma del cuerpo."
+    },
+    {
+      "s": 26.82,
+      "e": 31.18,
+      "t": "Una función muy antigua, diseñada para protegernos del peligro."
+    },
+    {
+      "s": 31.98,
+      "e": 37.26,
+      "t": "El problema es que a veces esa alarma se activa aunque no haya ningún león cerca."
+    },
+    {
+      "s": 38.06,
+      "e": 43.95,
+      "t": "Se enciende con un correo, con una conversación pendiente, con un pensamiento sobre el futuro."
+    },
+    {
+      "s": 44.75,
+      "e": 53.02,
+      "t": "Y cuando la alarma suena, el cuerpo responde: el corazón se acelera, la respiración se vuelve corta, los músculos se tensan."
+    },
+    {
+      "s": 53.82,
+      "e": 56.44,
+      "t": "Es incómodo, a veces muy incómodo."
+    },
+    {
+      "s": 57.24,
+      "e": 58.9,
+      "t": "Pero no es peligroso."
+    },
+    {
+      "s": 59.7,
+      "e": 64.24,
+      "t": "Y lo más importante: tiene un interruptor que podemos aprender a usar."
+    },
+    {
+      "s": 65.04,
+      "e": 67.62,
+      "t": "Ese interruptor es la respiración."
+    },
+    {
+      "s": 68.42,
+      "e": 75.73,
+      "t": "Cuando la exhalación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse."
+    },
+    {
+      "s": 78.73,
+      "e": 80.32,
+      "t": "Vamos a practicarlo."
+    },
+    {
+      "s": 81.12,
+      "e": 84.59,
+      "t": "Siéntate, o recuéstate, en una postura cómoda."
+    },
+    {
+      "s": 85.39,
+      "e": 87.32,
+      "t": "Si quieres, cierra los ojos."
+    },
+    {
+      "s": 91.32,
+      "e": 94.32,
+      "t": "Lleva una mano al pecho, y la otra al abdomen."
+    },
+    {
+      "s": 95.12,
+      "e": 97.05,
+      "t": "Siente el calor de tus manos."
+    },
+    {
+      "s": 97.85,
+      "e": 101.8,
+      "t": "Ese contacto ya es una forma de decirle al cuerpo: estoy aquí."
+    },
+    {
+      "s": 128.54,
+      "e": 131.27,
+      "t": "Respira normalmente, y solo observa."
+    },
+    {
+      "s": 132.07,
+      "e": 133.82,
+      "t": "¿Qué mano se mueve más?"
+    },
+    {
+      "s": 134.77,
+      "e": 136.69,
+      "t": "No cambies nada todavía."
+    },
+    {
+      "s": 163.43,
+      "e": 167.82,
+      "t": "Ahora, intenta que el aire llegue un poco más abajo, hacia el abdomen."
+    },
+    {
+      "s": 168.62,
+      "e": 171.04,
+      "t": "Que la mano de abajo suba al inhalar."
+    },
+    {
+      "s": 197.78,
+      "e": 200.94,
+      "t": "Vamos a respirar con un ritmo de cuatro y seis."
+    },
+    {
+      "s": 201.74,
+      "e": 204.68,
+      "t": "Cuatro tiempos para inhalar, seis para exhalar."
+    },
+    {
+      "s": 205.48,
+      "e": 206.94,
+      "t": "Inhala por la nariz"
+    },
+    {
+      "s": 207.64,
+      "e": 208.2,
+      "t": "dos"
+    },
+    {
+      "s": 208.9,
+      "e": 209.56,
+      "t": "tres"
+    },
+    {
+      "s": 210.26,
+      "e": 211.02,
+      "t": "cuatro."
+    },
+    {
+      "s": 211.82,
+      "e": 213.03,
+      "t": "Exhala suave"
+    },
+    {
+      "s": 213.73,
+      "e": 214.29,
+      "t": "dos"
+    },
+    {
+      "s": 214.99,
+      "e": 215.65,
+      "t": "tres"
+    },
+    {
+      "s": 216.35,
+      "e": 217.08,
+      "t": "cuatro"
+    },
+    {
+      "s": 217.78,
+      "e": 218.51,
+      "t": "cinco"
+    },
+    {
+      "s": 219.21,
+      "e": 219.81,
+      "t": "seis."
+    },
+    {
+      "s": 221.81,
+      "e": 222.52,
+      "t": "Inhala"
+    },
+    {
+      "s": 223.22,
+      "e": 223.78,
+      "t": "dos"
+    },
+    {
+      "s": 224.48,
+      "e": 225.14,
+      "t": "tres"
+    },
+    {
+      "s": 225.84,
+      "e": 226.6,
+      "t": "cuatro."
+    },
+    {
+      "s": 227.4,
+      "e": 228.2,
+      "t": "Exhala"
+    },
+    {
+      "s": 228.9,
+      "e": 229.46,
+      "t": "dos"
+    },
+    {
+      "s": 230.16,
+      "e": 230.82,
+      "t": "tres"
+    },
+    {
+      "s": 231.52,
+      "e": 232.25,
+      "t": "cuatro"
+    },
+    {
+      "s": 232.95,
+      "e": 233.68,
+      "t": "cinco"
+    },
+    {
+      "s": 234.38,
+      "e": 234.98,
+      "t": "seis."
+    },
+    {
+      "s": 236.98,
+      "e": 238.12,
+      "t": "Una vez más."
+    },
+    {
+      "s": 238.92,
+      "e": 239.63,
+      "t": "Inhala"
+    },
+    {
+      "s": 240.33,
+      "e": 240.89,
+      "t": "dos"
+    },
+    {
+      "s": 241.59,
+      "e": 242.25,
+      "t": "tres"
+    },
+    {
+      "s": 242.95,
+      "e": 243.71,
+      "t": "cuatro."
+    },
+    {
+      "s": 244.51,
+      "e": 245.31,
+      "t": "Exhala"
+    },
+    {
+      "s": 246.01,
+      "e": 246.57,
+      "t": "dos"
+    },
+    {
+      "s": 247.27,
+      "e": 247.93,
+      "t": "tres"
+    },
+    {
+      "s": 248.63,
+      "e": 249.36,
+      "t": "cuatro"
+    },
+    {
+      "s": 250.06,
+      "e": 250.79,
+      "t": "cinco"
+    },
+    {
+      "s": 251.49,
+      "e": 252.09,
+      "t": "seis."
+    },
+    {
+      "s": 255.09,
+      "e": 257.84,
+      "t": "Continúa con este ritmo por tu cuenta."
+    },
+    {
+      "s": 258.64,
+      "e": 261.54,
+      "t": "Inhalación tranquila, exhalación larga."
+    },
+    {
+      "s": 368.49,
+      "e": 372.8,
+      "t": "Si aparece un pensamiento ansioso, no tienes que discutir con él."
+    },
+    {
+      "s": 373.6,
+      "e": 377.0,
+      "t": "Solo nota que está ahí, y vuelve a la exhalación larga."
+    },
+    {
+      "s": 483.95,
+      "e": 486.38,
+      "t": "Quizás ya notes algún cambio."
+    },
+    {
+      "s": 487.18,
+      "e": 490.68,
+      "t": "Tal vez un poco más de calma, o tal vez no mucho."
+    },
+    {
+      "s": 491.48,
+      "e": 493.61,
+      "t": "Las dos cosas están bien."
+    },
+    {
+      "s": 494.41,
+      "e": 498.44,
+      "t": "Esto es un entrenamiento, y el cuerpo aprende con la repetición."
+    },
+    {
+      "s": 551.92,
+      "e": 554.37,
+      "t": "Deja ahora la respiración libre."
+    },
+    {
+      "s": 555.17,
+      "e": 558.4,
+      "t": "Siente tus manos sobre el cuerpo una última vez."
+    },
+    {
+      "s": 562.4,
+      "e": 565.03,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 567.03,
+      "e": 571.91,
+      "t": "Hoy aprendiste el interruptor más básico: exhalar más largo de lo que inhalas."
+    },
+    {
+      "s": 572.71,
+      "e": 576.15,
+      "t": "Puedes usarlo en cualquier lugar, sin que nadie lo note."
+    },
+    {
+      "s": 576.95,
+      "e": 580.44,
+      "t": "En el transporte, en una reunión, antes de dormir."
+    },
+    {
+      "s": 581.24,
+      "e": 585.93,
+      "t": "Mañana aprenderemos a anclarnos en el cuerpo cuando la mente se acelera."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

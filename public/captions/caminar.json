@@ -1,1 +1,202 @@
-{"id":"caminar","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":9.98,"t":"Esta es una meditación para hacer caminando, con los ojos abiertos."},{"s":10.78,"e":19.96,"t":"Puedes practicarla al aire libre, en un parque o en una calle tranquila, o dentro de casa, yendo y viniendo por un pasillo."},{"s":20.76,"e":22.5,"t":"No importa a dónde vayas."},{"s":23.3,"e":25.59,"t":"Hoy, el destino es cada paso."},{"s":27.49,"e":30.64,"t":"Empieza de pie, en quietud por un momento."},{"s":31.44,"e":34.49,"t":"Siente el peso del cuerpo sobre los pies."},{"s":35.29,"e":40.43,"t":"Balancéate levemente hacia adelante y hacia atrás, hasta encontrar el centro."},{"s":64.36,"e":66.45,"t":"Haz una respiración profunda."},{"s":70.45,"e":75.33,"t":"Ahora empieza a caminar, a un ritmo un poco más lento de lo habitual."},{"s":76.13,"e":78.81,"t":"Lleva la atención a las plantas de los pies."},{"s":79.61,"e":86.5,"t":"Siente cómo el talón toca el suelo, cómo el peso rueda hacia los dedos, y cómo el pie se despega."},{"s":134.35,"e":135.06,"t":"Levantar…"},{"s":136.41,"e":137.13,"t":"avanzar…"},{"s":138.48,"e":139.17,"t":"apoyar."},{"s":139.97,"e":145.42,"t":"Puedes repetir estas palabras en silencio, al ritmo de tus pasos, si te ayuda."},{"s":193.28,"e":200.24,"t":"Nota el movimiento de las piernas, el balanceo natural de los brazos, el cambio de peso de un lado a otro."},{"s":201.04,"e":205.22,"t":"Caminar es un pequeño milagro de equilibrio que hacemos sin pensar."},{"s":253.08,"e":257.05,"t":"Si la mente se va a tus pendientes o a tus planes, está bien."},{"s":257.85,"e":261.53,"t":"Nota a dónde fue, y vuelve a sentir los pies en el suelo."},{"s":309.39,"e":312.63,"t":"Ahora amplía la atención a los sentidos."},{"s":313.43,"e":315.15,"t":"Los sonidos a tu alrededor."},{"s":315.95,"e":317.31,"t":"El aire sobre la cara."},{"s":318.11,"e":319.18,"t":"La temperatura."},{"s":319.98,"e":323.05,"t":"Mira los colores, las formas, la luz."},{"s":323.85,"e":327.28,"t":"Como si fuera la primera vez que caminas por este lugar."},{"s":399.07,"e":403.18,"t":"Sincroniza, si quieres, la respiración con los pasos."},{"s":403.98,"e":408.57,"t":"Por ejemplo, tres pasos al inhalar, y tres o cuatro al exhalar."},{"s":409.37,"e":411.94,"t":"Encuentra el ritmo que te resulte natural."},{"s":483.73,"e":485.68,"t":"Vuelve a sentir los pies."},{"s":486.48,"e":488.53,"t":"Cada paso te trae al presente."},{"s":536.39,"e":540.03,"t":"Poco a poco, disminuye la velocidad hasta detenerte."},{"s":540.83,"e":543.77,"t":"Quédate de pie un momento, en quietud."},{"s":546.77,"e":549.28,"t":"Siente el cuerpo después de caminar."},{"s":550.08,"e":553.42,"t":"La energía, el pulso, la respiración."},{"s":577.35,"e":584.36,"t":"Puedes volver a caminar así siempre que quieras: hacia el trabajo, al supermercado, por tu casa."},{"s":585.16,"e":587.9,"t":"Cualquier camino puede ser una meditación."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "caminar",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 9.86,
+      "t": "Esta es una meditación para hacer caminando, con los ojos abiertos."
+    },
+    {
+      "s": 10.66,
+      "e": 18.62,
+      "t": "Puedes practicarla al aire libre, en un parque o en una calle tranquila, o dentro de casa, yendo y viniendo por un pasillo."
+    },
+    {
+      "s": 19.42,
+      "e": 21.44,
+      "t": "No importa a dónde vayas."
+    },
+    {
+      "s": 22.24,
+      "e": 24.4,
+      "t": "Hoy, el destino es cada paso."
+    },
+    {
+      "s": 27.4,
+      "e": 30.27,
+      "t": "Empieza de pie, en quietud por un momento."
+    },
+    {
+      "s": 31.07,
+      "e": 33.75,
+      "t": "Siente el peso del cuerpo sobre los pies."
+    },
+    {
+      "s": 34.55,
+      "e": 39.44,
+      "t": "Balancéate levemente hacia adelante y hacia atrás, hasta encontrar el centro."
+    },
+    {
+      "s": 63.62,
+      "e": 65.85,
+      "t": "Haz una respiración profunda."
+    },
+    {
+      "s": 69.85,
+      "e": 74.12,
+      "t": "Ahora empieza a caminar, a un ritmo un poco más lento de lo habitual."
+    },
+    {
+      "s": 74.92,
+      "e": 77.65,
+      "t": "Lleva la atención a las plantas de los pies."
+    },
+    {
+      "s": 78.45,
+      "e": 84.49,
+      "t": "Siente cómo el talón toca el suelo, cómo el peso rueda hacia los dedos, y cómo el pie se despega."
+    },
+    {
+      "s": 132.84,
+      "e": 133.8,
+      "t": "Levantar…"
+    },
+    {
+      "s": 135.15,
+      "e": 136.06,
+      "t": "avanzar…"
+    },
+    {
+      "s": 137.41,
+      "e": 138.28,
+      "t": "apoyar."
+    },
+    {
+      "s": 139.08,
+      "e": 144.21,
+      "t": "Puedes repetir estas palabras en silencio, al ritmo de tus pasos, si te ayuda."
+    },
+    {
+      "s": 192.56,
+      "e": 198.91,
+      "t": "Nota el movimiento de las piernas, el balanceo natural de los brazos, el cambio de peso de un lado a otro."
+    },
+    {
+      "s": 199.71,
+      "e": 203.92,
+      "t": "Caminar es un pequeño milagro de equilibrio que hacemos sin pensar."
+    },
+    {
+      "s": 252.28,
+      "e": 256.21,
+      "t": "Si la mente se va a tus pendientes o a tus planes, está bien."
+    },
+    {
+      "s": 257.01,
+      "e": 260.66,
+      "t": "Nota a dónde fue, y vuelve a sentir los pies en el suelo."
+    },
+    {
+      "s": 309.01,
+      "e": 311.59,
+      "t": "Ahora amplía la atención a los sentidos."
+    },
+    {
+      "s": 312.39,
+      "e": 314.38,
+      "t": "Los sonidos a tu alrededor."
+    },
+    {
+      "s": 315.18,
+      "e": 316.73,
+      "t": "El aire sobre la cara."
+    },
+    {
+      "s": 317.53,
+      "e": 318.8,
+      "t": "La temperatura."
+    },
+    {
+      "s": 319.6,
+      "e": 322.21,
+      "t": "Mira los colores, las formas, la luz."
+    },
+    {
+      "s": 323.01,
+      "e": 326.52,
+      "t": "Como si fuera la primera vez que caminas por este lugar."
+    },
+    {
+      "s": 399.05,
+      "e": 402.85,
+      "t": "Sincroniza, si quieres, la respiración con los pasos."
+    },
+    {
+      "s": 403.65,
+      "e": 407.88,
+      "t": "Por ejemplo, tres pasos al inhalar, y tres o cuatro al exhalar."
+    },
+    {
+      "s": 408.68,
+      "e": 411.71,
+      "t": "Encuentra el ritmo que te resulte natural."
+    },
+    {
+      "s": 484.24,
+      "e": 486.02,
+      "t": "Vuelve a sentir los pies."
+    },
+    {
+      "s": 486.82,
+      "e": 489.25,
+      "t": "Cada paso te trae al presente."
+    },
+    {
+      "s": 537.6,
+      "e": 541.22,
+      "t": "Poco a poco, disminuye la velocidad hasta detenerte."
+    },
+    {
+      "s": 542.02,
+      "e": 544.63,
+      "t": "Quédate de pie un momento, en quietud."
+    },
+    {
+      "s": 547.63,
+      "e": 550.09,
+      "t": "Siente el cuerpo después de caminar."
+    },
+    {
+      "s": 550.89,
+      "e": 553.8,
+      "t": "La energía, el pulso, la respiración."
+    },
+    {
+      "s": 577.98,
+      "e": 584.25,
+      "t": "Puedes volver a caminar así siempre que quieras: hacia el trabajo, al supermercado, por tu casa."
+    },
+    {
+      "s": 585.05,
+      "e": 587.9,
+      "t": "Cualquier camino puede ser una meditación."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

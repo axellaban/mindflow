@@ -122,20 +122,26 @@
   "caminar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1095187,
-    "v": "4edc0c7005"
+    "bytes": 1045483,
+    "v": "525768361224",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "carga-mental": {
     "duration": 390.0,
     "voice": "luz",
-    "bytes": 821771,
-    "v": "3b2a8702b7"
+    "bytes": 780067,
+    "v": "2dc81d8f62f8",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cla-1-entender": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1288599,
-    "v": "1fd2795d1d"
+    "bytes": 1230427,
+    "v": "39c9d65dac4f",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cla-2-anclar": {
     "duration": 600.0,
