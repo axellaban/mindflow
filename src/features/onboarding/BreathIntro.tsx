@@ -11,7 +11,8 @@ const BREATHS = 2;
 /**
  * The very first screen: two slow breaths, nothing else. The scene behind it
  * keeps moving and a soft light grows and fades with each breath. Tapping
- * anywhere (or Enter/Space) continues sooner.
+ * anywhere (or Enter/Space) continues sooner. With reduced motion the same
+ * rhythm stays, carried by light and words only: the light brightens and dims without growing.
  */
 export function BreathIntro({ onDone }: { onDone: () => void }) {
   const reduced = useReducedMotion();
@@ -26,27 +27,26 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
   useEffect(() => {
     const t = setTimeout(
       () => {
-        if (reduced) onDone();
-        else if (phase === 'in') setPhase('out');
+        if (phase === 'in') setPhase('out');
         else if (breaths + 1 >= BREATHS) onDone();
         else {
           setPhase('in');
           setBreaths(breaths + 1);
         }
       },
-      reduced ? 8000 : (phase === 'in' ? INHALE : EXHALE) * 1000,
+      (phase === 'in' ? INHALE : EXHALE) * 1000,
     );
     return () => clearTimeout(t);
-  }, [phase, breaths, reduced, onDone]);
+  }, [phase, breaths, onDone]);
 
-  const word = reduced ? 'Respirá hondo' : phase === 'in' ? 'Inhalá…' : 'Exhalá…';
+  const word = phase === 'in' ? 'Inhalá…' : 'Exhalá…';
 
   return (
+    // no aria-label: the button is named by what it shows ("Inhalá…", "Tocá para continuar")
     <motion.button
       type="button"
       autoFocus
       onClick={onDone}
-      aria-label="Continuar"
       className="absolute inset-0 z-20 cursor-pointer outline-none focus-visible:outline-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -58,9 +58,9 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
         aria-hidden="true"
         className="pointer-events-none absolute top-[28%] left-1/2 size-[min(118vmin,880px)] -translate-x-1/2 -translate-y-1/2 rounded-full mix-blend-screen"
         style={{ background: 'radial-gradient(closest-side, rgb(255 244 220 / 0.55), rgb(255 238 205 / 0.16) 45%, transparent 72%)' }}
-        initial={{ scale: 0.82, opacity: 0.35 }}
-        animate={reduced ? { scale: 1, opacity: 0.6 } : phase === 'in' ? { scale: 1.1, opacity: 0.85 } : { scale: 0.82, opacity: 0.35 }}
-        transition={{ duration: reduced ? 0 : phase === 'in' ? INHALE : EXHALE, ease: EASE_BREATH }}
+        initial={{ scale: reduced ? 1 : 0.82, opacity: 0.35 }}
+        animate={phase === 'in' ? { scale: reduced ? 1 : 1.1, opacity: 0.85 } : { scale: reduced ? 1 : 0.82, opacity: 0.35 }}
+        transition={{ duration: phase === 'in' ? INHALE : EXHALE, ease: EASE_BREATH }}
       />
 
       <span className="pointer-events-none absolute inset-x-0 top-[52%] flex -translate-y-1/2 justify-center">
@@ -78,20 +78,16 @@ export function BreathIntro({ onDone }: { onDone: () => void }) {
         </AnimatePresence>
       </span>
 
-      <AnimatePresence>
-        {(reduced || breaths >= 1) && (
-          <motion.span
-            className="pointer-events-none absolute inset-x-0 bottom-[calc(max(20px,var(--safe-bottom))+20px)] text-center text-[13px] tracking-[0.04em] text-mist-50/55"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 2 }}
-          >
-            <span className="pointer-fine:hidden">Tocá</span>
-            <span className="hidden pointer-fine:inline">Hacé clic</span> para continuar
-          </motion.span>
-        )}
-      </AnimatePresence>
+      {/* always in the button's name; it only fades into view after the first breath */}
+      <motion.span
+        className="pointer-events-none absolute inset-x-0 bottom-[calc(max(20px,var(--safe-bottom))+20px)] text-center text-[13px] tracking-[0.04em] text-mist-50/60"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: breaths >= 1 ? 1 : 0 }}
+        transition={{ duration: 2 }}
+      >
+        <span className="pointer-fine:hidden">Tocá</span>
+        <span className="hidden pointer-fine:inline">Hacé clic</span> para continuar
+      </motion.span>
     </motion.button>
   );
 }

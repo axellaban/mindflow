@@ -14,6 +14,8 @@ interface UIState {
   celebration: AchievementId[];
   checkInOpen: boolean;
   checkInLevel: MoodLevel | null;
+  /** The sound mixer is on screen with its own controls for the playing mix. */
+  mixerOnScreen: boolean;
   toast: (text: string, tone?: Toast['tone']) => void;
   dismissToast: (id: string) => void;
   celebrate: (ids: AchievementId[]) => void;
@@ -26,6 +28,7 @@ export const useUI = create<UIState>()((set, get) => ({
   celebration: [],
   checkInOpen: false,
   checkInLevel: null,
+  mixerOnScreen: false,
   toast: (text, tone = 'default') => {
     const t = { id: uid(), text, tone };
     set({ toasts: [...get().toasts.slice(-2), t] });

@@ -61,10 +61,11 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
   );
   const p = PALETTES[scene.palette];
   const horizon = scene.motif ? horizonFor(scene.motif) : HORIZON[scene.layout];
+  const lightRef = useRef<HTMLCanvasElement>(null);
   const backRef = useRef<HTMLCanvasElement>(null);
   const frontRef = useRef<HTMLCanvasElement>(null);
   const auroraRef = useRef<HTMLCanvasElement>(null);
-  useParticles(scene, horizon, ratio, paused, backRef, frontRef, auroraRef);
+  useParticles(scene, horizon, ratio, paused, { light: lightRef, back: backRef, front: frontRef, aurora: auroraRef });
 
   return (
     <div
@@ -82,6 +83,7 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
         {scene.layout === 'aurora' && (
           <canvas ref={auroraRef} className="pointer-events-none absolute inset-0 h-full w-full" style={{ filter: 'blur(24px)' }} />
         )}
+        <canvas ref={lightRef} className="pointer-events-none absolute inset-0 h-full w-full" />
         <canvas ref={backRef} className="pointer-events-none absolute inset-0 h-full w-full" />
         <div className="absolute inset-0">
           <Landscape spec={spec} ratio={ratio} uid={uid} noStars skyless detail="scene" />
@@ -158,14 +160,20 @@ function glowSprite(color: string, size = 64): HTMLCanvasElement {
   return c;
 }
 
+type CanvasRef = RefObject<HTMLCanvasElement | null>;
+
+/**
+ * The scene's life, drawn only as sharp and as often as it needs: a soft half-resolution light
+ * layer (the sun's glow and rays), a back layer (stars, clouds), a front layer (shimmer, birds,
+ * weather) and the blurred aurora, plus the moving parts of the drawing itself. Everything runs on
+ * one gentle tick (20 fps, 30 with falling weather); the slowest parts take turns at 10 fps.
+ */
 function useParticles(
   scene: SceneDef,
   horizon: number,
   ratio: number,
   paused: boolean | undefined,
-  backRef: RefObject<HTMLCanvasElement | null>,
-  frontRef: RefObject<HTMLCanvasElement | null>,
-  auroraRef: RefObject<HTMLCanvasElement | null>,
+  refs: { light: CanvasRef; back: CanvasRef; front: CanvasRef; aurora: CanvasRef },
 ): void {
   const pausedRef = useRef(paused);
   pausedRef.current = paused;
@@ -183,18 +191,29 @@ function useParticles(
   }, [ratio]);
 
   useEffect(() => {
-    const back = backRef.current;
-    const front = frontRef.current;
-    if (!back || !front) return;
+    const light = refs.light.current;
+    const back = refs.back.current;
+    const front = refs.front.current;
+    if (!light || !back || !front) return;
+    const lctx = light.getContext('2d');
     const bctx = back.getContext('2d');
     const fctx = front.getContext('2d');
-    if (!bctx || !fctx) return;
-    const auroraCanvas = auroraRef.current;
+    if (!lctx || !bctx || !fctx) return;
+    const auroraCanvas = refs.aurora.current;
     const actx = auroraCanvas?.getContext('2d') ?? null;
     const p = PALETTES[scene.palette];
     const kinds = new Set(scene.particles);
+    // With "reduce motion" the scene keeps breathing through light only: glows, twinkles and
+    // shimmer still fade in and out, clouds barely drift, and nothing sways, falls or flies.
     const reduced = prefersReducedMotion();
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+    const dpr = window.devicePixelRatio || 1;
+    // stars need a little sharpness; clouds are soft and look the same at 1x
+    const backScale = kinds.has('stars') ? Math.min(dpr, 1.5) : 1;
+    const frontScale = Math.min(dpr, 1.25);
+    const busyWeather = kinds.has('rain') || kinds.has('snow') || kinds.has('embers') || kinds.has('petals');
+    // One calm tick for every layer, so the page composes one frame per tick and the browser
+    // sleeps in between: 20 fps is plenty for drifting light (rain and snow need a bit more).
+    const tickMs = reduced ? 100 : busyWeather ? 1000 / 30 : 1000 / 20;
     let w = 0;
     let h = 0;
     let stars: Star[] = [];
@@ -223,6 +242,43 @@ function useParticles(
     let birds: Bird[] = [];
     let nextBirds = 3 + Math.random() * 5;
     let sun: { x: number; y: number; r: number; moon: boolean } | null = null;
+
+    // The drawing's living parts: palms sway around their crown, the waterline comes and goes,
+    // the open sea rolls and tree rows lean in the wind. They move from this loop at a calm
+    // 10 fps; CSS animations would repaint the whole drawing on every display frame.
+    type LivingKind = 'palm' | 'tide' | 'wash' | 'swell' | 'wind';
+    type Living = { el: SVGGraphicsElement; kind: LivingKind; period: number; delay: number };
+    const PERIOD: Record<LivingKind, number> = { palm: 7, tide: 5, wash: 8, swell: 9, wind: 10 };
+    let living: Living[] = [];
+    const findLiving = () => {
+      const root = front.parentElement;
+      if (!root) return;
+      living = [...root.querySelectorAll<SVGGraphicsElement>('.palm-sway, .tide, .wash, .swell, .wind')].map((el) => {
+        const c = el.classList;
+        const kind: LivingKind = c.contains('palm-sway') ? 'palm' : c.contains('tide') ? 'tide' : c.contains('wash') ? 'wash' : c.contains('swell') ? 'swell' : 'wind';
+        return { el, kind, period: Number(el.dataset.period) || PERIOD[kind], delay: Number(el.dataset.delay) || 0 };
+      });
+    };
+    const moveLiving = () => {
+      for (const l of living) {
+        const u = (t - l.delay) / l.period;
+        // there and back again, easing in and out like a breath
+        const e = 0.5 - 0.5 * Math.cos(Math.PI * u);
+        const st = l.el.style;
+        if (l.kind === 'tide') {
+          st.opacity = (0.45 + 0.45 * e).toFixed(3);
+          if (!reduced) st.transform = `translateY(${(5 * e).toFixed(2)}px)`;
+        } else if (l.kind === 'wash') {
+          const s = 0.5 - 0.5 * Math.cos(2 * Math.PI * u);
+          st.opacity = (0.35 + 0.65 * s).toFixed(3);
+          if (!reduced) st.transform = `translateY(${(-7 * s).toFixed(2)}px)`;
+        } else if (!reduced) {
+          if (l.kind === 'palm') st.transform = `rotate(${(-2.6 + 5.6 * e).toFixed(2)}deg)`;
+          else if (l.kind === 'swell') st.transform = `translate(${(-8 + 16 * e).toFixed(2)}px, ${(1 - 2 * e).toFixed(2)}px)`;
+          else st.transform = `skewX(${(-1.1 + 2.7 * e).toFixed(2)}deg)`;
+        }
+      }
+    };
     const raySprite = (() => {
       const c = document.createElement('canvas');
       c.width = 256;
@@ -272,8 +328,10 @@ function useParticles(
     const build = () => {
       w = front.clientWidth;
       h = front.clientHeight;
-      size(back, bctx, dpr);
-      size(front, fctx, dpr);
+      findLiving();
+      size(light, lctx, 0.5);
+      size(back, bctx, backScale);
+      size(front, fctx, frontScale);
       if (auroraCanvas && actx) size(auroraCanvas, actx, 0.5);
       const area = (w * h) / 10000;
       stars = kinds.has('stars')
@@ -396,39 +454,45 @@ function useParticles(
     };
 
     let last = performance.now();
-    let acc = 0;
     let t = 0;
     let raf = 0;
+    let timer = 0;
+    let running = false;
+    let ticks = 0;
     let visible = true;
+
+    // the sun's (or moon's) light breathes and throws slow, soft rays
+    const drawLight = () => {
+      lctx.clearRect(0, 0, w, h);
+      if (!sun) return;
+      const breathe = 0.5 + 0.5 * Math.sin((t * Math.PI * 2) / 10);
+      lctx.globalCompositeOperation = 'lighter';
+      const reach = sun.r * (sun.moon ? 6 : 8);
+      const glow = lctx.createRadialGradient(sun.x, sun.y, sun.r * 0.8, sun.x, sun.y, reach);
+      glow.addColorStop(0, rgba(p.glow, (sun.moon ? 0.08 : 0.12) + 0.07 * breathe));
+      glow.addColorStop(1, rgba(p.glow, 0));
+      lctx.fillStyle = glow;
+      lctx.fillRect(sun.x - reach, sun.y - reach, reach * 2, reach * 2);
+      if (!sun.moon && !p.night) {
+        const len = Math.max(w, h) * 0.75;
+        const spread = sun.r * 5;
+        for (let i = 0; i < 7; i++) {
+          lctx.globalAlpha = 0.035 + 0.045 * (0.5 + 0.5 * Math.sin(t * 0.3 + i * 1.7));
+          lctx.save();
+          lctx.translate(sun.x, sun.y);
+          lctx.rotate((i / 7) * Math.PI * 2 + (reduced ? 0 : t * 0.012) + 0.3);
+          lctx.drawImage(raySprite, 0, -spread / 2, len, spread);
+          lctx.restore();
+        }
+        lctx.globalAlpha = 1;
+      }
+      lctx.globalCompositeOperation = 'source-over';
+    };
 
     const drawBack = (dt: number) => {
       bctx.clearRect(0, 0, w, h);
-      if (sun) {
-        const breathe = reduced ? 0.5 : 0.5 + 0.5 * Math.sin((t * Math.PI * 2) / 10);
-        bctx.globalCompositeOperation = 'lighter';
-        const reach = sun.r * (sun.moon ? 6 : 8);
-        const glow = bctx.createRadialGradient(sun.x, sun.y, sun.r * 0.8, sun.x, sun.y, reach);
-        glow.addColorStop(0, rgba(p.glow, (sun.moon ? 0.08 : 0.12) + 0.07 * breathe));
-        glow.addColorStop(1, rgba(p.glow, 0));
-        bctx.fillStyle = glow;
-        bctx.fillRect(sun.x - reach, sun.y - reach, reach * 2, reach * 2);
-        if (!sun.moon && !p.night) {
-          const len = Math.max(w, h) * 0.75;
-          const spread = sun.r * 5;
-          for (let i = 0; i < 7; i++) {
-            bctx.globalAlpha = reduced ? 0.05 : 0.035 + 0.045 * (0.5 + 0.5 * Math.sin(t * 0.3 + i * 1.7));
-            bctx.save();
-            bctx.translate(sun.x, sun.y);
-            bctx.rotate((i / 7) * Math.PI * 2 + t * 0.012 + 0.3);
-            bctx.drawImage(raySprite, 0, -spread / 2, len, spread);
-            bctx.restore();
-          }
-          bctx.globalAlpha = 1;
-        }
-        bctx.globalCompositeOperation = 'source-over';
-      }
       for (const s of stars) {
-        const tw = reduced ? 1 : 0.55 + 0.45 * Math.sin(t * s.s + s.ph);
+        const tw = 0.55 + 0.45 * Math.sin(t * s.s + s.ph);
         bctx.globalAlpha = s.a * tw;
         bctx.fillStyle = '#ffffff';
         bctx.beginPath();
@@ -486,10 +550,8 @@ function useParticles(
       }
       // clouds pass in front of the stars and the sun's glow
       for (const c of clouds) {
-        if (!reduced) {
-          c.x += c.v * dt;
-          if (c.x > w) c.x = -c.sprite.width;
-        }
+        c.x += c.v * dt * (reduced ? 0.3 : 1);
+        if (c.x > w) c.x = -c.sprite.width;
         bctx.globalAlpha = c.a;
         bctx.drawImage(c.sprite, c.x, c.y);
       }
@@ -537,10 +599,10 @@ function useParticles(
         }
       }
       for (const s of shimmer) {
-        const tw = reduced ? 0.6 : 0.5 + 0.5 * Math.sin(t * s.s + s.ph);
+        const tw = 0.5 + 0.5 * Math.sin(t * s.s + s.ph);
         fctx.globalAlpha = s.a * tw;
         fctx.fillStyle = p.celestial;
-        fctx.fillRect(s.x - s.r / 2 + Math.sin(t * 0.4 + s.ph) * 4, s.y, s.r, 1.1);
+        fctx.fillRect(s.x - s.r / 2 + (reduced ? 0 : Math.sin(t * 0.4 + s.ph) * 4), s.y, s.r, 1.1);
       }
       fctx.globalAlpha = 1;
       if (rain.length) {
@@ -645,7 +707,7 @@ function useParticles(
               m.x = Math.random() * w;
             }
           }
-          fctx.globalAlpha = m.a * (reduced ? 0.7 : 0.55 + 0.45 * Math.sin(t * 0.5 + m.ph));
+          fctx.globalAlpha = m.a * (0.55 + 0.45 * Math.sin(t * 0.5 + m.ph));
           const d = m.r * 7;
           fctx.drawImage(moteSprite, m.x - d / 2, m.y - d / 2, d, d);
         }
@@ -660,8 +722,8 @@ function useParticles(
             f.x += Math.sin(t * 0.3 + f.ph) * 10 * dt;
             f.y += Math.cos(t * 0.23 + f.ph * 1.7) * 6 * dt;
           }
-          const blink = Math.max(0, Math.sin((f.life / f.max) * Math.PI * 2));
-          fctx.globalAlpha = reduced ? 0.4 : Math.pow(blink, 2) * 0.9;
+          const blink = Math.max(0, Math.sin(((reduced ? t : f.life) / f.max) * Math.PI * 2 + (reduced ? f.ph : 0)));
+          fctx.globalAlpha = Math.pow(blink, 2) * 0.9;
           fctx.drawImage(flySprite, f.x - 9, f.y - 9, 18, 18);
         }
         fctx.globalCompositeOperation = 'source-over';
@@ -671,23 +733,43 @@ function useParticles(
 
     const draw = (dt: number) => {
       t += dt;
+      drawLight();
       drawBack(dt);
       drawFront(dt);
+      moveLiving();
     };
 
     const frame = (now: number) => {
+      raf = 0;
       if (pausedRef.current) {
-        raf = 0;
+        running = false;
         return;
       }
-      raf = requestAnimationFrame(frame);
-      const dt = Math.min(0.1, (now - last) / 1000);
+      const dt = Math.max(0, Math.min(0.25, (now - last) / 1000));
       last = now;
-      if (!visible || document.hidden) return;
-      acc += dt;
-      if (acc < 1 / 32) return;
-      draw(acc);
-      acc = 0;
+      if (visible && !document.hidden) {
+        t += dt;
+        ticks++;
+        drawBack(dt);
+        drawFront(dt);
+        // slow things take turns on alternate ticks (10 fps each): the sun's light, and the
+        // drawing's palms, tide and swell, whose every change repaints the whole drawing
+        if (ticks % 2 === 0 || reduced) moveLiving();
+        if (ticks % 2 === 1 || reduced) drawLight();
+      }
+      // wait for the next tick without asking the browser for frames in between;
+      // off screen, just check back now and then
+      const wait = visible ? tickMs - (performance.now() - now) - 6 : 400;
+      timer = window.setTimeout(() => {
+        timer = 0;
+        raf = requestAnimationFrame(frame);
+      }, Math.max(0, wait));
+    };
+    const start = () => {
+      if (running) return;
+      running = true;
+      last = performance.now();
+      raf = requestAnimationFrame(frame);
     };
 
     build();
@@ -705,18 +787,15 @@ function useParticles(
       build();
       draw(0);
     };
-    resumeRef.current = () => {
-      if (raf || reduced) return;
-      last = performance.now();
-      raf = requestAnimationFrame(frame);
-    };
-    if (!reduced) raf = requestAnimationFrame(frame);
+    resumeRef.current = start;
+    start();
     return () => {
       resumeRef.current = () => {};
       rebuildRef.current = () => {};
       cancelAnimationFrame(raf);
+      clearTimeout(timer);
       ro.disconnect();
       io.disconnect();
     };
-  }, [scene, horizon, backRef, frontRef, auroraRef]);
+  }, [scene, horizon, refs.light, refs.back, refs.front, refs.aurora]);
 }

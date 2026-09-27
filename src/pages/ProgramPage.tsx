@@ -77,7 +77,10 @@ export function ProgramPage() {
           {cta.label}
         </Button>
 
-        <ol className="mt-8 space-y-1.5">
+        <h2 className="mt-9 mb-2 px-1 font-display text-[22px] leading-tight">
+          {total} {program.unit === 'Día' ? 'días' : 'noches'}, una práctica por {program.unit === 'Día' ? 'día' : 'noche'}
+        </h2>
+        <ol className="space-y-1.5">
           {program.sessions.map((sid, i) => {
             const s = SESSION_BY_ID[sid];
             if (!s) return null;

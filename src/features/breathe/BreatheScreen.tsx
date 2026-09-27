@@ -48,7 +48,7 @@ export function BreatheScreen() {
   };
 
   return (
-    <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
+    <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
       <motion.div
         className="absolute inset-0"
         animate={{
@@ -89,7 +89,7 @@ export function BreatheScreen() {
           <Done key="done" pattern={pattern} result={result} onAgain={() => setStage('run')} onClose={exit} />
         )}
       </AnimatePresence>
-    </div>
+    </main>
   );
 }
 
@@ -145,6 +145,7 @@ function Setup({
                 key={p.id}
                 type="button"
                 {...press}
+                aria-pressed={active}
                 onClick={() => {
                   haptic(6);
                   onPattern(p.id);
@@ -223,12 +224,12 @@ function Runner({
   const glow = useTransform(scale, [MIN_SCALE, 1.1], [0.25, 0.85]);
   const ringScale = useTransform(scale, (s) => s * 1.28);
   const [phaseIdx, setPhaseIdx] = useState(0);
-  const [phaseLeft, setPhaseLeft] = useState(pattern.phases[0]!.seconds);
+  const [phaseLeft, setPhaseLeft] = useState(Math.ceil(pattern.phases[0]!.seconds));
   const [elapsed, setElapsed] = useState(0);
   const [paused, setPaused] = useState(false);
   const [countIn, setCountIn] = useState(2);
   const toneRef = useRef<BreathTone | null>(null);
-  const state = useRef({ elapsed: 0, phase: 0, phaseT: 0, from: MIN_SCALE, cycles: 0, last: 0 });
+  const state = useRef({ elapsed: 0, phase: 0, phaseT: 0, from: MIN_SCALE, cycles: 0, last: 0, shownLeft: 0 });
   const palette = PALETTES[pattern.palette];
   const logPractice = useAppStore((s) => s.logPractice);
 
@@ -306,7 +307,12 @@ function Runner({
       } else {
         scale.set(s.from * (1 + 0.012 * Math.sin(s.phaseT * 3)));
       }
-      setPhaseLeft(Math.max(0, ph.seconds - s.phaseT));
+      // re-render only when the visible count changes, not on every frame
+      const left = Math.ceil(Math.max(0, ph.seconds - s.phaseT));
+      if (left !== s.shownLeft) {
+        s.shownLeft = left;
+        setPhaseLeft(left);
+      }
       if (Math.floor(s.elapsed * 4) !== Math.floor((s.elapsed - dt) * 4)) setElapsed(s.elapsed);
       if (s.phaseT >= ph.seconds) {
         const nextIdx = (s.phase + 1) % pattern.phases.length;
@@ -384,7 +390,11 @@ function Runner({
             boxShadow: `0 0 90px 10px ${rgba(palette.accent[1], 0.35)}, inset 0 -30px 60px ${rgba(palette.sky[0], 0.35)}`,
           }}
         />
-        <div className="pointer-events-none absolute flex flex-col items-center text-ink-900">
+        {/* screen readers hear each phase as it begins */}
+        <p className="sr-only" aria-live="polite">
+          {countIn > 0 ? 'Acomodate' : phase.label}
+        </p>
+        <div className="pointer-events-none absolute flex flex-col items-center text-ink-900" aria-hidden="true">
           <AnimatePresence mode="wait">
             {countIn > 0 ? (
               <motion.span
@@ -407,7 +417,7 @@ function Runner({
                 className="flex flex-col items-center"
               >
                 <span className="font-display text-[30px] leading-none text-ink-900/85">{phase.label}</span>
-                <span className="mt-2 text-[15px] font-semibold text-ink-900/55 tabular-nums">{Math.ceil(phaseLeft)}</span>
+                <span className="mt-2 text-[15px] font-semibold text-ink-900/55 tabular-nums">{phaseLeft}</span>
               </motion.div>
             )}
           </AnimatePresence>
@@ -415,9 +425,14 @@ function Runner({
       </div>
 
       <div className="flex w-full max-w-md flex-col items-center gap-5 px-6 pb-4">
-        <p className="text-[14px] text-2">
-          {pattern.name} · {pattern.short} · {new Intl.NumberFormat('es', { maximumFractionDigits: 1 }).format(60 / cycle)} resp/min
-        </p>
+        <div className="text-center">
+          <p className="text-[14px] text-2">
+            {pattern.name} · <span className="tabular-nums">{pattern.short}</span>
+          </p>
+          <p className="mt-0.5 text-[12.5px] text-3">
+            {new Intl.NumberFormat('es', { maximumFractionDigits: 1 }).format(60 / cycle)} respiraciones por minuto
+          </p>
+        </div>
         <motion.button
           type="button"
           {...press}

@@ -29,10 +29,12 @@ export function PageHeader({
         )}
         {action}
       </div>
-      <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
-        <h1 className="mt-3 font-display text-[40px] leading-[1.02] md:text-[52px]">{title}</h1>
-        {subtitle && <p className="mt-2 text-[15px] text-2">{subtitle}</p>}
-      </motion.div>
+      {(title || subtitle) && (
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
+          {title && <h1 className="mt-3 font-display text-[40px] leading-[1.02] md:text-[52px]">{title}</h1>}
+          {subtitle && <p className="mt-2 text-[15px] text-2">{subtitle}</p>}
+        </motion.div>
+      )}
     </header>
   );
 }

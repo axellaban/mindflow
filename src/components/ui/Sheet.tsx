@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useDragControls } from 'motion/react';
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils';
 import { EASE, SPRING_SOFT } from '@/lib/motion';
@@ -9,27 +9,62 @@ interface SheetProps {
   onClose: () => void;
   children: ReactNode;
   title?: string;
+  /** Accessible name when the sheet has no visible title. */
+  label?: string;
   className?: string;
   /** Wider centered dialog on desktop */
   size?: 'sm' | 'md' | 'lg';
 }
 
 const WIDTHS = { sm: 'md:max-w-md', md: 'md:max-w-lg', lg: 'md:max-w-2xl' };
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export function Sheet({ open, onClose, children, title, className, size = 'md' }: SheetProps) {
+export function Sheet({ open, onClose, children, title, label, className, size = 'md' }: SheetProps) {
   const controls = useDragControls();
+  const panelRef = useRef<HTMLDivElement>(null);
+  // callers pass inline handlers; keep the latest without re-running the focus effect
+  const closeRef = useRef(onClose);
+  closeRef.current = onClose;
 
+  // Focus moves into the sheet, stays there while it is open and goes back where it was after.
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const before = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeRef.current();
+        return;
+      }
+      const panel = panelRef.current;
+      if (e.key !== 'Tab' || !panel) return;
+      const items = [...panel.querySelectorAll<HTMLElement>(FOCUSABLE)];
+      if (!items.length) return;
+      const first = items[0]!;
+      const last = items[items.length - 1]!;
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === panel)) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [open, onClose]);
+    const t = window.setTimeout(() => {
+      const panel = panelRef.current;
+      if (panel && !panel.contains(document.activeElement)) panel.focus({ preventScroll: true });
+    }, 60);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      clearTimeout(t);
+      if (before?.isConnected) before.focus({ preventScroll: true });
+    };
+  }, [open]);
 
   return createPortal(
     <AnimatePresence>
       {open && (
-        <div className="fixed inset-0 z-[80] flex items-end justify-center md:items-center" role="dialog" aria-modal="true" aria-label={title}>
+        <div className="fixed inset-0 z-[80] flex items-end justify-center md:items-center" role="dialog" aria-modal="true" aria-label={title ?? label}>
           <motion.div
             className="absolute inset-0 bg-ink-950/70"
             initial={{ opacity: 0 }}
@@ -39,8 +74,10 @@ export function Sheet({ open, onClose, children, title, className, size = 'md' }
             onClick={onClose}
           />
           <motion.div
+            ref={panelRef}
+            tabIndex={-1}
             className={cn(
-              'relative z-10 flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-[32px] border border-white/10 bg-ink-800 shadow-[0_-20px_60px_-20px_rgb(0_0_0/0.6)] md:rounded-[32px]',
+              'relative z-10 flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-[32px] border border-white/10 bg-ink-800 shadow-[0_-20px_60px_-20px_rgb(0_0_0/0.6)] outline-none md:rounded-[32px]',
               WIDTHS[size],
               className,
             )}

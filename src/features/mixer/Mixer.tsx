@@ -1,6 +1,6 @@
 import { Bookmark, Moon, Pause, Play, Trash2, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CoverArt } from '@/art/CoverArt';
 import { Button, IconButton } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
@@ -45,7 +45,7 @@ function artForMix(mix: Mix): ArtSpec {
       return { palette: 'snow', motif: 'mountains', seed };
     case 'ronroneo':
     case 'ventilador':
-      return { palette: 'lavender', motif: 'moon', seed };
+      return { palette: 'mist', motif: 'moon', seed };
     default:
       return { palette: 'mist', motif: 'hills', seed };
   }
@@ -78,6 +78,11 @@ export function Mixer() {
   const [saving, setSaving] = useState(false);
   const [timerOpen, setTimerOpen] = useState(false);
   const [name, setName] = useState('');
+
+  useEffect(() => {
+    useUI.setState({ mixerOnScreen: true });
+    return () => useUI.setState({ mixerOnScreen: false });
+  }, []);
 
   const mix: Mix = item?.type === 'mix' ? item.mix : {};
   const active = Object.keys(mix) as SoundId[];
@@ -117,9 +122,9 @@ export function Mixer() {
 
   return (
     <div>
-      {/* now playing bar */}
-      <div className="px-5 md:px-0">
-        <motion.div layout className="glass flex items-center gap-3 rounded-[28px] p-3">
+      {/* now playing bar: stays at hand while the list scrolls */}
+      <div className="sticky top-[max(10px,var(--safe-top))] z-20 px-5 md:px-0">
+        <motion.div layout className="glass-strong flex items-center gap-3 rounded-[28px] p-3 shadow-[0_18px_40px_-24px_rgb(0_0_0/0.9)]">
           <div className="relative size-14 shrink-0 overflow-hidden rounded-2xl">
             {active.length ? (
               <CoverArt spec={artForMix(mix)} rounded="rounded-2xl" className="size-14" grain={false} />
@@ -132,15 +137,15 @@ export function Mixer() {
           <div className="min-w-0 flex-1">
             <p className="truncate text-[15px] font-semibold">{active.length ? mixName(mix) : 'Creá tu paisaje sonoro'}</p>
             <p className="truncate text-[13px] text-3">
-              {active.length ? `${active.length} ${active.length === 1 ? 'sonido' : 'sonidos'} · ${playing ? 'sonando' : 'en pausa'}` : 'Tocá los sonidos para combinarlos'}
+              {active.length ? `${active.length} ${active.length === 1 ? 'sonido' : 'sonidos'}${playing ? '' : ' · en pausa'}` : 'Tocá los sonidos para combinarlos'}
             </p>
           </div>
           {active.length > 0 && (
             <>
-              <IconButton label="Temporizador" variant="plain" onClick={() => setTimerOpen(true)} className={cn(Boolean(sleepTimerEnd) && 'text-blush-300')}>
+              <IconButton label="Temporizador" variant="plain" size="sm" onClick={() => setTimerOpen(true)} className={cn('size-10', Boolean(sleepTimerEnd) && 'text-blush-300')}>
                 <Moon className="size-5" />
               </IconButton>
-              <IconButton label="Guardar mezcla" variant="plain" onClick={() => setSaving(true)}>
+              <IconButton label="Guardar mezcla" variant="plain" size="sm" onClick={() => setSaving(true)} className="size-10">
                 <Bookmark className="size-5" />
               </IconButton>
               <motion.button
@@ -287,7 +292,7 @@ export function Mixer() {
           }}
         >
           <label className="mb-2 block text-[14px] text-2" htmlFor="mix-name">
-            Ponle un nombre
+            Ponele un nombre
           </label>
           <div className="relative">
             <input

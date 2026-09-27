@@ -4,7 +4,7 @@ import type { AchievementId } from '@/content/achievements';
 import type { EliPlacement } from '@/content/eli';
 import { PROGRAMS, SESSION_BY_ID } from '@/content/catalog';
 import type { MoodLevel } from '@/content/journal';
-import type { SceneId } from '@/content/scenes';
+import type { SceneChoice } from '@/content/scenes';
 import type { BedId, GoalId, Mix } from '@/content/types';
 import { currentStreak, practiceDays, totalMinutes } from '@/lib/stats';
 import { dayKey } from '@/lib/time';
@@ -55,7 +55,7 @@ export interface Settings {
   captions: boolean;
   haptics: boolean;
   keepAwake: boolean;
-  sceneId: SceneId;
+  sceneId: SceneChoice;
   sceneSound: boolean;
   reminderTime: string | null;
   sleepFadeMinutes: number;
@@ -132,7 +132,7 @@ const DEFAULTS: Data = {
     captions: false,
     haptics: true,
     keepAwake: true,
-    sceneId: 'playa',
+    sceneId: 'auto',
     sceneSound: false,
     reminderTime: null,
     sleepFadeMinutes: 20,
@@ -311,15 +311,17 @@ export const useAppStore = create<AppState>()(
     },
     {
       name: STORAGE_KEY,
-      version: 3,
+      version: 4,
       // The default home scene went from the pink "jardin" (v1) to the green lake "calma" (v2) to the
-      // beach "playa" (v3). Almost everyone on an old default just kept it (a deliberate pick can't be
-      // told apart), so move them to the current one.
+      // beach at dawn "playa" (v3) to the beach following the time of day "auto" (v4). Almost everyone
+      // on an old default just kept it (a deliberate pick can't be told apart), so move them along.
       migrate: (persisted, version) => {
         const s = (persisted ?? {}) as Partial<Data>;
-        const scene = s.settings?.sceneId;
-        if (s.settings && ((version < 2 && scene === 'jardin') || (version < 3 && scene === 'calma'))) {
-          s.settings = { ...s.settings, sceneId: 'playa' };
+        const scene = s.settings?.sceneId as string | undefined;
+        const onOldDefault =
+          (version < 2 && scene === 'jardin') || (version < 3 && scene === 'calma') || (version < 4 && scene === 'playa');
+        if (s.settings && onOldDefault) {
+          s.settings = { ...s.settings, sceneId: 'auto' };
         }
         return s as Data;
       },

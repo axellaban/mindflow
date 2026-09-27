@@ -117,7 +117,13 @@ export function EliPage() {
 
       <motion.section {...rise} className="mt-12">
         <h2 className="px-5 font-display text-[26px] leading-tight md:px-0">Lo que dicen quienes practicaron con Eli</h2>
-        <div className="no-scrollbar snap-row mt-4 flex gap-3 overflow-x-auto px-5 pb-2 md:grid md:grid-cols-3 md:px-0">
+        {/* focusable so the row can also be scrolled from the keyboard */}
+        <div
+          className="no-scrollbar snap-row mt-4 flex gap-3 overflow-x-auto px-5 pb-2 md:grid md:grid-cols-3 md:px-0"
+          tabIndex={0}
+          role="region"
+          aria-label="Testimonios"
+        >
           {ELI.testimonials.map((t) => (
             <figure key={t} className="glass w-[78%] shrink-0 rounded-3xl p-5 md:w-auto">
               <Quote className="size-5 text-blush-300" />

@@ -16,8 +16,10 @@ Además de acompañar la práctica diaria, la app es la puerta de entrada a las 
 | **Respirar, temporizador, sonidos** | 6 patrones de respiración guiada; meditación en silencio con campanas; mezclador de 17 sonidos y 9 pistas de música generativa. |
 | **Diario y progreso** | Check-in de ánimo con emociones (y una práctica recomendada según cómo estás), preguntas de reflexión, gráfico de ánimo, racha, calendario, 15 logros y favoritos. |
 | **Personalización** | Onboarding con la presentación de Eli y la pregunta de su formulario (*¿Qué es lo que más te cuesta hoy?*): estrés, mente acelerada, autoexigencia, descanso, culpa… Con eso se arman el plan y las recomendaciones. |
-| **Eli** | Página propia (`/eli`, se puede compartir desde Instagram), invitaciones a sesiones 1:1 y al workshop, y WhatsApp directo con un primer mensaje ya escrito. |
-| **PWA** | Instalable en iOS, Android y escritorio; funciona offline; recordatorio diario vía calendario (.ics); exportar/importar datos. |
+| **Escenas** | La playa del inicio sigue la luz del día (amanecer, mediodía, atardecer y noche con luna y estrellas) y está viva: palmeras con viento, marea, nubes, luz del sol, reflejos y pájaros. Con "Reducir movimiento" solo cambia la luz. También se puede fijar cualquiera de las 14 escenas. |
+| **Eli** | Página propia (`/eli`, con su foto en la vista previa al compartirla por Instagram o WhatsApp), invitaciones a sesiones 1:1 y al workshop, y WhatsApp directo con un primer mensaje ya escrito. |
+| **PWA** | Instalable en iOS, Android y escritorio; funciona offline; se actualiza sola sin cortar nunca una práctica; recordatorio diario vía calendario (.ics); exportar/importar datos. |
+| **Accesibilidad** | Contraste AA, lector de pantalla (diálogos con foco, fases de respiración anunciadas, títulos por pantalla), teclado en el reproductor y respeto por "Reducir movimiento". |
 
 La interfaz habla con voseo, como Eli. Las narraciones usan una voz neuronal de acento neutro (*Luz*), en femenino hacia quien escucha.
 
@@ -35,7 +37,7 @@ Todo lo editable está en **`src/content/eli.ts`**: links, número de WhatsApp, 
   - Como tarjeta en el inicio y en el perfil.
   - En el avatar del encabezado, en la barra lateral de escritorio y en Ajustes.
 - "Ahora no" pospone cada invitación (7 a 30 días según el lugar). Si la usuaria ya tocó un link de Eli, las invitaciones automáticas descansan unos días.
-- **Fotos**: `public/eli/eli.jpg` (retrato 4:5) y `public/eli/eli-avatar.jpg` (cuadrada). Hoy son recortes de las fotos de su sitio; reemplazalas por originales en alta resolución con el mismo nombre.
+- **Fotos**: `public/eli/eli.webp` (retrato 4:5, ~440 px de ancho) y `public/eli/eli-avatar.webp` (cuadrada, 160 px). Hoy son recortes de las fotos de su sitio; reemplazalas por originales en WebP con el mismo nombre (la vista previa para compartir `/eli` se regenera con `tools/brand`).
 
 ## Stack
 
@@ -57,6 +59,8 @@ npm run preview    # sirve dist/ (con service worker)
 ## Despliegue
 
 Es un sitio estático (`dist/`). Incluye configuración para **Vercel** (`vercel.json`) y **Netlify** (`netlify.toml`): ambos resuelven las rutas de la SPA hacia `index.html`. En cualquier otro hosting, configurá el fallback de rutas a `index.html`.
+
+El build genera además `robots.txt`, `sitemap.xml` y `eli/index.html` (la misma app con el título, la descripción y la imagen de Eli para las vistas previas de `/eli`). Las URLs absolutas salen de `SITE_URL` o, en Vercel, del dominio de producción del proyecto.
 
 ## Contenido y narraciones
 
@@ -90,7 +94,7 @@ El renderizador genera el MP3, los subtítulos y `src/content/generated/audio-ma
 ## Herramientas internas
 
 - `tools/audio-lab/`: con `npm run dev`, abrí `/tools/audio-lab/` para escuchar cada generador y medir su sonoridad.
-- `tools/brand/`: genera los íconos PWA y la imagen para redes (`node tools/brand/render.mjs` con el servidor de desarrollo activo y Playwright).
+- `tools/brand/`: genera los íconos PWA y las imágenes para redes, la general y la de `/eli` (`node tools/brand/render.mjs` con el servidor de desarrollo activo y Playwright; `ONLY=og-eli` para una sola).
 
 ## Estructura
 

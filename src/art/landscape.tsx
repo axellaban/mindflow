@@ -106,7 +106,7 @@ function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [n
   // the whole row leans a little around its base line, like trees in a light wind
   const base = pts.reduce((sum, q) => sum + q[1], 0) / Math.max(1, pts.length);
   return (
-    <g className="wind" style={{ transformOrigin: `0px ${base.toFixed(1)}px`, animationDuration: `${9 + (key.charCodeAt(1) % 5) * 1.5}s` }}>
+    <g className="wind" data-period={9 + (key.charCodeAt(1) % 5) * 1.5} style={{ transformOrigin: `0px ${base.toFixed(1)}px` }}>
       {out}
     </g>
   );
@@ -169,7 +169,8 @@ function palm(bx: number, by: number, tx: number, ty: number, size: number, colo
       <path d={trunk} fill={color} />
       <g
         className={sway ? 'palm-sway' : undefined}
-        style={sway ? { transformOrigin: `${f1(tx)}px ${f1(ty)}px`, animationDuration: `${period}s` } : undefined}
+        data-period={sway ? period : undefined}
+        style={sway ? { transformOrigin: `${f1(tx)}px ${f1(ty)}px` } : undefined}
       >
         <path d={d} fill={color} />
         <circle cx={f1(tx)} cy={f1(ty + size * 0.015)} r={f1(size * 0.028)} fill={color} />
@@ -392,7 +393,7 @@ function drawMotif(
         const color = mixHex(p.water, p.layers[Math.min(3, i)], 0.5 + t * 0.5);
         bands.push(
           detail === 'scene' ? (
-            <g key={i} className="swell" style={{ animationDuration: `${7 + i * 1.7}s`, animationDelay: `${-i * 1.3}s` }}>
+            <g key={i} className="swell" data-period={7 + i * 1.7} data-delay={-i * 1.3}>
               <path d={d} fill={color} />
             </g>
           ) : (
@@ -612,16 +613,16 @@ function drawMotif(
             <linearGradient id={id('sea')} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor={mixHex(p.water, p.sky[2], 0.35)} />
               <stop offset="0.45" stopColor={p.water} />
-              <stop offset="1" stopColor={mixHex(p.water, '#9fe0d6', 0.5)} />
+              <stop offset="1" stopColor={mixHex(p.water, '#9fe0d6', p.night ? 0.12 : 0.5)} />
             </linearGradient>
-            {/* sand keeps a hint of the palette's light but always reads as sand */}
+            {/* sand keeps a hint of the palette's light but always reads as sand (by moonlight, a silvery one) */}
             <linearGradient id={id('sand')} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor={mixHex(p.layers[2], '#d9bf99', 0.6)} />
-              <stop offset="0.12" stopColor={mixHex(p.layers[1], '#f1dcbc', 0.6)} />
-              <stop offset="1" stopColor={mixHex(mixHex(p.layers[1], p.layers[2], 0.55), '#e2c9a4', 0.6)} />
+              <stop offset="0" stopColor={mixHex(p.layers[2], '#d9bf99', p.night ? 0.12 : 0.6)} />
+              <stop offset="0.12" stopColor={mixHex(p.layers[1], '#f1dcbc', p.night ? 0.12 : 0.6)} />
+              <stop offset="1" stopColor={mixHex(mixHex(p.layers[1], p.layers[2], 0.55), '#e2c9a4', p.night ? 0.12 : 0.6)} />
             </linearGradient>
           </defs>
-          {celestial(p, W / 2, sunY, Math.min(W * 0.055, h * 0.07), id, false)}
+          {celestial(p, W / 2, sunY, Math.min(W * 0.055, h * 0.07), id, p.night)}
           <rect y={horizon} width={W} height={h - horizon} fill={`url(#${id('sea')})`} />
           {/* a low island far away */}
           <path
@@ -638,7 +639,7 @@ function drawMotif(
           })}
           {/* the incoming wave and the shore */}
           {/* the animated groups fade in and out; the lines keep their own, lower opacity inside them */}
-          <g className={scene ? 'tide' : undefined} style={scene ? { animationDuration: '6s' } : undefined}>
+          <g className={scene ? 'tide' : undefined} data-period={scene ? 6 : undefined}>
             <path d={shore(-(shoreY - horizon) * 0.12)} fill="none" stroke={p.accent[0]} strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
           </g>
           <path d={`${shore(0)} L ${W + 10} ${h + 2} L -10 ${h + 2} Z`} fill={`url(#${id('sand')})`} />
@@ -773,7 +774,7 @@ function drawMotif(
           {celestial(p, cx, h * 0.3, W * 0.06, id, p.night)}
           <rect y={h * 0.5} width={W} height={h * 0.5} fill={`url(#${id('haze')})`} />
           {detail === 'scene' ? (
-            <g className="wind" style={{ transformOrigin: `0px ${h}px`, animationDuration: '8s' }}>
+            <g className="wind" data-period={8} style={{ transformOrigin: `0px ${h}px` }}>
               {stalks}
             </g>
           ) : (

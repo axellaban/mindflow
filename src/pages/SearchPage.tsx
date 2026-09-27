@@ -53,11 +53,12 @@ export function SearchPage() {
         <label className="glass flex h-14 items-center gap-3 rounded-full px-5">
           <Search className="size-5 text-3" />
           <input
+            type="search"
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Ansiedad, dormir, respiración…"
-            className="h-full flex-1 bg-transparent text-[16px] outline-none placeholder:text-mist-50/35"
+            className="h-full flex-1 bg-transparent text-[16px] outline-none placeholder:text-mist-50/35 [&::-webkit-search-cancel-button]:hidden"
             enterKeyHint="search"
             aria-label="Buscar"
           />
@@ -84,7 +85,7 @@ export function SearchPage() {
 
       {empty && (
         <p className="mt-12 px-5 text-center text-[15px] text-2">
-          No encontramos nada para “{q}”. Prueba con otra palabra, como <button type="button" className="underline" onClick={() => setQ('calma')}>calma</button>.
+          No encontramos nada para “{q}”. Probá con otra palabra, como <button type="button" className="underline" onClick={() => setQ('calma')}>calma</button>.
         </p>
       )}
 

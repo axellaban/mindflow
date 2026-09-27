@@ -121,6 +121,12 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     }
   };
 
+  /** The background is audible: playing, or still accompanying the end of a sleep session. */
+  const sounding = () => {
+    const st = get().status;
+    return st === 'playing' || st === 'loading' || (st === 'ended' && afterEndTimeout !== null);
+  };
+
   const startBed = (bed: BedId) => {
     engine.setLayersVolume(get().volume, 0.3);
     engine.setMix(BED_BY_ID[bed]?.mix ?? {}, 2.2);
@@ -178,7 +184,7 @@ export const usePlayer = create<PlayerState>()((set, get) => {
     });
     narration.el.addEventListener('error', () => {
       if (get().item?.type === 'session' && narration.el.getAttribute('src')) {
-        set({ status: 'paused', error: 'No pudimos cargar el audio. Revisa tu conexión e inténtalo de nuevo.' });
+        set({ status: 'paused', error: 'No pudimos cargar el audio. Revisá tu conexión e intentá de nuevo.' });
       }
     });
   }
@@ -400,12 +406,12 @@ export const usePlayer = create<PlayerState>()((set, get) => {
 
     setBed: (bed) => {
       set({ bed });
-      if (get().status !== 'paused') engine.setMix(BED_BY_ID[bed]?.mix ?? {}, 1.5);
+      if (sounding()) engine.setMix(BED_BY_ID[bed]?.mix ?? {}, 1.5);
     },
 
     setVolume: (v) => {
       set({ volume: v });
-      if (get().status !== 'paused') engine.setLayersVolume(v, 0.15);
+      if (sounding()) engine.setLayersVolume(v, 0.15);
       if (get().item?.type === 'session') useAppStore.getState().updateSettings({ bedVolume: v });
     },
 

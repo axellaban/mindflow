@@ -3,7 +3,7 @@ import { type ReactNode, Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate, useOutlet, useParams } from 'react-router';
 import { SideNav, TabBar } from '@/components/layout/Nav';
 import { Celebration, Toaster } from '@/components/layout/Overlays';
-import { SESSION_BY_ID } from '@/content/catalog';
+import { CATEGORY_BY_ID, PROGRAM_BY_ID, SESSION_BY_ID } from '@/content/catalog';
 import { CheckInSheet } from '@/features/checkin/CheckInSheet';
 import { Onboarding } from '@/features/onboarding/Onboarding';
 import { MiniPlayer } from '@/features/player/MiniPlayer';
@@ -14,19 +14,48 @@ import { NotFound } from '@/pages/NotFound';
 import { Sleep } from '@/pages/Sleep';
 import { EASE } from '@/lib/motion';
 import { Sounds } from '@/pages/Sounds';
-
-// Secondary screens load on demand (the service worker precaches them after the first visit).
-const BreatheScreen = lazy(() => import('@/features/breathe/BreatheScreen').then((m) => ({ default: m.BreatheScreen })));
-const TimerScreen = lazy(() => import('@/features/timer/TimerScreen').then((m) => ({ default: m.TimerScreen })));
-const Profile = lazy(() => import('@/pages/Profile').then((m) => ({ default: m.Profile })));
-const ProgramPage = lazy(() => import('@/pages/ProgramPage').then((m) => ({ default: m.ProgramPage })));
-const CategoryPage = lazy(() => import('@/pages/CategoryPage').then((m) => ({ default: m.CategoryPage })));
-const SearchPage = lazy(() => import('@/pages/SearchPage').then((m) => ({ default: m.SearchPage })));
-const JournalPage = lazy(() => import('@/pages/JournalPage').then((m) => ({ default: m.JournalPage })));
-const SettingsPage = lazy(() => import('@/pages/SettingsPage').then((m) => ({ default: m.SettingsPage })));
-const EliPage = lazy(() => import('@/pages/EliPage').then((m) => ({ default: m.EliPage })));
 import { useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
+
+// Secondary screens load on demand, then all of them warm up once the app is idle, so moving
+// around is instant and a new version going live can never leave a screen missing.
+const screens = {
+  breathe: () => import('@/features/breathe/BreatheScreen'),
+  timer: () => import('@/features/timer/TimerScreen'),
+  profile: () => import('@/pages/Profile'),
+  program: () => import('@/pages/ProgramPage'),
+  category: () => import('@/pages/CategoryPage'),
+  search: () => import('@/pages/SearchPage'),
+  journal: () => import('@/pages/JournalPage'),
+  settings: () => import('@/pages/SettingsPage'),
+  eli: () => import('@/pages/EliPage'),
+};
+const BreatheScreen = lazy(() => screens.breathe().then((m) => ({ default: m.BreatheScreen })));
+const TimerScreen = lazy(() => screens.timer().then((m) => ({ default: m.TimerScreen })));
+const Profile = lazy(() => screens.profile().then((m) => ({ default: m.Profile })));
+const ProgramPage = lazy(() => screens.program().then((m) => ({ default: m.ProgramPage })));
+const CategoryPage = lazy(() => screens.category().then((m) => ({ default: m.CategoryPage })));
+const SearchPage = lazy(() => screens.search().then((m) => ({ default: m.SearchPage })));
+const JournalPage = lazy(() => screens.journal().then((m) => ({ default: m.JournalPage })));
+const SettingsPage = lazy(() => screens.settings().then((m) => ({ default: m.SettingsPage })));
+const EliPage = lazy(() => screens.eli().then((m) => ({ default: m.EliPage })));
+
+function useWarmScreens() {
+  useEffect(() => {
+    // well after the first screen and its images have loaded, and never on data saver
+    if ((navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) return;
+    const warm = () => Object.values(screens).forEach((load) => void load().catch(() => undefined));
+    let idle = 0;
+    const t = setTimeout(() => {
+      if ('requestIdleCallback' in window) idle = window.requestIdleCallback(warm, { timeout: 4000 });
+      else warm();
+    }, 8000);
+    return () => {
+      clearTimeout(t);
+      if (idle) window.cancelIdleCallback(idle);
+    };
+  }, []);
+}
 
 function FrozenOutlet() {
   const outlet = useOutlet();
@@ -84,10 +113,56 @@ function SessionLink() {
   return null;
 }
 
+const TITLES: Record<string, string> = {
+  '/bienvenida': 'Bienvenida',
+  '/respirar': 'Respirar',
+  '/temporizador': 'Temporizador',
+  '/eli': 'Sesiones 1:1 con Eli',
+  '/meditar': 'Meditar',
+  '/dormir': 'Dormir',
+  '/sonidos': 'Sonidos',
+  '/perfil': 'Tu perfil',
+  '/buscar': 'Buscar',
+  '/diario': 'Diario',
+  '/ajustes': 'Ajustes',
+};
+
+/** Each screen names itself in the browser tab, history and to screen readers. */
+function RouteTitle() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const [, section, id] = pathname.split('/');
+    const name =
+      pathname === '/'
+        ? null
+        : section === 'programa'
+          ? PROGRAM_BY_ID[id as keyof typeof PROGRAM_BY_ID]?.title
+          : section === 'tema'
+            ? CATEGORY_BY_ID[id as keyof typeof CATEGORY_BY_ID]?.name
+            : TITLES[pathname];
+    document.title = name ? `${name} · CalmabyEli` : 'CalmabyEli — Meditación para mujeres';
+  }, [pathname]);
+  return null;
+}
+
+/** The HTML's loading screen fades away once the app has drawn its first frame. */
+function useHideSplash() {
+  useEffect(() => {
+    const splash = document.getElementById('splash');
+    if (!splash) return;
+    requestAnimationFrame(() => splash.classList.add('gone'));
+    const t = setTimeout(() => splash.remove(), 1200);
+    return () => clearTimeout(t);
+  }, []);
+}
+
 export default function App() {
+  useWarmScreens();
+  useHideSplash();
   return (
     <MotionConfig reducedMotion="user">
       <BrowserRouter>
+        <RouteTitle />
         <Suspense fallback={<div className="min-h-dvh bg-ink-900" />}>
         <Routes>
           <Route path="/bienvenida" element={<Onboarding />} />

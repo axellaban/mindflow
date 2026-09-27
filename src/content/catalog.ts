@@ -902,7 +902,7 @@ export const CATEGORIES: Category[] = [
     id: 'autoexigencia',
     name: 'Autoexigencia',
     blurb: 'Soltar el “tengo que” y tratarte mejor',
-    art: { palette: 'rose', motif: 'orb', seed: 30 },
+    art: { palette: 'rose', motif: 'waves', seed: 30 },
   },
   {
     id: 'ansiedad',
@@ -928,7 +928,7 @@ export const CATEGORIES: Category[] = [
     id: 'emociones',
     name: 'Emociones',
     blurb: 'Entender el clima interior',
-    art: { palette: 'plum', motif: 'orb', seed: 26 },
+    art: { palette: 'dusk', motif: 'lake', seed: 26 },
   },
   {
     id: 'autocompasion',

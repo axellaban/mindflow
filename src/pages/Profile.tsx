@@ -18,6 +18,7 @@ import { longestStreak, minutesByDay } from '@/lib/stats';
 import { dayKey, formatDuration, formatMinutesTotal, monthName, relativeDay } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '@/store/app';
+import { useUI } from '@/store/ui';
 
 export function Profile() {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ export function Profile() {
         <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-2 flex items-center gap-4">
           <div
             className="flex size-16 items-center justify-center rounded-full font-display text-[28px] text-ink-900"
-            style={{ background: 'radial-gradient(circle at 35% 30%, #fff6ea, #ffc6a8 50%, #f0a9bd)' }}
+            style={{ background: 'radial-gradient(circle at 35% 30%, #fffaf0, #f1dcbc 48%, #a8dcd5)' }}
           >
             {initial}
           </div>
@@ -104,20 +105,27 @@ export function Profile() {
         <div className="grid grid-cols-3 gap-2.5 px-5 sm:grid-cols-5 md:px-0">
           {ACHIEVEMENTS.map((a) => {
             const got = Boolean(unlocked[a.id]);
+            const detail = got ? a.description : `Por desbloquear: ${a.goal}`;
             return (
-              <div
+              <button
                 key={a.id}
-                className={cn('flex flex-col items-center gap-2 rounded-3xl px-2 py-4 text-center transition-colors', got ? 'bg-white/8' : 'bg-white/3')}
-                title={a.description}
+                type="button"
+                onClick={() => useUI.getState().toast(got ? `${a.title}: ${a.description}` : detail)}
+                aria-label={`${a.title}. ${detail}`}
+                className={cn(
+                  'flex flex-col items-center gap-2 rounded-3xl px-2 py-4 text-center transition-colors',
+                  got ? 'bg-white/8 hover:bg-white/12' : 'bg-white/3 hover:bg-white/6',
+                )}
+                title={detail}
               >
                 <span
-                  className={cn('flex size-12 items-center justify-center rounded-full', got ? 'text-ink-900' : 'bg-white/6 text-mist-50/25')}
-                  style={got ? { background: 'radial-gradient(circle at 35% 30%, #fff6e6, #ffbf99 55%, #f0a9bd)' } : undefined}
+                  className={cn('flex size-12 items-center justify-center rounded-full', got ? 'text-ink-900' : 'bg-white/6 text-mist-50/40')}
+                  style={got ? { background: 'radial-gradient(circle at 35% 30%, #fffaf0, #f6deaf 48%, #7cc5bf)' } : undefined}
                 >
                   <Icon name={a.icon} className="size-5.5" />
                 </span>
-                <span className={cn('text-[12px] leading-tight font-semibold', got ? 'text-mist-50' : 'text-mist-50/35')}>{a.title}</span>
-              </div>
+                <span className={cn('text-[12px] leading-tight font-semibold', got ? 'text-mist-50' : 'text-mist-50/60')}>{a.title}</span>
+              </button>
             );
           })}
         </div>

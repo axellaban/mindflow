@@ -1,6 +1,23 @@
 import type { Mix, Motif, PaletteId } from './types';
 
-export type SceneId = 'playa' | 'calma' | 'jardin' | 'lago' | 'lluvia' | 'oceano' | 'aurora' | 'fogata' | 'nieve' | 'desierto' | 'amanecer';
+export type SceneId =
+  | 'playa'
+  | 'playa-dia'
+  | 'playa-ocaso'
+  | 'playa-noche'
+  | 'calma'
+  | 'jardin'
+  | 'lago'
+  | 'lluvia'
+  | 'oceano'
+  | 'aurora'
+  | 'fogata'
+  | 'nieve'
+  | 'desierto'
+  | 'amanecer';
+
+/** A home scene choice: a fixed scene, or the beach following the time of day. */
+export type SceneChoice = SceneId | 'auto';
 
 export type Particles = 'stars' | 'rain' | 'snow' | 'embers' | 'fireflies' | 'petals' | 'motes' | 'none';
 
@@ -25,6 +42,36 @@ export const SCENES: SceneDef[] = [
     motif: 'beach',
     particles: ['none'],
     sound: { oceano: 0.8 },
+    seed: 11,
+  },
+  {
+    id: 'playa-dia',
+    name: 'Mediodía en la playa',
+    palette: 'playaDia',
+    layout: 'ocean',
+    motif: 'beach',
+    particles: ['none'],
+    sound: { oceano: 0.8, viento: 0.2 },
+    seed: 11,
+  },
+  {
+    id: 'playa-ocaso',
+    name: 'Atardecer en la playa',
+    palette: 'playaOcaso',
+    layout: 'ocean',
+    motif: 'beach',
+    particles: ['none'],
+    sound: { oceano: 0.8 },
+    seed: 11,
+  },
+  {
+    id: 'playa-noche',
+    name: 'Noche en la playa',
+    palette: 'playaNoche',
+    layout: 'ocean',
+    motif: 'beach',
+    particles: ['stars'],
+    sound: { oceano: 0.7, grillos: 0.15 },
     seed: 11,
   },
   {
@@ -120,3 +167,19 @@ export const SCENES: SceneDef[] = [
 ];
 
 export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s])) as Record<SceneId, SceneDef>;
+
+export const AUTO_SCENE_NAME = 'Playa según la hora';
+
+/** The beach as it looks right now: dawn, midday, sunset or a moonlit night. */
+export function beachAt(d: Date = new Date()): SceneDef {
+  const h = d.getHours();
+  if (h >= 5 && h < 9) return SCENE_BY_ID.playa;
+  if (h >= 9 && h < 17) return SCENE_BY_ID['playa-dia'];
+  if (h >= 17 && h < 20) return SCENE_BY_ID['playa-ocaso'];
+  return SCENE_BY_ID['playa-noche'];
+}
+
+export function resolveScene(choice: SceneChoice | undefined, d: Date = new Date()): SceneDef {
+  if (!choice || choice === 'auto') return beachAt(d);
+  return SCENE_BY_ID[choice] ?? beachAt(d);
+}
