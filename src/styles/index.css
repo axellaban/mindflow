@@ -98,6 +98,10 @@
     /* the deeper water at the bottom of the page, and the sheets */
     --page-deep: #074b5c;
     --sheet: rgb(8 76 94 / 0.95);
+    /* the breathing bubble: its deep middle, its lit rim and the light at its edge */
+    --bubble-deep: rgb(4 52 64);
+    --bubble-rim: rgb(126 242 226);
+    --bubble-light: rgb(200 255 246);
   }
 
   /* Noche: Dormir and the sleep stories move from the turquoise sea to a moonlit night. */
@@ -116,6 +120,9 @@
     --text-3: #c3cdea;
     --page-deep: #0a1430;
     --sheet: rgb(18 34 71 / 0.95);
+    --bubble-deep: rgb(5 11 32);
+    --bubble-rim: rgb(169 189 245);
+    --bubble-light: rgb(214 224 255);
   }
 
   html {

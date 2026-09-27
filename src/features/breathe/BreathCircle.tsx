@@ -41,7 +41,7 @@ export function BreathCircle({
           <defs>
             <linearGradient id={`${id}-arc`} x1="1" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#ffffff" />
-              <stop offset="1" stopColor="#b4fff2" />
+              <stop offset="1" style={{ stopColor: 'var(--color-blush-300)' }} />
             </linearGradient>
           </defs>
           <circle cx="50" cy="50" r="49" fill="none" stroke="#ffffff" strokeOpacity="0.28" strokeWidth="0.5" />
@@ -80,6 +80,11 @@ export function BreathCircle({
   );
 }
 
+/** One of the bubble's colours (sea by day, moonlight at night) at a given opacity. */
+function tint(part: 'deep' | 'rim' | 'light', percent: number): string {
+  return `color-mix(in srgb, var(--bubble-${part}) ${percent}%, transparent)`;
+}
+
 /**
  * The bubble on its own: clear glass that lets the beach through, with a bright rim and light from
  * above. When it holds a word it is a little deeper in the middle, so white text stays readable
@@ -91,9 +96,9 @@ export function Bubble({ className, empty }: { className?: string; empty?: boole
       className={cn('rounded-full backdrop-blur-[5px]', className)}
       style={{
         background: empty
-          ? 'radial-gradient(circle, rgb(126 242 226 / 0.1) 0%, rgb(126 242 226 / 0.16) 62%, rgb(200 255 246 / 0.36) 100%)'
-          : 'radial-gradient(circle, rgb(4 52 64 / 0.34) 0%, rgb(4 52 64 / 0.22) 45%, rgb(126 242 226 / 0.08) 74%, rgb(200 255 246 / 0.3) 100%)',
-        boxShadow: 'inset 0 0 0 1px rgb(255 255 255 / 0.32), inset 0 0 34px rgb(180 255 242 / 0.26), 0 0 56px 2px rgb(126 242 226 / 0.18)',
+          ? `radial-gradient(circle, ${tint('rim', 10)} 0%, ${tint('rim', 16)} 62%, ${tint('light', 36)} 100%)`
+          : `radial-gradient(circle, ${tint('deep', 34)} 0%, ${tint('deep', 22)} 45%, ${tint('rim', 8)} 74%, ${tint('light', 30)} 100%)`,
+        boxShadow: `inset 0 0 0 1px rgb(255 255 255 / 0.32), inset 0 0 34px color-mix(in srgb, var(--color-blush-300) 26%, transparent), 0 0 56px 2px ${tint('rim', 18)}`,
       }}
       aria-hidden="true"
     >
@@ -112,7 +117,7 @@ export function ClosedCircle({ className }: { className?: string }) {
           <defs>
             <linearGradient id={`${id}-arc`} x1="1" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#ffffff" />
-              <stop offset="1" stopColor="#b4fff2" />
+              <stop offset="1" style={{ stopColor: 'var(--color-blush-300)' }} />
             </linearGradient>
           </defs>
           <circle cx="50" cy="50" r="49" fill="none" stroke="#ffffff" strokeOpacity="0.25" strokeWidth="0.8" />
