@@ -1,1 +1,292 @@
-{"id":"cla-2-anclar","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.49,"t":"Este es el segundo día de Calmar la ansiedad."},{"s":9.29,"e":15.95,"t":"Cuando la ansiedad sube, la mente suele viajar al futuro: ¿y si pasa esto?, ¿y si sale mal?"},{"s":16.9,"e":24.85,"t":"Hoy vamos a practicar cómo volver, una y otra vez, al único lugar donde podemos actuar: el presente."},{"s":25.65,"e":28.88,"t":"Y la puerta más directa al presente es el cuerpo."},{"s":30.78,"e":33.81,"t":"Siéntate con los pies bien apoyados en el suelo."},{"s":34.61,"e":36.2,"t":"Si puedes, descálzate."},{"s":37.0,"e":42.14,"t":"Deja los ojos abiertos, con la mirada suave, o ciérralos si lo prefieres."},{"s":46.14,"e":50.28,"t":"Empieza con una exhalación larga, como aprendiste ayer."},{"s":54.28,"e":57.73,"t":"Lleva toda la atención a las plantas de los pies."},{"s":58.53,"e":60.74,"t":"Siente el contacto con el suelo."},{"s":61.54,"e":64.86,"t":"La presión, la temperatura, la textura."},{"s":65.66,"e":69.58,"t":"Presiona suavemente los pies contra el suelo, y suelta."},{"s":70.38,"e":71.83,"t":"El suelo te sostiene."},{"s":72.63,"e":73.87,"t":"Siempre lo hace."},{"s":109.84,"e":112.69,"t":"Siente ahora el peso del cuerpo en la silla."},{"s":113.49,"e":116.09,"t":"Las piernas, la espalda apoyada."},{"s":116.89,"e":118.61,"t":"Todo tu peso, sostenido."},{"s":154.58,"e":158.89,"t":"Vamos a practicar un ejercicio muy útil cuando la ansiedad aparece."},{"s":159.69,"e":162.97,"t":"Se llama cinco, cuatro, tres, dos, uno."},{"s":163.77,"e":168.43,"t":"Si tienes los ojos cerrados, ábrelos suavemente para esta parte."},{"s":171.43,"e":176.79,"t":"Mira a tu alrededor y nombra, en silencio, cinco cosas que puedas ver."},{"s":177.59,"e":178.86,"t":"Tómate tu tiempo."},{"s":179.66,"e":183.65,"t":"Un color, una forma, un objeto, una luz."},{"s":219.63,"e":223.34,"t":"Ahora, cuatro cosas que puedas sentir con el tacto."},{"s":224.14,"e":225.78,"t":"La ropa sobre la piel."},{"s":226.58,"e":228.49,"t":"Las manos sobre las piernas."},{"s":229.29,"e":230.07,"t":"El aire."},{"s":230.87,"e":232.44,"t":"El suelo bajo los pies."},{"s":268.42,"e":270.56,"t":"Tres cosas que puedas escuchar."},{"s":271.36,"e":272.81,"t":"Cercanas o lejanas."},{"s":308.79,"e":310.53,"t":"Dos cosas que puedas oler."},{"s":311.33,"e":315.84,"t":"Si no hueles nada especial, imagina dos aromas que te gusten."},{"s":333.83,"e":336.0,"t":"Y una cosa que puedas saborear."},{"s":336.8,"e":340.34,"t":"O simplemente, nota el sabor de tu propia boca."},{"s":376.31,"e":377.14,"t":"Muy bien."},{"s":377.94,"e":379.92,"t":"Nota cómo está tu mente ahora."},{"s":380.72,"e":384.18,"t":"Quizás un poco más aquí, un poco menos allá."},{"s":402.17,"e":403.4,"t":"Vuelve a los pies."},{"s":404.2,"e":405.39,"t":"Siente el suelo."},{"s":406.19,"e":408.75,"t":"Y respira con exhalaciones largas."},{"s":409.55,"e":413.19,"t":"Puedes repetirte, en silencio: «estoy aquí."},{"s":413.99,"e":416.38,"t":"En este momento, estoy a salvo»."},{"s":488.34,"e":493.29,"t":"Si tu mente vuelve a viajar al futuro, trae tu atención de nuevo a los pies."},{"s":494.09,"e":495.15,"t":"Es tu ancla."},{"s":495.95,"e":497.82,"t":"Siempre está disponible."},{"s":551.79,"e":553.09,"t":"Vamos terminando."},{"s":553.89,"e":556.24,"t":"Mueve un poco los dedos de los pies."},{"s":557.04,"e":557.85,"t":"Estírate."},{"s":561.85,"e":564.43,"t":"Y vuelve a tu día con este recurso nuevo."},{"s":566.43,"e":573.13,"t":"Cuando notes que la ansiedad empieza a subir, prueba el cinco, cuatro, tres, dos, uno."},{"s":573.93,"e":577.88,"t":"No necesitas cerrar los ojos, ni que nadie se dé cuenta."},{"s":578.68,"e":580.66,"t":"Solo necesitas tus sentidos."},{"s":581.46,"e":586.12,"t":"Mañana aprenderemos a hacer espacio para las emociones difíciles."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "cla-2-anclar",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.51,
+      "t": "Este es el segundo día de Calmar la ansiedad."
+    },
+    {
+      "s": 9.31,
+      "e": 15.46,
+      "t": "Cuando la ansiedad sube, la mente suele viajar al futuro: ¿y si pasa esto?, ¿y si sale mal?"
+    },
+    {
+      "s": 16.41,
+      "e": 23.2,
+      "t": "Hoy vamos a practicar cómo volver, una y otra vez, al único lugar donde podemos actuar: el presente."
+    },
+    {
+      "s": 24.0,
+      "e": 27.26,
+      "t": "Y la puerta más directa al presente es el cuerpo."
+    },
+    {
+      "s": 30.26,
+      "e": 33.44,
+      "t": "Siéntate con los pies bien apoyados en el suelo."
+    },
+    {
+      "s": 34.24,
+      "e": 36.06,
+      "t": "Si puedes, descálzate."
+    },
+    {
+      "s": 36.86,
+      "e": 41.62,
+      "t": "Deja los ojos abiertos, con la mirada suave, o ciérralos si lo prefieres."
+    },
+    {
+      "s": 45.62,
+      "e": 49.33,
+      "t": "Empieza con una exhalación larga, como aprendiste ayer."
+    },
+    {
+      "s": 53.33,
+      "e": 56.39,
+      "t": "Lleva toda la atención a las plantas de los pies."
+    },
+    {
+      "s": 57.19,
+      "e": 59.35,
+      "t": "Siente el contacto con el suelo."
+    },
+    {
+      "s": 60.15,
+      "e": 63.28,
+      "t": "La presión, la temperatura, la textura."
+    },
+    {
+      "s": 64.08,
+      "e": 67.63,
+      "t": "Presiona suavemente los pies contra el suelo, y suelta."
+    },
+    {
+      "s": 68.43,
+      "e": 70.02,
+      "t": "El suelo te sostiene."
+    },
+    {
+      "s": 70.82,
+      "e": 72.05,
+      "t": "Siempre lo hace."
+    },
+    {
+      "s": 108.54,
+      "e": 111.45,
+      "t": "Siente ahora el peso del cuerpo en la silla."
+    },
+    {
+      "s": 112.25,
+      "e": 114.59,
+      "t": "Las piernas, la espalda apoyada."
+    },
+    {
+      "s": 115.39,
+      "e": 117.32,
+      "t": "Todo tu peso, sostenido."
+    },
+    {
+      "s": 153.81,
+      "e": 158.23,
+      "t": "Vamos a practicar un ejercicio muy útil cuando la ansiedad aparece."
+    },
+    {
+      "s": 159.03,
+      "e": 161.95,
+      "t": "Se llama cinco, cuatro, tres, dos, uno."
+    },
+    {
+      "s": 162.75,
+      "e": 166.89,
+      "t": "Si tienes los ojos cerrados, ábrelos suavemente para esta parte."
+    },
+    {
+      "s": 169.89,
+      "e": 174.47,
+      "t": "Mira a tu alrededor y nombra, en silencio, cinco cosas que puedas ver."
+    },
+    {
+      "s": 175.27,
+      "e": 176.66,
+      "t": "Tómate tu tiempo."
+    },
+    {
+      "s": 177.46,
+      "e": 180.52,
+      "t": "Un color, una forma, un objeto, una luz."
+    },
+    {
+      "s": 217.01,
+      "e": 220.33,
+      "t": "Ahora, cuatro cosas que puedas sentir con el tacto."
+    },
+    {
+      "s": 221.13,
+      "e": 222.76,
+      "t": "La ropa sobre la piel."
+    },
+    {
+      "s": 223.56,
+      "e": 225.35,
+      "t": "Las manos sobre las piernas."
+    },
+    {
+      "s": 226.15,
+      "e": 226.94,
+      "t": "El aire."
+    },
+    {
+      "s": 227.74,
+      "e": 229.32,
+      "t": "El suelo bajo los pies."
+    },
+    {
+      "s": 265.8,
+      "e": 268.16,
+      "t": "Tres cosas que puedas escuchar."
+    },
+    {
+      "s": 268.96,
+      "e": 270.67,
+      "t": "Cercanas o lejanas."
+    },
+    {
+      "s": 307.16,
+      "e": 309.31,
+      "t": "Dos cosas que puedas oler."
+    },
+    {
+      "s": 310.11,
+      "e": 314.35,
+      "t": "Si no hueles nada especial, imagina dos aromas que te gusten."
+    },
+    {
+      "s": 332.6,
+      "e": 334.93,
+      "t": "Y una cosa que puedas saborear."
+    },
+    {
+      "s": 335.73,
+      "e": 338.95,
+      "t": "O simplemente, nota el sabor de tu propia boca."
+    },
+    {
+      "s": 375.44,
+      "e": 376.35,
+      "t": "Muy bien."
+    },
+    {
+      "s": 377.15,
+      "e": 379.47,
+      "t": "Nota cómo está tu mente ahora."
+    },
+    {
+      "s": 380.27,
+      "e": 383.49,
+      "t": "Quizás un poco más aquí, un poco menos allá."
+    },
+    {
+      "s": 401.73,
+      "e": 402.98,
+      "t": "Vuelve a los pies."
+    },
+    {
+      "s": 403.78,
+      "e": 405.03,
+      "t": "Siente el suelo."
+    },
+    {
+      "s": 405.83,
+      "e": 408.38,
+      "t": "Y respira con exhalaciones largas."
+    },
+    {
+      "s": 409.18,
+      "e": 412.3,
+      "t": "Puedes repetirte, en silencio: «estoy aquí."
+    },
+    {
+      "s": 413.1,
+      "e": 415.56,
+      "t": "En este momento, estoy a salvo»."
+    },
+    {
+      "s": 488.54,
+      "e": 493.32,
+      "t": "Si tu mente vuelve a viajar al futuro, trae tu atención de nuevo a los pies."
+    },
+    {
+      "s": 494.12,
+      "e": 495.2,
+      "t": "Es tu ancla."
+    },
+    {
+      "s": 496.0,
+      "e": 497.74,
+      "t": "Siempre está disponible."
+    },
+    {
+      "s": 552.47,
+      "e": 553.79,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 554.59,
+      "e": 556.84,
+      "t": "Mueve un poco los dedos de los pies."
+    },
+    {
+      "s": 557.64,
+      "e": 558.65,
+      "t": "Estírate."
+    },
+    {
+      "s": 562.65,
+      "e": 565.5,
+      "t": "Y vuelve a tu día con este recurso nuevo."
+    },
+    {
+      "s": 567.5,
+      "e": 573.29,
+      "t": "Cuando notes que la ansiedad empieza a subir, prueba el cinco, cuatro, tres, dos, uno."
+    },
+    {
+      "s": 574.09,
+      "e": 577.77,
+      "t": "No necesitas cerrar los ojos, ni que nadie se dé cuenta."
+    },
+    {
+      "s": 578.57,
+      "e": 580.63,
+      "t": "Solo necesitas tus sentidos."
+    },
+    {
+      "s": 581.43,
+      "e": 585.93,
+      "t": "Mañana aprenderemos a hacer espacio para las emociones difíciles."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

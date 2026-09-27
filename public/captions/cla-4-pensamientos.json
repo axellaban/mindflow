@@ -1,1 +1,257 @@
-{"id":"cla-4-pensamientos","duration":600.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.55,"t":"Este es el cuarto día de Calmar la ansiedad."},{"s":9.35,"e":12.56,"t":"La ansiedad tiene una voz muy convincente."},{"s":13.36,"e":19.42,"t":"Nos dice cosas como «esto va a salir mal», «no voy a poder», «algo terrible va a pasar»."},{"s":20.22,"e":24.58,"t":"Y como esa voz suena dentro de nuestra cabeza, tendemos a creerle."},{"s":25.38,"e":31.03,"t":"Hoy vamos a practicar algo liberador: recordar que los pensamientos no son hechos."},{"s":31.83,"e":33.37,"t":"Son eventos mentales."},{"s":34.17,"e":37.29,"t":"Aparecen, se quedan un rato, y se van."},{"s":39.19,"e":41.02,"t":"Acomódate en tu postura."},{"s":41.82,"e":42.96,"t":"Cierra los ojos."},{"s":46.96,"e":48.92,"t":"Haz una exhalación larga."},{"s":52.92,"e":55.81,"t":"Siente la respiración durante unos momentos."},{"s":73.92,"e":77.24,"t":"Ahora imagina que descansas a la orilla de un arroyo."},{"s":78.04,"e":79.63,"t":"El agua corre despacio."},{"s":80.43,"e":82.66,"t":"Y sobre el agua, flotan hojas."},{"s":100.77,"e":106.86,"t":"Cada vez que aparezca un pensamiento, cualquiera, colócalo sobre una hoja."},{"s":107.66,"e":109.46,"t":"Y deja que el agua se lo lleve."},{"s":110.26,"e":112.27,"t":"No tienes que empujar la hoja."},{"s":113.07,"e":114.9,"t":"El arroyo hace el trabajo."},{"s":115.7,"e":117.73,"t":"Solo observas cómo se aleja."},{"s":172.06,"e":176.69,"t":"Si un pensamiento es insistente y vuelve, no pasa nada."},{"s":177.49,"e":180.02,"t":"Colócalo otra vez sobre una hoja."},{"s":180.82,"e":183.11,"t":"Todas las veces que haga falta."},{"s":237.43,"e":244.37,"t":"Si te das cuenta de que te subiste a una hoja y te fuiste río abajo, simplemente vuelve a la orilla."},{"s":245.17,"e":246.45,"t":"Siéntate de nuevo."},{"s":247.25,"e":248.5,"t":"Y sigue observando."},{"s":302.82,"e":305.39,"t":"Ahora vamos a probar otra herramienta."},{"s":306.19,"e":313.72,"t":"Cuando aparezca un pensamiento ansioso, agrégale estas palabras al principio: «estoy teniendo el pensamiento de que…»."},{"s":314.52,"e":321.16,"t":"Por ejemplo: en lugar de «voy a fallar», «estoy teniendo el pensamiento de que voy a fallar»."},{"s":321.96,"e":323.37,"t":"Nota la diferencia."},{"s":324.17,"e":328.27,"t":"El pensamiento sigue ahí, pero ahora tienes un poco de distancia."},{"s":329.07,"e":330.81,"t":"Ya no estás dentro de él."},{"s":331.61,"e":332.73,"t":"Lo estás mirando."},{"s":387.05,"e":390.0,"t":"Prueba con algún pensamiento que suela visitarte."},{"s":444.33,"e":450.72,"t":"Y ahora, puedes ir un paso más allá: «me doy cuenta de que estoy teniendo el pensamiento de que…»."},{"s":451.52,"e":455.7,"t":"Cada capa de distancia es un poco más de libertad."},{"s":491.92,"e":493.39,"t":"Vuelve al arroyo."},{"s":494.19,"e":495.47,"t":"Hojas que pasan."},{"s":496.27,"e":497.34,"t":"Agua que corre."},{"s":498.14,"e":500.84,"t":"Tú, en la orilla, en calma."},{"s":555.16,"e":556.36,"t":"Suelta la imagen."},{"s":557.16,"e":559.92,"t":"Vuelve a la respiración y al cuerpo."},{"s":563.92,"e":566.74,"t":"Y cuando sea el momento, abre los ojos."},{"s":568.74,"e":572.84,"t":"Recuerda: tus pensamientos no son órdenes, ni profecías."},{"s":573.64,"e":575.33,"t":"Son solo pensamientos."},{"s":576.13,"e":578.41,"t":"Puedes escucharlos sin obedecerlos."},{"s":579.21,"e":586.12,"t":"Mañana, en el último día, vamos a aprender a tratarnos con cuidado cuando todo se siente difícil."},{"s":586.92,"e":587.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":590.5,"type":"bell"}]}
+{
+  "id": "cla-4-pensamientos",
+  "voice": "luz",
+  "duration": 600.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.42,
+      "t": "Este es el cuarto día de Calmar la ansiedad."
+    },
+    {
+      "s": 9.22,
+      "e": 12.12,
+      "t": "La ansiedad tiene una voz muy convincente."
+    },
+    {
+      "s": 12.92,
+      "e": 18.38,
+      "t": "Nos dice cosas como «esto va a salir mal», «no voy a poder», «algo terrible va a pasar»."
+    },
+    {
+      "s": 19.18,
+      "e": 23.42,
+      "t": "Y como esa voz suena dentro de nuestra cabeza, tendemos a creerle."
+    },
+    {
+      "s": 24.22,
+      "e": 29.6,
+      "t": "Hoy vamos a practicar algo liberador: recordar que los pensamientos no son hechos."
+    },
+    {
+      "s": 30.4,
+      "e": 32.09,
+      "t": "Son eventos mentales."
+    },
+    {
+      "s": 32.89,
+      "e": 35.77,
+      "t": "Aparecen, se quedan un rato, y se van."
+    },
+    {
+      "s": 38.77,
+      "e": 40.73,
+      "t": "Acomódate en tu postura."
+    },
+    {
+      "s": 41.53,
+      "e": 42.92,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 46.92,
+      "e": 48.85,
+      "t": "Haz una exhalación larga."
+    },
+    {
+      "s": 52.85,
+      "e": 55.9,
+      "t": "Siente la respiración durante unos momentos."
+    },
+    {
+      "s": 74.18,
+      "e": 77.65,
+      "t": "Ahora imagina que descansas a la orilla de un arroyo."
+    },
+    {
+      "s": 78.45,
+      "e": 80.28,
+      "t": "El agua corre despacio."
+    },
+    {
+      "s": 81.08,
+      "e": 83.42,
+      "t": "Y sobre el agua, flotan hojas."
+    },
+    {
+      "s": 101.7,
+      "e": 106.44,
+      "t": "Cada vez que aparezca un pensamiento, cualquiera, colócalo sobre una hoja."
+    },
+    {
+      "s": 107.24,
+      "e": 109.42,
+      "t": "Y deja que el agua se lo lleve."
+    },
+    {
+      "s": 110.22,
+      "e": 112.23,
+      "t": "No tienes que empujar la hoja."
+    },
+    {
+      "s": 113.03,
+      "e": 115.16,
+      "t": "El arroyo hace el trabajo."
+    },
+    {
+      "s": 115.96,
+      "e": 118.02,
+      "t": "Solo observas cómo se aleja."
+    },
+    {
+      "s": 172.87,
+      "e": 176.79,
+      "t": "Si un pensamiento es insistente y vuelve, no pasa nada."
+    },
+    {
+      "s": 177.59,
+      "e": 180.09,
+      "t": "Colócalo otra vez sobre una hoja."
+    },
+    {
+      "s": 180.89,
+      "e": 183.12,
+      "t": "Todas las veces que haga falta."
+    },
+    {
+      "s": 237.96,
+      "e": 244.28,
+      "t": "Si te das cuenta de que te subiste a una hoja y te fuiste río abajo, simplemente vuelve a la orilla."
+    },
+    {
+      "s": 245.08,
+      "e": 246.54,
+      "t": "Siéntate de nuevo."
+    },
+    {
+      "s": 247.34,
+      "e": 248.9,
+      "t": "Y sigue observando."
+    },
+    {
+      "s": 303.75,
+      "e": 306.32,
+      "t": "Ahora vamos a probar otra herramienta."
+    },
+    {
+      "s": 307.12,
+      "e": 314.69,
+      "t": "Cuando aparezca un pensamiento ansioso, agrégale estas palabras al principio: «estoy teniendo el pensamiento de que…»."
+    },
+    {
+      "s": 315.5,
+      "e": 320.89,
+      "t": "Por ejemplo: en lugar de «voy a fallar», «estoy teniendo el pensamiento de que voy a fallar»."
+    },
+    {
+      "s": 321.69,
+      "e": 323.25,
+      "t": "Nota la diferencia."
+    },
+    {
+      "s": 324.05,
+      "e": 328.11,
+      "t": "El pensamiento sigue ahí, pero ahora tienes un poco de distancia."
+    },
+    {
+      "s": 328.91,
+      "e": 330.8,
+      "t": "Ya no estás dentro de él."
+    },
+    {
+      "s": 331.6,
+      "e": 332.97,
+      "t": "Lo estás mirando."
+    },
+    {
+      "s": 387.81,
+      "e": 391.13,
+      "t": "Prueba con algún pensamiento que suela visitarte."
+    },
+    {
+      "s": 445.97,
+      "e": 451.82,
+      "t": "Y ahora, puedes ir un paso más allá: «me doy cuenta de que estoy teniendo el pensamiento de que…»."
+    },
+    {
+      "s": 452.62,
+      "e": 456.1,
+      "t": "Cada capa de distancia es un poco más de libertad."
+    },
+    {
+      "s": 492.67,
+      "e": 493.99,
+      "t": "Vuelve al arroyo."
+    },
+    {
+      "s": 494.79,
+      "e": 496.16,
+      "t": "Hojas que pasan."
+    },
+    {
+      "s": 496.96,
+      "e": 498.09,
+      "t": "Agua que corre."
+    },
+    {
+      "s": 498.89,
+      "e": 500.9,
+      "t": "Tú, en la orilla, en calma."
+    },
+    {
+      "s": 555.74,
+      "e": 557.11,
+      "t": "Suelta la imagen."
+    },
+    {
+      "s": 557.91,
+      "e": 560.29,
+      "t": "Vuelve a la respiración y al cuerpo."
+    },
+    {
+      "s": 564.29,
+      "e": 566.92,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 568.92,
+      "e": 572.8,
+      "t": "Recuerda: tus pensamientos no son órdenes, ni profecías."
+    },
+    {
+      "s": 573.6,
+      "e": 575.29,
+      "t": "Son solo pensamientos."
+    },
+    {
+      "s": 576.09,
+      "e": 578.62,
+      "t": "Puedes escucharlos sin obedecerlos."
+    },
+    {
+      "s": 579.42,
+      "e": 585.93,
+      "t": "Mañana, en el último día, vamos a aprender a tratarnos con cuidado cuando todo se siente difícil."
+    },
+    {
+      "s": 586.73,
+      "e": 587.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 590.5,
+      "type": "bell"
+    }
+  ]
+}

@@ -1,1 +1,317 @@
-{"id":"cla-3-hacer-espacio","duration":720.0,"voice":"luz","captions":[{"s":4.2,"e":4.7,"t":"Hola."},{"s":5.5,"e":8.65,"t":"Bienvenida al tercer día de Calmar la ansiedad."},{"s":9.45,"e":16.85,"t":"Hoy vamos a aprender una práctica para esos momentos en que una emoción difícil te visita y no se quiere ir."},{"s":17.65,"e":20.84,"t":"Se llama RAIN, que en inglés significa lluvia."},{"s":21.64,"e":26.68,"t":"Cada letra es un paso: reconocer, aceptar, investigar y nutrir."},{"s":27.48,"e":33.86,"t":"La idea es sencilla: en lugar de pelear con lo que sentimos, o de huir, le hacemos espacio."},{"s":34.66,"e":40.31,"t":"Y curiosamente, cuando dejamos de resistirnos, la emoción suele perder fuerza."},{"s":42.21,"e":43.06,"t":"Acomódate."},{"s":43.86,"e":45.01,"t":"Cierra los ojos."},{"s":49.01,"e":51.19,"t":"Toma una respiración profunda…"},{"s":52.54,"e":53.75,"t":"y exhala largo."},{"s":57.75,"e":63.98,"t":"Dedica unos momentos a sentir el cuerpo apoyado, y la respiración que va y viene."},{"s":85.62,"e":91.14,"t":"Ahora, trae a la mente una situación que te genere algo de ansiedad o preocupación."},{"s":91.94,"e":93.87,"t":"No la más difícil de tu vida."},{"s":94.67,"e":98.79,"t":"Algo manejable, de intensidad media, para practicar."},{"s":99.59,"e":102.3,"t":"Deja que aparezca la escena."},{"s":103.1,"e":105.91,"t":"Y nota qué empieza a pasar en tu cuerpo."},{"s":149.19,"e":151.51,"t":"El primer paso es reconocer."},{"s":152.31,"e":156.1,"t":"Pregúntate: ¿qué está pasando dentro de mí ahora mismo?"},{"s":157.05,"e":158.57,"t":"Y nombra lo que encuentres."},{"s":159.37,"e":160.66,"t":"«Esto es ansiedad»."},{"s":161.46,"e":162.6,"t":"«Esto es miedo»."},{"s":163.4,"e":164.92,"t":"«Esto es preocupación»."},{"s":208.19,"e":210.05,"t":"El segundo paso es aceptar."},{"s":210.85,"e":214.13,"t":"No significa que te guste, ni que te resignes."},{"s":214.93,"e":219.92,"t":"Significa permitir que esté aquí, en este momento, porque ya está aquí."},{"s":220.72,"e":223.54,"t":"Puedes decirte: «está bien sentir esto»."},{"s":224.34,"e":227.21,"t":"O simplemente: «sí, esto también»."},{"s":270.48,"e":272.08,"t":"Respira con la emoción."},{"s":272.88,"e":275.13,"t":"Déjala estar, sin empujarla."},{"s":318.41,"e":322.68,"t":"El tercer paso es investigar, con curiosidad amable."},{"s":323.48,"e":325.76,"t":"¿Dónde vive esta emoción en tu cuerpo?"},{"s":326.71,"e":330.36,"t":"¿En el pecho, en el estómago, en la garganta?"},{"s":331.31,"e":333.16,"t":"¿Cómo es la sensación?"},{"s":334.11,"e":337.53,"t":"¿Apretada, caliente, vibrante, pesada?"},{"s":380.8,"e":384.46,"t":"Y si esta parte de ti pudiera hablar, ¿qué necesitaría?"},{"s":385.41,"e":386.62,"t":"Quizás seguridad."},{"s":387.42,"e":388.75,"t":"Quizás comprensión."},{"s":389.55,"e":393.25,"t":"Quizás que alguien le diga que todo va a estar bien."},{"s":436.53,"e":438.28,"t":"El cuarto paso es nutrir."},{"s":439.08,"e":441.26,"t":"Ofrécete a ti eso que necesitas."},{"s":442.06,"e":448.8,"t":"Puedes llevar una mano al lugar donde sientes la emoción, y dejar que el calor de la mano te acompañe."},{"s":449.6,"e":455.9,"t":"Y decirte algo amable, como le hablarías a una persona querida: «estoy aquí contigo."},{"s":456.7,"e":460.31,"t":"Es difícil, y no tienes que atravesarlo en soledad»."},{"s":525.22,"e":527.05,"t":"Quédate con esa amabilidad."},{"s":527.85,"e":529.63,"t":"Deja que se expanda."},{"s":594.54,"e":596.26,"t":"Ahora suelta la situación."},{"s":597.06,"e":598.86,"t":"Deja que se desvanezca."},{"s":599.66,"e":603.3,"t":"Vuelve a la respiración, a sentir el cuerpo apoyado."},{"s":646.58,"e":649.54,"t":"Nota cómo te sientes después de este recorrido."},{"s":650.34,"e":651.29,"t":"Sin juzgar."},{"s":652.09,"e":653.15,"t":"Solo notando."},{"s":674.79,"e":676.1,"t":"Vamos terminando."},{"s":676.9,"e":678.75,"t":"Una respiración profunda."},{"s":682.75,"e":685.57,"t":"Y cuando sea el momento, abre los ojos."},{"s":687.57,"e":690.55,"t":"RAIN es una práctica para toda la vida."},{"s":691.35,"e":696.92,"t":"Al principio puede sentirse extraña, pero con el tiempo se vuelve un refugio."},{"s":697.72,"e":701.26,"t":"Reconocer, aceptar, investigar, nutrir."},{"s":702.06,"e":706.12,"t":"Mañana veremos cómo relacionarnos con los pensamientos ansiosos."},{"s":706.92,"e":707.9,"t":"Hasta mañana."}],"cues":[{"t":0.4,"type":"bell"},{"t":710.5,"type":"bell"}]}
+{
+  "id": "cla-3-hacer-espacio",
+  "voice": "luz",
+  "duration": 720.0,
+  "captions": [
+    {
+      "s": 4.2,
+      "e": 4.81,
+      "t": "Hola."
+    },
+    {
+      "s": 5.61,
+      "e": 8.86,
+      "t": "Bienvenida al tercer día de Calmar la ansiedad."
+    },
+    {
+      "s": 9.66,
+      "e": 17.02,
+      "t": "Hoy vamos a aprender una práctica para esos momentos en que una emoción difícil te visita y no se quiere ir."
+    },
+    {
+      "s": 17.82,
+      "e": 20.71,
+      "t": "Se llama RAIN, que en inglés significa lluvia."
+    },
+    {
+      "s": 21.51,
+      "e": 26.22,
+      "t": "Cada letra es un paso: reconocer, aceptar, investigar y nutrir."
+    },
+    {
+      "s": 27.02,
+      "e": 33.15,
+      "t": "La idea es sencilla: en lugar de pelear con lo que sentimos, o de huir, le hacemos espacio."
+    },
+    {
+      "s": 33.95,
+      "e": 39.34,
+      "t": "Y curiosamente, cuando dejamos de resistirnos, la emoción suele perder fuerza."
+    },
+    {
+      "s": 42.34,
+      "e": 43.47,
+      "t": "Acomódate."
+    },
+    {
+      "s": 44.27,
+      "e": 45.66,
+      "t": "Cierra los ojos."
+    },
+    {
+      "s": 49.66,
+      "e": 51.96,
+      "t": "Toma una respiración profunda…"
+    },
+    {
+      "s": 53.31,
+      "e": 54.64,
+      "t": "y exhala largo."
+    },
+    {
+      "s": 58.64,
+      "e": 64.21,
+      "t": "Dedica unos momentos a sentir el cuerpo apoyado, y la respiración que va y viene."
+    },
+    {
+      "s": 86.01,
+      "e": 91.42,
+      "t": "Ahora, trae a la mente una situación que te genere algo de ansiedad o preocupación."
+    },
+    {
+      "s": 92.22,
+      "e": 94.47,
+      "t": "No la más difícil de tu vida."
+    },
+    {
+      "s": 95.27,
+      "e": 98.91,
+      "t": "Algo manejable, de intensidad media, para practicar."
+    },
+    {
+      "s": 99.71,
+      "e": 101.72,
+      "t": "Deja que aparezca la escena."
+    },
+    {
+      "s": 102.52,
+      "e": 105.32,
+      "t": "Y nota qué empieza a pasar en tu cuerpo."
+    },
+    {
+      "s": 148.92,
+      "e": 151.25,
+      "t": "El primer paso es reconocer."
+    },
+    {
+      "s": 152.05,
+      "e": 155.49,
+      "t": "Pregúntate: ¿qué está pasando dentro de mí ahora mismo?"
+    },
+    {
+      "s": 156.44,
+      "e": 158.21,
+      "t": "Y nombra lo que encuentres."
+    },
+    {
+      "s": 159.01,
+      "e": 160.61,
+      "t": "«Esto es ansiedad»."
+    },
+    {
+      "s": 161.41,
+      "e": 162.66,
+      "t": "«Esto es miedo»."
+    },
+    {
+      "s": 163.46,
+      "e": 165.05,
+      "t": "«Esto es preocupación»."
+    },
+    {
+      "s": 208.65,
+      "e": 210.86,
+      "t": "El segundo paso es aceptar."
+    },
+    {
+      "s": 211.66,
+      "e": 214.98,
+      "t": "No significa que te guste, ni que te resignes."
+    },
+    {
+      "s": 215.78,
+      "e": 220.34,
+      "t": "Significa permitir que esté aquí, en este momento, porque ya está aquí."
+    },
+    {
+      "s": 221.14,
+      "e": 223.94,
+      "t": "Puedes decirte: «está bien sentir esto»."
+    },
+    {
+      "s": 224.74,
+      "e": 227.06,
+      "t": "O simplemente: «sí, esto también»."
+    },
+    {
+      "s": 270.66,
+      "e": 272.37,
+      "t": "Respira con la emoción."
+    },
+    {
+      "s": 273.17,
+      "e": 275.22,
+      "t": "Déjala estar, sin empujarla."
+    },
+    {
+      "s": 318.82,
+      "e": 322.54,
+      "t": "El tercer paso es investigar, con curiosidad amable."
+    },
+    {
+      "s": 323.34,
+      "e": 325.92,
+      "t": "¿Dónde vive esta emoción en tu cuerpo?"
+    },
+    {
+      "s": 326.87,
+      "e": 329.97,
+      "t": "¿En el pecho, en el estómago, en la garganta?"
+    },
+    {
+      "s": 330.92,
+      "e": 332.68,
+      "t": "¿Cómo es la sensación?"
+    },
+    {
+      "s": 333.63,
+      "e": 336.51,
+      "t": "¿Apretada, caliente, vibrante, pesada?"
+    },
+    {
+      "s": 380.11,
+      "e": 383.62,
+      "t": "Y si esta parte de ti pudiera hablar, ¿qué necesitaría?"
+    },
+    {
+      "s": 384.57,
+      "e": 386.08,
+      "t": "Quizás seguridad."
+    },
+    {
+      "s": 386.88,
+      "e": 388.39,
+      "t": "Quizás comprensión."
+    },
+    {
+      "s": 389.19,
+      "e": 392.49,
+      "t": "Quizás que alguien le diga que todo va a estar bien."
+    },
+    {
+      "s": 436.1,
+      "e": 438.18,
+      "t": "El cuarto paso es nutrir."
+    },
+    {
+      "s": 438.98,
+      "e": 441.53,
+      "t": "Ofrécete a ti eso que necesitas."
+    },
+    {
+      "s": 442.33,
+      "e": 448.67,
+      "t": "Puedes llevar una mano al lugar donde sientes la emoción, y dejar que el calor de la mano te acompañe."
+    },
+    {
+      "s": 449.47,
+      "e": 454.87,
+      "t": "Y decirte algo amable, como le hablarías a una persona querida: «estoy aquí contigo."
+    },
+    {
+      "s": 455.67,
+      "e": 458.96,
+      "t": "Es difícil, y no tienes que atravesarlo en soledad»."
+    },
+    {
+      "s": 524.36,
+      "e": 526.48,
+      "t": "Quédate con esa amabilidad."
+    },
+    {
+      "s": 527.28,
+      "e": 528.77,
+      "t": "Deja que se expanda."
+    },
+    {
+      "s": 594.17,
+      "e": 596.1,
+      "t": "Ahora suelta la situación."
+    },
+    {
+      "s": 596.9,
+      "e": 598.65,
+      "t": "Deja que se desvanezca."
+    },
+    {
+      "s": 599.45,
+      "e": 603.0,
+      "t": "Vuelve a la respiración, a sentir el cuerpo apoyado."
+    },
+    {
+      "s": 646.6,
+      "e": 649.93,
+      "t": "Nota cómo te sientes después de este recorrido."
+    },
+    {
+      "s": 650.73,
+      "e": 651.74,
+      "t": "Sin juzgar."
+    },
+    {
+      "s": 652.54,
+      "e": 653.69,
+      "t": "Solo notando."
+    },
+    {
+      "s": 675.49,
+      "e": 676.81,
+      "t": "Vamos terminando."
+    },
+    {
+      "s": 677.61,
+      "e": 679.64,
+      "t": "Una respiración profunda."
+    },
+    {
+      "s": 683.64,
+      "e": 686.27,
+      "t": "Y cuando sea el momento, abre los ojos."
+    },
+    {
+      "s": 688.27,
+      "e": 690.96,
+      "t": "RAIN es una práctica para toda la vida."
+    },
+    {
+      "s": 691.76,
+      "e": 696.81,
+      "t": "Al principio puede sentirse extraña, pero con el tiempo se vuelve un refugio."
+    },
+    {
+      "s": 697.61,
+      "e": 700.77,
+      "t": "Reconocer, aceptar, investigar, nutrir."
+    },
+    {
+      "s": 701.57,
+      "e": 705.93,
+      "t": "Mañana veremos cómo relacionarnos con los pensamientos ansiosos."
+    },
+    {
+      "s": 706.73,
+      "e": 707.9,
+      "t": "Hasta mañana."
+    }
+  ],
+  "cues": [
+    {
+      "t": 0.4,
+      "type": "bell"
+    },
+    {
+      "t": 710.5,
+      "type": "bell"
+    }
+  ]
+}

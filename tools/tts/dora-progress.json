@@ -89,9 +89,24 @@
       "audio_sha256": "8882ff71940e42d07962c093ea47ae27e24122fc3ca4d433dd3184e24e09d124",
       "captions_sha256": "024b17d818dc352494886fa4eb544d50696d0540c7baa433141720a4b1d72853",
       "version": "39c9d65dac4f"
+    },
+    "cla-2-anclar": {
+      "audio_sha256": "4f3fed620a70081a17e32e7b8abaf6a282478f3ab95b32aa8c67c25e5ff7af8b",
+      "captions_sha256": "095450dd1e69395251fc0b1cca6eaa1208ce39a9483603b5ebba1c4b52da13dc",
+      "version": "4efe9adace53"
+    },
+    "cla-3-hacer-espacio": {
+      "audio_sha256": "8529b54ea73f92e8430fac5f0e85f3248db519a0c87db0b712a30511febad2b5",
+      "captions_sha256": "226c8508664a48308916e2a504dc79f65cdfb9051629ea5de25ca3c20c77b7b7",
+      "version": "9959baef1984"
+    },
+    "cla-4-pensamientos": {
+      "audio_sha256": "d85707f4702b5e7e4bdb7227663397674f88005c48d382fa5c7aca8023d1e467",
+      "captions_sha256": "bb88aae63ceddcd75101303f4f30119cd760531964e1053b80a459fcc4da0724",
+      "version": "5fc1c96c91fd"
     }
   },
-  "completed": 18,
+  "completed": 21,
   "total": 61,
   "audio_complete": false
 }

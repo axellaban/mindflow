@@ -146,20 +146,26 @@
   "cla-2-anclar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1224163,
-    "v": "234ffa7c59"
+    "bytes": 1164907,
+    "v": "4efe9adace53",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cla-3-hacer-espacio": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1411965,
-    "v": "8c6cd145d7"
+    "bytes": 1363459,
+    "v": "9959baef1984",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cla-4-pensamientos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1169162,
-    "v": "0ebdbc2ffc"
+    "bytes": 1127227,
+    "v": "5fc1c96c91fd",
+    "engine": "kokoro-82m",
+    "preset": "ef_dora"
   },
   "cla-5-cuidado": {
     "duration": 600.0,
