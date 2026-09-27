@@ -1,13 +1,13 @@
 import { Minus, Pause, Play, Plus, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
 import { engine } from '@/audio/engine';
 import { Button, IconButton } from '@/components/ui/Button';
 import { Chip, ProgressRing } from '@/components/ui/controls';
 import { BED_BY_ID } from '@/content/sounds';
 import type { BedId } from '@/content/types';
 import { haptic, keepAwake } from '@/lib/device';
+import { useBack } from '@/lib/hooks';
 import { SPRING_PRESS, breath } from '@/lib/motion';
 import { formatClock } from '@/lib/time';
 import { type BellId, useAppStore } from '@/store/app';
@@ -34,7 +34,6 @@ const fade = {
 };
 
 export function TimerScreen() {
-  const navigate = useNavigate();
   const saved = useAppStore((s) => s.settings.timer);
   const updateSettings = useAppStore((s) => s.updateSettings);
   const [minutes, setMinutes] = useState(saved.minutes);
@@ -44,7 +43,7 @@ export function TimerScreen() {
   const [stage, setStage] = useState<Stage>('setup');
   const [result, setResult] = useState(0);
 
-  const exit = () => (window.history.length > 1 ? navigate(-1) : navigate('/'));
+  const exit = useBack();
 
   return (
     <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">

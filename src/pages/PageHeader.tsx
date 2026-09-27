@@ -1,8 +1,8 @@
 import { ChevronLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 import type { ReactNode } from 'react';
-import { useNavigate } from 'react-router';
 import { IconButton } from '@/components/ui/Button';
+import { useBack } from '@/lib/hooks';
 import { cn } from '@/lib/utils';
 
 export function PageHeader({
@@ -16,12 +16,12 @@ export function PageHeader({
   action?: ReactNode;
   back?: boolean;
 }) {
-  const navigate = useNavigate();
+  const goBack = useBack();
   return (
     <header className="px-5 pt-safe pb-5 md:px-0 lg:pt-10">
       <div className={cn('flex items-center justify-between gap-3 pt-2', back || action ? 'min-h-12' : 'min-h-2 lg:min-h-0')}>
         {back ? (
-          <IconButton label="Volver" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate('/'))}>
+          <IconButton label="Volver" onClick={goBack}>
             <ChevronLeft className="size-5" />
           </IconButton>
         ) : (

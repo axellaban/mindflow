@@ -109,7 +109,7 @@ export function Onboarding() {
   };
 
   return (
-    <div className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
+    <main className="fixed inset-0 z-[65] overflow-hidden bg-ink-900">
       {/* Alive while breathing; afterwards a still, soft backdrop. */}
       <motion.div className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, ease: 'easeOut' }}>
         <div
@@ -306,7 +306,7 @@ export function Onboarding() {
           </div>
         )}
       </AnimatePresence>
-    </div>
+    </main>
   );
 }
 
