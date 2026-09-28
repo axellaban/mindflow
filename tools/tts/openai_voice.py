@@ -78,8 +78,10 @@ def _call(path: str, body: bytes, content_type: str) -> bytes:
             with urllib.request.urlopen(request, timeout=180) as response:
                 return response.read()
         except urllib.error.HTTPError as error:
-            if error.code not in (408, 409, 429, 500, 502, 503, 504) or attempt == 5:
-                raise SystemExit(f"OpenAI {path} {error.code}: {error.read().decode(errors='replace')[:400]}")
+            detail = error.read().decode(errors="replace")
+            # no credit left is also a 429, but waiting does not fix it
+            if error.code not in (408, 409, 429, 500, 502, 503, 504) or "insufficient_quota" in detail or attempt == 5:
+                raise SystemExit(f"OpenAI {path} {error.code}: {detail[:400]}")
             wait = float(error.headers.get("Retry-After") or 2**attempt)
         except (urllib.error.URLError, TimeoutError) as error:
             if attempt == 5:
@@ -300,25 +302,34 @@ def main() -> None:
     print(f"{len(pending)} to narrate, {len(chosen) - len(pending)} already verified", flush=True)
     synth, ffmpeg = VerifiedSynth(), r.find_ffmpeg()
     changed: list[Path] = []
-    for i, path in enumerate(pending, start=1):
-        started = time.time()
-        manifest[path.stem], progress["sessions"][path.stem] = narrate(path, synth, ffmpeg)
-        rec = progress["sessions"][path.stem]
-        print(f"✓ {path.stem:30s} {manifest[path.stem]['duration'] / 60:5.1f} min  {rec['sentences']} sentences, "
-              f"{rec['retaken']} retaken, {len(rec['flagged'])} flagged  ({time.time() - started:.0f} s)", flush=True)
-        changed += [r.AUDIO_DIR / f"{path.stem}.mp3", r.CAPTIONS_DIR / f"{path.stem}.json"]
-        if i % args.batch == 0 or i == len(pending):
-            progress["verified"] = sum(done(p) for p in paths)
-            progress["total"] = len(paths)
-            write_json(r.MANIFEST, dict(sorted(manifest.items())))
-            write_json(PROGRESS, progress)
-            if args.publish:
-                files = [str(p.relative_to(r.ROOT)) for p in [*changed, r.MANIFEST, PROGRESS]]
-                git("add", "--", *files)
-                git("commit", "-m", f"Voz de OpenAI: {progress['verified']} de {len(paths)} sesiones narradas y verificadas")
-                git("push", "origin", "HEAD")  # a concurrent push is rejected; never forced
-                print(f"saved {git('rev-parse', '--short', 'HEAD')}", flush=True)
-            changed = []
+
+    def save() -> None:
+        nonlocal changed
+        files, changed = [*changed, r.MANIFEST, PROGRESS], []
+        progress["verified"] = sum(done(p) for p in paths)
+        progress["total"] = len(paths)
+        write_json(r.MANIFEST, dict(sorted(manifest.items())))
+        write_json(PROGRESS, progress)
+        if args.publish:
+            git("add", "--", *[str(p.relative_to(r.ROOT)) for p in files])
+            git("commit", "-m", f"Voz de OpenAI: {progress['verified']} de {len(paths)} sesiones narradas y verificadas")
+            git("push", "origin", "HEAD")  # a concurrent push is rejected; never forced
+            print(f"saved {git('rev-parse', '--short', 'HEAD')}", flush=True)
+
+    try:
+        for i, path in enumerate(pending, start=1):
+            started = time.time()
+            manifest[path.stem], progress["sessions"][path.stem] = narrate(path, synth, ffmpeg)
+            rec = progress["sessions"][path.stem]
+            print(f"✓ {path.stem:30s} {manifest[path.stem]['duration'] / 60:5.1f} min  {rec['sentences']} sentences, "
+                  f"{rec['retaken']} retaken, {len(rec['flagged'])} flagged  ({time.time() - started:.0f} s)", flush=True)
+            changed += [r.AUDIO_DIR / f"{path.stem}.mp3", r.CAPTIONS_DIR / f"{path.stem}.json"]
+            if i % args.batch == 0:
+                save()
+    finally:
+        # also when something fails: keep every session that was already verified
+        if changed:
+            save()
 
 
 if __name__ == "__main__":
