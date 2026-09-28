@@ -8,62 +8,62 @@
   "aam-2-cuerpo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1335509,
-    "v": "c99d76bb22"
+    "bytes": 1387602,
+    "v": "97ab221fc7"
   },
   "aam-3-pensamientos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1207565,
-    "v": "b0b5b11ec6"
+    "bytes": 1258602,
+    "v": "9eb601b579"
   },
   "aam-4-emociones": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1203556,
-    "v": "ef524d646e"
+    "bytes": 1234194,
+    "v": "c8961880a3"
   },
   "aam-5-sentidos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1132842,
-    "v": "9ef785cc41"
+    "bytes": 1170234,
+    "v": "d648d7a38a"
   },
   "aam-6-bondad": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1147727,
-    "v": "1802feb983"
+    "bytes": 1187322,
+    "v": "32c4891fe2"
   },
   "aam-7-tu-practica": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1254119,
-    "v": "793843225a"
+    "bytes": 1284042,
+    "v": "938ff34929"
   },
   "antes-de-algo-importante": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 755409,
-    "v": "67039b8320"
+    "bytes": 778986,
+    "v": "5bd5ce3006"
   },
   "bondad-amorosa": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1341094,
-    "v": "7b78f6cd34"
+    "bytes": 1389186,
+    "v": "eacc756eb3"
   },
   "buc-1-piloto-automatico": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1072911,
-    "v": "887b344511"
+    "bytes": 1114050,
+    "v": "fdcf5922d8"
   },
   "buc-2-mente-acelerada": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1066102,
-    "v": "1f7c7696b0"
+    "bytes": 1101690,
+    "v": "3f77c231c5"
   },
   "buc-3-autoexigencia": {
     "duration": 540.0,

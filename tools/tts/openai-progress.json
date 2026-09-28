@@ -7,8 +7,196 @@
       "retaken": 0,
       "lowest_score": 0.667,
       "flagged": []
+    },
+    "aam-2-cuerpo": {
+      "v": "97ab221fc7",
+      "audio_sha256": "d801e778592874fd4f82430f03aea7c5de22f609890d29610183ebaaa4739b53",
+      "sentences": 60,
+      "retaken": 0,
+      "lowest_score": 0.857,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Su peso.",
+          "heard": "su beso.",
+          "score": 0.857
+        },
+        {
+          "text": "El cuello.",
+          "heard": "en el cuello.",
+          "score": 0.857
+        },
+        {
+          "text": "Hola de nuevo.",
+          "heard": "Ona, de nuevo.",
+          "score": 0.88
+        }
+      ]
+    },
+    "aam-3-pensamientos": {
+      "v": "9eb601b579",
+      "audio_sha256": "feae44bfc69214ba57eb78f1f30a956ef931bb4c3d703b6514d81bda6200ecd5",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.897,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente: los pensamientos.",
+          "heard": "Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente.",
+          "score": 0.897
+        },
+        {
+          "text": "Eres quien los observa.",
+          "heard": "Eres quien nos observa.",
+          "score": 0.955
+        }
+      ]
+    },
+    "aam-4-emociones": {
+      "v": "c8961880a3",
+      "audio_sha256": "ed24069c721cc17c66410e47e471333fb03813c392dab9875d62df4817d9d978",
+      "sentences": 49,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "aam-5-sentidos": {
+      "v": "d648d7a38a",
+      "audio_sha256": "732632304560dcbe731dbc73a0bd7b4cceefdcb3fb5410e1c2f767b5c460ae8b",
+      "sentences": 42,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "aam-6-bondad": {
+      "v": "32c4891fe2",
+      "audio_sha256": "9940e87568ad047cce0e3fae2ad6e36010bdee7324c8d2e0ca09d5def54c66d0",
+      "sentences": 48,
+      "retaken": 1,
+      "lowest_score": 0.892,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy, cuando te cruces con alguien, prueba a desearle en silencio: «que seas feliz».",
+          "heard": "Hoy, cuando te cruces con alguien, prueba a desearle en silencio.",
+          "score": 0.892
+        },
+        {
+          "text": "Si te ayuda, lleva una mano al centro del pecho.",
+          "heard": "Si, que ayuda. Lleva una mano al centro del pecho.",
+          "score": 0.968
+        },
+        {
+          "text": "Ahora, en silencio, dirígele estos deseos.",
+          "heard": "Ahora, en silencio, diríjele estos deseos.",
+          "score": 0.974
+        }
+      ]
+    },
+    "aam-7-tu-practica": {
+      "v": "938ff34929",
+      "audio_sha256": "bc6de07a7cb1da665d727d71b24ace73dafcedfd4ccf8ae1b440d88f33e0be1c",
+      "sentences": 47,
+      "retaken": 3,
+      "lowest_score": 0.885,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Quizás diez antes de dormir.",
+          "heard": "Quizás 10 antes de dormir.",
+          "score": 0.885
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesitas sostener.",
+          "heard": "Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesita sostener.",
+          "score": 0.994
+        }
+      ]
+    },
+    "antes-de-algo-importante": {
+      "v": "5bd5ce3006",
+      "audio_sha256": "af1c57bbbd5bb7c05d69490afe31bfdfff796500a4d1007871aee0056d5949c6",
+      "sentences": 45,
+      "retaken": 3,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "bondad-amorosa": {
+      "v": "eacc756eb3",
+      "audio_sha256": "c16c991f54e2a5ef4b325f6c344ad3637bd55e0fb6546b5a78377b687a6d40c8",
+      "sentences": 55,
+      "retaken": 1,
+      "lowest_score": 0.987,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "También quiere ser feliz, igual que tú.",
+          "heard": "También quieres ser feliz, igual que tú.",
+          "score": 0.987
+        }
+      ]
+    },
+    "buc-1-piloto-automatico": {
+      "v": "fdcf5922d8",
+      "audio_sha256": "15f6f4627721d459ede7adb0c7af5f3499542261ac40419e6b1250b974186987",
+      "sentences": 52,
+      "retaken": 1,
+      "lowest_score": 0.959,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Terminas algo y tu cabeza ya está en lo siguiente.",
+          "heard": "Termina salvo y tu cabeza ya está en lo siguiente.",
+          "score": 0.959
+        },
+        {
+          "text": "Puedes cerrar los ojos, o dejar la mirada baja.",
+          "heard": "Puede cerrar los ojos o dejar la mirada baja.",
+          "score": 0.989
+        }
+      ]
+    },
+    "buc-2-mente-acelerada": {
+      "v": "3f77c231c5",
+      "audio_sha256": "38e6c580e1d6362732488e0acdd5266f636ca5e2e9fb1511ec208b62d26b3e8d",
+      "sentences": 54,
+      "retaken": 1,
+      "lowest_score": 0.895,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhalas, y exhalas: uno.",
+          "heard": "Inhalas y exhalas.",
+          "score": 0.895
+        },
+        {
+          "text": "Y si no sabes qué nombre ponerle, simplemente: «pensando».",
+          "heard": "Y si no sabes qué nombre ponerle, simplemente…",
+          "score": 0.907
+        },
+        {
+          "text": "Inhala",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
     }
   },
-  "verified": 1,
+  "verified": 11,
   "total": 61
 }
