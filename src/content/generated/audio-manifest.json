@@ -62,62 +62,62 @@
   "buc-2-mente-acelerada": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1101690,
-    "v": "3f77c231c5"
+    "bytes": 1111794,
+    "v": "f4b9b58ffa"
   },
   "buc-3-autoexigencia": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1231818,
-    "v": "448f9806dd"
+    "bytes": 1247322,
+    "v": "cc9c032d9e"
   },
   "buc-4-culpa": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1199466,
-    "v": "cefa1ef771"
+    "bytes": 1185450,
+    "v": "5cbf91e36f"
   },
   "buc-5-descanso": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1342362,
-    "v": "8195c18c19"
+    "bytes": 1332978,
+    "v": "7d1a24d4e0"
   },
   "cafe-consciente": {
     "duration": 330.0,
     "voice": "luz",
-    "bytes": 810306,
-    "v": "1313062ad4"
+    "bytes": 813306,
+    "v": "61938ed487"
   },
   "caminar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1127850,
-    "v": "f66939b947"
+    "bytes": 1121082,
+    "v": "30a7c4b96f"
   },
   "carga-mental": {
     "duration": 390.0,
     "voice": "luz",
-    "bytes": 851586,
-    "v": "3420412711"
+    "bytes": 850218,
+    "v": "1ca06f448b"
   },
   "cla-1-entender": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1344666,
-    "v": "f9388f8c3a"
+    "bytes": 1331370,
+    "v": "b62d21f432"
   },
   "cla-2-anclar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1283250,
-    "v": "cdbcc5d19f"
+    "bytes": 1267050,
+    "v": "c11168095b"
   },
   "cla-3-hacer-espacio": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1464234,
-    "v": "038ab53156"
+    "bytes": 1461018,
+    "v": "ebccbb4f3b"
   },
   "cla-4-pensamientos": {
     "duration": 600.0,

@@ -175,35 +175,30 @@
       ]
     },
     "buc-2-mente-acelerada": {
-      "v": "3f77c231c5",
-      "audio_sha256": "38e6c580e1d6362732488e0acdd5266f636ca5e2e9fb1511ec208b62d26b3e8d",
+      "v": "f4b9b58ffa",
+      "audio_sha256": "1a9df31092cb86ad2f1a92616dbfa872350bdd06f21533fa012681dcecb03bd5",
       "sentences": 54,
-      "retaken": 1,
-      "lowest_score": 0.895,
+      "retaken": 0,
+      "lowest_score": 0.957,
       "flagged": [],
       "lowest": [
         {
-          "text": "Inhalas, y exhalas: uno.",
-          "heard": "Inhalas y exhalas.",
-          "score": 0.895
+          "text": "Planificando…",
+          "heard": "LANIFICANDO",
+          "score": 0.957
         },
         {
           "text": "Y si no sabes qué nombre ponerle, simplemente: «pensando».",
-          "heard": "Y si no sabes qué nombre ponerle, simplemente…",
-          "score": 0.907
-        },
-        {
-          "text": "Inhala",
-          "heard": "Inala.",
-          "score": 0.909
+          "heard": "Y si no sabes qué nombre ponerle, simplemente tensando.",
+          "score": 0.981
         }
       ]
     },
     "buc-3-autoexigencia": {
-      "v": "448f9806dd",
-      "audio_sha256": "4eee83db195a29a189497ef3f3d231ab5d20271a0e43dca728587fcb8a8646a7",
+      "v": "cc9c032d9e",
+      "audio_sha256": "a3e586d638308670bf9c1540e3ab12e39eb46c1379e89667880d59834bd80c77",
       "sentences": 55,
-      "retaken": 1,
+      "retaken": 0,
       "lowest_score": 0.952,
       "flagged": [],
       "lowest": [
@@ -211,52 +206,41 @@
           "text": "Pero cuando manda todo el tiempo, nos agota.",
           "heard": "Pero cuando manda todo el tiempo, no sabota.",
           "score": 0.952
+        },
+        {
+          "text": "Hoy, cada vez que escuches esa voz exigente, haz una pausa y pregúntate: ¿cómo le hablaría a una amiga?",
+          "heard": "Oí, cada vez que escuches esa voz exigente, haz una pausa y pregúntate, ¿cómo le hablaría a una amiga?",
+          "score": 0.983
         }
       ]
     },
     "buc-4-culpa": {
-      "v": "cefa1ef771",
-      "audio_sha256": "82143b1431699ac1516d84c7555806cc8e71ae1562e5b1211d6a4a3069cf8f72",
+      "v": "5cbf91e36f",
+      "audio_sha256": "eeb24f171fb30f77236f3d6d6e26086598b7cc46e7cd9c91346cdaaeeb690630",
       "sentences": 52,
-      "retaken": 2,
-      "lowest_score": 0.909,
+      "retaken": 0,
+      "lowest_score": 1.0,
       "flagged": [],
-      "lowest": [
-        {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
-        }
-      ]
+      "lowest": []
     },
     "buc-5-descanso": {
-      "v": "8195c18c19",
-      "audio_sha256": "f5ef25d20872718a8347777b038126f6026f3308a2b2540c95becb767a6f970d",
+      "v": "7d1a24d4e0",
+      "audio_sha256": "f357216bd5db5cbe139acd5cc7785f743a2124b160b18127be6c5e9642190a10",
       "sentences": 61,
-      "retaken": 2,
-      "lowest_score": 0.903,
+      "retaken": 0,
+      "lowest_score": 0.971,
       "flagged": [],
       "lowest": [
         {
-          "text": "Afloja la lengua.",
-          "heard": "Afloja la lémua.",
-          "score": 0.903
-        },
-        {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
-        },
-        {
-          "text": "Parece que no pasa nada, pero debajo, todo se está preparando para florecer.",
-          "heard": "Parece que no pasa nada, pero debajo, todo se está apretarando para florecer.",
-          "score": 0.98
+          "text": "Aquí solemos cargar el peso de todo.",
+          "heard": "Aquí, sonemos cargar el peso de todo.",
+          "score": 0.971
         }
       ]
     },
     "cafe-consciente": {
-      "v": "1313062ad4",
-      "audio_sha256": "8a24ea8e55a75f1ee40ec0d0a89cac74d66cd7de0843536427ef86d0c666eda8",
+      "v": "61938ed487",
+      "audio_sha256": "761d0f372b0abc0a68b8ce7cc01f8f367a18fed146fdb5b99420a14eb2120dd4",
       "sentences": 40,
       "retaken": 0,
       "lowest_score": 1.0,
@@ -264,134 +248,97 @@
       "lowest": []
     },
     "caminar": {
-      "v": "f66939b947",
-      "audio_sha256": "6c9b4425ca98881c832c584ff94b4161f3d60b0000fdb06c18a2bd45d58f5eaf",
+      "v": "30a7c4b96f",
+      "audio_sha256": "864d4461bffc65b8031fb42c7f4e6c61ebc692669ae6b6ad0f1fdb1d1ed1396d",
       "sentences": 37,
       "retaken": 2,
-      "lowest_score": 0.986,
+      "lowest_score": 0.955,
       "flagged": [],
       "lowest": [
         {
-          "text": "Quédate de pie un momento, en quietud.",
-          "heard": "Quédate de pie. Un momento. Enquietud.",
-          "score": 0.986
-        },
-        {
-          "text": "Puedes volver a caminar así siempre que quieras: hacia el trabajo, al supermercado, por tu casa.",
-          "heard": "Puedes volver a caminar así siempre que quieres, hacia el trabajo, al supermercado, por tu casa.",
-          "score": 0.989
-        },
-        {
           "text": "Nota a dónde fue, y vuelve a sentir los pies en el suelo.",
-          "heard": "Nota adónde fue y vuelve a sentir los pies en el suelo.",
-          "score": 0.991
+          "heard": "no sé a dónde fue, y vuelve a sentir los pies en el suelo.",
+          "score": 0.955
+        },
+        {
+          "text": "Empieza de pie, en quietud por un momento.",
+          "heard": "Empieza de pie. Inquietud por un momento.",
+          "score": 0.959
+        },
+        {
+          "text": "Quédate de pie un momento, en quietud.",
+          "heard": "Quédate de pie un momento. Enquietud.",
+          "score": 0.985
         }
       ]
     },
     "carga-mental": {
-      "v": "3420412711",
-      "audio_sha256": "f79b0daf8490f46d712782625281f1771a77624f204c8f50f0fc1ea0ba9dbc4e",
+      "v": "1ca06f448b",
+      "audio_sha256": "6170b7e67a0f9ed33287218dcf4b3dcb27815b23f895bf85bb7ed45229533057",
       "sentences": 39,
       "retaken": 1,
-      "lowest_score": 0.923,
+      "lowest_score": 0.969,
       "flagged": [],
       "lowest": [
         {
-          "text": "Solo sacarlos.",
-          "heard": "Sólo sacarnos.",
-          "score": 0.923
-        },
-        {
-          "text": "Es repartir el peso.",
-          "heard": "es repartir en peso.",
-          "score": 0.947
+          "text": "¿Algo que podrías pedir, o delegar?",
+          "heard": "¿Algo que podrías pedir o denegar?",
+          "score": 0.969
         }
       ]
     },
     "cla-1-entender": {
-      "v": "f9388f8c3a",
-      "audio_sha256": "4ea638c3febd3fb4055382f03a069793820de66943713221f85622ee161ed579",
+      "v": "b62d21f432",
+      "audio_sha256": "33c9dd48f68c7b32056ec384347652b2e6cf1cca5cfcb8c2cc4ae031c12effd2",
       "sentences": 74,
-      "retaken": 16,
-      "lowest_score": 0.0,
-      "flagged": [
-        {
-          "text": "dos",
-          "heard": "2",
-          "score": 0.0
-        },
-        {
-          "text": "tres",
-          "heard": "3",
-          "score": 0.0
-        },
-        {
-          "text": "cuatro.",
-          "heard": "4",
-          "score": 0.0
-        }
-      ],
+      "retaken": 0,
+      "lowest_score": 0.986,
+      "flagged": [],
       "lowest": [
         {
-          "text": "Vamos a respirar con un ritmo de cuatro y seis.",
-          "heard": "Vamos a respirar con un ritmo de 4 y 6.",
-          "score": 0.857
-        },
-        {
-          "text": "Inhala",
-          "heard": "Inala.",
-          "score": 0.909
-        },
-        {
-          "text": "Deja ahora la respiración libre.",
-          "heard": "Deza ahora la respiración libre.",
-          "score": 0.968
+          "text": "Cuando la exhalación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse.",
+          "heard": "Cuando la exanación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse.",
+          "score": 0.986
         }
       ]
     },
     "cla-2-anclar": {
-      "v": "cdbcc5d19f",
-      "audio_sha256": "a0707e5461e973f993f1f699429433eacfc69ffec03e62596dfd632e6087e4ef",
+      "v": "c11168095b",
+      "audio_sha256": "7db14958ab9cd607748e3b809be833b579916f639f3d7559e12d7d0c6b259bc1",
       "sentences": 55,
-      "retaken": 4,
-      "lowest_score": 0.375,
-      "flagged": [
-        {
-          "text": "Se llama cinco, cuatro, tres, dos, uno.",
-          "heard": "Se llama 54321.",
-          "score": 0.375
-        },
-        {
-          "text": "Cuando notes que la ansiedad empieza a subir, prueba el cinco, cuatro, tres, dos, uno.",
-          "heard": "Cuando notes que la ansiedad empieza a subir, prueba el 5, 4, 3, 2, 1.",
-          "score": 0.819
-        }
-      ],
+      "retaken": 1,
+      "lowest_score": 0.991,
+      "flagged": [],
       "lowest": [
         {
-          "text": "Siente el suelo.",
-          "heard": "Siente el sueno.",
-          "score": 0.933
+          "text": "No necesitas cerrar los ojos, ni que nadie se dé cuenta.",
+          "heard": "No necesita cerrar los ojos, ni que nadie se dé cuenta.",
+          "score": 0.991
         }
       ]
     },
     "cla-3-hacer-espacio": {
-      "v": "038ab53156",
-      "audio_sha256": "5cd0444522cbfe10f0b62aaeffbcd312112f9e1a43714dd08411a9170a8f324f",
+      "v": "ebccbb4f3b",
+      "audio_sha256": "d2422ad34b22ee20e504bb1fd10f44d02f49c90f3bb3e778300613da0e7d1c92",
       "sentences": 60,
-      "retaken": 1,
-      "lowest_score": 0.961,
+      "retaken": 0,
+      "lowest_score": 0.812,
       "flagged": [],
       "lowest": [
         {
-          "text": "RAIN es una práctica para toda la vida.",
-          "heard": "Reign es una práctica para toda la vida.",
-          "score": 0.961
+          "text": "Quizás seguridad.",
+          "heard": "Cuisas. Securidad.",
+          "score": 0.812
         },
         {
-          "text": "Y decirte algo amable, como le hablarías a una persona querida: «estoy aquí contigo.",
-          "heard": "Y decir que algo amable, como le hablarías a una persona querida. Estoy aquí contigo.",
-          "score": 0.975
+          "text": "RAIN es una práctica para toda la vida.",
+          "heard": "R.A.I.N. es una práctica para toda la vida.",
+          "score": 0.958
+        },
+        {
+          "text": "La idea es sencilla: en lugar de pelear con lo que sentimos, o de huir, le hacemos espacio.",
+          "heard": "La idea es sencilla, en lugar de pelear con lo que sentimos o de huir, nacemos espacio.",
+          "score": 0.971
         }
       ]
     },
@@ -1248,6 +1195,6 @@
       "lowest": []
     }
   },
-  "verified": 10,
+  "verified": 20,
   "total": 61
 }
