@@ -1060,8 +1060,191 @@
           "score": 0.94
         }
       ]
+    },
+    "pausa-paciencia": {
+      "v": "4590b15632",
+      "audio_sha256": "dd080dcf14e27ecbf1765ee6a13e5669fb846b6de7e98d159cebfca61a30d53b",
+      "sentences": 48,
+      "retaken": 2,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Ni un brote.",
+          "heard": "mi un brote",
+          "score": 0.909
+        },
+        {
+          "text": "La riega cada día.",
+          "heard": "La Riera cada día.",
+          "score": 0.941
+        },
+        {
+          "text": "Cuando notes impaciencia, en una fila, en el tráfico, con alguien, haz una respiración lenta y recuerda la semilla.",
+          "heard": "Cuando notes impaciencia en una fila, en el tráfico, con alguien, haz una respiración lenta y recuerda.",
+          "score": 0.947
+        }
+      ]
+    },
+    "pausa-soltar": {
+      "v": "6a3247a8f8",
+      "audio_sha256": "b70041d5218a711906c79655d111b81e0b4f5def7ab000c29376b48c01c2c783",
+      "sentences": 50,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-todo-pasa": {
+      "v": "9ce5e4272b",
+      "audio_sha256": "24cbd94eba3aa675887f2521221c4498d6ca61c16dce81430ed3459387460df6",
+      "sentences": 41,
+      "retaken": 1,
+      "lowest_score": 0.907,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy vamos a reflexionar sobre una verdad sencilla: todo pasa.",
+          "heard": "Hoy vamos a reflexionar sobre una verdad sencilla.",
+          "score": 0.907
+        },
+        {
+          "text": "Ahora observa tus pensamientos.",
+          "heard": "Ahora observa tus tensamientos.",
+          "score": 0.967
+        }
+      ]
+    },
+    "poner-limites": {
+      "v": "97a4f317c5",
+      "audio_sha256": "d73f8319e09117e8989ee242c7e4223bd93600651ac2d98cb7cc55279f90a500",
+      "sentences": 51,
+      "retaken": 1,
+      "lowest_score": 0.977,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Vuelve a sentir los pies en el suelo, firmes.",
+          "heard": "Vuelve a sentir los pies en el sueno, firmes.",
+          "score": 0.977
+        },
+        {
+          "text": "O: «Esto no me hace bien, y prefiero no hacerlo».",
+          "heard": "Oh, esto no me hace bien y prefiero no hacerlo.",
+          "score": 0.989
+        }
+      ]
+    },
+    "primera-meditacion": {
+      "v": "05ad14b115",
+      "audio_sha256": "b5a8aed12653c352566411a16987ba513e56f6b5cf1b087ed64b7deadee97c54",
+      "sentences": 45,
+      "retaken": 3,
+      "lowest_score": 0.846,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Dos al exhalar.",
+          "heard": "2. Al exhalar.",
+          "score": 0.846
+        },
+        {
+          "text": "Hasta diez, y vuelves a empezar.",
+          "heard": "hasta 10 y vuelves a empezar.",
+          "score": 0.897
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "relajacion-progresiva": {
+      "v": "f4aaaca502",
+      "audio_sha256": "62b45af8c4a0339dd122e45512e1ef890c5dc3f7c57e2a88b20bab4c46e25078",
+      "sentences": 71,
+      "retaken": 1,
+      "lowest_score": 0.976,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y si tienes alguna lesión, salta esa zona.",
+          "heard": "Y si tienes alguna lesión, salta a esa zona.",
+          "score": 0.976
+        },
+        {
+          "text": "La técnica es sencilla y muy eficaz: tensamos un grupo de músculos durante unos segundos, y luego lo soltamos por completo.",
+          "heard": "La técnica es sencilla y muy eficaz. Tensamos un grupo de músculos durante unos segundos y luego los soltamos por completo.",
+          "score": 0.996
+        }
+      ]
+    },
+    "respiro-para-mamas": {
+      "v": "91d751089f",
+      "audio_sha256": "a04b55ec5a5a4b5506850a027af9e686c2b684e2dbb1aff15718a1d4e017bd78",
+      "sentences": 32,
+      "retaken": 1,
+      "lowest_score": 0.957,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Lleva una mano al pecho.",
+          "heard": "Lleva una mano al techo.",
+          "score": 0.957
+        }
+      ]
+    },
+    "soltar-tension": {
+      "v": "097d61f3ea",
+      "audio_sha256": "862e5de84c7e534342763850d89dc564a3bb957f58a0fe52c2f1ee7635fd48e3",
+      "sentences": 61,
+      "retaken": 2,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Un «ahh» largo.",
+          "heard": "un a largo",
+          "score": 0.909
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Baja al cuello.",
+          "heard": "Baja el cuello.",
+          "score": 0.929
+        }
+      ]
+    },
+    "sos-ansiedad": {
+      "v": "c8f36956a7",
+      "audio_sha256": "dd3cd139fa9fe65cbc48c8a7e0f16879427b354d91d8710a0ee1af4b2bef4bd3",
+      "sentences": 32,
+      "retaken": 0,
+      "lowest_score": 0.929,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Dos inhalaciones por la nariz…",
+          "heard": "2. Inhalaciones por la nariz.",
+          "score": 0.929
+        }
+      ]
+    },
+    "volver-a-dormir": {
+      "v": "e250ad8f4b",
+      "audio_sha256": "cfd22df8a5af12c6a30a163e5794875e9af8990e1ce4252ea4b404e4814e4c0f",
+      "sentences": 48,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
     }
   },
-  "verified": 51,
+  "verified": 61,
   "total": 61
 }
