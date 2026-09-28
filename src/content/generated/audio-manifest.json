@@ -122,62 +122,62 @@
   "cla-4-pensamientos": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1205034,
-    "v": "e3c5a804f3"
+    "bytes": 1206114,
+    "v": "a734e521cf"
   },
   "cla-5-cuidado": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1288170,
-    "v": "94ca84fd9e"
+    "bytes": 1289034,
+    "v": "57c6f5b190"
   },
   "cuando-sientes-enojo": {
     "duration": 420.0,
     "voice": "luz",
-    "bytes": 933042,
-    "v": "127e1ab06d"
+    "bytes": 926226,
+    "v": "09777591a2"
   },
   "cuerpo-en-paz": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1172898,
-    "v": "324538510f"
+    "bytes": 1161018,
+    "v": "86b1a70556"
   },
   "despertar": {
     "duration": 420.0,
     "voice": "luz",
-    "bytes": 914970,
-    "v": "c85e6efd4f"
+    "bytes": 917346,
+    "v": "fe06f4e30a"
   },
   "dias-de-periodo": {
     "duration": 540.0,
     "voice": "luz",
-    "bytes": 1182234,
-    "v": "ffbf7b42b9"
+    "bytes": 1170642,
+    "v": "4d854ca969"
   },
   "dp-1-soltar-el-dia": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1327314,
-    "v": "f4e807e5d3"
+    "bytes": 1330290,
+    "v": "6d75375007"
   },
   "dp-2-respirar-para-dormir": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1238034,
-    "v": "c391e2d382"
+    "bytes": 1234050,
+    "v": "d661c5bccc"
   },
   "dp-3-escaneo-corporal": {
     "duration": 900.0,
     "voice": "luz",
-    "bytes": 1619514,
-    "v": "4a5c6cb627"
+    "bytes": 1612314,
+    "v": "87a9773f09"
   },
   "dp-4-aquietar-la-mente": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1353786,
-    "v": "c3e12ade5d"
+    "bytes": 1334754,
+    "v": "d58c1f1ce5"
   },
   "dp-5-el-lago": {
     "duration": 900.0,
