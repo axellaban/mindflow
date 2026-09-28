@@ -1,51 +1,42 @@
 {
   "sessions": {
     "aam-1-respiracion": {
-      "v": "09bfa9f091",
-      "audio_sha256": "b90d0259384f743ca4469bf1f2f9c61bdfe90089fe9ac19c6f6900d27a108d6d",
+      "v": "297870b4b3",
+      "audio_sha256": "016b0746bdacb01759372ecd50c53a532ef4c6193a44750d94dc1b34160eceff",
       "sentences": 58,
-      "retaken": 0,
-      "lowest_score": 0.667,
-      "flagged": []
+      "retaken": 2,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
     },
     "aam-2-cuerpo": {
-      "v": "97ab221fc7",
-      "audio_sha256": "d801e778592874fd4f82430f03aea7c5de22f609890d29610183ebaaa4739b53",
+      "v": "d0c88a0dac",
+      "audio_sha256": "fd72fea8cea9744ec21a2e21f43e10151118315756f0c737eb1c6af3f35bdd05",
       "sentences": 60,
       "retaken": 0,
-      "lowest_score": 0.857,
+      "lowest_score": 0.8,
       "flagged": [],
       "lowest": [
         {
-          "text": "Su peso.",
-          "heard": "su beso.",
-          "score": 0.857
+          "text": "Su forma.",
+          "heard": "SOFORMA",
+          "score": 0.8
         },
         {
-          "text": "El cuello.",
-          "heard": "en el cuello.",
-          "score": 0.857
-        },
-        {
-          "text": "Hola de nuevo.",
-          "heard": "Ona, de nuevo.",
-          "score": 0.88
+          "text": "Nota a dónde fue, y vuelve a sentir el cuerpo.",
+          "heard": "Nota adónde fue y vuelve a sentir el cuerpo.",
+          "score": 0.989
         }
       ]
     },
     "aam-3-pensamientos": {
-      "v": "9eb601b579",
-      "audio_sha256": "feae44bfc69214ba57eb78f1f30a956ef931bb4c3d703b6514d81bda6200ecd5",
+      "v": "3a8425b55c",
+      "audio_sha256": "d4e88a9803bcedfbf5687efbed11f6efe8520605e018a352a13a1432daf9eba5",
       "sentences": 48,
       "retaken": 0,
-      "lowest_score": 0.897,
+      "lowest_score": 0.955,
       "flagged": [],
       "lowest": [
-        {
-          "text": "Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente: los pensamientos.",
-          "heard": "Hoy vamos a mirar de frente aquello que tantas veces nos saca del presente.",
-          "score": 0.897
-        },
         {
           "text": "Eres quien los observa.",
           "heard": "Eres quien nos observa.",
@@ -54,41 +45,48 @@
       ]
     },
     "aam-4-emociones": {
-      "v": "c8961880a3",
-      "audio_sha256": "ed24069c721cc17c66410e47e471333fb03813c392dab9875d62df4817d9d978",
+      "v": "20a777af40",
+      "audio_sha256": "1869085f8e51d7d4d7173f4fddf82402b6d72a8aac5beab5b79fe97bff8dddf8",
       "sentences": 49,
-      "retaken": 1,
-      "lowest_score": 1.0,
-      "flagged": [],
-      "lowest": []
-    },
-    "aam-5-sentidos": {
-      "v": "d648d7a38a",
-      "audio_sha256": "732632304560dcbe731dbc73a0bd7b4cceefdcb3fb5410e1c2f767b5c460ae8b",
-      "sentences": 42,
       "retaken": 0,
-      "lowest_score": 1.0,
-      "flagged": [],
-      "lowest": []
-    },
-    "aam-6-bondad": {
-      "v": "32c4891fe2",
-      "audio_sha256": "9940e87568ad047cce0e3fae2ad6e36010bdee7324c8d2e0ca09d5def54c66d0",
-      "sentences": 48,
-      "retaken": 1,
-      "lowest_score": 0.892,
+      "lowest_score": 0.974,
       "flagged": [],
       "lowest": [
         {
-          "text": "Hoy, cuando te cruces con alguien, prueba a desearle en silencio: «que seas feliz».",
-          "heard": "Hoy, cuando te cruces con alguien, prueba a desearle en silencio.",
-          "score": 0.892
+          "text": "Obsérvala como si fuera la primera vez.",
+          "heard": "Obsérvana como si fuera la primera vez.",
+          "score": 0.974
+        }
+      ]
+    },
+    "aam-5-sentidos": {
+      "v": "09be57b806",
+      "audio_sha256": "75418b329119ba3e9c25d81e2934fb2c3a82463ae2559c99aff83773698351d1",
+      "sentences": 42,
+      "retaken": 0,
+      "lowest_score": 0.944,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "El peso de la ropa.",
+          "heard": "El teso de la ropa.",
+          "score": 0.944
         },
         {
-          "text": "Si te ayuda, lleva una mano al centro del pecho.",
-          "heard": "Si, que ayuda. Lleva una mano al centro del pecho.",
-          "score": 0.968
-        },
+          "text": "Si notas mucha dispersión, vuelve a la respiración un momento, y luego vuelve a abrir.",
+          "heard": "Si notas mucha dispersión, vuelve la respiración un momento y luego vuelve a abrir.",
+          "score": 0.987
+        }
+      ]
+    },
+    "aam-6-bondad": {
+      "v": "f97a757501",
+      "audio_sha256": "dd3d7957bfaa7862bc2865a250a7e670a86abe068b627f94e7c4fd029b6860b8",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
         {
           "text": "Ahora, en silencio, dirígele estos deseos.",
           "heard": "Ahora, en silencio, diríjele estos deseos.",
@@ -97,22 +95,17 @@
       ]
     },
     "aam-7-tu-practica": {
-      "v": "938ff34929",
-      "audio_sha256": "bc6de07a7cb1da665d727d71b24ace73dafcedfd4ccf8ae1b440d88f33e0be1c",
+      "v": "b3e8f8de55",
+      "audio_sha256": "d8f5ecf7402d59c29dfb9e02924db5210dc8f459533aef037a53983bbc88b10d",
       "sentences": 47,
-      "retaken": 3,
-      "lowest_score": 0.885,
+      "retaken": 0,
+      "lowest_score": 0.974,
       "flagged": [],
       "lowest": [
         {
-          "text": "Quizás diez antes de dormir.",
-          "heard": "Quizás 10 antes de dormir.",
-          "score": 0.885
-        },
-        {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
+          "text": "Durante ese tiempo, quédate con tu ancla.",
+          "heard": "Durante ese tiempo, quédate con tu antla.",
+          "score": 0.974
         },
         {
           "text": "Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesitas sostener.",
@@ -122,28 +115,33 @@
       ]
     },
     "antes-de-algo-importante": {
-      "v": "5bd5ce3006",
-      "audio_sha256": "af1c57bbbd5bb7c05d69490afe31bfdfff796500a4d1007871aee0056d5949c6",
+      "v": "472bc87fcc",
+      "audio_sha256": "c9d28e90b6ba01d285fa962e5dbfe22d220655e4b220da09d00c746a45f295b6",
       "sentences": 45,
-      "retaken": 3,
-      "lowest_score": 0.909,
+      "retaken": 0,
+      "lowest_score": 0.897,
       "flagged": [],
       "lowest": [
         {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
+          "text": "Abre el pecho.",
+          "heard": "Abre en el pecho.",
+          "score": 0.897
         }
       ]
     },
     "bondad-amorosa": {
-      "v": "eacc756eb3",
-      "audio_sha256": "c16c991f54e2a5ef4b325f6c344ad3637bd55e0fb6546b5a78377b687a6d40c8",
+      "v": "61d768ca96",
+      "audio_sha256": "657b90753563603a047782b29c5e00b01ddd025077a3fd7dbdbdb4a291f222fd",
       "sentences": 55,
-      "retaken": 1,
-      "lowest_score": 0.987,
+      "retaken": 0,
+      "lowest_score": 0.968,
       "flagged": [],
       "lowest": [
+        {
+          "text": "Siente el latido, la respiración.",
+          "heard": "Siente en latido la respiración.",
+          "score": 0.968
+        },
         {
           "text": "También quiere ser feliz, igual que tú.",
           "heard": "También quieres ser feliz, igual que tú.",
@@ -152,17 +150,22 @@
       ]
     },
     "buc-1-piloto-automatico": {
-      "v": "fdcf5922d8",
-      "audio_sha256": "15f6f4627721d459ede7adb0c7af5f3499542261ac40419e6b1250b974186987",
+      "v": "e19c42c640",
+      "audio_sha256": "a4c9b093e1ae1b55f189fdefebc4c5ed7124d1c15bdbe496fa4f0fcb01bb6fae",
       "sentences": 52,
-      "retaken": 1,
-      "lowest_score": 0.959,
+      "retaken": 0,
+      "lowest_score": 0.923,
       "flagged": [],
       "lowest": [
         {
-          "text": "Terminas algo y tu cabeza ya está en lo siguiente.",
-          "heard": "Termina salvo y tu cabeza ya está en lo siguiente.",
-          "score": 0.959
+          "text": "Comes mirando el teléfono.",
+          "heard": "Comence mirando el teléfono.",
+          "score": 0.923
+        },
+        {
+          "text": "¿Hay tensión en los hombros, en la mandíbula, en el abdomen?",
+          "heard": "¿Hay hensión en los hombros, en la mandíbula, en el abdomen?",
+          "score": 0.982
         },
         {
           "text": "Puedes cerrar los ojos, o dejar la mirada baja.",
@@ -1245,6 +1248,6 @@
       "lowest": []
     }
   },
-  "verified": 61,
+  "verified": 10,
   "total": 61
 }
