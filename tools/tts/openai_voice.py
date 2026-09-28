@@ -56,7 +56,7 @@ INSTRUCTIONS = (
 )
 # scripts that set a slower pace are for falling asleep
 SLEEPY = "\nThis is for falling asleep: even slower and softer, drowsy and soothing."
-VERSION = hashlib.sha1(f"openai-1|{MODEL}|{VOICE}|{INSTRUCTIONS}|{SLEEPY}|{r.PARAGRAPH_GAP}".encode()).hexdigest()
+VERSION = hashlib.sha1(f"openai-2|{MODEL}|{VOICE}|{INSTRUCTIONS}|{SLEEPY}|{r.PARAGRAPH_GAP}".encode()).hexdigest()
 
 TAKES = 3  # attempts per sentence
 WORKERS = 6
@@ -89,11 +89,17 @@ def _call(path: str, body: bytes, content_type: str) -> bytes:
     raise AssertionError("unreachable")
 
 
+def spoken_input(text: str) -> str:
+    """The text as the voice gets it. The voice sometimes stops at a colon, so it gets a comma
+    (or a full stop at the end); the captions keep the colon."""
+    return re.sub(r":\s*$", ".", r.prepare_text(text)).replace(":", ",")
+
+
 def speak(text: str, sleepy: bool) -> np.ndarray:
     body = json.dumps({
         "model": MODEL,
         "voice": VOICE,
-        "input": r.prepare_text(text),
+        "input": spoken_input(text),
         "instructions": INSTRUCTIONS + (SLEEPY if sleepy else ""),
         "response_format": "pcm",
     }).encode()
@@ -128,16 +134,33 @@ def words(text: str) -> list[str]:
     return re.findall(r"[a-z0-9]+", plain)
 
 
-def score(expected: str, heard: str, seconds: float) -> float:
-    """How closely the take matches the text, 0 to 1; 0 when its length is implausible."""
+NUMBERS = set(
+    "cero un una uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciseis "
+    "diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres veinticuatro veinticinco veintiseis "
+    "veintisiete veintiocho veintinueve treinta cuarenta cincuenta sesenta setenta ochenta noventa cien ciento mil".split()
+)
+
+
+def content(text: str) -> list[str]:
+    """The words that must be heard. Numbers are left out: transcriptions write them as digits."""
+    return [w for w in words(text) if w not in NUMBERS and not w.isdigit()]
+
+
+def check(expected: str, heard: str, seconds: float) -> tuple[float, bool]:
+    """How closely the take matches the text (0 to 1), and whether it passes. A take fails when
+    its length is implausible or words are missing: two or more in a row, or the last ones."""
     n = len(words(expected))
     if n >= 5 and not 0.7 <= n / max(seconds, 0.01) <= 4.5:
-        return 0.0
-    return SequenceMatcher(None, " ".join(words(expected)), " ".join(words(heard))).ratio()
-
-
-def good_enough(expected: str, value: float) -> bool:
-    return value >= (0.85 if len(words(expected)) >= 4 else 0.6)
+        return 0.0, False
+    want, got = content(expected), content(heard)
+    if not want:  # a count: "dos", "Diez…"
+        return 1.0, True
+    value = round(SequenceMatcher(None, " ".join(want), " ".join(got)).ratio(), 3)
+    for op, i1, i2, j1, j2 in SequenceMatcher(None, want, got, autojunk=False).get_opcodes():
+        missing = (i2 - i1) - (j2 - j1) if op in ("delete", "replace") else 0
+        if missing >= 2 or (op == "delete" and i2 == len(want)):
+            return value, False
+    return value, value >= (0.85 if len(want) >= 4 else 0.6)
 
 
 class VerifiedSynth:
@@ -153,15 +176,15 @@ class VerifiedSynth:
         if cache.exists():
             with np.load(cache, allow_pickle=False) as data:
                 return data["audio"], json.loads(str(data["report"]))
-        best, report = None, {"score": -1.0, "heard": "", "takes": 0}
+        best, report = None, {"ok": False, "score": -1.0, "heard": "", "takes": 0}
         for take in range(1, TAKES + 1):
             audio = speak(text, sleepy)
             heard = hear(audio)
-            value = score(text, heard, len(audio) / r.SR)
-            if value > report["score"]:
-                best, report = audio, {"score": round(value, 3), "heard": heard, "takes": take}
+            value, ok = check(text, heard, len(audio) / r.SR)
+            if (ok, value) > (report["ok"], report["score"]):
+                best, report = audio, {"ok": ok, "score": value, "heard": heard, "takes": take}
             report["takes"] = take
-            if good_enough(text, value):
+            if ok:
                 break
         CLIP_CACHE.mkdir(parents=True, exist_ok=True)
         tmp = cache.with_suffix(".tmp.npz")
@@ -221,10 +244,10 @@ def narrate(path: Path, synth: VerifiedSynth, ffmpeg: str) -> tuple[dict, dict]:
     assert all(a["e"] <= b["s"] for a, b in zip(caps, caps[1:])), path.stem
 
     reports = [synth.report[t] for t in spoken]
-    heard = [{"text": t, "heard": synth.report[t]["heard"], "score": synth.report[t]["score"]} for t in dict.fromkeys(spoken)]
-    flagged = [h for h in heard if not good_enough(h["text"], h["score"])]
+    heard = {t: {"text": t, "heard": synth.report[t]["heard"], "score": synth.report[t]["score"]} for t in dict.fromkeys(spoken)}
+    flagged = [heard[t] for t in heard if not synth.report[t]["ok"]]
     # the closest calls, to read over even when they passed
-    lowest = sorted((h for h in heard if h["score"] < 1 and h not in flagged), key=lambda h: h["score"])[:3]
+    lowest = sorted((heard[t] for t in heard if synth.report[t]["ok"] and heard[t]["score"] < 1), key=lambda h: h["score"])[:3]
     entry = {"duration": meta["duration"], "voice": script.voice, "bytes": out.stat().st_size, "v": version(path)}
     record = {
         "v": entry["v"],
