@@ -221,8 +221,10 @@ def narrate(path: Path, synth: VerifiedSynth, ffmpeg: str) -> tuple[dict, dict]:
     assert all(a["e"] <= b["s"] for a, b in zip(caps, caps[1:])), path.stem
 
     reports = [synth.report[t] for t in spoken]
-    flagged = [{"text": t, "heard": synth.report[t]["heard"], "score": synth.report[t]["score"]}
-               for t in dict.fromkeys(spoken) if not good_enough(t, synth.report[t]["score"])]
+    heard = [{"text": t, "heard": synth.report[t]["heard"], "score": synth.report[t]["score"]} for t in dict.fromkeys(spoken)]
+    flagged = [h for h in heard if not good_enough(h["text"], h["score"])]
+    # the closest calls, to read over even when they passed
+    lowest = sorted((h for h in heard if h["score"] < 1 and h not in flagged), key=lambda h: h["score"])[:3]
     entry = {"duration": meta["duration"], "voice": script.voice, "bytes": out.stat().st_size, "v": version(path)}
     record = {
         "v": entry["v"],
@@ -231,6 +233,7 @@ def narrate(path: Path, synth: VerifiedSynth, ffmpeg: str) -> tuple[dict, dict]:
         "retaken": sum(rep["takes"] > 1 for rep in reports),
         "lowest_score": min(rep["score"] for rep in reports),
         "flagged": flagged,
+        "lowest": lowest,
     }
     return entry, record
 
