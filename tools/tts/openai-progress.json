@@ -677,8 +677,238 @@
           "score": 0.97
         }
       ]
+    },
+    "energia-matinal": {
+      "v": "c39b41b91e",
+      "audio_sha256": "f3beba0e11778ae632654e64d9c5a89c23bebd27cb639c088190dbd0990a000f",
+      "sentences": 46,
+      "retaken": 0,
+      "lowest_score": 0.895,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Algo que te importe.",
+          "heard": "AIBO, ¡Qué te importe!",
+          "score": 0.895
+        },
+        {
+          "text": "Inhala",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "enfoque-profundo": {
+      "v": "a04823d265",
+      "audio_sha256": "34b339f45830221abb70e0313425f370bb82d923922ca887556807ff856b7a93",
+      "sentences": 39,
+      "retaken": 4,
+      "lowest_score": 0.852,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Luego vuelve a empezar desde uno.",
+          "heard": "Luego, vuelven a rezar desde 1.",
+          "score": 0.852
+        },
+        {
+          "text": "Cuenta uno en la primera exhalación, dos en la siguiente, y así hasta diez.",
+          "heard": "Cuenta 1 en la primera exhalación, 2 en la siguiente, y así hasta 10.",
+          "score": 0.899
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "gratitud": {
+      "v": "03702e64df",
+      "audio_sha256": "8bf6c467aa8a8e7157c6078f03862721716a1dcf8edf673291eefe11ddb5488d",
+      "sentences": 47,
+      "retaken": 1,
+      "lowest_score": 0.935,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Si quieres, dile también por qué.",
+          "heard": "Si quieres, diga también por qué.",
+          "score": 0.935
+        },
+        {
+          "text": "En pocas semanas, tu mente empezará a buscarlas sola.",
+          "heard": "En pocas semanas, tu mente empezará a buscarla sola.",
+          "score": 0.99
+        }
+      ]
+    },
+    "historia-atacama": {
+      "v": "555d098a71",
+      "audio_sha256": "9c6309c1f57bc7cacba1165975b5f1629b945211639a52090a83f3b66df0a336",
+      "sentences": 120,
+      "retaken": 0,
+      "lowest_score": 0.893,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Solo tu respiración, lenta, lenta.",
+          "heard": "Sólo tu respiración, lenta.",
+          "score": 0.893
+        },
+        {
+          "text": "Luego de un violeta suave, casi lila.",
+          "heard": "Muevo de un violeta suave, casi lila.",
+          "score": 0.943
+        },
+        {
+          "text": "Son las Nubes de Magallanes.",
+          "heard": "Son las nubes de Matallanes.",
+          "score": 0.963
+        }
+      ]
+    },
+    "historia-biblioteca-lluvia": {
+      "v": "f63d1d35bd",
+      "audio_sha256": "8a94c1d1b8b6f558b707ef5a9f930cc6f2c6c8a6737320b70bd350bc79bcd94f",
+      "sentences": 136,
+      "retaken": 0,
+      "lowest_score": 0.727,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Lluvia.",
+          "heard": "Júvia.",
+          "score": 0.727
+        },
+        {
+          "text": "El fuego crepita.",
+          "heard": "El fuego que pita.",
+          "score": 0.848
+        },
+        {
+          "text": "Otros, de tela gastada.",
+          "heard": "Otros de Tena Dastada.",
+          "score": 0.905
+        }
+      ]
+    },
+    "historia-cabana-nieve": {
+      "v": "02f4d3921f",
+      "audio_sha256": "48737e61983ad8e81308d4e4079d105354a6df12a081a234f00fc3170ee72c30",
+      "sentences": 118,
+      "retaken": 1,
+      "lowest_score": 0.75,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "uuh.",
+          "heard": "¡Uuuuh!",
+          "score": 0.75
+        },
+        {
+          "text": "Uuh…",
+          "heard": "¡Uuuh!",
+          "score": 0.857
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "historia-faro": {
+      "v": "0122508969",
+      "audio_sha256": "26b8a87d400d0e1a303254cfb84b3ef8f748fcfed457ca711720ffc0f79cc782",
+      "sentences": 129,
+      "retaken": 7,
+      "lowest_score": 0.667,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Toc.",
+          "heard": "Tok.",
+          "score": 0.667
+        },
+        {
+          "text": "Y el haz empieza a girar.",
+          "heard": "y en HASS empieza a girar.",
+          "score": 0.898
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "historia-tren-patagonia": {
+      "v": "a959b1c731",
+      "audio_sha256": "86c552b02e941ccfd69f7bf46be4576aead2c9ae12a161a68fd16729d44b08bb",
+      "sentences": 150,
+      "retaken": 0,
+      "lowest_score": 0.75,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "tacatán…",
+          "heard": "Ta-ta-tan.",
+          "score": 0.75
+        },
+        {
+          "text": "Tacatán…",
+          "heard": "¡Tacaten!",
+          "score": 0.857
+        },
+        {
+          "text": "La miras un rato largo.",
+          "heard": "La mira hace un rato largo.",
+          "score": 0.875
+        }
+      ]
+    },
+    "montana": {
+      "v": "0962ffa571",
+      "audio_sha256": "c70a0cc3fa8588913f5b00c76789ad70519fa7147616ba79bb82f2d44196c292",
+      "sentences": 61,
+      "retaken": 1,
+      "lowest_score": 0.981,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Tu cabeza, su cumbre elevada.",
+          "heard": "tu cabeza sucumbre elevada.",
+          "score": 0.981
+        }
+      ]
+    },
+    "nsdr": {
+      "v": "c63d60d89e",
+      "audio_sha256": "0f892f739425fd2c838ccca978f1749db03ce41435682ee8174941f0f687b47e",
+      "sentences": 144,
+      "retaken": 0,
+      "lowest_score": 0.857,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "La nuca.",
+          "heard": "la noca.",
+          "score": 0.857
+        },
+        {
+          "text": "Si pierdes la cuenta, vuelve a empezar desde veintisiete.",
+          "heard": "Si pierdes la cuenta, vuelve a empezar desde 27.",
+          "score": 0.871
+        },
+        {
+          "text": "Solo toca cada punto con la atención, y sigue.",
+          "heard": "Sólo toca cada punto con la atención.",
+          "score": 0.9
+        }
+      ]
     }
   },
-  "verified": 31,
+  "verified": 41,
   "total": 61
 }

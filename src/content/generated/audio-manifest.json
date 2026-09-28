@@ -188,62 +188,62 @@
   "energia-matinal": {
     "duration": 360.0,
     "voice": "luz",
-    "bytes": 795388,
-    "v": "fd0318ae5d"
+    "bytes": 830850,
+    "v": "c39b41b91e"
   },
   "enfoque-profundo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1095887,
-    "v": "3349770e51"
+    "bytes": 1129602,
+    "v": "a04823d265"
   },
   "gratitud": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1025995,
-    "v": "5ddb88780b"
+    "bytes": 1083018,
+    "v": "03702e64df"
   },
   "historia-atacama": {
-    "duration": 688.53,
+    "duration": 719.82,
     "voice": "luz",
-    "bytes": 2495736,
-    "v": "9fb585510a"
+    "bytes": 2550426,
+    "v": "555d098a71"
   },
   "historia-biblioteca-lluvia": {
-    "duration": 735.81,
+    "duration": 763.79,
     "voice": "luz",
-    "bytes": 2649447,
-    "v": "57e9736363"
+    "bytes": 2699226,
+    "v": "f63d1d35bd"
   },
   "historia-cabana-nieve": {
-    "duration": 638.46,
+    "duration": 665.74,
     "voice": "luz",
-    "bytes": 2251674,
-    "v": "b85f866e25"
+    "bytes": 2299386,
+    "v": "02f4d3921f"
   },
   "historia-faro": {
-    "duration": 723.99,
+    "duration": 750.47,
     "voice": "luz",
-    "bytes": 2600435,
-    "v": "8d66bb1af1"
+    "bytes": 2606802,
+    "v": "0122508969"
   },
   "historia-tren-patagonia": {
-    "duration": 868.91,
+    "duration": 931.48,
     "voice": "luz",
-    "bytes": 3186354,
-    "v": "795b5362d2"
+    "bytes": 3266322,
+    "v": "a959b1c731"
   },
   "montana": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1396032,
-    "v": "1913edf706"
+    "bytes": 1438674,
+    "v": "0962ffa571"
   },
   "nsdr": {
     "duration": 1200.0,
     "voice": "luz",
-    "bytes": 2343789,
-    "v": "d87e95efe8"
+    "bytes": 2459874,
+    "v": "c63d60d89e"
   },
   "pausa-3-minutos": {
     "duration": 210.0,
