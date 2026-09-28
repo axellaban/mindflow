@@ -195,8 +195,213 @@
           "score": 0.909
         }
       ]
+    },
+    "buc-3-autoexigencia": {
+      "v": "448f9806dd",
+      "audio_sha256": "4eee83db195a29a189497ef3f3d231ab5d20271a0e43dca728587fcb8a8646a7",
+      "sentences": 55,
+      "retaken": 1,
+      "lowest_score": 0.952,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Pero cuando manda todo el tiempo, nos agota.",
+          "heard": "Pero cuando manda todo el tiempo, no sabota.",
+          "score": 0.952
+        }
+      ]
+    },
+    "buc-4-culpa": {
+      "v": "cefa1ef771",
+      "audio_sha256": "82143b1431699ac1516d84c7555806cc8e71ae1562e5b1211d6a4a3069cf8f72",
+      "sentences": 52,
+      "retaken": 2,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "buc-5-descanso": {
+      "v": "8195c18c19",
+      "audio_sha256": "f5ef25d20872718a8347777b038126f6026f3308a2b2540c95becb767a6f970d",
+      "sentences": 61,
+      "retaken": 2,
+      "lowest_score": 0.903,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Afloja la lengua.",
+          "heard": "Afloja la lémua.",
+          "score": 0.903
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Parece que no pasa nada, pero debajo, todo se está preparando para florecer.",
+          "heard": "Parece que no pasa nada, pero debajo, todo se está apretarando para florecer.",
+          "score": 0.98
+        }
+      ]
+    },
+    "cafe-consciente": {
+      "v": "1313062ad4",
+      "audio_sha256": "8a24ea8e55a75f1ee40ec0d0a89cac74d66cd7de0843536427ef86d0c666eda8",
+      "sentences": 40,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "caminar": {
+      "v": "f66939b947",
+      "audio_sha256": "6c9b4425ca98881c832c584ff94b4161f3d60b0000fdb06c18a2bd45d58f5eaf",
+      "sentences": 37,
+      "retaken": 2,
+      "lowest_score": 0.986,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Quédate de pie un momento, en quietud.",
+          "heard": "Quédate de pie. Un momento. Enquietud.",
+          "score": 0.986
+        },
+        {
+          "text": "Puedes volver a caminar así siempre que quieras: hacia el trabajo, al supermercado, por tu casa.",
+          "heard": "Puedes volver a caminar así siempre que quieres, hacia el trabajo, al supermercado, por tu casa.",
+          "score": 0.989
+        },
+        {
+          "text": "Nota a dónde fue, y vuelve a sentir los pies en el suelo.",
+          "heard": "Nota adónde fue y vuelve a sentir los pies en el suelo.",
+          "score": 0.991
+        }
+      ]
+    },
+    "carga-mental": {
+      "v": "3420412711",
+      "audio_sha256": "f79b0daf8490f46d712782625281f1771a77624f204c8f50f0fc1ea0ba9dbc4e",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 0.923,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Solo sacarlos.",
+          "heard": "Sólo sacarnos.",
+          "score": 0.923
+        },
+        {
+          "text": "Es repartir el peso.",
+          "heard": "es repartir en peso.",
+          "score": 0.947
+        }
+      ]
+    },
+    "cla-1-entender": {
+      "v": "f9388f8c3a",
+      "audio_sha256": "4ea638c3febd3fb4055382f03a069793820de66943713221f85622ee161ed579",
+      "sentences": 74,
+      "retaken": 16,
+      "lowest_score": 0.0,
+      "flagged": [
+        {
+          "text": "dos",
+          "heard": "2",
+          "score": 0.0
+        },
+        {
+          "text": "tres",
+          "heard": "3",
+          "score": 0.0
+        },
+        {
+          "text": "cuatro.",
+          "heard": "4",
+          "score": 0.0
+        }
+      ],
+      "lowest": [
+        {
+          "text": "Vamos a respirar con un ritmo de cuatro y seis.",
+          "heard": "Vamos a respirar con un ritmo de 4 y 6.",
+          "score": 0.857
+        },
+        {
+          "text": "Inhala",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Deja ahora la respiración libre.",
+          "heard": "Deza ahora la respiración libre.",
+          "score": 0.968
+        }
+      ]
+    },
+    "cla-2-anclar": {
+      "v": "cdbcc5d19f",
+      "audio_sha256": "a0707e5461e973f993f1f699429433eacfc69ffec03e62596dfd632e6087e4ef",
+      "sentences": 55,
+      "retaken": 4,
+      "lowest_score": 0.375,
+      "flagged": [
+        {
+          "text": "Se llama cinco, cuatro, tres, dos, uno.",
+          "heard": "Se llama 54321.",
+          "score": 0.375
+        },
+        {
+          "text": "Cuando notes que la ansiedad empieza a subir, prueba el cinco, cuatro, tres, dos, uno.",
+          "heard": "Cuando notes que la ansiedad empieza a subir, prueba el 5, 4, 3, 2, 1.",
+          "score": 0.819
+        }
+      ],
+      "lowest": [
+        {
+          "text": "Siente el suelo.",
+          "heard": "Siente el sueno.",
+          "score": 0.933
+        }
+      ]
+    },
+    "cla-3-hacer-espacio": {
+      "v": "038ab53156",
+      "audio_sha256": "5cd0444522cbfe10f0b62aaeffbcd312112f9e1a43714dd08411a9170a8f324f",
+      "sentences": 60,
+      "retaken": 1,
+      "lowest_score": 0.961,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "RAIN es una práctica para toda la vida.",
+          "heard": "Reign es una práctica para toda la vida.",
+          "score": 0.961
+        },
+        {
+          "text": "Y decirte algo amable, como le hablarías a una persona querida: «estoy aquí contigo.",
+          "heard": "Y decir que algo amable, como le hablarías a una persona querida. Estoy aquí contigo.",
+          "score": 0.975
+        }
+      ]
+    },
+    "cla-4-pensamientos": {
+      "v": "e3c5a804f3",
+      "audio_sha256": "935037cdb20691ae18284aaddefef88b19fca025bda68f6bad09b00d7fb86108",
+      "sentences": 48,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
     }
   },
-  "verified": 11,
+  "verified": 21,
   "total": 61
 }
