@@ -3,6 +3,7 @@ name: OpenAI narration
 # voice, checks every sentence with a transcription and pushes the results to this branch
 # in batches. Needs the OPENAI_API_KEY repository secret.
 on:
+  workflow_dispatch:
   push:
     branches: [claude/meditation-app-calm-mvp-6y0ic0]
     paths:

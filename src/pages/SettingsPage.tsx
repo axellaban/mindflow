@@ -212,8 +212,8 @@ export function SettingsPage() {
           <div className="space-y-3 text-[14px] leading-relaxed text-2">
             <p>Tu progreso queda en este navegador. No se sincroniza entre dispositivos y puede perderse si borrás los datos del sitio. Podés guardar una copia desde los ajustes.</p>
             <p>
-              CalmabyEli es un espacio para meditar, respirar y descansar mejor, pensado para mujeres. Las meditaciones guiadas usan una voz neuronal
-              en español (Luz), y todos los paisajes sonoros y la música se generan en tiempo real en tu dispositivo.
+              CalmabyEli es un espacio para meditar, respirar y descansar mejor, pensado para mujeres. Las meditaciones guiadas usan una voz en
+              español generada con inteligencia artificial (Luz), y todos los paisajes sonoros y la música se generan en tiempo real en tu dispositivo.
             </p>
             <p className="flex gap-2.5 rounded-2xl bg-white/4 p-3.5">
               <HeartHandshake className="mt-0.5 size-4.5 shrink-0" />
@@ -224,7 +224,7 @@ export function SettingsPage() {
                 contactá a la línea de ayuda local.
               </span>
             </p>
-            <p className="text-[12px] text-3">Versión 1.1 · Voz: Piper (es_MX “claude”, Apache 2.0).</p>
+            <p className="text-[12px] text-3">Versión 1.1 · Voz: OpenAI (“marin”).</p>
           </div>
         </Group>
       </div>
