@@ -1048,15 +1048,31 @@
       "lowest": []
     },
     "volver-a-dormir": {
-      "v": "e250ad8f4b",
-      "audio_sha256": "cfd22df8a5af12c6a30a163e5794875e9af8990e1ce4252ea4b404e4814e4c0f",
+      "v": "1b6402db9a",
+      "audio_sha256": "f36c6ad2fb2653de52c69fd95a493bf0c475258800a65a4583c8e9e99546e97e",
       "sentences": 48,
       "retaken": 1,
-      "lowest_score": 1.0,
+      "lowest_score": 0.964,
       "flagged": [],
-      "lowest": []
+      "lowest": [
+        {
+          "text": "Lo primero: no mires el reloj.",
+          "heard": "Lo primero, no mides el reloj.",
+          "score": 0.964
+        },
+        {
+          "text": "Siente el peso de tu cabeza sobre la almohada.",
+          "heard": "Siente el teso de tu cabeza sobre la almohada.",
+          "score": 0.978
+        },
+        {
+          "text": "Si hay pensamientos dando vueltas, no te pelees con ellos.",
+          "heard": "Si hay pensamientos dando vueltas, no te telees con ellos.",
+          "score": 0.982
+        }
+      ]
     }
   },
-  "verified": 60,
+  "verified": 61,
   "total": 61
 }
