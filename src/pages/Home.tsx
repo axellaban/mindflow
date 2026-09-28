@@ -1,5 +1,5 @@
-import { ArrowRight, Check, ChevronDown, LifeBuoy, Moon, Mountain, Share2, Timer, Volume2, VolumeX, Wind } from 'lucide-react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { ArrowRight, Check, ChevronDown, Cloud, CloudDrizzle, CloudRain, CloudSun, Heart, LifeBuoy, Moon, Mountain, Share2, Sun, Timer, Volume2, VolumeX, Wind } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { type ReactNode, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { engine } from '@/audio/engine';
@@ -11,6 +11,7 @@ import { IconButton } from '@/components/ui/Button';
 import { Sheet } from '@/components/ui/Sheet';
 import { SectionTitle } from '@/components/ui/controls';
 import { Words } from '@/components/ui/Words';
+import { Reveal } from '@/components/ui/Reveal';
 import { MoodOrb } from '@/features/checkin/CheckInSheet';
 import { EliAvatar } from '@/features/eli/EliAvatar';
 import { EliHomeCard } from '@/features/eli/EliHomeCard';
@@ -28,7 +29,7 @@ import { type MoodEntry, useAppStore } from '@/store/app';
 import { usePlayer } from '@/store/player';
 import { useUI } from '@/store/ui';
 
-const sections = stagger(0.08, 0.2);
+const MOOD_ICONS = [CloudRain, CloudDrizzle, Cloud, CloudSun, Sun];
 
 export function Home() {
   const now = useNow();
@@ -97,23 +98,26 @@ export function Home() {
   };
 
   return (
-    <div className="relative pb-10">
+    <div className="home-page relative pb-10">
       {/* Hero scene */}
-      <section className="relative h-[48svh] min-h-[350px] max-h-[510px] overflow-hidden lg:h-[50vh]">
+      <section className="home-scene relative overflow-hidden">
         <motion.div className="absolute inset-0" style={reduced ? undefined : { y: sceneY }}>
-          <Scene scene={scene} drift={false} paused={covered} />
+          <AnimatePresence initial={false}>
+            <motion.div key={scene.id} className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduced ? 0 : 0.7 }}>
+              <Scene scene={scene} drift={false} paused={covered} />
+            </motion.div>
+          </AnimatePresence>
         </motion.div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/35 via-transparent to-ink-900" />
-        {/* a soft veil where the greeting sits, so the scene never competes with it */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_55%_at_20%_78%,rgb(4_52_64/0.5),transparent_75%)]" />
-        <div className="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
+        <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-5 pt-safe lg:px-10 lg:pt-6">
           <Link to="/" className="flex items-center gap-2.5 lg:invisible" aria-label="CalmabyEli">
             <LogoMark className="size-8" />
-            <span className="font-display text-[20px] leading-none font-semibold tracking-[-0.005em] text-mist-50/95 max-[379px]:hidden">
+            <span className="font-display text-[20px] leading-none font-semibold text-mist-50/95 max-[379px]:hidden">
               Calma<span className="text-blush-300 italic">byEli</span>
             </span>
           </Link>
           <div className="flex items-center gap-2">
+            <span className="mr-3 hidden items-center gap-2 text-[13px] text-mist-50/90 xl:flex"><Mountain className="size-3.5" />{scene.name}</span>
             <Link
               to="/eli"
               aria-label="Sesiones con Eli"
@@ -123,7 +127,7 @@ export function Home() {
             >
               <EliAvatar size={40} />
             </Link>
-            <IconButton label={sceneSound ? 'Silenciar escena' : 'Escuchar la escena'} onClick={toggleSceneSound}>
+            <IconButton label={sceneSound ? 'Silenciar escena' : 'Escuchar la escena'} aria-pressed={sceneSound} onClick={toggleSceneSound}>
               {sceneSound ? <Volume2 className="size-[18px]" /> : <VolumeX className="size-[18px]" />}
             </IconButton>
             <IconButton label="Cambiar escena" onClick={() => setScenesOpen(true)}>
@@ -132,76 +136,74 @@ export function Home() {
           </div>
         </div>
         <motion.div
-          className="absolute inset-x-0 bottom-24 mx-auto max-w-5xl px-5 md:px-8 lg:bottom-24 lg:px-10"
+          className="relative mx-auto max-w-5xl px-5 pt-[136px] pb-[76px] md:px-8 lg:px-10 lg:pt-[210px]"
           style={reduced ? undefined : { opacity: greetingOpacity, y: greetingY }}
         >
           <motion.div variants={stagger(0.12, 0.15)} initial="hidden" animate="show" className="[text-shadow:0_2px_20px_rgb(3_40_50/0.55)]">
-            <motion.p variants={reveal} className="text-[13px] font-semibold tracking-wide text-2">{longDate(now)}</motion.p>
-            <h1 className="mt-1.5 font-display text-[40px] leading-[1.02] md:text-[56px] lg:text-[64px]">
+            <motion.p variants={reveal} className="mb-3 flex items-center gap-3 text-[12px] font-medium text-2"><span className="h-px w-7 bg-coral-300" />{longDate(now)}</motion.p>
+            <h1 className="home-greeting font-display text-[44px] leading-[1.05] md:text-[60px] lg:text-[68px]">
               <Words text={`${greeting(now)}${name ? `, ${name}` : ''}`} delay={0.27} />
             </h1>
-            <motion.p variants={reveal} className="mt-2 flex items-center gap-2 text-[14px] text-2">
+            <motion.p variants={reveal} className="mt-3 text-[15px] text-2">
               Un momento para vos. A tu ritmo.
             </motion.p>
           </motion.div>
         </motion.div>
       </section>
 
-      <motion.div variants={sections} initial="hidden" animate="show" className="relative z-10 mx-auto -mt-16 max-w-5xl space-y-12 md:px-8 lg:px-10">
-        <div className="space-y-10 lg:grid lg:grid-cols-[1.3fr_1fr] lg:items-start lg:gap-6 lg:space-y-0">
-          <motion.section variants={reveal} className="px-5 md:px-0">
+      <div className="relative z-10 mx-auto -mt-8 max-w-5xl space-y-12 md:px-8 lg:px-10">
+        <div className="space-y-5 lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-stretch lg:gap-6 lg:space-y-0">
+          <Reveal className="px-5 md:px-0">
             <HeroSessionCard session={daily} eyebrow="La pausa del día" note={daily.daily?.theme} />
-          </motion.section>
+          </Reveal>
 
-          <div className="space-y-10 lg:space-y-5">
-            <motion.section variants={reveal} className="px-5 md:px-0">
+          <div className="flex flex-col gap-4">
+            <Reveal className="px-5 md:px-0">
               <CheckInCard todayMood={todayMood} />
-            </motion.section>
+            </Reveal>
 
-            <motion.section variants={reveal}>
-              <div className="grid grid-cols-4 gap-2.5 px-5 md:px-0">
+            <Reveal className="mt-auto">
+              <div className="home-tools mx-5 grid grid-cols-4 md:mx-0">
                 <Tool to="/respirar" icon={<Wind className="size-6" />} label="Respirar" />
                 <Tool to="/temporizador" icon={<Timer className="size-6" />} label="Temporizador" />
                 <Tool to="/dormir" icon={<Moon className="size-6" />} label="Dormir" />
                 <Tool icon={<LifeBuoy className="size-6" />} label="SOS" onClick={() => usePlayer.getState().playSession('sos-ansiedad')} />
               </div>
-            </motion.section>
+            </Reveal>
           </div>
         </div>
 
-        <motion.section variants={reveal} className="px-5 md:px-0">
-          {active ? (
-            <ContinueCard progress={active} />
-          ) : !suggestedProgress.complete ? (
-            <StartProgram progress={suggestedProgress} />
-          ) : null}
-        </motion.section>
-
-        <motion.section variants={reveal}>
+        <Reveal>
           <SectionTitle title="Para vos" action={<SeeAll to="/meditar" />} />
-          <Rail>
+          <Rail label="Prácticas para vos">
             {forYou.map((s) => (
               <SessionCard key={s.id} session={s} />
             ))}
           </Rail>
-        </motion.section>
+        </Reveal>
 
-        <motion.section variants={reveal} className="px-5 md:px-0 lg:max-w-2xl">
+        {(active || !suggestedProgress.complete) && (
+          <Reveal className="px-5 md:px-0">
+            {active ? <ContinueCard progress={active} /> : <StartProgram progress={suggestedProgress} />}
+          </Reveal>
+        )}
+
+        <Reveal className="px-5 md:px-0 lg:max-w-2xl">
           <EliHomeCard />
-        </motion.section>
+        </Reveal>
 
-        <motion.section variants={reveal}>
+        <Reveal>
           <SectionTitle title={part.title} />
-          <Rail>
+          <Rail label={part.title}>
             {part.sessions.map((s) => (
               <SessionCard key={s.id} session={s} />
             ))}
           </Rail>
-        </motion.section>
+        </Reveal>
 
-        <motion.section variants={reveal} className="px-5 md:px-0">
+        <Reveal className="px-5 md:px-0">
           <QuoteCard text={quote.text} author={quote.author} />
-        </motion.section>
+        </Reveal>
 
         <details className="group mx-5 border-t border-white/10 py-5 md:mx-0">
           <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl py-2 text-[14px] font-semibold text-2 transition-colors hover:text-mist-50 [&::-webkit-details-marker]:hidden">
@@ -212,7 +214,7 @@ export function Home() {
             <WeekCard />
           </div>
         </details>
-      </motion.div>
+      </div>
 
       <Sheet open={scenesOpen} onClose={() => setScenesOpen(false)} title="Escena de inicio" size="lg">
         <div className="grid grid-cols-2 gap-3 pb-4 sm:grid-cols-3">
@@ -269,9 +271,9 @@ function Tool({ to, icon, label, onClick }: { to?: string; icon: ReactNode; labe
         if (onClick) onClick();
         else if (to) navigate(to);
       }}
-      className="glass flex flex-col items-center gap-2 rounded-3xl px-1 py-4 transition-colors hover:bg-white/10"
+      className="home-tool group flex min-w-0 flex-col items-center gap-2 px-1 py-3"
     >
-      <span className="text-mist-50/90">{icon}</span>
+      <span className="home-tool-icon flex size-10 items-center justify-center rounded-full">{icon}</span>
       <span className="text-[11.5px] font-medium min-[380px]:text-[12px]">{label}</span>
     </motion.button>
   );
@@ -279,8 +281,8 @@ function Tool({ to, icon, label, onClick }: { to?: string; icon: ReactNode; labe
 
 function SeeAll({ to }: { to: string }) {
   return (
-    <Link to={to} className="flex items-center gap-1 text-[13px] font-semibold text-2 transition-colors hover:text-mist-50">
-      Ver todo <ArrowRight className="size-3.5" />
+    <Link to={to} className="group flex min-h-11 shrink-0 items-center gap-2 text-[13px] font-semibold text-2 transition-colors hover:text-mist-50">
+      Ver todo <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transform-none" />
     </Link>
   );
 }
@@ -295,43 +297,48 @@ function CheckInCard({ todayMood }: { todayMood?: MoodEntry }) {
       .slice(0, 3)
       .join(', ');
     return (
-      <div className="glass flex items-center gap-4 rounded-[28px] p-4">
+      <div className="home-checkin flex items-center gap-4 rounded-2xl p-5">
         <MoodOrb level={todayMood.level} size={44} />
         <div className="min-w-0 flex-1">
-          <p className="text-[12px] font-bold tracking-[0.12em] text-3 uppercase">Hoy te sentís</p>
+          <p className="text-[12px] font-medium opacity-75">Hoy te sentís</p>
           <p className="truncate text-[16px] font-semibold">
             {m.label}
             {labels ? ` · ${labels}` : ''}
           </p>
         </div>
-        <Link to="/diario" className="rounded-full bg-white/8 px-4 py-2 text-[13px] font-semibold transition-colors hover:bg-white/14">
+        <Link to="/diario" className="flex min-h-11 items-center gap-2 rounded-full px-3 text-[13px] font-semibold">
           Diario
+          <ArrowRight className="size-4" />
         </Link>
       </div>
     );
   }
   return (
-    <div className="glass rounded-[28px] p-5">
-      <p className="font-display text-[21px] leading-tight">¿Cómo te sentís hoy?</p>
-      <p className="mt-1 text-[13.5px] text-3">Un registro de diez segundos. Tu diario te lo va a agradecer.</p>
-      <div className="mt-4 flex justify-between">
-        {MOODS.map((m) => (
-          <button
-            key={m.level}
-            type="button"
-            className="group flex flex-col items-center gap-1.5"
-            onClick={() => {
-              haptic(8);
-              open(true, m.level);
-            }}
-            aria-label={m.label}
-          >
-            <span className="transition-transform duration-300 group-hover:scale-110 group-active:scale-95">
-              <MoodOrb level={m.level} size={42} />
-            </span>
-            <span className="text-[11px] text-3">{m.label}</span>
-          </button>
-        ))}
+    <div className="home-checkin rounded-2xl p-5 lg:p-6">
+      <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold"><Heart className="size-3.5" /> TU MOMENTO</div>
+      <p className="font-display text-[27px] leading-tight">¿Cómo te sentís hoy?</p>
+      <p className="mt-1 text-[13px] opacity-80">Sea como sea, este espacio es tuyo.</p>
+      <div className="mt-4 grid grid-cols-5 gap-1">
+        {MOODS.map((m, index) => {
+          const MoodIcon = MOOD_ICONS[index]!;
+          return (
+            <button
+              key={m.level}
+              type="button"
+              className="mood-choice group flex min-h-[68px] min-w-0 flex-col items-center justify-center gap-2 rounded-lg"
+              onClick={() => {
+                haptic(8);
+                open(true, m.level);
+              }}
+              aria-label={m.label}
+            >
+              <span className="mood-symbol flex size-10 items-center justify-center rounded-full" style={{ backgroundColor: m.color }}>
+                <MoodIcon className="size-[22px]" strokeWidth={1.6} />
+              </span>
+              <span className="text-[11px] font-medium">{m.label}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -351,9 +358,8 @@ function StartProgram({ progress }: { progress: ReturnType<typeof programProgres
 
 function QuoteCard({ text, author }: { text: string; author?: string }) {
   return (
-    <figure className="relative overflow-hidden rounded-[30px] border border-white/8 bg-gradient-to-br from-ink-700/60 to-ink-800/40 px-6 py-8 md:px-10 md:py-10">
-      <div className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full bg-blush-400/15 blur-3xl" />
-      <p className="text-[12px] font-bold tracking-[0.16em] text-3 uppercase">Frase del día</p>
+    <figure className="relative border-y border-white/15 py-8 md:py-10">
+      <p className="flex items-center gap-3 text-[12px] font-medium text-coral-300"><span className="h-px w-7 bg-current" />Para llevar con vos</p>
       <blockquote className="mt-3 font-display text-[25px] leading-snug italic md:text-[30px]">“{text}”</blockquote>
       <figcaption className="mt-4 flex items-center justify-between">
         <span className="text-[14px] text-2">{author ?? 'CalmabyEli'}</span>

@@ -1,6 +1,6 @@
-import { Check, ChevronRight, Headphones, Play } from 'lucide-react';
-import { motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import { ArrowLeft, ArrowRight, Check, ChevronRight, Headphones, Play } from 'lucide-react';
+import { motion, useReducedMotion } from 'motion/react';
+import { type ReactNode, useEffect, useId, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { CoverArt } from '@/art/CoverArt';
 import { PALETTES } from '@/art/palettes';
@@ -16,9 +16,47 @@ import { usePlayer } from '@/store/player';
 
 const tap = press;
 
-export function Rail({ children, className }: { children: ReactNode; className?: string }) {
+export function Rail({ children, className, label = 'Colección de prácticas' }: { children: ReactNode; className?: string; label?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const id = useId();
+  const reduced = useReducedMotion();
+  const [position, setPosition] = useState({ start: true, end: true, progress: 0 });
+
+  useEffect(() => {
+    const rail = ref.current;
+    if (!rail) return;
+    const measure = () => {
+      const max = rail.scrollWidth - rail.clientWidth;
+      const progress = max > 1 ? rail.scrollLeft / max : 0;
+      setPosition({ start: rail.scrollLeft <= 2, end: rail.scrollLeft >= max - 2, progress });
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(rail);
+    Array.from(rail.children).forEach((child) => observer.observe(child));
+    rail.addEventListener('scroll', measure, { passive: true });
+    measure();
+    return () => {
+      observer.disconnect();
+      rail.removeEventListener('scroll', measure);
+    };
+  }, [children]);
+
+  const scroll = (direction: number) => {
+    const rail = ref.current;
+    if (rail) rail.scrollBy({ left: direction * rail.clientWidth * 0.8, behavior: reduced ? 'instant' : 'smooth' });
+  };
+
   return (
-    <div className={cn('no-scrollbar snap-row -my-2 flex gap-3.5 overflow-x-auto px-5 py-2 md:mx-0 md:px-0', className)}>{children}</div>
+    <div className="min-w-0">
+      <div ref={ref} id={id} role="region" aria-label={label} tabIndex={0} className={cn('no-scrollbar snap-row -my-2 flex gap-4 overflow-x-auto px-5 py-2 md:mx-0 md:px-0', className)}>{children}</div>
+      <div className={cn('mt-4 hidden h-11 items-center gap-3 md:flex', position.start && position.end && 'invisible')}>
+        <div className="mr-auto h-px w-24 overflow-hidden bg-white/15" aria-hidden="true">
+          <div className="h-full w-1/3 bg-coral-300" style={{ transform: `translateX(${Math.max(0, Math.min(1, position.progress)) * 200}%)` }} />
+        </div>
+        <button type="button" className="rail-arrow" aria-label={`Anterior: ${label}`} title="Anterior" aria-controls={id} disabled={position.start} onClick={() => scroll(-1)}><ArrowLeft className="size-4" /></button>
+        <button type="button" className="rail-arrow" aria-label={`Siguiente: ${label}`} title="Siguiente" aria-controls={id} disabled={position.end} onClick={() => scroll(1)}><ArrowRight className="size-4" /></button>
+      </div>
+    </div>
   );
 }
 
@@ -33,12 +71,12 @@ export function SessionCard({ session, className, size = 'md' }: { session: Sess
         haptic(8);
         play(session.id);
       }}
-      className={cn('group flex shrink-0 flex-col text-left', size === 'md' ? 'w-[158px] md:w-[188px]' : 'w-[240px] md:w-[280px]', className)}
+      className={cn('session-card group flex min-w-0 shrink-0 flex-col text-left', size === 'md' ? 'w-[164px] md:w-[200px]' : 'w-[240px] md:w-[300px]', className)}
       aria-label={`${session.title}, ${formatDuration(session.duration)}`}
     >
-      <div className="relative">
-        <CoverArt spec={session.art} className="aspect-square w-full transition-transform duration-500 group-hover:scale-[1.01]" />
-        <div className="absolute right-2.5 bottom-2.5 flex size-9 items-center justify-center rounded-full bg-ink-900/70 backdrop-blur-md">
+      <div className="session-cover relative w-full overflow-hidden rounded-2xl">
+        <CoverArt spec={session.art} ratio={size === 'md' ? 0.85 : 1.2} className={cn('session-art w-full', size === 'md' ? 'aspect-[0.85]' : 'aspect-[1.2]')} />
+        <div className="session-play absolute right-3 bottom-3 flex size-10 items-center justify-center rounded-full border border-white/25 bg-ink-950/65 backdrop-blur-md">
           <Play className="ml-0.5 size-4 fill-current" />
         </div>
         {completed && (
@@ -47,7 +85,7 @@ export function SessionCard({ session, className, size = 'md' }: { session: Sess
           </div>
         )}
       </div>
-      <p className="mt-2.5 line-clamp-2 text-[15px] leading-snug font-semibold tracking-[-0.01em]">{session.title}</p>
+      <p className="mt-3 line-clamp-2 text-[15px] leading-snug font-medium">{session.title}</p>
       <p className="mt-0.5 text-[13px] text-3">
         {formatDuration(session.duration)} · {session.kind === 'story' ? 'Historia' : sessionKindLabel(session)}
       </p>
@@ -104,22 +142,21 @@ export function HeroSessionCard({ session, eyebrow, note }: { session: Session; 
         haptic(10);
         play(session.id);
       }}
-      className="group relative block w-full overflow-hidden rounded-2xl text-left"
+      className="hero-session group relative flex h-full min-h-[224px] w-full flex-col justify-between overflow-hidden rounded-2xl text-left lg:min-h-[332px]"
     >
-      <CoverArt spec={session.art} ratio={1.45} rounded="rounded-2xl" live className="aspect-[1.45] w-full transition-transform duration-700 group-hover:scale-[1.02]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/25 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 md:p-6">
+      <CoverArt spec={session.art} ratio={1.5} rounded="rounded-2xl" live className="absolute inset-0 h-full w-full" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/15 to-ink-950/30" />
+      <div className="relative flex w-full items-center justify-between gap-2 p-5 md:p-6">
+        <p className="flex items-center gap-2 text-[12px] font-medium text-mist-50"><Headphones className="size-4" />{eyebrow}</p>
+        <span className="rounded-full border border-white/25 px-2.5 py-1 text-[11px] text-mist-50">{formatDuration(session.duration)}</span>
+      </div>
+      <div className="relative flex w-full items-end justify-between gap-4 p-5 md:p-6">
         <div className="min-w-0">
-          <p className="text-[12px] font-bold tracking-[0.14em] uppercase" style={{ color: p.ui }}>
-            {eyebrow}
-          </p>
-          <h2 className="mt-1 font-display text-[28px] leading-[1.05] md:text-[34px]">{session.title}</h2>
-          <p className="mt-1.5 line-clamp-1 text-[14px] text-2">
-            {formatDuration(session.duration)} · {note ?? session.subtitle}
-            {completed && ' · Completada'}
-          </p>
+          {completed && <p className="mb-2 flex items-center gap-1.5 text-[12px]" style={{ color: p.ui }}><Check className="size-3.5" />Completada</p>}
+          <h2 className="font-display text-[34px] leading-[1.05] md:text-[40px]">{session.title}</h2>
+          <p className="mt-2 line-clamp-2 text-[13px] leading-relaxed text-2">{note && note !== session.title ? note : session.subtitle}</p>
         </div>
-        <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-coral text-ink-950 transition-transform duration-300 group-hover:scale-105">
+        <div className="hero-play flex size-14 shrink-0 items-center justify-center rounded-full bg-coral text-ink-950">
           <Play className="ml-1 size-6 fill-current" />
         </div>
       </div>

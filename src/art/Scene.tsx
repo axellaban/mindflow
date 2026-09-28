@@ -1,9 +1,11 @@
-import { type RefObject, memo, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { type CSSProperties, type RefObject, memo, useEffect, useId, useMemo, useRef, useState } from 'react';
+import { useReducedMotion } from 'motion/react';
 import type { SceneDef } from '@/content/scenes';
 import type { ArtSpec, Motif } from '@/content/types';
-import { cn, prefersReducedMotion } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { Landscape, horizonFor } from './landscape';
 import { PALETTES, mixHex, rgba } from './palettes';
+import { useArtworkActivity } from './useArtworkActivity';
 
 const MOTIF_FOR: Record<SceneDef['layout'], Motif> = {
   lake: 'lake',
@@ -38,6 +40,7 @@ interface Props {
 
 export const Scene = memo(function Scene({ scene, className, paused, drift = true }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const { active } = useArtworkActivity(ref, paused);
   const [ratio, setRatio] = useState(0.62);
   const uid = useId().replace(/[^a-zA-Z0-9_-]/g, '');
 
@@ -72,10 +75,11 @@ export const Scene = memo(function Scene({ scene, className, paused, drift = tru
       ref={ref}
       data-paused={paused ? 'true' : 'false'}
       aria-hidden="true"
-      className={cn('absolute inset-0 overflow-hidden', className)}
+      className={cn('living-art absolute inset-0 overflow-hidden', className)}
       style={{
+        '--art-play-state': active ? 'running' : 'paused',
         background: `linear-gradient(180deg, ${p.sky[0]} 0%, ${p.sky[1]} ${Math.round(horizon * 62)}%, ${p.sky[2]} ${Math.round(horizon * 100)}%, ${p.sky[2]} 100%)`,
-      }}
+      } as CSSProperties}
     >
       <div
         className={cn('absolute inset-0 will-change-transform', drift && 'animate-drift')}
@@ -176,6 +180,7 @@ function useParticles(
   paused: boolean | undefined,
   refs: { light: CanvasRef; back: CanvasRef; front: CanvasRef; aurora: CanvasRef },
 ): void {
+  const reduced = useReducedMotion();
   const pausedRef = useRef(paused);
   pausedRef.current = paused;
   const resumeRef = useRef<() => void>(() => {});
@@ -204,9 +209,7 @@ function useParticles(
     const actx = auroraCanvas?.getContext('2d') ?? null;
     const p = PALETTES[scene.palette];
     const kinds = new Set(scene.particles);
-    // With "reduce motion" the scene keeps breathing through light only: glows, twinkles and
-    // shimmer still fade in and out, clouds barely drift, and nothing sways, falls or flies.
-    const reduced = prefersReducedMotion();
+    // Reduced motion keeps a complete, still frame and never starts the animation loop.
     const dpr = window.devicePixelRatio || 1;
     // stars need a little sharpness; clouds are soft and look the same at 1x
     const backScale = kinds.has('stars') ? Math.min(dpr, 1.5) : 1;
@@ -767,7 +770,7 @@ function useParticles(
       }, Math.max(0, wait));
     };
     const start = () => {
-      if (running) return;
+      if (running || reduced) return;
       running = true;
       last = performance.now();
       raf = requestAnimationFrame(frame);
@@ -798,5 +801,5 @@ function useParticles(
       ro.disconnect();
       io.disconnect();
     };
-  }, [scene, horizon, refs.light, refs.back, refs.front, refs.aurora]);
+  }, [scene, horizon, reduced, refs.light, refs.back, refs.front, refs.aurora]);
 }

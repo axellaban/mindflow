@@ -173,7 +173,7 @@ export function Mixer() {
             {g.ids.map((s) => {
               const on = Boolean(mix[s.id]);
               return (
-                <div key={s.id} className={cn('relative rounded-3xl transition-all duration-500', on ? 'bg-white/14' : 'bg-white/5 hover:bg-white/8')}>
+                <div key={s.id} className={cn('sound-tile relative rounded-3xl', on ? 'bg-white/14' : 'bg-white/5 hover:bg-white/8')}>
                   <button
                     type="button"
                     onClick={() => toggleSound(s.id)}
@@ -187,8 +187,8 @@ export function Mixer() {
                         on ? 'bg-coral text-ink-950' : 'bg-white/6 text-mist-50/85',
                       )}
                     >
-                      {on && playing && <span className="absolute inset-0 animate-pulse-soft rounded-full bg-coral-400/40 blur-md" />}
                       <Icon name={s.icon} className="relative size-5.5" />
+                      {on && playing && <span className="sound-levels" aria-hidden="true"><i /><i /><i /></span>}
                     </span>
                     <span className={cn('text-[13px] leading-tight font-medium', on ? 'text-mist-50' : 'text-mist-50/85')}>{s.name}</span>
                   </button>

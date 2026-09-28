@@ -28,7 +28,7 @@ export function TabBar() {
   return (
     <nav
       aria-label="Principal"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-white/6 bg-ink-900/80 backdrop-blur-2xl transition-colors duration-700 lg:hidden"
+      className="mobile-nav fixed inset-x-0 bottom-0 z-50 border-t border-white/10 backdrop-blur-2xl transition-colors duration-700 lg:hidden"
       style={{ paddingBottom: 'max(6px, var(--safe-bottom))' }}
     >
       <ul className="mx-auto flex h-[var(--tabbar-h)] max-w-lg items-stretch justify-around px-2">
@@ -45,11 +45,11 @@ export function TabBar() {
                 {active && (
                   <motion.span
                     layoutId="tab-glow"
-                    className="absolute top-1.5 h-8 w-14 rounded-full bg-white/10"
+                    className="absolute top-1.5 h-8 w-14 rounded-full bg-coral-300/15"
                     transition={SPRING_GLIDE}
                   />
                 )}
-                <Icon className={cn('relative size-[22px] transition-all duration-300', active ? 'text-mist-50' : 'text-mist-50/85')} strokeWidth={active ? 2 : 1.6} />
+                <Icon className={cn('relative size-[22px] transition-colors duration-300', active ? 'text-coral-300' : 'text-mist-50/75')} strokeWidth={active ? 2 : 1.6} />
                 <span className={cn('relative text-[11px] font-semibold tracking-wide transition-colors duration-300', active ? 'text-mist-50' : 'text-mist-50/85')}>
                   {label}
                 </span>
@@ -72,7 +72,7 @@ export function SideNav() {
   const { pathname } = useLocation();
   const { streak } = useStats();
   return (
-    <aside className="fixed inset-y-0 left-0 z-40 hidden w-[260px] flex-col border-r border-white/6 bg-ink-900/70 px-5 py-7 backdrop-blur-2xl transition-colors duration-700 lg:flex">
+    <aside className="side-nav fixed inset-y-0 left-0 z-40 hidden w-[260px] flex-col overflow-y-auto border-r border-white/8 px-5 py-8 transition-colors duration-700 lg:flex">
       <NavLink to="/" className="px-2">
         <Logo />
       </NavLink>
@@ -85,13 +85,13 @@ export function SideNav() {
               to={to}
               className={cn(
                 'relative flex h-11 items-center gap-3.5 rounded-2xl px-3.5 text-[15px] font-semibold transition-colors duration-300',
-                active ? 'text-mist-50' : 'text-mist-50/85 hover:bg-white/4 hover:text-mist-50',
+                active ? 'text-coral-300' : 'text-mist-50/80 hover:bg-white/4 hover:text-mist-50',
               )}
             >
               {active && (
                 <motion.span
                   layoutId="side-active"
-                  className="absolute inset-0 rounded-2xl bg-white/9"
+                  className="absolute inset-0 rounded-2xl border border-coral-300/15 bg-coral-300/8"
                   transition={SPRING_GLIDE}
                 />
               )}
@@ -119,7 +119,7 @@ export function SideNav() {
           </NavLink>
         ))}
       </div>
-      <div className="mt-auto">
+      <div className="mt-auto pt-8">
         <NavLink
           to="/eli"
           className={cn(

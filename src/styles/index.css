@@ -2,20 +2,20 @@
 @import '@fontsource-variable/jost/wght.css';
 @import '@fontsource-variable/cormorant-garamond/wght.css';
 @import '@fontsource-variable/cormorant-garamond/wght-italic.css';
+@import '../art/artwork-motion.css';
 
 @theme {
   --font-sans: 'Jost Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Cormorant Garamond Variable', ui-serif, Georgia, serif;
 
-  /* Caribe: turquoise sea. 900 is the page, 800 the sheets (a touch deeper, so text keeps
-     its contrast), 950 the deep water used for shadows over images. */
-  --color-ink-950: #064657;
-  --color-ink-900: #09596c;
-  --color-ink-850: #0a5467;
-  --color-ink-800: #0a5265;
-  --color-ink-700: #117186;
-  --color-ink-600: #2a8ea3;
-  --color-ink-500: #4fb0c2;
+  /* Deep coastal greens support the brighter artwork, mint check-in and coral actions. */
+  --color-ink-950: #082d33;
+  --color-ink-900: #123e44;
+  --color-ink-850: #10383e;
+  --color-ink-800: #163f46;
+  --color-ink-700: #245c63;
+  --color-ink-600: #3c7e86;
+  --color-ink-500: #69a8ad;
 
   --color-mist-50: #f7f1e6;
   --color-mist-100: #ece4d6;
@@ -90,14 +90,16 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --tabbar-h: 68px;
     --text: #f7f1e6;
-    --text-2: #e2f6f7;
-    --text-3: #c6ebee;
+    --text-2: #e2eeeb;
+    --text-3: #bbd5d3;
     --line: rgb(255 255 255 / 0.1);
     --glass: rgb(255 255 255 / 0.06);
     --glass-strong: rgb(255 255 255 / 0.1);
     /* the deeper water at the bottom of the page, and the sheets */
-    --page-deep: #074b5c;
-    --sheet: rgb(8 76 94 / 0.95);
+    --page-deep: #0d3036;
+    --sheet: rgb(16 56 62 / 0.97);
+    --checkin-bg: #dfede5;
+    --checkin-text: #193e3c;
     /* the breathing bubble: its deep middle, its lit rim and the light at its edge */
     --bubble-deep: rgb(4 52 64);
     --bubble-rim: rgb(126 242 226);
@@ -123,6 +125,8 @@
     --bubble-deep: rgb(5 11 32);
     --bubble-rim: rgb(169 189 245);
     --bubble-light: rgb(214 224 255);
+    --checkin-bg: #243451;
+    --checkin-text: #edf2fc;
   }
 
   html {
@@ -153,6 +157,7 @@
 
   button,
   [role='button'] {
+    cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
     touch-action: manipulation;
@@ -185,6 +190,7 @@
     *::after {
       animation-duration: 0.001ms !important;
       animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
       scroll-behavior: auto !important;
     }
   }
@@ -230,7 +236,7 @@ body {
   .font-display {
     font-family: var(--font-serif);
     font-weight: 500;
-    letter-spacing: -0.005em;
+    letter-spacing: 0;
     /* Cormorant defaults to old-style figures; clocks and stats need them level.
        A feature setting (not font-variant-numeric) so tabular-nums can still combine with it. */
     font-feature-settings: 'lnum' 1;
@@ -261,6 +267,130 @@ body {
   }
   .text-3 {
     color: var(--text-3);
+  }
+
+  .side-nav {
+    background: color-mix(in srgb, var(--color-ink-950) 68%, var(--color-ink-900));
+  }
+
+  .mobile-nav {
+    background: color-mix(in srgb, var(--color-ink-950) 93%, transparent);
+  }
+
+  .home-scene {
+    min-height: 320px;
+  }
+
+  .home-greeting {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .home-checkin {
+    background: var(--checkin-bg);
+    color: var(--checkin-text);
+    box-shadow: 0 6px 32px rgb(0 20 24 / 0.06);
+    transition: background-color 0.6s var(--ease-soft), color 0.6s var(--ease-soft);
+  }
+
+  .home-checkin :focus-visible {
+    outline-color: currentColor;
+  }
+
+  .mood-choice {
+    transition: background-color 0.2s var(--ease-soft);
+  }
+
+  .mood-choice:hover,
+  .mood-choice:focus-visible {
+    background: color-mix(in srgb, var(--checkin-text) 8%, transparent);
+  }
+
+  .mood-symbol {
+    color: #19363e;
+    transition: transform 0.3s var(--ease-soft);
+  }
+
+  .home-tools {
+    border-block: 1px solid var(--line);
+  }
+
+  .home-tool + .home-tool {
+    border-left: 1px solid var(--line);
+  }
+
+  .home-tool-icon {
+    color: var(--color-sage-300);
+    transition: background-color 0.25s var(--ease-soft), transform 0.3s var(--ease-soft);
+  }
+
+  .home-tool:nth-child(2) .home-tool-icon { color: var(--color-gold-300); }
+  .home-tool:nth-child(3) .home-tool-icon { color: var(--color-lavender-300); }
+  .home-tool:nth-child(4) .home-tool-icon { color: var(--color-coral-300); }
+
+  .hero-session {
+    box-shadow: 0 10px 32px -16px rgb(0 15 20 / 0.55);
+    border: 1px solid rgb(255 255 255 / 0.12);
+  }
+
+  .hero-play,
+  .session-play {
+    transition: transform 0.35s var(--ease-soft), background-color 0.3s var(--ease-soft), color 0.3s var(--ease-soft);
+  }
+
+  .session-cover {
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.12);
+    isolation: isolate;
+  }
+
+  .session-cover::after {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: inherit;
+    content: '';
+    pointer-events: none;
+  }
+
+  .session-art {
+    transition: transform 0.65s var(--ease-soft);
+  }
+
+  .rail-arrow {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255 255 255 / 0.2);
+    border-radius: 50%;
+    transition: background-color 0.2s var(--ease-soft), color 0.2s var(--ease-soft);
+  }
+
+  .rail-arrow:hover:not(:disabled) {
+    background: var(--color-coral-300);
+    color: var(--color-ink-950);
+  }
+
+  .rail-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  @media (min-width: 1024px) {
+    .home-scene { min-height: 430px; }
+  }
+
+  @media (max-width: 379px) {
+    .home-greeting { font-size: 38px; }
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .mood-choice:hover .mood-symbol { transform: translateY(-3px); }
+    .home-tool:hover .home-tool-icon { transform: translateY(-3px); background: rgb(255 255 255 / 0.06); }
+    .hero-session:hover .hero-play { transform: scale(1.08); }
+    .session-card:hover .session-art { transform: scale(1.045); }
+    .session-card:hover .session-play { transform: translateY(-2px); background: var(--color-coral-300); color: var(--color-ink-950); }
   }
 
   .no-scrollbar {

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import type { ArtSpec, Motif } from '@/content/types';
 import { mulberry32 } from '@/lib/utils';
 import { PALETTES, type Palette, mixHex } from './palettes';
@@ -74,7 +74,11 @@ function starsGroup(rnd: Rnd, h: number, count: number, maxY: number, key: strin
     const o = 0.35 + rnd() * 0.65;
     stars.push(<circle key={`${key}${i}`} cx={x.toFixed(1)} cy={y.toFixed(1)} r={r.toFixed(2)} fill="#fff" opacity={o.toFixed(2)} />);
   }
-  return <g>{stars}</g>;
+  return <g>{[0, 1, 2].map((phase) => (
+    <g key={phase} data-art-motion="twinkle" style={{ animationDelay: `${-phase * 2.3}s` }}>
+      {stars.filter((_, i) => i % 3 === phase)}
+    </g>
+  ))}</g>;
 }
 
 function pine(x: number, base: number, height: number, color: string, key: string): ReactNode {
@@ -102,11 +106,10 @@ function treeRow(rnd: Rnd, pts: Array<[number, number]>, color: string, size: [n
     out.push(pine(x, base, h, color, `${key}${k++}`));
     x += (h * 0.28 + rnd() * h * 0.5) / density;
   }
-  if (!wind) return <g>{out}</g>;
   // the whole row leans a little around its base line, like trees in a light wind
   const base = pts.reduce((sum, q) => sum + q[1], 0) / Math.max(1, pts.length);
   return (
-    <g className="wind" data-period={9 + (key.charCodeAt(1) % 5) * 1.5} style={{ transformOrigin: `0px ${base.toFixed(1)}px` }}>
+    <g className={wind ? 'wind' : undefined} data-art-motion={wind ? undefined : 'wind'} data-period={9 + (key.charCodeAt(1) % 5) * 1.5} style={{ transformOrigin: `0px ${base.toFixed(1)}px`, animationDelay: `${-(key.charCodeAt(1) % 5)}s` }}>
       {out}
     </g>
   );
@@ -169,8 +172,9 @@ function palm(bx: number, by: number, tx: number, ty: number, size: number, colo
       <path d={trunk} fill={color} />
       <g
         className={sway ? 'palm-sway' : undefined}
+        data-art-motion={sway ? undefined : 'palm'}
         data-period={sway ? period : undefined}
-        style={sway ? { transformOrigin: `${f1(tx)}px ${f1(ty)}px` } : undefined}
+        style={{ transformOrigin: `${f1(tx)}px ${f1(ty)}px`, animationDuration: `${period}s` }}
       >
         <path d={d} fill={color} />
         <circle cx={f1(tx)} cy={f1(ty + size * 0.015)} r={f1(size * 0.028)} fill={color} />
@@ -267,7 +271,7 @@ export function horizonFor(m: Motif): number {
 function celestial(p: Palette, cx: number, cy: number, r: number, id: (s: string) => string, moon: boolean): ReactNode {
   return (
     <g>
-      <circle cx={cx} cy={cy} r={r * 5.5} fill={`url(#${id('glow')})`} />
+      <g data-art-motion="glow"><circle cx={cx} cy={cy} r={r * 5.5} fill={`url(#${id('glow')})`} /></g>
       <circle cx={cx} cy={cy} r={r} fill={p.celestial} data-celestial={moon ? 'moon' : 'sun'} />
       {moon && (
         <g opacity="0.1" fill={p.sky[1]}>
@@ -319,7 +323,7 @@ function drawMotif(
       return (
         <g>
           {celestial(p, cx, horizon - h * 0.26, W * 0.055, id, p.night)}
-          <rect y={horizon - h * 0.2} width={W} height={h * 0.4} fill={`url(#${id('haze')})`} />
+          <rect data-art-motion="mist" x="-20" y={horizon - h * 0.2} width={W + 40} height={h * 0.4} fill={`url(#${id('haze')})`} />
           {mountains(p, rnd, h, horizon, 0.55)}
         </g>
       );
@@ -336,7 +340,7 @@ function drawMotif(
       const r = W * 0.13;
       return (
         <g>
-          <circle cx={W / 2} cy={horizon} r={r * 6} fill={`url(#${id('glow')})`} />
+          <g data-art-motion="glow"><circle cx={W / 2} cy={horizon} r={r * 6} fill={`url(#${id('glow')})`} /></g>
           <circle cx={W / 2} cy={horizon - r * 0.15} r={r} fill={p.celestial} />
           {hills(p, rnd, h, horizon + h * 0.02, 3).map((x) => x.node)}
         </g>
@@ -368,7 +372,9 @@ function drawMotif(
             const y = horizon + (h - horizon) * (0.12 + i * 0.1);
             const len = W * (0.06 + rnd() * 0.12);
             return (
-              <rect key={i} x={cx - len / 2 + (rnd() - 0.5) * 30} y={y} width={len} height="1.2" rx="0.6" fill={p.celestial} opacity={0.08 + rnd() * 0.12} />
+              <g key={i} data-art-motion="ripple" style={{ animationDelay: `${-i * 0.7}s` }}>
+                <rect x={cx - len / 2 + (rnd() - 0.5) * 30} y={y} width={len} height="1.2" rx="0.6" fill={p.celestial} opacity={0.08 + rnd() * 0.12} />
+              </g>
             );
           })}
           <rect y={h * 0.9} width={W} height={h * 0.1} fill={`url(#${id('fade')})`} />
@@ -397,7 +403,7 @@ function drawMotif(
               <path d={d} fill={color} />
             </g>
           ) : (
-            <path key={i} d={d} fill={color} />
+            <g key={i} data-art-motion="wave" style={{ animationDuration: `${7 + i * 1.7}s`, animationDelay: `${-i * 1.3}s` }}><path d={d} fill={color} /></g>
           ),
         );
       }
@@ -449,6 +455,8 @@ function drawMotif(
         ribbons.push(
           <path
             key={i}
+            data-art-motion="aurora"
+            style={{ animationDelay: `${-i * 3}s` }}
             d={d}
             stroke={p.accent[i % 3]}
             strokeWidth={26 - i * 5}
@@ -479,7 +487,7 @@ function drawMotif(
           x += r * (1.1 + rnd() * 0.5);
         }
         clouds.push(
-          <g key={i} fill={color}>
+          <g key={i} fill={color} data-art-motion="cloud" style={{ animationDuration: `${17 + i * 4}s`, animationDelay: `${-i * 4}s` }}>
             {puffs}
             <rect x="-10" y={y} width={W + 20} height={h} />
           </g>,
@@ -498,9 +506,9 @@ function drawMotif(
           <circle cx={W * 0.35} cy={h * 0.42} r={W * 0.28} fill={p.accent[0]} opacity="0.55" filter={`url(#${id('blur')})`} />
           <circle cx={W * 0.68} cy={h * 0.58} r={W * 0.24} fill={p.accent[2]} opacity="0.55" filter={`url(#${id('blur')})`} />
           <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.2} fill={p.accent[1]} opacity="0.45" filter={`url(#${id('blur')})`} />
-          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.17} fill="none" stroke={p.celestial} strokeOpacity="0.55" strokeWidth="1.2" />
+          <circle data-art-motion="resonance" cx={W * 0.5} cy={h * 0.5} r={W * 0.17} fill="none" stroke={p.celestial} strokeOpacity="0.55" strokeWidth="1.2" />
           <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.1} fill={p.celestial} opacity="0.85" />
-          <circle cx={W * 0.5} cy={h * 0.5} r={W * 0.28} fill="none" stroke={p.celestial} strokeOpacity="0.18" strokeWidth="0.8" />
+          <circle data-art-motion="resonance" style={{ animationDelay: '-3s' }} cx={W * 0.5} cy={h * 0.5} r={W * 0.28} fill="none" stroke={p.celestial} strokeOpacity="0.18" strokeWidth="0.8" />
         </g>
       );
     }
@@ -516,7 +524,10 @@ function drawMotif(
       return (
         <g>
           {hills(p, rnd, h, horizon, 4).map((x) => x.node)}
-          <g>{lines}</g>
+          <g data-art-motion="rain" style={{ '--fall-distance': `${h}px` } as CSSProperties}>
+            <g transform={`translate(0 ${-h})`}>{lines}</g>
+            {lines}
+          </g>
         </g>
       );
     }
@@ -529,7 +540,7 @@ function drawMotif(
       );
       return (
         <g>
-          {band}
+          <g data-art-motion="glow">{band}</g>
           {starsGroup(rnd, h, 60, 0.7, id('st'))}
           {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
         </g>
@@ -541,19 +552,23 @@ function drawMotif(
       return (
         <g>
           {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
-          <circle cx={fx} cy={fy} r={W * 0.4} fill={p.glow} opacity="0.35" filter={`url(#${id('blur')})`} />
+          <g data-art-motion="glow"><circle cx={fx} cy={fy} r={W * 0.4} fill={p.glow} opacity="0.35" filter={`url(#${id('blur')})`} /></g>
           <path
+            data-art-motion="flame"
+            style={{ transformOrigin: `${fx}px ${fy}px` }}
             d={`M ${fx} ${fy - h * 0.2} C ${fx + W * 0.07} ${fy - h * 0.1}, ${fx + W * 0.06} ${fy - h * 0.02}, ${fx} ${fy} C ${fx - W * 0.06} ${fy - h * 0.02}, ${fx - W * 0.08} ${fy - h * 0.1}, ${fx} ${fy - h * 0.2} Z`}
             fill={p.accent[1]}
           />
           <path
+            data-art-motion="flame"
+            style={{ transformOrigin: `${fx}px ${fy}px`, animationDelay: '-0.6s', animationDuration: '2.1s' }}
             d={`M ${fx} ${fy - h * 0.12} C ${fx + W * 0.035} ${fy - h * 0.06}, ${fx + W * 0.03} ${fy - h * 0.01}, ${fx} ${fy} C ${fx - W * 0.03} ${fy - h * 0.01}, ${fx - W * 0.04} ${fy - h * 0.06}, ${fx} ${fy - h * 0.12} Z`}
             fill={p.accent[0]}
           />
           <rect x={fx - W * 0.09} y={fy - 2} width={W * 0.18} height="7" rx="3.5" fill={p.layers[3]} transform={`rotate(-8 ${fx} ${fy})`} />
           <rect x={fx - W * 0.09} y={fy - 2} width={W * 0.18} height="7" rx="3.5" fill={p.layers[3]} transform={`rotate(10 ${fx} ${fy})`} />
           {Array.from({ length: 10 }, (_, i) => (
-            <circle key={i} cx={fx + (rnd() - 0.5) * W * 0.2} cy={fy - h * (0.22 + rnd() * 0.3)} r={0.8 + rnd()} fill={p.accent[0]} opacity={0.4 + rnd() * 0.5} />
+            <g key={i} data-art-motion="ember" style={{ animationDelay: `${-i * 0.6}s` }}><circle cx={fx + (rnd() - 0.5) * W * 0.2} cy={fy - h * (0.22 + rnd() * 0.3)} r={0.8 + rnd()} fill={p.accent[0]} opacity={0.4 + rnd() * 0.5} /></g>
           ))}
         </g>
       );
@@ -567,6 +582,15 @@ function drawMotif(
       for (let i = 0; i < 4; i++) {
         const x = startX + i * (carW + 3);
         cars.push(<rect key={`c${i}`} x={x} y={railY - h * 0.075} width={carW} height={h * 0.06} rx="2" fill={p.layers[3]} />);
+        cars.push(<path key={`axle${i}`} d={`M ${x + 8} ${railY - 3} h ${carW - 16}`} stroke={p.layers[3]} strokeWidth="2" />);
+        for (const wheelX of [x + 8, x + carW - 8]) {
+          cars.push(
+            <g key={`wheel${wheelX}`} data-art-motion="wheel">
+              <circle cx={wheelX} cy={railY - 3} r="3" fill={p.layers[3]} stroke={p.layers[1]} strokeWidth="0.8" />
+              <path d={`M ${wheelX - 2} ${railY - 3} h 4 M ${wheelX} ${railY - 5} v 4`} stroke={p.layers[1]} strokeWidth="0.7" />
+            </g>,
+          );
+        }
         for (let k = 0; k < 4; k++) {
           cars.push(
             <rect key={`w${i}${k}`} x={x + 4 + k * ((carW - 8) / 4)} y={railY - h * 0.062} width={(carW - 8) / 4 - 3} height={h * 0.018} rx="1" fill={p.accent[0]} opacity="0.95" />,
@@ -580,22 +604,22 @@ function drawMotif(
           {mountains(p, rnd, horizon + h * 0.06, horizon, 0.6, 2, 0.9)}
           {hs.map((x) => x.node)}
           <rect x="0" y={railY - 1} width={W} height="2" fill={p.layers[3]} />
-          <circle cx={lx + carW * 0.5} cy={railY - h * 0.05} r={W * 0.3} fill={p.accent[0]} opacity="0.12" filter={`url(#${id('blur')})`} />
-          {cars}
-          <path
-            d={`M ${lx} ${railY - h * 0.015} L ${lx} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.075} Q ${lx + carW * 1.05} ${railY - h * 0.07} ${lx + carW * 1.02} ${railY - h * 0.015} Z`}
-            fill={p.layers[3]}
-          />
-          {Array.from({ length: 5 }, (_, i) => (
-            <circle
-              key={i}
-              cx={lx + carW * 0.63 - i * 9}
-              cy={railY - h * (0.13 + i * 0.022)}
-              r={4 + i * 2.2}
-              fill={p.celestial}
-              opacity={0.16 - i * 0.025}
-            />
-          ))}
+          <g data-art-motion="train">
+            <g data-art-motion="train-ride">
+              <path d={`M ${lx + carW} ${railY - h * 0.042} l 75 -10 v 24 Z`} fill={p.accent[0]} opacity="0.12" />
+              {cars}
+              <path
+                d={`M ${lx} ${railY - h * 0.015} L ${lx} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.075} L ${lx + carW * 0.55} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.11} L ${lx + carW * 0.72} ${railY - h * 0.075} Q ${lx + carW * 1.05} ${railY - h * 0.07} ${lx + carW * 1.02} ${railY - h * 0.015} Z`}
+                fill={p.layers[3]}
+              />
+              <circle cx={lx + carW} cy={railY - h * 0.042} r="2" fill={p.celestial} />
+              {Array.from({ length: 4 }, (_, i) => (
+                <g key={i} data-art-motion="steam" style={{ animationDelay: `${-i * 1.1}s` }}>
+                  <circle cx={lx + carW * 0.63} cy={railY - h * 0.13} r={4 + i * 1.5} fill={p.celestial} opacity="0.23" />
+                </g>
+              ))}
+            </g>
+          </g>
         </g>
       );
     }
@@ -635,11 +659,11 @@ function drawMotif(
           {Array.from({ length: 7 }, (_, i) => {
             const y = horizon + (shoreY - horizon) * (0.1 + i * 0.12);
             const len = W * (0.05 + rnd() * 0.1) * (1 + i * 0.15);
-            return <rect key={i} x={f1(W / 2 - len / 2 + (rnd() - 0.5) * 24)} y={f1(y)} width={f1(len)} height="1.2" rx="0.6" fill={p.celestial} opacity={f1(0.12 + rnd() * 0.14)} />;
+            return <g key={i} data-art-motion="ripple" style={{ animationDelay: `${-i * 0.8}s` }}><rect x={f1(W / 2 - len / 2 + (rnd() - 0.5) * 24)} y={f1(y)} width={f1(len)} height="1.2" rx="0.6" fill={p.celestial} opacity={f1(0.12 + rnd() * 0.14)} /></g>;
           })}
           {/* the incoming wave and the shore */}
           {/* the animated groups fade in and out; the lines keep their own, lower opacity inside them */}
-          <g className={scene ? 'tide' : undefined} data-period={scene ? 6 : undefined}>
+          <g className={scene ? 'tide' : undefined} data-art-motion={scene ? undefined : 'tide'} data-period={scene ? 6 : undefined}>
             <path d={shore(-(shoreY - horizon) * 0.12)} fill="none" stroke={p.accent[0]} strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
           </g>
           <path d={`${shore(0)} L ${W + 10} ${h + 2} L -10 ${h + 2} Z`} fill={`url(#${id('sand')})`} />
@@ -648,7 +672,7 @@ function drawMotif(
               <path d={`${shore(0)} L ${W + 10} ${f1(shoreY + 14 + (h - shoreY) * 0.1)} C ${f1(W * 0.6)} ${f1(shoreY + 6 + (h - shoreY) * 0.08)} ${f1(W * 0.25)} ${f1(shoreY - 16 + (h - shoreY) * 0.06)} -10 ${f1(shoreY - 8 + (h - shoreY) * 0.07)} Z`} fill={p.accent[0]} opacity="0.16" />
             </g>
           )}
-          <g className={scene ? 'tide' : undefined}>
+          <g className={scene ? 'tide' : undefined} data-art-motion={scene ? undefined : 'tide'}>
             <path d={shore(0)} fill="none" stroke={p.accent[0]} strokeWidth="2.2" strokeLinecap="round" opacity="0.8" />
           </g>
           {h > W * 1.6
@@ -666,6 +690,8 @@ function drawMotif(
         <g>
           <rect y={horizon} width={W} height={h - horizon} fill={p.water} />
           <path
+            data-art-motion="beacon"
+            style={{ transformOrigin: `${baseX}px ${islandY - towerH}px` }}
             d={`M ${baseX} ${islandY - towerH} L ${baseX - W * 0.9} ${islandY - towerH - h * 0.1} L ${baseX - W * 0.9} ${islandY - towerH + h * 0.12} Z`}
             fill={p.celestial}
             opacity="0.16"
@@ -677,14 +703,14 @@ function drawMotif(
           <path d={`M ${baseX - W * 0.035} ${islandY - h * 0.03} L ${baseX - W * 0.022} ${islandY - towerH} L ${baseX + W * 0.022} ${islandY - towerH} L ${baseX + W * 0.035} ${islandY - h * 0.03} Z`} fill="#eef0f6" />
           <rect x={baseX - W * 0.03} y={islandY - towerH * 0.55} width={W * 0.06} height={towerH * 0.11} fill="#c96b6b" />
           <rect x={baseX - W * 0.026} y={islandY - towerH - h * 0.045} width={W * 0.052} height={h * 0.045} fill={p.accent[0]} />
-          <circle cx={baseX} cy={islandY - towerH - h * 0.02} r={W * 0.12} fill={`url(#${id('glow')})`} />
+          <g data-art-motion="glow"><circle cx={baseX} cy={islandY - towerH - h * 0.02} r={W * 0.12} fill={`url(#${id('glow')})`} /></g>
           <path d={`M ${baseX - W * 0.034} ${islandY - towerH - h * 0.045} L ${baseX} ${islandY - towerH - h * 0.075} L ${baseX + W * 0.034} ${islandY - towerH - h * 0.045} Z`} fill={p.layers[3]} />
           {Array.from({ length: 4 }, (_, i) => {
             const y = horizon + (h - horizon) * (0.25 + i * 0.2);
             let d = `M -10 ${h + 2} L -10 ${y}`;
             for (let x = -10; x <= W + 10; x += 12) d += ` L ${x} ${(y + Math.sin(x / (22 + i * 6) + i) * (2 + i * 2.5)).toFixed(1)}`;
             d += ` L ${W + 10} ${h + 2} Z`;
-            return <path key={i} d={d} fill={mixHex(p.water, p.layers[3], 0.3 + i * 0.2)} />;
+            return <g key={i} data-art-motion="wave" style={{ animationDelay: `${-i * 1.5}s` }}><path d={d} fill={mixHex(p.water, p.layers[3], 0.3 + i * 0.2)} /></g>;
           })}
         </g>
       );
@@ -703,16 +729,21 @@ function drawMotif(
           {hs[1]!.node}
           {treeRow(rnd, hs[1]!.pts, p.layers[2], [h * 0.12, h * 0.18], 0.8, 'cb', detail === 'scene')}
           {hs[2]!.node}
-          <circle cx={x} cy={baseY - ch * 0.5} r={W * 0.2} fill={p.accent[2]} opacity="0.3" filter={`url(#${id('blur')})`} />
+          <g data-art-motion="glow"><circle cx={x} cy={baseY - ch * 0.5} r={W * 0.2} fill={p.accent[2]} opacity="0.3" filter={`url(#${id('blur')})`} /></g>
           <rect x={x - cw / 2} y={baseY - ch} width={cw} height={ch} fill={mixHex(p.layers[3], '#000000', 0.25)} />
           <path d={`M ${x - cw * 0.62} ${baseY - ch} L ${x} ${baseY - ch * 1.9} L ${x + cw * 0.62} ${baseY - ch} Z`} fill="#f4f7ff" />
           <rect x={x + cw * 0.18} y={baseY - ch * 2.05} width={cw * 0.1} height={ch * 0.55} fill={mixHex(p.layers[3], '#000000', 0.3)} />
           <rect x={x - cw * 0.3} y={baseY - ch * 0.7} width={cw * 0.22} height={ch * 0.36} rx="1" fill={p.accent[2]} />
           <rect x={x + cw * 0.08} y={baseY - ch * 0.7} width={cw * 0.22} height={ch * 0.36} rx="1" fill={p.accent[2]} />
           {Array.from({ length: 4 }, (_, i) => (
-            <circle key={i} cx={x + cw * 0.23 + i * 6} cy={baseY - ch * (2.25 + i * 0.35)} r={3 + i * 2} fill="#ffffff" opacity={0.28 - i * 0.05} />
+            <g key={i} data-art-motion="steam" style={{ animationDelay: `${-i * 1.1}s` }}><circle cx={x + cw * 0.23} cy={baseY - ch * 2.25} r={3 + i * 2} fill="#ffffff" opacity="0.22" /></g>
           ))}
           {treeRow(rnd, hs[2]!.pts.map(([px, py]) => [px, py + 4] as [number, number]).filter(([px]) => Math.abs(px - x) > cw * 0.9), p.layers[3], [h * 0.16, h * 0.26], 0.35, 'cc', detail === 'scene')}
+          {detail === 'card' && <g data-art-motion="snow" style={{ '--fall-distance': `${h}px` } as CSSProperties}>
+            {[0, -h].map((offset) => <g key={offset} transform={`translate(0 ${offset})`}>
+              {Array.from({ length: 22 }, (_, i) => <circle key={i} cx={(i * 73.7) % W} cy={(i * 47.3) % h} r={i % 3 === 0 ? 1.7 : 1} fill="#fff" opacity="0.55" />)}
+            </g>)}
+          </g>}
         </g>
       );
     }
@@ -729,7 +760,12 @@ function drawMotif(
         <g>
           {hills(p, rnd, h, horizon, 3).map((x) => x.node)}
           <circle cx={W * 0.82} cy={h * 0.92} r={W * 0.38} fill={p.accent[2]} opacity="0.35" filter={`url(#${id('blur')})`} />
-          <g filter={`url(#${id('soft')})`}>{drops}</g>
+          <g filter={`url(#${id('soft')})`}>
+            <g data-art-motion="rain" style={{ '--fall-distance': `${h}px`, animationDuration: '14s' } as CSSProperties}>
+              <g transform={`translate(0 ${-h})`}>{drops}</g>
+              {drops}
+            </g>
+          </g>
           <rect x="0" y="0" width={W} height={h} fill="none" stroke={p.layers[3]} strokeWidth="22" />
           <rect x={W / 2 - 5} y="0" width="10" height={h} fill={p.layers[3]} />
           <rect x="0" y={h * 0.46} width={W} height="10" fill={p.layers[3]} />
@@ -778,7 +814,7 @@ function drawMotif(
               {stalks}
             </g>
           ) : (
-            stalks
+            <g data-art-motion="wind" style={{ transformOrigin: `0px ${h}px` }}>{stalks}</g>
           )}
         </g>
       );

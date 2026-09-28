@@ -162,7 +162,7 @@ function ThemeSync() {
     const root = document.documentElement;
     if (night) root.dataset.theme = 'noche';
     else delete root.dataset.theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', night ? '#0e1a3a' : '#09596c');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', night ? '#0e1a3a' : '#123e44');
   }, [night]);
   return null;
 }

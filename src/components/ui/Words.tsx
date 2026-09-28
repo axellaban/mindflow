@@ -1,4 +1,4 @@
-import { type Variants, motion } from 'motion/react';
+import { type Variants, motion, useReducedMotion } from 'motion/react';
 import { Fragment, useMemo } from 'react';
 import { EASE } from '@/lib/motion';
 
@@ -10,6 +10,7 @@ const STEP = 0.07;
  * The spaces stay as text, so screen readers hear the whole phrase at once.
  */
 export function Words({ text, delay = 0 }: { text: string; delay?: number }) {
+  const reduced = useReducedMotion();
   const variants = useMemo<Variants>(
     () => ({
       hidden: { opacity: 0, y: '0.3em' },
@@ -17,12 +18,13 @@ export function Words({ text, delay = 0 }: { text: string; delay?: number }) {
     }),
     [delay],
   );
+  if (reduced) return <span>{text}</span>;
   return (
     <motion.span initial="hidden" animate="show">
       {text.split(' ').map((word, i) => (
         <Fragment key={i}>
           {i > 0 && ' '}
-          <motion.span custom={i} variants={variants} className="inline-block">
+          <motion.span custom={i} variants={variants} className="inline-block max-w-full [overflow-wrap:anywhere]">
             {word}
           </motion.span>
         </Fragment>
