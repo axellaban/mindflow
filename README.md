@@ -22,7 +22,7 @@ Además de acompañar la práctica diaria, la app es la puerta de entrada a las 
 | **PWA** | Instalable en iOS, Android y escritorio; funciona offline; se actualiza sola al abrirla o al pasar a segundo plano, sin cortar nunca una práctica ni un audio; si algún archivo no carga al abrirla, se repara sola o avisa y ofrece reintentar; recordatorio diario vía calendario (.ics); exportar/importar datos. |
 | **Accesibilidad** | Contraste AA, lector de pantalla (diálogos con foco, fases de respiración anunciadas, títulos por pantalla), teclado en el reproductor y respeto por "Reducir movimiento". |
 
-La interfaz habla con voseo, como Eli. Las narraciones usan una voz neuronal de acento neutro (*Luz*), en femenino hacia quien escucha.
+La interfaz habla con voseo, como Eli. Las narraciones usan una voz generada con IA, de acento latino neutro (*Luz*, la voz «marin» de OpenAI), en femenino hacia quien escucha.
 
 ## Invitaciones a las sesiones con Eli
 
@@ -44,7 +44,7 @@ Todo lo editable está en **`src/content/eli.ts`**: links, número de WhatsApp, 
 
 - **React 19 + TypeScript + Vite 8**, **Tailwind CSS 4**, **Motion** (animaciones), **Zustand** (estado persistente), **React Router**.
 - **Web Audio API**: paisajes sonoros, música generativa, campanas y tono de respiración sintetizados en tiempo real (`src/audio`).
-- **Narraciones** pre-generadas con [Piper](https://github.com/OHF-Voice/piper1-gpl), voz *Luz* (`es_MX-claude-high`, Apache‑2.0). MP3 en `public/audio`, subtítulos en `public/captions`.
+- **Narraciones** pre-generadas con la voz «marin» de OpenAI (`gpt-4o-mini-tts`) y verificadas frase por frase con una transcripción. MP3 en `public/audio`, subtítulos en `public/captions`.
 - **Ilustraciones procedurales**: portadas y escenas se dibujan en SVG/canvas a partir de una paleta, un motivo y una semilla (`src/art`).
 - **vite-plugin-pwa** (Workbox) para el service worker y el manifiesto.
 
@@ -69,10 +69,10 @@ Los guiones están en `content/scripts/*.txt` (pautas de escritura en `content/s
 
 ```
 ---
-voice: luz          # voz de Piper
+voice: luz          # la voz de la app
 target: 10:00       # duración total; las pausas [*n] se estiran para llegar exacto
 bells: start,end    # start,end | end | none
-pace: 1.2           # opcional, velocidad de la voz (más alto = más lento)
+pace: 1.2           # opcional, más alto = más lento (desde 1.15, voz suave para dormir)
 gaps: 1.4           # opcional, multiplica las pausas naturales entre frases
 ---
 Texto de la narración. Cada oración es un subtítulo.
@@ -82,15 +82,17 @@ Texto de la narración. Cada oración es un subtítulo.
 Inhala{0.6} dos{0.6} tres.   pausas exactas dentro de una línea
 ```
 
-Para regenerar el audio:
+Para regenerar el audio (necesita `OPENAI_API_KEY`):
 
 ```bash
-tools/tts/setup.sh                                   # entorno Python + voces (una vez)
-tools/tts/.venv/bin/python tools/tts/render.py       # solo renderiza lo que cambió
-tools/tts/.venv/bin/python tools/tts/render.py pausa-soltar --force
+tools/tts/setup.sh                                                   # entorno Python (una vez)
+tools/tts/.venv/bin/python tools/tts/openai_voice.py --all          # solo narra lo que cambió
+tools/tts/.venv/bin/python tools/tts/openai_voice.py pausa-soltar   # sesiones puntuales
 ```
 
-El renderizador genera el MP3, los subtítulos y `src/content/generated/audio-manifest.json`. Los metadatos de cada sesión (título, categorías, arte, fondo) viven en `src/content/catalog.ts`.
+Cada frase se transcribe y, si lo que se oye no coincide con el texto, se genera de nuevo; `tools/tts/openai-progress.json` registra lo verificado y las frases a revisar. En GitHub, el workflow *OpenAI narration* hace lo mismo con el secret `OPENAI_API_KEY`, narra lo que indique `tools/tts/openai-plan.txt` y sube el resultado por tandas.
+
+El narrador genera el MP3, los subtítulos y `src/content/generated/audio-manifest.json`. Los metadatos de cada sesión (título, categorías, arte, fondo) viven en `src/content/catalog.ts`. `tools/tts/render.py` arma las sesiones (pausas, campanas, subtítulos) y, usado solo, narra gratis con Piper, pero reemplaza la voz de OpenAI.
 
 ## Herramientas internas
 

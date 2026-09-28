@@ -1,0 +1,1078 @@
+{
+  "sessions": {
+    "aam-1-respiracion": {
+      "v": "297870b4b3",
+      "audio_sha256": "016b0746bdacb01759372ecd50c53a532ef4c6193a44750d94dc1b34160eceff",
+      "sentences": 58,
+      "retaken": 2,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "aam-2-cuerpo": {
+      "v": "d0c88a0dac",
+      "audio_sha256": "fd72fea8cea9744ec21a2e21f43e10151118315756f0c737eb1c6af3f35bdd05",
+      "sentences": 60,
+      "retaken": 0,
+      "lowest_score": 0.8,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Su forma.",
+          "heard": "SOFORMA",
+          "score": 0.8
+        },
+        {
+          "text": "Nota a dónde fue, y vuelve a sentir el cuerpo.",
+          "heard": "Nota adónde fue y vuelve a sentir el cuerpo.",
+          "score": 0.989
+        }
+      ]
+    },
+    "aam-3-pensamientos": {
+      "v": "3a8425b55c",
+      "audio_sha256": "d4e88a9803bcedfbf5687efbed11f6efe8520605e018a352a13a1432daf9eba5",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.955,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Eres quien los observa.",
+          "heard": "Eres quien nos observa.",
+          "score": 0.955
+        }
+      ]
+    },
+    "aam-4-emociones": {
+      "v": "20a777af40",
+      "audio_sha256": "1869085f8e51d7d4d7173f4fddf82402b6d72a8aac5beab5b79fe97bff8dddf8",
+      "sentences": 49,
+      "retaken": 0,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Obsérvala como si fuera la primera vez.",
+          "heard": "Obsérvana como si fuera la primera vez.",
+          "score": 0.974
+        }
+      ]
+    },
+    "aam-5-sentidos": {
+      "v": "09be57b806",
+      "audio_sha256": "75418b329119ba3e9c25d81e2934fb2c3a82463ae2559c99aff83773698351d1",
+      "sentences": 42,
+      "retaken": 0,
+      "lowest_score": 0.944,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "El peso de la ropa.",
+          "heard": "El teso de la ropa.",
+          "score": 0.944
+        },
+        {
+          "text": "Si notas mucha dispersión, vuelve a la respiración un momento, y luego vuelve a abrir.",
+          "heard": "Si notas mucha dispersión, vuelve la respiración un momento y luego vuelve a abrir.",
+          "score": 0.987
+        }
+      ]
+    },
+    "aam-6-bondad": {
+      "v": "f97a757501",
+      "audio_sha256": "dd3d7957bfaa7862bc2865a250a7e670a86abe068b627f94e7c4fd029b6860b8",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Ahora, en silencio, dirígele estos deseos.",
+          "heard": "Ahora, en silencio, diríjele estos deseos.",
+          "score": 0.974
+        }
+      ]
+    },
+    "aam-7-tu-practica": {
+      "v": "b3e8f8de55",
+      "audio_sha256": "d8f5ecf7402d59c29dfb9e02924db5210dc8f459533aef037a53983bbc88b10d",
+      "sentences": 47,
+      "retaken": 0,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Durante ese tiempo, quédate con tu ancla.",
+          "heard": "Durante ese tiempo, quédate con tu antla.",
+          "score": 0.974
+        },
+        {
+          "text": "Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesitas sostener.",
+          "heard": "Recorre brevemente el cuerpo, de la cabeza a los pies, soltando lo que no necesita sostener.",
+          "score": 0.994
+        }
+      ]
+    },
+    "antes-de-algo-importante": {
+      "v": "472bc87fcc",
+      "audio_sha256": "c9d28e90b6ba01d285fa962e5dbfe22d220655e4b220da09d00c746a45f295b6",
+      "sentences": 45,
+      "retaken": 0,
+      "lowest_score": 0.897,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Abre el pecho.",
+          "heard": "Abre en el pecho.",
+          "score": 0.897
+        }
+      ]
+    },
+    "bondad-amorosa": {
+      "v": "61d768ca96",
+      "audio_sha256": "657b90753563603a047782b29c5e00b01ddd025077a3fd7dbdbdb4a291f222fd",
+      "sentences": 55,
+      "retaken": 0,
+      "lowest_score": 0.968,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Siente el latido, la respiración.",
+          "heard": "Siente en latido la respiración.",
+          "score": 0.968
+        },
+        {
+          "text": "También quiere ser feliz, igual que tú.",
+          "heard": "También quieres ser feliz, igual que tú.",
+          "score": 0.987
+        }
+      ]
+    },
+    "buc-1-piloto-automatico": {
+      "v": "e19c42c640",
+      "audio_sha256": "a4c9b093e1ae1b55f189fdefebc4c5ed7124d1c15bdbe496fa4f0fcb01bb6fae",
+      "sentences": 52,
+      "retaken": 0,
+      "lowest_score": 0.923,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Comes mirando el teléfono.",
+          "heard": "Comence mirando el teléfono.",
+          "score": 0.923
+        },
+        {
+          "text": "¿Hay tensión en los hombros, en la mandíbula, en el abdomen?",
+          "heard": "¿Hay hensión en los hombros, en la mandíbula, en el abdomen?",
+          "score": 0.982
+        },
+        {
+          "text": "Puedes cerrar los ojos, o dejar la mirada baja.",
+          "heard": "Puede cerrar los ojos o dejar la mirada baja.",
+          "score": 0.989
+        }
+      ]
+    },
+    "buc-2-mente-acelerada": {
+      "v": "f4b9b58ffa",
+      "audio_sha256": "1a9df31092cb86ad2f1a92616dbfa872350bdd06f21533fa012681dcecb03bd5",
+      "sentences": 54,
+      "retaken": 0,
+      "lowest_score": 0.957,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Planificando…",
+          "heard": "LANIFICANDO",
+          "score": 0.957
+        },
+        {
+          "text": "Y si no sabes qué nombre ponerle, simplemente: «pensando».",
+          "heard": "Y si no sabes qué nombre ponerle, simplemente tensando.",
+          "score": 0.981
+        }
+      ]
+    },
+    "buc-3-autoexigencia": {
+      "v": "cc9c032d9e",
+      "audio_sha256": "a3e586d638308670bf9c1540e3ab12e39eb46c1379e89667880d59834bd80c77",
+      "sentences": 55,
+      "retaken": 0,
+      "lowest_score": 0.952,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Pero cuando manda todo el tiempo, nos agota.",
+          "heard": "Pero cuando manda todo el tiempo, no sabota.",
+          "score": 0.952
+        },
+        {
+          "text": "Hoy, cada vez que escuches esa voz exigente, haz una pausa y pregúntate: ¿cómo le hablaría a una amiga?",
+          "heard": "Oí, cada vez que escuches esa voz exigente, haz una pausa y pregúntate, ¿cómo le hablaría a una amiga?",
+          "score": 0.983
+        }
+      ]
+    },
+    "buc-4-culpa": {
+      "v": "5cbf91e36f",
+      "audio_sha256": "eeb24f171fb30f77236f3d6d6e26086598b7cc46e7cd9c91346cdaaeeb690630",
+      "sentences": 52,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "buc-5-descanso": {
+      "v": "7d1a24d4e0",
+      "audio_sha256": "f357216bd5db5cbe139acd5cc7785f743a2124b160b18127be6c5e9642190a10",
+      "sentences": 61,
+      "retaken": 0,
+      "lowest_score": 0.971,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Aquí solemos cargar el peso de todo.",
+          "heard": "Aquí, sonemos cargar el peso de todo.",
+          "score": 0.971
+        }
+      ]
+    },
+    "cafe-consciente": {
+      "v": "61938ed487",
+      "audio_sha256": "761d0f372b0abc0a68b8ce7cc01f8f367a18fed146fdb5b99420a14eb2120dd4",
+      "sentences": 40,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "caminar": {
+      "v": "30a7c4b96f",
+      "audio_sha256": "864d4461bffc65b8031fb42c7f4e6c61ebc692669ae6b6ad0f1fdb1d1ed1396d",
+      "sentences": 37,
+      "retaken": 2,
+      "lowest_score": 0.955,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Nota a dónde fue, y vuelve a sentir los pies en el suelo.",
+          "heard": "no sé a dónde fue, y vuelve a sentir los pies en el suelo.",
+          "score": 0.955
+        },
+        {
+          "text": "Empieza de pie, en quietud por un momento.",
+          "heard": "Empieza de pie. Inquietud por un momento.",
+          "score": 0.959
+        },
+        {
+          "text": "Quédate de pie un momento, en quietud.",
+          "heard": "Quédate de pie un momento. Enquietud.",
+          "score": 0.985
+        }
+      ]
+    },
+    "carga-mental": {
+      "v": "1ca06f448b",
+      "audio_sha256": "6170b7e67a0f9ed33287218dcf4b3dcb27815b23f895bf85bb7ed45229533057",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 0.969,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "¿Algo que podrías pedir, o delegar?",
+          "heard": "¿Algo que podrías pedir o denegar?",
+          "score": 0.969
+        }
+      ]
+    },
+    "cla-1-entender": {
+      "v": "b62d21f432",
+      "audio_sha256": "33c9dd48f68c7b32056ec384347652b2e6cf1cca5cfcb8c2cc4ae031c12effd2",
+      "sentences": 74,
+      "retaken": 0,
+      "lowest_score": 0.986,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Cuando la exhalación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse.",
+          "heard": "Cuando la exanación es más larga que la inhalación, el sistema nervioso recibe la señal de que puede calmarse.",
+          "score": 0.986
+        }
+      ]
+    },
+    "cla-2-anclar": {
+      "v": "c11168095b",
+      "audio_sha256": "7db14958ab9cd607748e3b809be833b579916f639f3d7559e12d7d0c6b259bc1",
+      "sentences": 55,
+      "retaken": 1,
+      "lowest_score": 0.991,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "No necesitas cerrar los ojos, ni que nadie se dé cuenta.",
+          "heard": "No necesita cerrar los ojos, ni que nadie se dé cuenta.",
+          "score": 0.991
+        }
+      ]
+    },
+    "cla-3-hacer-espacio": {
+      "v": "ebccbb4f3b",
+      "audio_sha256": "d2422ad34b22ee20e504bb1fd10f44d02f49c90f3bb3e778300613da0e7d1c92",
+      "sentences": 60,
+      "retaken": 0,
+      "lowest_score": 0.812,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Quizás seguridad.",
+          "heard": "Cuisas. Securidad.",
+          "score": 0.812
+        },
+        {
+          "text": "RAIN es una práctica para toda la vida.",
+          "heard": "R.A.I.N. es una práctica para toda la vida.",
+          "score": 0.958
+        },
+        {
+          "text": "La idea es sencilla: en lugar de pelear con lo que sentimos, o de huir, le hacemos espacio.",
+          "heard": "La idea es sencilla, en lugar de pelear con lo que sentimos o de huir, nacemos espacio.",
+          "score": 0.971
+        }
+      ]
+    },
+    "cla-4-pensamientos": {
+      "v": "a734e521cf",
+      "audio_sha256": "929ed2fc7611329d9bbc2c951a1f01744ea32500adb99480c51fe666f6a2f514",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.989,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y ahora, puedes ir un paso más allá: «me doy cuenta de que estoy teniendo el pensamiento de que…».",
+          "heard": "Y ahora puedes ir un paso más allá. Me doy cuenta de que estoy temiendo el pensamiento de que.",
+          "score": 0.989
+        },
+        {
+          "text": "Cuando aparezca un pensamiento ansioso, agrégale estas palabras al principio: «estoy teniendo el pensamiento de que…».",
+          "heard": "Cuando aparezca un pensamiento ansioso, agrédale estas palabras al principio – Estoy teniendo el pensamiento de que…",
+          "score": 0.991
+        }
+      ]
+    },
+    "cla-5-cuidado": {
+      "v": "57c6f5b190",
+      "audio_sha256": "812680f7383eb79ef8315a75e07ae79261f39741123bfe968a0c8a8995e12863",
+      "sentences": 50,
+      "retaken": 1,
+      "lowest_score": 0.99,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y dite: «que pueda ser amable conmigo en este momento».",
+          "heard": "y dite que puedas ser amable conmigo en este momento.",
+          "score": 0.99
+        },
+        {
+          "text": "Lleva una o ambas manos al pecho, o a donde te resulte reconfortante.",
+          "heard": "Lleva una o ambas manos al pecho o adonde te resulte reconfortante.",
+          "score": 0.992
+        }
+      ]
+    },
+    "cuando-sientes-enojo": {
+      "v": "09777591a2",
+      "audio_sha256": "a68dc635949a6badace87e3a4d08d72eeadb65481daab8d2e071bc2904cb4d81",
+      "sentences": 41,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "cuerpo-en-paz": {
+      "v": "86b1a70556",
+      "audio_sha256": "ecc161a8b31e0077d1d5ca22f52cf5e9bd5e1d928456f71ede37157bb9a438c9",
+      "sentences": 57,
+      "retaken": 1,
+      "lowest_score": 0.889,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Obsérvalo.",
+          "heard": "¡Obsérvano!",
+          "score": 0.889
+        },
+        {
+          "text": "Esta es una práctica para hacer las paces con tu cuerpo.",
+          "heard": "Esta es una práctica para hacer las pases con tu cuerpo.",
+          "score": 0.98
+        }
+      ]
+    },
+    "despertar": {
+      "v": "fe06f4e30a",
+      "audio_sha256": "26d625dc4550a82bd988cd95c83d648a5903d0545ae0e1b4b4c7ace2c7733b9b",
+      "sentences": 36,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "dias-de-periodo": {
+      "v": "4d854ca969",
+      "audio_sha256": "16cc43d4b70598f42a4f2ee543d8dc00efc0ec361aa089df71ced0871ea4de97",
+      "sentences": 56,
+      "retaken": 1,
+      "lowest_score": 0.5,
+      "flagged": [
+        {
+          "text": "Inhala",
+          "heard": "y nada.",
+          "score": 0.5
+        }
+      ],
+      "lowest": []
+    },
+    "dp-1-soltar-el-dia": {
+      "v": "6d75375007",
+      "audio_sha256": "9f0843b98e23d863bf4ae1bcd68ee29b37459d6e5130d5143c32252026bcd561",
+      "sentences": 58,
+      "retaken": 3,
+      "lowest_score": 0.963,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Ajusta la almohada, la manta.",
+          "heard": "Ajusta la almohada. La manda.",
+          "score": 0.963
+        },
+        {
+          "text": "y deja salir el aire muy despacio, como si soplaras sobre una vela sin apagarla.",
+          "heard": "y deja salir el aire muy despacio, como si soplara sobre una vela sin apagarla.",
+          "score": 0.993
+        },
+        {
+          "text": "Vamos a recorrerlo suavemente, como quien hojea un libro antes de cerrarlo.",
+          "heard": "Vamos a recorrerlo suavemente, como quien ojea un libro antes de cerrarlo.",
+          "score": 0.993
+        }
+      ]
+    },
+    "dp-2-respirar-para-dormir": {
+      "v": "d661c5bccc",
+      "audio_sha256": "bc0a825262452d1b9789f8445c401c74192b5eacf9fbb1f54762cd5ff44446e6",
+      "sentences": 110,
+      "retaken": 3,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Retén",
+          "heard": "BRETÉN",
+          "score": 0.909
+        }
+      ]
+    },
+    "dp-3-escaneo-corporal": {
+      "v": "87a9773f09",
+      "audio_sha256": "8135f60fe5064475e3c4c449e3234ce2a7f33dee2568f9fc0dde15ad5e15cbbb",
+      "sentences": 67,
+      "retaken": 2,
+      "lowest_score": 0.8,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Tibio.",
+          "heard": "Dibio",
+          "score": 0.8
+        },
+        {
+          "text": "Quieto.",
+          "heard": "Cuieto.",
+          "score": 0.833
+        },
+        {
+          "text": "No tienes que seguirlo.",
+          "heard": "No tienes que cedirlo.",
+          "score": 0.884
+        }
+      ]
+    },
+    "dp-4-aquietar-la-mente": {
+      "v": "d58c1f1ce5",
+      "audio_sha256": "b7e296665cf87fb6dfa6a294651ccd6b984636a30fe3d1bc5f9c64494eae8e02",
+      "sentences": 51,
+      "retaken": 1,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Ahora la ene.",
+          "heard": "Ahora la N.",
+          "score": 0.909
+        },
+        {
+          "text": "Con la ele, imagina un limón.",
+          "heard": "Con la L, imagina un limón.",
+          "score": 0.957
+        },
+        {
+          "text": "Amarillo, brillante.",
+          "heard": "Amarilo. Brillante.",
+          "score": 0.971
+        }
+      ]
+    },
+    "dp-5-el-lago": {
+      "v": "c68046c681",
+      "audio_sha256": "6eb28e48fb445f4dd9eb47cb23b9286af8f2c7fd77dcdb8dc45d984229fb4e2f",
+      "sentences": 47,
+      "retaken": 0,
+      "lowest_score": 0.667,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Solo el agua.",
+          "heard": "Sólo en agua.",
+          "score": 0.917
+        },
+        {
+          "text": "No hay a dónde ir.",
+          "heard": "No hay adónde ir.",
+          "score": 0.97
+        }
+      ]
+    },
+    "energia-matinal": {
+      "v": "5e143622cb",
+      "audio_sha256": "39f72fa217a2627d32be1af313f4f39378e2d09390035dff67771772ce9b6783",
+      "sentences": 46,
+      "retaken": 0,
+      "lowest_score": 0.941,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y apóyalas sobre los ojos cerrados.",
+          "heard": "y apóyanos sobre los ojos cerrados.",
+          "score": 0.941
+        },
+        {
+          "text": "Despertando cada parte del cuerpo.",
+          "heard": "desperando cada parte del cuerpo.",
+          "score": 0.985
+        }
+      ]
+    },
+    "enfoque-profundo": {
+      "v": "f7aedf38f0",
+      "audio_sha256": "630a6b70b2a11e88d1ff760cc6bdf76549be5da44ce752861a15659f15e40f30",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "gratitud": {
+      "v": "127159c0f2",
+      "audio_sha256": "8556350fa7ffd9da64eece4ea07a6dd0f9dc7ec51fe57ecbd7389bf89fcfa46a",
+      "sentences": 47,
+      "retaken": 0,
+      "lowest_score": 0.95,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Revívelo con detalle.",
+          "heard": "Revíveno con detalle.",
+          "score": 0.95
+        },
+        {
+          "text": "Tu corazón, que no ha dejado de latir ni un segundo.",
+          "heard": "corazón que no ha dejado de latir ni un segundo.",
+          "score": 0.967
+        },
+        {
+          "text": "En pocas semanas, tu mente empezará a buscarlas sola.",
+          "heard": "En pocas semanas, tu mente empezará a buscarla sola.",
+          "score": 0.99
+        }
+      ]
+    },
+    "historia-atacama": {
+      "v": "0866ccffa6",
+      "audio_sha256": "ad7c4034b45a1d7673f13fbf8a04d4f2a984664a4eb3f4c855e1450fb69e2bcf",
+      "sentences": 120,
+      "retaken": 0,
+      "lowest_score": 0.906,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Son las Nubes de Magallanes.",
+          "heard": "Son las nubes de Madayanes.",
+          "score": 0.906
+        },
+        {
+          "text": "El silencio del desierto es inmenso.",
+          "heard": "El silencio del desierto inmenso.",
+          "score": 0.955
+        },
+        {
+          "text": "Te acomodas otra vez bajo la manta.",
+          "heard": "que acomodas otra vez bajo la manta.",
+          "score": 0.957
+        }
+      ]
+    },
+    "historia-biblioteca-lluvia": {
+      "v": "7205c2fb44",
+      "audio_sha256": "418b0b26224f828ed958ce6ca04328ad882fd037241aaa9971c1700692950543",
+      "sentences": 136,
+      "retaken": 1,
+      "lowest_score": 0.667,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Cada gota, un poco más lejos.",
+          "heard": "Cada bota un poco más lejos.",
+          "score": 0.958
+        },
+        {
+          "text": "Solo escuchar, como quien escucha la lluvia.",
+          "heard": "Solo escuchar, como quien escucha en la lluvia.",
+          "score": 0.966
+        }
+      ]
+    },
+    "historia-cabana-nieve": {
+      "v": "1f635de574",
+      "audio_sha256": "d897dcfacc92f4dc578acef700af5cec8db87292cefc5cba932520f08aa00ebc",
+      "sentences": 118,
+      "retaken": 3,
+      "lowest_score": 0.5,
+      "flagged": [
+        {
+          "text": "Uuh…",
+          "heard": "U.",
+          "score": 0.5
+        }
+      ],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Chasquean.",
+          "heard": "ChaoScan.",
+          "score": 0.706
+        },
+        {
+          "text": "uuh.",
+          "heard": "¡Uuuh!",
+          "score": 0.857
+        }
+      ]
+    },
+    "historia-faro": {
+      "v": "6e710e5091",
+      "audio_sha256": "b81d1cd721af46db3260e66859fe4ea686c3b14a13c32a90b289efb412a32655",
+      "sentences": 129,
+      "retaken": 0,
+      "lowest_score": 0.6,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Lento.",
+          "heard": "Nendo",
+          "score": 0.6
+        },
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Inhala, y la ola llega.",
+          "heard": "Inhala, y la hora llega.",
+          "score": 0.93
+        }
+      ]
+    },
+    "historia-tren-patagonia": {
+      "v": "311c6d474b",
+      "audio_sha256": "1c3b51d7886534bfadc4502f0432293ede6e7411de995b771f06e4d03b3501dc",
+      "sentences": 150,
+      "retaken": 0,
+      "lowest_score": 0.933,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Tacatán…",
+          "heard": "TACA TAN",
+          "score": 0.933
+        },
+        {
+          "text": "tacatán…",
+          "heard": "TACA TAN.",
+          "score": 0.933
+        },
+        {
+          "text": "Lo sigues por el pasillo, que se mece levemente con el movimiento del tren, hasta el vagón comedor.",
+          "heard": "Lo sigues por el pasillo, que se mece levemente con el movimiento del tren, hasta el babón comedor.",
+          "score": 0.979
+        }
+      ]
+    },
+    "montana": {
+      "v": "b13a12661b",
+      "audio_sha256": "451274e1ad76555d4e99a67c12eef043b95af217d87a5d3c40d5ab472bcd098a",
+      "sentences": 61,
+      "retaken": 3,
+      "lowest_score": 0.727,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Tu raíz.",
+          "heard": "2. Raíz",
+          "score": 0.727
+        }
+      ]
+    },
+    "nsdr": {
+      "v": "ede3d5e059",
+      "audio_sha256": "0f02e78ac0140f1fe18becfb4466eb7a1d678ad1c899f55c125ad67997f446e9",
+      "sentences": 144,
+      "retaken": 0,
+      "lowest_score": 0.8,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Calor.",
+          "heard": "Talor",
+          "score": 0.8
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Innala.",
+          "score": 0.833
+        },
+        {
+          "text": "La ceja derecha.",
+          "heard": "la sella derecha.",
+          "score": 0.839
+        }
+      ]
+    },
+    "pausa-3-minutos": {
+      "v": "7b1a908256",
+      "audio_sha256": "3791470ae25b2d00bb7c227ddbecb1215f5582878beb850754b328960b3d1132",
+      "sentences": 24,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-aceptacion": {
+      "v": "e7ed9a3617",
+      "audio_sha256": "2b639d218a7849fe4cbd98408b1018de90c22336ffe20922390d6e22a8c5e964",
+      "sentences": 47,
+      "retaken": 1,
+      "lowest_score": 0.96,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Solo sonidos.",
+          "heard": "Sólos sonidos.",
+          "score": 0.96
+        }
+      ]
+    },
+    "pausa-amabilidad": {
+      "v": "9cd014fc76",
+      "audio_sha256": "966b345387b8985cfbbbcda1d27590a2fe968965687e84d53d86cacfb85d9771",
+      "sentences": 46,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-aqui-y-ahora": {
+      "v": "9c93ce9ebe",
+      "audio_sha256": "e175469772c67377474e4a574913031ed1ca6e6b9a5eca39888e2dcfdea2d882",
+      "sentences": 50,
+      "retaken": 1,
+      "lowest_score": 0.966,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy vamos a volver a casa: al aquí y al ahora.",
+          "heard": "Hoy vamos a volver a casa, al aquí y a la hora.",
+          "score": 0.966
+        },
+        {
+          "text": "¿Te pasó alguna vez llegar a un lugar sin recordar el camino?",
+          "heard": "¿Qué pasó alguna vez? ¿Llegar a un lugar sin recordar el camino?",
+          "score": 0.973
+        }
+      ]
+    },
+    "pausa-bambu": {
+      "v": "b2ee415204",
+      "audio_sha256": "1d51e22ba408ec77c4431c999f509638a98a9e250ed38d119f66eeefe650d3fd",
+      "sentences": 43,
+      "retaken": 1,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Balancéate muy levemente, hacia un lado y hacia el otro, como un bambú con la brisa.",
+          "heard": "Balancea que muy levemente, hacia un lado y hacia el otro, como un bambú con la brisa.",
+          "score": 0.974
+        }
+      ]
+    },
+    "pausa-confianza": {
+      "v": "8d0ce568a0",
+      "audio_sha256": "b905c7f5e6a67fd3abf3d3b29dbac1b7845f9012e0ea83023d8b76a1472ba533",
+      "sentences": 41,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-empezar-de-nuevo": {
+      "v": "a5edc5ac35",
+      "audio_sha256": "38ccb914e072cd9430621bad788712e6ae189edccea1c2c412d034781e6a7e49",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 0.97,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y esta exhalación deja ir la anterior por completo.",
+          "heard": "y esta exanación deja ir la anterior por completo.",
+          "score": 0.97
+        }
+      ]
+    },
+    "pausa-lo-pequeno": {
+      "v": "1585f0241c",
+      "audio_sha256": "7d85e4de1efcb2dcd4af1727c74e102ad99ee2fb082512cb510e41e769ed4931",
+      "sentences": 49,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-mente-de-principiante": {
+      "v": "cfe04db894",
+      "audio_sha256": "c7514da9a22c224b5611d3bdf79b56b8de6c529736b13e77c42496d08e6d234e",
+      "sentences": 44,
+      "retaken": 1,
+      "lowest_score": 0.981,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Escúchalos como si fueran música de un lugar desconocido.",
+          "heard": "Escúchanos como si fueran música de un lugar desconocido.",
+          "score": 0.981
+        }
+      ]
+    },
+    "pausa-no-hacer": {
+      "v": "8bbfb3f252",
+      "audio_sha256": "5c20a953e2c6e5f7476f0ca471d89810225647f1929bcc787209a548e2f844d4",
+      "sentences": 38,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-paciencia": {
+      "v": "0438aa00e0",
+      "audio_sha256": "fc4d617df8b5c7113a168d0e3a4dbd255262fb010f02fec22753b785b003abc0",
+      "sentences": 48,
+      "retaken": 0,
+      "lowest_score": 0.964,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "La frase para hoy es: «lo que crece despacio, crece fuerte».",
+          "heard": "La frase para hoy es, lo que crece en espacio, crece fuerte.",
+          "score": 0.964
+        },
+        {
+          "text": "Cuando notes impaciencia, en una fila, en el tráfico, con alguien, haz una respiración lenta y recuerda la semilla.",
+          "heard": "Cuando note sin paciencia, en una fila, en el tráfico, con alguien, haz una respiración lenta y recuerda la semilla.",
+          "score": 0.976
+        },
+        {
+          "text": "Quizás notes una pequeña urgencia por que esta práctica avance, por llegar a alguna parte.",
+          "heard": "Quizás notes una pequeña urgencia porque esta práctica avance, por llegar a alguna parte.",
+          "score": 0.994
+        }
+      ]
+    },
+    "pausa-soltar": {
+      "v": "86d118ba3d",
+      "audio_sha256": "5f38fd173014a457d2a08fbbed5576065f43aea2ed9ebbbbae2a36bc7a9e8497",
+      "sentences": 50,
+      "retaken": 0,
+      "lowest_score": 0.857,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "A un rencor.",
+          "heard": "un rencor",
+          "score": 0.857
+        }
+      ]
+    },
+    "pausa-todo-pasa": {
+      "v": "69f8fb0bf2",
+      "audio_sha256": "f68d5be5316e653e7d65e53069159742b9cbce9b49f854d892b654ad59cd8468",
+      "sentences": 41,
+      "retaken": 1,
+      "lowest_score": 0.947,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Escucha los sonidos.",
+          "heard": "Escuche los sonidos.",
+          "score": 0.947
+        }
+      ]
+    },
+    "poner-limites": {
+      "v": "7f34973933",
+      "audio_sha256": "6aaac56831deca241553ae43eb0960998cce1eab6132662eafe7c81085eb6278",
+      "sentences": 51,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "primera-meditacion": {
+      "v": "33f1928777",
+      "audio_sha256": "ad2803f29dd2773c8019db6ba1f645bd83d46136f516d12e1bec2c9f448ebbfc",
+      "sentences": 45,
+      "retaken": 0,
+      "lowest_score": 0.667,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        }
+      ]
+    },
+    "relajacion-progresiva": {
+      "v": "6d05da3e79",
+      "audio_sha256": "7837b082e3d581f2ceb2f9d1de91eec24c184a1dee4ab94927ad4f40c439815e",
+      "sentences": 71,
+      "retaken": 0,
+      "lowest_score": 0.967,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Las piernas se vuelven pesadas.",
+          "heard": "Las piernas se vuelven tesadas.",
+          "score": 0.967
+        },
+        {
+          "text": "Y si tienes alguna lesión, salta esa zona.",
+          "heard": "Y si tienes alguna lesión, salta a esa zona.",
+          "score": 0.976
+        },
+        {
+          "text": "Arruga toda la cara: aprieta los ojos, frunce la nariz, aprieta los labios.",
+          "heard": "Arruga toda la cara. Aprieta los ojos. Flunce la nariz. Aprieta los labios.",
+          "score": 0.986
+        }
+      ]
+    },
+    "respiro-para-mamas": {
+      "v": "83f71094c2",
+      "audio_sha256": "aff2a2dc2cacaf1e2adf7f7749dc150db13cecbd4cf8c7c3787d77ed78732bff",
+      "sentences": 32,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "soltar-tension": {
+      "v": "e45e871ffe",
+      "audio_sha256": "11968a3d00874894009e795ef8ddf0d9bfe02bebd5c6940b9e66c470bbb27c0e",
+      "sentences": 61,
+      "retaken": 0,
+      "lowest_score": 0.667,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Un «ahh» largo.",
+          "heard": "un A largo",
+          "score": 0.875
+        },
+        {
+          "text": "Pesados, apoyados.",
+          "heard": "Besados Apoyados",
+          "score": 0.938
+        }
+      ]
+    },
+    "sos-ansiedad": {
+      "v": "90577fd204",
+      "audio_sha256": "d2cb10a8c5619ab22eb1a45d1abbddc3ddcaf8000b6ac4d3b9eadb024931ba97",
+      "sentences": 32,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "volver-a-dormir": {
+      "v": "1b6402db9a",
+      "audio_sha256": "f36c6ad2fb2653de52c69fd95a493bf0c475258800a65a4583c8e9e99546e97e",
+      "sentences": 48,
+      "retaken": 1,
+      "lowest_score": 0.964,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Lo primero: no mires el reloj.",
+          "heard": "Lo primero, no mides el reloj.",
+          "score": 0.964
+        },
+        {
+          "text": "Siente el peso de tu cabeza sobre la almohada.",
+          "heard": "Siente el teso de tu cabeza sobre la almohada.",
+          "score": 0.978
+        },
+        {
+          "text": "Si hay pensamientos dando vueltas, no te pelees con ellos.",
+          "heard": "Si hay pensamientos dando vueltas, no te telees con ellos.",
+          "score": 0.982
+        }
+      ]
+    }
+  },
+  "verified": 61,
+  "total": 61
+}

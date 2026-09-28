@@ -1,0 +1,42 @@
+name: OpenAI narration
+# Narrates the sessions named in tools/tts/openai-plan.txt (ids, or --all) with the OpenAI
+# voice, checks every sentence with a transcription and pushes the results to this branch
+# in batches. Needs the OPENAI_API_KEY repository secret.
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/meditation-app-calm-mvp-6y0ic0]
+    paths:
+      - '.github/workflows/openai-voice.yml'
+      - 'tools/tts/openai_voice.py'
+      - 'tools/tts/openai-plan.txt'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: openai-voice
+  cancel-in-progress: false
+
+jobs:
+  narrate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Narrate, verify and save in batches
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python -m pip install --quiet numpy scipy imageio-ffmpeg
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python tools/tts/openai_voice.py --publish $(cat tools/tts/openai-plan.txt)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check the app still builds
+        run: npm ci --no-audit --no-fund && npm run build
