@@ -400,8 +400,285 @@
       "lowest_score": 1.0,
       "flagged": [],
       "lowest": []
+    },
+    "cla-5-cuidado": {
+      "v": "94ca84fd9e",
+      "audio_sha256": "cabd970bc11b13fbc441bc72919e6b0ff127d2c112952eabd23e4460a10349d7",
+      "sentences": 50,
+      "retaken": 1,
+      "lowest_score": 0.982,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Una preocupación, una situación, una emoción que se repite.",
+          "heard": "una preocupación, una situación, una emoción que se retite.",
+          "score": 0.982
+        },
+        {
+          "text": "Y dite: «que pueda ser amable conmigo en este momento».",
+          "heard": "y dite que puedas ser amable conmigo en este momento.",
+          "score": 0.99
+        }
+      ]
+    },
+    "cuando-sientes-enojo": {
+      "v": "127e1ab06d",
+      "audio_sha256": "f6e6349782d9aad89f61e07e776189cb6e988cdab3e9039974b5cafc2b40fe96",
+      "sentences": 41,
+      "retaken": 1,
+      "lowest_score": 0.986,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Vamos a crear un poco de espacio entre lo que sientes y lo que vas a hacer.",
+          "heard": "Vamos a crear un poco de espacio entre lo que sientes y lo que das a hacer.",
+          "score": 0.986
+        }
+      ]
+    },
+    "cuerpo-en-paz": {
+      "v": "324538510f",
+      "audio_sha256": "18bea87018f7aef0d2d865c00f49ca9a2a275398312cb3d4836109bd72e1acaf",
+      "sentences": 57,
+      "retaken": 1,
+      "lowest_score": 0.96,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Como quien vuelve a casa después de un viaje largo.",
+          "heard": "como quien vuelve a Taza después de un viaje largo.",
+          "score": 0.96
+        },
+        {
+          "text": "Quédate respirando en ese hogar.",
+          "heard": "Quédate respirando en ese hodar.",
+          "score": 0.968
+        },
+        {
+          "text": "Esta es una práctica para hacer las paces con tu cuerpo.",
+          "heard": "Esta es una práctica para hacer las pases con tu cuerpo.",
+          "score": 0.982
+        }
+      ]
+    },
+    "despertar": {
+      "v": "c85e6efd4f",
+      "audio_sha256": "9b8e4a528413f25f84b94b9e75888ccae1330e0305f5044f382026c9ddb7e987",
+      "sentences": 36,
+      "retaken": 0,
+      "lowest_score": 0.921,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Repítela en silencio tres veces.",
+          "heard": "Repíquena en silencio tres veces.",
+          "score": 0.921
+        },
+        {
+          "text": "Siente el cuerpo recién despierto.",
+          "heard": "Siente el cuerpo creciendo despierto.",
+          "score": 0.957
+        }
+      ]
+    },
+    "dias-de-periodo": {
+      "v": "ffbf7b42b9",
+      "audio_sha256": "6059fe0d7ba1a615f0cc547c2c1f82823a3d0fadaf689e2e5900e323027653b3",
+      "sentences": 56,
+      "retaken": 8,
+      "lowest_score": 0.0,
+      "flagged": [
+        {
+          "text": "Uno",
+          "heard": "1",
+          "score": 0.0
+        },
+        {
+          "text": "dos",
+          "heard": "2",
+          "score": 0.0
+        },
+        {
+          "text": "tres",
+          "heard": "3",
+          "score": 0.0
+        },
+        {
+          "text": "cuatro.",
+          "heard": "4",
+          "score": 0.0
+        }
+      ],
+      "lowest": [
+        {
+          "text": "Inhala",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "¿Es fijo, o va y viene?",
+          "heard": "Es fijo. Oba y viene.",
+          "score": 0.923
+        },
+        {
+          "text": "Solo deja de pelearle.",
+          "heard": "Sólo deja de penearle.",
+          "score": 0.952
+        }
+      ]
+    },
+    "dp-1-soltar-el-dia": {
+      "v": "f4e807e5d3",
+      "audio_sha256": "6fbd2e614ec3892993ebca8419beddfe5151a249cbb67b78b8ec028bd7f01b0b",
+      "sentences": 58,
+      "retaken": 0,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Vamos a recorrerlo suavemente, como quien hojea un libro antes de cerrarlo.",
+          "heard": "Vamos a recorrerlo suavemente, como quien ojea un libro antes de cerrarlo.",
+          "score": 0.993
+        },
+        {
+          "text": "y deja salir el aire muy despacio, como si soplaras sobre una vela sin apagarla.",
+          "heard": "y deja salir el aire muy despacio, como si soplara sobre una vela sin apagarla.",
+          "score": 0.994
+        }
+      ]
+    },
+    "dp-2-respirar-para-dormir": {
+      "v": "c391e2d382",
+      "audio_sha256": "57d00a2200f119498638843fee4359de70369e7b08bb761864ec95fae1c1a76c",
+      "sentences": 110,
+      "retaken": 53,
+      "lowest_score": 0.0,
+      "flagged": [
+        {
+          "text": "Vamos a practicar una respiración conocida como cuatro, siete, ocho.",
+          "heard": "Vamos a practicar una respiración conocida como 4-7-8.",
+          "score": 0.847
+        },
+        {
+          "text": "dos",
+          "heard": "2",
+          "score": 0.0
+        },
+        {
+          "text": "cuatro.",
+          "heard": "4",
+          "score": 0.0
+        },
+        {
+          "text": "Diez…",
+          "heard": "D.F.",
+          "score": 0.286
+        },
+        {
+          "text": "Ocho…",
+          "heard": "8",
+          "score": 0.0
+        }
+      ],
+      "lowest": [
+        {
+          "text": "tres",
+          "heard": "Eres.",
+          "score": 0.75
+        },
+        {
+          "text": "Nueve…",
+          "heard": "Mueve.",
+          "score": 0.8
+        },
+        {
+          "text": "Retén",
+          "heard": "Bretenn",
+          "score": 0.833
+        }
+      ]
+    },
+    "dp-3-escaneo-corporal": {
+      "v": "4a5c6cb627",
+      "audio_sha256": "788f9acc107e319c6802a41015d914b320e088bcd27b1962cb2c03ad38e39c03",
+      "sentences": 67,
+      "retaken": 0,
+      "lowest_score": 0.727,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Quieto.",
+          "heard": "Cueto.",
+          "score": 0.727
+        },
+        {
+          "text": "Pesan.",
+          "heard": "Pezán",
+          "score": 0.8
+        },
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        }
+      ]
+    },
+    "dp-4-aquietar-la-mente": {
+      "v": "c3e12ade5d",
+      "audio_sha256": "db75c6a3484ea50cb829f1ed79eacf2c980cd70f5b0dbd2f75bb5060638e835d",
+      "sentences": 51,
+      "retaken": 0,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Ahora la ene.",
+          "heard": "Ahora la N.",
+          "score": 0.909
+        },
+        {
+          "text": "Ahora cierra la tapa.",
+          "heard": "Ahora, cierra la capa.",
+          "score": 0.95
+        },
+        {
+          "text": "Con la ele, imagina un limón.",
+          "heard": "Con la L, imagina un limón.",
+          "score": 0.962
+        }
+      ]
+    },
+    "dp-5-el-lago": {
+      "v": "c7a1a005ff",
+      "audio_sha256": "57cf35fbd04be3772ba0f2705579ba62fcfec9fea6914a841fd85e03520ad8e9",
+      "sentences": 47,
+      "retaken": 0,
+      "lowest_score": 0.909,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "Inala.",
+          "score": 0.909
+        },
+        {
+          "text": "Quieto como un espejo.",
+          "heard": "Cuieto como un espejo.",
+          "score": 0.952
+        },
+        {
+          "text": "No hay a dónde ir.",
+          "heard": "No hay adónde ir.",
+          "score": 0.97
+        }
+      ]
     }
   },
-  "verified": 21,
+  "verified": 31,
   "total": 61
 }
