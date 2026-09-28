@@ -302,62 +302,62 @@
   "pausa-no-hacer": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1058730,
-    "v": "115f833519"
+    "bytes": 1068738,
+    "v": "8bbfb3f252"
   },
   "pausa-paciencia": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1192170,
-    "v": "4590b15632"
+    "bytes": 1184298,
+    "v": "0438aa00e0"
   },
   "pausa-soltar": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1193034,
-    "v": "6a3247a8f8"
+    "bytes": 1187754,
+    "v": "86d118ba3d"
   },
   "pausa-todo-pasa": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1149810,
-    "v": "9ce5e4272b"
+    "bytes": 1147674,
+    "v": "69f8fb0bf2"
   },
   "poner-limites": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1044426,
-    "v": "97a4f317c5"
+    "bytes": 1063170,
+    "v": "7f34973933"
   },
   "primera-meditacion": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 822642,
-    "v": "05ad14b115"
+    "bytes": 803586,
+    "v": "33f1928777"
   },
   "relajacion-progresiva": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1433202,
-    "v": "f4aaaca502"
+    "bytes": 1424514,
+    "v": "6d05da3e79"
   },
   "respiro-para-mamas": {
     "duration": 300.0,
     "voice": "luz",
-    "bytes": 681066,
-    "v": "91d751089f"
+    "bytes": 683922,
+    "v": "83f71094c2"
   },
   "soltar-tension": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1281330,
-    "v": "097d61f3ea"
+    "bytes": 1291962,
+    "v": "e45e871ffe"
   },
   "sos-ansiedad": {
     "duration": 210.0,
     "voice": "luz",
-    "bytes": 569130,
-    "v": "c8f36956a7"
+    "bytes": 571098,
+    "v": "90577fd204"
   },
   "volver-a-dormir": {
     "duration": 600.0,
