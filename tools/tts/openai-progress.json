@@ -526,22 +526,22 @@
       ]
     },
     "dp-5-el-lago": {
-      "v": "c7a1a005ff",
-      "audio_sha256": "57cf35fbd04be3772ba0f2705579ba62fcfec9fea6914a841fd85e03520ad8e9",
+      "v": "c68046c681",
+      "audio_sha256": "6eb28e48fb445f4dd9eb47cb23b9286af8f2c7fd77dcdb8dc45d984229fb4e2f",
       "sentences": 47,
       "retaken": 0,
-      "lowest_score": 0.909,
+      "lowest_score": 0.667,
       "flagged": [],
       "lowest": [
         {
           "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
+          "heard": "y nala.",
+          "score": 0.667
         },
         {
-          "text": "Quieto como un espejo.",
-          "heard": "Cuieto como un espejo.",
-          "score": 0.952
+          "text": "Solo el agua.",
+          "heard": "Sólo en agua.",
+          "score": 0.917
         },
         {
           "text": "No hay a dónde ir.",
@@ -551,62 +551,51 @@
       ]
     },
     "energia-matinal": {
-      "v": "c39b41b91e",
-      "audio_sha256": "f3beba0e11778ae632654e64d9c5a89c23bebd27cb639c088190dbd0990a000f",
+      "v": "5e143622cb",
+      "audio_sha256": "39f72fa217a2627d32be1af313f4f39378e2d09390035dff67771772ce9b6783",
       "sentences": 46,
       "retaken": 0,
-      "lowest_score": 0.895,
+      "lowest_score": 0.941,
       "flagged": [],
       "lowest": [
         {
-          "text": "Algo que te importe.",
-          "heard": "AIBO, ¡Qué te importe!",
-          "score": 0.895
+          "text": "Y apóyalas sobre los ojos cerrados.",
+          "heard": "y apóyanos sobre los ojos cerrados.",
+          "score": 0.941
         },
         {
-          "text": "Inhala",
-          "heard": "Inala.",
-          "score": 0.909
+          "text": "Despertando cada parte del cuerpo.",
+          "heard": "desperando cada parte del cuerpo.",
+          "score": 0.985
         }
       ]
     },
     "enfoque-profundo": {
-      "v": "a04823d265",
-      "audio_sha256": "34b339f45830221abb70e0313425f370bb82d923922ca887556807ff856b7a93",
+      "v": "f7aedf38f0",
+      "audio_sha256": "630a6b70b2a11e88d1ff760cc6bdf76549be5da44ce752861a15659f15e40f30",
       "sentences": 39,
-      "retaken": 4,
-      "lowest_score": 0.852,
+      "retaken": 1,
+      "lowest_score": 1.0,
       "flagged": [],
-      "lowest": [
-        {
-          "text": "Luego vuelve a empezar desde uno.",
-          "heard": "Luego, vuelven a rezar desde 1.",
-          "score": 0.852
-        },
-        {
-          "text": "Cuenta uno en la primera exhalación, dos en la siguiente, y así hasta diez.",
-          "heard": "Cuenta 1 en la primera exhalación, 2 en la siguiente, y así hasta 10.",
-          "score": 0.899
-        },
-        {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
-        }
-      ]
+      "lowest": []
     },
     "gratitud": {
-      "v": "03702e64df",
-      "audio_sha256": "8bf6c467aa8a8e7157c6078f03862721716a1dcf8edf673291eefe11ddb5488d",
+      "v": "127159c0f2",
+      "audio_sha256": "8556350fa7ffd9da64eece4ea07a6dd0f9dc7ec51fe57ecbd7389bf89fcfa46a",
       "sentences": 47,
-      "retaken": 1,
-      "lowest_score": 0.935,
+      "retaken": 0,
+      "lowest_score": 0.95,
       "flagged": [],
       "lowest": [
         {
-          "text": "Si quieres, dile también por qué.",
-          "heard": "Si quieres, diga también por qué.",
-          "score": 0.935
+          "text": "Revívelo con detalle.",
+          "heard": "Revíveno con detalle.",
+          "score": 0.95
+        },
+        {
+          "text": "Tu corazón, que no ha dejado de latir ni un segundo.",
+          "heard": "corazón que no ha dejado de latir ni un segundo.",
+          "score": 0.967
         },
         {
           "text": "En pocas semanas, tu mente empezará a buscarlas sola.",
@@ -616,142 +605,148 @@
       ]
     },
     "historia-atacama": {
-      "v": "555d098a71",
-      "audio_sha256": "9c6309c1f57bc7cacba1165975b5f1629b945211639a52090a83f3b66df0a336",
+      "v": "0866ccffa6",
+      "audio_sha256": "ad7c4034b45a1d7673f13fbf8a04d4f2a984664a4eb3f4c855e1450fb69e2bcf",
       "sentences": 120,
       "retaken": 0,
-      "lowest_score": 0.893,
+      "lowest_score": 0.906,
       "flagged": [],
       "lowest": [
         {
-          "text": "Solo tu respiración, lenta, lenta.",
-          "heard": "Sólo tu respiración, lenta.",
-          "score": 0.893
-        },
-        {
-          "text": "Luego de un violeta suave, casi lila.",
-          "heard": "Muevo de un violeta suave, casi lila.",
-          "score": 0.943
-        },
-        {
           "text": "Son las Nubes de Magallanes.",
-          "heard": "Son las nubes de Matallanes.",
-          "score": 0.963
+          "heard": "Son las nubes de Madayanes.",
+          "score": 0.906
+        },
+        {
+          "text": "El silencio del desierto es inmenso.",
+          "heard": "El silencio del desierto inmenso.",
+          "score": 0.955
+        },
+        {
+          "text": "Te acomodas otra vez bajo la manta.",
+          "heard": "que acomodas otra vez bajo la manta.",
+          "score": 0.957
         }
       ]
     },
     "historia-biblioteca-lluvia": {
-      "v": "f63d1d35bd",
-      "audio_sha256": "8a94c1d1b8b6f558b707ef5a9f930cc6f2c6c8a6737320b70bd350bc79bcd94f",
+      "v": "7205c2fb44",
+      "audio_sha256": "418b0b26224f828ed958ce6ca04328ad882fd037241aaa9971c1700692950543",
       "sentences": 136,
-      "retaken": 0,
-      "lowest_score": 0.727,
-      "flagged": [],
-      "lowest": [
-        {
-          "text": "Lluvia.",
-          "heard": "Júvia.",
-          "score": 0.727
-        },
-        {
-          "text": "El fuego crepita.",
-          "heard": "El fuego que pita.",
-          "score": 0.848
-        },
-        {
-          "text": "Otros, de tela gastada.",
-          "heard": "Otros de Tena Dastada.",
-          "score": 0.905
-        }
-      ]
-    },
-    "historia-cabana-nieve": {
-      "v": "02f4d3921f",
-      "audio_sha256": "48737e61983ad8e81308d4e4079d105354a6df12a081a234f00fc3170ee72c30",
-      "sentences": 118,
       "retaken": 1,
-      "lowest_score": 0.75,
-      "flagged": [],
-      "lowest": [
-        {
-          "text": "uuh.",
-          "heard": "¡Uuuuh!",
-          "score": 0.75
-        },
-        {
-          "text": "Uuh…",
-          "heard": "¡Uuuh!",
-          "score": 0.857
-        },
-        {
-          "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
-        }
-      ]
-    },
-    "historia-faro": {
-      "v": "0122508969",
-      "audio_sha256": "26b8a87d400d0e1a303254cfb84b3ef8f748fcfed457ca711720ffc0f79cc782",
-      "sentences": 129,
-      "retaken": 7,
       "lowest_score": 0.667,
       "flagged": [],
       "lowest": [
         {
-          "text": "Toc.",
-          "heard": "Tok.",
+          "text": "Inhala…",
+          "heard": "y nala.",
           "score": 0.667
         },
         {
-          "text": "Y el haz empieza a girar.",
-          "heard": "y en HASS empieza a girar.",
-          "score": 0.898
+          "text": "Cada gota, un poco más lejos.",
+          "heard": "Cada bota un poco más lejos.",
+          "score": 0.958
+        },
+        {
+          "text": "Solo escuchar, como quien escucha la lluvia.",
+          "heard": "Solo escuchar, como quien escucha en la lluvia.",
+          "score": 0.966
+        }
+      ]
+    },
+    "historia-cabana-nieve": {
+      "v": "1f635de574",
+      "audio_sha256": "d897dcfacc92f4dc578acef700af5cec8db87292cefc5cba932520f08aa00ebc",
+      "sentences": 118,
+      "retaken": 3,
+      "lowest_score": 0.5,
+      "flagged": [
+        {
+          "text": "Uuh…",
+          "heard": "U.",
+          "score": 0.5
+        }
+      ],
+      "lowest": [
+        {
+          "text": "Inhala…",
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Chasquean.",
+          "heard": "ChaoScan.",
+          "score": 0.706
+        },
+        {
+          "text": "uuh.",
+          "heard": "¡Uuuh!",
+          "score": 0.857
+        }
+      ]
+    },
+    "historia-faro": {
+      "v": "6e710e5091",
+      "audio_sha256": "b81d1cd721af46db3260e66859fe4ea686c3b14a13c32a90b289efb412a32655",
+      "sentences": 129,
+      "retaken": 0,
+      "lowest_score": 0.6,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Lento.",
+          "heard": "Nendo",
+          "score": 0.6
         },
         {
           "text": "Inhala…",
-          "heard": "Inala.",
-          "score": 0.909
+          "heard": "y nala.",
+          "score": 0.667
+        },
+        {
+          "text": "Inhala, y la ola llega.",
+          "heard": "Inhala, y la hora llega.",
+          "score": 0.93
         }
       ]
     },
     "historia-tren-patagonia": {
-      "v": "a959b1c731",
-      "audio_sha256": "86c552b02e941ccfd69f7bf46be4576aead2c9ae12a161a68fd16729d44b08bb",
+      "v": "311c6d474b",
+      "audio_sha256": "1c3b51d7886534bfadc4502f0432293ede6e7411de995b771f06e4d03b3501dc",
       "sentences": 150,
       "retaken": 0,
-      "lowest_score": 0.75,
+      "lowest_score": 0.933,
       "flagged": [],
       "lowest": [
         {
-          "text": "tacatán…",
-          "heard": "Ta-ta-tan.",
-          "score": 0.75
-        },
-        {
           "text": "Tacatán…",
-          "heard": "¡Tacaten!",
-          "score": 0.857
+          "heard": "TACA TAN",
+          "score": 0.933
         },
         {
-          "text": "La miras un rato largo.",
-          "heard": "La mira hace un rato largo.",
-          "score": 0.875
+          "text": "tacatán…",
+          "heard": "TACA TAN.",
+          "score": 0.933
+        },
+        {
+          "text": "Lo sigues por el pasillo, que se mece levemente con el movimiento del tren, hasta el vagón comedor.",
+          "heard": "Lo sigues por el pasillo, que se mece levemente con el movimiento del tren, hasta el babón comedor.",
+          "score": 0.979
         }
       ]
     },
     "montana": {
-      "v": "0962ffa571",
-      "audio_sha256": "c70a0cc3fa8588913f5b00c76789ad70519fa7147616ba79bb82f2d44196c292",
+      "v": "b13a12661b",
+      "audio_sha256": "451274e1ad76555d4e99a67c12eef043b95af217d87a5d3c40d5ab472bcd098a",
       "sentences": 61,
-      "retaken": 1,
-      "lowest_score": 0.981,
+      "retaken": 3,
+      "lowest_score": 0.727,
       "flagged": [],
       "lowest": [
         {
-          "text": "Tu cabeza, su cumbre elevada.",
-          "heard": "tu cabeza sucumbre elevada.",
-          "score": 0.981
+          "text": "Tu raíz.",
+          "heard": "2. Raíz",
+          "score": 0.727
         }
       ]
     },
@@ -1117,6 +1112,6 @@
       "lowest": []
     }
   },
-  "verified": 30,
+  "verified": 40,
   "total": 61
 }

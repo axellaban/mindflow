@@ -182,62 +182,62 @@
   "dp-5-el-lago": {
     "duration": 900.0,
     "voice": "luz",
-    "bytes": 1477170,
-    "v": "c7a1a005ff"
+    "bytes": 1479066,
+    "v": "c68046c681"
   },
   "energia-matinal": {
     "duration": 360.0,
     "voice": "luz",
-    "bytes": 830850,
-    "v": "c39b41b91e"
+    "bytes": 821010,
+    "v": "5e143622cb"
   },
   "enfoque-profundo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1129602,
-    "v": "a04823d265"
+    "bytes": 1122138,
+    "v": "f7aedf38f0"
   },
   "gratitud": {
     "duration": 480.0,
     "voice": "luz",
-    "bytes": 1083018,
-    "v": "03702e64df"
+    "bytes": 1076154,
+    "v": "127159c0f2"
   },
   "historia-atacama": {
-    "duration": 719.82,
+    "duration": 716.48,
     "voice": "luz",
-    "bytes": 2550426,
-    "v": "555d098a71"
+    "bytes": 2530866,
+    "v": "0866ccffa6"
   },
   "historia-biblioteca-lluvia": {
-    "duration": 763.79,
+    "duration": 757.82,
     "voice": "luz",
-    "bytes": 2699226,
-    "v": "f63d1d35bd"
+    "bytes": 2669562,
+    "v": "7205c2fb44"
   },
   "historia-cabana-nieve": {
-    "duration": 665.74,
+    "duration": 667.48,
     "voice": "luz",
-    "bytes": 2299386,
-    "v": "02f4d3921f"
+    "bytes": 2299194,
+    "v": "1f635de574"
   },
   "historia-faro": {
-    "duration": 750.47,
+    "duration": 742.99,
     "voice": "luz",
-    "bytes": 2606802,
-    "v": "0122508969"
+    "bytes": 2582322,
+    "v": "6e710e5091"
   },
   "historia-tren-patagonia": {
-    "duration": 931.48,
+    "duration": 915.17,
     "voice": "luz",
-    "bytes": 3266322,
-    "v": "a959b1c731"
+    "bytes": 3244338,
+    "v": "311c6d474b"
   },
   "montana": {
     "duration": 720.0,
     "voice": "luz",
-    "bytes": 1438674,
-    "v": "0962ffa571"
+    "bytes": 1446930,
+    "v": "b13a12661b"
   },
   "nsdr": {
     "duration": 1200.0,
