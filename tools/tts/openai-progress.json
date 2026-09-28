@@ -907,8 +907,161 @@
           "score": 0.9
         }
       ]
+    },
+    "pausa-3-minutos": {
+      "v": "b58a27ae43",
+      "audio_sha256": "66d4b9b9880daa951195dff8432ef1de9c030adf3dcc2fbf37466c3b3aabebdb",
+      "sentences": 24,
+      "retaken": 0,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-aceptacion": {
+      "v": "97916c7475",
+      "audio_sha256": "422308d5489674bf49811e60200800a9a345d30957eed2496b91d3f36a2ca764",
+      "sentences": 47,
+      "retaken": 1,
+      "lowest_score": 0.97,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "A este momento, exactamente como es.",
+          "heard": "este momento, exactamente como es.",
+          "score": 0.97
+        }
+      ]
+    },
+    "pausa-amabilidad": {
+      "v": "a921c4f0fd",
+      "audio_sha256": "be6663cb76faa9d8ce4772605a66162cb261894494a13c5f45a5dd34d4fbe741",
+      "sentences": 46,
+      "retaken": 1,
+      "lowest_score": 0.889,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Algo simple y concreto.",
+          "heard": "Hayvo simple y concreto.",
+          "score": 0.889
+        }
+      ]
+    },
+    "pausa-aqui-y-ahora": {
+      "v": "c34224dd60",
+      "audio_sha256": "c2c4778f098c617ecd62b539ce86a3e65e1de0390d08c122511616837a01a123",
+      "sentences": 50,
+      "retaken": 1,
+      "lowest_score": 0.957,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy vamos a volver a casa: al aquí y al ahora.",
+          "heard": "Hoy vamos a volver a casa, a la aquí y a la ahora.",
+          "score": 0.957
+        }
+      ]
+    },
+    "pausa-bambu": {
+      "v": "a17f13b76c",
+      "audio_sha256": "39a0663eef7322ab4b1aff772ce499ee87bc989136fddade203e400f41eea7f9",
+      "sentences": 43,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-confianza": {
+      "v": "2ec4be4961",
+      "audio_sha256": "5e886bf0559372a9b1bf3a948083b3df8d679568dd28e64196c41fd0f0e0384c",
+      "sentences": 41,
+      "retaken": 2,
+      "lowest_score": 0.8,
+      "flagged": [
+        {
+          "text": "Los pulmones respiran unas veinte mil.",
+          "heard": "Los pulmones respiran unas 20,000.",
+          "score": 0.8
+        }
+      ],
+      "lowest": []
+    },
+    "pausa-empezar-de-nuevo": {
+      "v": "55c112dcf9",
+      "audio_sha256": "caa5a99457b92a633439f537645a5861902c3cbbc19ce9886e269bbd8c643064",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 0.939,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio, con amabilidad: «empiezo de nuevo».",
+          "heard": "Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio con amabilidad.",
+          "score": 0.939
+        }
+      ]
+    },
+    "pausa-lo-pequeno": {
+      "v": "cecca45130",
+      "audio_sha256": "8a9f5139a51d6ee3c13aa47ad825e3b87c4a1bc84d021d00e13fe0bcdab654bf",
+      "sentences": 49,
+      "retaken": 1,
+      "lowest_score": 0.737,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "¿Qué veías?",
+          "heard": "¡Qué bellas!",
+          "score": 0.737
+        },
+        {
+          "text": "Nota dónde la sientes.",
+          "heard": "Nota a dónde la sientes.",
+          "score": 0.955
+        },
+        {
+          "text": "Revívelo con todos los sentidos.",
+          "heard": "Revírelo con todos los sentidos.",
+          "score": 0.968
+        }
+      ]
+    },
+    "pausa-mente-de-principiante": {
+      "v": "2ed2998d73",
+      "audio_sha256": "d0536f81552141e68b27d0e1051588cb9a941774a47059755dd6549b9c06b077",
+      "sentences": 44,
+      "retaken": 1,
+      "lowest_score": 0.8,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "¿Tibia?",
+          "heard": "Dibia.",
+          "score": 0.8
+        }
+      ]
+    },
+    "pausa-no-hacer": {
+      "v": "115f833519",
+      "audio_sha256": "4bf996e5a3544928874a2661c847f60b26de0a5aa076c73440835babde32242c",
+      "sentences": 38,
+      "retaken": 1,
+      "lowest_score": 0.881,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Hoy vamos a practicar algo que suele costarnos mucho: no hacer nada.",
+          "heard": "Hoy vamos a practicar algo que suele costarnos mucho.",
+          "score": 0.881
+        },
+        {
+          "text": "Intenta regalarte hoy cinco minutos de no hacer nada.",
+          "heard": "Intenta regalarte hoy 5 minutos de no hacer nada.",
+          "score": 0.94
+        }
+      ]
     }
   },
-  "verified": 41,
+  "verified": 51,
   "total": 61
 }

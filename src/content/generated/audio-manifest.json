@@ -248,62 +248,62 @@
   "pausa-3-minutos": {
     "duration": 210.0,
     "voice": "luz",
-    "bytes": 481114,
-    "v": "19205b1d4e"
+    "bytes": 495762,
+    "v": "b58a27ae43"
   },
   "pausa-aceptacion": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1123892,
-    "v": "c06f1d7fbc"
+    "bytes": 1169346,
+    "v": "97916c7475"
   },
   "pausa-amabilidad": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1118004,
-    "v": "de76040c0c"
+    "bytes": 1152450,
+    "v": "a921c4f0fd"
   },
   "pausa-aqui-y-ahora": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1108162,
-    "v": "bddf8df5a9"
+    "bytes": 1147866,
+    "v": "c34224dd60"
   },
   "pausa-bambu": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1085031,
-    "v": "e156a9061e"
+    "bytes": 1122042,
+    "v": "a17f13b76c"
   },
   "pausa-confianza": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1072622,
-    "v": "662774f214"
+    "bytes": 1116978,
+    "v": "2ec4be4961"
   },
   "pausa-empezar-de-nuevo": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1049895,
-    "v": "2c76c4bc57"
+    "bytes": 1076730,
+    "v": "55c112dcf9"
   },
   "pausa-lo-pequeno": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1102482,
-    "v": "a4c76a2923"
+    "bytes": 1149306,
+    "v": "cecca45130"
   },
   "pausa-mente-de-principiante": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1130196,
-    "v": "73f0499e2e"
+    "bytes": 1168890,
+    "v": "2ed2998d73"
   },
   "pausa-no-hacer": {
     "duration": 600.0,
     "voice": "luz",
-    "bytes": 1021698,
-    "v": "f8c99cae22"
+    "bytes": 1058730,
+    "v": "115f833519"
   },
   "pausa-paciencia": {
     "duration": 600.0,
