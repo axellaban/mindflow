@@ -751,33 +751,33 @@
       ]
     },
     "nsdr": {
-      "v": "c63d60d89e",
-      "audio_sha256": "0f892f739425fd2c838ccca978f1749db03ce41435682ee8174941f0f687b47e",
+      "v": "ede3d5e059",
+      "audio_sha256": "0f02e78ac0140f1fe18becfb4466eb7a1d678ad1c899f55c125ad67997f446e9",
       "sentences": 144,
       "retaken": 0,
-      "lowest_score": 0.857,
+      "lowest_score": 0.8,
       "flagged": [],
       "lowest": [
         {
-          "text": "La nuca.",
-          "heard": "la noca.",
-          "score": 0.857
+          "text": "Calor.",
+          "heard": "Talor",
+          "score": 0.8
         },
         {
-          "text": "Si pierdes la cuenta, vuelve a empezar desde veintisiete.",
-          "heard": "Si pierdes la cuenta, vuelve a empezar desde 27.",
-          "score": 0.871
+          "text": "Inhala…",
+          "heard": "Innala.",
+          "score": 0.833
         },
         {
-          "text": "Solo toca cada punto con la atención, y sigue.",
-          "heard": "Sólo toca cada punto con la atención.",
-          "score": 0.9
+          "text": "La ceja derecha.",
+          "heard": "la sella derecha.",
+          "score": 0.839
         }
       ]
     },
     "pausa-3-minutos": {
-      "v": "b58a27ae43",
-      "audio_sha256": "66d4b9b9880daa951195dff8432ef1de9c030adf3dcc2fbf37466c3b3aabebdb",
+      "v": "7b1a908256",
+      "audio_sha256": "3791470ae25b2d00bb7c227ddbecb1215f5582878beb850754b328960b3d1132",
       "sentences": 24,
       "retaken": 0,
       "lowest_score": 1.0,
@@ -785,126 +785,109 @@
       "lowest": []
     },
     "pausa-aceptacion": {
-      "v": "97916c7475",
-      "audio_sha256": "422308d5489674bf49811e60200800a9a345d30957eed2496b91d3f36a2ca764",
+      "v": "e7ed9a3617",
+      "audio_sha256": "2b639d218a7849fe4cbd98408b1018de90c22336ffe20922390d6e22a8c5e964",
       "sentences": 47,
       "retaken": 1,
-      "lowest_score": 0.97,
+      "lowest_score": 0.96,
       "flagged": [],
       "lowest": [
         {
-          "text": "A este momento, exactamente como es.",
-          "heard": "este momento, exactamente como es.",
-          "score": 0.97
+          "text": "Solo sonidos.",
+          "heard": "Sólos sonidos.",
+          "score": 0.96
         }
       ]
     },
     "pausa-amabilidad": {
-      "v": "a921c4f0fd",
-      "audio_sha256": "be6663cb76faa9d8ce4772605a66162cb261894494a13c5f45a5dd34d4fbe741",
+      "v": "9cd014fc76",
+      "audio_sha256": "966b345387b8985cfbbbcda1d27590a2fe968965687e84d53d86cacfb85d9771",
       "sentences": 46,
-      "retaken": 1,
-      "lowest_score": 0.889,
-      "flagged": [],
-      "lowest": [
-        {
-          "text": "Algo simple y concreto.",
-          "heard": "Hayvo simple y concreto.",
-          "score": 0.889
-        }
-      ]
-    },
-    "pausa-aqui-y-ahora": {
-      "v": "c34224dd60",
-      "audio_sha256": "c2c4778f098c617ecd62b539ce86a3e65e1de0390d08c122511616837a01a123",
-      "sentences": 50,
-      "retaken": 1,
-      "lowest_score": 0.957,
-      "flagged": [],
-      "lowest": [
-        {
-          "text": "Hoy vamos a volver a casa: al aquí y al ahora.",
-          "heard": "Hoy vamos a volver a casa, a la aquí y a la ahora.",
-          "score": 0.957
-        }
-      ]
-    },
-    "pausa-bambu": {
-      "v": "a17f13b76c",
-      "audio_sha256": "39a0663eef7322ab4b1aff772ce499ee87bc989136fddade203e400f41eea7f9",
-      "sentences": 43,
       "retaken": 1,
       "lowest_score": 1.0,
       "flagged": [],
       "lowest": []
     },
-    "pausa-confianza": {
-      "v": "2ec4be4961",
-      "audio_sha256": "5e886bf0559372a9b1bf3a948083b3df8d679568dd28e64196c41fd0f0e0384c",
-      "sentences": 41,
-      "retaken": 2,
-      "lowest_score": 0.8,
-      "flagged": [
-        {
-          "text": "Los pulmones respiran unas veinte mil.",
-          "heard": "Los pulmones respiran unas 20,000.",
-          "score": 0.8
-        }
-      ],
-      "lowest": []
-    },
-    "pausa-empezar-de-nuevo": {
-      "v": "55c112dcf9",
-      "audio_sha256": "caa5a99457b92a633439f537645a5861902c3cbbc19ce9886e269bbd8c643064",
-      "sentences": 39,
+    "pausa-aqui-y-ahora": {
+      "v": "9c93ce9ebe",
+      "audio_sha256": "e175469772c67377474e4a574913031ed1ca6e6b9a5eca39888e2dcfdea2d882",
+      "sentences": 50,
       "retaken": 1,
-      "lowest_score": 0.939,
+      "lowest_score": 0.966,
       "flagged": [],
       "lowest": [
         {
-          "text": "Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio, con amabilidad: «empiezo de nuevo».",
-          "heard": "Durante los próximos minutos, cada vez que notes que la mente se fue, en lugar de criticarte, vas a decirte en silencio con amabilidad.",
-          "score": 0.939
+          "text": "Hoy vamos a volver a casa: al aquí y al ahora.",
+          "heard": "Hoy vamos a volver a casa, al aquí y a la hora.",
+          "score": 0.966
+        },
+        {
+          "text": "¿Te pasó alguna vez llegar a un lugar sin recordar el camino?",
+          "heard": "¿Qué pasó alguna vez? ¿Llegar a un lugar sin recordar el camino?",
+          "score": 0.973
+        }
+      ]
+    },
+    "pausa-bambu": {
+      "v": "b2ee415204",
+      "audio_sha256": "1d51e22ba408ec77c4431c999f509638a98a9e250ed38d119f66eeefe650d3fd",
+      "sentences": 43,
+      "retaken": 1,
+      "lowest_score": 0.974,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Balancéate muy levemente, hacia un lado y hacia el otro, como un bambú con la brisa.",
+          "heard": "Balancea que muy levemente, hacia un lado y hacia el otro, como un bambú con la brisa.",
+          "score": 0.974
+        }
+      ]
+    },
+    "pausa-confianza": {
+      "v": "8d0ce568a0",
+      "audio_sha256": "b905c7f5e6a67fd3abf3d3b29dbac1b7845f9012e0ea83023d8b76a1472ba533",
+      "sentences": 41,
+      "retaken": 1,
+      "lowest_score": 1.0,
+      "flagged": [],
+      "lowest": []
+    },
+    "pausa-empezar-de-nuevo": {
+      "v": "a5edc5ac35",
+      "audio_sha256": "38ccb914e072cd9430621bad788712e6ae189edccea1c2c412d034781e6a7e49",
+      "sentences": 39,
+      "retaken": 1,
+      "lowest_score": 0.97,
+      "flagged": [],
+      "lowest": [
+        {
+          "text": "Y esta exhalación deja ir la anterior por completo.",
+          "heard": "y esta exanación deja ir la anterior por completo.",
+          "score": 0.97
         }
       ]
     },
     "pausa-lo-pequeno": {
-      "v": "cecca45130",
-      "audio_sha256": "8a9f5139a51d6ee3c13aa47ad825e3b87c4a1bc84d021d00e13fe0bcdab654bf",
+      "v": "1585f0241c",
+      "audio_sha256": "7d85e4de1efcb2dcd4af1727c74e102ad99ee2fb082512cb510e41e769ed4931",
       "sentences": 49,
       "retaken": 1,
-      "lowest_score": 0.737,
+      "lowest_score": 1.0,
       "flagged": [],
-      "lowest": [
-        {
-          "text": "¿Qué veías?",
-          "heard": "¡Qué bellas!",
-          "score": 0.737
-        },
-        {
-          "text": "Nota dónde la sientes.",
-          "heard": "Nota a dónde la sientes.",
-          "score": 0.955
-        },
-        {
-          "text": "Revívelo con todos los sentidos.",
-          "heard": "Revírelo con todos los sentidos.",
-          "score": 0.968
-        }
-      ]
+      "lowest": []
     },
     "pausa-mente-de-principiante": {
-      "v": "2ed2998d73",
-      "audio_sha256": "d0536f81552141e68b27d0e1051588cb9a941774a47059755dd6549b9c06b077",
+      "v": "cfe04db894",
+      "audio_sha256": "c7514da9a22c224b5611d3bdf79b56b8de6c529736b13e77c42496d08e6d234e",
       "sentences": 44,
       "retaken": 1,
-      "lowest_score": 0.8,
+      "lowest_score": 0.981,
       "flagged": [],
       "lowest": [
         {
-          "text": "¿Tibia?",
-          "heard": "Dibia.",
-          "score": 0.8
+          "text": "Escúchalos como si fueran música de un lugar desconocido.",
+          "heard": "Escúchanos como si fueran música de un lugar desconocido.",
+          "score": 0.981
         }
       ]
     },
@@ -1112,6 +1095,6 @@
       "lowest": []
     }
   },
-  "verified": 40,
+  "verified": 50,
   "total": 61
 }
