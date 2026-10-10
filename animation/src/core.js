@@ -1,6 +1,6 @@
 // core.js: constants, helpers, paper, paint wrapper, compositing and render hooks.
 // Length and rhythm come from PROJECT in config.js.
-const W = 1920, H = 1080;
+const W = PROJECT.width || 1920, H = PROJECT.height || 1080;   // reels: width 1080, height 1920 (see reel.html)
 const BPM = PROJECT.bpm, BEAT = 60 / BPM, OFF = PROJECT.offset || 0, BOIL = 12, DUR = PROJECT.duration;
 const TAU = Math.PI * 2;
 const PAL = {
