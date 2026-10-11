@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reel 30 días: inserts (9:16)</title>
+<style>
+  html, body { margin: 0; background: #1b1820; color: #eee; font: 13px system-ui, sans-serif; }
+  main { padding: 12px; display: grid; gap: 8px; justify-items: center; }
+  #out { height: min(82vh, 1920px); aspect-ratio: 9 / 16; width: auto; background: #F3EBDC; }
+  .p5Canvas { display: none !important; }
+  .bar { display: flex; gap: 10px; align-items: center; width: min(100%, 640px); }
+  #scrub { flex: 1; }
+  #tt { font-variant-numeric: tabular-nums; min-width: 190px; }
+</style>
+<script src="node_modules/p5/lib/p5.min.js"></script>
+<script src="node_modules/p5.brush/dist/p5.brush.js"></script>
+</head>
+<body>
+<main>
+  <canvas id="out" width="1080" height="1920"></canvas>
+  <div class="bar"><input id="scrub" type="range" min="0" max="12.5" step="0.0417" value="0"><span id="tt">loading…</span></div>
+</main>
+<!-- engine (vertical config) -->
+<script src="src/config.reel.js"></script>
+<script>PROJECT.duration = 12.5;   // three inserts back to back: 0–4, 4–8, 8–12.5</script>
+<script src="src/core.js"></script>
+<script src="src/clawd.js"></script>
+<script src="src/timeline.js"></script>
+<!-- the watercolour inserts for Eli's "Mindfulness 30 días" reel (see STORYBOARD_30DIAS.md) -->
+<script src="src/scenes/reel_30dias.js"></script>
+</body>
+</html>
