@@ -1,0 +1,5 @@
+# Eli's footage stays out of git (personal video); renders too
+reels/*/assets/eli/
+reels/*/renders/
+renders/
+*.mp4.tmp

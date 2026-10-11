@@ -103,6 +103,16 @@ Basado en [HyperFrames](https://github.com/heygen-com/hyperframes) de HeyGen, pe
   npm run render   # Compila y renderiza la composición a MP4
   ```
 
+### Reels con Brote (flujo repetible)
+Para cada reel de Eli hay un flujo armado de punta a punta, que Claude Code sigue con la skill `reel-brote`
+(`.claude/skills/reel-brote/SKILL.md`): mirar el video, proponer 3 opciones, storyboard, inserts de acuarela con Brote en
+`animation/`, montaje en `hyperframes/reels/<reel>/` y render final normalizado para Instagram.
+- `tools/reel/inspect.sh <video> <carpeta>`: formato, hoja de cuadros y los subtítulos quemados con su tiempo.
+- `tools/reel/cut-clips.sh`: corta los cuadros de la animación en clips a 30 fps.
+- `tools/reel/render.sh hyperframes/reels/<reel>`: valida, renderiza, normaliza el audio a −14 LUFS y deja una copia de menos de 30 MB.
+- Primer reel: *Mindfulness 30 días* (`animation/STORYBOARD_30DIAS.md`, `hyperframes/reels/mindfulness-30-dias/`).
+  El video de Eli no se sube al repo.
+
 ### ¿Cómo se combinan para crear contenido?
 - **`animation/`** genera los clips y secuencias ilustradas de meditación, personajes (Brote) y metáforas visuales (respiración, calma, naturaleza).
 - **`hyperframes/`** estructura el armado final del reel: overlays de texto, títulos de meditaciones de CalmabyEli, portadas, transiciones dinámicas y llamados a la acción para descargar la PWA o reservar sesiones 1:1 con Eli.
