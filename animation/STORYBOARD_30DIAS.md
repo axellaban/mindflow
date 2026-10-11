@@ -16,13 +16,13 @@ Motif: la órbita. Las tareas giran alrededor de Brote (apuro) → se frenan y s
 Color: la mancha detrás de Brote pasa de durazno/coral (apuro) a turquesa (calma) y a menta luminosa (florece).
 Brote: relieved → peek → nervous → dizzy | dizzy → ojos cerrados (respira) → relieved | calma → hopeful (mira su flor).
 
-## Dónde va cada inserto en el video de Eli (a confirmar con el video en alta)
+## Dónde va cada inserto en el video de Eli (montaje en `hyperframes/index.html`)
 
-| Clip | Duración | Sobre la frase | Aprox. en el video actual |
-|---|---|---|---|
-| 1 · El apuro | 4,0 s | "…encontrás un rato para desconectar, te cuesta. Sentís culpa por no estar haciendo algo productivo" | ~6,5–10,5 s |
-| 2 · La pausa | 4,0 s | "…necesitás aprender a hacer una pausa entre todo lo que ya hacés" | ~12,5–16,5 s |
-| 3 · 30 días | 4,5 s | "…Mindfulness 30 días, un mes para practicar juntas" | ~17,5–22 s |
+| Clip | En el video | Sobre la frase |
+|---|---|---|
+| 1 · El apuro | 6,6–10,6 s | "te cuesta desconectar o sentir culpa por no estar haciendo algo productivo" |
+| 2 · La pausa | 13,0–17,0 s | "necesitás aprender a hacer una pausa entre todo lo que ya hacés" (Brote cierra los ojos en "pausa") |
+| 3 · 30 días | 19,0–23,5 s | "durante un mes vamos a practicar juntas cómo incorporar meditación a tu vida diaria" (florece en "meditación") |
 
 Las transiciones video ↔ acuarela se hacen en el montaje (HyperFrames), así que cada clip abre y cierra con la escena llena
 (sin cortinas propias) y deja ~0,3 s de margen para el cruce.
@@ -52,12 +52,13 @@ Las transiciones video ↔ acuarela se hacen en el montaje (HyperFrames), así q
           3.6–4.5  Brote mira su flor, ilusionada; brillo cálido; hold para que se lea
 ```
 
-## Montaje (cuando llegue el video en alta, en `hyperframes/`)
+## Montaje (`hyperframes/index.html`)
 
-1. Video de Eli sin subtítulos ni stickers, 1080×1920, de fondo durante todo el reel; su audio corre sin cortes.
-2. Los 3 inserts se superponen encima de Eli en los momentos de la tabla, con una transición de entrada y otra de salida
-   (~0,3 s, cortina de pincel o fundido) para pasar del video a la acuarela.
-3. Encima de todo: subtítulos con la tipografía de la app (Jost + Cormorant Garamond), sin el error de tildes, y fuera de
-   la zona de la UI de Instagram.
-4. Tarjeta del programa ("Mindfulness 30 días · 1 de noviembre"), las tres características en orden y el cierre con el
-   CTA bien visible: "Escribime NOVIEMBRE por DM".
+1. Base: la edición de Eli (720×1280, con sus subtítulos y stickers) escalada a 1080×1920; su audio corre sin cortes.
+   El archivo va en `hyperframes/assets/eli/reel-30dias-base.mp4` y queda fuera de git.
+2. Los 3 inserts abren y cierran con un iris centrado en Brote (0,45 s / 0,4 s).
+3. Mientras está Brote, subtítulos propios (Jost, tinta sobre el piso crema) con lo que dice Eli, porque los de ella quedan tapados.
+4. Cierre de 3 s después de que termina de hablar: Brote florecida, "Mindfulness 30 días", "Empieza el 1 de noviembre" y
+   "Escribime por DM la palabra NOVIEMBRE". No va encima de Eli porque sus subtítulos quemados ocupan esa zona.
+
+Render: `HYPERFRAMES_BROWSER_PATH=<headless_shell> npx hyperframes@0.8.145 render . -o renders/reel-mindfulness-30-dias.mp4`

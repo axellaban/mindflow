@@ -1,53 +1,94 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!-- Reel "Mindfulness 30 días" (CalmabyEli): Eli's edited video + Brote's watercolour inserts + closing card.
+         Inserts: animation/STORYBOARD_30DIAS.md. Times below are in seconds of Eli's video. -->
+    <script src="assets/vendor/gsap-3.14.2.min.js"></script>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        width: 1920px;
-        height: 1080px;
-        overflow: hidden;
-        background: #0a0a0a;
-      }
-      #root {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-      }
-      #title {
-        color: #f4f4f5;
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-      }
+      @font-face { font-family: "Jost"; src: url("assets/fonts/jost-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+      @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/cormorant-garamond-latin-wght-italic.woff2") format("woff2"); font-weight: 300 700; font-style: italic; }
+      :root { --ink: #2b2233; --ink-soft: #245c63; --coral: #ff8f7c; --cream: #fff5e2; --paper: #f3ebdc; --mint: #c3e6df; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: "Jost", sans-serif; }
+      .full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .insert { clip-path: circle(0% at 50% 50%); }
+      /* captions over the inserts: ink on the cream floor of the painting, below Brote's cushion */
+      .cap { position: absolute; left: 80px; width: 920px; top: 1345px; text-align: center; color: var(--ink);
+             font-weight: 600; font-size: 72px; line-height: 1.12; letter-spacing: -0.01em; }
+      .cap.low { top: 1480px; }   /* insert 3: below the ring of sprouts */
+      .cap b { color: #e0604c; font-weight: 700; }
+      /* closing card */
+      #end { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: var(--paper); clip-path: circle(0% at 50% 40%); }
+      #end .badge { position: absolute; left: 270px; top: 330px; width: 540px; height: 540px; border-radius: 50%; overflow: hidden;
+                    box-shadow: 0 0 0 10px var(--cream), 0 0 0 13px #94cdc5; }
+      #end .badge img { width: 100%; height: 100%; display: block; }
+      #end .kicker { position: absolute; left: 0; width: 1080px; top: 960px; text-align: center; font-family: "Cormorant Garamond", serif;
+                     font-style: italic; font-weight: 500; font-size: 92px; color: var(--ink-soft); }
+      #end .date { position: absolute; left: 0; width: 1080px; top: 1085px; text-align: center; font-weight: 500; font-size: 44px;
+                   letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); opacity: 0.75; }
+      #end .cta { position: absolute; left: 0; width: 1080px; top: 1220px; text-align: center; font-weight: 500; font-size: 60px; color: var(--ink); line-height: 1.35; }
+      #end .word { display: inline-block; margin-top: 14px; padding: 10px 44px 14px; border-radius: 999px; background: var(--coral); color: #fff;
+                   font-weight: 700; font-size: 86px; letter-spacing: 0.04em; }
+      #end .handle { position: absolute; left: 0; width: 1080px; top: 1560px; text-align: center; font-weight: 500; font-size: 40px; color: var(--ink-soft); }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="10"
-      data-width="1920"
-      data-height="1080"
-    >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="43.4" data-width="1080" data-height="1920">
+      <!-- Eli (edited, 720×1280 upscaled to 1080×1920); her voice runs under everything -->
+      <video id="eli" class="clip full" src="assets/eli/reel-30dias-base.mp4" data-start="0" data-duration="40.63" data-track-index="0" data-has-audio="true"></video>
+
+      <!-- Brote's inserts -->
+      <video id="ins1" class="clip full insert" src="assets/brote/insert-1-apuro.mp4" data-start="6.6" data-duration="4" data-track-index="1" muted></video>
+      <video id="ins2" class="clip full insert" src="assets/brote/insert-2-pausa.mp4" data-start="13.0" data-duration="4" data-track-index="1" muted></video>
+      <video id="ins3" class="clip full insert" src="assets/brote/insert-3-30dias.mp4" data-start="19.0" data-duration="4.5" data-track-index="1" muted></video>
+
+      <!-- what Eli says while Brote is on screen (her own captions are hidden under the inserts) -->
+      <div id="cap-01" class="clip cap" data-start="6.6" data-duration="1.15" data-track-index="2">te cuesta desconectar</div>
+      <div id="cap-02" class="clip cap" data-start="7.75" data-duration="1.0" data-track-index="2">o sentir <b>culpa</b></div>
+      <div id="cap-03" class="clip cap" data-start="8.75" data-duration="1.75" data-track-index="2">por no estar haciendo algo productivo</div>
+      <div id="cap-04" class="clip cap" data-start="13.0" data-duration="0.7" data-track-index="2">necesitás aprender</div>
+      <div id="cap-05" class="clip cap" data-start="13.7" data-duration="0.9" data-track-index="2">a hacer una <b>pausa</b></div>
+      <div id="cap-06" class="clip cap" data-start="14.6" data-duration="1.45" data-track-index="2">entre todo lo que ya hacés</div>
+      <div id="cap-07" class="clip cap" data-start="16.15" data-duration="0.85" data-track-index="2">por eso creé…</div>
+      <div id="cap-08" class="clip cap low" data-start="19.15" data-duration="0.8" data-track-index="2">durante un mes</div>
+      <div id="cap-09" class="clip cap low" data-start="19.95" data-duration="1.0" data-track-index="2">vamos a practicar <b>juntas</b></div>
+      <div id="cap-10" class="clip cap low" data-start="20.95" data-duration="1.0" data-track-index="2">cómo incorporar</div>
+      <div id="cap-11" class="clip cap low" data-start="21.95" data-duration="1.55" data-track-index="2">meditación a tu vida diaria</div>
+
+      <!-- closing card -->
+      <div id="end" class="clip" data-start="40.3" data-duration="3.1" data-track-index="3">
+        <div class="badge"><img src="assets/brote/brote-flor.jpg" alt="" /></div>
+        <div class="kicker">Mindfulness 30 días</div>
+        <div class="date">Empieza el 1 de noviembre</div>
+        <div class="cta">Escribime por DM la palabra<br /><span class="word">NOVIEMBRE</span></div>
+        <div class="handle">@mindfulnessbyeli</div>
+      </div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, 0);
+      // inserts open and close as an iris centred on Brote
+      for (const [id, start, dur] of [["#ins1", 6.6, 4], ["#ins2", 13.0, 4], ["#ins3", 19.0, 4.5]]) {
+        tl.fromTo(id, { clipPath: "circle(0% at 50% 52%)" }, { clipPath: "circle(80% at 50% 52%)", duration: 0.45, ease: "power2.out" }, start);
+        tl.to(id, { clipPath: "circle(0% at 50% 52%)", duration: 0.4, ease: "power2.in" }, start + dur - 0.4);
+      }
+      // captions rise in softly
+      document.querySelectorAll(".cap").forEach((el) => {
+        const s = parseFloat(el.dataset.start);
+        tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.18, ease: "power1.out" }, s);
+      });
+      // closing card
+      tl.fromTo("#end", { clipPath: "circle(0% at 50% 40%)" }, { clipPath: "circle(85% at 50% 40%)", duration: 0.6, ease: "power2.out" }, 40.3);
+      tl.fromTo("#end .badge", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.6)" }, 40.45);
+      tl.fromTo("#end .kicker", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 40.7);
+      tl.fromTo("#end .date", { opacity: 0 }, { opacity: 0.75, duration: 0.4 }, 40.9);
+      tl.fromTo("#end .cta", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 41.1);
+      tl.fromTo("#end .word", { scale: 0.6 }, { scale: 1, duration: 0.5, ease: "back.out(2)" }, 41.2);
+      tl.to("#end .word", { scale: 1.05, duration: 0.5, yoyo: true, repeat: 2, ease: "sine.inOut" }, 41.8);
+      tl.fromTo("#end .handle", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 41.5);
+      window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
       tl.seek(0);
     </script>
