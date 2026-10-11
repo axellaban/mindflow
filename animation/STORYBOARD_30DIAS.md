@@ -3,7 +3,7 @@
 El reel es Eli hablando a cámara (40 s, 9:16). Entre sus frases cortamos a tres escenas ilustradas, de 4 a 4,5 s cada una,
 mientras su voz sigue sonando. Las escenas no llevan texto: los subtítulos del montaje (HyperFrames) siguen por encima.
 
-- Render: `reel_30dias.html` (12,5 s = las tres escenas seguidas). Se cortan en 3 clips con `./split_30dias.sh` (quedan en `hyperframes/assets/brote/`).
+- Render: `reel_30dias.html` (12,5 s = las tres escenas seguidas). Se cortan en 3 clips con `./split_30dias.sh` (quedan en `hyperframes/reels/mindfulness-30-dias/assets/brote/`).
 - Dibujos a 12 por segundo ("en dos", como la animación hecha a mano), exportados a 30 fps para empatar con el video de Eli.
 - Safe zone de Reels: la acción vive entre y≈450 y y≈1400; debajo quedan los subtítulos y la UI de Instagram.
 - Paleta de CalmabyEli: coral (#FF8F7C, apuro), turquesa/salvia (#94CDC5, #6AA7A1, calma), crema y papel. Brote en salvia.
@@ -16,7 +16,7 @@ Motif: la órbita. Las tareas giran alrededor de Brote (apuro) → se frenan y s
 Color: la mancha detrás de Brote pasa de durazno/coral (apuro) a turquesa (calma) y a menta luminosa (florece).
 Brote: relieved → peek → nervous → dizzy | dizzy → ojos cerrados (respira) → relieved | calma → hopeful (mira su flor).
 
-## Dónde va cada inserto en el video de Eli (montaje en `hyperframes/index.html`)
+## Dónde va cada inserto en el video de Eli (montaje en `hyperframes/reels/mindfulness-30-dias/index.html`)
 
 | Clip | En el video | Sobre la frase |
 |---|---|---|
@@ -52,10 +52,10 @@ Las transiciones video ↔ acuarela se hacen en el montaje (HyperFrames), así q
           3.6–4.5  Brote mira su flor, ilusionada; brillo cálido; hold para que se lea
 ```
 
-## Montaje (`hyperframes/index.html`)
+## Montaje (`hyperframes/reels/mindfulness-30-dias/index.html`)
 
 1. Base: la edición de Eli (720×1280, con sus subtítulos y stickers) escalada a 1080×1920; su audio corre sin cortes.
-   El archivo va en `hyperframes/assets/eli/reel-30dias-base.mp4` y queda fuera de git.
+   El archivo va en `hyperframes/reels/mindfulness-30-dias/assets/eli/reel-30dias-base.mp4` y queda fuera de git.
 2. Gancho (0,15–2,65 s): Brote, ya con las tareas girando, en una burbuja redonda junto a la pregunta inicial de Eli
    (shot `hook` de `reel_30dias.js`, 12,5–15 s, recortado en círculo por `split_30dias.sh`).
 3. Transiciones distintas por clip: iris sobre Brote (apuro), relleno que sube como una inhalación (pausa), iris sobre la flor (30 días).
@@ -65,4 +65,4 @@ Las transiciones video ↔ acuarela se hacen en el montaje (HyperFrames), así q
 6. Cierre de 2,35 s con una campana suave: Brote florecida, "Mindfulness 30 días", "Empieza el 1 de noviembre" y el CTA.
 7. Audio final normalizado a −14 LUFS (el de Instagram).
 
-Render: `HYPERFRAMES_BROWSER_PATH=<headless_shell> npx hyperframes@0.8.145 render . -o renders/reel-mindfulness-30-dias.mp4`
+Render: `tools/reel/render.sh hyperframes/reels/mindfulness-30-dias`
