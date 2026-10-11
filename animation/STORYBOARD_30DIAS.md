@@ -56,9 +56,13 @@ Las transiciones video ↔ acuarela se hacen en el montaje (HyperFrames), así q
 
 1. Base: la edición de Eli (720×1280, con sus subtítulos y stickers) escalada a 1080×1920; su audio corre sin cortes.
    El archivo va en `hyperframes/assets/eli/reel-30dias-base.mp4` y queda fuera de git.
-2. Los 3 inserts abren y cierran con un iris centrado en Brote (0,45 s / 0,4 s).
-3. Mientras está Brote, subtítulos propios (Jost, tinta sobre el piso crema) con lo que dice Eli, porque los de ella quedan tapados.
-4. Cierre de 3 s después de que termina de hablar: Brote florecida, "Mindfulness 30 días", "Empieza el 1 de noviembre" y
-   "Escribime por DM la palabra NOVIEMBRE". No va encima de Eli porque sus subtítulos quemados ocupan esa zona.
+2. Gancho (0,15–2,65 s): Brote, ya con las tareas girando, en una burbuja redonda junto a la pregunta inicial de Eli
+   (shot `hook` de `reel_30dias.js`, 12,5–15 s, recortado en círculo por `split_30dias.sh`).
+3. Transiciones distintas por clip: iris sobre Brote (apuro), relleno que sube como una inhalación (pausa), iris sobre la flor (30 días).
+4. Mientras está Brote, subtítulos propios en mayúsculas (Jost, tinta sobre el piso crema), cerca del estilo de los de Eli;
+   aparecen solo cuando la acuarela ya cubre esa zona, para que no se pisen con los de ella.
+5. CTA arriba de Eli mientras dice "mandame por DM la palabra noviembre" (36,9–40,4 s); NOVIEMBRE late cuando lo nombra.
+6. Cierre de 2,35 s con una campana suave: Brote florecida, "Mindfulness 30 días", "Empieza el 1 de noviembre" y el CTA.
+7. Audio final normalizado a −14 LUFS (el de Instagram).
 
 Render: `HYPERFRAMES_BROWSER_PATH=<headless_shell> npx hyperframes@0.8.145 render . -o renders/reel-mindfulness-30-dias.mp4`

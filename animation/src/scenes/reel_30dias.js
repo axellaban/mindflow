@@ -183,8 +183,8 @@
   const POP = [.75, 1.6, 1.95, 2.3, 2.65];            // shot 1: when each task arrives
   const spin1 = lt => .55 * lt + .22 * lt * lt;       // shot 1: the orbit's angle, accelerating
   const SPIN1_END = spin1(4), SPEED1_END = .55 + .44 * 4;
-  const glint = (x, y, k, key) => { if (k <= 0 || k >= 1) return; boilSeed('glint' + key);
-    paint(starPts(x, y, 46 * Math.sin(Math.PI * k), .3, 4, k * 1.5), { wash: C.cream, ink: PAL.ink, sw: .5 }); };
+  const glint = (x, y, k, key, r = 46) => { if (k <= 0 || k >= 1) return; boilSeed('glint' + key);
+    paint(starPts(x, y, r * Math.sin(Math.PI * k), .3, 4, k * 1.5), { wash: C.cream, ink: PAL.ink, sw: .5 }); };
 
   // ===================== SHOT 1 (0–4): the rush =====================
   function shot1(t, lt, dur) {
@@ -208,7 +208,7 @@
 
   // ===================== SHOT 2 (4–8): the pause =====================
   function shot2(t, lt, dur) {
-    const tStop = .6, tIn = .9, tOut = 2.2, tGone = 3.4, tSmile = 3.0, tau = .35;
+    const tStop = .6, tIn = .9, tOut = 2.2, tGone = 3.4, tSmile = 3.0, tau = .35, tRel = 1.85;
     // the orbit carries on from shot 1, then brakes from tStop (speed decays exponentially: closed form)
     const spin = SPIN1_END + SPEED1_END * Math.min(lt, tStop) + (lt > tStop ? SPEED1_END * tau * (1 - Math.exp(-(lt - tStop) / tau)) : 0);
     const inhale = ease(seg(lt, tIn, tOut)), exhale = ease(seg(lt, tOut, tGone + .2)), breath = inhale * (1 - .55 * exhale);
@@ -223,12 +223,14 @@
       paint(ellPts(MID[0], MID[1] - 60, r, r, 40, 2), { wash: C.mint, washOp: 170, ink: mixCol(C.sage, PAL.ink, .2), sw: 1 });
     }
     cushion(...CUSH);
-    // the tasks: whirl, brake and hover, then float up and away, shrinking, each gone with a glint
+    // the tasks: whirl, brake and hover, then one by one float up and away like balloons (slow enough to follow),
+    // shrinking only at the end, each gone with a big glint
+    const leave = i => tRel + i * .2, LEAVE = 1.1;
     const list = TASKS.map((kind, i) => {
-      const a = PHASE[i] + spin, base = orbitPos(a), away = seg(lt, tOut + i * .12, tGone - .3 + i * .1), k = easeIn(away);
-      const out = [base[0] + (base[0] - MID[0]) * .9 * k, base[1] - 520 * k - 40 * Math.sin(Math.PI * away)];
+      const a = PHASE[i] + spin, base = orbitPos(a), away = seg(lt, leave(i), leave(i) + LEAVE), k = ease(away);
+      const out = [base[0] + (base[0] - MID[0]) * .55 * k + 34 * Math.sin(away * 6 + i) * away, base[1] - 600 * k];
       const hover = 10 * Math.sin(lt * 2.4 + i) * seg(lt, 1.2, 1.8);
-      return { kind, a, s: TS * (1 - ease(away)), rot: .25 * Math.sin(a * 1.3 + i) * (1 - seg(lt, tStop, 1.6)) + .3 * k * (i % 2 ? 1 : -1), x: out[0], y: out[1] + hover, away };
+      return { kind, a, s: TS * (1 - easeIn(seg(away, .5, 1))), rot: .25 * Math.sin(a * 1.3 + i) * (1 - seg(lt, tStop, 1.6)) + .18 * Math.sin(away * 5 + i) * away, x: out[0], y: out[1] + hover, away };
     });
     drawTasks(list.filter(o => o.s > 1), t, true);
     const mood = emotions(lt, [[0, 'dizzy'], [tStop, 'relieved', { mouth: null, emote: null, squint: 0 }], [tSmile, 'relieved', { mouth: 'smile', blush: .45, emote: null }]], { take: .5 });
@@ -236,7 +238,7 @@
     brote(MID[0], BY, U, { ...mood, sit: true, aL: lt > tStop ? arms : mood.aL, aR: lt > tStop ? arms + .05 * Math.sin(lt * 2) : mood.aR,
       sx: 1 - .04 * breath, sy: 1 + .08 * breath, dy: (mood.dy || 0) * .4 - .6 * breath, sway: swayOf(lt, [tStop]) });
     drawTasks(list.filter(o => o.s > 1), t, false);
-    list.forEach((o, i) => glint(o.x, o.y, seg(lt, tGone - .45 + i * .1, tGone + i * .1), i));
+    list.forEach((o, i) => glint(o.x, o.y, seg(lt, leave(i) + LEAVE - .2, leave(i) + LEAVE + .25), i, 72));
     camEnd();
   }
 
@@ -286,5 +288,25 @@
     camEnd();
   }
 
-  shots([[0, shot1], [4, shot2], [8, shot3]]);
+  // ===================== HOOK (12.5–15): a teaser for the first seconds, shown in a round bubble =====================
+  // Close on Brote: three tasks already whirling round her, she's nervous, then dizzy. The montage crops a circle
+  // around HOOK_C (900 px across) and pops it in over Eli's opening question.
+  const HOOK_C = [540, 1000];
+  function shotHook(t, lt, dur) {
+    camBegin(HOOK_C[0], HOOK_C[1], 1.15);
+    room(t, mixCol(C.peach, C.coral, ease(seg(lt, .4, 2.2))));
+    cushion(...CUSH);
+    const spin = 1.4 * lt + .35 * lt * lt;
+    const list = ['phone', 'list', 'cup'].map((kind, i) => {
+      const a = i * TAU / 3 + .6 + spin, p = backOut(seg(lt, .1 + i * .25, .45 + i * .25));
+      return { kind, a, s: 120 * p, rot: .25 * Math.sin(a * 1.3 + i), x: MID[0] + 330 * Math.cos(a), y: MID[1] - 30 + 170 * Math.sin(a) };
+    }).filter(o => o.s > 1);
+    drawTasks(list, t, true);
+    const mood = emotions(lt, [[0, 'nervous'], [1.45, 'dizzy']], { take: .7 });
+    brote(MID[0], BY, U, { ...mood, sit: true, dy: (mood.dy || 0) * .5, sway: swayOf(lt, [.1, 1.45]) });
+    drawTasks(list, t, false);
+    camEnd();
+  }
+
+  shots([[0, shot1], [4, shot2], [8, shot3], [12.5, shotHook]]);
 })();
