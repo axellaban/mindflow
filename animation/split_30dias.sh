@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 OUT=../hyperframes/assets/brote
 mkdir -p "$OUT"
 clip() {   # name, first frame, frame count (at 12 fps)
-  ffmpeg -y -loglevel error -framerate 12 -start_number "$2" -i out/frames/f%05d.jpg -frames:v "$3" \
+  ffmpeg -y -loglevel error -framerate 12 -start_number "$2" -t "$(echo "$3 / 12" | bc -l)" -i out/frames/f%05d.jpg \
     -vf "fps=30" -c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p -movflags +faststart "$OUT/$1.mp4"
   echo "$OUT/$1.mp4"
 }
