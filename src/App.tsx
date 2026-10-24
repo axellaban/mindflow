@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { AnimatePresence, MotionConfig, motion } from 'motion/react';
 import { type ReactNode, Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useNavigate, useOutlet, useParams } from 'react-router';
@@ -216,6 +217,7 @@ export default function App() {
         <CheckInSheet />
         <Celebration />
         <Toaster />
+        <Analytics />
       </BrowserRouter>
     </MotionConfig>
   );
